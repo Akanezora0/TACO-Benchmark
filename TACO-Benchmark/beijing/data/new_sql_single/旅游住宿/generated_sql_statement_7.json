@@ -1,0 +1,23 @@
+{
+  "sql": "SELECT \"fengtaiqufengtaiqujingqujingdianteseyetai1387.景区景点（特色业态）明细\", \"changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.2021年度昌平A级景区数据开放表               \" FROM \"fengtaiqufengtaiqujingqujingdianteseyetai1387\" INNER JOIN \"changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842\" ON \"fengtaiqufengtaiqujingqujingdianteseyetai1387\".\"Unnamed: 1\" = \"changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842\".\"Unnamed: 1\" WHERE \"fengtaiqufengtaiqujingqujingdianteseyetai1387\".\"Unnamed: 1\" IS NOT NULL AND \"changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842\".\"Unnamed: 1\" IS NOT NULL;",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "fengtaiqufengtaiqujingqujingdianteseyetai1387": [
+      "fengtaiqufengtaiqujingqujingdianteseyetai1387.景区景点（特色业态）明细",
+      "fengtaiqufengtaiqujingqujingdianteseyetai1387.Unnamed: 1",
+      "fengtaiqufengtaiqujingqujingdianteseyetai1387.Unnamed: 2",
+      "fengtaiqufengtaiqujingqujingdianteseyetai1387.Unnamed: 3"
+    ],
+    "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842": [
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.2021年度昌平A级景区数据开放表               ",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 1",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 2",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 3",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 4",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 5",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 6"
+    ]
+  }
+}

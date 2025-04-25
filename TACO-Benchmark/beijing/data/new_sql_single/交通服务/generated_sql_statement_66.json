@@ -1,0 +1,20 @@
+{
+  "sql": "SELECT \"shijiaotongweigongjiaoxianluxinxichuxingfuwu3666.线路代码\", \"shijiaotongweigongjiaoxianluxinxichuxingfuwu3666.路线名称\", \"shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.检查结果\" \nFROM \"shijiaotongweigongjiaoxianluxinxichuxingfuwu3666\"\nJOIN \"shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210\" ON \"shijiaotongweigongjiaoxianluxinxichuxingfuwu3666.线路代码\" = \"shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.实施机构\"\nWHERE \"shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.实施机构\" = '特定值' AND \"shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.检查结果\" = '特定结果'",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ from _ where _ = _ and _",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweigongjiaoxianluxinxichuxingfuwu3666": [
+      "shijiaotongweigongjiaoxianluxinxichuxingfuwu3666.线路代码",
+      "shijiaotongweigongjiaoxianluxinxichuxingfuwu3666.路线名称"
+    ],
+    "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210": [
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.监管对象",
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.实施机构",
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.检查行为编号",
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.检查时间",
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.检查人员",
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.检查结果"
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "sql": "SELECT \"shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239\".\"区域\" AS 别区, \"shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239\".\"街道\" AS 街道, \"shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239\".\"道路\" AS 道路, \"shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239\".\"车位数\" AS 车位数, \"shijiaotongweizulinyehujibenxinxi3677\".\"经营业户名称\" AS 经营业户名称 FROM \"shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239\" INNER JOIN \"shijiaotongweizulinyehujibenxinxi3677\" ON \"shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239\".\"街道\" = \"shijiaotongweizulinyehujibenxinxi3677\".\"经营业户名称\" WHERE \"shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239\".\"区域\" = '北京市石景山区' ORDER BY \"shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239\".\"车位数\" DESC",
+  "problem_description": "### 查询意图\n该 SQL 语句的目的是查询北京市石景山区内道路停车电子收费道路的相关信息，包括区域、街道、道路名称、车位数以及对应的经营业户名称，并按车位数降序排列。\n\n### 详细描述\n1. **涉及的表**：\n   - `shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239`：该表存储了石景山区道路停车电子收费道路的详细信息。\n   - `shijiaotongweizulinyehujibenxinxi3677`：该表存储了经营业户的基本信息。\n\n2. **涉及的列**：\n   - 从 `shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239` 表中选择了以下列：\n     - `区域`：显示为“别区”。\n     - `街道`：显示为“街道”。\n     - `道路`：显示为“道路”。\n     - `车位数`：显示为“车位数”。\n   - 从 `shijiaotongweizulinyehujibenxinxi3677` 表中选择了以下列：\n     - `经营业户名称`：显示为“经营业户名称”。\n\n3. **连接条件**：\n   - 通过 `shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239` 表的 `街道` 列与 `shijiaotongweizulinyehujibenxinxi3677` 表的 `经营业户名称` 列进行内连接（INNER JOIN）。\n\n4. **筛选条件**：\n   - 仅查询 `shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239` 表中 `区域` 为“北京市石景山区”的记录。\n\n5. **排序条件**：\n   - 结果按 `shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239` 表中的 `车位数` 降序排列（DESC）。\n\n### 业务场景\n该查询可能用于以下业务场景：\n1. **停车资源管理**：查询石景山区内各街道的停车位数及对应的经营业户，便于管理部门了解停车资源的分布情况。\n2. **经营业户评估**：通过车位数与经营业户的关联，评估各经营业户管理的停车资源规模。\n3. **停车规划**：根据车位数分布情况，优化停车资源的分配或规划新的停车设施。\n\n### 用户描述\n在上述业务场景下，用户可能遇到的实际问题或需求包括：\n1. **停车位不足**：用户可能需要了解哪些街道的车位数较多或较少，以便优化停车资源或解决停车难问题。\n2. **经营业户管理**：管理部门可能需要核实各经营业户管理的停车位数是否符合规定或合同要求。\n3. **数据报表生成**：用户可能需要生成一份报表，展示石景山区内各街道的停车位数及对应的经营业户，供决策参考。\n\n该查询通过关联两个表，提供了区域、街道、道路、车位数及经营业户名称的详细信息，并按车位数降序排列，便于用户快速了解停车资源的分布情况。",
+  "natural_language_query": "市民反映，最近在石景山区找停车位特别困难，想了解一下区里哪些道路的电子收费停车位比较多，都是哪些公司在管理这些车位。特别是想知道像八角、古城这些街道哪条路的停车位最多，能不能给个排序看看？因为经常下班回家转好几圈都找不到车位，特别着急。另外也想知道这些停车位都是归哪个公司管的，有时候缴费遇到问题都不知道该找谁。希望相关部门能提供一下这些信息，最好能按停车位数量从多到少排个序，这样看起来清楚些。来电反映石景山区停车位查询困难问题。",
+  "results": 0,
+  "sql skeleton": "select _ as _ ,_ as _ ,_ as _ from _ where _ = _ order by _",
+  "database": "交通服务",
+  "tables": {
+    "shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239": [
+      "shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239.区域",
+      "shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239.街道",
+      "shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239.道路",
+      "shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239.车位数"
+    ],
+    "shijiaotongweizulinyehujibenxinxi3677": [
+      "shijiaotongweizulinyehujibenxinxi3677.经营业户名称"
+    ]
+  }
+}

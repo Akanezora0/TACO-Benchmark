@@ -1,0 +1,20 @@
+{
+  "sql": "SELECT haidianqugonggongjianzhutingchechang3416.序号, haidianqugonggongjianzhutingchechang3416.停车场名称, haidianqugonggongjianzhutingchechang3416.停车场类型, haidianqugonggongjianzhutingchechang3416.详细地址, haidianqugonggongjianzhutingchechang3416.经营单位, shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.年份, shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.总量, shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.观测站名称 \nFROM haidianqugonggongjianzhutingchechang3416 \nJOIN shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668 \nON haidianqugonggongjianzhutingchechang3416.序号 = shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.观测站名称 \nWHERE haidianqugonggongjianzhutingchechang3416.经营单位 = '单位名称' AND shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.年份 = 2022\n```",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ from _ join _ on _ ._ = _ ._ where _ ._ = _ and _ ._",
+  "database": "交通服务",
+  "tables": {
+    "haidianqugonggongjianzhutingchechang3416": [
+      "haidianqugonggongjianzhutingchechang3416.序号",
+      "haidianqugonggongjianzhutingchechang3416.停车场名称",
+      "haidianqugonggongjianzhutingchechang3416.停车场类型",
+      "haidianqugonggongjianzhutingchechang3416.详细地址",
+      "haidianqugonggongjianzhutingchechang3416.经营单位"
+    ],
+    "shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668": [
+      "shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.年份",
+      "shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.总量",
+      "shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.观测站名称"
+    ]
+  }
+}

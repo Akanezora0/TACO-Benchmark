@@ -1,0 +1,26 @@
+{
+  "sql": "SELECT \"xichengquxichengqulvxingsheminglu20\".\"许可证号\" as \"_\", \"xichengquxichengqulvxingsheminglu20\".\"旅行社名称\" as \"_\" FROM \"xichengquxichengqulvxingsheminglu20\" WHERE \"xichengquxichengqulvxingsheminglu20\".\"经营业务\" = '旅游'",
+  "results": 0,
+  "sql skeleton": "select _ as _ ,_ as _ from _ where _ = _",
+  "database": "旅游住宿",
+  "tables": {
+    "xichengquxichengqulvxingsheminglu20": [
+      "xichengquxichengqulvxingsheminglu20.序号",
+      "xichengquxichengqulvxingsheminglu20.许可证号",
+      "xichengquxichengqulvxingsheminglu20.旅行社名称",
+      "xichengquxichengqulvxingsheminglu20.经营业务",
+      "xichengquxichengqulvxingsheminglu20.发证日期",
+      "xichengquxichengqulvxingsheminglu20.经营场所",
+      "xichengquxichengqulvxingsheminglu20.有效期"
+    ],
+    "xichengquxichengqudengjilvyoujingquminglu14": [
+      "xichengquxichengqudengjilvyoujingquminglu14.序号",
+      "xichengquxichengqudengjilvyoujingquminglu14.景区名称",
+      "xichengquxichengqudengjilvyoujingquminglu14.等级",
+      "xichengquxichengqudengjilvyoujingquminglu14.地址",
+      "xichengquxichengqudengjilvyoujingquminglu14.咨询电话",
+      "xichengquxichengqudengjilvyoujingquminglu14.投诉电话",
+      "xichengquxichengqudengjilvyoujingquminglu14.邮编"
+    ]
+  }
+}

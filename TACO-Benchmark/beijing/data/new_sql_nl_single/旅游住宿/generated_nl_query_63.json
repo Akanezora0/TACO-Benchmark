@@ -1,0 +1,45 @@
+{
+  "sql": "SELECT \"pingguqupingguqushandongzhuangzhendengjiminsu3496.山东庄镇等级民宿\", \"shiguihuaziranziyuanweiwangfu1520.HNAME\" FROM \"pingguqupingguqushandongzhuangzhendengjiminsu34996\" - \"shiguihuaziranziyuanweiwangfu1520\" WHERE \"pingguqupingguqushandongzhuangzhendengjiminsu3496.山东庄镇等级民宿\" = '具体值';",
+  "problem_description": "### **查询意图**：\n该 SQL 语句的目的是从两个表（或视图）的差集（`pingguqupingguqushandongzhuangzhendengjiminsu34996 - shiguihuaziranziyuanweiwangfu1520`）中筛选出满足特定条件的记录，并返回两个特定的列。\n\n### **详细描述**：\n1. **涉及的表**：\n   - `pingguqupingguqushandongzhuangzhendengjiminsu34996`：可能是一个包含“山东庄镇等级民宿”相关信息的表。\n   - `shiguihuaziranziyuanweiwangfu1520`：可能是一个包含“HNAME”（可能是名称或标识）相关信息的表。\n\n2. **涉及的列**：\n   - `pingguqupingguqushandongzhuangzhendengjiminsu3496.山东庄镇等级民宿`：第一个表的“山东庄镇等级民宿”列。\n   - `shiguihuaziranziyuanweiwangfu1520.HNAME`：第二个表的“HNAME”列。\n\n3. **查询逻辑**：\n   - 使用集合差集操作（`表A - 表B`），即从表A中排除表B中存在的记录。\n   - 然后筛选出`pingguqupingguqushandongzhuangzhendengjiminsu3496.山东庄镇等级民宿`等于某个具体值的记录。\n   - 最终返回两个列的值。\n\n4. **条件**：\n   - `pingguqupingguqushandongzhuangzhendengjiminsu3496.山东庄镇等级民宿 = '具体值'`：仅选择该列等于指定值的记录。\n\n### **业务场景**：\n1. **数据对比与筛选**：\n   - 可能用于对比两个数据源（如民宿登记表和规划资源表）的差异，找出在民宿表中存在但在规划资源表中不存在的记录。\n   - 例如，检查某些民宿是否在规划资源中有备案，或者是否属于合法经营。\n\n2. **数据清洗或验证**：\n   - 可能用于验证数据的完整性或一致性，比如确保所有登记的民宿都在规划资源中有对应记录。\n\n3. **业务决策支持**：\n   - 可能用于政府或管理部门对民宿行业的管理，筛选出符合特定条件（如“等级民宿”）但未在规划中注册的民宿，以便进一步处理。\n\n### **用户描述**：\n1. **用户需求**：\n   - 用户可能是政府管理人员或数据分析师，需要找出“山东庄镇”中已登记为“等级民宿”但未在自然资源规划网（或相关系统）中备案的民宿。\n   - 用户希望通过SQL查询快速定位这些数据差异，以便进行合规性检查或后续管理。\n\n2. **实际问题**：\n   - 可能存在部分民宿虽然被评定为“等级民宿”，但未在官方规划系统中登记，导致管理混乱或统计不准确。\n   - 用户需要确保所有民宿数据在两个系统中同步，避免遗漏或重复。\n\n3. **扩展场景**：\n   - 如果是合规性检查，用户可能需要定期运行此类查询，确保所有民宿符合监管要求。\n   - 如果是数据整合，用户可能需要将查询结果导入其他系统或生成报告。",
+  "natural_language_query": "市民反映，平谷区山东庄镇这边有一些被评为等级民宿的店家，但听说在自然资源局的规划网上查不到他们的备案信息。我朋友开的\"山水人家\"民宿去年评上了镇里的等级民宿，但在官方系统里怎么也查不到记录，担心会不会影响后续经营。想问问这种情况该怎么核实？主要是想确认这些等级民宿是不是都合规登记了，有没有漏掉的？来电咨询山东庄镇等级民宿备案信息不一致的问题。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ WHERE _ = _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "pingguqupingguqushandongzhuangzhendengjiminsu3496": [
+      "pingguqupingguqushandongzhuangzhendengjiminsu3496.山东庄镇等级民宿",
+      "pingguqupingguqushandongzhuangzhendengjiminsu3496.Unnamed: 1",
+      "pingguqupingguqushandongzhuangzhendengjiminsu3496.Unnamed: 2"
+    ],
+    "shiguihuaziranziyuanweiwangfu1520": [
+      "shiguihuaziranziyuanweiwangfu1520.HID",
+      "shiguihuaziranziyuanweiwangfu1520.FATHERID",
+      "shiguihuaziranziyuanweiwangfu1520.HNAME",
+      "shiguihuaziranziyuanweiwangfu1520.OTHERNAME",
+      "shiguihuaziranziyuanweiwangfu1520.CATEGORY",
+      "shiguihuaziranziyuanweiwangfu1520.SUBCATEGOR",
+      "shiguihuaziranziyuanweiwangfu1520.COUNTYNAME",
+      "shiguihuaziranziyuanweiwangfu1520.STREETNAME",
+      "shiguihuaziranziyuanweiwangfu1520.DYNASTY",
+      "shiguihuaziranziyuanweiwangfu1520.SUBDYNASTY",
+      "shiguihuaziranziyuanweiwangfu1520.ADDRESS",
+      "shiguihuaziranziyuanweiwangfu1520.RANK",
+      "shiguihuaziranziyuanweiwangfu1520.BATCH",
+      "shiguihuaziranziyuanweiwangfu1520.PUBTIME",
+      "shiguihuaziranziyuanweiwangfu1520.USERS",
+      "shiguihuaziranziyuanweiwangfu1520.PURPOSE",
+      "shiguihuaziranziyuanweiwangfu1520.OWNERSHIP",
+      "shiguihuaziranziyuanweiwangfu1520.STATEEVALU",
+      "shiguihuaziranziyuanweiwangfu1520.SINGLERELI",
+      "shiguihuaziranziyuanweiwangfu1520.PROTECTION",
+      "shiguihuaziranziyuanweiwangfu1520.ATTACHEDRE",
+      "shiguihuaziranziyuanweiwangfu1520.RELATEDPEO",
+      "shiguihuaziranziyuanweiwangfu1520.RELATEDEVE",
+      "shiguihuaziranziyuanweiwangfu1520.PUBNAME",
+      "shiguihuaziranziyuanweiwangfu1520.SOURCE",
+      "shiguihuaziranziyuanweiwangfu1520.EDITOR",
+      "shiguihuaziranziyuanweiwangfu1520.ISREDUNDAN",
+      "shiguihuaziranziyuanweiwangfu1520.THEME"
+    ]
+  }
+}

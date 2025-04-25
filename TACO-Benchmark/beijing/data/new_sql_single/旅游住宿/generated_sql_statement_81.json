@@ -1,0 +1,18 @@
+{
+  "sql": "SELECT \"pingguqupingguqushandongzhuangzhendengjiminsu3496.山东庄镇等级民宿\", \"pingguqupingguqujingpinminsu2083.平谷区2022年精品民宿\" FROM \"pingguqupingguqushandongzhuangzhendengjiminsu3496\" - \"pingguqupingguqujingpinminsu2083\";",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "pingguqupingguqushandongzhuangzhendengjiminsu3496": [
+      "pingguqupingguqushandongzhuangzhendengjiminsu3496.山东庄镇等级民宿",
+      "pingguqupingguqushandongzhuangzhendengjiminsu3496.Unnamed: 1",
+      "pingguqupingguqushandongzhuangzhendengjiminsu3496.Unnamed: 2"
+    ],
+    "pingguqupingguqujingpinminsu2083": [
+      "pingguqupingguqujingpinminsu2083.平谷区2022年精品民宿",
+      "pingguqupingguqujingpinminsu2083.Unnamed: 1",
+      "pingguqupingguqujingpinminsu2083.Unnamed: 2"
+    ]
+  }
+}

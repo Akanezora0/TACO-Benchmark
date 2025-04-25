@@ -1,0 +1,28 @@
+{
+  "sql": "SELECT dfirm_floodways.OBJECTID, dfirm_floodways.FLD_ZONE, river_main_stem_waterbodies_wbid.WBNAME FROM dfirm_floodways INNER JOIN river_main_stem_waterbodies_wbid ON dfirm_floodways.HYDRO_ID = river_main_stem_waterbodies_wbid.OBJECTID WHERE dfirm_floodways.FLOODWAY = 'YES'",
+  "problem_description": "### Query intent:\nThe SQL statement aims to retrieve specific details about floodways that are designated as 'YES' from two related tables: `dfirm_floodways` and `river_main_stem_waterbodies_wbid`. The objective is to find the `OBJECTID`, `FLD_ZONE`, and `WBNAME` for each floodway.\n\n### Detailed description:\n1. **Table `dfirm_floodways`**:\n   - **Columns involved**: `OBJECTID`, `FLD_ZONE`, `FLOODWAY`.\n   - **Purpose**: This table contains records of floodways within a specific firm or area. The `OBJECTID` is a unique identifier for each record, `FLD_ZONE` represents the flood zone classification, and `FLOODWAY` indicates whether a particular location is considered a floodway (with values including 'YES' or 'NO').\n\n2. **Table `river_main_stem_waterbodies_wbid`**:\n   - **Columns involved**: `HYDRO_ID`, `OBJECTID`, `WBNAME`.\n   - **Purpose**: This table provides information on main stem water bodies within rivers. `HYDRO_ID` could be a unique identifier for hydrological features, `OBJECTID` is likely another unique identifier, and `WBNAME` denotes the name of the water body.\n\n3. **Join condition**: `dfirm_floodways.HYDRO_ID = river_main_stem_waterbodies_wbid.OBJECTID`.\n   - **Purpose**: This join condition links records between the two tables based on the common `OBJECTID` field, ensuring that only floodways with matching hydrological identifiers are considered.\n\n4. **Filter condition**: `dfirm_floodways.FLOODWAY = 'YES'`.\n   - **Purpose**: This condition filters out all floodway records that are not designated as 'YES', focusing the query on floodways that are officially recognized as such.\n\n### Business scenario:\nThis query can be used in environmental management, urban planning, or disaster risk assessment contexts. For instance, it might help identify areas prone to flooding for more detailed analysis, planning of infrastructure improvements, or development of evacuation plans.\n\n### User description:\nA user might need this information to:\n- Identify specific floodways within their region that require special attention due to their designation as 'YES'.\n- Understand the geographical context of these floodways by linking them to specific water bodies.\n- Plan mitigation strategies or emergency response protocols based on the location and characteristics of identified floodways.\n-",
+  "natural_language_query": "I'm looking to gather data on floodways that have been marked as 'YES' in our region. I want to know the unique identifier for each floodway, its zone classification, and the name of the associated water body. Specifically, I need to see if there are any floodways that have been recognized as potentially hazardous areas. Could you help me pull up this information, especially focusing on those that are officially identified as 'YES'? It would also be great to know which main stem water bodies these floodways are connected to, so we can better understand the geographical layout and possibly plan for safety measures accordingly.",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ ,_ from _ where _ =_",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "dfirm_floodways": [
+      "dfirm_floodways.OBJECTID",
+      "dfirm_floodways.DFIRM_ID",
+      "dfirm_floodways.FLD_AR_ID",
+      "dfirm_floodways.FLD_ZONE",
+      "dfirm_floodways.FLOODWAY",
+      "dfirm_floodways.SFHA_TF",
+      "dfirm_floodways.AR_REVERT",
+      "dfirm_floodways.SOURCE_CIT",
+      "dfirm_floodways.HYDRO_ID",
+      "dfirm_floodways.CST_MDL_ID"
+    ],
+    "river_main_stem_waterbodies_wbid": [
+      "river_main_stem_waterbodies_wbid.OBJECTID",
+      "river_main_stem_waterbodies_wbid.WBID",
+      "river_main_stem_waterbodies_wbid.WBNAME",
+      "river_main_stem_waterbodies_wbid.WBDESC"
+    ]
+  }
+}

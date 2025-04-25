@@ -1,0 +1,7 @@
+{
+  "sql": "select T1.col1, T1.col2 from Table1 as T1 left join Table2 as T2 on T1.id = T2.id where T1.col1 in (select T3.col1 from Table3 as T3 where T3.col2 > 10)",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ from _ left join _ on _ ._ = _ ._ where _ in (select _ from _ where _ )",
+  "database": "安全生活",
+  "tables": {}
+}

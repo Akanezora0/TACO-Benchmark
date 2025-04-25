@@ -1,0 +1,23 @@
+{
+  "sql": "SELECT \n    pingguqupingguqushandongzhuangzhendengjiminsu3496.\"山东庄镇等级民宿\",\n    pingguqupingguqushandongzhuangzhendengjiminsu3496.Unnamed_1,\n    pingguqupingguqushandongzhuangzhendengjiminsu3496.Unnamed_2 \nFROM \n    pingguqupingguqushandongzhuangzhendengjiminsu3496 \nWHERE \n    pingguqupingguqushandongzhuangzhendengjiminsu3496.\"山东庄镇等级民宿\" = (SELECT \n        yanqingquyanqingqulvyoujingquxinxi3381.\"旅游景区\" \n    FROM \n        yanqingquyanqingqulvyoujingquxinxi3381);",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ from _ where _ = (select _ from _ where _ );",
+  "database": "旅游住宿",
+  "tables": {
+    "pingguqupingguqushandongzhuangzhendengjiminsu3496": [
+      "pingguqupingguqushandongzhuangzhendengjiminsu3496.山东庄镇等级民宿",
+      "pingguqupingguqushandongzhuangzhendengjiminsu3496.Unnamed: 1",
+      "pingguqupingguqushandongzhuangzhendengjiminsu3496.Unnamed: 2"
+    ],
+    "yanqingquyanqingqulvyoujingquxinxi3381": [
+      "yanqingquyanqingqulvyoujingquxinxi3381.旅游景区",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 1",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 2",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 3",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 4",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 5",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 6",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 7"
+    ]
+  }
+}

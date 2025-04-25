@@ -1,0 +1,28 @@
+{
+  "sql": "SELECT \"changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.2021年度昌平A级景区数据开放表\", \"fengtaiqufengtaiquxingjijiudian1397.星级酒店明细\" FROM \"changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842\" - \"fengtaiqufengtaiquxingjijiudian1397\" WHERE \"changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.2021年度昌平A级景区数据开放表\" = '条件' OR \"fengtaiqufengtaiquxingjijiudian1397.星级酒店明细\" = '条件';",
+  "problem_description": "### **查询意图**：\n该 SQL 语句的目的是从两个不同的数据表中查询符合特定条件的记录，并返回两个表中的特定列。查询的条件是两个表中的某一列满足给定的条件（'条件'）。\n\n### **详细描述**：\n1. **涉及的表**：\n   - `changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842`（表名可能为“2021年度昌平A级景区数据开放表”）\n   - `fengtaiqufengtaiquxingjijiudian1397`（表名可能为“丰台区星级酒店明细”）\n\n2. **涉及的列**：\n   - `changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.2021年度昌平A级景区数据开放表`（可能是昌平区A级景区的某一属性列）\n   - `fengtaiqufengtaiquxingjijiudian1397.星级酒店明细`（可能是丰台区星级酒店的某一属性列）\n\n3. **查询条件**：\n   - 查询条件是这两个列中的任意一个等于字符串 `'条件'`（`WHERE ... = '条件' OR ... = '条件'`）。\n\n4. **查询操作**：\n   - 从 `changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842` 表中减去 `fengtaiqufengtaiquxingjijiudian1397` 表中的数据（`表A - 表B`），然后筛选出符合条件的数据。\n\n### **业务场景**：\n1. **数据对比或排除**：\n   - 该查询可能用于对比昌平区的A级景区数据和丰台区的星级酒店数据，并排除某些重叠或冲突的数据。\n   - 例如，可能需要找出昌平区的A级景区中不包含丰台区星级酒店信息的记录，或者筛选出符合特定条件的景区或酒店数据。\n\n2. **区域旅游数据分析**：\n   - 可能是为了分析昌平区和丰台区的旅游资源分布情况，比如哪些景区或酒店满足特定的评级标准（如A级景区或星级酒店）。\n\n3. **数据清洗或验证**：\n   - 可能是为了验证两个数据源的一致性，或者清理不符合条件的数据。\n\n### **用户描述**：\n1. **用户需求**：\n   - 用户可能是旅游管理部门或数据分析师，需要了解昌平区和丰台区的旅游相关数据（如景区和酒店信息）。\n   - 用户希望筛选出符合特定条件的景区或酒店（例如评级为A级或星级的），或者排除某些重复或不相关的数据。\n\n2. **实际问题**：\n   - 用户可能需要回答以下问题：\n     - 昌平区的A级景区中有哪些是丰台区的星级酒店未覆盖的？\n     - 哪些景区或酒店满足特定的评级条件（如“条件”可能代表“5A级”或“五星级”）？\n   - 用户可能需要整合或清理两个不同区域的数据，以便进行进一步的分析或报告生成。\n\n### **补充说明**：\n- 表名和列名较长且包含中文和数字，可能是从开放数据平台或政府数据门户导出的原始数据。\n- 查询中的 `'条件'` 是一个占位符，实际使用时可能替换为具体的值（如“5A级景区”或“五星级酒店”）。\n- 查询中的 `表A - 表B` 操作可能是集合差集操作（即从表A中排除表B中的数据），但具体语法需根据数据库系统确认（如SQL标准中使用 `EXCEPT` 或 `MINUS`）。",
+  "natural_language_query": "市民反映，最近在整理昌平区和丰台区的旅游资料时遇到困惑。想咨询一下，昌平区那些评上A级的景区，和丰台区的星级酒店名单有没有什么关联？特别是想了解昌平区这边有没有哪些景区是符合特定标准的，比如达到五星级或者5A级这样的水平，但是丰台区那边的酒店名单里又没有的。因为要做区域旅游规划，需要搞清楚两边数据的匹配情况。之前从政府网站下载过两个表格，一个好像是昌平景区开放数据，另一个是丰台酒店明细，但具体怎么对比不太明白。希望能帮忙查一下两边数据中符合\"高级别\"要求的项目，看看有没有重复或者遗漏的情况。主要是担心资源统计会有出入，影响后续工作安排。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ WHERE _ = _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842": [
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.2021年度昌平A级景区数据开放表               ",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 1",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 2",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 3",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 4",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 5",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 6"
+    ],
+    "fengtaiqufengtaiquxingjijiudian1397": [
+      "fengtaiqufengtaiquxingjijiudian1397.星级酒店明细",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 1",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 2",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 3",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 4",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 5",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 6"
+    ]
+  }
+}

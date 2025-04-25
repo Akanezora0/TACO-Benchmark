@@ -1,0 +1,17 @@
+{
+  "sql": "SELECT \"shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239\".\"区域\" AS 别区, \"shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239\".\"街道\" AS 街道, \"shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239\".\"道路\" AS 道路, \"shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239\".\"车位数\" AS 车位数, \"shijiaotongweizulinyehujibenxinxi3677\".\"经营业户名称\" AS 经营业户名称 FROM \"shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239\" INNER JOIN \"shijiaotongweizulinyehujibenxinxi3677\" ON \"shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239\".\"街道\" = \"shijiaotongweizulinyehujibenxinxi3677\".\"经营业户名称\" WHERE \"shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239\".\"区域\" = '北京市石景山区' ORDER BY \"shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239\".\"车位数\" DESC",
+  "results": 0,
+  "sql skeleton": "select _ as _ ,_ as _ ,_ as _ from _ where _ = _ order by _",
+  "database": "交通服务",
+  "tables": {
+    "shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239": [
+      "shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239.区域",
+      "shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239.街道",
+      "shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239.道路",
+      "shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239.车位数"
+    ],
+    "shijiaotongweizulinyehujibenxinxi3677": [
+      "shijiaotongweizulinyehujibenxinxi3677.经营业户名称"
+    ]
+  }
+}

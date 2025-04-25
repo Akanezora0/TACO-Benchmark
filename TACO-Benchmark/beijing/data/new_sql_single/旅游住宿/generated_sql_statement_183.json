@@ -1,0 +1,24 @@
+{
+  "sql": "SELECT \"shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.名称\", \"shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.级别\", \"fengtaiqufengtaiquxingjijiudian1397.星级酒店明细\" FROM \"shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640\" INNER JOIN \"fengtaiqufengtaiquxingjijiudian1397\" ON \"shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.名称\" = \"fengtaiqufengtaiquxingjijiudian1397.Unnamed: 1\" WHERE \"shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.级别\" = '高级' AND \"fengtaiqufengtaiquxingjijiudian1397.星级酒店明细\" > 4",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ from _ where _",
+  "database": "旅游住宿",
+  "tables": {
+    "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640": [
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.序号",
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.名称",
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.类别",
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.公布时间",
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.级别"
+    ],
+    "fengtaiqufengtaiquxingjijiudian1397": [
+      "fengtaiqufengtaiquxingjijiudian1397.星级酒店明细",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 1",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 2",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 3",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 4",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 5",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 6"
+    ]
+  }
+}

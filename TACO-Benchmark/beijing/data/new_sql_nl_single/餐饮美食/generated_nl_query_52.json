@@ -1,0 +1,26 @@
+{
+  "sql": "SELECT DISTINCT \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076\".\"专用标识牌号\" AS 列1, \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\".\"JYZMC\" AS 列2, \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\".\"DWMC\" AS 列3, CASE WHEN \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076\".\"地址\" = \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\".\"DWMC\" AND \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076\".\"专用标识牌号\" IN (\"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\".\"JYZMC\") AND \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076\".\"专用标识牌号\" IN (\"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\".\"XKZID\") AND \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076\".\"专用标识牌号\" IN (\"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\".\"EXCHANGETIME\") THEN 1 ELSE 0 END AS 列4, \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\".\"地址\" AS 列5 FROM \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076\" , \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\" WHERE \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076\".\"专用标识牌号\" = \"shishichangjianguanjucanyinfuwuxukezheng",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的主要目的是从两个表中查询数据，并进行关联匹配，以检查某些特定条件是否满足，最终返回一个包含标识牌号、经营主体名称、单位名称、匹配状态（0或1）以及地址的结果集。\n\n---\n\n### **详细描述**  \n#### **涉及的表**  \n1. **`shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076`**（可能为“清真食品专管数据”或类似含义的表）  \n   - 包含字段：  \n     - `专用标识牌号`（可能是清真食品专用标识牌号）  \n     - `地址`（可能是经营场所地址）  \n\n2. **`shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374`**（可能为“市场监管机构餐饮服务许可证情况信息”或类似含义的表）  \n   - 包含字段：  \n     - `JYZMC`（经营主体名称）  \n     - `DWMC`（单位名称）  \n     - `XKZID`（许可证ID）  \n     - `EXCHANGETIME`（可能是变更或审批时间）  \n     - `地址`（单位地址）  \n\n#### **查询逻辑**  \n1. **关联条件**  \n   - `shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号 = shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XXX`（SQL 语句未完整，但推测可能是与 `JYZMC`、`XKZID` 或 `EXCHANGETIME` 匹配）。  \n\n2. **CASE 语句（列4）**  \n   - 检查以下条件是否**全部满足**：  \n     - 两个表的 `地址` 和 `DWMC`（单位名称）相同。  \n     - `专用标识牌号` 同时存在于 `JYZMC`（经营主体名称）、`XKZID`（许可证ID）和 `EXCHANGETIME`（时间字段）中。  \n   - 如果满足，则返回 `1`（表示匹配成功），否则返回 `0`（表示不匹配）。  \n\n3. **返回列**  \n   - `列1`：`专用标识牌号`（清真食品专用标识）。  \n   - `列2`：`JYZMC`（经营主体名称）。  \n   - `列3`：`DWMC`（单位名称）。  \n   - `列4`：匹配状态（0或1）。  \n   - `列5`：`shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.地址`（单位地址）。  \n\n4. **去重**  \n   - 使用 `DISTINCT` 确保结果唯一，避免重复数据。  \n\n---\n\n### **业务场景**  \n该查询可能用于**清真食品合规性检查**，具体场景可能包括：  \n1. **监管机构检查**：  \n   - 检查清真食品经营单位是否具备合法的专用标识牌，并且该标识是否与市场监管部门颁发的许可证信息一致。  \n2. **数据一致性验证**：  \n   - 验证清真食品专管数据表中的标识牌号是否与餐饮服务许可证信息匹配，确保数据的准确性和合规性。  \n3. **违规排查**：  \n   - 发现未按规定使用清真标识或许可证信息不符的单位，便于后续执法或整改。  \n\n---\n\n### **用户描述**  \n在该业务场景下，用户（如市场监管人员或清真食品管理部门）可能遇到以下问题或需求：  \n1. **问题**：  \n   - 某些餐饮单位可能**违规使用清真标识**，但实际未取得合法许可。  \n   - 数据分散在不同系统（清真食品管理、市场监管），**人工核对效率低**。  \n2. **需求**：  \n   - 快速筛选出**标识牌与许可证信息不一致**的单位，以便重点检查。  \n   - 确保清真食品经营的合规性，防止假冒或滥用清真标识的情况。  \n3. **查询的作用**：  \n   - 通过自动化比对，直接返回匹配状态（`列4`），让监管人员高效识别问题单位。  \n\n---\n\n### **总结**  \n该 SQL 是一个**数据合规性检查查询**，用于比对清真食品专用标识与市场监管许可证信息，确保两者一致，并标识出匹配或不匹配的记录，适用于政府或行业协会的监管场景。",
+  "natural_language_query": "市民反映，最近在清真餐厅吃饭时发现有些店的清真标识牌看着不太正规，怀疑可能是假冒的。我是市场监管局的，想查一下这些店的清真标识牌和他们的餐饮许可证信息是不是能对得上。具体就是看他们挂的清真牌子上的号码，能不能和许可证上的经营主体名称、单位名称这些信息匹配上，地址也得一致才行。对了，最好能直接告诉我哪些店是匹配的，哪些是不匹配的，这样我们好重点检查那些有问题的店。现在人工一个个核对太麻烦了，希望能有个快捷的查询方式。",
+  "results": 0,
+  "sql skeleton": "select distinct _ as _ ,_ as _ ,_ (_ in _ ._ ) = _ (_ in _ ._ ) = _ (_ in _ ._ ) = _ (_ in _ ._ ) = _ as _ ,_ ._ as _ from _ ,_ where _ ._ = _ ._ and _ = (select _ from _ where _ = _ ) order by _ ._",
+  "database": "餐饮美食",
+  "tables": {
+    "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076": [
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址"
+    ],
+    "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374": [
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYXM",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.FZRQ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.YXQZ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.DWMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.EXCHANGETIME"
+    ]
+  }
+}

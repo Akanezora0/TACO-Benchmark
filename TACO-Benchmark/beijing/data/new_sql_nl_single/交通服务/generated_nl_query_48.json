@@ -1,0 +1,22 @@
+{
+  "sql": "SELECT zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733.PK_ FROM zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733 WHERE shigonganjujiaotongweifachulijigou1949.交通违法处理机构 = '某个机构名称' AND shigonganjujiaotongweifachulijigou1949.Unnamed: 1 = '某个日期'",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从表 `zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733` 中查询满足特定条件的记录的主键（`PK_`），条件是关联表 `shigonganjujiaotongweifachulijigou1949` 中的“交通违法处理机构”列等于“某个机构名称”，并且“Unnamed: 1”列等于“某个日期”。\n\n- **详细描述**：\n  - **涉及的表**：\n    - `zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733`：主表，查询结果来自该表的主键列（`PK_`）。\n    - `shigonganjujiaotongweifachulijigou1949`：关联表，用于提供筛选条件。\n  - **涉及的列**：\n    - `zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733.PK_`：主表的主键列，查询结果将返回该列的值。\n    - `shigonganjujiaotongweifachulijigou1949.交通违法处理机构`：关联表中的列，用于筛选特定机构名称的记录。\n    - `shigonganjujiaotongweifachulijigou1949.Unnamed: 1`：关联表中的列（可能是日期列），用于筛选特定日期的记录。\n  - **条件**：\n    - `shigonganjujiaotongweifachulijigou1949.交通违法处理机构 = '某个机构名称'`：筛选交通违法处理机构为“某个机构名称”的记录。\n    - `shigonganjujiaotongweifachulijigou1949.Unnamed: 1 = '某个日期'`：筛选“Unnamed: 1”列等于“某个日期”的记录。\n\n- **业务场景**：\n  - 该查询可能用于交通违法处理系统中，根据特定的处理机构和日期查询相关记录的主键。例如，可能需要查找某个机构在特定日期处理的所有交通违法记录的主键，以便进一步操作（如查看详细信息或生成报表）。\n  - 表 `zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733` 可能存储了交通违法记录的详细信息，而表 `shigonganjujiaotongweifachulijigou1949` 可能存储了处理机构的相关信息。\n\n- **用户描述**：\n  - 用户可能是交通管理部门的工作人员，需要查询某个交通违法处理机构在特定日期处理的所有违法记录的主键。例如，用户可能需要生成某机构在某一天的工作报告，或者需要核实某机构在特定日期的处理记录是否完整。\n  - 用户的需求可能是为了统计、审计或日常管理，确保交通违法处理的透明性和可追溯性。",
+  "natural_language_query": "市民反映，上周三（5月15日）在西城区交通执法大队处理违章时，发现他们系统里显示的处理记录和实际不符。我明明是在他们大队窗口办的，但查询时显示的信息对不上。想请帮忙查一下当天这个执法大队到底处理了哪些违章案件，需要核实处理记录是否完整。主要是担心会不会有工作人员违规操作或者漏录的情况，希望能给个明确的处理清单。",
+  "results": 0,
+  "sql skeleton": "select _ from _ where _ and _",
+  "database": "交通服务",
+  "tables": {
+    "zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733": [
+      "zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733.PK\u0003\u0004"
+    ],
+    "shigonganjujiaotongweifachulijigou1949": [
+      "shigonganjujiaotongweifachulijigou1949.交通违法处理机构",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 1",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 2",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 3",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 4",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 5",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 6"
+    ]
+  }
+}

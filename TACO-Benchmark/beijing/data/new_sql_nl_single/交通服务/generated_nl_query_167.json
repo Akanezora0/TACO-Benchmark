@@ -1,0 +1,40 @@
+{
+  "sql": "SELECT \n    shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.\"企业名称\", \n    shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.\"评定等级\", \n    shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.\"所属地区\", \n    shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.\"年份\", \n    shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.\"统一社会信用代码\", \n    xichengquxichengqugongjiaochezhanmingdan2478.\"ID\", \n    xichengquxichengqugongjiaochezhanmingdan2478.\"X\", \n    xichengquxichengqugongjiaochezhanmingdan2478.\"Y\" \nFROM \n    shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672 \nJOIN \n    xichengquxichengqugongjiaochezhanmingdan2478 \nON \n    shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.\"统一社会信用代码\" = xichengquxichengqugongjiaochezhanmingdan2478.\"SJXZQHDM\" \nWHERE \n    shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.\"评定等级\" = '优秀' AND \n    xichengquxichengqugongjiaochezhanmingdan2478.\"X\" > 0 AND \n    xichengquxichengqugongjiaochezhanmingdan2478.\"Y\" > 0;",
+  "problem_description": "### 查询意图：\n该 SQL 语句的目的是查询信用评级为“优秀”的汽车租赁企业，并且这些企业对应的公交车站点的坐标（X 和 Y）均为正数。查询结果将包括企业的基本信息、评定等级、所属地区、年份、统一社会信用代码，以及对应的公交车站点的 ID 和坐标信息。\n\n### 详细描述：\n1. **涉及的表**：\n   - `shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672`：该表存储了汽车租赁企业的信用评级结果数据。\n   - `xichengquxichengqugongjiaochezhanmingdan2478`：该表存储了西城区公交车站点的信息。\n\n2. **涉及的列**：\n   - `shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672` 表的列：\n     - `企业名称`：汽车租赁企业的名称。\n     - `评定等级`：企业的信用评级等级。\n     - `所属地区`：企业所属的地区。\n     - `年份`：信用评级的年份。\n     - `统一社会信用代码`：企业的唯一社会信用代码。\n   - `xichengquxichengqugongjiaochezhanmingdan2478` 表的列：\n     - `ID`：公交车站点的唯一标识符。\n     - `X`：公交车站点的 X 坐标。\n     - `Y`：公交车站点的 Y 坐标。\n     - `SJXZQHDM`：可能与企业的统一社会信用代码关联的字段。\n\n3. **查询条件**：\n   - `shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.\"评定等级\" = '优秀'`：筛选信用评级为“优秀”的企业。\n   - `xichengquxichengqugongjiaochezhanmingdan2478.\"X\" > 0 AND xichengquxichengqugongjiaochezhanmingdan2478.\"Y\" > 0`：筛选公交车站点的 X 和 Y 坐标均为正数。\n   - 通过 `shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.\"统一社会信用代码\" = xichengquxichengqugongjiaochezhanmingdan2478.\"SJXZQHDM\"` 关联两个表。\n\n### 业务场景：\n该查询可能用于以下业务场景：\n1. **信用评级分析**：政府或行业协会需要分析信用评级为“优秀”的汽车租赁企业的分布情况。\n2. **地理位置分析**：结合公交车站点的坐标信息，分析这些优秀企业是否集中在某些地理位置（如交通便利的区域）。\n3. **资源分配**：政府或企业可以根据查询结果，优先在优秀企业集中的区域分配更多资源（如公共交通服务或政策支持）。\n\n### 用户描述：\n在上述业务场景下，用户可能遇到的实际问题或需求包括：\n1. **政策制定**：政府可能需要了解哪些汽车租赁企业在信用评级中表现优秀，并分析这些企业的地理位置分布，以便制定更有效的行业政策或支持措施。\n2. **企业选址**：汽车租赁企业可能需要了解优秀企业的分布情况，以便在选址时参考这些信息，选择交通便利或政策支持较多的区域。\n3. **公共交通优化**：公交公司可能需要了解优秀企业集中的区域，以便优化公交线路或增加站点，更好地服务这些企业及其员工。",
+  "natural_language_query": "市民反映，想了解一下西城区那些信用特别好的汽车租赁公司都在哪些位置。听说有些公司评级是\"优秀\"，而且附近公交车站的坐标都是正数，不知道是不是真的。最近想租车，想找靠谱的公司，最好是在交通方便的地方。能不能帮忙查查这些优秀企业都在哪些区域？最好能知道具体在哪个公交站附近，这样过去也方便。对了，要确认下这些公交站的坐标确实是在正常范围内，别搞错了。",
+  "results": 0,
+  "sql skeleton": "SELECT _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ FROM _ JOIN _ ON _ ._ = _ ._ WHERE _ ._ = _ AND _ ._ = _ and _ (_ ._ , _ ) = _ and _ ._ = _ ;",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672": [
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.企业名称",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.评定等级",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.所属地区",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.年份",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.统一社会信用代码"
+    ],
+    "xichengquxichengqugongjiaochezhanmingdan2478": [
+      "xichengquxichengqugongjiaochezhanmingdan2478.ID",
+      "xichengquxichengqugongjiaochezhanmingdan2478.X",
+      "xichengquxichengqugongjiaochezhanmingdan2478.Y",
+      "xichengquxichengqugongjiaochezhanmingdan2478.SJXZQHMC",
+      "xichengquxichengqugongjiaochezhanmingdan2478.QXJXZQHMC",
+      "xichengquxichengqugongjiaochezhanmingdan2478.SJXZQHDM",
+      "xichengquxichengqugongjiaochezhanmingdan2478.QXJXZQHDM",
+      "xichengquxichengqugongjiaochezhanmingdan2478.POISJLY",
+      "xichengquxichengqugongjiaochezhanmingdan2478.RHBZDZ",
+      "xichengquxichengqugongjiaochezhanmingdan2478.CODE",
+      "xichengquxichengqugongjiaochezhanmingdan2478.CODEMC",
+      "xichengquxichengqugongjiaochezhanmingdan2478.GXSJ",
+      "xichengquxichengqugongjiaochezhanmingdan2478.POIMC",
+      "xichengquxichengqugongjiaochezhanmingdan2478.POIDZ",
+      "xichengquxichengqugongjiaochezhanmingdan2478.别名",
+      "xichengquxichengqugongjiaochezhanmingdan2478.POIFLMC",
+      "xichengquxichengqugongjiaochezhanmingdan2478.TEL",
+      "xichengquxichengqugongjiaochezhanmingdan2478.MC",
+      "xichengquxichengqugongjiaochezhanmingdan2478.DZ",
+      "xichengquxichengqugongjiaochezhanmingdan2478.DZMS",
+      "xichengquxichengqugongjiaochezhanmingdan2478.XL"
+    ]
+  }
+}

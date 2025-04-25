@@ -1,0 +1,46 @@
+{
+  "sql": "SELECT DISTINCT shiguihuaziranziyuanweixuetangshuyuan1521.HID, shiguihuaziranziyuanweixuetangshuyuan1521.HNAME, huairouquhuairouqujingqumenpiaojiage1592.\"怀柔区政府定价景区门票价格\" FROM shiguihuaziranziyuanweixuetangshuyuan1521 INNER JOIN huairouquhuairouqujingqumenpiaojiage1592 ON shiguihuaziranziyan",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从两个表中查询并返回特定的信息，包括 `HID`、`HNAME` 和 \"怀柔区政府定价景区门票价格\" 列的值，同时确保结果中没有重复的行。\n\n- **详细描述**：\n  - **涉及的表**：\n    - `shiguihuaziranziyuanweixuetangshuyuan1521`：该表可能包含与自然资源或学院相关的信息。\n    - `huairouquhuairouqujingqumenpiaojiage1592`：该表可能包含怀柔区政府定价景区门票价格的信息。\n  - **涉及的列**：\n    - `shiguihuaziranziyuanweixuetangshuyuan1521.HID`：可能是该表中的唯一标识符。\n    - `shiguihuaziranziyuanweixuetangshuyuan1521.HNAME`：可能是该表中的名称列。\n    - `huairouquhuairouqujingqumenpiaojiage1592.\"怀柔区政府定价景区门票价格\"`：该列包含怀柔区政府定价景区门票价格的信息。\n  - **条件**：\n    - 该查询使用了 `INNER JOIN` 来连接两个表，但连接条件不完整（SQL 语句被截断）。假设连接条件是基于某个共同的列（例如 `HID` 或类似的列）来匹配两个表中的记录。\n\n- **业务场景**：\n  - 该查询可能用于获取与自然资源或学院相关的信息，并结合怀柔区政府定价景区门票价格的信息。例如，可能需要列出某个学院或自然资源点附近的景区及其门票价格，以便进行进一步的分析或决策。\n\n- **用户描述**：\n  - 用户可能需要了解某个特定学院或自然资源点附近的景区门票价格，以便为游客或学生提供相关信息，或者用于规划活动或行程。例如，一个学院可能希望为其学生提供附近的景区信息，包括门票价格，以便学生可以更好地规划周末活动。或者，一个旅游规划者可能需要这些信息来设计旅游路线或套餐。",
+  "natural_language_query": "市民反映，最近带孩子去怀柔区玩的时候发现，有些景区门票价格好像不太透明。特别是靠近自然保护区和一些教育基地周边的景点，比如那个什么自然资源学院附近的景区。想了解一下这些地方政府定价的门票到底是多少钱？上次去有个叫\"XX生态园\"的地方门口标价80元，但听当地人说政府指导价应该是60元，感觉被坑了。能不能帮忙查查这些正规景区的政府定价是多少？主要是想核实下有没有乱收费的情况，顺便也方便以后规划带孩子去玩的行程。",
+  "results": 0,
+  "sql skeleton": "select distinct _ ,_ ,_ from _ where _",
+  "database": "旅游住宿",
+  "tables": {
+    "shiguihuaziranziyuanweixuetangshuyuan1521": [
+      "shiguihuaziranziyuanweixuetangshuyuan1521.HID",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.FATHERID",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.HNAME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.OTHERNAME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.CATEGORY",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.SUBCATEGOR",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.COUNTYNAME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.STREETNAME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.DYNASTY",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.SUBDYNASTY",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.ADDRESS",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.RANK",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.BATCH",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.PUBTIME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.USERS",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.PURPOSE",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.OWNERSHIP",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.STATEEVALU",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.SINGLERELI",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.PROTECTION",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.ATTACHEDRE",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.RELATEDPEO",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.RELATEDEVE",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.PUBNAME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.SOURCE",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.EDITOR",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.ISREDUNDAN"
+    ],
+    "huairouquhuairouqujingqumenpiaojiage1592": [
+      "huairouquhuairouqujingqumenpiaojiage1592.怀柔区政府定价景区门票价格",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 1",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 2",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 3",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 4"
+    ]
+  }
+}

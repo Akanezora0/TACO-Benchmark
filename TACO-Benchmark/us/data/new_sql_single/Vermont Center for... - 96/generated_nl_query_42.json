@@ -1,0 +1,40 @@
+{
+  "sql": "SELECT \n    public_water_sources.\"FacilityName\",\n    public_water_sources.\"SystemType\",\n    wildlife_management_units.\"ABNAME\",\n    wildlife_management_units.\"BOUNDARY\"\nFROM \n    public_water_sources\nJOIN \n    wildlife_management_units ON public_water_sources.\"TINWSF_IS_NUMBER\" = wildlife_management_units.\"OBJECTID\"\nWHERE \n    public_water_sources.\"SystemStatus\" = 'Active'",
+  "problem_description": "### Query intent:\nThe SQL statement aims to retrieve specific details about active water sources, including their facility names, system types, and related wildlife management unit information.\n\n### Detailed description:\n\n- **Tables involved**:\n  - `public_water_sources`: This table contains information about various water sources, with columns like `\"FacilityName\"` for the name of the facility and `\"SystemStatus\"` to indicate the status of the water source (e.g., 'Active').\n  - `wildlife_management_units`: This table provides details about wildlife management units, with columns such as `\"ABNAME\"` for the name of the unit and `\"BOUNDARY\"` for the boundary of the unit.\n\n- **Columns selected**:\n  - `\"FacilityName\"` from `public_water_sources`: This column is selected to provide the name of the water source facility.\n  - `\"SystemType\"` from `public_water_sources`: This column gives information about the type of system that the water source belongs to.\n  - `\"ABNAME\"` from `wildlife_management_units`: This column is chosen to provide the name of the wildlife management unit associated with the water source.\n  - `\"BOUNDARY\"` from `wildlife_management_units`: This column offers the geographical boundary of the wildlife management unit.\n\n- **Join condition**:\n  - The SQL statement uses an INNER JOIN between `public_water_sources` and `wildlife_management_units` based on the equality of the `\"TINWSF_IS_NUMBER\"` column in `public_water_sources` and the `\"OBJECTID\"` column in `wildlife_management_units`. This condition ensures that only records where there is a match between these two columns are included in the result set.\n\n- **Filtering condition**:\n  - The `WHERE` clause filters the results to include only those records where `\"SystemStatus\"` is 'Active'. This condition narrows down the data to only active water sources.\n\n### Business scenario:\n\nThis SQL query could be used in environmental management or conservation efforts. For instance, it might be used by a government agency or conservation organization to understand the distribution and status of active water sources within protected areas or wildlife management units. This information can help in planning and implementing conservation strategies, ensuring that resources are allocated efficiently to monitor and manage these critical water sources.\n\n### User description:\n\nA user might need this information to:\n- **Plan conservation efforts**: Identify which active water sources are located within specific wildlife management units, potentially guiding the allocation of resources for protection or restoration activities.\n- **Monitor environmental impact**: Keep track of how human activities",
+  "natural_language_query": "I'm trying to gather information on active water sources in certain wildlife management areas. Specifically, I'm interested in knowing the names of the facilities, the types of systems they belong to, and the details of the wildlife management units they are associated with. Ideally, I'd like to see the names of these units and their boundaries. \n\nTo achieve this, I need to run a query that combines data from two tables: one for public water sources and another for wildlife management units. The tables will be joined based on matching identification numbers, ensuring that each water source is correctly linked to its corresponding wildlife management area. \n\nMy query should filter out any inactive water sources, focusing only on those that are currently operational. This way, I can get a clear picture of which active water sources are located within the boundaries of specific wildlife management units, aiding in the planning and execution of conservation efforts.",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ ,_ from _ where _ = _",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "public_water_sources": [
+      "public_water_sources.X",
+      "public_water_sources.Y",
+      "public_water_sources.TINWSF_IS_NUMBER",
+      "public_water_sources.WSID",
+      "public_water_sources.SystemName",
+      "public_water_sources.SystemType",
+      "public_water_sources.SystemStatus",
+      "public_water_sources.SystemPopulation",
+      "public_water_sources.FacilityName",
+      "public_water_sources.FacilityID",
+      "public_water_sources.FacilityStatus",
+      "public_water_sources.Availability",
+      "public_water_sources.WaterType",
+      "public_water_sources.ConstructedDate",
+      "public_water_sources.PermittedYield",
+      "public_water_sources.WellType",
+      "public_water_sources.Diameter_in",
+      "public_water_sources.WellDepth",
+      "public_water_sources.CasingDepth",
+      "public_water_sources.StaticWaterLevel"
+    ],
+    "wildlife_management_units": [
+      "wildlife_management_units.OBJECTID",
+      "wildlife_management_units.ABNAME",
+      "wildlife_management_units.AGENCY",
+      "wildlife_management_units.DEPT",
+      "wildlife_management_units.DIV",
+      "wildlife_management_units.BOUNDARY"
+    ]
+  }
+}

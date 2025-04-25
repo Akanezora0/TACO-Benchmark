@@ -1,0 +1,26 @@
+{
+  "sql": "SELECT shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC, shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH, shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS, shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYXM, shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.FZRQ, shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.YXQZ, shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID, shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.DWMC FROM shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374 WHERE shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH = '指定编号' AND shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS = '指定类别'",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从表 `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374` 中查询符合特定许可证编号（`XKZBH`）和经营场所（`JYCS`）条件的记录，并返回相关的许可证信息。\n\n- **详细描述**：\n  - **表**：`shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374`（从名称推断可能是“市场监督管理局餐饮服务许可证情况信息”表）。\n  - **查询列**：\n    - `JYZMC`：经营者名称（可能为企业或个体户名称）。\n    - `XKZBH`：许可证编号。\n    - `JYCS`：经营场所。\n    - `JYXM`：经营项目（可能描述餐饮服务的具体内容）。\n    - `FZRQ`：发证日期。\n    - `YXQZ`：有效期至。\n    - `XKZID`：许可证ID（可能是唯一标识）。\n    - `DWMC`：单位名称（可能与`JYZMC`类似，但具体含义需结合业务）。\n  - **条件**：\n    - `XKZBH = '指定编号'`：筛选许可证编号等于“指定编号”的记录。\n    - `JYCS = '指定类别'`：筛选经营场所等于“指定类别”的记录。\n\n- **业务场景**：\n  - 该查询可能用于市场监督管理部门或相关机构，用于检索特定餐饮服务许可证的详细信息。例如：\n    1. **许可证核验**：检查某家餐饮单位是否持有有效的许可证，并核实其经营场所和项目是否符合规定。\n    2. **执法检查**：在执法过程中，通过许可证编号快速定位到具体的经营主体信息。\n    3. **数据分析**：统计某一类别经营场所的许可证分布情况。\n\n- **用户描述**：\n  - **用户需求**：\n    - 执法人员可能需要输入许可证编号和经营场所类别，快速查询到具体的许可证信息，以确认其合法性。\n    - 餐饮企业或个体户可能需要在办理业务时提供许可证编号，相关部门通过查询验证其真实性。\n  - **实际问题**：\n    - 用户可能遇到许可证编号输入错误或经营场所类别不明确的情况，导致查询结果为空。\n    - 用户可能需要进一步了解许可证的有效期或经营项目，以判断是否需要更新或扩展经营范围。",
+  "natural_language_query": "市民反映，我在朝阳区开了一家火锅店，前两天市场监管局来检查时说我提供的餐饮服务许可证编号\"京餐证2023-12345\"可能有问题，经营场所填的是\"中型餐饮\"。但我明明记得是在2023年5月10日办的证，有效期应该到2026年。能不能帮忙查下这个许可证是不是真的？现在店里生意都停了，特别着急。主要想确认下经营者名称、经营项目和有效期这些信息对不对，来电反映餐饮许可证核实问题。",
+  "results": 0,
+  "sql skeleton": "select _ from _ where _ = _ and _",
+  "database": "餐饮美食",
+  "tables": {
+    "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374": [
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYXM",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.FZRQ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.YXQZ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.DWMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.EXCHANGETIME"
+    ],
+    "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076": [
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址"
+    ]
+  }
+}

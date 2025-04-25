@@ -1,0 +1,23 @@
+{
+  "sql": "SELECT shijiaotongweiguidaoyanshixinxi3711.延时开始时间 FROM shijiaotongweiguidaoyanshixinxi3711 WHERE shijiaotongweiguidaoyanshixinxi3711.延时线路 = '指定线路代码' AND shijiaotongweigongjiaoxianluxinxichuxingfuwu3666.线路代码 = '指定线路代码'",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从表 `shijiaotongweiguidaoyanshixinxi3711` 中查询满足特定条件的记录，具体是获取“延时开始时间”字段的值，条件是“延时线路”字段等于“指定线路代码”，并且另一个表 `shijiaotongweigongjiaoxianluxinxichuxingfuwu3666` 中的“线路代码”字段也等于“指定线路代码”。\n\n### **详细描述**  \n1. **涉及的表**：\n   - `shijiaotongweiguidaoyanshixinxi3711`：该表可能存储轨道交通（如地铁、轻轨等）的延时信息，包括延时开始时间、延时线路等字段。\n   - `shijiaotongweigongjiaoxianluxinxichuxingfuwu3666`：该表可能存储轨道交通线路的基本信息或服务信息，如线路代码、线路名称等。\n\n2. **涉及的列**：\n   - `shijiaotongweiguidaoyanshixinxi3711.延时开始时间`：表示某条线路的延时开始时间。\n   - `shijiaotongweiguidaoyanshixinxi3711.延时线路`：表示发生延时的线路代码。\n   - `shijiaotongweigongjiaoxianluxinxichuxingfuwu3666.线路代码`：表示线路的唯一标识代码。\n\n3. **查询条件**：\n   - `shijiaotongweiguidaoyanshixinxi3711.延时线路 = '指定线路代码'`：筛选出延时线路等于“指定线路代码”的记录。\n   - `shijiaotongweigongjiaoxianluxinxichuxingfuwu3666.线路代码 = '指定线路代码'`：确保 `shijiaotongweigongjiaoxianluxinxichuxingfuwu3666` 表中存在该线路代码的记录（可能是用于关联查询或验证线路有效性）。\n\n4. **查询结果**：\n   - 返回 `shijiaotongweiguidaoyanshixinxi3711` 表中满足条件的记录的“延时开始时间”字段值。\n\n### **业务场景**  \n该查询可能用于轨道交通运营管理系统，用于获取某条特定线路的延时开始时间。例如：\n- 当某条地铁线路因故障或施工导致延时运营时，系统需要查询该线路的延时开始时间，以便向乘客发布通知或调整运营计划。\n- 结合其他表（如 `shijiaotongweigongjiaoxianluxinxichuxingfuwu3666`）验证线路代码的有效性，确保查询的延时信息是针对真实存在的线路。\n\n### **用户描述**  \n在该业务场景下，用户可能是轨道交通运营管理人员或乘客服务系统，他们可能遇到以下问题或需求：\n1. **运营管理需求**：  \n   - 需要实时监控某条线路的运营状态，如果发生延时，需要获取延时的具体时间，以便调整列车调度或发布公告。\n   - 例如：“地铁2号线因设备故障导致延时，我们需要知道延时从什么时候开始，以便通知乘客和安排备用列车。”\n\n2. **乘客信息服务需求**：  \n   - 乘客通过APP或车站显示屏查询某条线路是否延时，系统需要返回该线路的延时开始时间，帮助乘客规划出行。\n   - 例如：“乘客想知道3号线是否延时，如果延时，是从几点开始的？”\n\n3. **数据验证需求**：  \n   - 查询延时信息时，需要确保线路代码是有效的（即存在于线路基础信息表中），避免因错误代码返回无效数据。\n\n### **补充说明**  \n- 该 SQL 语句可能是一个多表查询的片段（缺少 JOIN 或子查询部分），因为条件中涉及两个表，但未明确关联方式。完整的查询可能需要通过“线路代码”字段关联两个表。\n- 表名和字段名较长且为拼音缩写，可能是中文拼音的直译（如“轨道交通延时信息”和“轨道交通线路信息出行服务”），实际应用中建议使用更简洁的命名。",
+  "natural_language_query": "市民反映，今天早上坐地铁上班时发现4号线好像延迟了，站台广播也没说清楚具体从几点开始延误的。我用手机查实时公交显示线路正常，但实际等了20分钟都没车来。想问下4号线到底是从什么时候开始延误的？能不能查到准确的延误开始时间？这种情况已经不是第一次了，每次延误都得不到及时通知，特别耽误上班。来电要求核实4号线延误的具体时间并改善信息通报问题。",
+  "results": 0,
+  "sql skeleton": "select _ from _ where _",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweiguidaoyanshixinxi3711": [
+      "shijiaotongweiguidaoyanshixinxi3711.序号",
+      "shijiaotongweiguidaoyanshixinxi3711.总车次",
+      "shijiaotongweiguidaoyanshixinxi3711.延时开始时间",
+      "shijiaotongweiguidaoyanshixinxi3711.延时结束时间",
+      "shijiaotongweiguidaoyanshixinxi3711.延时线路",
+      "shijiaotongweiguidaoyanshixinxi3711.共享时间",
+      "shijiaotongweiguidaoyanshixinxi3711.更新时间"
+    ],
+    "shijiaotongweigongjiaoxianluxinxichuxingfuwu3666": [
+      "shijiaotongweigongjiaoxianluxinxichuxingfuwu3666.线路代码",
+      "shijiaotongweigongjiaoxianluxinxichuxingfuwu3666.路线名称"
+    ]
+  }
+}

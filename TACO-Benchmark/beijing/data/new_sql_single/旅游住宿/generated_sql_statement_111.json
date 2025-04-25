@@ -1,0 +1,21 @@
+{
+  "sql": "SELECT fengtaiqufengtaiqujingqujingdianteseyetai1387.景区景点（特色业态）明细, huairouquhuairouqujingqumenpiaojiage1592.怀柔区政府定价景区门票价格 FROM fengtaiqufengtaiqujingqujingdianteseyetai1387 WHERE fengtaiqufengtaiqujingqujingdianteseyetai1387.Unnamed: 1 = '条件1' AND fengtaiqufengtaiqujingqujingdianteseyetai1387.Unnamed: 2 = '条件2' ORDER BY fengtaiqufengtaiqujingqujingdianteseyetai1387.Unnamed: 3 ASC",
+  "results": 0,
+  "sql skeleton": "select _ ,_ from _ where _ = _ and _ = _ order by _",
+  "database": "旅游住宿",
+  "tables": {
+    "fengtaiqufengtaiqujingqujingdianteseyetai1387": [
+      "fengtaiqufengtaiqujingqujingdianteseyetai1387.景区景点（特色业态）明细",
+      "fengtaiqufengtaiqujingqujingdianteseyetai1387.Unnamed: 1",
+      "fengtaiqufengtaiqujingqujingdianteseyetai1387.Unnamed: 2",
+      "fengtaiqufengtaiqujingqujingdianteseyetai1387.Unnamed: 3"
+    ],
+    "huairouquhuairouqujingqumenpiaojiage1592": [
+      "huairouquhuairouqujingqumenpiaojiage1592.怀柔区政府定价景区门票价格",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 1",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 2",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 3",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 4"
+    ]
+  }
+}

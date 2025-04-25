@@ -1,0 +1,45 @@
+{
+  "sql": "SELECT \"shiwenhuahelvyoujulvxingshexinxi3530.旅行社名称\", \"shiwenhuahelvyoujulvxingshexinxi3530.旅行社业务经营许可证编号\" FROM \"shiwenhuahelvyoujulvxingshexinxi3530\" WHERE \"shiwenhuahelvyoujulvxingshexinxi3530.旅行社业务经营许可证编号\" = '_' ;",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从旅行社信息表中查询那些旅行社业务经营许可证编号为下划线（'_'）的旅行社名称和许可证编号。\n\n- **详细描述**：\n  - **涉及的表**：`shiwenhuahelvyoujulvxingshexinxi3530`（可能是一个存储文化和旅游相关旅行社信息的表）。\n  - **涉及的列**：\n    - `shiwenhuahelvyoujulvxingshexinxi3530.旅行社名称`：表示旅行社的名称。\n    - `shiwenhuahelvyoujulvxingshexinxi3530.旅行社业务经营许可证编号`：表示旅行社的业务经营许可证编号。\n  - **条件**：`shiwenhuahelvyoujulvxingshexinxi3530.旅行社业务经营许可证编号 = '_'`，即筛选出许可证编号为下划线（'_'）的记录。\n\n- **业务场景**：\n  - 该查询可能用于识别那些许可证编号未正确填写或缺失的旅行社。许可证编号通常是一个重要的标识符，如果编号为下划线（'_'），可能表示数据录入错误或缺失。\n  - 业务场景可能包括数据清洗、合规性检查或旅行社信息管理。\n\n- **用户描述**：\n  - 用户可能是旅游行业的管理人员或数据管理员，他们需要确保所有旅行社的信息完整且准确。\n  - 用户可能遇到的问题是某些旅行社的许可证编号未正确录入，导致数据不完整或无法进行合规性检查。\n  - 用户的需求是找出这些许可证编号异常的旅行社，以便进行数据修正或进一步调查。",
+  "natural_language_query": "市民反映，最近在查询旅行社信息时发现有些旅行社的许可证编号好像没填对，就显示一个下划线\"_\"这样的符号。我是做旅游行业管理的，这种情况让我们很头疼，因为许可证编号是很重要的信息，现在这样根本没法核实这些旅行社是否合规。能不能帮忙查一下都有哪些旅行社的许可证编号是这样的？我们需要尽快联系他们补充正确的许可证信息，不然会影响行业管理工作。主要是想知道这些旅行社的具体名称和那个显示为下划线的许可证编号，方便我们后续跟进处理。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ WHERE _ = _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "shiwenhuahelvyoujulvxingshexinxi3530": [
+      "shiwenhuahelvyoujulvxingshexinxi3530.旅行社名称",
+      "shiwenhuahelvyoujulvxingshexinxi3530.旅行社业务经营许可证编号",
+      "shiwenhuahelvyoujulvxingshexinxi3530.许可经营业务",
+      "shiwenhuahelvyoujulvxingshexinxi3530.许可时间"
+    ],
+    "shiguihuaziranziyuanweitongxunshe1518": [
+      "shiguihuaziranziyuanweitongxunshe1518.HID",
+      "shiguihuaziranziyuanweitongxunshe1518.FATHERID",
+      "shiguihuaziranziyuanweitongxunshe1518.HNAME",
+      "shiguihuaziranziyuanweitongxunshe1518.OTHERNAME",
+      "shiguihuaziranziyuanweitongxunshe1518.CATEGORY",
+      "shiguihuaziranziyuanweitongxunshe1518.SUBCATEGOR",
+      "shiguihuaziranziyuanweitongxunshe1518.COUNTYNAME",
+      "shiguihuaziranziyuanweitongxunshe1518.STREETNAME",
+      "shiguihuaziranziyuanweitongxunshe1518.DYNASTY",
+      "shiguihuaziranziyuanweitongxunshe1518.SUBDYNASTY",
+      "shiguihuaziranziyuanweitongxunshe1518.ADDRESS",
+      "shiguihuaziranziyuanweitongxunshe1518.RANK",
+      "shiguihuaziranziyuanweitongxunshe1518.BATCH",
+      "shiguihuaziranziyuanweitongxunshe1518.PUBTIME",
+      "shiguihuaziranziyuanweitongxunshe1518.USERS",
+      "shiguihuaziranziyuanweitongxunshe1518.PURPOSE",
+      "shiguihuaziranziyuanweitongxunshe1518.OWNERSHIP",
+      "shiguihuaziranziyuanweitongxunshe1518.STATEEVALU",
+      "shiguihuaziranziyuanweitongxunshe1518.SINGLERELI",
+      "shiguihuaziranziyuanweitongxunshe1518.PROTECTION",
+      "shiguihuaziranziyuanweitongxunshe1518.ATTACHEDRE",
+      "shiguihuaziranziyuanweitongxunshe1518.RELATEDPEO",
+      "shiguihuaziranziyuanweitongxunshe1518.RELATEDEVE",
+      "shiguihuaziranziyuanweitongxunshe1518.PUBNAME",
+      "shiguihuaziranziyuanweitongxunshe1518.SOURCE",
+      "shiguihuaziranziyuanweitongxunshe1518.EDITOR",
+      "shiguihuaziranziyuanweitongxunshe1518.ISREDUNDAN"
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "sql": "SELECT \"shijiaotongweichaoxianchaozaihuochexiezaicha\"ng.\"行政区划代码\", \"shijiaotongweichaoxianchaozaihuochexiezaicha\"ng.\"站点名称\", \"shijiaotongweichaoxianchaozaihuochexiezaicha\"ng.\"联系电话\" FROM \"shijiaotongweichaoxianchaozaihuochexiezaicha\"ng WHERE \"shijiaotongweichaoxianchaozaihuochexiezaicha\"ng.\"行政区划代码\" = '3663' ORDER BY \"shijiaotongweichaoxianchaozaihuochexiezaicha\"ng.\"行政区划代码\";",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从表 `shijiaotongweichaoxianchaozaihuochexiezaichang` 中查询行政区划代码为 '3663' 的记录的行政区划代码、站点名称和联系电话，并按行政区划代码排序。\n\n- **详细描述**：\n  - **表**：`shijiaotongweichaoxianchaozaihuochexiezaichang`（表名较长，可能是拼音或特定编码的站点信息表）。\n  - **列**：\n    - `行政区划代码`：表示行政区域的唯一标识代码。\n    - `站点名称`：表示站点的名称。\n    - `联系电话`：表示站点的联系电话。\n  - **条件**：`行政区划代码 = '3663'`，即只查询行政区划代码为 '3663' 的记录。\n  - **排序**：按 `行政区划代码` 升序排序（尽管这里只有一条记录，排序可能影响不大）。\n\n- **业务场景**：\n  - 该查询可能用于获取特定行政区划代码（'3663'）下的站点信息，包括站点名称和联系电话。例如，某个行政区划下的交通站点或服务站点信息。\n  - 可能的业务场景包括：\n    - 行政区划管理：查询特定行政区划下的站点信息。\n    - 客户服务：提供特定区域的站点联系方式。\n    - 数据分析：统计或分析特定行政区划的站点分布情况。\n\n- **用户描述**：\n  - 用户可能需要查找行政区划代码为 '3663' 的所有站点信息，以便进行后续的管理或服务操作。例如：\n    - 用户是行政区划管理员，需要核实或更新该行政区划下的站点信息。\n    - 用户是客户服务人员，需要提供该行政区划内站点的联系方式给客户。\n    - 用户是数据分析师，需要统计特定行政区划的站点数量或分布情况。",
+  "natural_language_query": "市民反映，最近在办理某个业务时需要联系行政区划代码3663的相关站点，但不知道具体是哪个地方。之前在系统里看到过这个代码对应几个站点，现在想查一下这个3663区域里都有哪些站点，还有他们的联系电话是多少。能不能帮忙查一下这个3663下面的所有站点信息？最好能按区域代码排个序，这样看起来清楚些。来电咨询3663行政区划站点信息问题。",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ from _ where _ = _ order by _ ;",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663": [
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.行政区划代码",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.站点名称",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.联系电话",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.地址"
+    ],
+    "xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392": [
+      "xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.西城区路侧停车数据",
+      "xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.Unnamed: 1",
+      "xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.Unnamed: 2",
+      "xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.Unnamed: 3",
+      "xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.Unnamed: 4"
+    ]
+  }
+}

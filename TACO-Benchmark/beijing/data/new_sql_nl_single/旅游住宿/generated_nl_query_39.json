@@ -1,0 +1,23 @@
+{
+  "sql": "SELECT pingguquzhucegongyuanxinxi780.名称 FROM pingguquzhucegongyuanxinxi780 OR xichengquxichengquguojiajizhongdianwenwubaohudanwei60 WHERE pingguquzhucegongyuanxinxi780.区 = '区名' OR xichengquxichengquguojiajizhongdianwenwubaohudanwei60.地址 = '地址'",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从两个不同的表中查询符合条件的记录，具体是查询满足“区名”或“地址”条件的名称信息。\n\n### **详细描述**  \n1. **涉及的表**：  \n   - `pingguquzhucegongyuanxinxi780`（可能为“平谷区注册公园信息”表）  \n   - `xichengquxichengquguojiajizhongdianwenwubaohudanwei60`（可能为“西城区国家重点文物保护单位”表）  \n\n2. **涉及的列**：  \n   - `pingguquzhucegongyuanxinxi780.名称`（公园名称）  \n   - `pingguquzhucegongyuanxinxi780.区`（公园所属区）  \n   - `xichengquxichengquguojiajizhongdianwenwubaohudanwei60.地址`（文物保护单位的地址）  \n\n3. **查询条件**：  \n   - `pingguquzhucegongyuanxinxi780.区 = '区名'`（筛选属于特定区的公园）  \n   - `xichengquxichengquguojiajizhongdianwenwubaohudanwei60.地址 = '地址'`（筛选位于特定地址的文物保护单位）  \n   - 使用 `OR` 连接两个条件，表示只要满足其中一个条件即可返回结果。  \n\n4. **查询结果**：  \n   - 返回 `pingguquzhucegongyuanxinxi780` 表中的“名称”字段，但查询逻辑存在问题，因为 `OR` 可能导致跨表查询混乱，SQL 语法可能不合法（缺少 JOIN 或 UNION）。  \n\n### **业务场景**  \n1. **可能的业务需求**：  \n   - 用户可能需要查询某个特定区（如“平谷区”）的所有注册公园名称，或者查询位于某个特定地址的国家重点文物保护单位。  \n   - 例如，政府管理部门可能需要统计某个区的公园信息，或者查找某个具体位置的文化保护单位。  \n\n2. **数据用途**：  \n   - 城市管理、文化旅游、区域规划等场景可能需要此类数据。  \n\n### **用户描述**  \n1. **用户可能的需求**：  \n   - 一个城市规划部门的工作人员想要获取“平谷区”的所有注册公园名单，以便进行设施维护或游客管理。  \n   - 或者，一个文化保护机构的研究员想要查找位于“某特定地址”的国家重点文物保护单位，以便进行考察或修缮工作。  \n\n2. **潜在问题**：  \n   - 当前 SQL 语句的写法可能无法正确执行，因为 `OR` 连接两个不同表的条件时，如果没有关联字段（如 `JOIN` 或 `UNION`），查询逻辑会混乱。  \n   - 用户可能需要分别查询两个表，或者使用 `UNION` 合并两个查询结果。  \n\n### **修正建议**  \n如果用户希望同时查询两个表并合并结果，可以改为：  \n```sql\nSELECT 名称 FROM pingguquzhucegongyuanxinxi780 WHERE 区 = '区名'\nUNION\nSELECT 名称 FROM xichengquxichengquguojiajizhongdianwenwubaohudanwei60 WHERE 地址 = '地址'\n```\n这样能确保查询逻辑正确，并返回两个表中符合条件的名称列表。",
+  "natural_language_query": "市民反映，最近在整理城市文化资源时遇到些困惑。我是平谷区文旅局的工作人员，想了解一下我们区里都有哪些注册公园的信息，主要是想统计一下公园名称好做后续管理。另外领导还让我查一下西城区那边某个具体地址上的国家重点文物保护单位是哪些，说是要配合文物保护检查工作。但是我搞不太清楚该怎么查，系统里好像有两个不同的地方可以查这些信息，一个是公园相关的，一个是文物相关的。能不能帮忙看看怎么才能查到这些资料？主要是平谷区所有的公园名称，还有西城区某个指定地址上的重点文物保护单位名称。",
+  "results": 0,
+  "sql skeleton": "select _ from _ where _ or _",
+  "database": "旅游住宿",
+  "tables": {
+    "pingguquzhucegongyuanxinxi780": [
+      "pingguquzhucegongyuanxinxi780.序号",
+      "pingguquzhucegongyuanxinxi780.名称",
+      "pingguquzhucegongyuanxinxi780.区",
+      "pingguquzhucegongyuanxinxi780.街道",
+      "pingguquzhucegongyuanxinxi780.地址",
+      "pingguquzhucegongyuanxinxi780.咨询电话"
+    ],
+    "xichengquxichengquguojiajizhongdianwenwubaohudanwei60": [
+      "xichengquxichengquguojiajizhongdianwenwubaohudanwei60.序号",
+      "xichengquxichengquguojiajizhongdianwenwubaohudanwei60.名称",
+      "xichengquxichengquguojiajizhongdianwenwubaohudanwei60.地址"
+    ]
+  }
+}

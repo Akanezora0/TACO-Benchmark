@@ -1,0 +1,50 @@
+{
+  "sql": "SELECT \"yanqingquyanqingqulvyoujingquxinxi3381.旅游景区\", \"shiguihuaziranziyuanweiyuanlin1526.HNAME\" FROM \"yanqingquyanqingqulvyoujingquxinxi3381\" INNER JOIN \"shiguihuaziranziyuanweiyuanlin1526\" ON \"yanqingquyanqingqulvyoujingquxinxi3381.旅游景区\" = \"shiguihuaziranziyuanweiyuanlin1526.HNAME\";",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是通过内连接（INNER JOIN）查询两个表中具有相同景区名称的记录，从而获取延庆区旅游景区信息与规划自然资源委员会园林信息之间的关联数据。\n\n- **详细描述**：\n  - **涉及的表**：\n    1. `yanqingquyanqingqulvyoujingquxinxi3381`：该表存储延庆区旅游景区的相关信息。\n    2. `shiguihuaziranziyuanweiyuanlin1526`：该表存储规划自然资源委员会园林的相关信息。\n  - **涉及的列**：\n    1. `yanqingquyanqingqulvyoujingquxinxi3381.旅游景区`：延庆区旅游景区表中的景区名称列。\n    2. `shiguihuaziranziyuanweiyuanlin1526.HNAME`：规划自然资源委员会园林表中的名称列（可能是园林或景区的名称）。\n  - **连接条件**：通过 `yanqingquyanqingqulvyoujingquxinxi3381.旅游景区` 和 `shiguihuaziranziyuanweiyuanlin1526.HNAME` 进行内连接，即只返回两个表中景区名称完全匹配的记录。\n\n- **业务场景**：\n  - 该查询可以用于识别延庆区旅游景区中哪些景区同时被规划自然资源委员会管理或记录。例如，可能用于验证景区的合规性、统计双重管理的景区数量，或者为旅游管理部门提供数据支持。\n  - 另一个可能的场景是整合不同部门的数据，以便进行更全面的景区信息分析或规划。\n\n- **用户描述**：\n  - 用户可能是旅游管理部门或规划自然资源委员会的工作人员，他们需要了解哪些旅游景区在延庆区旅游局和规划自然资源委员会都有记录。这可能是因为他们需要协调管理这些景区，或者确保这些景区的信息在两个系统中保持一致。\n  - 用户还可能希望通过这种关联查询发现潜在的遗漏或错误，例如某些景区在一个系统中有记录而在另一个系统中没有，从而进行数据修正或补充。",
+  "natural_language_query": "市民反映，最近在整理延庆区旅游景点资料时发现，有些景区的管理归属不太清楚。想咨询一下，延庆区那些正规旅游景区，是不是都在园林局的系统里有备案登记啊？因为我们这边做旅游宣传手册，需要确认哪些景区是两边都认可的，避免把不合规的景点也印上去。之前就出现过八达岭野生动物园旁边有个山寨景点，结果游客投诉说不在园林局名单里，特别麻烦。能不能帮忙查查延庆区这边旅游局认可的景点和园林局系统里的名单有没有对应的？主要是怕漏掉或者重复了，影响我们工作。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "yanqingquyanqingqulvyoujingquxinxi3381": [
+      "yanqingquyanqingqulvyoujingquxinxi3381.旅游景区",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 1",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 2",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 3",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 4",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 5",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 6",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 7"
+    ],
+    "shiguihuaziranziyuanweiyuanlin1526": [
+      "shiguihuaziranziyuanweiyuanlin1526.HID",
+      "shiguihuaziranziyuanweiyuanlin1526.FATHERID",
+      "shiguihuaziranziyuanweiyuanlin1526.HNAME",
+      "shiguihuaziranziyuanweiyuanlin1526.OTHERNAME",
+      "shiguihuaziranziyuanweiyuanlin1526.CATEGORY",
+      "shiguihuaziranziyuanweiyuanlin1526.SUBCATEGOR",
+      "shiguihuaziranziyuanweiyuanlin1526.COUNTYNAME",
+      "shiguihuaziranziyuanweiyuanlin1526.STREETNAME",
+      "shiguihuaziranziyuanweiyuanlin1526.DYNASTY",
+      "shiguihuaziranziyuanweiyuanlin1526.SUBDYNASTY",
+      "shiguihuaziranziyuanweiyuanlin1526.ADDRESS",
+      "shiguihuaziranziyuanweiyuanlin1526.RANK",
+      "shiguihuaziranziyuanweiyuanlin1526.BATCH",
+      "shiguihuaziranziyuanweiyuanlin1526.PUBTIME",
+      "shiguihuaziranziyuanweiyuanlin1526.USERS",
+      "shiguihuaziranziyuanweiyuanlin1526.PURPOSE",
+      "shiguihuaziranziyuanweiyuanlin1526.OWNERSHIP",
+      "shiguihuaziranziyuanweiyuanlin1526.STATEEVALU",
+      "shiguihuaziranziyuanweiyuanlin1526.SINGLERELI",
+      "shiguihuaziranziyuanweiyuanlin1526.PROTECTION",
+      "shiguihuaziranziyuanweiyuanlin1526.ATTACHEDRE",
+      "shiguihuaziranziyuanweiyuanlin1526.RELATEDPEO",
+      "shiguihuaziranziyuanweiyuanlin1526.RELATEDEVE",
+      "shiguihuaziranziyuanweiyuanlin1526.PUBNAME",
+      "shiguihuaziranziyuanweiyuanlin1526.SOURCE",
+      "shiguihuaziranziyuanweiyuanlin1526.EDITOR",
+      "shiguihuaziranziyuanweiyuanlin1526.ISREDUNDAN",
+      "shiguihuaziranziyuanweiyuanlin1526.THEME"
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "sql": "SELECT \"pingguqupingguqujianzhuqizhongjixiedengjibianhaoxinxi478.北京市平谷区2024年建筑起重机械登记编号信息\", \"pingguqupingguqujianzhuqizhongjixiedengjibianhaoxinxi478.Unnamed: 1\", \"pingguqupingguqujianzhuqizhongjixiedengjibianhaoxinxi478.Unnamed: 2\", \"pingguqupingguqujianzhuqizhongjixiedengjibianhaoxinxi478.Unnamed: 3\" FROM \"pingguqupingguqujianzhuqizhongjixiedengjibianhaoxinxi478\" WHERE \"pingguqupingguqujianzhuqizhongjixiedengjibianhaoxinxi478.Unnamed: 4\" = '条件值' AND \"pingguqupingguqujianzhuqizhongjixiedengjibianhaoxinxi478.Unnamed: 5\" = '另一个条件值' and (\"pingguqupingguqujianzhuqizhongjixiedengjibianhaoxinxi478.Unnamed: 6\", \"pingguqupingguqujianzhuqizhongjixiedengjibianhaoxinxi478.Unnamed: 7\") = ('子条件值1', '子条件值2');",
+  "results": 0,
+  "sql skeleton": "SELECT _ ._ , _ ._ , _ ._ , _ ._ FROM _ WHERE _ ._ = _ AND _ ._ = _ and _ (_ ._ , _ ) = _ ;",
+  "databases": [
+    "安全生活",
+    "房屋住宅"
+  ],
+  "tables": {
+    "pingguqupingguqujianzhuqizhongjixiedengjibianhaoxinxi478": {
+      "pingguqupingguqujianzhuqizhongjixiedengjibianhaoxinxi478": [
+        "pingguqupingguqujianzhuqizhongjixiedengjibianhaoxinxi478.北京市平谷区2024年建筑起重机械登记编号信息",
+        "pingguqupingguqujianzhuqizhongjixiedengjibianhaoxinxi478.Unnamed: 1",
+        "pingguqupingguqujianzhuqizhongjixiedengjibianhaoxinxi478.Unnamed: 2",
+        "pingguqupingguqujianzhuqizhongjixiedengjibianhaoxinxi478.Unnamed: 3",
+        "pingguqupingguqujianzhuqizhongjixiedengjibianhaoxinxi478.Unnamed: 4",
+        "pingguqupingguqujianzhuqizhongjixiedengjibianhaoxinxi478.Unnamed: 5",
+        "pingguqupingguqujianzhuqizhongjixiedengjibianhaoxinxi478.Unnamed: 6",
+        "pingguqupingguqujianzhuqizhongjixiedengjibianhaoxinxi478.Unnamed: 7",
+        "pingguqupingguqujianzhuqizhongjixiedengjibianhaoxinxi478.Unnamed: 8"
+      ]
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "sql": "SELECT shijiaotongweikebianqingbaobanshebeixinxi3519.名称, shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.总量 \nFROM shijiaotongweikebianqingbaobanshebeixinxi3519 \nJOIN shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668 \nON shijiaotongweikebianqingbaobanshebeixinxi3519.唯一标识 = shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.观测站名称",
+  "results": 0,
+  "sql skeleton": "SELECT _ _ FROM _ WHERE _ _",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweikebianqingbaobanshebeixinxi3519": [
+      "shijiaotongweikebianqingbaobanshebeixinxi3519.唯一标识",
+      "shijiaotongweikebianqingbaobanshebeixinxi3519.名称",
+      "shijiaotongweikebianqingbaobanshebeixinxi3519.设备编码"
+    ],
+    "shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668": [
+      "shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.年份",
+      "shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.总量",
+      "shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.观测站名称"
+    ]
+  }
+}

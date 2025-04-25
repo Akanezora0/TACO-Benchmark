@@ -1,0 +1,45 @@
+{
+  "sql": "SELECT shiguihuaziranziyuanweitushuguan1519.HID, shiguihuaziranziyuanweitushuguan1519.FATHERID, shiguihuaziranziyuanweitushuguan1519.HNAME, shiguihuaziranziyuanweitushuguan1519.OTHERNAME, shiguihuaziranziyuanweitushuguan1519.CATEGORY, shiguihuaziranziyuanweitushuguan1519.SUBCATEGOR, shiguihuaziranziyuanweitushuguan1519.COUNTYNAME, shiguihuaziranziyuanweitushuguan1519.STREETNAME, shiguihuaziranziyuanweitushuguan1519.DYNASTY, shiguihuaziranziyuanweitushuguan1519.SUBDYNASTY, shiguihuaziranziyuanweitushuguan1519.ADDRESS, shiguihuaziranziyuanweitushuguan1519.RANK, shiguihuaziranziyuanweitushuguan1519.BATCH, shiguihuaziranziyuanweitushuguan1519.PUBTIME, shiguihuaziranziyuanweitushuguan1519.USERS, shiguihuaziranziyuanweitushuguan1519.PURPOSE, shiguihuaziranziyuanweitushuguan1519.OWNERSHIP, shiguihuaziranziyuanweitushuguan1519.STATEEVALU, shiguihuaziranziyuanweitushuguan1519.SINGLERELI, shiguihuaziranziyuanweitushuguan1519.PROTECTION, shiguihuaziranziyuanweitushuguan1519.ATTACHEDRE, shiguihuaziranziyuanweitushuguan1519.RELATEDPEO, shiguihuaziranziyuanweitushuguan1519.RELATEDEVE, shiguihuaziranziyuanweitushuguan1519.PUBNAME, shigui",
+  "problem_description": "### 查询意图：\n该 SQL 语句的目的是从名为 `shiguihuaziranziyuanweitushuguan1519` 的表中查询多个字段的数据，这些字段涵盖了历史文化遗产或资源的基本信息、地理位置、历史背景、保护状态等多个方面的内容。\n\n### 详细描述：\n1. **表名**：`shiguihuaziranziyuanweitushuguan1519`  \n   - 从表名推测，这可能是一个存储历史文化遗产或自然资源相关信息的表，可能与图书馆或文化资源管理相关。\n\n2. **查询的列**：\n   - **标识信息**：`HID`（唯一标识）、`FATHERID`（父级标识）、`HNAME`（名称）、`OTHERNAME`（别名）\n   - **分类信息**：`CATEGORY`（类别）、`SUBCATEGOR`（子类别）\n   - **地理位置信息**：`COUNTYNAME`（县名）、`STREETNAME`（街道名）、`ADDRESS`（详细地址）\n   - **历史背景信息**：`DYNASTY`（朝代）、`SUBDYNASTY`（子朝代）\n   - **管理与保护信息**：`RANK`（等级）、`BATCH`（批次）、`PUBTIME`（发布时间）、`USERS`（使用者）、`PURPOSE`（用途）、`OWNERSHIP`（所有权）、`STATEEVALU`（国家评估）、`SINGLERELI`（单一宗教）、`PROTECTION`（保护状态）、`ATTACHEDRE`（附属资源）、`RELATEDPEO`（相关人物）、`RELATEDEVE`（相关事件）、`PUBNAME`（发布名称）\n   - 其他字段未完全显示，但可以看出涵盖了丰富的属性信息。\n\n3. **条件**：\n   - 该 SQL 语句目前没有 `WHERE` 子句，因此是查询表中的所有记录的所有指定字段。\n\n### 业务场景：\n1. **文化资源管理**：\n   - 该查询可以用于文化资源管理系统，帮助管理员或研究人员快速获取历史文化遗产的详细信息，包括分类、地理位置、历史背景和保护状态等。\n\n2. **历史研究**：\n   - 历史学家或研究人员可以通过该查询获取特定朝代或地区的文化遗产信息，用于学术研究或文化保护工作。\n\n3. **旅游或教育**：\n   - 旅游部门或教育机构可以利用这些数据展示文化遗产的详细信息，例如用于制作旅游指南或教学材料。\n\n4. **保护与评估**：\n   - 政府或保护机构可以通过查询了解文化遗产的保护状态、等级和评估信息，制定相应的保护政策或措施。\n\n### 用户描述：\n1. **文化资源管理员**：\n   - 用户可能需要全面了解所有文化遗产的基本信息和保护状态，以便进行资源盘点或制定管理计划。\n\n2. **历史研究人员**：\n   - 用户可能需要查询特定朝代或类别的文化遗产，以支持其研究项目或撰写论文。\n\n3. **旅游规划师**：\n   - 用户可能需要获取文化遗产的地理位置和背景信息，以便设计旅游路线或推广材料。\n\n4. **政府或保护机构**：\n   - 用户可能需要评估文化遗产的保护状态和相关事件，以决定是否需要采取进一步的保护措施或申请更高等级的保护资格。\n\n### 注意事项：\n- 该 SQL 语句未完全显示（末尾有截断），可能需要补充完整。\n- 如果实际业务中需要筛选特定记录，应添加 `WHERE` 子句以提高查询效率。",
+  "natural_language_query": "市民反映，最近在研究北京地区的历史文化资源时遇到困难，想了解一些老建筑和古迹的详细情况。比如我家附近西城区有个叫\"醇亲王府\"的老宅子，想查查它是什么朝代的、属于哪级文物保护单位、现在归谁管理使用、有没有什么历史故事。另外还想知道类似这样的文化遗产在朝阳区、海淀区还有哪些，它们的具体地址在哪里，现在保护得好不好。听说有些老建筑被改造成餐厅或者民宿了，不知道这样合不合规定。最好能提供完整的信息，包括建筑别名、历史背景、相关人物事件这些，方便我们做文化考察和旅游规划。",
+  "results": 0,
+  "sql skeleton": "SELECT _ _ FROM ",
+  "database": "旅游住宿",
+  "tables": {
+    "shiguihuaziranziyuanweitushuguan1519": [
+      "shiguihuaziranziyuanweitushuguan1519.HID",
+      "shiguihuaziranziyuanweitushuguan1519.FATHERID",
+      "shiguihuaziranziyuanweitushuguan1519.HNAME",
+      "shiguihuaziranziyuanweitushuguan1519.OTHERNAME",
+      "shiguihuaziranziyuanweitushuguan1519.CATEGORY",
+      "shiguihuaziranziyuanweitushuguan1519.SUBCATEGOR",
+      "shiguihuaziranziyuanweitushuguan1519.COUNTYNAME",
+      "shiguihuaziranziyuanweitushuguan1519.STREETNAME",
+      "shiguihuaziranziyuanweitushuguan1519.DYNASTY",
+      "shiguihuaziranziyuanweitushuguan1519.SUBDYNASTY",
+      "shiguihuaziranziyuanweitushuguan1519.ADDRESS",
+      "shiguihuaziranziyuanweitushuguan1519.RANK",
+      "shiguihuaziranziyuanweitushuguan1519.BATCH",
+      "shiguihuaziranziyuanweitushuguan1519.PUBTIME",
+      "shiguihuaziranziyuanweitushuguan1519.USERS",
+      "shiguihuaziranziyuanweitushuguan1519.PURPOSE",
+      "shiguihuaziranziyuanweitushuguan1519.OWNERSHIP",
+      "shiguihuaziranziyuanweitushuguan1519.STATEEVALU",
+      "shiguihuaziranziyuanweitushuguan1519.SINGLERELI",
+      "shiguihuaziranziyuanweitushuguan1519.PROTECTION",
+      "shiguihuaziranziyuanweitushuguan1519.ATTACHEDRE",
+      "shiguihuaziranziyuanweitushuguan1519.RELATEDPEO",
+      "shiguihuaziranziyuanweitushuguan1519.RELATEDEVE",
+      "shiguihuaziranziyuanweitushuguan1519.PUBNAME",
+      "shiguihuaziranziyuanweitushuguan1519.SOURCE",
+      "shiguihuaziranziyuanweitushuguan1519.EDITOR",
+      "shiguihuaziranziyuanweitushuguan1519.ISREDUNDAN"
+    ],
+    "shunyiqushunyiquxingjifandian2102": [
+      "shunyiqushunyiquxingjifandian2102.顺义区星级饭店",
+      "shunyiqushunyiquxingjifandian2102.Unnamed: 1",
+      "shunyiqushunyiquxingjifandian2102.Unnamed: 2",
+      "shunyiqushunyiquxingjifandian2102.Unnamed: 3"
+    ]
+  }
+}

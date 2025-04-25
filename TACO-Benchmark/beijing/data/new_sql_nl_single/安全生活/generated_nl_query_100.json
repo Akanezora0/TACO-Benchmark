@@ -1,0 +1,9 @@
+{
+  "sql": "SELECT t1.col1, t1.col2, t2.col3 \nFROM table1 AS t1 \nJOIN table2 AS t2 ON t1.id = t2.table1_id \nWHERE t1.some_condition = (SELECT t3.col4 FROM table3 AS t3 WHERE t3.some_other_condition)\n```",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从 `table1` 和 `table2` 中联合查询数据，并且查询条件依赖于 `table3` 中的某个值。\n\n- **详细描述**：\n  - **涉及的表**：\n    - `table1`（别名为 `t1`）：主表之一，包含 `col1`、`col2`、`id` 和 `some_condition` 列。\n    - `table2`（别名为 `t2`）：与 `table1` 关联的表，包含 `col3` 和 `table1_id` 列。\n    - `table3`（别名为 `t3`）：用于子查询的表，包含 `col4` 和 `some_other_condition` 列。\n  - **查询的列**：\n    - 从 `t1` 中查询 `col1` 和 `col2`。\n    - 从 `t2` 中查询 `col3`。\n  - **关联条件**：\n    - `t1.id = t2.table1_id`：表示 `table1` 和 `table2` 通过 `id` 和 `table1_id` 进行关联。\n  - **查询条件**：\n    - `t1.some_condition = (SELECT t3.col4 FROM table3 AS t3 WHERE t3.some_other_condition)`：表示 `t1` 的 `some_condition` 列的值必须等于子查询中 `t3` 的 `col4` 列的值，且子查询的条件是 `t3.some_other_condition`。\n\n- **业务场景**：\n  - 该查询可能用于需要从多个表中联合获取数据，并且其中一个表的查询条件依赖于另一个表的动态值的场景。例如：\n    - 在电商系统中，查询某个特定商品（`table1`）的详细信息（`col1` 和 `col2`）及其关联的库存信息（`table2` 的 `col3`），并且该商品的查询条件（`some_condition`）需要根据另一个表（如促销活动表 `table3`）中的某个值（如促销活动的折扣条件 `col4`）动态确定。\n\n- **用户描述**：\n  - 用户可能需要查询满足特定促销活动条件的商品及其库存信息。例如，用户想要查看所有参与“满100减20”促销活动的商品及其库存状态。此时，`table3` 可能存储了促销活动的条件（如 `some_other_condition` 是活动名称或 ID），而 `table1` 和 `table2` 分别存储商品信息和库存信息。通过该查询，用户可以快速获取符合条件的商品列表及其库存情况。",
+  "natural_language_query": "市民反映，在某电商平台购物时遇到问题。想查看所有参加\"满100减20\"活动的商品信息，包括商品名称、价格和库存状态，但系统总是显示不全。自己已经确认活动是真实存在的，而且活动页面明明标注了很多商品参与，可是点进去就看不到详细信息了。订单号是DH202407150023，希望能帮忙核实是不是系统有问题，为什么参加活动的商品信息显示不全？来电反映促销商品信息查询异常问题。",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ from _ where _ = (select _ from _ where _ = _ );",
+  "database": "安全生活",
+  "tables": {}
+}

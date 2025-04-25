@@ -1,0 +1,44 @@
+{
+  "sql": "SELECT xichengqubeijingshiwenwubaohudanwei31.\"名称\", xichengqubeijingshiwenwubaohudanwei31.\"地址\", shiguihuaziranziyuanweitushuguan1519.HNAME, shiguihuaziranziyuanweitushuguan1519.CATEGORY, shiguihuaziranziyuanweitushuguan1519.SUBCATEGOR, shiguihuaziranziyuanweitushuguan1519.DYNASTY, shiguihuaziranziyuanweitushuguan1519.ADDRESS FROM xichengqubeijingshiwenwubaohudanwei31 JOIN shiguihuaziranziyuanweitushuguan1519 ON xichengqubeijingshiwenwubaohudanwei31.\"序号\" = shiguihuaziranziyuanweitushuguan1519.HID WHERE xichengqubeijingshiwenwubaohudanwei31.\"名称\" = '目标名称' AND shiguihuaziranziyuanweitushuguan1519.CATEGORY = '目标类别'",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从两个表中联合查询特定名称和类别的文物保护单位及其相关信息。\n\n- **详细描述**：\n  - **涉及的表**：\n    - `xichengqubeijingshiwenwubaohudanwei31`：可能是一个记录北京市西城区文物保护单位信息的表。\n    - `shiguihuaziranziyuanweitushuguan1519`：可能是一个记录图书馆或文化资源相关信息的表。\n  - **涉及的列**：\n    - `xichengqubeijingshiwenwubaohudanwei31` 表的列：\n      - `名称`：文物保护单位的名称。\n      - `地址`：文物保护单位的地址。\n      - `序号`：可能是文物保护单位的唯一标识符。\n    - `shiguihuaziranziyuanweitushuguan1519` 表的列：\n      - `HNAME`：可能是图书馆或文化资源的名称。\n      - `CATEGORY`：类别信息。\n      - `SUBCATEGOR`：子类别信息。\n      - `DYNASTY`：朝代信息。\n      - `ADDRESS`：地址信息。\n      - `HID`：可能是与 `xichengqubeijingshiwenwubaohudanwei31` 表中 `序号` 对应的唯一标识符。\n  - **查询条件**：\n    - `xichengqubeijingshiwenwubaohudanwei31.\"名称\" = '目标名称'`：筛选名称为“目标名称”的文物保护单位。\n    - `shiguihuaziranziyuanweitushuguan1519.CATEGORY = '目标类别'`：筛选类别为“目标类别”的图书馆或文化资源。\n  - **关联条件**：\n    - `xichengqubeijingshiwenwubaohudanwei31.\"序号\" = shiguihuaziranziyuanweitushuguan1519.HID`：通过序号和 HID 关联两个表。\n\n- **业务场景**：\n  - 该查询可能用于文化资源管理系统中，查找特定名称的文物保护单位及其关联的图书馆或文化资源的详细信息。\n  - 例如，用户可能需要查找某个文物保护单位（如“故宫”）及其相关的图书馆或文化资源（如“故宫图书馆”），并且这些资源属于特定类别（如“历史建筑”）。\n\n- **用户描述**：\n  - 用户可能是一个文化资源管理员或研究人员，需要查询某个特定名称的文物保护单位及其相关的文化资源信息。\n  - 用户的需求可能是为了了解某个文物保护单位的具体位置、类别、子类别、朝代等信息，或者是为了进行文化资源的统计和分析。\n  - 例如，用户可能需要查找“故宫”这一文物保护单位的所有相关图书馆资源，并且这些资源属于“历史建筑”类别，以便进行进一步的研究或管理。",
+  "natural_language_query": "市民反映，我在研究西城区文物保护单位时遇到一个问题。想查一下\"故宫\"这个文物保护点的详细信息，包括它的具体位置、历史朝代，还有它相关的图书馆或文化场所的情况。特别是想了解那些被归类为\"历史建筑\"的相关场所。我之前在文化部门的网站上看到过相关信息，但不太确定具体怎么查。希望能帮忙核实一下\"故宫\"这个文物保护点下面都有哪些附属的文化场所，这些场所的具体类别是什么，最好能知道它们的子分类和建造年代。因为我在做一份关于西城区历史建筑保护的研究报告，需要这些详细信息作为参考。来电咨询文物保护单位及相关文化场所信息查询问题。",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ from _ join _ on _ ._ = _ ._ where _ = _ and _ = _",
+  "database": "旅游住宿",
+  "tables": {
+    "xichengqubeijingshiwenwubaohudanwei31": [
+      "xichengqubeijingshiwenwubaohudanwei31.序号",
+      "xichengqubeijingshiwenwubaohudanwei31.名称",
+      "xichengqubeijingshiwenwubaohudanwei31.地址"
+    ],
+    "shiguihuaziranziyuanweitushuguan1519": [
+      "shiguihuaziranziyuanweitushuguan1519.HID",
+      "shiguihuaziranziyuanweitushuguan1519.FATHERID",
+      "shiguihuaziranziyuanweitushuguan1519.HNAME",
+      "shiguihuaziranziyuanweitushuguan1519.OTHERNAME",
+      "shiguihuaziranziyuanweitushuguan1519.CATEGORY",
+      "shiguihuaziranziyuanweitushuguan1519.SUBCATEGOR",
+      "shiguihuaziranziyuanweitushuguan1519.COUNTYNAME",
+      "shiguihuaziranziyuanweitushuguan1519.STREETNAME",
+      "shiguihuaziranziyuanweitushuguan1519.DYNASTY",
+      "shiguihuaziranziyuanweitushuguan1519.SUBDYNASTY",
+      "shiguihuaziranziyuanweitushuguan1519.ADDRESS",
+      "shiguihuaziranziyuanweitushuguan1519.RANK",
+      "shiguihuaziranziyuanweitushuguan1519.BATCH",
+      "shiguihuaziranziyuanweitushuguan1519.PUBTIME",
+      "shiguihuaziranziyuanweitushuguan1519.USERS",
+      "shiguihuaziranziyuanweitushuguan1519.PURPOSE",
+      "shiguihuaziranziyuanweitushuguan1519.OWNERSHIP",
+      "shiguihuaziranziyuanweitushuguan1519.STATEEVALU",
+      "shiguihuaziranziyuanweitushuguan1519.SINGLERELI",
+      "shiguihuaziranziyuanweitushuguan1519.PROTECTION",
+      "shiguihuaziranziyuanweitushuguan1519.ATTACHEDRE",
+      "shiguihuaziranziyuanweitushuguan1519.RELATEDPEO",
+      "shiguihuaziranziyuanweitushuguan1519.RELATEDEVE",
+      "shiguihuaziranziyuanweitushuguan1519.PUBNAME",
+      "shiguihuaziranziyuanweitushuguan1519.SOURCE",
+      "shiguihuaziranziyuanweitushuguan1519.EDITOR",
+      "shiguihuaziranziyuanweitushuguan1519.ISREDUNDAN"
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "sql": "SELECT sga_phase_2_assessed_reaches.SGAT_ID, waste_water_facilities.FacilityName FROM sga_phase_2_assessed_reaches INNER JOIN waste_water_facilities ON sga_phase_2_assessed_reaches.RchID = waste_water_facilities.RchID WHERE sga_phase_2_assessed_reaches.FinalA = 'Completed';",
+  "problem_description": "### Query intent:\nThe SQL statement aims to retrieve specific information from two related databases (tables) and combine them based on a common identifier, then filter the results to include only those records where the status is marked as 'Completed'.\n\n### Detailed description:\n- **Table `sga_phase_2_assessed_reaches`**:\n    - **Columns**: `SGAT_ID`, `RchID`, `FinalA`. \n    - **Purpose**: This table contains information about phase 2 assessed reaches, likely related to environmental assessments or infrastructure projects. The column `FinalA` indicates the final status of the assessment, with 'Completed' being one of the possible statuses.\n- **Table `waste_water_facilities`**:\n    - **Columns**: `FacilityName`, `RchID`.\n    - **Purpose**: This table contains details about waste water facilities, including their names (`FacilityName`) and the corresponding reach identifiers (`RchID`) they belong to.\n- **Join Operation**:\n    - The SQL statement uses an `INNER JOIN` clause to combine rows from `sga_phase_2_assessed_reaches` and `waste_water_facilities` based on matching values in the `RchID` column. This means it will return only the rows where there is a match between the `RchID` in both tables.\n- **Filter Condition**:\n    - The `WHERE` clause filters the result set further by specifying that only rows where `FinalA` equals 'Completed' should be included.\n\n### Business scenario:\nThis query could be used in environmental management or infrastructure project tracking systems to identify completed assessments associated with specific waste water facilities. It might help regulatory bodies, environmental consultants, or facility managers to review and manage the completion status of various projects or assessments.\n\n### User description:\nA user, possibly an environmental compliance officer or a project manager, might need this information to ensure that all relevant waste water facilities have undergone and completed the required environmental assessments. This could be part of regular audits, compliance checks, or planning for future maintenance or upgrades.",
+  "natural_language_query": "As an environmental compliance officer overseeing multiple projects, I often need to track the progress of our infrastructure assessments, particularly those related to waste water facilities. Specifically, I'm interested in identifying any facilities that have successfully completed their environmental assessments under phase 2. \n\nGiven my responsibilities, I would like to run a database query that combines data from two tables: \"sga_phase_2_assessed_reaches\" and \"waste_water_facilities\". The goal is to retrieve detailed information about these facilities and their assessment statuses.\n\nIn the first table, \"sga_phase_2_assessed_reaches\", I'm looking at columns such as SGAT_ID, RchID, and FinalA. Here, FinalA indicates whether the assessment has been completed, which is crucial for our compliance reporting.\n\nThe second table, \"waste_water_facilities\", includes columns like FacilityName and RchID. These entries detail the names of the facilities and their corresponding reach identifiers, which are essential for linking the facilities to their respective assessments.\n\nTo achieve this, I would execute an SQL query using an INNER JOIN clause to match the RchID from both tables, ensuring that we're only considering facilities that have undergone an assessment. Following this join, I'd apply a WHERE clause to filter the results, focusing only on those instances where the assessment status, FinalA, is marked as 'Completed'. This approach allows me to efficiently compile a list of completed assessments, facilitating better oversight and decision-making in our environmental management practices.",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ WHERE _ = _ ;",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "sga_phase_2_assessed_reaches": [
+      "sga_phase_2_assessed_reaches.SGAT_ID",
+      "sga_phase_2_assessed_reaches.ProjectName",
+      "sga_phase_2_assessed_reaches.URLPage1",
+      "sga_phase_2_assessed_reaches.URLPage2",
+      "sga_phase_2_assessed_reaches.ReportList",
+      "sga_phase_2_assessed_reaches.FinalA",
+      "sga_phase_2_assessed_reaches.FinalB",
+      "sga_phase_2_assessed_reaches.FinalC",
+      "sga_phase_2_assessed_reaches.CorridorPlanA",
+      "sga_phase_2_assessed_reaches.CorridorPlanB",
+      "sga_phase_2_assessed_reaches.CorridorPlanC",
+      "sga_phase_2_assessed_reaches.RID",
+      "sga_phase_2_assessed_reaches.SID",
+      "sga_phase_2_assessed_reaches.OBJECTID",
+      "sga_phase_2_assessed_reaches.RchID",
+      "sga_phase_2_assessed_reaches.SegID",
+      "sga_phase_2_assessed_reaches.ProjectID"
+    ],
+    "waste_water_facilities": [
+      "waste_water_facilities.X",
+      "waste_water_facilities.Y",
+      "waste_water_facilities.FacilityName",
+      "waste_water_facilities.FacilityID",
+      "waste_water_facilities.WWInventoryURL"
+    ]
+  }
+}

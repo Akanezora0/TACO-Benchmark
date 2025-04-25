@@ -1,0 +1,9 @@
+{
+  "sql": "select table1.column1, table1.column2, table2.column3 \nfrom table1 \nwhere table1.id in (select table3.id from table3 where table3.value = 'target_value')",
+  "problem_description": "### 查询意图：\n该 SQL 语句的目的是从 `table1` 中选取满足特定条件的记录，具体是那些在 `table3` 中存在对应 `id` 且 `table3.value` 等于 `'target_value'` 的记录。查询结果将返回 `table1` 中的 `column1` 和 `column2` 以及 `table2` 中的 `column3`。\n\n### 详细描述：\n1. **涉及的表**：\n   - `table1`：主表，从中选取 `column1` 和 `column2`。\n   - `table2`：虽然出现在 `SELECT` 子句中，但未在 `FROM` 或 `JOIN` 中明确关联，可能是遗漏或错误。假设是遗漏了 `JOIN table2 ON table1.id = table2.id`。\n   - `table3`：子查询中使用的表，用于筛选 `table1` 中的记录。\n\n2. **涉及的列**：\n   - `table1.column1`, `table1.column2`：查询结果中需要显示的列。\n   - `table2.column3`：假设是通过 `JOIN` 关联后从 `table2` 中获取的列。\n   - `table3.id`, `table3.value`：子查询中用于筛选条件的列。\n\n3. **条件**：\n   - 子查询 `select table3.id from table3 where table3.value = 'target_value'` 返回所有 `table3.value` 等于 `'target_value'` 的 `table3.id`。\n   - 主查询的 `WHERE` 子句 `table1.id in (...)` 确保只选取 `table1` 中 `id` 存在于子查询结果中的记录。\n\n### 业务场景：\n1. **场景描述**：\n   - 假设 `table1` 是客户信息表，包含客户 ID (`id`)、姓名 (`column1`) 和联系方式 (`column2`)。\n   - `table3` 是客户订单表，包含订单 ID (`id`) 和订单状态 (`value`)。\n   - `table2` 是客户地址表，包含客户 ID (`id`) 和地址 (`column3`)。\n   - 查询的目的是找出所有下单状态为 `'target_value'`（例如“已发货”）的客户信息及其地址。\n\n2. **可能的业务需求**：\n   - 需要联系所有订单状态为“已发货”的客户，通知他们物流信息。\n   - 统计特定订单状态下的客户分布情况。\n\n### 用户描述：\n1. **用户需求**：\n   - 用户（如客服或营销人员）需要获取所有订单状态为“已发货”的客户名单及其联系方式，以便进行后续的客户服务或满意度调查。\n   - 用户可能需要导出这些客户的地址信息，用于物流跟踪或区域分析。\n\n2. **实际问题**：\n   - 如果没有这个查询，用户可能需要手动从订单表中筛选出状态为“已发货”的订单，再逐个查找客户信息，效率低下且容易出错。\n   - 查询结果可以帮助用户快速定位目标客户群体，提高工作效率。",
+  "natural_language_query": "市民反映，我在公司负责客户跟进工作，现在需要联系一批订单状态显示\"已发货\"的客户，但是系统里找起来特别麻烦。能不能帮我查一下这些客户的姓名、电话和地址信息？就是那些在订单系统里状态标记为\"已发货\"的客户。我们这边需要通知他们物流信息，还要做满意度回访。现在都是手动一个个查，特别费时间还容易漏掉人，希望能帮忙解决这个问题。",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ from _ where _ in (select _ from _ where _ )",
+  "database": "安全生活",
+  "tables": {}
+}

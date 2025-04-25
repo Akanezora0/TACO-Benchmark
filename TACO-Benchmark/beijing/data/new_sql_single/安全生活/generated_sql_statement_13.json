@@ -1,0 +1,7 @@
+{
+  "sql": "select table1.column1 from table1 where column2 = value and column3 > (select max(column4) from table2 where column5 = value2 and column6 = value3) and column1 in (select column7 from table3 where column8 = value4)",
+  "results": 0,
+  "sql skeleton": "select _ from _ where _ = _ and _ (_ ,_ ) = _ and _ in (select _ from _ where _ = _ and _ )",
+  "database": "安全生活",
+  "tables": {}
+}

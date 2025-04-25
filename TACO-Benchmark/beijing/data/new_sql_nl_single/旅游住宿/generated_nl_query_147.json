@@ -1,0 +1,21 @@
+{
+  "sql": "SELECT shunyiquxingjifandian1276.顺义区星级饭店, xichengqubeijingshiwenwubaohudanwei31.名称 FROM shunyiquxingjifandian1276 INNER JOIN xichengqubeijingshiwenwubaohudanwei31 ON shunyiquxingjifandian1276.Unnamed: 1 = xichengqubeijingshiwenwubaohudanwei31.序号 WHERE shunyiquxingjifandian1276.顺义区星级饭店 > '4' AND xichengqubeijingshiwenwubaohudanwei31.名称 LIKE '%商务%' AND xichengqubeijingshiwenwubaohudanwei31.地址 LIKE '%北京市%'",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是查询顺义区星级饭店中星级大于 4 的饭店，并且这些饭店与西城区北京市文物保护单位中名称包含“商务”且地址位于北京市的单位相关联。\n\n### **详细描述**  \n1. **涉及的表**：\n   - `shunyiquxingjifandian1276`（顺义区星级饭店表）：存储顺义区的星级饭店信息。\n   - `xichengqubeijingshiwenwubaohudanwei31`（西城区北京市文物保护单位表）：存储西城区的北京市文物保护单位信息。\n\n2. **涉及的列**：\n   - `shunyiquxingjifandian1276.顺义区星级饭店`：顺义区星级饭店的名称或星级信息。\n   - `shunyiquxingjifandian1276.Unnamed: 1`：可能是饭店的唯一标识或序号，用于关联。\n   - `xichengqubeijingshiwenwubaohudanwei31.名称`：文物保护单位的名称。\n   - `xichengqubeijingshiwenwubaohudanwei31.序号`：文物保护单位的序号，用于关联。\n   - `xichengqubeijingshiwenwubaohudanwei31.地址`：文物保护单位的地址。\n\n3. **查询条件**：\n   - `shunyiquxingjifandian1276.顺义区星级饭店 > '4'`：筛选星级大于 4 的饭店（可能是 5 星级或更高）。\n   - `xichengqubeijingshiwenwubaohudanwei31.名称 LIKE '%商务%'`：筛选名称中包含“商务”的文物保护单位。\n   - `xichengqubeijingshiwenwubaohudanwei31.地址 LIKE '%北京市%'`：筛选地址位于北京市的文物保护单位。\n\n4. **关联方式**：\n   - 通过 `INNER JOIN` 连接两个表，关联条件是 `shunyiquxingjifandian1276.Unnamed: 1 = xichengqubeijingshiwenwubaohudanwei31.序号`，即顺义区星级饭店的某个字段（可能是序号）与西城区文物保护单位的序号匹配。\n\n### **业务场景**  \n该查询可能用于以下业务场景：\n1. **旅游或商务推荐**：查找顺义区的高星级饭店（5 星级及以上），并且这些饭店与西城区的商务相关文物保护单位有关联，可能用于高端商务旅行或文化旅游推荐。\n2. **数据分析**：分析高星级饭店与特定类型文物保护单位（如商务类）之间的关联性，可能用于城市规划或商业布局研究。\n3. **政府或企业合作**：例如，某些高星级饭店可能与文物保护单位有合作关系（如举办商务活动），查询可用于筛选符合条件的合作对象。\n\n### **用户描述**  \n在该业务场景下，用户可能遇到的实际问题或需求包括：\n1. **商务旅行需求**：用户可能需要在北京顺义区入住高星级饭店，同时希望附近或关联的西城区有商务相关的文化场所（如商务会议中心、历史建筑等）。\n2. **活动策划**：企业或政府机构计划在顺义区的高星级饭店举办商务活动，同时希望结合西城区的商务相关文物保护单位（如博物馆、历史建筑）进行宣传或合作。\n3. **市场调研**：旅游或商业机构希望分析高星级饭店与商务类文化场所的关联性，以优化旅游路线或商业推荐策略。",
+  "natural_language_query": "市民反映，最近公司安排去北京顺义区出差，想找几家高档的五星级酒店入住，最好是能和西城区那些有商务氛围的历史建筑有点关系的。听说西城区有些挂牌的文物保护单位名字里带\"商务\"字样的，地址也在北京市区，不知道顺义这边的高端酒店有没有和这些地方有关联的？因为可能要接待重要客户，希望能推荐些既有档次又有文化底蕴的住宿选择。另外想问下这些酒店和西城区的商务类文化场所是不是有什么合作活动啊？来电咨询顺义区高端酒店与西城区商务文化场所关联情况。",
+  "results": 0,
+  "sql skeleton": "select _ ,_ from _ where _ = _ and _ (_ ,_ ,_ )::_ +_ ::_ = _",
+  "database": "旅游住宿",
+  "tables": {
+    "shunyiquxingjifandian1276": [
+      "shunyiquxingjifandian1276.顺义区星级饭店",
+      "shunyiquxingjifandian1276.Unnamed: 1",
+      "shunyiquxingjifandian1276.Unnamed: 2",
+      "shunyiquxingjifandian1276.Unnamed: 3"
+    ],
+    "xichengqubeijingshiwenwubaohudanwei31": [
+      "xichengqubeijingshiwenwubaohudanwei31.序号",
+      "xichengqubeijingshiwenwubaohudanwei31.名称",
+      "xichengqubeijingshiwenwubaohudanwei31.地址"
+    ]
+  }
+}

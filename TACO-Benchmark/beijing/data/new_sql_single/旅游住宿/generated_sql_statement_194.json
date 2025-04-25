@@ -1,0 +1,25 @@
+{
+  "sql": "SELECT \"shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.名称\", \"shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.级别\", \"yanqingquyanqingqulvyoujingquxinxi3381.旅游景区\", \"yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 1\" FROM \"shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640\" INNER JOIN \"yanqingquyanqingqulvyoujingquxinxi3381\" ON \"shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.序号\" = \"yanqingquyanqingqulvyoujingquxinxi3381.旅游景区\";",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640": [
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.序号",
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.名称",
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.类别",
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.公布时间",
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.级别"
+    ],
+    "yanqingquyanqingqulvyoujingquxinxi3381": [
+      "yanqingquyanqingqulvyoujingquxinxi3381.旅游景区",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 1",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 2",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 3",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 4",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 5",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 6",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 7"
+    ]
+  }
+}

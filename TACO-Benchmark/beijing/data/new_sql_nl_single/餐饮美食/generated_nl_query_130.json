@@ -1,0 +1,26 @@
+{
+  "sql": "SELECT \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC\",\"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH\",\"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS\",\"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYXM\",\"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.FZRQ\" FROM \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\" WHERE \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID\" = '指定ID'",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从表 `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374` 中查询特定许可证（`XKZID = '指定ID'`）的相关信息，包括经营主体名称、许可证编号、经营场所、经营项目以及发证日期。\n\n---\n\n### **详细描述**  \n1. **涉及的表**：  \n   - `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374`（表名较长，可能是一个存储“市场监督管理局餐饮服务许可证情况信息”的表）。\n\n2. **查询的列**：  \n   - `JYZMC`（经营主体名称）：可能是企业或个体工商户的名称。  \n   - `XKZBH`（许可证编号）：餐饮服务许可证的唯一编号。  \n   - `JYCS`（经营场所）：许可证对应的经营地址。  \n   - `JYXM`（经营项目）：许可经营的业务范围（如中餐、西餐、快餐等）。  \n   - `FZRQ`（发证日期）：许可证的颁发日期。  \n\n3. **查询条件**：  \n   - `XKZID = '指定ID'`：通过许可证的唯一标识（`XKZID`）筛选特定记录，`'指定ID'`是占位符，实际查询时会替换为具体的值。\n\n---\n\n### **业务场景**  \n1. **许可证信息查询**：  \n   - 市场监督管理部门或企业可能需要查询某张餐饮服务许可证的详细信息，例如验证许可证的有效性、核对经营内容或地址等。  \n2. **合规性检查**：  \n   - 在执法检查或企业自查时，通过许可证编号快速调取相关信息，确保经营活动符合监管要求。  \n3. **数据关联分析**：  \n   - 结合其他表（如企业信用信息、检查记录等），分析特定许可证的历史状态或关联业务。  \n\n---\n\n### **用户描述**  \n1. **监管人员需求**：  \n   - 例如，某市场监管局工作人员在抽查餐饮企业时，需要输入许可证编号（`XKZID`）查询该企业的合法经营信息，确认其经营场所、项目是否与许可证一致。  \n2. **企业或公众需求**：  \n   - 餐饮企业可能需在办理业务（如融资、年审）时提供许可证详细信息，通过此查询快速获取数据。  \n   - 消费者或合作方可能通过公开渠道验证商家的许可证真实性。  \n\n**潜在问题**：  \n- 表名和字段名使用拼音缩写，可读性较差，可能影响非专业人员的使用或系统维护。  \n- 查询仅返回基础信息，若需更复杂的分析（如许可证有效期状态）可能需要扩展 SQL 逻辑。",
+  "natural_language_query": "市民反映，我在朝阳区开了一家火锅店，前两天市场监管局来检查说要核对我的餐饮服务许可证信息。我记得许可证编号是\"CY2023-123456\"，但不确定具体写对没有。想查一下这个证上的信息，包括店名是不是\"老北京火锅\"，经营地址是不是\"朝阳区建国路88号\"，还有经营范围有没有包含火锅类。另外我记不清发证日期是去年8月还是9月了，能不能帮忙查一下具体日期？现在急着要用这个信息办手续，特别着急！",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ ,_ ,_ from _ where _ =_",
+  "database": "餐饮美食",
+  "tables": {
+    "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374": [
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYXM",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.FZRQ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.YXQZ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.DWMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.EXCHANGETIME"
+    ],
+    "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076": [
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址"
+    ]
+  }
+}

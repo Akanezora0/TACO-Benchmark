@@ -1,0 +1,19 @@
+{
+  "sql": "SELECT \n    shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.监管对象,\n    shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.实施机构,\n    shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.检查行为编号,\n    shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.检查时间,\n    shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.检查人员,\n    shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.检查结果,\n    shijiaotongweichuzuyehujibenxinxi3664.经营业户名称\nFROM \n    shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210\nJOIN \n    shijiaotongweichuzuyehujibenxinxi3664\nON \n    shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.监管对象 = shijiaotongweichuzuyehujibenxinxi3664.经营业户名称\nWHERE \n    shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.检查结果 = '合格' AND \n    shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.检查人员 = '张三' AND \n    (shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.检查时间, shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.实施机构) = ('2022-01-01', '交通局')",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ from _ join _ on _ ._ = _ ._ where _ ._ = _ and _ ._ = _ and _ (_ ._ ,_ ) = _",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210": [
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.监管对象",
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.实施机构",
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.检查行为编号",
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.检查时间",
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.检查人员",
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.检查结果"
+    ],
+    "shijiaotongweichuzuyehujibenxinxi3664": [
+      "shijiaotongweichuzuyehujibenxinxi3664.经营业户名称"
+    ]
+  }
+}

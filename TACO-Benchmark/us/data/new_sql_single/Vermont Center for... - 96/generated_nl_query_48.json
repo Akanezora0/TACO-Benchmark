@@ -1,0 +1,50 @@
+{
+  "sql": "SELECT invasive_species.X, invasive_species.Y, invasive_species.SiteName, invasive_species.ObservationID, invasive_species.InvasiveName, invasive_species.ObservationDate, invasive_species.Observer, invasive_species.SurveyType, invasive_species.Latitude, invasive_species.Longitude, invasive_species.Town, invasive_species.GrossArea, invasive_species.InfestedArea, invasive_species.PlantDescription, invasive_species.DistributionName, invasive_species.AssessmentDate, invasive_species.TreatmentDate, invasive_species.TreatmentEffectiveness, invasive_species.TreatmentType, invasive_species.TreatmentPerson, invasive_species.TreatmentAssessmentDate, invasive_species.Assessor, invasive_species.TreatmentAssessmentNotes, invasive_species.TreatmentHours, invasive_species.ChemicalName, invasive_species.ChemicalConsentration, invasive_species.ChemicalOunces, invasive_species.ApplicationMethod, invasive_species.CertifiedApplicator, invasive_species.EPARegistationNumber, lakepond_wbids_and_wbid_segments.OBJECTID, lakepond_wbids_and_wbid_segments.Source, lakepond_wbids_and_wbid_segments.WBID, lakepond_wbids_and_wbid_segments.LAKEID, lakepond_wbids_and_wbid_segments.EventType, lakepond_wbids_and_wbid_segments.GISAcres FROM invasive_species INNER JOIN lakepond_wbids_and_wbid_segments ON invasive_species.ObservationID = lakepond_wbids_and_wbid_segments.OBJECTID WHERE invasive_species.ObservationDate > '2022-12-31' AND lakepond_wbids_and_wbid_segments.LAKEID = 'LakeA'",
+  "problem_description": "### Query intent:\nThe SQL statement is designed to retrieve specific data from two tables, `invasive_species` and `lakepond_wbids_and_wbid_segments`, based on certain conditions.\n\n### Detailed description:\n#### Tables and Columns:\n- **`invasive_species`**:\n  - **X, Y**: These could represent coordinates or identifiers for the invasive species locations.\n  - **SiteName**: The name of the site where the observation was made.\n  - **ObservationID**: A unique identifier for each observation.\n  - **InvasiveName**: The name of the invasive species.\n  - **ObservationDate**: The date when the observation was made.\n  - **Observer**: The person who made the observation.\n  - **SurveyType**: The type of survey conducted.\n  - **Latitude, Longitude**: Geographic coordinates.\n  - **Town**: The town where the site is located.\n  - **GrossArea, InfestedArea**: The total area and the area infested by the invasive species, respectively.\n  - **PlantDescription**: Description of the plant.\n  - **DistributionName**: Name of the distribution pattern of the invasive species.\n  - **AssessmentDate, TreatmentDate, AssessmentDate**: Dates related to assessments and treatments.\n  - **TreatmentEffectiveness, TreatmentType, TreatmentPerson**: Details about treatments applied.\n  - **ChemicalName, ChemicalConsentration, ChemicalOunces, ApplicationMethod, CertifiedApplicator, EPARegistationNumber**: Information about chemicals used in treatments.\n  \n- **`lakepond_wbids_and_wbid_segments`**:\n  - **OBJECTID, Source, WBID, LAKIDE**: Identifiers for different segments or parts of lakes/ponds.\n  - **EventType**: Type of event related to the lake/pond segment.\n  - **GISAcres**: Geographical area in acres.\n\n#### Join Condition:\n- The query joins these two tables using the `ObservationID` from `invasive_species` and `OBJECTID` from `lakepond_wbids_and_wbid_segments`.\n\n#### Where Clause:\n- **ObservationDate > '2022-12-31'**: Retrieves observations made after December 31, 2022.\n- **lakepond_wbids_and_wbid_segments.LAKEID = 'LakeA'**: Filters results to only include those related to LakeA.\n\n### Business scenario:\nThis query is likely used in environmental management or ecological studies. It",
+  "natural_language_query": "User: I'm working on a project that involves tracking invasive species in a specific lake, LakeA. I need to find out all the observations made after December 31, 2022, for this lake. Additionally, I want to know more details about the geographical areas covered by these observations, including the exact locations and any treatments applied to control the spread of these invasive species. Could you help me with a query to extract this information?\n\nAssistant: User: I'm trying to analyze the impact of invasive species on LakeA for my environmental science project. Specifically, I need to gather all records from our database that document observations made after December 31, 2022. Furthermore, I'm interested in obtaining detailed information about the geographical extent of these observations, such as the exact coordinates and the total areas affected by the invasive species. Is it possible to craft a SQL query that would provide this data?",
+  "results": 0,
+  "sql skeleton": "SELECT _ _ FROM _ WHERE _ _",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "invasive_species": [
+      "invasive_species.X",
+      "invasive_species.Y",
+      "invasive_species.SiteName",
+      "invasive_species.ObservationID",
+      "invasive_species.InvasiveName",
+      "invasive_species.ObservationDate",
+      "invasive_species.Observer",
+      "invasive_species.SurveyType",
+      "invasive_species.Latitude",
+      "invasive_species.Longitude",
+      "invasive_species.Town",
+      "invasive_species.GrossArea",
+      "invasive_species.InfestedArea",
+      "invasive_species.PlantDescription",
+      "invasive_species.DistributionName",
+      "invasive_species.AssessmentDate",
+      "invasive_species.TreatmentDate",
+      "invasive_species.TreatmentEffectiveness",
+      "invasive_species.TreatmentType",
+      "invasive_species.TreatmentPerson",
+      "invasive_species.TreatmentAssessmentDate",
+      "invasive_species.Assessor",
+      "invasive_species.TreatmentAssessmentNotes",
+      "invasive_species.TreatmentHours",
+      "invasive_species.ChemicalName",
+      "invasive_species.ChemicalConsentration",
+      "invasive_species.ChemicalOunces",
+      "invasive_species.ApplicationMethod",
+      "invasive_species.CertifiedApplicator",
+      "invasive_species.EPARegistationNumber"
+    ],
+    "lakepond_wbids_and_wbid_segments": [
+      "lakepond_wbids_and_wbid_segments.OBJECTID",
+      "lakepond_wbids_and_wbid_segments.Source",
+      "lakepond_wbids_and_wbid_segments.WBID",
+      "lakepond_wbids_and_wbid_segments.LAKEID",
+      "lakepond_wbids_and_wbid_segments.EventType",
+      "lakepond_wbids_and_wbid_segments.GISAcres"
+    ]
+  }
+}

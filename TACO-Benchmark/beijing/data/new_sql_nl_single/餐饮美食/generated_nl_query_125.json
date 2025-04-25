@@ -1,0 +1,26 @@
+{
+  "sql": "SELECT \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号\", \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称\", \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYXM\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.FZRQ\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.YXQZ\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.DWMC\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.EXCHANGETIME\" FROM \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\" WHERE \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC\" = '特定专柜名称' AND \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH\" = '特定许可证编号'",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从两个表中联合查询特定专柜名称和特定许可证编号的相关信息，包括专柜的基本信息和许可证的详细信息。\n\n- **详细描述**：\n  - **涉及的表**：\n    1. `shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076`：该表可能存储了清真食品专柜的规范化数据，包括专柜的标识、名称和地址等信息。\n    2. `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374`：该表可能存储了餐饮服务许可证的相关信息，包括许可证编号、经营场所、经营范围、发证日期、有效期至等。\n  - **涉及的列**：\n    - 从`shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076`表中选择了：\n      - `专用标识牌号`：专柜的唯一标识号。\n      - `专柜名称`：专柜的名称。\n      - `地址`：专柜的地址。\n    - 从`shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374`表中选择了：\n      - `JYZMC`（经营主名称）：可能与专柜名称对应。\n      - `XKZBH`（许可证编号）：许可证的唯一编号。\n      - `JYCS`（经营场所）：经营的具体场所。\n      - `JYXM`（经营范围）：允许经营的项目。\n      - `FZRQ`（发证日期）：许可证的颁发日期。\n      - `YXQZ`（有效期至）：许可证的有效截止日期。\n      - `XKZID`：许可证的内部ID。\n      - `DWMC`（单位名称）：可能与专柜名称或经营主体名称相关。\n      - `EXCHANGETIME`：可能是数据交换或更新的时间戳。\n  - **查询条件**：\n    - `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC = '特定专柜名称'`：筛选出经营主名称为特定专柜名称的记录。\n    - `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH = '特定许可证编号'`：筛选出许可证编号为特定编号的记录。\n\n- **业务场景**：\n  - 该查询可能用于监管部门或企业内部对清真食品专柜的合规性检查。通过联合查询专柜基本信息和许可证信息，可以验证专柜是否具备合法的经营资质，以及许可证是否在有效期内。\n  - 也可以用于消费者或第三方平台查询特定专柜的资质信息，确保其购买的商品符合清真食品的要求。\n\n- **用户描述**：\n  - **监管部门**：可能需要检查某个清真食品专柜是否具备合法的许可证，以及许可证是否在有效期内，以确保其合规经营。\n  - **企业管理人员**：可能需要核实专柜的许可证信息，确保所有专柜都符合法规要求，避免因资质问题导致的罚款或停业。\n  - **消费者**：可能希望通过查询专柜的许可证信息，确认其购买的商品是合法且符合清真食品标准的，从而放心购买。",
+  "natural_language_query": "市民反映，在朝阳区某超市的清真食品专柜购买羊肉时，发现专柜名称是\"绿源清真牛羊肉专柜\"，许可证编号是\"京餐证字2023-12345号\"，但总觉得不太放心。想确认一下这个专柜是不是正规的，有没有合法的经营资质？他们的许可证是不是在有效期内的？因为最近听说有些商家会假冒清真食品，所以特别担心买到不合规的肉品。另外还想知道这个专柜具体能经营哪些食品项目，地址是不是跟超市里挂牌写的一致。希望能帮忙核实清楚，毕竟这关系到我们少数民族同胞的饮食禁忌问题。",
+  "results": 0,
+  "sql skeleton": "SELECT _ _ FROM _ WHERE _",
+  "database": "餐饮美食",
+  "tables": {
+    "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076": [
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址"
+    ],
+    "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374": [
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYXM",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.FZRQ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.YXQZ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.DWMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.EXCHANGETIME"
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "sql": "SELECT sga_phase_2_assessed_reaches.SGAT_ID, waste_water_facilities.FacilityName FROM sga_phase_2_assessed_reaches INNER JOIN waste_water_facilities ON sga_phase_2_assessed_reaches.RchID = waste_water_facilities.RchID WHERE sga_phase_2_assessed_reaches.SID = 'example_SID';",
+  "problem_description": "### Query intent:\nThe SQL statement aims to retrieve specific pieces of information from two related databases: `sga_phase_2_assessed_reaches` and `waste_water_facilities`. The primary goal is to fetch the `SGAT_ID` from the `sga_phase_2_assessed_reaches` table and the `FacilityName` from the `waste_water_facilities` table.\n\n### Detailed description:\n- **Table `sga_phase_2_assessed_reaches`**:\n    - This table likely contains data related to phase 2 assessments for some environmental or regulatory compliance purposes.\n    - It includes at least one column `SGAT_ID`, which uniquely identifies each entry.\n    - It also includes a foreign key `RchID` that links entries within this table to corresponding records in the `waste_water_facilities` table.\n\n- **Table `waste_water_facilities`**:\n    - This table might contain details about various waste water facilities, including their names (`FacilityName`).\n    - It also has an `RchID` column, serving as a unique identifier for each facility and potentially linking it back to relevant records in the `sga_phase_2_assessed_reaches` table.\n\n- **Join condition** (`sga_phase_2_assessed_reaches.RchID = waste_water_facilities.RchID`):\n    - The query uses an inner join to combine rows from these two tables based on matching `RchID` values. This ensures that only records with a matching `RchID` in both tables are included in the result set.\n\n- **Where clause** (`sga_phase_2_assessed_reaches.SID = 'example_SID'`):\n    - The `WHERE` clause filters the results further by selecting only those rows where the `SID` column in the `sga_phase_2_assessed_reaches` table matches the string `'example_SID'`.\n\n### Business scenario:\nThis query could be used in an environmental management system or compliance monitoring platform to identify specific waste water facilities that have undergone phase 2 assessments. For instance, an environmental compliance officer might need to review all the details of a particular facility's assessment process to ensure that all regulations have been met.\n\n### User description:\nA user, possibly an environmental regulator or an internal auditor, might need to access detailed information about a specific waste water treatment plant (identified by its name) to verify if it has completed certain regulatory requirements during phase 2 of the assessment process.",
+  "natural_language_query": "I'm looking to gather information on a specific waste water facility that recently went through phase 2 assessments. I need to pull the unique ID from the 'sga_phase_2_assessed_reaches' database and the facility name from the 'waste_water_facilities' database. The facility I'm interested in is associated with the SID 'example_SID'. Could you help me find this data?",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ WHERE _ = _ ;",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "sga_phase_2_assessed_reaches": [
+      "sga_phase_2_assessed_reaches.SGAT_ID",
+      "sga_phase_2_assessed_reaches.ProjectName",
+      "sga_phase_2_assessed_reaches.URLPage1",
+      "sga_phase_2_assessed_reaches.URLPage2",
+      "sga_phase_2_assessed_reaches.ReportList",
+      "sga_phase_2_assessed_reaches.FinalA",
+      "sga_phase_2_assessed_reaches.FinalB",
+      "sga_phase_2_assessed_reaches.FinalC",
+      "sga_phase_2_assessed_reaches.CorridorPlanA",
+      "sga_phase_2_assessed_reaches.CorridorPlanB",
+      "sga_phase_2_assessed_reaches.CorridorPlanC",
+      "sga_phase_2_assessed_reaches.RID",
+      "sga_phase_2_assessed_reaches.SID",
+      "sga_phase_2_assessed_reaches.OBJECTID",
+      "sga_phase_2_assessed_reaches.RchID",
+      "sga_phase_2_assessed_reaches.SegID",
+      "sga_phase_2_assessed_reaches.ProjectID"
+    ],
+    "waste_water_facilities": [
+      "waste_water_facilities.X",
+      "waste_water_facilities.Y",
+      "waste_water_facilities.FacilityName",
+      "waste_water_facilities.FacilityID",
+      "waste_water_facilities.WWInventoryURL"
+    ]
+  }
+}

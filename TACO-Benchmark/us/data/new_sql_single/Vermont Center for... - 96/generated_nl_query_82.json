@@ -1,0 +1,1081 @@
+{
+  "sql": "SELECT outdoor_recreation_sites_inventory.NAME, waste_water_facilities.FacilityName FROM outdoor_recreation_sites_inventory, waste_water_facilities WHERE outdoor_recreation_sites_inventory.OBJECTID = waste_water_facilities.FacilityID;",
+  "problem_description": "### Query intent:\nThe SQL statement is designed to retrieve specific information from two related tables, `outdoor_recreation_sites_inventory` and `waste_water_facilities`. The goal is to find the name of outdoor recreation sites that have corresponding facilities for waste water management.\n\n### Detailed description:\n- **Tables**: `outdoor_recreation_sites_inventory` and `waste_water_facilities`.\n  - `outdoor_recreation_sites_inventory`: This table likely contains data about various outdoor recreation sites, including an identifier called `OBJECTID`.\n  - `waste_water_facilities`: This table likely contains data about waste water management facilities, with a column named `FacilityID`.\n\n- **Columns**:\n  - From `outdoor_recreation_sites_inventory`: `NAME`, which presumably holds the names of the outdoor recreation sites.\n  - From `waste_water_facilities`: `FacilityName`, which likely represents the names of the waste water management facilities.\n\n- **Conditions**:\n  - `outdoor_recreation_sites_inventory.OBJECTID = waste_water_facilities.FacilityID`: This condition ensures that the query only returns records where there is a matching `OBJECTID` (indicating an outdoor recreation site) and `FacilityID` (indicating a corresponding waste water facility).\n\n### Business scenario:\nThis query can be utilized in environmental management or urban planning contexts where it's necessary to link outdoor recreation areas with their associated waste water management facilities. For instance, it might help in assessing the impact of recreational activities on local water quality, planning for infrastructure improvements, or ensuring compliance with environmental regulations.\n\n### User description:\nUsers might need this information to:\n- **Assess environmental impact**: Understand how outdoor activities at certain sites might affect nearby waste water facilities and vice versa.\n- **Plan infrastructure**: Determine if there is a need to upgrade or add waste water management facilities near popular recreation sites.\n- **Regulatory compliance**: Ensure that all outdoor recreation sites are properly linked with adequate waste water treatment facilities, meeting environmental standards.\n- **Resource allocation**: Allocate resources effectively for maintenance, upgrades, or new installations based on the proximity and relationship between recreation sites and waste water facilities.",
+  "natural_language_query": "User: I'm trying to understand how outdoor recreation sites are connected to waste water management facilities in our city. Specifically, I want to know the names of outdoor sites that have corresponding waste water facilities. Can you help me with this?\n\nAssistant: Assistant: Sure, I can assist you with that. To get the names of outdoor recreation sites that are linked with waste water facilities, we'll look into two tables: \"outdoor_recreation_sites_inventory\" and \"waste_water_facilities\". \n\nFrom the \"outdoor_recreation_sites_inventory\" table, we're interested in the 'NAME' column, which should list the names of the outdoor sites. On the other hand, the 'FacilityName' column in the \"waste_water_facilities\" table will provide us with the names of the waste water management facilities.\n\nTo ensure that we're looking at pairs where each outdoor site has a corresponding waste water facility, we'll use a condition that matches the 'OBJECTID' from the 'outdoor_recreation_sites_inventory' table with the 'FacilityID' from the 'waste_water_facilities' table. This way, we can identify which outdoor sites are connected to specific waste water facilities.\n\nThis information could be crucial for various purposes such as assessing environmental impacts, planning infrastructure, ensuring regulatory compliance, or efficiently allocating resources for maintenance and upgrades. Let's proceed with the query to fetch these details.",
+  "results": [
+    [
+      "FRANKLIN",
+      "Bennington"
+    ],
+    [
+      "FRANKLIN",
+      "Barre City"
+    ],
+    [
+      "FRANKLIN",
+      "Alburgh"
+    ],
+    [
+      "FRANKLIN",
+      "Barton"
+    ],
+    [
+      "FRANKLIN",
+      "Benson"
+    ],
+    [
+      "ORLEANS",
+      "Brighton"
+    ],
+    [
+      "ORLEANS",
+      "Danville"
+    ],
+    [
+      "ORLEANS",
+      "Manchester"
+    ],
+    [
+      "ORLEANS",
+      "Montpelier"
+    ],
+    [
+      "FRANKLIN",
+      "Morrisville"
+    ],
+    [
+      "ORLEANS",
+      "Orleans"
+    ],
+    [
+      "ORLEANS",
+      "Proctor"
+    ],
+    [
+      "FRANKLIN",
+      "Readsboro"
+    ],
+    [
+      "FRANKLIN",
+      "Richford"
+    ],
+    [
+      "ORLEANS",
+      "St Johnsbury"
+    ],
+    [
+      "ORLEANS",
+      "Saxtons River"
+    ],
+    [
+      "ORLEANS",
+      "South Burlington - Airport Parkway"
+    ],
+    [
+      "ORLEANS",
+      "South Burlington - Bartlett Bay"
+    ],
+    [
+      "ORLEANS",
+      "Pawlet"
+    ],
+    [
+      "ORLEANS",
+      "West Rutland"
+    ],
+    [
+      "ORLEANS",
+      "Williamstown"
+    ],
+    [
+      "FRANKLIN",
+      "Winooski"
+    ],
+    [
+      "ORLEANS",
+      "Woodstock"
+    ],
+    [
+      "ORLEANS",
+      "Hartford - WRJ"
+    ],
+    [
+      "ORLEANS",
+      "GLOBALFOUNDRIES"
+    ],
+    [
+      "ORLEANS",
+      "St Albans Northwest Correctional"
+    ],
+    [
+      "ORLEANS",
+      "Otter Valley Union High School"
+    ],
+    [
+      "ORLEANS",
+      "Arlington School"
+    ],
+    [
+      "ORLEANS",
+      "Ludlow"
+    ],
+    [
+      "ORLEANS",
+      "Troy & Jay"
+    ],
+    [
+      "ORLEANS",
+      "Bellows Falls"
+    ],
+    [
+      "ORLEANS",
+      "Brattleboro "
+    ],
+    [
+      "ORLEANS",
+      "Burlington Main"
+    ],
+    [
+      "ORLEANS",
+      "Burlington North"
+    ],
+    [
+      "ORLEANS",
+      "Burlington River"
+    ],
+    [
+      "ORLEANS",
+      "Essex Junction"
+    ],
+    [
+      "ORLEANS",
+      "Middlebury"
+    ],
+    [
+      "CALEDONIA",
+      "Lyndon"
+    ],
+    [
+      "CALEDONIA",
+      "Northfield"
+    ],
+    [
+      "LAMOILLE",
+      "Rutland"
+    ],
+    [
+      "CALEDONIA",
+      "Springfield"
+    ],
+    [
+      "CALEDONIA",
+      "St Albans City"
+    ],
+    [
+      "CALEDONIA",
+      "Windsor Main"
+    ],
+    [
+      "ORLEANS",
+      "Shelburne 1 (Crown Rd)"
+    ],
+    [
+      "ORLEANS",
+      "Vergennes"
+    ],
+    [
+      "ORLEANS",
+      "Bethel"
+    ],
+    [
+      "CALEDONIA",
+      "Bradford"
+    ],
+    [
+      "ORLEANS",
+      "Brandon"
+    ],
+    [
+      "ORLEANS",
+      "Bridgewater"
+    ],
+    [
+      "ORLEANS",
+      "Canaan"
+    ],
+    [
+      "ORLEANS",
+      "Castleton"
+    ],
+    [
+      "ORLEANS",
+      "Cavendish"
+    ],
+    [
+      "ORLEANS",
+      "Chelsea"
+    ],
+    [
+      "ORLEANS",
+      "Chester"
+    ],
+    [
+      "ORLEANS",
+      "Enosburg Falls"
+    ],
+    [
+      "ORLEANS",
+      "Fairfax"
+    ],
+    [
+      "ORLEANS",
+      "Fair Haven"
+    ],
+    [
+      "ORLEANS",
+      "Hardwick"
+    ],
+    [
+      "ORLEANS",
+      "Hinesburg"
+    ],
+    [
+      "ORLEANS",
+      "Jeffersonville"
+    ],
+    [
+      "ORLEANS",
+      "Johnson"
+    ],
+    [
+      "ORLEANS",
+      "Lunenburg FD2"
+    ],
+    [
+      "ORLEANS",
+      "Marshfield"
+    ],
+    [
+      "ORLEANS",
+      "Milton"
+    ],
+    [
+      "ORLEANS",
+      "Newport City"
+    ],
+    [
+      "ORLEANS",
+      "North Troy"
+    ],
+    [
+      "ORLEANS",
+      "Orwell"
+    ],
+    [
+      "ORLEANS",
+      "Pittsford"
+    ],
+    [
+      "ORLEANS",
+      "Plainfield"
+    ],
+    [
+      "ORLEANS",
+      "Poultney"
+    ],
+    [
+      "ORLEANS",
+      "Putney"
+    ],
+    [
+      "ORLEANS",
+      "Randolph"
+    ],
+    [
+      "ORLEANS",
+      "Shelburne 2 (Harbor Rd)"
+    ],
+    [
+      "ORLEANS",
+      "Sheldon Springs"
+    ],
+    [
+      "ORLEANS",
+      "Sherburne FD 1"
+    ],
+    [
+      "ORLEANS",
+      "Stowe"
+    ],
+    [
+      "ORLEANS",
+      "Swanton"
+    ],
+    [
+      "ORLEANS",
+      "Wallingford FD 1"
+    ],
+    [
+      "ORLEANS",
+      "Waterbury"
+    ],
+    [
+      "ORLEANS",
+      "Whitingham"
+    ],
+    [
+      "ORLEANS",
+      "Whitingham - Jacksonville"
+    ],
+    [
+      "ORLEANS",
+      "Wilmington"
+    ],
+    [
+      "ORLEANS",
+      "Windsor Weston Heights"
+    ],
+    [
+      "ORLEANS",
+      "Hartford - Quechee"
+    ],
+    [
+      "ORLEANS",
+      "Richmond"
+    ],
+    [
+      "ORLEANS",
+      "Royalton"
+    ],
+    [
+      "ORLEANS",
+      "Cold Brook FD 1 - Direct Discharge"
+    ],
+    [
+      "ORLEANS",
+      "Chittenden Solid Waste District"
+    ],
+    [
+      "ORLEANS",
+      "P B M Nutritionals Inc"
+    ],
+    [
+      "ORLEANS",
+      "NorthStar Nuclear Decommissioning Company LLC"
+    ],
+    [
+      "ORLEANS",
+      "Barre Septic Service"
+    ],
+    [
+      "CALEDONIA",
+      "A1 Sewer and Drain"
+    ],
+    [
+      "ESSEX",
+      "Woodstock - South"
+    ],
+    [
+      "ESSEX",
+      "Woodstock - Taftsville"
+    ],
+    [
+      "ESSEX",
+      "WestRock Converting Company"
+    ],
+    [
+      "ESSEX",
+      "FiberMark North America Inc"
+    ],
+    [
+      "ESSEX",
+      "Champlain Black Marble"
+    ],
+    [
+      "ESSEX",
+      "Alburgh Fire District 1"
+    ],
+    [
+      "ESSEX",
+      "Bourbeau Aggregate, LLC"
+    ],
+    [
+      "ESSEX",
+      "Deermont Corp - VT Plating"
+    ],
+    [
+      "ESSEX",
+      "Whitcomb Construction                                       "
+    ],
+    [
+      "ESSEX",
+      "South Hero Fire District 4"
+    ],
+    [
+      "CALEDONIA",
+      "Barrows and Fisher Oil Co"
+    ],
+    [
+      "CALEDONIA",
+      "Blodgett, G S                                               "
+    ],
+    [
+      "CALEDONIA",
+      "Brattleboro Water Treatment Plant"
+    ],
+    [
+      "CALEDONIA",
+      "Burlington Electric McNeil Generating Station"
+    ],
+    [
+      "CALEDONIA",
+      "Cabot"
+    ],
+    [
+      "CALEDONIA",
+      "Champlain Water District"
+    ],
+    [
+      "CALEDONIA",
+      "Ethan Allen"
+    ],
+    [
+      "CALEDONIA",
+      "Energizer - NCCW                                            "
+    ],
+    [
+      "CALEDONIA",
+      "Grand Isle FD 4 WTP"
+    ],
+    [
+      "ESSEX",
+      "Imerys Talc - West Windsor Mill"
+    ],
+    [
+      "ESSEX",
+      "Global Companies LLC"
+    ],
+    [
+      "ESSEX",
+      "Montpelier Water Treatment Plant"
+    ],
+    [
+      "ESSEX",
+      "North Hero Water Treatment Plant"
+    ],
+    [
+      "ESSEX",
+      "Troy Minerals"
+    ],
+    [
+      "ESSEX",
+      "Soundview Vermont Holdings"
+    ],
+    [
+      "CALEDONIA",
+      "Isovolta Inc"
+    ],
+    [
+      "CALEDONIA",
+      "Rock of Ages"
+    ],
+    [
+      "CALEDONIA",
+      "Lyndonville Water Treatment Plant                           "
+    ],
+    [
+      "CALEDONIA",
+      "Ryegate Associates"
+    ],
+    [
+      "CALEDONIA",
+      "Ryegate Fire District 2"
+    ],
+    [
+      "CALEDONIA",
+      "St Albans Water Treatment Plant"
+    ],
+    [
+      "CALEDONIA",
+      "Swanton Village Water Treatment Plant"
+    ],
+    [
+      "CALEDONIA",
+      "Tri Town Water District 1"
+    ],
+    [
+      "CALEDONIA",
+      "Unifirst"
+    ],
+    [
+      "CALEDONIA",
+      "TransCanada Hydro Northeast - Wilder"
+    ],
+    [
+      "CALEDONIA",
+      "TransCanada Hydro Northeast - Bellows Falls"
+    ],
+    [
+      "CALEDONIA",
+      "TransCanada Hydro Northeast - Harriman Reservoir            "
+    ],
+    [
+      "CALEDONIA",
+      "TransCanada Hydro Northeast - Searsburg                     "
+    ],
+    [
+      "CALEDONIA",
+      "TransCanada Hydro Northeast - Vernon"
+    ],
+    [
+      "CALEDONIA",
+      "Vergennes Panton Water District"
+    ],
+    [
+      "CALEDONIA",
+      "VT Fish & Wildlife - Bennington Fish Hatchery               "
+    ],
+    [
+      "CALEDONIA",
+      "VT Fish & Wildlife - Salisbury Fish Hatchery"
+    ],
+    [
+      "CALEDONIA",
+      "Weidmann Electrical Technology"
+    ],
+    [
+      "CALEDONIA",
+      "Agri-Mark - Middlebury"
+    ],
+    [
+      "CALEDONIA",
+      "Casella Waste Mgmt Inc - multiple facilities"
+    ],
+    [
+      "CALEDONIA",
+      "Ben & Jerrys Waterbury"
+    ],
+    [
+      "CALEDONIA",
+      "Ben & Jerry's St Albans"
+    ],
+    [
+      "CALEDONIA",
+      "Edlund Company"
+    ],
+    [
+      "CALEDONIA",
+      "Energizer - Mini Alkaline"
+    ],
+    [
+      "CALEDONIA",
+      "General Electric - Columbian Ave"
+    ],
+    [
+      "CALEDONIA",
+      "General Electric - Windcrest Road"
+    ],
+    [
+      "CALEDONIA",
+      "Green Mountain Spinnery                                     "
+    ],
+    [
+      "CALEDONIA",
+      "New England Waste Services - Coventry"
+    ],
+    [
+      "CALEDONIA",
+      "Moretown Landfill"
+    ],
+    [
+      "CALEDONIA",
+      "US Dept of Interior-White River NFH                         "
+    ],
+    [
+      "CALEDONIA",
+      "US Dept of Interior-DEisenhower NFH"
+    ],
+    [
+      "LAMOILLE",
+      "Agri-Mark - Cabot Creamery"
+    ],
+    [
+      "GRAND ISLE",
+      "Vishay Tansitor"
+    ],
+    [
+      "GRAND ISLE",
+      "S D Ireland - Green Acres Quarry"
+    ],
+    [
+      "ORANGE",
+      "Smugglers Notch - SNOMAX"
+    ],
+    [
+      "ORANGE",
+      "Coltec Industries                                           "
+    ],
+    [
+      "WINDSOR",
+      "Carrara & Sons (Clarendon Quarry)"
+    ],
+    [
+      "WINDSOR",
+      "Shoreham"
+    ],
+    [
+      "WINDSOR",
+      "VT Quarries Corp"
+    ],
+    [
+      "WINDSOR",
+      "Smugglers Notch - Shutdown Drainage"
+    ],
+    [
+      "ORANGE",
+      "Springfield Municipal Swimming Pool"
+    ],
+    [
+      "ORANGE",
+      "Worcester FD 1"
+    ],
+    [
+      "ORANGE",
+      "Magris Talc USA, Inc - Argonaut Mine"
+    ],
+    [
+      "ORANGE",
+      "OMYA Middlebury Quarry"
+    ],
+    [
+      "ORANGE",
+      "VT Fish & Wildlife - Roxbury Fish Hatchery"
+    ],
+    [
+      "ORANGE",
+      "Ryegate Town - South"
+    ],
+    [
+      "ORANGE",
+      "Earle P. Towne Water Treatment Plant"
+    ],
+    [
+      "ORANGE",
+      "Montpelier Swimming Pool"
+    ],
+    [
+      "ORANGE",
+      "OMYA Hogback Quarry"
+    ],
+    [
+      "ORANGE",
+      "H & H Properties                                            "
+    ],
+    [
+      "ORANGE",
+      "Lamb Durward & Linda"
+    ],
+    [
+      "RUTLAND",
+      "Mt Snow Ltd"
+    ],
+    [
+      "WINDSOR",
+      "Fortieth Burlington LLC                                     "
+    ],
+    [
+      "WINDSOR",
+      "Pike Industries (Waterford Crushed Stone)                   "
+    ],
+    [
+      "WINDSOR",
+      "Ames True Temper Inc                                        "
+    ],
+    [
+      "WINDSOR",
+      "Montshire Museum of Science"
+    ],
+    [
+      "WINDSOR",
+      "Global Partners, LP - P & H Truck Stop"
+    ],
+    [
+      "WINDSOR",
+      "OMYA East and West - Verpol"
+    ],
+    [
+      "WINDSOR",
+      "Lime Kiln Quarry West"
+    ],
+    [
+      "WINDSOR",
+      "Working Dog Septic"
+    ],
+    [
+      "WINDSOR",
+      "G.S. Precision Coating, Inc"
+    ],
+    [
+      "WINDSOR",
+      "Pownal"
+    ],
+    [
+      "WINDSOR",
+      "Cumberland Farms Station 4024                               "
+    ],
+    [
+      "WINDSOR",
+      "Pike Industries (Williamstown Quarry)"
+    ],
+    [
+      "WINDSOR",
+      "VT Dept State Buildings - Bennington State Office Bldg      "
+    ],
+    [
+      "WINDSOR",
+      "Columbia Forest Products"
+    ],
+    [
+      "BENNINGTON",
+      "Cold Brook FD 1 - Golf Course"
+    ],
+    [
+      "BENNINGTON",
+      "Cold Brook FD 1 - Base Tract"
+    ],
+    [
+      "WINDHAM",
+      "Pike Industries (Perini Quarry)"
+    ],
+    [
+      "WINDHAM",
+      "Bennington Water Treatment Facility                         "
+    ],
+    [
+      "WINDHAM",
+      "Imerys Talc - Rainbow Mine"
+    ],
+    [
+      "WINDHAM",
+      "Eagle River Mining"
+    ],
+    [
+      "WINDHAM",
+      "Malone 75 Swanton Road Properties"
+    ],
+    [
+      "WINDSOR",
+      "Cersosimo Lumber Company"
+    ],
+    [
+      "WINDHAM",
+      "Pike Industries (New Haven)"
+    ],
+    [
+      "WINDHAM",
+      "Cornwall"
+    ],
+    [
+      "WINDHAM",
+      "Retreat Farm, LTD"
+    ],
+    [
+      "WINDHAM",
+      "Ampersand Gilman Hydro LP"
+    ],
+    [
+      "WINDHAM",
+      "All Out Waste Management                                    "
+    ],
+    [
+      "BENNINGTON",
+      "Irving Oil Terminals Inc."
+    ],
+    [
+      "WASHINGTON",
+      "Grand Isle Consolidated Water Dist"
+    ],
+    [
+      "WASHINGTON",
+      "Commonwealth Dairy                                          "
+    ],
+    [
+      "CHITTENDEN",
+      "Greer Family LLC"
+    ],
+    [
+      "WASHINGTON",
+      "Chaves Excavating"
+    ],
+    [
+      "WASHINGTON",
+      "Imerys Talc America"
+    ],
+    [
+      "WASHINGTON",
+      "VT Fish & Wildlife - Ed Weed Fish Culture Station"
+    ],
+    [
+      "WASHINGTON",
+      "Powhatan Ferrisburgh"
+    ],
+    [
+      "GRAND ISLE",
+      "Champlain Oil Co-McGanns Mobil                              "
+    ],
+    [
+      "FRANKLIN",
+      "Connor Homes"
+    ],
+    [
+      "ORLEANS",
+      "Barnet Hydro                                                "
+    ],
+    [
+      "ORLEANS",
+      "Ottauquechee Hydro"
+    ],
+    [
+      "ORLEANS",
+      "Sheldon Springs Hydro"
+    ],
+    [
+      "ORLEANS",
+      "von Trapp Brewing"
+    ],
+    [
+      "ORLEANS",
+      "Alchemist - Waterbury"
+    ],
+    [
+      "ORLEANS",
+      "Lost Nation Brewery"
+    ],
+    [
+      "CALEDONIA",
+      "Alchemist - Stowe"
+    ],
+    [
+      "WASHINGTON",
+      "Stone Corral Brewery"
+    ],
+    [
+      "ADDISON",
+      "Drews LLC"
+    ],
+    [
+      "WASHINGTON",
+      "IBM"
+    ],
+    [
+      "WASHINGTON",
+      "Windsor Brewing Company                                     "
+    ],
+    [
+      "LAMOILLE",
+      "Fiddlehead Brewing"
+    ],
+    [
+      "ORANGE",
+      "VT AOT -Middlebury Bridge"
+    ],
+    [
+      "ADDISON",
+      "Magris Talc USA, Inc - Hammondsville Mine"
+    ],
+    [
+      "RUTLAND",
+      "Bryce Farms Inc"
+    ],
+    [
+      "WINDSOR",
+      "Richville Farms"
+    ],
+    [
+      "WINDSOR",
+      "Bayview Farm"
+    ],
+    [
+      "RUTLAND",
+      "Gebbie Farm"
+    ],
+    [
+      "BENNINGTON",
+      "Rail View Dairy, LLC"
+    ],
+    [
+      "CHITTENDEN",
+      "Sweet Farm"
+    ],
+    [
+      "CHITTENDEN",
+      "H Bar 9"
+    ],
+    [
+      "CHITTENDEN",
+      "Machia Farm"
+    ],
+    [
+      "CHITTENDEN",
+      "Sizen Dairy Farm"
+    ],
+    [
+      "ADDISON",
+      "Lucas Dairy, LLC"
+    ],
+    [
+      "ADDISON",
+      "Leach Farms, Inc"
+    ],
+    [
+      "ADDISON",
+      "Boissonneault Family Farm"
+    ]
+  ],
+  "sql skeleton": "SELECT _ , _ FROM _ -_ ;",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "outdoor_recreation_sites_inventory": [
+      "outdoor_recreation_sites_inventory.X",
+      "outdoor_recreation_sites_inventory.Y",
+      "outdoor_recreation_sites_inventory.OBJECTID",
+      "outdoor_recreation_sites_inventory.MAP",
+      "outdoor_recreation_sites_inventory.MAP_NUMBER",
+      "outdoor_recreation_sites_inventory.SITE_NAME",
+      "outdoor_recreation_sites_inventory.PUBLIC_PRI",
+      "outdoor_recreation_sites_inventory.BOATING_MA",
+      "outdoor_recreation_sites_inventory.CAMPING",
+      "outdoor_recreation_sites_inventory.FIELD_SPOR",
+      "outdoor_recreation_sites_inventory.COURT_SPOR",
+      "outdoor_recreation_sites_inventory.GOLF",
+      "outdoor_recreation_sites_inventory.SWIMMING",
+      "outdoor_recreation_sites_inventory.TRAIL",
+      "outdoor_recreation_sites_inventory.PICNIC_PLA",
+      "outdoor_recreation_sites_inventory.SKIING",
+      "outdoor_recreation_sites_inventory.FIPS_CODE",
+      "outdoor_recreation_sites_inventory.DATE_",
+      "outdoor_recreation_sites_inventory.ALT_NAME",
+      "outdoor_recreation_sites_inventory.S_ADDRESS",
+      "outdoor_recreation_sites_inventory.S_TOWN",
+      "outdoor_recreation_sites_inventory.S_PHONE",
+      "outdoor_recreation_sites_inventory.CONTACT",
+      "outdoor_recreation_sites_inventory.ORGANIZ",
+      "outdoor_recreation_sites_inventory.CO_ADDRESS",
+      "outdoor_recreation_sites_inventory.CO_TOWN",
+      "outdoor_recreation_sites_inventory.CO_STATE",
+      "outdoor_recreation_sites_inventory.CO_ZIP",
+      "outdoor_recreation_sites_inventory.CO_PHONE",
+      "outdoor_recreation_sites_inventory.CO_FAX",
+      "outdoor_recreation_sites_inventory.OPERATOR",
+      "outdoor_recreation_sites_inventory.A_ARCHTARG",
+      "outdoor_recreation_sites_inventory.B_BASESOFT",
+      "outdoor_recreation_sites_inventory.C_BICYCL",
+      "outdoor_recreation_sites_inventory.D_BOATMTR",
+      "outdoor_recreation_sites_inventory.E_BOATNMTR",
+      "outdoor_recreation_sites_inventory.F_CAMP",
+      "outdoor_recreation_sites_inventory.G_FISH",
+      "outdoor_recreation_sites_inventory.H_FTSOCLAC",
+      "outdoor_recreation_sites_inventory.I_GOLF",
+      "outdoor_recreation_sites_inventory.J_HIKING",
+      "outdoor_recreation_sites_inventory.K_HISTIMP",
+      "outdoor_recreation_sites_inventory.L_HORSRID",
+      "outdoor_recreation_sites_inventory.M_HUNT",
+      "outdoor_recreation_sites_inventory.N_ICESKAT",
+      "outdoor_recreation_sites_inventory.O_INSKAT",
+      "outdoor_recreation_sites_inventory.P_MTRCYL",
+      "outdoor_recreation_sites_inventory.Q_MTBIKE",
+      "outdoor_recreation_sites_inventory.R_NATATTR",
+      "outdoor_recreation_sites_inventory.S_NATOBSER",
+      "outdoor_recreation_sites_inventory.T_ORGEVENT",
+      "outdoor_recreation_sites_inventory.U_PICNIC",
+      "outdoor_recreation_sites_inventory.V_SKIDOWN",
+      "outdoor_recreation_sites_inventory.W_SKICROSS",
+      "outdoor_recreation_sites_inventory.X_SKINSCUB",
+      "outdoor_recreation_sites_inventory.Y_SLIDE",
+      "outdoor_recreation_sites_inventory.Z_SNOWMOB",
+      "outdoor_recreation_sites_inventory.AA_SNOWSHO",
+      "outdoor_recreation_sites_inventory.AB_SWIMPOO",
+      "outdoor_recreation_sites_inventory.AC_SWIMLAK",
+      "outdoor_recreation_sites_inventory.AD_SWIMRIV",
+      "outdoor_recreation_sites_inventory.AE_TENNIS",
+      "outdoor_recreation_sites_inventory.AF_VOLLEY",
+      "outdoor_recreation_sites_inventory.AG_WALKJOG",
+      "outdoor_recreation_sites_inventory.AH_O1_YN",
+      "outdoor_recreation_sites_inventory.AH_OTHR1",
+      "outdoor_recreation_sites_inventory.AI_O2_YN",
+      "outdoor_recreation_sites_inventory.AI_OTHR2",
+      "outdoor_recreation_sites_inventory.ENTERPRISE",
+      "outdoor_recreation_sites_inventory.ENT_OTHR",
+      "outdoor_recreation_sites_inventory.ACREAGE",
+      "outdoor_recreation_sites_inventory.N_PARKSUM",
+      "outdoor_recreation_sites_inventory.N_PARKWIN",
+      "outdoor_recreation_sites_inventory.Q_WATACC",
+      "outdoor_recreation_sites_inventory.WATER_NM",
+      "outdoor_recreation_sites_inventory.Q_AMUSE",
+      "outdoor_recreation_sites_inventory.Q_NATRCENT",
+      "outdoor_recreation_sites_inventory.N_CARLAUND",
+      "outdoor_recreation_sites_inventory.N_PAVERAMP",
+      "outdoor_recreation_sites_inventory.N_GRAVRAMP",
+      "outdoor_recreation_sites_inventory.N_BOATSLIP",
+      "outdoor_recreation_sites_inventory.N_MOORING",
+      "outdoor_recreation_sites_inventory.N_DRYDOCK",
+      "outdoor_recreation_sites_inventory.Q_TRANSIEN",
+      "outdoor_recreation_sites_inventory.Q_PUMPING",
+      "outdoor_recreation_sites_inventory.Q_BOATRENT",
+      "outdoor_recreation_sites_inventory.N_TENTS",
+      "outdoor_recreation_sites_inventory.N_SHELTER",
+      "outdoor_recreation_sites_inventory.N_WINCABIN",
+      "outdoor_recreation_sites_inventory.N_VEHICLE",
+      "outdoor_recreation_sites_inventory.Q_SEWERAGE",
+      "outdoor_recreation_sites_inventory.N_ELECTRY",
+      "outdoor_recreation_sites_inventory.N_WATER",
+      "outdoor_recreation_sites_inventory.N_BOTH",
+      "outdoor_recreation_sites_inventory.Q_GROUP",
+      "outdoor_recreation_sites_inventory.Q_PRIM",
+      "outdoor_recreation_sites_inventory.Q_WINCAMP",
+      "outdoor_recreation_sites_inventory.TOTALFLDS",
+      "outdoor_recreation_sites_inventory.Q_BASEB",
+      "outdoor_recreation_sites_inventory.Q_SOFTB",
+      "outdoor_recreation_sites_inventory.Q_LITLEA",
+      "outdoor_recreation_sites_inventory.Q_SOCCR",
+      "outdoor_recreation_sites_inventory.Q_FOOTB",
+      "outdoor_recreation_sites_inventory.OTHFLD",
+      "outdoor_recreation_sites_inventory.TOTALCRTS",
+      "outdoor_recreation_sites_inventory.Q_TENNIS",
+      "outdoor_recreation_sites_inventory.Q_BASKET",
+      "outdoor_recreation_sites_inventory.Q_VOLLEY",
+      "outdoor_recreation_sites_inventory.OTHCRTS",
+      "outdoor_recreation_sites_inventory.Q_PICNIC",
+      "outdoor_recreation_sites_inventory.Q_PICSHEL",
+      "outdoor_recreation_sites_inventory.PLYGND",
+      "outdoor_recreation_sites_inventory.N_REGHOLES",
+      "outdoor_recreation_sites_inventory.N_PAR3HOLE",
+      "outdoor_recreation_sites_inventory.Q_DRIVING",
+      "outdoor_recreation_sites_inventory.Q_MINATURE",
+      "outdoor_recreation_sites_inventory.F_BEACH",
+      "outdoor_recreation_sites_inventory.N_OUTPOOLS",
+      "outdoor_recreation_sites_inventory.SKITYPE",
+      "outdoor_recreation_sites_inventory.N_DOWNHILL",
+      "outdoor_recreation_sites_inventory.N_LIFTS",
+      "outdoor_recreation_sites_inventory.Q_SNOWMAKE",
+      "outdoor_recreation_sites_inventory.N_XCSKI",
+      "outdoor_recreation_sites_inventory.M_TRLTOTAL",
+      "outdoor_recreation_sites_inventory.Q_HIKING",
+      "outdoor_recreation_sites_inventory.Q_BIKING",
+      "outdoor_recreation_sites_inventory.MOUNTBIK",
+      "outdoor_recreation_sites_inventory.Q_ATV",
+      "outdoor_recreation_sites_inventory.Q_SNOWMOBL",
+      "outdoor_recreation_sites_inventory.Q_XSKI",
+      "outdoor_recreation_sites_inventory.Q_HORSEBK",
+      "outdoor_recreation_sites_inventory.CNTYCODE",
+      "outdoor_recreation_sites_inventory.NAME"
+    ],
+    "waste_water_facilities": [
+      "waste_water_facilities.X",
+      "waste_water_facilities.Y",
+      "waste_water_facilities.FacilityName",
+      "waste_water_facilities.FacilityID",
+      "waste_water_facilities.WWInventoryURL"
+    ]
+  }
+}

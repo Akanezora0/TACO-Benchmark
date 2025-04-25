@@ -1,0 +1,38 @@
+{
+  "sql": "SELECT xichengquxichengquguojietianqiaomingdan2490.OBJCODE, xichengquxichengquguojietianqiaomingdan2490.OBJNAME, xichengquxichengquguojietianqiaomingdan2490.DEPTNAME1, xichengquxichengquguojietianqiaomingdan2490.DEPTNAME2, xichengquxichengquguojietianqiaomingdan2490.DEPTNAME3, xichengquxichengquguojietianqiaomingdan2490.OBJSTATE, xichengquxichengquguojietianqiaomingdan2490.ORDATE, xichengquxichengquguojietianqiaomingdan2490.CHDATE FROM xichengquxichengquguojietianqiaomingdan2490 JOIN shijiaotongweigongluqixiangshuju233 ON xichengquxichengquguojietianqiaomingdan2490.OBJCODE = shijiaotongweigongluqixiangshuju233.��\u0011ࡱ\u001a� WHERE xichengquxichengquguojietianqiaomingdan2490.OBJSTATE = '已确认' AND shijiaotongweigongluqixiangshuju233.\u0001\u0001 = '有效'",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从两个表中联合查询已确认状态且关联数据有效的记录，主要涉及对象的基本信息（如编码、名称、部门等）以及相关日期信息。\n\n---\n\n### **详细描述**  \n1. **涉及的表**：\n   - **`xichengquxichengquguojietianqiaomingdan2490`**（可能是一个西城区国际桥梁名单表）：  \n     包含对象的基本信息，如编码（`OBJCODE`）、名称（`OBJNAME`）、部门层级（`DEPTNAME1`、`DEPTNAME2`、`DEPTNAME3`）、状态（`OBJSTATE`）、订单日期（`ORDATE`）和变更日期（`CHDATE`）。\n   - **`shijiaotongweigongluqixiangshuju233`**（可能是一个市交通委公路气象数据表）：  \n     包含与桥梁相关的气象或状态数据，但列名因编码问题无法直接识别（如 `��\u0011ࡱ\u001a�` 和 `\u0001\u0001`）。\n\n2. **查询的列**：  \n   从 `xichengquxichengquguojietianqiaomingdan2490` 表中选择了以下列：\n   - `OBJCODE`（对象编码）\n   - `OBJNAME`（对象名称）\n   - `DEPTNAME1`、`DEPTNAME2`、`DEPTNAME3`（部门层级信息）\n   - `OBJSTATE`（对象状态）\n   - `ORDATE`（订单日期）\n   - `CHDATE`（变更日期）\n\n3. **连接条件**：  \n   - 通过 `xichengquxichengquguojietianqiaomingdan2490.OBJCODE = shijiaotongweigongluqixiangshuju233.��\u0011ࡱ\u001a�` 进行表关联，可能是用桥梁编码关联气象数据。\n\n4. **筛选条件**：  \n   - `xichengquxichengquguojietianqiaomingdan2490.OBJSTATE = '已确认'`：只查询状态为“已确认”的记录。  \n   - `shijiaotongweigongluqixiangshuju233.\u0001\u0001 = '有效'`：只查询关联表中状态为“有效”的记录（可能表示气象数据有效或桥梁数据可用）。\n\n---\n\n### **业务场景**  \n该查询可能用于以下业务场景：  \n1. **桥梁管理与气象数据关联分析**：  \n   - 查询已确认状态的桥梁，并关联其有效的气象数据，用于桥梁维护或安全评估。  \n2. **部门协作与数据验证**：  \n   - 交通部门可能需要确认桥梁数据的有效性（如气象、结构健康等），以便安排巡检或维修。  \n3. **统计与报表生成**：  \n   - 生成西城区国际桥梁的清单报表，包含部门层级信息和最新状态。\n\n---\n\n### **用户描述**  \n在该业务场景下，用户可能遇到以下问题或需求：  \n1. **桥梁状态管理**：  \n   - 用户需要快速筛选出已确认状态的桥梁，排除未审核或无效的数据。  \n2. **数据一致性检查**：  \n   - 用户希望确保桥梁数据与气象数据（如温度、湿度、风速等）关联正确，且气象数据是有效的。  \n3. **多部门协作需求**：  \n   - 桥梁可能涉及多个层级的部门管理（如市、区、街道），用户需要明确责任部门以便后续工作分配。  \n4. **历史记录查询**：  \n   - 用户可能需要通过 `ORDATE`（订单日期）和 `CHDATE`（变更日期）了解桥梁数据的创建和修改时间，用于追溯变更历史。  \n\n---\n\n### **其他说明**  \n- 由于第二个表的列名存在编码问题，实际业务中可能需要修复列名（如 `OBJCODE` 或 `STATUS`）以提高可读性。  \n- 如果 `OBJSTATE` 或气象数据状态是动态更新的，该查询可能用于实时监控系统。",
+  "natural_language_query": "市民反映，西城区那些国际桥梁的管理好像有点混乱，想查一下已经确认过状态的桥梁信息。之前听说有些桥梁的数据和气象部门的信息对不上，能不能帮忙看看哪些桥是已经确认过状态，而且相关数据都是有效的？最好能告诉我这些桥的编号、名字、归哪个部门管，还有是什么时候登记和最近更新的。我们这边需要协调几个部门一起处理桥梁维护的事情，但是总搞不清哪些桥的数据是靠谱的，特别是气象数据这块老是出问题。对了，要查的桥必须是状态显示\"已确认\"的，其他乱七八糟的不要，不然又得白跑好几趟。",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ from _ join _ on _ ._ = _ ._ where _ ._ = _ and _ ._ = _",
+  "database": "交通服务",
+  "tables": {
+    "xichengquxichengquguojietianqiaomingdan2490": [
+      "xichengquxichengquguojietianqiaomingdan2490.OBJCODE",
+      "xichengquxichengquguojietianqiaomingdan2490.OBJNAME",
+      "xichengquxichengquguojietianqiaomingdan2490.DEPTCODE1",
+      "xichengquxichengquguojietianqiaomingdan2490.DEPTNAME1",
+      "xichengquxichengquguojietianqiaomingdan2490.DEPTCODE2",
+      "xichengquxichengquguojietianqiaomingdan2490.DEPTNAME2",
+      "xichengquxichengquguojietianqiaomingdan2490.DEPTCODE3",
+      "xichengquxichengquguojietianqiaomingdan2490.DEPTNAME3",
+      "xichengquxichengquguojietianqiaomingdan2490.BGCODE",
+      "xichengquxichengquguojietianqiaomingdan2490.OBJSTATE",
+      "xichengquxichengquguojietianqiaomingdan2490.ORDATE",
+      "xichengquxichengquguojietianqiaomingdan2490.CHDATE",
+      "xichengquxichengquguojietianqiaomingdan2490.DATASOURCE",
+      "xichengquxichengquguojietianqiaomingdan2490.OBJPOS",
+      "xichengquxichengquguojietianqiaomingdan2490.NOTE",
+      "xichengquxichengquguojietianqiaomingdan2490.ljdl",
+      "xichengquxichengquguojietianqiaomingdan2490.cd",
+      "xichengquxichengquguojietianqiaomingdan2490.kydw",
+      "xichengquxichengquguojietianqiaomingdan2490.kd",
+      "xichengquxichengquguojietianqiaomingdan2490.gd",
+      "xichengquxichengquguojietianqiaomingdan2490.mc",
+      "xichengquxichengquguojietianqiaomingdan2490.ghspxmh"
+    ],
+    "shijiaotongweigongluqixiangshuju233": [
+      "shijiaotongweigongluqixiangshuju233.��\u0011ࡱ\u001a�",
+      "shijiaotongweigongluqixiangshuju233.\u0001\u0001"
+    ]
+  }
+}

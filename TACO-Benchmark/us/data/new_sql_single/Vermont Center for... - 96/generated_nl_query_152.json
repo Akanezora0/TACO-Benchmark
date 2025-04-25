@@ -1,0 +1,52 @@
+{
+  "sql": "SELECT dfirm_floodways.OBJECTID, dfirm_floodways.DFIRM_ID, dfirm_floodways.FLD_AR_ID, dfirm_floodways.FLD_ZONE, dfirm_floodways.FLOODWAY, dfirm_floodways.SFHA_TF, dfirm_floodways.AR_REVERT, dfirm_floodways.SOURCE_CIT, dfirm_floodways.HYDRO_ID, dfirm_floodways.CST_MDL_ID, salt_storage_record_table.geometry FROM dfirm_floodways JOIN salt_storage_record_table ON dfirm_floodways.OBJECTID = salt_storage_record_table.OBJECTID WHERE dfirm_floodways.FLD_ZONE = 'Urban' and dfirm_floodways.SFHA_TF = 'Yes' and (dfirm_floodways.HYDRO_ID,dfirm_floodways.CST_MDL_ID) = ('12345','67890');",
+  "problem_description": "### Query intent:\nThe SQL statement aims to retrieve specific attributes from two different tables, `dfirm_floodways` and `salt_storage_record_table`, under certain conditions.\n\n### Detailed description:\n- **Tables Involved**:\n  - **`dfirm_floodways`**: This table contains data related to floodways, including their unique identifier (`OBJECTID`), floodway ID (`DFIRM_ID`), flood zone (`FLD_ZONE`), floodway name (`FLOODWAY`), SFHA TF status (`SFHA_TF`), whether it can revert (`AR_REVERT`), source citation (`SOURCE_CIT`), hydrological identifier (`HYDRO_ID`), cost model identifier (`CST_MDL_ID`).\n  - **`salt_storage_record_table`**: This table likely contains records related to salt storage, with an object identifier (`OBJECTID`) as one of its keys.\n\n- **Join Operation**:\n  The `JOIN` clause is used to combine rows from `dfirm_floodways` and `salt_storage_record_table` based on the matching `OBJECTID` column. This allows for the retrieval of floodway data alongside any associated salt storage records.\n\n- **Where Clause**:\n  - **`dfirm_floodways.FLD_ZONE = 'Urban'`**: Filters the results to include only those floodways that belong to the urban zone.\n  - **`dfirm_floodways.SFHA_TF = 'Yes'`**: Further narrows the selection to floodways that are within Special Flood Hazard Areas (SFHA).\n  - **`(dfirm_floodways.HYDRO_ID, dfirm_floodways.CST_MDL_ID) = ('12345', '67890')`**: Applies a condition to select records where the hydrological identifier is '12345' and the cost model identifier is '67890'. This ensures that only records with these specific identifiers are retrieved.\n\n- **Selected Columns**:\n  The query selects several attributes from `dfirm_floodways` (including `OBJECTID`, `DFIRM_ID`, `FLD_ZONE`, `FLOODWAY`, `SFHA_TF`, `AR_REVERT`, `SOURCE_CIT`, `HYDRO_ID`, `CST_MDL_ID`) and the `geometry` attribute from `salt_storage_record_table`. These columns provide detailed information about the floodways and their spatial location.\n\n### Business Scenario:\nThis query",
+  "natural_language_query": "A database administrator or a user who needs to analyze environmental impact and inventory management might be interested in querying a system that combines information about urban flood management and salt storage facilities. Here's how they might phrase their request:\n\n\"Hello, I'm looking into a project that requires cross-referencing data from two databases: one detailing flood control measures in urban areas and another tracking salt storage locations. Specifically, I need to find all urban flood control measures that are located within special flood hazard areas (SFHA). Additionally, I'm interested in knowing if there's a correlation between these flood control measures and any nearby salt storage facilities. Ideally, I'd like to know the unique identifier of each flood control measure, its name, whether it's part of a special flood hazard area, if it can revert to its original state, details about its source citation, and its hydrological and cost model identifiers. Furthermore, I'm curious about the exact geographical locations of these salt storage facilities to better understand potential impacts or risks. Could you assist me in retrieving this information?\"\n\nIn essence, the user seeks a comprehensive overview of urban flood control measures in SFHA zones, along with the precise locations of salt storage facilities, to facilitate a deeper analysis of environmental and logistical concerns.",
+  "results": 0,
+  "sql skeleton": "SELECT _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ FROM _ JOIN _ ON _ ._ = _ ._ WHERE _ ._ = _ and _ = _ and _ (_ ._ ,_ ) = _ ;",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "dfirm_floodways": [
+      "dfirm_floodways.OBJECTID",
+      "dfirm_floodways.DFIRM_ID",
+      "dfirm_floodways.FLD_AR_ID",
+      "dfirm_floodways.FLD_ZONE",
+      "dfirm_floodways.FLOODWAY",
+      "dfirm_floodways.SFHA_TF",
+      "dfirm_floodways.AR_REVERT",
+      "dfirm_floodways.SOURCE_CIT",
+      "dfirm_floodways.HYDRO_ID",
+      "dfirm_floodways.CST_MDL_ID"
+    ],
+    "salt_storage_record_table": [
+      "salt_storage_record_table.OBJECTID",
+      "salt_storage_record_table.fulcrum_id",
+      "salt_storage_record_table.fulcrum_parent_id",
+      "salt_storage_record_table.fulcrum_record_id",
+      "salt_storage_record_table.version",
+      "salt_storage_record_table.geometry",
+      "salt_storage_record_table.created_at",
+      "salt_storage_record_table.updated_at",
+      "salt_storage_record_table.created_by",
+      "salt_storage_record_table.updated_by",
+      "salt_storage_record_table.address_sub_thoroughfare",
+      "salt_storage_record_table.address_thoroughfare",
+      "salt_storage_record_table.address_suite",
+      "salt_storage_record_table.address_locality",
+      "salt_storage_record_table.address_sub_admin_area",
+      "salt_storage_record_table.address_admin_area",
+      "salt_storage_record_table.address_postal_code",
+      "salt_storage_record_table.address_country",
+      "salt_storage_record_table.address_full",
+      "salt_storage_record_table.material_type",
+      "salt_storage_record_table.material_type_other",
+      "salt_storage_record_table.storage_length_years",
+      "salt_storage_record_table.storage_length_years_range",
+      "salt_storage_record_table.material_covered",
+      "salt_storage_record_table.coverage_method",
+      "salt_storage_record_table.material_on_pad",
+      "salt_storage_record_table.pad_type",
+      "salt_storage_record_table.pad_type_other"
+    ]
+  }
+}

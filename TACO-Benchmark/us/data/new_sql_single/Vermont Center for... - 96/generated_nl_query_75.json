@@ -1,0 +1,958 @@
+{
+  "sql": "SELECT waste_water_facilities.X, waste_water_facilities.FacilityName FROM waste_water_facilities;",
+  "problem_description": "### Query intent:\nThe SQL statement aims to select specific attributes from a table named `waste_water_facilities`. The intention is likely to retrieve data related to waste water facilities for further processing or analysis.\n\n### Detailed description:\n- **Table**: `waste_water_facilities` - This table is expected to contain records about various waste water facilities, possibly including their identification codes, facility names, locations, capacities, and other relevant details.\n- **Columns**:\n  - `X`: This column is not explicitly defined in the SQL statement. It might represent an unspecified attribute of the `waste_water_facilities` table, such as an ID, a code, or another identifier.\n  - `FacilityName`: This column represents the name of the waste water facility, which is the primary piece of information being selected by the query.\n- **Conditions**: There are no explicit conditions specified in the SQL statement. This means that all rows in the `waste_water_facilities` table will be selected based on the columns mentioned.\n\n### Business scenario:\nThis SQL query could be part of a larger system designed to manage and analyze data from various waste water treatment facilities. For instance, it might be used in environmental monitoring systems where detailed reports on facility performance, compliance, or operational status are required.\n\n### User description:\nA user, perhaps an environmental engineer or a facility manager, might need this query to generate a list of waste water facilities for auditing purposes. They might want to see a report containing unique identifiers (`X`) and the names (`FacilityName`) of these facilities to ensure they have access to all necessary data for compliance checks, maintenance planning, or performance evaluations. This could also serve as a starting point for more complex queries involving additional filters or aggregations based on facility data.",
+  "natural_language_query": "As an environmental engineer, I'm tasked with conducting an audit of our company's waste water facilities. I need to gather comprehensive information on each facility we operate, specifically focusing on their unique identifiers and their respective names. This will help me ensure that we're meeting all regulatory standards and maintaining optimal operational efficiency across all our facilities. To facilitate this process, I require a SQL query that can extract the following two pieces of information:\n\n1. A unique identifier for each waste water facility, often referred to as 'X' in our database.\n2. The name of each facility, which helps in identifying the location and scope of each operation.\n\nGiven this requirement, I would like you to construct a SQL query that selects these two attributes from our 'waste_water_facilities' table. This query should provide a clear overview of our entire waste water facility network, enabling us to systematically review and manage our environmental responsibilities.",
+  "results": [
+    [
+      438106.899794778,
+      "Bennington"
+    ],
+    [
+      498286.585151038,
+      "Barre City"
+    ],
+    [
+      436843.95820697,
+      "Alburgh"
+    ],
+    [
+      524626.074872804,
+      "Barton"
+    ],
+    [
+      434363.179881056,
+      "Benson"
+    ],
+    [
+      548236.056836675,
+      "Brighton"
+    ],
+    [
+      529361.082489453,
+      "Danville"
+    ],
+    [
+      454689.048636111,
+      "Manchester"
+    ],
+    [
+      491989.73865655,
+      "Montpelier"
+    ],
+    [
+      491601.671835411,
+      "Morrisville"
+    ],
+    [
+      523374.992682514,
+      "Orleans"
+    ],
+    [
+      457252.388042531,
+      "Proctor"
+    ],
+    [
+      464051.958473573,
+      "Readsboro"
+    ],
+    [
+      485771.449673724,
+      "Richford"
+    ],
+    [
+      538371.191484096,
+      "St Johnsbury"
+    ],
+    [
+      499610.524174062,
+      "Saxtons River"
+    ],
+    [
+      446668.985540792,
+      "South Burlington - Airport Parkway"
+    ],
+    [
+      442883.35488887,
+      "South Burlington - Bartlett Bay"
+    ],
+    [
+      438956.695541436,
+      "Pawlet"
+    ],
+    [
+      456540.25492621,
+      "West Rutland"
+    ],
+    [
+      497365.284635551,
+      "Williamstown"
+    ],
+    [
+      444523.464729898,
+      "Winooski"
+    ],
+    [
+      499439.09158368,
+      "Woodstock"
+    ],
+    [
+      514946.035020767,
+      "Hartford - WRJ"
+    ],
+    [
+      451342.182683588,
+      "GLOBALFOUNDRIES"
+    ],
+    [
+      452876.271024101,
+      "St Albans Northwest Correctional"
+    ],
+    [
+      455679.644321531,
+      "Otter Valley Union High School"
+    ],
+    [
+      446758.527622553,
+      "Arlington School"
+    ],
+    [
+      485521.748832413,
+      "Ludlow"
+    ],
+    [
+      507460.61696621,
+      "Troy & Jay"
+    ],
+    [
+      504645.314498618,
+      "Bellows Falls"
+    ],
+    [
+      495982.471054812,
+      "Brattleboro "
+    ],
+    [
+      442721.387619564,
+      "Burlington Main"
+    ],
+    [
+      438914.419112483,
+      "Burlington North"
+    ],
+    [
+      444791.994227323,
+      "Burlington River"
+    ],
+    [
+      450600.167933665,
+      "Essex Junction"
+    ],
+    [
+      445942.078965651,
+      "Middlebury"
+    ],
+    [
+      539524.800063398,
+      "Lyndon"
+    ],
+    [
+      487445.972490862,
+      "Northfield"
+    ],
+    [
+      460131.208265825,
+      "Rutland"
+    ],
+    [
+      502504.638691419,
+      "Springfield"
+    ],
+    [
+      453690.050542766,
+      "St Albans City"
+    ],
+    [
+      509028.210870434,
+      "Windsor Main"
+    ],
+    [
+      442673.443301488,
+      "Shelburne 1 (Crown Rd)"
+    ],
+    [
+      439262.427956289,
+      "Vergennes"
+    ],
+    [
+      490176.922667144,
+      "Bethel"
+    ],
+    [
+      530407.299780929,
+      "Bradford"
+    ],
+    [
+      452621.070552065,
+      "Brandon"
+    ],
+    [
+      490378.063544742,
+      "Bridgewater"
+    ],
+    [
+      575731.588598628,
+      "Canaan"
+    ],
+    [
+      442687.343792854,
+      "Castleton"
+    ],
+    [
+      491792.548399529,
+      "Cavendish"
+    ],
+    [
+      504282.897487408,
+      "Chelsea"
+    ],
+    [
+      493809.017477411,
+      "Chester"
+    ],
+    [
+      475613.076487287,
+      "Enosburg Falls"
+    ],
+    [
+      458847.523635324,
+      "Fairfax"
+    ],
+    [
+      437075.007140111,
+      "Fair Haven"
+    ],
+    [
+      509837.529920035,
+      "Hardwick"
+    ],
+    [
+      450083.288998065,
+      "Hinesburg"
+    ],
+    [
+      473491.640940021,
+      "Jeffersonville"
+    ],
+    [
+      485315.900781443,
+      "Johnson"
+    ],
+    [
+      562495.240274452,
+      "Lunenburg FD2"
+    ],
+    [
+      511463.677704292,
+      "Marshfield"
+    ],
+    [
+      450380.918764926,
+      "Milton"
+    ],
+    [
+      523692.998336827,
+      "Newport City"
+    ],
+    [
+      508072.535776878,
+      "North Troy"
+    ],
+    [
+      435169.15984917,
+      "Orwell"
+    ],
+    [
+      458270.408300643,
+      "Pittsford"
+    ],
+    [
+      505744.093320994,
+      "Plainfield"
+    ],
+    [
+      439703.352370736,
+      "Poultney"
+    ],
+    [
+      498373.900909451,
+      "Putney"
+    ],
+    [
+      487380.15397081,
+      "Randolph"
+    ],
+    [
+      441299.833837422,
+      "Shelburne 2 (Harbor Rd)"
+    ],
+    [
+      461944.273964917,
+      "Sheldon Springs"
+    ],
+    [
+      476782.257586193,
+      "Sherburne FD 1"
+    ],
+    [
+      484511.033228181,
+      "Stowe"
+    ],
+    [
+      449716.503636524,
+      "Swanton"
+    ],
+    [
+      461449.252755075,
+      "Wallingford FD 1"
+    ],
+    [
+      478539.363103808,
+      "Waterbury"
+    ],
+    [
+      468130.296352896,
+      "Whitingham"
+    ],
+    [
+      474289.041026963,
+      "Whitingham - Jacksonville"
+    ],
+    [
+      468806.518090072,
+      "Wilmington"
+    ],
+    [
+      508232.813015598,
+      "Windsor Weston Heights"
+    ],
+    [
+      506947.366257598,
+      "Hartford - Quechee"
+    ],
+    [
+      460116.362180967,
+      "Richmond"
+    ],
+    [
+      499482.556230898,
+      "Royalton"
+    ],
+    [
+      467671.431824606,
+      "Cold Brook FD 1 - Direct Discharge"
+    ],
+    [
+      453652.613695184,
+      "Chittenden Solid Waste District"
+    ],
+    [
+      452720.939807737,
+      "P B M Nutritionals Inc"
+    ],
+    [
+      498911.163232347,
+      "NorthStar Nuclear Decommissioning Company LLC"
+    ],
+    [
+      500616.374836883,
+      "Barre Septic Service"
+    ],
+    [
+      458112.273645382,
+      "A1 Sewer and Drain"
+    ],
+    [
+      497701.080282677,
+      "Woodstock - South"
+    ],
+    [
+      502578.619965954,
+      "Woodstock - Taftsville"
+    ],
+    [
+      462247.772507629,
+      "WestRock Converting Company"
+    ],
+    [
+      496148.361013023,
+      "FiberMark North America Inc"
+    ],
+    [
+      433112.869388255,
+      "Champlain Black Marble"
+    ],
+    [
+      443406.416104952,
+      "Alburgh Fire District 1"
+    ],
+    [
+      459851.457520774,
+      "Bourbeau Aggregate, LLC"
+    ],
+    [
+      461965.294242687,
+      "Deermont Corp - VT Plating"
+    ],
+    [
+      445647.732362423,
+      "Whitcomb Construction                                       "
+    ],
+    [
+      436348.793615893,
+      "South Hero Fire District 4"
+    ],
+    [
+      495529.382153813,
+      "Barrows and Fisher Oil Co"
+    ],
+    [
+      442716.863296975,
+      "Blodgett, G S                                               "
+    ],
+    [
+      490905.487288759,
+      "Brattleboro Water Treatment Plant"
+    ],
+    [
+      443654.495882293,
+      "Burlington Electric McNeil Generating Station"
+    ],
+    [
+      513602.021893701,
+      "Cabot"
+    ],
+    [
+      443016.840777723,
+      "Champlain Water District"
+    ],
+    [
+      578369.594297845,
+      "Ethan Allen"
+    ],
+    [
+      443545.98110105,
+      "Energizer - NCCW                                            "
+    ],
+    [
+      432802.313162928,
+      "Grand Isle FD 4 WTP"
+    ],
+    [
+      497941.140559292,
+      "Imerys Talc - West Windsor Mill"
+    ],
+    [
+      442544.146290412,
+      "Global Companies LLC"
+    ],
+    [
+      494974.50518333,
+      "Montpelier Water Treatment Plant"
+    ],
+    [
+      442064.458952837,
+      "North Hero Water Treatment Plant"
+    ],
+    [
+      459886.951655341,
+      "Troy Minerals"
+    ],
+    [
+      498293.25728922,
+      "Soundview Vermont Holdings"
+    ],
+    [
+      463081.262020686,
+      "Isovolta Inc"
+    ],
+    [
+      501548.892247742,
+      "Rock of Ages"
+    ],
+    [
+      540483.077903512,
+      "Lyndonville Water Treatment Plant                           "
+    ],
+    [
+      535318.399843699,
+      "Ryegate Associates"
+    ],
+    [
+      534911.095086528,
+      "Ryegate Fire District 2"
+    ],
+    [
+      446030.1714547,
+      "St Albans Water Treatment Plant"
+    ],
+    [
+      447704.10670713,
+      "Swanton Village Water Treatment Plant"
+    ],
+    [
+      434702.369211174,
+      "Tri Town Water District 1"
+    ],
+    [
+      496388.844067641,
+      "Unifirst"
+    ],
+    [
+      515279.510149609,
+      "TransCanada Hydro Northeast - Wilder"
+    ],
+    [
+      504720.297324621,
+      "TransCanada Hydro Northeast - Bellows Falls"
+    ],
+    [
+      468178.364806004,
+      "TransCanada Hydro Northeast - Harriman Reservoir            "
+    ],
+    [
+      463012.318395199,
+      "TransCanada Hydro Northeast - Searsburg                     "
+    ],
+    [
+      498856.550177402,
+      "TransCanada Hydro Northeast - Vernon"
+    ],
+    [
+      433845.389164939,
+      "Vergennes Panton Water District"
+    ],
+    [
+      445107.999451181,
+      "VT Fish & Wildlife - Bennington Fish Hatchery               "
+    ],
+    [
+      451934.46044417,
+      "VT Fish & Wildlife - Salisbury Fish Hatchery"
+    ],
+    [
+      538692.139815154,
+      "Weidmann Electrical Technology"
+    ],
+    [
+      446083.535699454,
+      "Agri-Mark - Middlebury"
+    ],
+    [
+      496378.971859333,
+      "Casella Waste Mgmt Inc - multiple facilities"
+    ],
+    [
+      480845.202117541,
+      "Ben & Jerrys Waterbury"
+    ],
+    [
+      452585.356751102,
+      "Ben & Jerry's St Albans"
+    ],
+    [
+      442556.395240265,
+      "Edlund Company"
+    ],
+    [
+      443559.151802169,
+      "Energizer - Mini Alkaline"
+    ],
+    [
+      460258.090826112,
+      "General Electric - Columbian Ave"
+    ],
+    [
+      462706.036790233,
+      "General Electric - Windcrest Road"
+    ],
+    [
+      498317.446028064,
+      "Green Mountain Spinnery                                     "
+    ],
+    [
+      522065.043783475,
+      "New England Waste Services - Coventry"
+    ],
+    [
+      483419.922218628,
+      "Moretown Landfill"
+    ],
+    [
+      487188.42575203,
+      "US Dept of Interior-White River NFH                         "
+    ],
+    [
+      461364.054865756,
+      "US Dept of Interior-DEisenhower NFH"
+    ],
+    [
+      514806.764607607,
+      "Agri-Mark - Cabot Creamery"
+    ],
+    [
+      437403.251526021,
+      "Vishay Tansitor"
+    ],
+    [
+      449721.452949166,
+      "S D Ireland - Green Acres Quarry"
+    ],
+    [
+      470195.722423671,
+      "Smugglers Notch - SNOMAX"
+    ],
+    [
+      537682.3495926,
+      "Coltec Industries                                           "
+    ],
+    [
+      464248.263443302,
+      "Carrara & Sons (Clarendon Quarry)"
+    ],
+    [
+      434745.230335389,
+      "Shoreham"
+    ],
+    [
+      488707.477903482,
+      "VT Quarries Corp"
+    ],
+    [
+      470195.722423671,
+      "Smugglers Notch - Shutdown Drainage"
+    ],
+    [
+      500272.910677634,
+      "Springfield Municipal Swimming Pool"
+    ],
+    [
+      495985.955979095,
+      "Worcester FD 1"
+    ],
+    [
+      486054.535103114,
+      "Magris Talc USA, Inc - Argonaut Mine"
+    ],
+    [
+      449291.053378159,
+      "OMYA Middlebury Quarry"
+    ],
+    [
+      480435.446317485,
+      "VT Fish & Wildlife - Roxbury Fish Hatchery"
+    ],
+    [
+      531680.314146761,
+      "Ryegate Town - South"
+    ],
+    [
+      483945.692186314,
+      "Earle P. Towne Water Treatment Plant"
+    ],
+    [
+      494219.53542411,
+      "Montpelier Swimming Pool"
+    ],
+    [
+      454281.699590314,
+      "OMYA Hogback Quarry"
+    ],
+    [
+      447613.636019299,
+      "H & H Properties                                            "
+    ],
+    [
+      501041.567793606,
+      "Lamb Durward & Linda"
+    ],
+    [
+      468094.927692188,
+      "Mt Snow Ltd"
+    ],
+    [
+      442914.656060992,
+      "Fortieth Burlington LLC                                     "
+    ],
+    [
+      547268.62238538,
+      "Pike Industries (Waterford Crushed Stone)                   "
+    ],
+    [
+      461300.372266157,
+      "Ames True Temper Inc                                        "
+    ],
+    [
+      515697.090573206,
+      "Montshire Museum of Science"
+    ],
+    [
+      532733.749266633,
+      "Global Partners, LP - P & H Truck Stop"
+    ],
+    [
+      454678.254843359,
+      "OMYA East and West - Verpol"
+    ],
+    [
+      447312.502387974,
+      "Lime Kiln Quarry West"
+    ],
+    [
+      462760.03532555,
+      "Working Dog Septic"
+    ],
+    [
+      494578.687899346,
+      "G.S. Precision Coating, Inc"
+    ],
+    [
+      437104.023382384,
+      "Pownal"
+    ],
+    [
+      493897.618341212,
+      "Cumberland Farms Station 4024                               "
+    ],
+    [
+      498819.266133612,
+      "Pike Industries (Williamstown Quarry)"
+    ],
+    [
+      442976.829597306,
+      "VT Dept State Buildings - Bennington State Office Bldg      "
+    ],
+    [
+      523837.19476372,
+      "Columbia Forest Products"
+    ],
+    [
+      467670.59700332,
+      "Cold Brook FD 1 - Golf Course"
+    ],
+    [
+      467910.809058349,
+      "Cold Brook FD 1 - Base Tract"
+    ],
+    [
+      532571.989506337,
+      "Pike Industries (Perini Quarry)"
+    ],
+    [
+      448517.89424988,
+      "Bennington Water Treatment Facility                         "
+    ],
+    [
+      486839.050409165,
+      "Imerys Talc - Rainbow Mine"
+    ],
+    [
+      478219.640870859,
+      "Eagle River Mining"
+    ],
+    [
+      453863.534448409,
+      "Malone 75 Swanton Road Properties"
+    ],
+    [
+      496039.747967137,
+      "Cersosimo Lumber Company"
+    ],
+    [
+      445495.215246524,
+      "Pike Industries (New Haven)"
+    ],
+    [
+      441274.763487618,
+      "Cornwall"
+    ],
+    [
+      494406.130745007,
+      "Retreat Farm, LTD"
+    ],
+    [
+      562041.570433632,
+      "Ampersand Gilman Hydro LP"
+    ],
+    [
+      437331.988304854,
+      "All Out Waste Management                                    "
+    ],
+    [
+      513799.285801977,
+      "Irving Oil Terminals Inc."
+    ],
+    [
+      434172.609929059,
+      "Grand Isle Consolidated Water Dist"
+    ],
+    [
+      493611.565542062,
+      "Commonwealth Dairy                                          "
+    ],
+    [
+      445792.682846988,
+      "Greer Family LLC"
+    ],
+    [
+      476169.802986394,
+      "Chaves Excavating"
+    ],
+    [
+      482966.439504201,
+      "Imerys Talc America"
+    ],
+    [
+      433288.028661258,
+      "VT Fish & Wildlife - Ed Weed Fish Culture Station"
+    ],
+    [
+      440905.137803055,
+      "Powhatan Ferrisburgh"
+    ],
+    [
+      456004.076351414,
+      "Champlain Oil Co-McGanns Mobil                              "
+    ],
+    [
+      446509.258384582,
+      "Connor Homes"
+    ],
+    [
+      535797.305639793,
+      "Barnet Hydro                                                "
+    ],
+    [
+      512030.684842653,
+      "Ottauquechee Hydro"
+    ],
+    [
+      461946.409457792,
+      "Sheldon Springs Hydro"
+    ],
+    [
+      481283.306167516,
+      "von Trapp Brewing"
+    ],
+    [
+      480557.120507051,
+      "Alchemist - Waterbury"
+    ],
+    [
+      491798.431026998,
+      "Lost Nation Brewery"
+    ],
+    [
+      482778.971459039,
+      "Alchemist - Stowe"
+    ],
+    [
+      460042.895879213,
+      "Stone Corral Brewery"
+    ],
+    [
+      493684.825076794,
+      "Drews LLC"
+    ],
+    [
+      452541.027308989,
+      "IBM"
+    ],
+    [
+      507947.585673239,
+      "Windsor Brewing Company                                     "
+    ],
+    [
+      441706.322649304,
+      "Fiddlehead Brewing"
+    ],
+    [
+      446561.649955295,
+      "VT AOT -Middlebury Bridge"
+    ],
+    [
+      495722.834358286,
+      "Magris Talc USA, Inc - Hammondsville Mine"
+    ],
+    [
+      471154.168010818,
+      "Bryce Farms Inc"
+    ],
+    [
+      439866.671482847,
+      "Richville Farms"
+    ],
+    [
+      437002.602231488,
+      "Bayview Farm"
+    ],
+    [
+      516754.667925999,
+      "Gebbie Farm"
+    ],
+    [
+      444711.666619454,
+      "Rail View Dairy, LLC"
+    ],
+    [
+      465794.238638351,
+      "Sweet Farm"
+    ],
+    [
+      459781.995175188,
+      "H Bar 9"
+    ],
+    [
+      460164.379324892,
+      "Machia Farm"
+    ],
+    [
+      452670.362004968,
+      "Sizen Dairy Farm"
+    ],
+    [
+      432894.193634399,
+      "Lucas Dairy, LLC"
+    ],
+    [
+      479149.585655883,
+      "Leach Farms, Inc"
+    ],
+    [
+      451244.513356889,
+      "Boissonneault Family Farm"
+    ]
+  ],
+  "sql skeleton": "SELECT _ , _ FROM _ ;",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "waste_water_facilities": [
+      "waste_water_facilities.X",
+      "waste_water_facilities.Y",
+      "waste_water_facilities.FacilityName",
+      "waste_water_facilities.FacilityID",
+      "waste_water_facilities.WWInventoryURL"
+    ],
+    "dfirm_floodways": [
+      "dfirm_floodways.OBJECTID",
+      "dfirm_floodways.DFIRM_ID",
+      "dfirm_floodways.FLD_AR_ID",
+      "dfirm_floodways.FLD_ZONE",
+      "dfirm_floodways.FLOODWAY",
+      "dfirm_floodways.SFHA_TF",
+      "dfirm_floodways.AR_REVERT",
+      "dfirm_floodways.SOURCE_CIT",
+      "dfirm_floodways.HYDRO_ID",
+      "dfirm_floodways.CST_MDL_ID"
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "sql": "select table1.column1, table1.column2, table2.column3 from table1 join table2 on table1.common_column = table2.common_column where table1.unique_id = (select table3.unique_id from table3 where table3.condition_column = 'condition_value');",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ from _ where _ = (select _ from _ where _ );",
+  "database": "安全生活",
+  "tables": {}
+}

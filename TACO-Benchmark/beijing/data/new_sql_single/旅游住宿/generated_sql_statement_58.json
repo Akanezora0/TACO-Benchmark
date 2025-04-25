@@ -1,0 +1,19 @@
+{
+  "sql": "SELECT \"shunyiquxingjifandian1276.顺义区星级饭店\", \"xichengquxichengquwenwubaohudanwei35.名称\" FROM \"shunyiquxingjifandian1276\" INNER JOIN \"xichengquxichengquwenwubaohudanwei35\" ON \"shunyiquxingjifandian1276.Unnamed: 3\" = \"xichengquxichengquwenwubaohudanwei35.序号\";",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "shunyiquxingjifandian1276": [
+      "shunyiquxingjifandian1276.顺义区星级饭店",
+      "shunyiquxingjifandian1276.Unnamed: 1",
+      "shunyiquxingjifandian1276.Unnamed: 2",
+      "shunyiquxingjifandian1276.Unnamed: 3"
+    ],
+    "xichengquxichengquwenwubaohudanwei35": [
+      "xichengquxichengquwenwubaohudanwei35.序号",
+      "xichengquxichengquwenwubaohudanwei35.名称",
+      "xichengquxichengquwenwubaohudanwei35.地址"
+    ]
+  }
+}

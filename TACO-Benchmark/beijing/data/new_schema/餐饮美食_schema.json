@@ -1,0 +1,70 @@
+{
+  "tables": [
+    {
+      "table_name": "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374",
+      "table_comment": "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374",
+      "table_description": "No description available.",
+      "columns": [
+        {
+          "column_name": "JYZMC",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "XKZBH",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "JYCS",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "JYXM",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "FZRQ",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "YXQZ",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "XKZID",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "DWMC",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "EXCHANGETIME",
+          "data_type": "TEXT"
+        }
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    },
+    {
+      "table_name": "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076",
+      "table_comment": "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076",
+      "table_description": "No description available.",
+      "columns": [
+        {
+          "column_name": "专用标识牌号",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "专柜名称",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "地址",
+          "data_type": "TEXT"
+        }
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    }
+  ]
+}

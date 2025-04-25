@@ -1,0 +1,18 @@
+{
+  "sql": "SELECT shijiaotongweiguidaoxianluxinxichuxing3671.线路名称 FROM shijiaotongweiguidaoxianluxinxichuxing3671 WHERE shijiaotongweiguidaoxianluxinxichuxing3671.线路编码 = '编码值' AND shijiaotongweiguidaoxianluxinxichuxing3671.站点数 > 10",
+  "results": 0,
+  "sql skeleton": "select _ from _ where _ = _ and _ = _",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweiguidaoxianluxinxichuxing3671": [
+      "shijiaotongweiguidaoxianluxinxichuxing3671.线路编码",
+      "shijiaotongweiguidaoxianluxinxichuxing3671.线路名称",
+      "shijiaotongweiguidaoxianluxinxichuxing3671.站点数"
+    ],
+    "shijiaotongweikebianqingbaobanshebeixinxi3519": [
+      "shijiaotongweikebianqingbaobanshebeixinxi3519.唯一标识",
+      "shijiaotongweikebianqingbaobanshebeixinxi3519.名称",
+      "shijiaotongweikebianqingbaobanshebeixinxi3519.设备编码"
+    ]
+  }
+}

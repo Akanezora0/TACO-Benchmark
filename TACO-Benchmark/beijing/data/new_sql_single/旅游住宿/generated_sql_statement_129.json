@@ -1,0 +1,18 @@
+{
+  "sql": "SELECT \n    shunyiqushunyiquxingjifandian2102.顺义区星级饭店, \n    shunyiqushunyiquxingjifandian2102.Unnamed: 1, \n    shunyiqushunyiquxingjifandian2102.Unnamed: 2, \n    shunyiqushunyiquxingjifandian2102.Unnamed: 3, \n    shiwenhuahelvyoujuxingjifandianxinxi2036.��\u0011ࡱ\u001a�, \n    shiwenhuahelvyoujuxingjifandianxinxi2036.\u0001\u0001  \nFROM \n    shunyiqushunyiquxingjifandian2102 JOIN \n    shiwenhuahelvyoujuxingjifandianxinxi2036 ON \n    shunyiqushunyiquxingjifandian2102.顺义区星级饭店 = shiwenhuahelvyoujuxingjifandianxinxi2036.��\u0011ࡱ\u001a� AND \n    shunyiqushunyiquxingjifandian2102.Unnamed: 1 = shiwenhuahelvyoujuxingjifandianxinxi2036.\u0001\u0001 \nWHERE \n    shunyiqushunyiquxingjifandian2102.顺义区星级饭店 = '条件' AND \n    shunyiqushunyiquxingjifandian2102.Unnamed: 1 = '条件' and (shiwenhuahelvyoujuxingjifandianxinxi2036.��\u0011ࡱ\u001a�,shiwenhuahelvyoujuxingjifandianxinxi2036.\u0001\u0001) = '条件';",
+  "results": 0,
+  "sql skeleton": "SELECT _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ FROM _ JOIN _ ON _ ._ = _ ._ WHERE _ ._ = _ AND _ ._ = _ and _ (_ ._ ._ ,_ ) = _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "shunyiqushunyiquxingjifandian2102": [
+      "shunyiqushunyiquxingjifandian2102.顺义区星级饭店",
+      "shunyiqushunyiquxingjifandian2102.Unnamed: 1",
+      "shunyiqushunyiquxingjifandian2102.Unnamed: 2",
+      "shunyiqushunyiquxingjifandian2102.Unnamed: 3"
+    ],
+    "shiwenhuahelvyoujuxingjifandianxinxi2036": [
+      "shiwenhuahelvyoujuxingjifandianxinxi2036.��\u0011ࡱ\u001a�",
+      "shiwenhuahelvyoujuxingjifandianxinxi2036.\u0001\u0001"
+    ]
+  }
+}

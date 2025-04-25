@@ -1,0 +1,47 @@
+{
+  "sql": "SELECT \"pingguquzhucegongyuanxinxi780.名称\", \"pingguquzhucegongyuanxinxi780.地址\", \"shiguihuaziranziyuanweiyinhangpiaohao1522.NAME\" FROM \"pingguquzhucegongyuanxinxi780\" INNER JOIN \"shiguihuaziranziyuanweiyinhangpiaohao1522\" ON \"pingguquzhucegongyuanxinxi780.HID\" = \"shiguihuaziranziyuanweiyinhangpiaohao1522.HID\";",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从两个表中查询并关联显示公园的名称、地址以及对应的银行票号名称。\n\n- **详细描述**：\n  - **涉及的表**：\n    1. `pingguquzhucegongyuanxinxi780`：该表可能存储了平谷区注册公园的基本信息。\n    2. `shiguihuaziranziyuanweiyinhangpiaohao1522`：该表可能存储了与公园相关的银行票号信息。\n  - **涉及的列**：\n    1. `pingguquzhucegongyuanxinxi780.名称`：公园的名称。\n    2. `pingguquzhucegongyuanxinxi780.地址`：公园的地址。\n    3. `shiguihuaziranziyuanweiyinhangpiaohao1522.NAME`：银行票号的名称。\n  - **关联条件**：\n    - 通过 `pingguquzhucegongyuanxinxi780.HID` 和 `shiguihuaziranziyuanweiyinhangpiaohao1522.HID` 进行内连接，确保只返回两个表中 HID 匹配的记录。\n\n- **业务场景**：\n  - 该查询可能用于需要同时查看公园基本信息及其关联银行票号的场景。例如，公园管理部门可能需要了解每个公园的注册信息以及与之相关的银行票号信息，以便进行财务对账或资金管理。\n\n- **用户描述**：\n  - 用户可能是公园管理部门的工作人员，他们需要获取公园的详细信息及其关联的银行票号信息。例如，他们可能需要生成一份报告，列出所有公园的名称、地址以及对应的银行票号名称，以便进行财务审计或资金流向追踪。用户的需求是快速获取这些关联数据，而不需要手动在两个表中查找和匹配信息。",
+  "natural_language_query": "市民反映，我是平谷区公园管理处的，最近在做财务对账工作时遇到些麻烦。我们这边登记了好几个公园的基本情况，但是要查每个公园对应的银行票号信息特别费劲。比如说金海湖公园、湿地公园这些，我们想知道它们的具体地址和关联的银行账户名称，现在都是分开记录在两个不同系统里的，每次都要来回翻找核对，特别容易出错。能不能帮忙查一下，把我们区所有注册公园的名称、具体位置，还有对应的银行票号名称一起列出来？这样我们做资金管理就方便多了。主要是最近上级要来检查，我们急需整理这些资料。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "pingguquzhucegongyuanxinxi780": [
+      "pingguquzhucegongyuanxinxi780.序号",
+      "pingguquzhucegongyuanxinxi780.名称",
+      "pingguquzhucegongyuanxinxi780.区",
+      "pingguquzhucegongyuanxinxi780.街道",
+      "pingguquzhucegongyuanxinxi780.地址",
+      "pingguquzhucegongyuanxinxi780.咨询电话"
+    ],
+    "shiguihuaziranziyuanweiyinhangpiaohao1522": [
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.HID",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.FATHERID",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.HNAME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.OTHERNAME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.CATEGORY",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.SUBCATEGOR",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.COUNTYNAME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.STREETNAME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.DYNASTY",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.SUBDYNASTY",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.ADDRESS",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.RANK",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.BATCH",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.PUBTIME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.USERS",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.PURPOSE",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.OWNERSHIP",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.STATEEVALU",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.SINGLERELI",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.PROTECTION",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.ATTACHEDRE",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.RELATEDPEO",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.RELATEDEVE",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.PUBNAME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.SOURCE",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.EDITOR",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.ISREDUNDAN"
+    ]
+  }
+}

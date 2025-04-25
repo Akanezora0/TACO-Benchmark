@@ -1,0 +1,7 @@
+{
+  "sql": "SELECT table1.column1, table1.column2, table2.column3 \nFROM table1 \nJOIN table2 ON table1.common_column = table2.common_column \nWHERE table1.unique_column = 'value' AND table2.another_unique_column = 'another_value' AND (table1.function(column1) = some_value)",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ from _ where _ = _ and _ = (select from _ where _ = _ and _ = _ and _ (_ ,_ ) = _ )",
+  "database": "安全生活",
+  "tables": {}
+}

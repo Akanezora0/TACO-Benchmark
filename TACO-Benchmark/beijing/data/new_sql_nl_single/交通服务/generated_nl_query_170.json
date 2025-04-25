@@ -1,0 +1,23 @@
+{
+  "sql": "SELECT \"shijiaotongweichaoxianchaozaihuochexiezaicha\"nghang代码\", \"shijiaotongweichaoxianchaozaihuochexiezaicha\"nghang名称\", \"shijiaotongweichaoxianchaozaihuochexiezaicha\"nghang联系电话\", \"shijiaotongweichaoxianchaozaihuochexiezaicha\"nghang地址\", \"shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju\"nghang业户名称\", \"shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju\"nghang评定等级\", \"shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju\"nghang所属地区\", \"shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju\"nghang年份\", \"shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju\"nghang统一社会信用代码\" FROM \"shijiaotongweichaoxianchaozaihuochexiezaicha\" JOIN \"shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju\" ON \"shijiaotongweichaoxianchaozaihuochexiezaicha\".\"行政区划代码\" = \"shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju\".\"所属地区\" WHERE \"shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju\".\"年份\" = '2022' AND \"shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju\".\"评定等级\" = '优秀' ;",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是查询 **2022 年被评为“优秀”信用等级的旅游客运企业**，并关联这些企业的 **行政区划代码、名称、联系电话、地址** 等信息，以便进行信用评价分析或企业信息管理。\n\n---\n\n### **详细描述**  \n#### **涉及的表**  \n1. **`shijiaotongweichaoxianchaozaihuochexiezaicha`**（可能为“交通运输局超限超载货车卸载站”或类似含义的表）  \n   - 包含的列：  \n     - `代码`（可能是企业或机构的唯一标识）  \n     - `名称`（企业或机构的名称）  \n     - `联系电话`（联系方式）  \n     - `地址`（企业或机构的地址）  \n     - `行政区划代码`（用于关联地区信息）  \n\n2. **`shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju`**（可能为“交通运输局旅游客运企业信用评价结果数据”表）  \n   - 包含的列：  \n     - `业户名称`（企业名称）  \n     - `评定等级`（信用等级，如“优秀”）  \n     - `所属地区`（关联行政区划代码）  \n     - `年份`（信用评价的年份）  \n     - `统一社会信用代码`（企业的社会信用代码）  \n\n#### **查询条件**  \n1. **关联条件**：  \n   - 通过 `shijiaotongweichaoxianchaozaihuochexiezaicha.行政区划代码` = `shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju.所属地区` 进行表连接，确保查询的是同一地区的企业。  \n\n2. **筛选条件**：  \n   - `shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju.年份 = '2022'`（仅查询 2022 年的数据）  \n   - `shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju.评定等级 = '优秀'`（仅查询信用等级为“优秀”的企业）  \n\n#### **返回的列**  \n- 从 `shijiaotongweichaoxianchaozaihuochexiezaicha` 表返回：  \n  - `代码`、`名称`、`联系电话`、`地址`  \n- 从 `shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju` 表返回：  \n  - `业户名称`、`评定等级`、`所属地区`、`年份`、`统一社会信用代码`  \n\n---\n\n### **业务场景**  \n1. **信用评价管理**：  \n   - 交通运输管理部门可能需要查询 **2022 年信用等级为“优秀”的旅游客运企业**，以便进行表彰、政策支持或监管优化。  \n\n2. **企业信息关联查询**：  \n   - 需要结合 **行政区划代码** 关联企业的基础信息（如地址、联系方式），以便进行区域信用分析或企业联络。  \n\n3. **行业监管与数据分析**：  \n   - 查询结果可用于分析 **哪些地区的旅游客运企业信用较好**，辅助制定行业政策或优化监管措施。  \n\n---\n\n### **用户描述**  \n1. **交通运输局管理人员**：  \n   - 需求：**筛选出信用良好的旅游客运企业，以便给予政策优惠或行业表彰**。  \n   - 问题：如何快速找到 **2022 年信用优秀的企业**，并获取它们的联系方式和地址？  \n\n2. **数据分析人员**：  \n   - 需求：**分析不同地区的旅游客运企业信用状况**，找出信用较好的区域。  \n   - 问题：如何关联 **企业信用数据** 和 **行政区划信息**，以便按地区统计信用评级？  \n\n3. **企业或公众查询**：  \n   - 需求：**查找信用优秀的旅游客运企业**，以便选择合作或出行服务。  \n   - 问题：如何获取 **2022 年信用等级为“优秀”的企业名单**？  \n\n---\n\n### **总结**  \n该 SQL 查询主要用于 **交通运输管理领域**，通过关联 **企业基本信息** 和 **信用评价数据**，筛选出 **2022 年信用优秀的旅游客运企业**，适用于 **监管决策、企业表彰、行业分析** 等业务场景。",
+  "natural_language_query": "市民反映，想了解一下2022年咱们市里那些旅游客运公司信用比较好的，就是被评为\"优秀\"的那些企业。我这边想找找看这些靠谱的公司，需要知道它们具体在哪个区、叫什么名字、电话是多少、地址在哪儿。因为单位要搞一个行业表彰活动，领导让整理这些优秀企业的信息，最好是能按地区分类的。去年评的信用等级应该是最新的吧？能不能帮忙查一下2022年评上\"优秀\"的所有旅游客运企业名单和联系方式？主要是想联系他们参加行业交流会。",
+  "results": 0,
+  "sql skeleton": "SELECT _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ FROM _ JOIN _ ON _ ._ = _ ._ WHERE _ ._ = _ AND _ ._ = _ ;",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663": [
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.行政区划代码",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.站点名称",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.联系电话",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.地址"
+    ],
+    "shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669": [
+      "shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.业户名称",
+      "shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.评定等级",
+      "shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.所属地区",
+      "shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.年份",
+      "shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.统一社会信用代码"
+    ]
+  }
+}

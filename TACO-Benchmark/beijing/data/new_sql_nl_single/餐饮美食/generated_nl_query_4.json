@@ -1,0 +1,26 @@
+{
+  "sql": "SELECT \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC\",\"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH\",\"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS\",\"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYXM\" FROM \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\" WHERE \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH\" = '12345' OR \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC\" = '产品A';",
+  "problem_description": "### **查询意图**：  \n该 SQL 语句的目的是从表 `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374` 中查询符合特定条件的记录，具体筛选条件是许可证编号（`XKZBH`）等于 `'12345'` 或者经营主体名称（`JYZMC`）等于 `'产品A'` 的数据，并返回这些记录的经营主体名称（`JYZMC`）、许可证编号（`XKZBH`）、经营场所（`JYCS`）和经营项目（`JYXM`）字段。\n\n---\n\n### **详细描述**：  \n1. **表名**：  \n   - `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374`（从名称推测，可能是“市场监管/餐饮服务许可证情况信息”相关的表，存储许可证管理数据）。  \n\n2. **查询列**：  \n   - `JYZMC`（经营主体名称）：可能是企业或个体工商户的名称。  \n   - `XKZBH`（许可证编号）：许可证的唯一标识号。  \n   - `JYCS`（经营场所）：企业或个体的经营地址。  \n   - `JYXM`（经营项目）：许可证允许的经营范围或业务内容。  \n\n3. **查询条件**：  \n   - `WHERE \"XKZBH\" = '12345' OR \"JYZMC\" = '产品A'`  \n     - 筛选出许可证编号为 `'12345'` **或者** 经营主体名称为 `'产品A'` 的记录。  \n     - 使用 `OR` 表示两个条件满足任意一个即可。  \n\n4. **返回数据**：  \n   - 符合条件的记录的 `JYZMC`、`XKZBH`、`JYCS`、`JYXM` 字段。  \n\n---\n\n### **业务场景**：  \n1. **许可证信息查询**：  \n   - 市场监管部门或企业可能需要查询特定许可证（如编号 `'12345'`）的详细信息，或者查找某个经营主体（如 `'产品A'`）的许可证情况。  \n\n2. **合规性检查**：  \n   - 检查某个企业（如 `'产品A'`）是否持有有效许可证，或验证许可证编号 `'12345'` 对应的经营信息是否合规。  \n\n3. **数据关联分析**：  \n   - 可能用于关联其他数据（如企业信用信息、经营范围变更记录等），辅助监管或商业决策。  \n\n---\n\n### **用户描述**：  \n1. **市场监管人员**：  \n   - 问题：需要快速核查某家企业（如 `'产品A'`）是否办理了餐饮服务许可证，或者验证许可证 `'12345'` 的真实性和关联信息。  \n   - 需求：通过许可证编号或企业名称直接查询关键字段（如经营场所、经营范围），避免全表扫描。  \n\n2. **企业管理者**：  \n   - 问题：在申请资质或接受检查时，需提供许可证信息，但可能只记得企业名称或部分许可证编号。  \n   - 需求：通过模糊或精确条件快速定位到自身许可证记录。  \n\n3. **数据分析师**：  \n   - 问题：分析特定行业（如餐饮）中许可证的分布情况，需筛选部分样本数据。  \n   - 需求：通过关键字段（如 `JYZMC` 或 `XKZBH`）提取目标数据，用于进一步统计或可视化。  \n\n---\n\n### **补充说明**：  \n- 表名和字段名较长且为拼音缩写，可能是中文数据库设计风格，建议在业务系统中使用更清晰的别名（如 `license_info`）。  \n- 条件中的 `OR` 可能导致查询性能问题，如果数据量大，建议对 `XKZBH` 和 `JYZMC` 分别建立索引。",
+  "natural_language_query": "市民反映，我在办理餐饮业务时遇到一个问题，想查一下许可证的情况。我这边有个许可证编号好像是\"12345\"，也可能是我记错了，也可能是跟一个叫\"产品A\"的公司有关。能不能帮忙查一下这个编号或者这家公司的经营信息？主要是想看看他们有没有合法的经营场所和经营范围，因为最近在合作，担心他们的资质有问题。之前听其他商户说这家公司可能证照不全，所以想确认下。来电反映想核实餐饮服务许可证真伪及经营信息问题。",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ ,_ from _ where _ =_ or _ =_ ;",
+  "database": "餐饮美食",
+  "tables": {
+    "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374": [
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYXM",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.FZRQ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.YXQZ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.DWMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.EXCHANGETIME"
+    ],
+    "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076": [
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址"
+    ]
+  }
+}

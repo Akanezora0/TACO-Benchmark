@@ -1,0 +1,25 @@
+{
+  "sql": "SELECT shijiaotongweiguidaoyanshixinxi3711.序号, shijiaotongweiguidaoyanshixinxi3711.总车次, shijiaotongweiguidaoyanshixinxi3711.延时开始时间, shijiaotongweiguidaoyanshixinxi3711.延时结束时间 FROM shijiaotongweiguidaoyanshixinxi3711 WHERE shijiaotongweiguidaoyanshixinxi3711.延时线路 = '指定线路名称'",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ ,_ from _ where _ = _",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweiguidaoyanshixinxi3711": [
+      "shijiaotongweiguidaoyanshixinxi3711.序号",
+      "shijiaotongweiguidaoyanshixinxi3711.总车次",
+      "shijiaotongweiguidaoyanshixinxi3711.延时开始时间",
+      "shijiaotongweiguidaoyanshixinxi3711.延时结束时间",
+      "shijiaotongweiguidaoyanshixinxi3711.延时线路",
+      "shijiaotongweiguidaoyanshixinxi3711.共享时间",
+      "shijiaotongweiguidaoyanshixinxi3711.更新时间"
+    ],
+    "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210": [
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.监管对象",
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.实施机构",
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.检查行为编号",
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.检查时间",
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.检查人员",
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.检查结果"
+    ]
+  }
+}

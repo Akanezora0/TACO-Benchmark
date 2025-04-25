@@ -1,0 +1,44 @@
+{
+  "sql": "SELECT pingguqupingguqujingpinminsu2083.平谷区2022年精品民宿 FROM pingguqupingguqujingpinminsu2083 WHERE pingguqupingguqujingpinminsu2083.Unnamed: 1 = '条件1' AND pingguqupingguqujingpinminsu2083.Unnamed: 2 = '条件2' AND pingguqupingguqujingpinminsu2083.平谷区2022年精品民宿 > 数值条件",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从 `pingguqupingguqujingpinminsu2083` 表中筛选出符合特定条件的记录，具体是查询 **平谷区2022年精品民宿** 的相关数据，并按照给定的条件进行过滤。\n\n---\n\n### **详细描述**  \n1. **涉及的表**：  \n   - `pingguqupingguqujingpinminsu2083`（表名可能为“平谷区精品民宿2023”或类似含义，但命名不规范，包含数字和拼音混合）。\n\n2. **涉及的列**：  \n   - `平谷区2022年精品民宿`：目标列，可能是某种统计数值（如民宿数量、营收、评分等）。  \n   - `Unnamed: 1` 和 `Unnamed: 2`：未命名的列，可能是导入数据时的占位列，实际业务中可能代表“区域”、“民宿类型”、“经营状态”等分类字段。  \n   - 查询条件涉及这两列的值分别为 `'条件1'` 和 `'条件2'`（具体含义需结合业务背景）。  \n   - `平谷区2022年精品民宿 > 数值条件`：筛选目标列数值大于某一阈值的记录。\n\n3. **查询条件**：  \n   - `Unnamed: 1 = '条件1'`：第一分类条件（如“区域=金海湖镇”）。  \n   - `Unnamed: 2 = '条件2'`：第二分类条件（如“星级=3A”）。  \n   - `平谷区2022年精品民宿 > 数值条件`：数值筛选（如“年收入>100万”或“客房数>10间”）。\n\n---\n\n### **业务场景**  \n1. **可能的业务目标**：  \n   - 统计平谷区2022年符合特定条件的精品民宿中，某项指标（如营收、规模）超过一定标准的记录。  \n   - 例如：查找“金海湖镇范围内，3A级且年收入超过50万元的精品民宿”。\n\n2. **数据用途**：  \n   - 政府旅游部门评估优质民宿分布。  \n   - 商业分析（如投资潜力评估）。  \n   - 民宿行业协会评选优秀案例。\n\n---\n\n### **用户描述**  \n1. **用户角色**：  \n   - 可能是旅游局工作人员、数据分析师或民宿行业管理者。  \n\n2. **实际问题/需求**：  \n   - 用户需要从平谷区精品民宿数据中，筛选出符合某些分类条件（如区域、等级）且关键指标（如经营规模、收入）达标的民宿，用于：  \n     - 制定扶持政策（如对高营收民宿提供补贴）。  \n     - 分析区域旅游发展水平（如“某类民宿是否集中在特定区域”）。  \n     - 生成报告（如“2022年平谷区优质精品民宿清单”）。  \n\n3. **痛点**：  \n   - 数据表结构不清晰（列名含 `Unnamed`），需依赖业务知识理解。  \n   - 条件值（如“条件1”“数值条件”）需进一步明确，否则查询结果可能不准确。  \n\n---\n\n### **优化建议**  \n1. 规范表名和列名（如改为 `pgq_jingpin_minshu_2022`，列名明确为 `region`、`level`、`revenue`）。  \n2. 替换模糊条件（如 `'条件1'`）为具体业务参数（如 `'金海湖镇'`）。  \n3. 补充注释说明字段含义，避免歧义。",
+  "natural_language_query": "市民反映，想了解一下平谷区2022年那些比较好的精品民宿的情况。具体是想查金海湖镇这一块的三星级民宿，而且年收入要超过50万元的。之前听说有些民宿经营得特别好，但不知道具体是哪些，能不能帮忙查一下这些符合条件的民宿名单？主要是想看看哪些民宿达标了，好做个参考。来电咨询平谷区精品民宿的达标情况。",
+  "results": 0,
+  "sql skeleton": "select _ from _ where _ = _ and _ = _ and _ (_ ,_ ) = _",
+  "database": "旅游住宿",
+  "tables": {
+    "pingguqupingguqujingpinminsu2083": [
+      "pingguqupingguqujingpinminsu2083.平谷区2022年精品民宿",
+      "pingguqupingguqujingpinminsu2083.Unnamed: 1",
+      "pingguqupingguqujingpinminsu2083.Unnamed: 2"
+    ],
+    "shiguihuaziranziyuanweixuetangshuyuan1521": [
+      "shiguihuaziranziyuanweixuetangshuyuan1521.HID",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.FATHERID",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.HNAME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.OTHERNAME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.CATEGORY",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.SUBCATEGOR",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.COUNTYNAME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.STREETNAME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.DYNASTY",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.SUBDYNASTY",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.ADDRESS",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.RANK",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.BATCH",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.PUBTIME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.USERS",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.PURPOSE",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.OWNERSHIP",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.STATEEVALU",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.SINGLERELI",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.PROTECTION",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.ATTACHEDRE",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.RELATEDPEO",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.RELATEDEVE",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.PUBNAME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.SOURCE",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.EDITOR",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.ISREDUNDAN"
+    ]
+  }
+}

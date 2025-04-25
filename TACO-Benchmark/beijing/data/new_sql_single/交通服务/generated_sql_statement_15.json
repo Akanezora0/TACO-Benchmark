@@ -1,0 +1,19 @@
+{
+  "sql": "SELECT shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.企业名称, shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.评定等级 FROM shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672 WHERE shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.所属地区 = '北京市' AND shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.评定等级 = '优秀'",
+  "results": 0,
+  "sql skeleton": "select _ from _ where _ = _ and _",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672": [
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.企业名称",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.评定等级",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.所属地区",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.年份",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.统一社会信用代码"
+    ],
+    "daxingqudaxingqugonggongzixingchededianweixinxi440": [
+      "daxingqudaxingqugonggongzixingchededianweixinxi440.序号",
+      "daxingqudaxingqugonggongzixingchededianweixinxi440.公共自行车点位"
+    ]
+  }
+}

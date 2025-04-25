@@ -1,0 +1,45 @@
+{
+  "sql": "SELECT shiguihuaziranziyuanweixuetangshuyuan1521.HID, shiguihuaziranziyuanweixuetangshuyuan1521.FATHERID FROM shiguihuaziranziyuanweixuetangshuyuan1521 WHERE shiguihuaziranziyuanweixuetangshuyuan1521.HNAME = '张三';",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从表 `shiguihuaziranziyuanweixuetangshuyuan1521` 中查询满足条件 `HNAME = '张三'` 的记录的 `HID` 和 `FATHERID` 字段。\n\n- **详细描述**：\n  - **表**：`shiguihuaziranziyuanweixuetangshuyuan1521` 是一个表名，可能是一个中文拼音或特定编码的表名。\n  - **列**：\n    - `HID`：可能是该表中某个记录的标识符或ID。\n    - `FATHERID`：可能是该记录的父级ID，用于表示层级关系。\n    - `HNAME`：可能是记录的名称或描述字段，这里用于筛选条件。\n  - **条件**：`HNAME = '张三'`，表示只查询 `HNAME` 字段值为 '张三' 的记录。\n\n- **业务场景**：\n  - 该查询可能用于一个层级结构的数据管理系统中，例如组织架构、分类目录或树形结构的数据。\n  - 通过 `HNAME` 字段可以快速定位到某个特定名称的记录，并获取其ID (`HID`) 和父级ID (`FATHERID`)，以便进一步操作或分析其层级关系。\n\n- **用户描述**：\n  - 用户可能需要查找名为“张三”的记录的详细信息，包括其唯一标识符和父级标识符。\n  - 例如，在一个组织架构系统中，用户可能需要知道“张三”在哪个部门（通过 `FATHERID` 可以关联到部门信息），或者需要基于 `HID` 进行进一步的操作（如修改、删除或查询其子记录）。\n  - 这种查询可以帮助用户快速定位特定人员或条目，并在层级结构中进行导航或管理。",
+  "natural_language_query": "市民反映，我在系统里查找一个叫\"张三\"的人员信息时遇到了困难。我们单位使用的是那种有上下级关系的管理系统，现在需要确认张三的具体编号以及他所属的上级部门编号。之前在其他系统里都能查到，但这个新系统界面不太一样，找了半天也没找到。能不能帮忙查一下张三这个人的完整编号和他直属领导的编号？我这边着急做人员调动的手续，但系统显示不全这些信息，特别不方便。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ WHERE _ = _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "shiguihuaziranziyuanweixuetangshuyuan1521": [
+      "shiguihuaziranziyuanweixuetangshuyuan1521.HID",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.FATHERID",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.HNAME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.OTHERNAME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.CATEGORY",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.SUBCATEGOR",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.COUNTYNAME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.STREETNAME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.DYNASTY",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.SUBDYNASTY",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.ADDRESS",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.RANK",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.BATCH",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.PUBTIME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.USERS",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.PURPOSE",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.OWNERSHIP",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.STATEEVALU",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.SINGLERELI",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.PROTECTION",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.ATTACHEDRE",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.RELATEDPEO",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.RELATEDEVE",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.PUBNAME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.SOURCE",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.EDITOR",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.ISREDUNDAN"
+    ],
+    "shunyiqushunyiquxingjifandian2102": [
+      "shunyiqushunyiquxingjifandian2102.顺义区星级饭店",
+      "shunyiqushunyiquxingjifandian2102.Unnamed: 1",
+      "shunyiqushunyiquxingjifandian2102.Unnamed: 2",
+      "shunyiqushunyiquxingjifandian2102.Unnamed: 3"
+    ]
+  }
+}

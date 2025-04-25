@@ -1,0 +1,21 @@
+{
+  "sql": "select xichengqubeijingshiwenwubaohudanwei31.序号, xichengqubeijingshiwenwubaohudanwei31.名称, xichengqubeijingshiwenwubaohudanwei31.地址, fengtaiqufengtaiqujingqujingdianteseyetai1387.景区景点（特色业态）明细, fengtaiqufengtaiqujingqujingdianteseyetai1387.Unnamed: 1 from xichengqubeijingshiwenwubaohudanwei31 join fengtaiqufengtaiqujingqujingdianteseyetai1387 on xichengqubeijingshiwenwubaohudanwei31.序号 = fengtaiqufengtaiqujingqujingdianteseyetai1387.Unnamed: 1 where fengtaiqufengtaiqujingqujingdianteseyetai1387.Unnamed: 2 = '条件1' and fengtaiqufengtaiqujingqujingdianteseyetai1387.Unnamed: 3 = '条件2'\n```",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从两个表中联合查询数据，获取北京市西城区文物保护单位与丰台区景区景点（特色业态）之间的关联信息，并根据特定条件筛选结果。\n\n- **详细描述**：\n  - **涉及的表**：\n    1. `xichengqubeijingshiwenwubaohudanwei31`（北京市西城区文物保护单位表）：包含序号、名称、地址等字段。\n    2. `fengtaiqufengtaiqujingqujingdianteseyetai1387`（丰台区景区景点（特色业态）表）：包含景区景点（特色业态）明细、Unnamed: 1、Unnamed: 2、Unnamed: 3等字段。\n  - **涉及的列**：\n    - `xichengqubeijingshiwenwubaohudanwei31` 表的列：序号、名称、地址。\n    - `fengtaiqufengtaiqujingqujingdianteseyetai1387` 表的列：景区景点（特色业态）明细、Unnamed: 1、Unnamed: 2、Unnamed: 3。\n  - **连接条件**：通过 `xichengqubeijingshiwenwubaohudanwei31.序号` 和 `fengtaiqufengtaiqujingqujingdianteseyetai1387.Unnamed: 1` 进行关联。\n  - **筛选条件**：\n    - `fengtaiqufengtaiqujingqujingdianteseyetai1387.Unnamed: 2 = '条件1'`\n    - `fengtaiqufengtaiqujingqujingdianteseyetai1387.Unnamed: 3 = '条件2'`\n\n- **业务场景**：\n  - 该查询可能用于文化旅游管理或数据分析场景，目的是找出北京市西城区的文物保护单位与丰台区景区景点（特色业态）之间的关联关系，并根据特定条件（如景区类型、业态分类等）筛选出符合条件的数据。\n  - 例如，可能需要分析哪些文物保护单位与丰台区的特定类型景区景点有业务或地理上的关联，以便进行旅游线路规划、文化推广或资源整合。\n\n- **用户描述**：\n  - 用户可能是文化旅游管理部门的工作人员或数据分析师，他们需要了解北京市西城区的文物保护单位与丰台区景区景点之间的关联情况。\n  - 用户可能面临的实际问题包括：\n    - 需要整合两个区的文化旅游资源，以便设计跨区域的旅游线路。\n    - 需要分析文物保护单位与周边景区景点的关联性，以制定文化保护与旅游开发相结合的策略。\n    - 需要根据特定条件（如景区类型、业态分类）筛选出符合条件的文物保护单位和景区景点，以便进行更精准的资源匹配或市场推广。",
+  "natural_language_query": "市民反映，最近在规划一条跨区文化旅游线路时遇到困难。我是西城区文旅局的工作人员，想了解一下我们区的文物保护单位和丰台区那些有特色的景区景点之间有没有什么关联。特别是丰台区那边有些景区标注了特定类型和业态分类的，比如\"条件1\"类型和\"条件2\"业态的景点。我们手头有西城区文保单位的名录，但不知道该怎么和丰台区的景点信息对应起来。希望能帮忙查一下，看看哪些文保单位可以和丰台区符合条件的景点搭配起来做旅游推广。主要是想找找看有没有现成的关联信息可以参考，这样我们在设计\"西城-丰台\"文化游线路时能更有依据。",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ from _ join _ on _ ._ = _ ._ where _ ._ = _ and _ ._ = _ and _ (_ ,_ ) in (_ ,_ ,_ )",
+  "database": "旅游住宿",
+  "tables": {
+    "xichengqubeijingshiwenwubaohudanwei31": [
+      "xichengqubeijingshiwenwubaohudanwei31.序号",
+      "xichengqubeijingshiwenwubaohudanwei31.名称",
+      "xichengqubeijingshiwenwubaohudanwei31.地址"
+    ],
+    "fengtaiqufengtaiqujingqujingdianteseyetai1387": [
+      "fengtaiqufengtaiqujingqujingdianteseyetai1387.景区景点（特色业态）明细",
+      "fengtaiqufengtaiqujingqujingdianteseyetai1387.Unnamed: 1",
+      "fengtaiqufengtaiqujingqujingdianteseyetai1387.Unnamed: 2",
+      "fengtaiqufengtaiqujingqujingdianteseyetai1387.Unnamed: 3"
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "sql": "SELECT \n\"shiwenhuahelvyoujulvxingshexinxi3530\".\"旅行社名称\",\n\"shiwenhuahelvyoujulvxingshexixi3530\".\"旅行社业务经营许可证编号\",\n\"shiwenhuahelvyoujulvxingshexinxi3530\".\"许可经营业务\",\n\"shiwenhuahelvyoujulvxingshexinxi3530\".\"许可时间\",\n\"huairouquhuairouqujingqumenpiaojiage1592\".\"怀柔区政府定价景区门票价格\",\n\"huairouquhuairouqujingqumenpiaojiage1592\".\"Unnamed: 1\",\n\"huairouquhuairouqujingqumenpiaojiage1592\".\"Unnamed: 2\",\n\"huairouquhuairouqujingqumenpiaojiage1592\".\"Unnamed: 3\",\n\"huairouquhuairouqujingqumenpiaojiage1592\".\"Unnamed: 4\"\nFROM \n\"shiwenhuahelvyoujulvxingshexinxi3530\"\nJOIN \n\"huairouquhuairouqujingqumenpiaojiage1592\" ON \n\"shiwenhuahelvyoujulvxingshexinxi3530\".\"旅行社业务经营许可证编号\" = \"huairouquhuairouqujingqumenpiaojiage1592\".\"Unnamed: 1\"\nWHERE \n\"shiwenhuahelvyoujulvxingshexinxi3530\".\"许可时间\" = '2022-01-01' AND \n\"huairouquhuairouqujingqumenpiaojiage1592\".\"怀柔区政府定价景区门票价格\" > 50;",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是查询在2022年1月1日获得许可的旅行社信息，以及这些旅行社关联的怀柔区政府定价景区门票价格高于50元的景区信息。\n\n- **详细描述**：\n  - **涉及的表**：\n    1. `shiwenhuahelvyoujulvxingshexinxi3530`：该表存储旅行社的基本信息，包括旅行社名称、业务经营许可证编号、许可经营业务和许可时间等。\n    2. `huairouquhuairouqujingqumenpiaojiage1592`：该表存储怀柔区政府定价景区门票价格信息，包括景区门票价格和一些未命名的列（Unnamed: 1 到 Unnamed: 4）。\n  - **涉及的列**：\n    - `shiwenhuahelvyoujulvxingshexinxi3530` 表的列：\n      - `旅行社名称`：旅行社的名称。\n      - `旅行社业务经营许可证编号`：旅行社的业务经营许可证编号。\n      - `许可经营业务`：旅行社被许可经营的业务范围。\n      - `许可时间`：旅行社获得许可的时间。\n    - `huairouquhuairouqujingqumenpiaojiage1592` 表的列：\n      - `怀柔区政府定价景区门票价格`：景区门票的价格。\n      - `Unnamed: 1` 到 `Unnamed: 4`：未命名的列，可能包含其他景区相关信息。\n  - **条件**：\n    - `shiwenhuahelvyoujulvxingshexinxi3530.\"许可时间\" = '2022-01-01'`：筛选出在2022年1月1日获得许可的旅行社。\n    - `huairouquhuairouqujingqumenpiaojiage1592.\"怀柔区政府定价景区门票价格\" > 50`：筛选出门票价格高于50元的景区。\n    - 两个表通过 `shiwenhuahelvyoujulvxingshexinxi3530.\"旅行社业务经营许可证编号\" = \"huairouquhuairouqujingqumenpiaojiage1592\".\"Unnamed: 1\"` 进行关联。\n\n- **业务场景**：该查询可以用于旅游管理部门或旅行社协会分析在特定时间（2022年1月1日）获得许可的旅行社与高票价景区（门票价格高于50元）之间的关联情况。可能的业务场景包括：\n  - 检查新许可的旅行社是否与高票价景区有合作关系。\n  - 分析高票价景区的门票价格是否与特定旅行社的许可时间有关联。\n  - 监管或审计旅行社与景区之间的定价行为。\n\n- **用户描述**：\n  - **用户**：旅游管理部门、旅行社协会或市场监管机构的工作人员。\n  - **实际问题或需求**：\n    - 用户可能需要了解新许可的旅行社是否倾向于与高票价景区合作，从而评估市场趋势或潜在的定价问题。\n    - 用户可能需要确保旅行社的许可时间与景区门票价格的合理性，避免价格垄断或不公平竞争。\n    - 用户可能需要生成报告或分析数据，以支持政策制定或市场调控。",
+  "natural_language_query": "市民反映，想了解一下去年元旦那天（2022年1月1日）新批准的那些旅行社的情况。特别是这些旅行社合作的怀柔区那些收费比较高的景点，听说有些景点的门票都超过50块钱了，想问问这些高价景点都是哪些？感觉现在旅游景点收费越来越贵了，新开的旅行社是不是都跟这些高价景点合作啊？希望能帮忙查一下这方面的信息，看看有没有什么不合理的地方。",
+  "results": 0,
+  "sql skeleton": "SELECT _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ FROM _ WHERE _ ._ = _ AND _ ._ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "shiwenhuahelvyoujulvxingshexinxi3530": [
+      "shiwenhuahelvyoujulvxingshexinxi3530.旅行社名称",
+      "shiwenhuahelvyoujulvxingshexinxi3530.旅行社业务经营许可证编号",
+      "shiwenhuahelvyoujulvxingshexinxi3530.许可经营业务",
+      "shiwenhuahelvyoujulvxingshexinxi3530.许可时间"
+    ],
+    "huairouquhuairouqujingqumenpiaojiage1592": [
+      "huairouquhuairouqujingqumenpiaojiage1592.怀柔区政府定价景区门票价格",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 1",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 2",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 3",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 4"
+    ]
+  }
+}

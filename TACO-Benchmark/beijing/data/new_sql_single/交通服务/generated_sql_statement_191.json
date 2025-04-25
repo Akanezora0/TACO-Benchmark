@@ -1,0 +1,18 @@
+{
+  "sql": "SELECT shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.总量 FROM shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668 WHERE shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.年份 = shijiaotongweiguidaozhandianxinxichuxing3670.站点编码",
+  "results": 0,
+  "sql skeleton": "select _ from _ where _ (_ ,_ ) = _",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668": [
+      "shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.年份",
+      "shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.总量",
+      "shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.观测站名称"
+    ],
+    "shijiaotongweiguidaozhandianxinxichuxing3670": [
+      "shijiaotongweiguidaozhandianxinxichuxing3670.线路名称",
+      "shijiaotongweiguidaozhandianxinxichuxing3670.站点编码",
+      "shijiaotongweiguidaozhandianxinxichuxing3670.车站名"
+    ]
+  }
+}

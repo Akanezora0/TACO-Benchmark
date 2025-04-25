@@ -1,0 +1,38 @@
+{
+  "sql": "SELECT \n    shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.\"企业名称\", \n    shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.\"评定等级\", \n    shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.\"所属地区\", \n    shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.\"年份\", \n    shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.\"统一社会信用代码\", \n    xichengquxichengqugongjiaochezhanmingdan2478.\"ID\", \n    xichengquxichengqugongjiaochezhanmingdan2478.\"X\", \n    xichengquxichengqugongjiaochezhanmingdan2478.\"Y\" \nFROM \n    shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672 \nJOIN \n    xichengquxichengqugongjiaochezhanmingdan2478 \nON \n    shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.\"统一社会信用代码\" = xichengquxichengqugongjiaochezhanmingdan2478.\"SJXZQHDM\" \nWHERE \n    shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.\"评定等级\" = '优秀' AND \n    xichengquxichengqugongjiaochezhanmingdan2478.\"X\" > 0 AND \n    xichengquxichengqugongjiaochezhanmingdan2478.\"Y\" > 0;",
+  "results": 0,
+  "sql skeleton": "SELECT _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ FROM _ JOIN _ ON _ ._ = _ ._ WHERE _ ._ = _ AND _ ._ = _ and _ (_ ._ , _ ) = _ and _ ._ = _ ;",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672": [
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.企业名称",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.评定等级",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.所属地区",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.年份",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.统一社会信用代码"
+    ],
+    "xichengquxichengqugongjiaochezhanmingdan2478": [
+      "xichengquxichengqugongjiaochezhanmingdan2478.ID",
+      "xichengquxichengqugongjiaochezhanmingdan2478.X",
+      "xichengquxichengqugongjiaochezhanmingdan2478.Y",
+      "xichengquxichengqugongjiaochezhanmingdan2478.SJXZQHMC",
+      "xichengquxichengqugongjiaochezhanmingdan2478.QXJXZQHMC",
+      "xichengquxichengqugongjiaochezhanmingdan2478.SJXZQHDM",
+      "xichengquxichengqugongjiaochezhanmingdan2478.QXJXZQHDM",
+      "xichengquxichengqugongjiaochezhanmingdan2478.POISJLY",
+      "xichengquxichengqugongjiaochezhanmingdan2478.RHBZDZ",
+      "xichengquxichengqugongjiaochezhanmingdan2478.CODE",
+      "xichengquxichengqugongjiaochezhanmingdan2478.CODEMC",
+      "xichengquxichengqugongjiaochezhanmingdan2478.GXSJ",
+      "xichengquxichengqugongjiaochezhanmingdan2478.POIMC",
+      "xichengquxichengqugongjiaochezhanmingdan2478.POIDZ",
+      "xichengquxichengqugongjiaochezhanmingdan2478.别名",
+      "xichengquxichengqugongjiaochezhanmingdan2478.POIFLMC",
+      "xichengquxichengqugongjiaochezhanmingdan2478.TEL",
+      "xichengquxichengqugongjiaochezhanmingdan2478.MC",
+      "xichengquxichengqugongjiaochezhanmingdan2478.DZ",
+      "xichengquxichengqugongjiaochezhanmingdan2478.DZMS",
+      "xichengquxichengqugongjiaochezhanmingdan2478.XL"
+    ]
+  }
+}

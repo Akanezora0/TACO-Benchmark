@@ -1,0 +1,23 @@
+{
+  "sql": "SELECT \"shunyiquxingjifandian1276\".\"顺义区星级饭店\", \"shunyiquxingjifandian1276.Unnamed: 1\", \"shunyiquxingjifandian1276.Unnamed: 2\" FROM \"shunyiquxingjifandian1276\" WHERE \"shunyiquxingjifandian1276.Unnamed: 3\" = (SELECT \"xichengquxichengqudengjilvyoujingquminglu14\".\"序号\" FROM \"xichengquxichengqudengjilvyoujingquminglu14\" WHERE \"xichengquxichengqudengjilvyoujingquminglu14\".\"景区名称\" = \"指定景区名称\")",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ from _ where _ = (select _ from _ where _ = _ );",
+  "database": "旅游住宿",
+  "tables": {
+    "shunyiquxingjifandian1276": [
+      "shunyiquxingjifandian1276.顺义区星级饭店",
+      "shunyiquxingjifandian1276.Unnamed: 1",
+      "shunyiquxingjifandian1276.Unnamed: 2",
+      "shunyiquxingjifandian1276.Unnamed: 3"
+    ],
+    "xichengquxichengqudengjilvyoujingquminglu14": [
+      "xichengquxichengqudengjilvyoujingquminglu14.序号",
+      "xichengquxichengqudengjilvyoujingquminglu14.景区名称",
+      "xichengquxichengqudengjilvyoujingquminglu14.等级",
+      "xichengquxichengqudengjilvyoujingquminglu14.地址",
+      "xichengquxichengqudengjilvyoujingquminglu14.咨询电话",
+      "xichengquxichengqudengjilvyoujingquminglu14.投诉电话",
+      "xichengquxichengqudengjilvyoujingquminglu14.邮编"
+    ]
+  }
+}

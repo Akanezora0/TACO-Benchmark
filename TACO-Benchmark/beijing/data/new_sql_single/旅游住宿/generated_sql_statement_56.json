@@ -1,0 +1,45 @@
+{
+  "sql": "SELECT \"chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337\".\"酒仙桥街道社区地址及联系电话\", \"shiguihuaziranziyuanweiyinshiye1523.ADDRESS\" FROM \"chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337\" INNER JOIN \"shiguihuaziranziyuanweiyinshiye1523\" ON \"chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337\".\"酒仙桥街道社区地址及联系电话\" = \"shiguihuaziranziyuanweiyinshiye1523.ADDRESS\" WHERE \"shiguihuaziranziyuanweiyinshiye1523\".\"STATEEVALU\" = '优秀' ;",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ WHERE _ = _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337": [
+      "chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337.酒仙桥街道社区地址及联系电话",
+      "chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337.Unnamed: 1",
+      "chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337.Unnamed: 2",
+      "chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337.Unnamed: 3",
+      "chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337.Unnamed: 4"
+    ],
+    "shiguihuaziranziyuanweiyinshiye1523": [
+      "shiguihuaziranziyuanweiyinshiye1523.HID",
+      "shiguihuaziranziyuanweiyinshiye1523.FATHERID",
+      "shiguihuaziranziyuanweiyinshiye1523.HNAME",
+      "shiguihuaziranziyuanweiyinshiye1523.OTHERNAME",
+      "shiguihuaziranziyuanweiyinshiye1523.CATEGORY",
+      "shiguihuaziranziyuanweiyinshiye1523.SUBCATEGOR",
+      "shiguihuaziranziyuanweiyinshiye1523.COUNTYNAME",
+      "shiguihuaziranziyuanweiyinshiye1523.STREETNAME",
+      "shiguihuaziranziyuanweiyinshiye1523.DYNASTY",
+      "shiguihuaziranziyuanweiyinshiye1523.SUBDYNASTY",
+      "shiguihuaziranziyuanweiyinshiye1523.ADDRESS",
+      "shiguihuaziranziyuanweiyinshiye1523.RANK",
+      "shiguihuaziranziyuanweiyinshiye1523.BATCH",
+      "shiguihuaziranziyuanweiyinshiye1523.PUBTIME",
+      "shiguihuaziranziyuanweiyinshiye1523.USERS",
+      "shiguihuaziranziyuanweiyinshiye1523.PURPOSE",
+      "shiguihuaziranziyuanweiyinshiye1523.OWNERSHIP",
+      "shiguihuaziranziyuanweiyinshiye1523.STATEEVALU",
+      "shiguihuaziranziyuanweiyinshiye1523.SINGLERELI",
+      "shiguihuaziranziyuanweiyinshiye1523.PROTECTION",
+      "shiguihuaziranziyuanweiyinshiye1523.ATTACHEDRE",
+      "shiguihuaziranziyuanweiyinshiye1523.RELATEDPEO",
+      "shiguihuaziranziyuanweiyinshiye1523.RELATEDEVE",
+      "shiguihuaziranziyuanweiyinshiye1523.PUBNAME",
+      "shiguihuaziranziyuanweiyinshiye1523.SOURCE",
+      "shiguihuaziranziyuanweiyinshiye1523.EDITOR",
+      "shiguihuaziranziyuanweiyinshiye1523.ISREDUNDAN",
+      "shiguihuaziranziyuanweiyinshiye1523.THEME"
+    ]
+  }
+}

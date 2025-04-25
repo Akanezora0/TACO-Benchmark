@@ -1,0 +1,23 @@
+{
+  "sql": "SELECT \"shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表\", \"shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1\", \"shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 2\", \"shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 3\", \"shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 4\", \"shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 5\" FROM \"shijiaotongweishoufeigonglushoufeibiaozhun543\" WHERE \"shijiaotongweiguidaozhandianxinxichuxing3670.车站名\" = '车站名'",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从名为 `shijiaotongweishoufeigonglushoufeibiaozhun543` 的表中查询北京市收费公路收费标准的相关数据，条件是另一个表 `shijiaotongweiguidaozhandianxinxichuxing3670` 中的车站名等于特定值。\n\n- **详细描述**：\n  - **涉及的表**：\n    - 主表：`shijiaotongweishoufeigonglushoufeibiaozhun543`（可能是一个存储北京市收费公路收费标准的表）。\n    - 条件表：`shijiaotongweiguidaozhandianxinxichuxing3670`（可能是一个存储轨道交通站点信息的表）。\n  - **涉及的列**：\n    - 主表中的列：`shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表`、`shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1` 到 `Unnamed: 5`（这些列可能是收费公路的不同属性或字段，如路段、车型、收费标准等）。\n    - 条件表中的列：`shijiaotongweiguidaozhandianxinxichuxing3670.车站名`（用于筛选特定车站的数据）。\n  - **条件**：查询的条件是 `shijiaotongweiguidaozhandianxinxichuxing3670.车站名` 等于 `'车站名'`（这里的 `'车站名'` 可能是一个占位符，实际查询中会替换为具体的车站名称）。\n\n- **业务场景**：\n  - 该查询可能用于交通管理部门或收费公路运营公司，用于分析或展示特定车站附近的收费公路收费标准。例如，用户可能想了解某个地铁站或公交站附近的收费公路的收费情况，以便规划出行路线或预算。\n  - 另一个可能的场景是数据整合或报表生成，将收费公路数据与轨道交通站点数据关联起来，以便进行综合分析。\n\n- **用户描述**：\n  - 用户可能是交通规划师、收费公路运营人员或普通市民。他们可能需要了解特定车站附近的收费公路的收费情况，以便：\n    - 规划出行路线，选择最经济的路径。\n    - 生成交通费用报告或分析收费政策的影响。\n    - 比较不同车站附近的收费差异，为决策提供数据支持。\n  - 用户遇到的实际问题可能是：\n    - “我想知道在A车站附近的高速公路收费标准是多少？”\n    - “我需要生成一个报告，展示所有地铁站附近的收费公路数据。”\n    - “如何快速查询某个区域的收费公路与公共交通站点的关联信息？”",
+  "natural_language_query": "市民反映，最近在规划从地铁10号线双井站到京哈高速的出行路线，想了解一下这附近的高速公路是怎么收费的。听说不同车型收费标准不一样，我开的是7座SUV，想知道具体要交多少钱。之前在其他收费站遇到过收费不透明的情况，这次想提前查清楚，避免被多收钱。来电咨询双井站周边高速公路的收费标准和计费方式。",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ , from _ where _ =_",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweishoufeigonglushoufeibiaozhun543": [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 2",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 3",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 4",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 5"
+    ],
+    "shijiaotongweiguidaozhandianxinxichuxing3670": [
+      "shijiaotongweiguidaozhandianxinxichuxing3670.线路名称",
+      "shijiaotongweiguidaozhandianxinxichuxing3670.站点编码",
+      "shijiaotongweiguidaozhandianxinxichuxing3670.车站名"
+    ]
+  }
+}

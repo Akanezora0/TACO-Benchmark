@@ -1,0 +1,21 @@
+{
+  "sql": "SELECT \"shunyiquxingjifandian1276.顺义区星级饭店\" FROM \"shunyiquxingjifandian1276\" WHERE \"shunyiquxingjifandian1276.顺义区星级饭店\" = '指定星级饭店名称'",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从指定表中查询符合条件的特定星级饭店名称。\n\n- **详细描述**：\n  - **涉及的表**：`\"shunyiquxingjifandian1276\"`（顺义区星级饭店表）\n  - **涉及的列**：`\"shunyiquxingjifandian1276.顺义区星级饭店\"`（顺义区星级饭店名称列）\n  - **查询条件**：`\"shunyiquxingjifandian1276.顺义区星级饭店\" = '指定星级饭店名称'`（筛选出饭店名称等于“指定星级饭店名称”的记录）\n\n  该查询会返回表中所有饭店名称等于“指定星级饭店名称”的记录，且仅返回饭店名称这一列的数据。\n\n- **业务场景**：\n  - 该查询可以用于酒店管理系统或旅游信息平台中，快速查找顺义区特定的星级饭店信息。\n  - 可能用于验证某饭店是否在星级饭店列表中，或者获取特定饭店的详细信息（如果表中有更多列）。\n  - 也可以用于数据清洗或核对，确保饭店名称的准确性。\n\n- **用户描述**：\n  - 用户可能是酒店管理人员或旅游平台运营者，需要确认某家饭店是否在顺义区的星级饭店名单中。\n  - 用户可能遇到的问题是：在录入或查询饭店信息时，不确定某家饭店是否属于星级饭店，或者需要快速获取特定星级饭店的详细信息。\n  - 用户的需求是：通过输入饭店名称，快速确认该饭店是否在星级饭店列表中，并可能进一步获取其相关信息（如星级、地址、联系方式等）。如果表中包含更多列，用户可能需要扩展查询以获取更多信息。",
+  "natural_language_query": "市民反映，最近在顺义区看到一家叫\"XX大酒店\"的饭店，门口挂着四星级标志，但我在网上查不到相关信息。想确认这家酒店是不是真的属于顺义区正规评定的星级饭店？因为下周要接待重要客户，担心订到假冒的星级酒店影响接待质量。之前就遇到过类似情况，订的所谓\"五星级\"结果设施很差，这次想提前核实清楚。来电咨询如何查询顺义区正规星级饭店名单，特别是想确认\"XX大酒店\"是否在列。",
+  "results": 0,
+  "sql skeleton": "SELECT _ _ FROM _ WHERE _ _",
+  "database": "旅游住宿",
+  "tables": {
+    "shunyiquxingjifandian1276": [
+      "shunyiquxingjifandian1276.顺义区星级饭店",
+      "shunyiquxingjifandian1276.Unnamed: 1",
+      "shunyiquxingjifandian1276.Unnamed: 2",
+      "shunyiquxingjifandian1276.Unnamed: 3"
+    ],
+    "pingguqupingguqushandongzhuangzhendengjiminsu3496": [
+      "pingguqupingguqushandongzhuangzhendengjiminsu3496.山东庄镇等级民宿",
+      "pingguqupingguqushandongzhuangzhendengjiminsu3496.Unnamed: 1",
+      "pingguqupingguqushandongzhuangzhendengjiminsu3496.Unnamed: 2"
+    ]
+  }
+}

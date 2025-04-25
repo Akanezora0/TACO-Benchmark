@@ -1,0 +1,793 @@
+{
+  "sql": "SELECT waste_water_facilities.FacilityName, sand_and_gravel_deposits.AG_TYPE FROM waste_water_facilities INNER JOIN sand_and_gravel_deposits ON waste_water_facilities.FacilityID = sand_and_gravel_deposits.OBJECTID WHERE waste_water_facilities.WWInventoryURL IS NOT NULL;",
+  "problem_description": "### Query intent:\nThe SQL statement is designed to retrieve specific information from two related tables, `waste_water_facilities` and `sand_and_gravel_deposits`, with the goal of identifying facilities that have non-null WWInventoryURLs.\n\n### Detailed description:\n1. **Table `waste_water_facilities`**:\n   - **FacilityName**: This column contains the names of the facilities related to waste water management.\n   - **WWInventoryURL**: This column holds URLs for inventory information related to each facility, which could be useful for further inspection or reporting purposes.\n\n2. **Table `sand_and_gravel_deposits`**:\n   - **AG_TYPE**: This column likely contains types of sand and gravel deposits, possibly related to environmental impact studies or resource management.\n   - **OBJECTID**: This column serves as a unique identifier for each record in the `sand_and_gravel_deposits` table, facilitating joins with other tables.\n\n3. **Join condition**:\n   - The SQL statement uses an INNER JOIN clause to combine rows from both tables based on matching FacilityID from `waste_water_facilities` and OBJECTID from `sand_and_gravel_deposits`. This ensures that only records where there is a direct correspondence between the two tables are included in the result set.\n\n4. **Where clause**:\n   - `waste_water_facilities.WWInventoryURL IS NOT NULL`: This condition filters the results to include only those facilities where the WWInventoryURL field is not empty or null. This might be useful for ensuring that all selected facilities have accessible inventory data for review or analysis.\n\n### Business scenario:\nThis SQL query can be utilized in several business scenarios within environmental management, such as:\n\n- **Facility Audit**: To identify and verify the inventory data of waste water facilities, ensuring compliance with environmental regulations or standards.\n- **Resource Management**: For tracking and analyzing the usage or impacts of sand and gravel deposits near or around waste water facilities, aiding in sustainable resource management strategies.\n- **Risk Assessment**: To assess potential environmental risks associated with specific facilities by cross-referencing their inventory data with nearby deposits.\n\n### User description:\nUsers, such as environmental scientists, engineers, or compliance officers, might need this information to perform audits, manage resources effectively, or assess and mitigate environmental risks. The query helps in quickly identifying facilities with accessible inventory data, which is crucial for detailed analyses or regulatory compliance checks.",
+  "natural_language_query": "To gather information on facilities managing waste water that have accessible inventory data, I aim to write a SQL statement that combines details from two related databases: 'waste_water_facilities' and 'sand_and_gravel_deposits'. The objective is to pinpoint facilities that possess non-null WWInventoryURLs, which could be essential for conducting thorough inspections or reports.\n\nFirstly, let's consider the structure of these databases:\n\n1. **waste_water_facilities**:\n    - **FacilityName**: This column contains the names of facilities engaged in waste water management.\n    - **WWInventoryURL**: This column holds URLs pointing to inventory information related to each facility, enabling access to detailed records for further scrutiny or documentation.\n\n2. **sand_and_gravel_deposits**:\n    - **AG_TYPE**: This column is expected to detail the types of sand and gravel deposits, potentially relevant for environmental impact assessments or resource management activities.\n    - **OBJECTID**: Serving as a unique identifier for each record within 'sand_and_gravel_deposits', this column facilitates the connection between different database entries, ensuring accurate data alignment during the join process.\n\nNext, we'll utilize an INNER JOIN clause to merge data from both tables based on matching FacilityID in 'waste_water_facilities' and OBJECTID in 'sand_and_gravel_deposits', ensuring only relevant and corresponding records are included in our final output.\n\nFurthermore, we'll incorporate a WHERE clause to filter our results, focusing solely on facilities where the WWInventoryURL field is not empty or null. This criterion ensures that our selection includes only those facilities equipped with accessible inventory data, crucial for detailed analyses or compliance reviews.\n\nIn essence, this SQL query is designed for professionals involved in environmental management, including environmental scientists, engineers, and compliance officers. These individuals often require this information to conduct audits, manage resources efficiently, or assess and mitigate environmental risks. By identifying facilities with accessible inventory data, the query enables quick and targeted analyses, supporting informed decision-making and regulatory compliance.",
+  "results": [
+    [
+      "Barre City",
+      "S"
+    ],
+    [
+      "Alburgh",
+      "S"
+    ],
+    [
+      "Barton",
+      "S"
+    ],
+    [
+      "Benson",
+      "SG"
+    ],
+    [
+      "Brighton",
+      "S"
+    ],
+    [
+      "Danville",
+      "S"
+    ],
+    [
+      "Manchester",
+      "SG"
+    ],
+    [
+      "Montpelier",
+      "SG"
+    ],
+    [
+      "Morrisville",
+      "SG"
+    ],
+    [
+      "Orleans",
+      "SG"
+    ],
+    [
+      "Proctor",
+      "SG"
+    ],
+    [
+      "Readsboro",
+      "SG"
+    ],
+    [
+      "Richford",
+      "SG"
+    ],
+    [
+      "St Johnsbury",
+      "SG"
+    ],
+    [
+      "Saxtons River",
+      "SG"
+    ],
+    [
+      "South Burlington - Airport Parkway",
+      "S"
+    ],
+    [
+      "Pawlet",
+      "SG"
+    ],
+    [
+      "West Rutland",
+      "S"
+    ],
+    [
+      "Williamstown",
+      "SG"
+    ],
+    [
+      "Winooski",
+      "SG"
+    ],
+    [
+      "Woodstock",
+      "S"
+    ],
+    [
+      "Hartford - WRJ",
+      "SG"
+    ],
+    [
+      "GLOBALFOUNDRIES",
+      "SG"
+    ],
+    [
+      "St Albans Northwest Correctional",
+      "S"
+    ],
+    [
+      "Otter Valley Union High School",
+      "SG"
+    ],
+    [
+      "Arlington School",
+      "S"
+    ],
+    [
+      "Ludlow",
+      "S"
+    ],
+    [
+      "Troy & Jay",
+      "SG"
+    ],
+    [
+      "Bellows Falls",
+      "S"
+    ],
+    [
+      "Brattleboro ",
+      "SG"
+    ],
+    [
+      "Burlington Main",
+      "SG"
+    ],
+    [
+      "Burlington North",
+      "SG"
+    ],
+    [
+      "Burlington River",
+      "S"
+    ],
+    [
+      "Essex Junction",
+      "S"
+    ],
+    [
+      "Middlebury",
+      "SG"
+    ],
+    [
+      "Lyndon",
+      "SG"
+    ],
+    [
+      "Northfield",
+      "SG"
+    ],
+    [
+      "Rutland",
+      "S"
+    ],
+    [
+      "Springfield",
+      "SG"
+    ],
+    [
+      "St Albans City",
+      "SG"
+    ],
+    [
+      "Windsor Main",
+      "S"
+    ],
+    [
+      "Shelburne 1 (Crown Rd)",
+      "S"
+    ],
+    [
+      "Vergennes",
+      "S"
+    ],
+    [
+      "Bethel",
+      "SG"
+    ],
+    [
+      "Bradford",
+      "SG"
+    ],
+    [
+      "Brandon",
+      "SG"
+    ],
+    [
+      "Bridgewater",
+      "SG"
+    ],
+    [
+      "Canaan",
+      "SG"
+    ],
+    [
+      "Castleton",
+      "SG"
+    ],
+    [
+      "Cavendish",
+      "S"
+    ],
+    [
+      "Chelsea",
+      "S"
+    ],
+    [
+      "Enosburg Falls",
+      "SG"
+    ],
+    [
+      "Fair Haven",
+      "S"
+    ],
+    [
+      "Hardwick",
+      "SG"
+    ],
+    [
+      "Hinesburg",
+      "S"
+    ],
+    [
+      "Jeffersonville",
+      "SG"
+    ],
+    [
+      "Johnson",
+      "S"
+    ],
+    [
+      "Lunenburg FD2",
+      "SG"
+    ],
+    [
+      "Marshfield",
+      "SG"
+    ],
+    [
+      "Newport City",
+      "SG"
+    ],
+    [
+      "North Troy",
+      "S"
+    ],
+    [
+      "Orwell",
+      "S"
+    ],
+    [
+      "Pittsford",
+      "SG"
+    ],
+    [
+      "Plainfield",
+      "SG"
+    ],
+    [
+      "Poultney",
+      "S"
+    ],
+    [
+      "Putney",
+      "S"
+    ],
+    [
+      "Shelburne 2 (Harbor Rd)",
+      "S"
+    ],
+    [
+      "Sheldon Springs",
+      "S"
+    ],
+    [
+      "Swanton",
+      "S"
+    ],
+    [
+      "Wallingford FD 1",
+      "SG"
+    ],
+    [
+      "Whitingham",
+      "SG"
+    ],
+    [
+      "Whitingham - Jacksonville",
+      "SG"
+    ],
+    [
+      "Wilmington",
+      "S"
+    ],
+    [
+      "Windsor Weston Heights",
+      "SG"
+    ],
+    [
+      "Richmond",
+      "SG"
+    ],
+    [
+      "Royalton",
+      "SG"
+    ],
+    [
+      "Cold Brook FD 1 - Direct Discharge",
+      "SG"
+    ],
+    [
+      "Chittenden Solid Waste District",
+      "S"
+    ],
+    [
+      "P B M Nutritionals Inc",
+      "SG"
+    ],
+    [
+      "NorthStar Nuclear Decommissioning Company LLC",
+      "S"
+    ],
+    [
+      "Barre Septic Service",
+      "S"
+    ],
+    [
+      "A1 Sewer and Drain",
+      "SG"
+    ],
+    [
+      "Woodstock - South",
+      "S"
+    ],
+    [
+      "Woodstock - Taftsville",
+      "SG"
+    ],
+    [
+      "WestRock Converting Company",
+      "S"
+    ],
+    [
+      "FiberMark North America Inc",
+      "S"
+    ],
+    [
+      "Champlain Black Marble",
+      "SG"
+    ],
+    [
+      "Alburgh Fire District 1",
+      "SG"
+    ],
+    [
+      "Bourbeau Aggregate, LLC",
+      "SG"
+    ],
+    [
+      "Deermont Corp - VT Plating",
+      "S"
+    ],
+    [
+      "Whitcomb Construction                                       ",
+      "SG"
+    ],
+    [
+      "South Hero Fire District 4",
+      "S"
+    ],
+    [
+      "Barrows and Fisher Oil Co",
+      "SG"
+    ],
+    [
+      "Blodgett, G S                                               ",
+      "SG"
+    ],
+    [
+      "Brattleboro Water Treatment Plant",
+      "S"
+    ],
+    [
+      "Burlington Electric McNeil Generating Station",
+      "S"
+    ],
+    [
+      "Cabot",
+      "S"
+    ],
+    [
+      "Champlain Water District",
+      "SG"
+    ],
+    [
+      "Ethan Allen",
+      "SG"
+    ],
+    [
+      "Energizer - NCCW                                            ",
+      "S"
+    ],
+    [
+      "Grand Isle FD 4 WTP",
+      "SG"
+    ],
+    [
+      "Imerys Talc - West Windsor Mill",
+      "S"
+    ],
+    [
+      "Global Companies LLC",
+      "S"
+    ],
+    [
+      "Montpelier Water Treatment Plant",
+      "SG"
+    ],
+    [
+      "North Hero Water Treatment Plant",
+      "SG"
+    ],
+    [
+      "Troy Minerals",
+      "SG"
+    ],
+    [
+      "Soundview Vermont Holdings",
+      "S"
+    ],
+    [
+      "Isovolta Inc",
+      "S"
+    ],
+    [
+      "Rock of Ages",
+      "S"
+    ],
+    [
+      "Lyndonville Water Treatment Plant                           ",
+      "SG"
+    ],
+    [
+      "Ryegate Associates",
+      "SG"
+    ],
+    [
+      "Ryegate Fire District 2",
+      "S"
+    ],
+    [
+      "St Albans Water Treatment Plant",
+      "SG"
+    ],
+    [
+      "Swanton Village Water Treatment Plant",
+      "SG"
+    ],
+    [
+      "Tri Town Water District 1",
+      "S"
+    ],
+    [
+      "Unifirst",
+      "SG"
+    ],
+    [
+      "TransCanada Hydro Northeast - Wilder",
+      "S"
+    ],
+    [
+      "TransCanada Hydro Northeast - Bellows Falls",
+      "SG"
+    ],
+    [
+      "TransCanada Hydro Northeast - Harriman Reservoir            ",
+      "S"
+    ],
+    [
+      "TransCanada Hydro Northeast - Searsburg                     ",
+      "SG"
+    ],
+    [
+      "TransCanada Hydro Northeast - Vernon",
+      "SG"
+    ],
+    [
+      "Vergennes Panton Water District",
+      "SG"
+    ],
+    [
+      "VT Fish & Wildlife - Bennington Fish Hatchery               ",
+      "SG"
+    ],
+    [
+      "VT Fish & Wildlife - Salisbury Fish Hatchery",
+      "SG"
+    ],
+    [
+      "Weidmann Electrical Technology",
+      "S"
+    ],
+    [
+      "Agri-Mark - Middlebury",
+      "SG"
+    ],
+    [
+      "Casella Waste Mgmt Inc - multiple facilities",
+      "SG"
+    ],
+    [
+      "Ben & Jerrys Waterbury",
+      "SG"
+    ],
+    [
+      "Ben & Jerry's St Albans",
+      "S"
+    ],
+    [
+      "Edlund Company",
+      "SG"
+    ],
+    [
+      "Energizer - Mini Alkaline",
+      "SG"
+    ],
+    [
+      "General Electric - Columbian Ave",
+      "S"
+    ],
+    [
+      "General Electric - Windcrest Road",
+      "S"
+    ],
+    [
+      "Green Mountain Spinnery                                     ",
+      "S"
+    ],
+    [
+      "New England Waste Services - Coventry",
+      "SG"
+    ],
+    [
+      "Moretown Landfill",
+      "SG"
+    ],
+    [
+      "US Dept of Interior-White River NFH                         ",
+      "SG"
+    ],
+    [
+      "US Dept of Interior-DEisenhower NFH",
+      "S"
+    ],
+    [
+      "Agri-Mark - Cabot Creamery",
+      "SG"
+    ],
+    [
+      "Vishay Tansitor",
+      "SG"
+    ],
+    [
+      "S D Ireland - Green Acres Quarry",
+      "S"
+    ],
+    [
+      "Smugglers Notch - SNOMAX",
+      "S"
+    ],
+    [
+      "Coltec Industries                                           ",
+      "S"
+    ],
+    [
+      "Carrara & Sons (Clarendon Quarry)",
+      "S"
+    ],
+    [
+      "Shoreham",
+      "S"
+    ],
+    [
+      "VT Quarries Corp",
+      "SG"
+    ],
+    [
+      "Smugglers Notch - Shutdown Drainage",
+      "S"
+    ],
+    [
+      "Springfield Municipal Swimming Pool",
+      "SG"
+    ],
+    [
+      "Worcester FD 1",
+      "S"
+    ],
+    [
+      "VT Fish & Wildlife - Roxbury Fish Hatchery",
+      "S"
+    ],
+    [
+      "Ryegate Town - South",
+      "S"
+    ],
+    [
+      "Earle P. Towne Water Treatment Plant",
+      "SG"
+    ],
+    [
+      "Montpelier Swimming Pool",
+      "S"
+    ],
+    [
+      "OMYA Hogback Quarry",
+      "S"
+    ],
+    [
+      "H & H Properties                                            ",
+      "SG"
+    ],
+    [
+      "Lamb Durward & Linda",
+      "S"
+    ],
+    [
+      "Mt Snow Ltd",
+      "S"
+    ],
+    [
+      "Fortieth Burlington LLC                                     ",
+      "SG"
+    ],
+    [
+      "Pike Industries (Waterford Crushed Stone)                   ",
+      "SG"
+    ],
+    [
+      "Montshire Museum of Science",
+      "SG"
+    ],
+    [
+      "Global Partners, LP - P & H Truck Stop",
+      "S"
+    ],
+    [
+      "OMYA East and West - Verpol",
+      "SG"
+    ],
+    [
+      "Lime Kiln Quarry West",
+      "S"
+    ],
+    [
+      "Working Dog Septic",
+      "SG"
+    ],
+    [
+      "G.S. Precision Coating, Inc",
+      "SG"
+    ],
+    [
+      "Cumberland Farms Station 4024                               ",
+      "S"
+    ],
+    [
+      "Pike Industries (Williamstown Quarry)",
+      "S"
+    ],
+    [
+      "VT Dept State Buildings - Bennington State Office Bldg      ",
+      "S"
+    ],
+    [
+      "Columbia Forest Products",
+      "S"
+    ],
+    [
+      "Cold Brook FD 1 - Golf Course",
+      "SG"
+    ],
+    [
+      "Cold Brook FD 1 - Base Tract",
+      "SG"
+    ],
+    [
+      "Pike Industries (Perini Quarry)",
+      "SG"
+    ],
+    [
+      "Bennington Water Treatment Facility                         ",
+      "S"
+    ],
+    [
+      "Imerys Talc - Rainbow Mine",
+      "SG"
+    ],
+    [
+      "Eagle River Mining",
+      "S"
+    ],
+    [
+      "Malone 75 Swanton Road Properties",
+      "S"
+    ],
+    [
+      "Cersosimo Lumber Company",
+      "S"
+    ],
+    [
+      "Pike Industries (New Haven)",
+      "S"
+    ],
+    [
+      "Cornwall",
+      "SG"
+    ],
+    [
+      "Retreat Farm, LTD",
+      "SG"
+    ],
+    [
+      "Ampersand Gilman Hydro LP",
+      "S"
+    ],
+    [
+      "Irving Oil Terminals Inc.",
+      "S"
+    ],
+    [
+      "Grand Isle Consolidated Water Dist",
+      "S"
+    ],
+    [
+      "Commonwealth Dairy                                          ",
+      "SG"
+    ],
+    [
+      "Greer Family LLC",
+      "SG"
+    ],
+    [
+      "Imerys Talc America",
+      "S"
+    ],
+    [
+      "Powhatan Ferrisburgh",
+      "SG"
+    ],
+    [
+      "Champlain Oil Co-McGanns Mobil                              ",
+      "SG"
+    ],
+    [
+      "Connor Homes",
+      "S"
+    ],
+    [
+      "Barnet Hydro                                                ",
+      "SG"
+    ],
+    [
+      "Ottauquechee Hydro",
+      "SG"
+    ],
+    [
+      "Sheldon Springs Hydro",
+      "SG"
+    ]
+  ],
+  "sql skeleton": "SELECT _ , _ FROM _ -_ ;",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "waste_water_facilities": [
+      "waste_water_facilities.X",
+      "waste_water_facilities.Y",
+      "waste_water_facilities.FacilityName",
+      "waste_water_facilities.FacilityID",
+      "waste_water_facilities.WWInventoryURL"
+    ],
+    "sand_and_gravel_deposits": [
+      "sand_and_gravel_deposits.OBJECTID",
+      "sand_and_gravel_deposits.AG_TYPE",
+      "sand_and_gravel_deposits.GlobalID",
+      "sand_and_gravel_deposits.SHAPEarea",
+      "sand_and_gravel_deposits.SHAPElen"
+    ]
+  }
+}

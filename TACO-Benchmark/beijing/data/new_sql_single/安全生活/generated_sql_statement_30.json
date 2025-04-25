@@ -1,0 +1,7 @@
+{
+  "sql": "select table1.column1, table1.column2, table1.column3, table2.column4, table2.column5, table2.column6, table2.column7, table2.column8 from table1 join table2 on table1.common_column = table2.common_column where table2.condition_column > some_value",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ , _ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ from _ join _ on _ ._ = _ ._ where _ ._",
+  "database": "安全生活",
+  "tables": {}
+}

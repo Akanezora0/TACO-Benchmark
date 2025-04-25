@@ -1,0 +1,26 @@
+{
+  "sql": "SELECT \n    \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076\".\"专用标识牌号\",\n    \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076\".\"专柜名称\",\n    \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076\".\"地址\",\n    \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\".\"JYZMC\",\n    \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\".\"XKZBH\",\n    \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\".\"JYCS\",\n    \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\".\"JYXM\",\n    \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\".\"FZRQ\",\n    \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\".\"YXQZ\",\n    \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\".\"XKZID\",\n    \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\".\"DWMC\",\n    \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\".\"EXCHANGETIME\"\nFROM \n    \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076\"\nLEFT JOIN \n    \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\"\nON \n    \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076\".\"地址\" = \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\".\"DWMC\"\nWHERE \n    \"shiminzuzongjia",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从两个表中联合查询清真食品专柜信息以及相关的餐饮服务许可证信息，通过地址或单位名称进行关联。\n\n- **详细描述**：\n  - **涉及的表**：\n    1. `shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076`（市民宗委规范化清真食品专柜归属数据3076）：存储清真食品专柜的相关信息。\n    2. `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374`（市场监管局餐饮服务许可证情况信息3374）：存储餐饮服务许可证的相关信息。\n  - **查询的列**：\n    - 从第一个表中查询：`专用标识牌号`（专柜的标识牌号）、`专柜名称`（专柜的名称）、`地址`（专柜的地址）。\n    - 从第二个表中查询：`JYZMC`（经营者名称）、`XKZBH`（许可证编号）、`JYCS`（经营场所）、`JYXM`（经营范围）、`FZRQ`（发证日期）、`YXQZ`（有效期至）、`XKZID`（许可证ID）、`DWMC`（单位名称）、`EXCHANGETIME`（交换时间）。\n  - **关联条件**：通过第一个表的`地址`列与第二个表的`DWMC`（单位名称）列进行左连接（LEFT JOIN），即查询所有清真食品专柜信息，并尝试匹配其对应的餐饮服务许可证信息。\n  - **WHERE 条件**：SQL 语句未完整，但根据上下文推测可能是进一步筛选符合条件的记录。\n\n- **业务场景**：\n  - 该查询可能用于监管部门对清真食品专柜的规范化管理，确保专柜具有合法的餐饮服务许可证。\n  - 通过联合查询，可以快速了解哪些清真食品专柜已经办理了许可证，哪些尚未办理，从而进行针对性的监管或执法。\n  - 也可以用于统计和分析清真食品专柜的合规情况，例如许可证的有效期、经营范围等。\n\n- **用户描述**：\n  - 用户可能是政府监管部门的工作人员，需要定期检查清真食品专柜的合规性。\n  - 用户在实际工作中可能遇到以下问题或需求：\n    1. 需要快速查询某个区域内的清真食品专柜是否全部办理了餐饮服务许可证。\n    2. 需要核对专柜的地址或单位名称是否与许可证上的信息一致。\n    3. 需要监控许可证的有效期，避免过期未续的情况。\n    4. 需要生成报告或统计数据，展示清真食品专柜的规范化管理情况。\n  - 通过该查询，用户可以一次性获取专柜信息和许可证信息，无需手动比对多个数据源，提高工作效率。",
+  "natural_language_query": "市民反映，最近在社区检查时发现一些挂着清真食品牌子的专柜，但不确定他们有没有正规的餐饮服务许可证。比如在朝阳区某超市里的清真专柜，牌子上写着\"清真食品专柜\"，但没看到公示许可证信息。想请帮忙查一下这些专柜是不是都有合法的餐饮许可，特别是要看清楚许可证的有效期和经营范围。因为之前有居民投诉说买到过期的清真食品，怀疑是专柜管理不规范。希望能把专柜的标识牌号、具体位置和对应的许可证信息都列出来，方便我们现场核对。主要是担心有些专柜可能证照不全或者许可证过期了还在经营。",
+  "results": 0,
+  "sql skeleton": "select _ from _ where _ or _ '%_ %",
+  "database": "餐饮美食",
+  "tables": {
+    "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076": [
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址"
+    ],
+    "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374": [
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYXM",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.FZRQ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.YXQZ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.DWMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.EXCHANGETIME"
+    ]
+  }
+}

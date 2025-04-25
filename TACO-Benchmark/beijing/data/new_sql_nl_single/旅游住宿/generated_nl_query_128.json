@@ -1,0 +1,45 @@
+{
+  "sql": "SELECT \"shiguihuaziranziyuanweiyinhangpiaohao1522.HID\", \"shiguihuaziranziyuanweiyinhangpiaohao1522.FATHERID\", \"shiguihuaziranziyuanweiyinhangpiaohao1522.HNAME\", \"shiguihuaziranziyuanweiyinhangpiaohao1522.OTHERNAME\", \"shiguihuaziranziyuanweiyinhangpiaohao1522.CATEGORY\", \"shiguihuaziranziyuanweiyinhangpiaohao1522.SUBCATEGOR\", \"shiguihuaziranziyuanweiyinhangpiaohao1522.COUNTYNAME\", \"shiguihuaziranziyuanweiyinhangpiaohao1522.STREETNAME\", \"shiguihuaziranziyuanweiyinhangpiaohao1522.DYNASTY\", \"shiguihuaziranziyuanweiyinhangpiaohao1522.SUBDYNASTY\", \"shiguihuaziranziyuanweiyinhangpiaohao1522.ADDRESS\", \"shiguihuaziranziyuanweiyinhangpiaohao1522.RANK\", \"shiguihuaziranziyuanweiyinhangpiaohao1522.BATCH\", \"shiguihuaziranziyuanweiyinhangpiaohao1522.PUBTIME\", \"shiguihuaziranziyuanweiyinhangpiaohao1522.USERS\", \"shiguihuaziranziyuanweiyinhangpiaohao1522.PURPOSE\", \"shiguihuaziranziyuanweiyinhangpiaohao1522.OWNERSHIP\", \"shiguihuaziranziyuanweiyinhangpiaohao1522.STATEEVALU\", \"shiguihuaziranziyuanweiyinhangpiaohao1522.SINGLERELI\", \"shiguihuaziranziyuanweiyinhangp",
+  "problem_description": "### 查询意图：\n该 SQL 语句的目的是从名为 `shiguihuaziranziyuanweiyinhangpiaohao1522` 的表中查询多个列的数据，这些列涵盖了与某个实体（可能是文化遗产、自然资源或银行票据等）相关的详细信息。\n\n### 详细描述：\n1. **表名**：`shiguihuaziranziyuanweiyinhangpiaohao1522`  \n   - 这是一个非常具体的表名，可能是一个中文拼音或特定编码的表名。从列名来看，该表可能存储了某种资源或实体的详细信息。\n\n2. **查询的列**：  \n   - `HID`：可能是实体的唯一标识符（ID）。\n   - `FATHERID`：可能表示父级实体的ID，用于层级关系。\n   - `HNAME`：实体的名称。\n   - `OTHERNAME`：实体的其他名称或别名。\n   - `CATEGORY`：实体的类别。\n   - `SUBCATEGOR`：实体的子类别。\n   - `COUNTYNAME`：实体所在的县或区名称。\n   - `STREETNAME`：实体所在的街道名称。\n   - `DYNASTY`：可能与历史相关的朝代信息。\n   - `SUBDYNASTY`：子朝代或时期。\n   - `ADDRESS`：实体的详细地址。\n   - `RANK`：实体的等级或排名。\n   - `BATCH`：可能表示批次或批次号。\n   - `PUBTIME`：发布时间或公开时间。\n   - `USERS`：可能与使用或管理该实体的用户相关。\n   - `PURPOSE`：实体的用途。\n   - `OWNERSHIP`：实体的所有权信息。\n   - `STATEEVALU`：可能是国家评估或状态评估。\n   - `SINGLERELI`：可能与单一宗教或相关性有关。\n\n3. **条件**：  \n   - 该 SQL 语句没有包含 `WHERE` 子句，因此是一个全表查询，检索表中所有行的指定列数据。\n\n### 业务场景：\n1. **文化遗产管理**：  \n   - 如果该表存储的是文化遗产或历史遗迹的信息，查询可能是为了获取这些遗产的详细信息，包括名称、类别、地址、历史朝代等，用于文化遗产的登记、管理或展示。\n\n2. **自然资源管理**：  \n   - 如果表名中的“ziranziyuan”指的是自然资源，查询可能是为了获取自然资源的分布、类别、用途等信息，用于资源管理或规划。\n\n3. **银行票据管理**：  \n   - 如果表名中的“yinhangpiaohao”指的是银行票据，查询可能是为了获取票据的详细信息，如批次、发布时间、用途等，用于票据的跟踪或审计。\n\n### 用户描述：\n1. **文化遗产管理场景**：  \n   - 用户可能是文化遗产管理机构的工作人员，需要查询某个地区所有文化遗产的详细信息，以便进行保护规划或向公众展示。例如，用户可能需要生成一份报告，列出所有属于某个朝代的文化遗产及其地址。\n\n2. **自然资源管理场景**：  \n   - 用户可能是自然资源管理部门的人员，需要了解某类自然资源的分布情况或用途，以便制定保护或开发计划。例如，用户可能需要查询所有位于某县的自然资源及其所有权信息。\n\n3. **银行票据管理场景**：  \n   - 用户可能是银行或金融机构的员工，需要查询某批票据的详细信息，以便进行审计或跟踪票据的使用情况。例如，用户可能需要检查某批次票据的发布时间和用途是否符合规定。\n\n### 注意事项：\n- 由于表名和列名是中文拼音或特定编码，实际含义可能需要结合具体的业务背景进一步确认。\n- 查询没有条件限制，可能会返回大量数据，实际应用中可能需要添加 `WHERE` 子句或其他限制条件以提高查询效率。",
+  "natural_language_query": "市民反映，最近在整理我们区的历史文化遗产资料时遇到一些问题。我是区文化局的工作人员，需要了解我们区所有历史遗迹的完整信息，包括这些遗迹的具体名称、别名、所属朝代、详细地址这些内容。特别是那些属于明清时期的古建筑，我们想做一个专题保护规划。\n\n但是现在的资料比较零散，有的记录只有简称，有的地址也不全。比如之前查到一个叫\"双塔寺\"的文物点，但系统里显示的名字和民间叫法对不上，地址也只写了大概在鼓楼大街附近。能不能帮忙查一下完整的文物清单？最好能包含文物的等级、批次这些信息，我们好安排后续的保护工作。\n\n另外，有些文物点的归属单位也不太清楚，像上次有个清代宅院，现在不知道是归文物局管还是街道管，希望能查到所有权和管理单位的信息。这些资料对我们制定保护政策很重要，麻烦帮忙核实一下。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "shiguihuaziranziyuanweiyinhangpiaohao1522": [
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.HID",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.FATHERID",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.HNAME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.OTHERNAME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.CATEGORY",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.SUBCATEGOR",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.COUNTYNAME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.STREETNAME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.DYNASTY",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.SUBDYNASTY",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.ADDRESS",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.RANK",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.BATCH",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.PUBTIME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.USERS",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.PURPOSE",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.OWNERSHIP",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.STATEEVALU",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.SINGLERELI",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.PROTECTION",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.ATTACHEDRE",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.RELATEDPEO",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.RELATEDEVE",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.PUBNAME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.SOURCE",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.EDITOR",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.ISREDUNDAN"
+    ],
+    "fengtaiqufengtaiqujingqujingdianteseyetai1387": [
+      "fengtaiqufengtaiqujingqujingdianteseyetai1387.景区景点（特色业态）明细",
+      "fengtaiqufengtaiqujingqujingdianteseyetai1387.Unnamed: 1",
+      "fengtaiqufengtaiqujingqujingdianteseyetai1387.Unnamed: 2",
+      "fengtaiqufengtaiqujingqujingdianteseyetai1387.Unnamed: 3"
+    ]
+  }
+}

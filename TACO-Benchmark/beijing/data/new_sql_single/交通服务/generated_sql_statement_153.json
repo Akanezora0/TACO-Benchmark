@@ -1,0 +1,18 @@
+{
+  "sql": "SELECT shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.企业名称, shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.评定等级 FROM shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672 WHERE shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.所属地区 = '北京西站地区电车信息2733';",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ ;",
+  "database": "交通服务",
+  "tables": {
+    "zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733": [
+      "zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733.PK\u0003\u0004"
+    ],
+    "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672": [
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.企业名称",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.评定等级",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.所属地区",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.年份",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.统一社会信用代码"
+    ]
+  }
+}

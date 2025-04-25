@@ -1,0 +1,7 @@
+{
+  "sql": "SELECT A._ , B._ , C._ , D._ , E._ , F._ , G._ FROM TableA AS A JOIN TableB AS B ON A._ = B._ JOIN TableC AS C ON B._ = C._ JOIN TableD AS D ON C._ = D._ JOIN TableE AS E ON D._ = E._ JOIN TableF AS F ON E._ = F._ JOIN TableG AS G ON F._ = G._ WHERE A._ = 'value' AND B._ = 'value';",
+  "results": 0,
+  "sql skeleton": "SELECT _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ FROM _ WHERE _ ._ = _ AND _ ._ ;",
+  "database": "安全生活",
+  "tables": {}
+}

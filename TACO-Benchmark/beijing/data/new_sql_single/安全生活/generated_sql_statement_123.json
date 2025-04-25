@@ -1,0 +1,7 @@
+{
+  "sql": "SELECT column1, column2, column3, column4, column5, column6, column7 FROM table1 WHERE table1.column8 = value1 AND table1.column9 = value2;",
+  "results": 0,
+  "sql skeleton": "SELECT _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ FROM _ WHERE _ ._ = _ AND _ ._ = _ ;",
+  "database": "安全生活",
+  "tables": {}
+}

@@ -1,0 +1,20 @@
+{
+  "sql": "SELECT shijiaotongweiguidaoxianluxinxichuxing3671.线路名称 FROM shijiaotongweiguidaoxianluxinxichuxing3671 WHERE shijiaotongweiguidaoxianluxinxichuxing3671.线路编码 = '编码值' AND shijiaotongweiguidaoxianluxinxichuxing3671.站点数 > 10",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从表 `shijiaotongweiguidaoxianluxinxichuxing3671` 中查询满足特定条件的线路名称。\n\n- **详细描述**：\n  - **涉及的表**：`shijiaotongweiguidaoxianluxinxichuxing3671`（可能是一个存储轨道交通线路信息的表）。\n  - **涉及的列**：\n    - `线路名称`：表示轨道交通线路的名称。\n    - `线路编码`：表示轨道交通线路的唯一编码。\n    - `站点数`：表示该线路包含的站点数量。\n  - **查询条件**：\n    - `线路编码 = '编码值'`：筛选出线路编码等于特定值（'编码值'）的记录。\n    - `站点数 > 10`：进一步筛选出站点数大于 10 的记录。\n\n- **业务场景**：\n  - 该查询可能用于轨道交通线路的管理或分析，例如：\n    - 查找特定编码的线路名称，并且该线路的站点数超过 10 个。\n    - 用于统计或筛选出站点较多的线路，可能用于优化线路规划或资源分配。\n\n- **用户描述**：\n  - 用户可能需要查找某一条具体的轨道交通线路（通过线路编码），并且只关心站点数较多的线路（站点数 > 10）。\n  - 例如，用户可能是一个交通规划师，需要分析哪些线路的站点较多，以便进行客流分析或优化运营计划。",
+  "natural_language_query": "市民反映，我在研究地铁线路的时候遇到个问题。我们单位需要分析站点比较多的线路，就是那种超过10个站的地铁线。现在手头有个线路编码是\"编码值\"的，但我不确定这条线具体叫啥名字。能不能帮忙查一下这条编码的地铁线叫什么？主要是想看站点多的线路，那些小线路就不用管了。对了，这条线好像是去年新开通的，但我不太确定具体时间，反正先查这个编码的线路名称就行。",
+  "results": 0,
+  "sql skeleton": "select _ from _ where _ = _ and _ = _",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweiguidaoxianluxinxichuxing3671": [
+      "shijiaotongweiguidaoxianluxinxichuxing3671.线路编码",
+      "shijiaotongweiguidaoxianluxinxichuxing3671.线路名称",
+      "shijiaotongweiguidaoxianluxinxichuxing3671.站点数"
+    ],
+    "shijiaotongweikebianqingbaobanshebeixinxi3519": [
+      "shijiaotongweikebianqingbaobanshebeixinxi3519.唯一标识",
+      "shijiaotongweikebianqingbaobanshebeixinxi3519.名称",
+      "shijiaotongweikebianqingbaobanshebeixinxi3519.设备编码"
+    ]
+  }
+}

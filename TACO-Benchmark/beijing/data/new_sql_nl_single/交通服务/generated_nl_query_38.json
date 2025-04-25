@@ -1,0 +1,18 @@
+{
+  "sql": "SELECT \"shijiaotongweiquanshiqicheweixiuqiyexinxi3673.统一社会信用代码\", \"shijiaotongweiquanshiqicheweixiuqiyexinxi3673.业户名称\" FROM \"shijiaotongweiquanshiqicheweixiuqiyexinxi3673\" WHERE \"zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733.PK\" = '特定值';",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从表 `shijiaotongweiquanshiqicheweixiuqiyexinxi3673` 中查询特定汽车维修企业的统一社会信用代码和业户名称，查询条件与另一张表 `zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733` 的主键值相关。\n\n---\n\n### **详细描述**  \n1. **涉及的表**  \n   - **主表**：`shijiaotongweiquanshiqicheweixiuqiyexinxi3673`（可能存储汽车维修企业的基本信息，如信用代码、名称等）。  \n   - **关联表**：`zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733`（可能存储重点站区或管辖区域的关键信息，其主键 `PK` 用于筛选条件）。  \n\n2. **查询的列**  \n   - `shijiaotongweiquanshiqicheweixiuqiyexinxi3673.统一社会信用代码`：企业的唯一信用标识。  \n   - `shijiaotongweiquanshiqicheweixiuqiyexinxi3673.业户名称`：企业名称。  \n\n3. **查询条件**  \n   - 通过 `zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733.PK = '特定值'` 关联筛选，但 SQL 中未明确说明两表的关联关系（如 JOIN 或子查询），可能是语句不完整或存在隐式关联逻辑。  \n\n---\n\n### **业务场景**  \n1. **可能的用途**  \n   - 查询某个特定管辖区域（如北京西站地区）内的汽车维修企业信息，用于监管、统计或服务匹配。  \n   - 在重点站区管理中，筛选合规维修企业名单，确保其具备合法信用资质。  \n\n2. **数据应用**  \n   - 政府部门可能用此数据检查企业合法性，或为车主推荐正规维修点。  \n   - 企业信用代码和名称可用于公示、对接其他政务系统（如税务、工商）。  \n\n---\n\n### **用户描述**  \n1. **用户需求**  \n   - 某交通委工作人员需要获取“北京西站重点管辖区”内所有汽车维修企业的信用代码和名称，以生成年度合规企业白名单。  \n   - 车主在政务平台查询该区域的正规维修企业时，系统需快速返回可信赖的企业信息。  \n\n2. **实际问题**  \n   - 若缺少信用代码筛选，可能导致无资质企业混入推荐列表，引发服务质量或安全问题。  \n   - 用户需明确区域（通过 `PK = '特定值'` 指定）与企业信息的关联关系，但当前 SQL 未清晰体现两表如何关联，可能存在逻辑漏洞。  \n\n---\n\n### **补充说明**  \n- 该 SQL 可能需要完善（如补充 JOIN 条件或子查询），否则无法直接执行。  \n- 表名和字段名带有编号（如 `3673`、`2733`），可能是系统自动生成的临时表或视图，需确认其具体来源。",
+  "natural_language_query": "市民反映，最近在北京西站附近找汽车维修店时发现有些店铺看起来不太正规，担心遇到无资质的维修点。想咨询一下政府能不能提供西站周边那些有正规营业执照的汽车维修企业名单？最好是能查到企业全称和那个统一的社会信用代码，这样我们老百姓也能放心去修车。之前好像在政务网上看到过重点站区的管理信息，但不知道具体怎么查这些维修点是不是在政府监管名单里。能不能帮忙核实下西站管辖区内的正规维修企业信息？主要是怕遇到黑店被坑，希望能有个官方认可的名单参考。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ WHERE _ = _ ;",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweiquanshiqicheweixiuqiyexinxi3673": [
+      "shijiaotongweiquanshiqicheweixiuqiyexinxi3673.统一社会信用代码",
+      "shijiaotongweiquanshiqicheweixiuqiyexinxi3673.业户名称",
+      "shijiaotongweiquanshiqicheweixiuqiyexinxi3673.业户地址"
+    ],
+    "zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733": [
+      "zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733.PK\u0003\u0004"
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "sql": "SELECT \"shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.本市市管游览参观点门票价格\", \"xichengquxichengquwenwubaohudanwei35.名称\" FROM \"shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777\" INNER JOIN \"xichengquxichengquwenwubaohudanwei35\" ON \"shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.序号\" = \"xichengquxichengquwenwubaohudanwei35.序号\";",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从两个表中联合查询数据，获取“本市市管游览参观点门票价格”和“西城区文物保护单位名称”的信息，通过“序号”字段关联两个表的数据。\n\n---\n\n### **详细描述**  \n1. **涉及的表**：  \n   - `shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777`（可能为“市发改委关于游览参观点现行门票价格及原价格信息”表）  \n   - `xichengquxichengquwenwubaohudanwei35`（可能为“西城区文物保护单位”表）  \n\n2. **涉及的列**：  \n   - 从第一个表中选择：`本市市管游览参观点门票价格`  \n   - 从第二个表中选择：`名称`（即文物保护单位的名称）  \n\n3. **关联条件**：  \n   - 两个表通过 `序号` 字段进行内连接（`INNER JOIN`），即只返回两个表中 `序号` 匹配的记录。  \n\n4. **查询逻辑**：  \n   - 该查询试图找出“游览参观点门票价格”与“西城区文物保护单位”之间的关系，可能是为了分析哪些文物保护单位涉及门票价格调整或管理。  \n\n---\n\n### **业务场景**  \n1. **可能的业务背景**：  \n   - 政府部门（如市发改委或文旅局）在管理旅游景点和文物保护单位时，可能需要关联门票价格信息与文物保护单位信息，以便进行价格监管或政策调整。  \n   - 例如，某些文物保护单位可能被列为游览参观点，需要调整门票价格，而该查询可帮助管理者快速匹配相关信息。  \n\n2. **具体应用**：  \n   - 统计西城区内哪些文物保护单位需要调整门票价格。  \n   - 分析现行门票价格与文物保护单位的管理情况，以制定合理的票价政策。  \n\n---\n\n### **用户描述**  \n1. **用户可能的需求**：  \n   - 某市发改委工作人员需要了解“西城区文物保护单位中哪些是收费参观点，并查看其现行门票价格”，以便制定价格调整方案或监管政策。  \n   - 文旅局可能希望整理“文物保护单位与旅游景点门票价格的对应关系”，用于旅游宣传或票价公示。  \n\n2. **实际问题**：  \n   - 如果两个表的数据独立存储（一个表记录价格，另一个表记录文物保护单位信息），用户需要关联查询才能获取完整信息。  \n   - 该 SQL 查询帮助用户快速匹配“序号”相同的记录，避免手动比对数据，提高工作效率。  \n\n---\n\n### **总结**  \n该 SQL 查询主要用于**关联游览参观点门票价格信息与文物保护单位信息**，适用于政府或文旅管理部门进行票价监管、政策制定或数据统计分析。用户可能是需要整合不同数据来源的工作人员，以便更高效地管理旅游和文物保护相关事务。",
+  "natural_language_query": "市民反映，最近带孩子去西城区一些文物保护单位参观时发现有的地方要收门票，有的又不用，价格也不太一样。我是市发改委的工作人员，现在需要整理一份西城区文物保护单位和游览参观点门票价格的对照清单。听说有些文物保护单位被列入了游览参观点管理，但具体哪些单位要收费、收费标准是什么我们这边数据不太完整。能不能帮忙查一下西城区这些文物保护点里哪些是收费参观的？特别是那些由市里统一管理定价的景点，我们想看看现在的门票价格情况，好做后续的价格调整方案。对了，之前好像有个序号系统把这两类信息关联起来了，应该能查到对应关系吧？",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777": [
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.本市市管游览参观点门票价格",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 1",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 2",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 3",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 4",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 5",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 6"
+    ],
+    "xichengquxichengquwenwubaohudanwei35": [
+      "xichengquxichengquwenwubaohudanwei35.序号",
+      "xichengquxichengquwenwubaohudanwei35.名称",
+      "xichengquxichengquwenwubaohudanwei35.地址"
+    ]
+  }
+}

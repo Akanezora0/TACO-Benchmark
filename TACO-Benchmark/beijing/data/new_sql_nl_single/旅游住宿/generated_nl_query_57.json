@@ -1,0 +1,19 @@
+{
+  "sql": "SELECT \"shiwenhuahelvyoujuxingjifandianxinxi2036.��\u0011ࡱ\u001a�\", \"shiwenhuahelvyoujuxingjifandianxinxi2036.\u0001\u0001\" FROM \"shiwenhuahelvyoujuxingjifandianxinxi2036\" - \"xichengquxichengquwenwubaohudanwei35\";",
+  "problem_description": "# SQL 语句分析\n\n## 查询意图\n这个SQL语句似乎试图从一个名为\"shiwenhuahelvyoujuxingjifandianxinxi2036\"的表中查询两列数据，并排除与另一个表\"xichengquxichengquwenwubaohudanwei35\"相关的记录。不过，语句中存在明显的语法错误和编码问题。\n\n## 详细描述\n\n1. **表信息**：\n   - 主表：`shiwenhuahelvyoujuxingjifandianxinxi2036`（中文可能为\"文化和旅游星级酒店信息2036\"）\n   - 排除表：`xichengquxichengquwenwubaohudanwei35`（中文可能为\"西城区西城区文物保护单位35\"）\n\n2. **列信息**：\n   - 查询的两列名称显示为乱码，可能是由于编码问题导致的：\n     - `shiwenhuahelvyoujuxingjifandianxinxi2036.��\u0011ࡱ\u001a�`\n     - `shiwenhuahelvyoujuxingjifandianxinxi2036.\u0001\u0001`\n\n3. **操作**：\n   - 语句尝试使用减号(`-`)操作符从一个表中\"减去\"另一个表，这不是标准SQL语法\n\n4. **问题**：\n   - 列名显示为乱码，无法确定实际查询的列\n   - 表名显示为乱码和数字组合，难以准确理解\n   - 使用减号进行表操作不符合SQL标准语法\n\n## 业务场景\n\n假设表名和列名正确的情况下，可能的业务场景：\n\n1. **文化和旅游数据管理**：\n   - 查询星级酒店信息，但排除已被文物保护单位占用的地点\n   - 分析可用于旅游开发的酒店资源\n\n2. **城市规划**：\n   - 比较旅游设施与文物保护单位的分布情况\n   - 寻找可用于旅游开发但不受文物保护限制的区域\n\n## 用户描述\n\n在上述业务场景下，用户可能遇到的实际问题或需求：\n\n1. **旅游开发规划**：\n   - 用户可能需要找出哪些星级酒店可以自由开发改造，而不受文物保护限制\n   - 需要识别出既可用于旅游开发又不受特殊保护限制的酒店\n\n2. **资源冲突解决**：\n   - 用户可能需要了解哪些酒店位于文物保护单位附近或内部，从而避免开发冲突\n   - 需要区分可自由使用的酒店和受限制的酒店\n\n3. **数据整合分析**：\n   - 用户可能需要将旅游设施数据与文物保护数据进行交叉分析\n   - 需要从大量酒店信息中筛选出符合条件的子集\n\n注意：由于SQL语句存在明显的语法错误和编码问题，以上分析基于对可能表名的猜测。实际意图可能需要查看正确的SQL语句或数据库结构才能准确确定。",
+  "natural_language_query": "市民反映，我在做旅游开发规划调研时遇到个头疼的问题。是这样的，我们想找一些星级酒店作为合作对象，但是听说有些酒店可能在文物保护单位范围内，或者跟文物保护单位有重叠。现在手头有两份资料，一份是文化和旅游局提供的酒店名单，另一份是文物保护单位的名单。我就想查查哪些酒店是可以自由开发不受限制的，但系统老是报错，显示一些乱码，根本看不懂。能不能帮忙看看这个问题？主要是想确认下哪些星级酒店不在文物保护范围内，这样我们才好推进后续的合作洽谈工作。对了，之前同事说西城区那边好像特别多这种受限制的情况，所以可能重点要排除西城区的文物保护点附近的酒店。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "shiwenhuahelvyoujuxingjifandianxinxi2036": [
+      "shiwenhuahelvyoujuxingjifandianxinxi2036.��\u0011ࡱ\u001a�",
+      "shiwenhuahelvyoujuxingjifandianxinxi2036.\u0001\u0001"
+    ],
+    "xichengquxichengquwenwubaohudanwei35": [
+      "xichengquxichengquwenwubaohudanwei35.序号",
+      "xichengquxichengquwenwubaohudanwei35.名称",
+      "xichengquxichengquwenwubaohudanwei35.地址"
+    ]
+  }
+}

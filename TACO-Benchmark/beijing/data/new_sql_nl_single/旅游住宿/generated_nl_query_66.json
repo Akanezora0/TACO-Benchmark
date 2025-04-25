@@ -1,0 +1,49 @@
+{
+  "sql": "SELECT shiguihuaziranziyuanweishiguan1516.HID, shiguihuaziranziyuanweishiguan1516.HNAME, shiguihuaziranziyuanweishiguan1516.ADDRESS FROM shiguihuaziranziyuanweishiguan1516 WHERE shiguihuaziranziyuanweishiguan1516.DYNASTY = '唐代' AND shiguihuaziranziyuanweishiguan1516.SUBDYNASTY = '盛唐'",
+  "problem_description": "### 查询意图：\n该 SQL 语句的目的是从表 `shiguihuaziranziyuanweishiguan1516` 中查询出所有朝代（DYNASTY）为“唐代”且子朝代（SUBDYNASTY）为“盛唐”的记录，并返回这些记录的 HID（ID）、HNAME（名称）和 ADDRESS（地址）字段。\n\n### 详细描述：\n1. **涉及的表**：\n   - `shiguihuaziranziyuanweishiguan1516`：从表名来看，可能是一个与历史文化或自然资源相关的表，具体含义需要结合业务背景进一步确认。表名较长且为拼音形式，可能是中文拼音的直译，例如“规划自然资源委石管1516”或其他含义。\n\n2. **涉及的列**：\n   - `HID`：可能是表的主键或唯一标识符，表示记录的 ID。\n   - `HNAME`：可能是名称字段，表示记录的名称或标题。\n   - `ADDRESS`：可能是地址字段，表示记录的地理位置或相关地址信息。\n   - `DYNASTY`：朝代字段，表示记录所属的历史朝代，这里限定为“唐代”。\n   - `SUBDYNASTY`：子朝代字段，表示朝代的细分时期，这里限定为“盛唐”。\n\n3. **查询条件**：\n   - `DYNASTY = '唐代'`：筛选出朝代属于唐代的记录。\n   - `SUBDYNASTY = '盛唐'`：进一步筛选出子朝代属于盛唐的记录。\n\n### 业务场景：\n1. **历史文化研究**：\n   - 该查询可能用于历史文化研究或考古领域，目的是筛选出唐代盛唐时期的特定资源或地点信息。例如，查询盛唐时期的古迹、文物或历史事件的发生地。\n\n2. **旅游资源管理**：\n   - 如果该表存储的是旅游景点或文化遗产信息，查询结果可以用于展示盛唐时期的重要景点或遗址，便于旅游规划或文化宣传。\n\n3. **数据统计分析**：\n   - 可能是对某一历史时期的数据进行统计分析，例如统计盛唐时期的资源分布或数量。\n\n### 用户描述：\n1. **用户需求**：\n   - 用户可能是历史学者、考古研究人员或旅游规划者，需要获取盛唐时期的相关资源或地点信息。例如：\n     - 历史学者希望研究盛唐时期的文化遗产分布。\n     - 旅游部门希望整理盛唐时期的景点信息以设计旅游路线。\n\n2. **实际问题**：\n   - 用户可能需要从大量历史数据中快速筛选出特定时期（盛唐）的记录，以便进一步分析或展示。\n   - 用户可能需要了解盛唐时期的地点名称和地址信息，用于实地考察或标注地图。\n\n3. **扩展需求**：\n   - 如果用户需要更详细的信息（如时间范围、相关人物或事件），可能需要进一步关联其他表或字段。\n   - 用户可能还需要对查询结果按地理位置或其他字段排序或分组。",
+  "natural_language_query": "市民反映，最近在研究盛唐时期的历史文化资料，想了解那个时期的著名古迹和遗址的具体信息。我记得盛唐是唐代的一个阶段，但不太清楚具体有哪些地方属于这个时期。能不能帮忙查一下盛唐时期的重要历史地点？最好能告诉我这些地方的名称和现在的大概位置，比如在哪个省哪个市。我在写一篇关于盛唐文化的论文，需要这些资料作为参考。对了，要确认是唐代盛唐时期的，不要搞错成其他朝代或唐代其他时期的。",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ from _ where _ = _ and _",
+  "database": "旅游住宿",
+  "tables": {
+    "shiguihuaziranziyuanweishiguan1516": [
+      "shiguihuaziranziyuanweishiguan1516.HID",
+      "shiguihuaziranziyuanweishiguan1516.FATHERID",
+      "shiguihuaziranziyuanweishiguan1516.HNAME",
+      "shiguihuaziranziyuanweishiguan1516.OTHERNAME",
+      "shiguihuaziranziyuanweishiguan1516.CATEGORY",
+      "shiguihuaziranziyuanweishiguan1516.SUBCATEGOR",
+      "shiguihuaziranziyuanweishiguan1516.COUNTYNAME",
+      "shiguihuaziranziyuanweishiguan1516.STREETNAME",
+      "shiguihuaziranziyuanweishiguan1516.DYNASTY",
+      "shiguihuaziranziyuanweishiguan1516.SUBDYNASTY",
+      "shiguihuaziranziyuanweishiguan1516.ADDRESS",
+      "shiguihuaziranziyuanweishiguan1516.RANK",
+      "shiguihuaziranziyuanweishiguan1516.BATCH",
+      "shiguihuaziranziyuanweishiguan1516.PUBTIME",
+      "shiguihuaziranziyuanweishiguan1516.USERS",
+      "shiguihuaziranziyuanweishiguan1516.PURPOSE",
+      "shiguihuaziranziyuanweishiguan1516.OWNERSHIP",
+      "shiguihuaziranziyuanweishiguan1516.STATEEVALU",
+      "shiguihuaziranziyuanweishiguan1516.SINGLERELI",
+      "shiguihuaziranziyuanweishiguan1516.PROTECTION",
+      "shiguihuaziranziyuanweishiguan1516.ATTACHEDRE",
+      "shiguihuaziranziyuanweishiguan1516.RELATEDPEO",
+      "shiguihuaziranziyuanweishiguan1516.RELATEDEVE",
+      "shiguihuaziranziyuanweishiguan1516.PUBNAME",
+      "shiguihuaziranziyuanweishiguan1516.SOURCE",
+      "shiguihuaziranziyuanweishiguan1516.EDITOR",
+      "shiguihuaziranziyuanweishiguan1516.ISREDUNDAN",
+      "shiguihuaziranziyuanweishiguan1516.THEME"
+    ],
+    "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842": [
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.2021年度昌平A级景区数据开放表               ",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 1",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 2",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 3",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 4",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 5",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 6"
+    ]
+  }
+}

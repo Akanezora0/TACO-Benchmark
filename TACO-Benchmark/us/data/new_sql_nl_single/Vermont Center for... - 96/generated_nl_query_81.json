@@ -1,0 +1,39 @@
+{
+  "sql": "SELECT sand_and_gravel_deposits.OBJECTID, public_water_sources.GlobalID FROM sand_and_gravel_deposits INNER JOIN public_water_sources ON sand_and_gravel_deposits.GlobalID = public_water_sources.GlobalID;",
+  "problem_description": "### Query intent:\nThe SQL statement aims to retrieve specific data by joining two tables (`sand_and_gravel_deposits` and `public_water_sources`) based on a common identifier (`GlobalID`), with the objective to obtain `OBJECTID` from the `sand_and_gravel_deposits` table and `GlobalID` from the `public_water_sources` table.\n\n### Detailed description:\n1. **Table `sand_and_gravel_deposits`**:\n   - This table likely contains data about sand and gravel deposits, possibly including unique identifiers (`OBJECTID`), location details, volume, or other characteristics related to these deposits.\n\n2. **Table `public_water_sources`**:\n   - This table is expected to hold information about public water sources, possibly including their unique identifiers (`GlobalID`), location, type, capacity, or other relevant details.\n\n3. **Join condition**:\n   - The join operation is performed based on matching the `GlobalID` column in both tables. This suggests that there might be a requirement to find associations or overlaps between sand and gravel deposits and public water sources, possibly for environmental impact assessments, resource management, or planning purposes.\n\n4. **Selected columns**:\n   - `sand_and_gravel_deposits.OBJECTID`: This column selection implies that the user is interested in the specific identifiers of the sand and gravel deposits.\n   - `public_water_sources.GlobalID`: The selection of this column suggests that the user also wants to associate each deposit with its corresponding global identifier of a public water source, which could be useful for cross-referencing or spatial analysis.\n\n### Business scenario:\nThis query could be utilized in various environmental or urban planning contexts where understanding the proximity or relationship between sand and gravel deposits and public water sources is crucial. For instance:\n\n- **Environmental Impact Assessment**: To evaluate potential impacts of mining activities on nearby water sources.\n- **Resource Management**: To plan sustainable extraction areas while minimizing risks to public water supply.\n- **Urban Planning**: To ensure new construction projects do not encroach on critical water source areas, thereby protecting them from pollution or alteration.\n\n### User description:\nA user might need this information when they are tasked with assessing the potential environmental impact of mining operations near water sources, planning for sustainable resource extraction, or ensuring that new developments do not compromise public water resources. The ability to cross-reference sand and gravel deposit locations with their respective water sources provides valuable insights into potential risks and opportunities for mitigation strategies.",
+  "natural_language_query": "I'm working on a project that requires understanding the relationship between sand and gravel deposits and public water sources in our area. Specifically, I need to identify the unique identifiers for each sand and gravel deposit and match them with the corresponding identifiers of public water sources. Could you help me write an SQL query that would accomplish this? I'm particularly interested in retrieving the OBJECTID from the 'sand_and_gravel_deposits' table and the GlobalID from the 'public_water_sources' table. This information will help me better understand the spatial distribution and potential impacts of these natural resources on our public water systems.",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ ;",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "sand_and_gravel_deposits": [
+      "sand_and_gravel_deposits.OBJECTID",
+      "sand_and_gravel_deposits.AG_TYPE",
+      "sand_and_gravel_deposits.GlobalID",
+      "sand_and_gravel_deposits.SHAPEarea",
+      "sand_and_gravel_deposits.SHAPElen"
+    ],
+    "public_water_sources": [
+      "public_water_sources.X",
+      "public_water_sources.Y",
+      "public_water_sources.TINWSF_IS_NUMBER",
+      "public_water_sources.WSID",
+      "public_water_sources.SystemName",
+      "public_water_sources.SystemType",
+      "public_water_sources.SystemStatus",
+      "public_water_sources.SystemPopulation",
+      "public_water_sources.FacilityName",
+      "public_water_sources.FacilityID",
+      "public_water_sources.FacilityStatus",
+      "public_water_sources.Availability",
+      "public_water_sources.WaterType",
+      "public_water_sources.ConstructedDate",
+      "public_water_sources.PermittedYield",
+      "public_water_sources.WellType",
+      "public_water_sources.Diameter_in",
+      "public_water_sources.WellDepth",
+      "public_water_sources.CasingDepth",
+      "public_water_sources.StaticWaterLevel"
+    ]
+  }
+}

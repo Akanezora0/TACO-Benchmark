@@ -1,0 +1,20 @@
+{
+  "sql": "SELECT \"tongzhouqutongzhouquxiangcunminsuxinxi2979.通州区乡村民宿情况表（规范化审核52家）\", \"huairouquhuairouqujingqumenpiaojiage1592.怀柔区政府定价景区门票价格\" FROM \"tongzhouqutongzhouquxiangcunminsuxinxi2979\", \"huairouquhuairouqujingqumenpiaojiage1592\" WHERE \"tongzhouqutongzhouquxiangcunminsuxinxi2979.通州区乡村民宿情况表（规范化审核52家）\" = \"huairouquhuairouqujingqumenpiaojiage1592.怀柔区政府定价景区门票价格\";",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "tongzhouqutongzhouquxiangcunminsuxinxi2979": [
+      "tongzhouqutongzhouquxiangcunminsuxinxi2979.通州区乡村民宿情况表（规范化审核52家）",
+      "tongzhouqutongzhouquxiangcunminsuxinxi2979.Unnamed: 1",
+      "tongzhouqutongzhouquxiangcunminsuxinxi2979.Unnamed: 2"
+    ],
+    "huairouquhuairouqujingqumenpiaojiage1592": [
+      "huairouquhuairouqujingqumenpiaojiage1592.怀柔区政府定价景区门票价格",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 1",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 2",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 3",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 4"
+    ]
+  }
+}

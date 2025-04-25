@@ -1,0 +1,98 @@
+{
+  "sql": "SELECT DISTINCT landfills.\"OBJECTID\", landfills.\"PSINUM\", sga_phase_2_assessed_reaches.\"RchID\" FROM landfills, sga_phase_2_assessed_reaches WHERE landfills.\"OBJECTID\" = sga_phase_2_assessed_reaches.\"RID\" OR landfills.\"OBJECTID\" = sga_phase_2_assessed_reaches.\"SID\" OR landfills.\"OBJECTID\" = sga_phase_2_assessed_reaches.\"RchID\"",
+  "problem_description": "### Query intent:\nThe SQL statement aims to retrieve unique pairs of OBJECTID from the `landfills` table and corresponding RchID from the `sga_phase_2_assessed_reaches` table. It seeks to match these pairs based on the condition that the OBJECTID in `landfills` matches either RID, SID, or RchID in `sga_phase_2_assessed_reaches`.\n\n### Detailed description:\n- **Table `landfills`**:\n  - **Columns**: `\"OBJECTID\"`, `\"PSINUM\"`\n    - `\"OBJECTID\"`: Unique identifier for each landfill entry.\n    - `\"PSINUM\"`: A possible additional identifier related to the landfill.\n\n- **Table `sga_phase_2_assessed_reaches`**:\n  - **Columns**: `\"RchID\"`, `\"RID\"`, `\"SID\"`\n    - `\"RchID\"`: Identifier for river segments or reaches being assessed.\n    - `\"RID\"`: Identifier for some type of assessment or entity related to river segments.\n    - `\"SID\"`: Another identifier potentially related to river segments or entities.\n\n- **Conditions**:\n  - The query checks for three possible matches between `landfills.OBJECTID` and any of the identifiers (`RchID`, `RID`, `SID`) in the `sga_phase_2_assessed_reaches` table.\n  - The `DISTINCT` keyword ensures that each pair of `(landfills.OBJECTID, sga_phase_2_assessed_reaches.RchID)` is returned only once, even if multiple matches exist.\n\n### Business scenario:\nThis SQL statement is likely used in environmental management or water quality assessment projects where data from different sources (landfills and river assessments) need to be cross-referenced. For example, it might be used to identify which landfills are located near or have an impact on specific river segments that are part of a phase 2 assessment program.\n\n### User description:\nA user working in environmental protection or urban planning might need this information to understand potential environmental impacts of landfills on local water bodies. This could help in regulatory compliance checks, assessing pollution risks, or planning mitigation measures. The query allows for identifying critical areas where further investigation or action might be necessary based on the proximity of landfills to sensitive water resources.",
+  "natural_language_query": "User: Hi, I'm working on a project that involves checking the proximity of landfills to certain river segments for environmental impact assessment. Specifically, I need to find out if there's any overlap between the locations of landfills and the river segments that are currently undergoing a phase 2 assessment. Could you help me write a SQL query for this?\n\nAssistant: Assistant: Absolutely, let's create a SQL query to address your needs. We'll be looking at two tables here: `landfills` and `sga_phase_2_assessed_reaches`. The goal is to find matching records where the unique identifier (`OBJECTID`) from the `landfills` table aligns with either the `RchID`, `RID`, or `SID` identifiers from the `sga_phase_2_assessed_reaches` table. Here's how we can do it:\n\n```sql\nSELECT DISTINCT l.OBJECTID, r.RchID\nFROM landfills l\nJOIN sga_phase_2_assessed_reaches r ON \n    l.OBJECTID = r.RchID OR \n    l.OBJECTID = r.RID OR \n    l.OBJECTID = r.SID;\n```\n\nIn this query:\n- `landfills` is the table containing details about each landfill, with `OBJECTID` as its unique identifier.\n- `sga_phase_2_assessed_reaches` contains information about the river segments being assessed, including `RchID`, `RID`, and `SID`.\n- By using a JOIN operation with conditions, we ensure that we only retrieve unique pairs of landfill identifiers (`OBJECTID`) and river segment identifiers (`RchID`) that match across both tables. This will give you a list of landfills that are potentially close to or directly affect the assessed river segments.\n\nThis query should provide you with valuable insights for your environmental impact assessment project.",
+  "results": [
+    [
+      731,
+      "FAL01",
+      "T1.01"
+    ],
+    [
+      734,
+      "FTL02",
+      "T1.02"
+    ],
+    [
+      735,
+      "BGL01",
+      "T1.03"
+    ],
+    [
+      736,
+      "S7L01",
+      "T1.04"
+    ],
+    [
+      742,
+      "CCL03",
+      "T1.05"
+    ],
+    [
+      746,
+      "",
+      "T1.06"
+    ],
+    [
+      747,
+      "GOL01",
+      "T1.06S1.01"
+    ],
+    [
+      804,
+      "C1L01",
+      "T1.07"
+    ],
+    [
+      805,
+      "WJL01",
+      "T1.08"
+    ],
+    [
+      806,
+      "WJL02",
+      "T1.09"
+    ]
+  ],
+  "sql skeleton": "select distinct _ ,_ ,_ from _ where _ = _ or _ =_ or _ =_",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "landfills": [
+      "landfills.X",
+      "landfills.Y",
+      "landfills.OBJECTID",
+      "landfills.PSINUM",
+      "landfills.SWFACID",
+      "landfills.SITENAME",
+      "landfills.LOCCONF",
+      "landfills.DATE_FIRST",
+      "landfills.DATE_LAST",
+      "landfills.ACRES",
+      "landfills.STATUS",
+      "landfills.WQMONITORING",
+      "landfills.GASCOLLECTION",
+      "landfills.TOWNNAME",
+      "landfills.LATITUDE",
+      "landfills.LONGITUDE"
+    ],
+    "sga_phase_2_assessed_reaches": [
+      "sga_phase_2_assessed_reaches.SGAT_ID",
+      "sga_phase_2_assessed_reaches.ProjectName",
+      "sga_phase_2_assessed_reaches.URLPage1",
+      "sga_phase_2_assessed_reaches.URLPage2",
+      "sga_phase_2_assessed_reaches.ReportList",
+      "sga_phase_2_assessed_reaches.FinalA",
+      "sga_phase_2_assessed_reaches.FinalB",
+      "sga_phase_2_assessed_reaches.FinalC",
+      "sga_phase_2_assessed_reaches.CorridorPlanA",
+      "sga_phase_2_assessed_reaches.CorridorPlanB",
+      "sga_phase_2_assessed_reaches.CorridorPlanC",
+      "sga_phase_2_assessed_reaches.RID",
+      "sga_phase_2_assessed_reaches.SID",
+      "sga_phase_2_assessed_reaches.OBJECTID",
+      "sga_phase_2_assessed_reaches.RchID",
+      "sga_phase_2_assessed_reaches.SegID",
+      "sga_phase_2_assessed_reaches.ProjectID"
+    ]
+  }
+}

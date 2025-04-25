@@ -1,0 +1,40 @@
+{
+  "sql": "SELECT \"xichengquxichengquguojietianqiaomingdan2490.OBJNAME\", \"shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239.道路\" FROM \"xichengquxichengquguojietianqiaomingdan2490\" INNER JOIN \"shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239\" ON \"xichengquxichengquguojietianqiaomingdan2490.OBJCODE\" = \"shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239.车位数\" WHERE \"xichengquxichengquguojietianqiaomingdan2490.OBJSTATE\" = '已确认' AND \"shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239.街道\" = '大望路'",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从两个表中查询满足特定条件的记录，具体是查询西城区国际天桥名单中状态为“已确认”的记录，并与石景山区道路停车电子收费道路信息中街道为“大望路”的记录进行关联，最终返回天桥名称和对应的道路名称。\n\n- **详细描述**：\n  - **涉及的表**：\n    1. `xichengquxichengquguojietianqiaomingdan2490`（西城区国际天桥名单表）\n    2. `shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239`（石景山区道路停车电子收费道路信息表）\n  - **涉及的列**：\n    1. `xichengquxichengquguojietianqiaomingdan2490.OBJNAME`（天桥名称）\n    2. `shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239.道路`（道路名称）\n    3. `xichengquxichengquguojietianqiaomingdan2490.OBJCODE`（天桥编码，用于关联）\n    4. `shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239.车位数`（车位数，用于关联）\n    5. `xichengquxichengquguojietianqiaomingdan2490.OBJSTATE`（天桥状态）\n    6. `shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239.街道`（街道名称）\n  - **条件**：\n    1. `xichengquxichengquguojietianqiaomingdan2490.OBJSTATE = '已确认'`（筛选状态为“已确认”的天桥记录）\n    2. `shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239.街道 = '大望路'`（筛选街道为“大望路”的道路记录）\n    3. 通过 `INNER JOIN` 关联两个表，关联条件是 `xichengquxichengquguojietianqiaomingdan2490.OBJCODE = shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239.车位数`（天桥编码与车位数相等）。\n\n- **业务场景**：\n  该查询可能用于城市交通管理部门或市政设施管理部门，用于分析特定区域（如西城区和石景山区）的天桥与道路停车收费设施的关联情况。例如，可能需要确认哪些已确认的天桥位于特定街道（如“大望路”）附近，以便进行交通流量分析、设施优化或规划新的停车位。\n\n- **用户描述**：\n  用户可能是城市交通规划师或市政设施管理员，他们需要了解在“大望路”街道附近已确认的天桥及其对应的道路信息。这种需求可能源于以下实际问题：\n  1. **设施优化**：用户可能需要评估天桥与停车位之间的匹配情况，以优化交通设施布局。\n  2. **规划新设施**：用户可能需要根据现有天桥和道路信息，规划新的停车位或调整现有停车位的分布。\n  3. **数据分析**：用户可能需要分析特定区域的交通流量或设施使用情况，以便制定更好的管理策略。\n  4. **问题排查**：用户可能需要排查某些天桥或道路停车设施的问题，例如确认天桥是否位于正确的道路上。",
+  "natural_language_query": "市民反映，西城区这边有一些国际天桥，听说都是已经确认投入使用的，但是最近去石景山大望路那边办事时，发现有些天桥和道路停车收费的情况对不上号。比如明明有天桥的地方却没有足够的停车位，或者停车收费的路段找不到对应的过街设施。想请相关部门帮忙查一下，西城区那些已经确认使用的天桥，在石景山大望路这一带都是怎么分布的？特别是想知道具体哪些天桥对应着哪些道路，这样我们老百姓出行也好心里有个数。主要是觉得现在过街和停车不太方便，希望能把这些信息公开透明一下。",
+  "results": 0,
+  "sql skeleton": "select _ from _ where _ = _",
+  "database": "交通服务",
+  "tables": {
+    "xichengquxichengquguojietianqiaomingdan2490": [
+      "xichengquxichengquguojietianqiaomingdan2490.OBJCODE",
+      "xichengquxichengquguojietianqiaomingdan2490.OBJNAME",
+      "xichengquxichengquguojietianqiaomingdan2490.DEPTCODE1",
+      "xichengquxichengquguojietianqiaomingdan2490.DEPTNAME1",
+      "xichengquxichengquguojietianqiaomingdan2490.DEPTCODE2",
+      "xichengquxichengquguojietianqiaomingdan2490.DEPTNAME2",
+      "xichengquxichengquguojietianqiaomingdan2490.DEPTCODE3",
+      "xichengquxichengquguojietianqiaomingdan2490.DEPTNAME3",
+      "xichengquxichengquguojietianqiaomingdan2490.BGCODE",
+      "xichengquxichengquguojietianqiaomingdan2490.OBJSTATE",
+      "xichengquxichengquguojietianqiaomingdan2490.ORDATE",
+      "xichengquxichengquguojietianqiaomingdan2490.CHDATE",
+      "xichengquxichengquguojietianqiaomingdan2490.DATASOURCE",
+      "xichengquxichengquguojietianqiaomingdan2490.OBJPOS",
+      "xichengquxichengquguojietianqiaomingdan2490.NOTE",
+      "xichengquxichengquguojietianqiaomingdan2490.ljdl",
+      "xichengquxichengquguojietianqiaomingdan2490.cd",
+      "xichengquxichengquguojietianqiaomingdan2490.kydw",
+      "xichengquxichengquguojietianqiaomingdan2490.kd",
+      "xichengquxichengquguojietianqiaomingdan2490.gd",
+      "xichengquxichengquguojietianqiaomingdan2490.mc",
+      "xichengquxichengquguojietianqiaomingdan2490.ghspxmh"
+    ],
+    "shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239": [
+      "shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239.区域",
+      "shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239.街道",
+      "shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239.道路",
+      "shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239.车位数"
+    ]
+  }
+}

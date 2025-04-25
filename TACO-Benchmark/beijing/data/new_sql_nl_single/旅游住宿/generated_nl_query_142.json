@@ -1,0 +1,23 @@
+{
+  "sql": "SELECT xichengquxichengqudengjilvyoujingquminglu14.序号, xichengquxichengqudengjilvyoujingquminglu14.景区名称, xichengquxichengqudengjilvyoujingquminglu14.等级, xichengquxichengqudengjilvyoujingquminglu14.地址, xichengquxichengqudengjilvyoujingquminglu14.咨询电话, xichengquxichengqudengjilvyoujingquminglu14.投诉电话, xichengquxichengqudengjilvyoujingquminglu14.邮编 FROM xichengquxichengqudengjilvyoujingquminglu14 WHERE xichengquxichengqudengjilvyoujingquminglu14.等级 LIKE 'AAAA%' OR xichengquxichengqudengjilvyoujingquminglu14.景区名称 LIKE '%AAAA%' OR xichengquxichengqudengjilvyoujingquminglu14.等级 LIKE 'AAA%' OR xichengquxichengqudengjilvyoujingquminglu14.景区名称 LIKE '%AAA%' OR shiwenhuahelvyoujuxingjifandianxinxi2036.��\u0011ࡱ\u001a� LIKE 'AAAA%' OR shiwenhuahelvyoujuxingjifandianxinxi2036.��\u0011ࡱ\u001a� LIKE '%AAAA%' OR shiwenhuahelvyoujuxingjifandianxinxi2036.��\u0011ࡱ\u001a� LIKE 'AAA%' OR shiwenhuahelvyoujuxingjifandianxinxi2036.��\u0011ࡱ\u001a� LIKE '%AAA%'",
+  "problem_description": "### 查询意图：\n该 SQL 语句的目的是从两个表中查询旅游景点或酒店信息，筛选出等级为“AAAA”或“AAA”（包括名称中包含这些关键词）的记录，并返回相关的基本信息。\n\n### 详细描述：\n1. **涉及的表**：\n   - `xichengquxichengqudengjilvyoujingquminglu14`：西城区登记旅游景点名录表，包含景区的序号、名称、等级、地址、咨询电话、投诉电话和邮编等信息。\n   - `shiwenhuahelvyoujuxingjifandianxinxi2036`：市文化和旅游局星级酒店信息表，但列名显示为乱码，可能包含与等级相关的信息。\n\n2. **查询的列**：\n   - 从 `xichengquxichengqudengjilvyoujingquminglu14` 表中查询以下列：\n     - 序号\n     - 景区名称\n     - 等级\n     - 地址\n     - 咨询电话\n     - 投诉电话\n     - 邮编\n   - 从 `shiwenhuahelvyoujuxingjifandianxinxi2036` 表中查询的列名显示为乱码，无法明确具体列名，但根据上下文推测可能是与等级或名称相关的列。\n\n3. **查询条件**：\n   - 筛选条件分为两部分：\n     - 针对 `xichengquxichengqudengjilvyoujingquminglu14` 表：\n       - 等级以“AAAA”开头或包含“AAAA”。\n       - 景区名称包含“AAAA”。\n       - 等级以“AAA”开头或包含“AAA”。\n       - 景区名称包含“AAA”。\n     - 针对 `shiwenhuahelvyoujuxingjifandianxinxi2036` 表：\n       - 乱码列以“AAAA”开头或包含“AAAA”。\n       - 乱码列以“AAA”开头或包含“AAA”。\n\n### 业务场景：\n1. **旅游景点管理**：\n   - 查询西城区内等级为“AAAA”或“AAA”的旅游景点，用于展示或管理高等级景区。\n   - 可能用于旅游局或相关部门的统计、监管或公共服务。\n\n2. **酒店信息管理**：\n   - 查询星级酒店中等级为“AAAA”或“AAA”的酒店信息，用于酒店评级管理或游客推荐。\n\n3. **数据整合**：\n   - 将旅游景点和酒店信息整合查询，可能用于旅游指南、公共服务平台或数据分析。\n\n### 用户描述：\n1. **旅游局工作人员**：\n   - 需要统计或展示辖区内的高等级（AAAA或AAA）旅游景点和酒店信息，以便进行监管或推广。\n   - 可能遇到的问题是数据分散在不同表中，需要整合查询。\n\n2. **游客或公众**：\n   - 需要查询高等级的旅游景点或酒店信息，以便选择优质的旅游目的地或住宿。\n   - 可能遇到的问题是信息不集中，难以快速找到高等级的选择。\n\n3. **数据分析师**：\n   - 需要分析高等级旅游景点或酒店的分布或特征，用于市场研究或规划。\n   - 可能遇到的问题是数据表结构不清晰或列名不规范（如乱码）。",
+  "natural_language_query": "市民反映，最近想带家人去西城区旅游，听说AAAA级和AAA级的景点和酒店比较靠谱，但在网上查到的信息特别零散。想问问西城区有哪些高等级的旅游景点和酒店？最好是4A级或者3A级的，包括景区的名称、地址、联系电话这些基本信息。另外发现有些酒店信息好像不太规范，显示的是乱码，这种情况能不能也帮忙查一下？主要是想找些靠谱的旅游推荐，免得踩坑。来电咨询西城区高等级旅游景点和酒店信息。",
+  "results": 0,
+  "sql skeleton": "select _ from _ where _ or _ '%_ %",
+  "database": "旅游住宿",
+  "tables": {
+    "xichengquxichengqudengjilvyoujingquminglu14": [
+      "xichengquxichengqudengjilvyoujingquminglu14.序号",
+      "xichengquxichengqudengjilvyoujingquminglu14.景区名称",
+      "xichengquxichengqudengjilvyoujingquminglu14.等级",
+      "xichengquxichengqudengjilvyoujingquminglu14.地址",
+      "xichengquxichengqudengjilvyoujingquminglu14.咨询电话",
+      "xichengquxichengqudengjilvyoujingquminglu14.投诉电话",
+      "xichengquxichengqudengjilvyoujingquminglu14.邮编"
+    ],
+    "shiwenhuahelvyoujuxingjifandianxinxi2036": [
+      "shiwenhuahelvyoujuxingjifandianxinxi2036.��\u0011ࡱ\u001a�",
+      "shiwenhuahelvyoujuxingjifandianxinxi2036.\u0001\u0001"
+    ]
+  }
+}

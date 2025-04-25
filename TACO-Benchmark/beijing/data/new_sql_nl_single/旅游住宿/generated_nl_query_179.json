@@ -1,0 +1,44 @@
+{
+  "sql": "SELECT \"pingguqupingguqushandongzhuangzhendengjiminsu3496.山东庄镇等级民宿\", \"shiguihuaziranziyuanweiyinhangpiaohao1522.HNAME\" FROM \"pingguqupingguqushandongzhuangzhendengjiminsu3496\" - \"shiguihuaziranziyuanweiyinhangpiaohao1522\" WHERE \"pingguqupingguqushandongzhuangzhendengjiminsu3496.山东庄镇等级民宿\" = '某具体值' ;",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从两个数据表（或视图）中查询特定条件下的数据，具体是查询\"pingguqupingguqushandongzhuangzhendengjiminsu3496\"表中\"山东庄镇等级民宿\"列的值等于某个具体值的记录，并同时返回\"shiguihuaziranziyuanweiyinhangpiaohao1522\"表中的\"HNAME\"列的值。\n\n- **详细描述**：\n  - **涉及的表**：\n    1. `pingguqupingguqushandongzhuangzhendengjiminsu3496`：该表可能存储了关于山东庄镇等级民宿的相关信息。\n    2. `shiguihuaziranziyuanweiyinhangpiaohao1522`：该表可能存储了与自然景观或银行票号相关的信息，具体内容可能包括景点名称或其他标识。\n  - **涉及的列**：\n    1. `pingguqupingguqushandongzhuangzhendengjiminsu3496.山东庄镇等级民宿`：该列可能存储了山东庄镇等级民宿的名称或标识。\n    2. `shiguihuaziranziyuanweiyinhangpiaohao1522.HNAME`：该列可能存储了景点名称或其他相关名称。\n  - **条件**：\n    - `pingguqupingguqushandongzhuangzhendengjiminsu3496.山东庄镇等级民宿 = '某具体值'`：该条件限制了查询结果只返回\"山东庄镇等级民宿\"列的值等于某个具体值的记录。\n\n- **业务场景**：\n  - 该查询可能用于旅游或民宿管理系统中，目的是查找某个特定民宿及其关联的自然景观或银行票号信息。例如，用户可能需要了解某个等级民宿附近的景点或相关服务信息。\n  - 另一个可能的场景是数据整合或报表生成，需要将民宿信息与其他相关数据（如景点名称）关联起来，以便进行进一步的分析或展示。\n\n- **用户描述**：\n  - 用户可能是一个旅游规划者或民宿管理者，希望了解某个特定等级民宿的详细信息及其周边的自然景观或相关服务。例如，用户可能正在规划一条旅游路线，需要知道某个民宿附近有哪些景点可供游客参观。\n  - 用户也可能是一个数据分析师，需要将民宿数据与其他相关数据（如景点名称）进行关联，以便生成综合性的报表或进行市场分析。例如，分析哪些民宿附近的景点更受欢迎，从而优化民宿的推广策略。",
+  "natural_language_query": "市民反映，最近在平谷区山东庄镇预订了一家叫\"山水人家\"的等级民宿，想了解一下周边有什么自然景点可以游玩。但是通过旅游APP查询时，发现显示的信息不太完整，只看到民宿信息却找不到附近的景点介绍。我记得之前好像听说过这附近有个湿地公园还是什么自然景区来着，但不确定具体叫什么名字。能不能帮忙查一下这个\"山水人家\"民宿对应的周边景点信息？主要是想规划一下周末带家人出游的行程，需要知道附近有哪些好玩的自然景观。来电反映查询民宿周边景点信息问题。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ WHERE _ = _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "pingguqupingguqushandongzhuangzhendengjiminsu3496": [
+      "pingguqupingguqushandongzhuangzhendengjiminsu3496.山东庄镇等级民宿",
+      "pingguqupingguqushandongzhuangzhendengjiminsu3496.Unnamed: 1",
+      "pingguqupingguqushandongzhuangzhendengjiminsu3496.Unnamed: 2"
+    ],
+    "shiguihuaziranziyuanweiyinhangpiaohao1522": [
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.HID",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.FATHERID",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.HNAME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.OTHERNAME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.CATEGORY",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.SUBCATEGOR",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.COUNTYNAME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.STREETNAME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.DYNASTY",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.SUBDYNASTY",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.ADDRESS",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.RANK",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.BATCH",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.PUBTIME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.USERS",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.PURPOSE",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.OWNERSHIP",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.STATEEVALU",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.SINGLERELI",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.PROTECTION",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.ATTACHEDRE",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.RELATEDPEO",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.RELATEDEVE",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.PUBNAME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.SOURCE",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.EDITOR",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.ISREDUNDAN"
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "sql": "SELECT \n    shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.本市市管游览参观点门票价格,\n    xichengqubeijingshiwenwubaohudanwei31.名称\nFROM \n    shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777\nJOIN \n    xichengqubeijingshiwenwubaohudanwei31 ON shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.序号 = xichengqubeijingshiwenwubaohudanwei31.序号\nWHERE \n    xichengqubeijingshiwenwubaohudanwei31.名称 = '指定名称';",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是查询北京市西城区文物保护单位中名称为“指定名称”的景点的门票价格信息。\n\n- **详细描述**：\n  - **涉及的表**：\n    1. `shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777`：该表名称较长，可能是一个存储游览参观点门票价格信息的表，包含序号和本市市管游览参观点门票价格等列。\n    2. `xichengqubeijingshiwenwubaohudanwei31`：该表名称表明其存储的是北京市西城区文物保护单位的信息，包含序号和名称等列。\n  - **涉及的列**：\n    1. `shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.本市市管游览参观点门票价格`：该列存储了游览参观点的门票价格信息。\n    2. `xichengqubeijingshiwenwubaohudanwei31.名称`：该列存储了文物保护单位的名称信息。\n    3. 两表通过`序号`列进行关联。\n  - **条件**：\n    - `xichengqubeijingshiwenwubaohudanwei31.名称 = '指定名称'`：筛选出名称为“指定名称”的文物保护单位。\n\n- **业务场景**：该查询可以用于旅游管理系统或门票价格查询系统中，帮助用户快速获取特定文物保护单位的门票价格信息。例如，游客或旅行社在规划行程时，可能需要了解某个具体景点的门票价格。\n\n- **用户描述**：用户可能是一个游客或旅行社工作人员，他们想要了解北京市西城区某个具体文物保护单位（如“指定名称”）的门票价格，以便规划行程或预算。通过该查询，用户可以快速获取所需信息，而不需要手动查找或翻阅多个数据源。",
+  "natural_language_query": "市民反映，最近想去西城区一个叫\"指定名称\"的文物保护景点参观，但在网上查了半天都找不到具体的门票价格信息。这个景点应该是挺有名的文物保护单位，朋友说去年去过但记不清门票多少钱了。现在想提前了解一下门票价格好做预算，带着家里老人孩子一起去玩。能不能帮忙查一下这个景点的门票要多少钱？是免费还是要收费的？收费的话有没有老人小孩的优惠？来电咨询西城区文物保护景点门票价格问题。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ WHERE _ = _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777": [
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.本市市管游览参观点门票价格",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 1",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 2",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 3",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 4",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 5",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 6"
+    ],
+    "xichengqubeijingshiwenwubaohudanwei31": [
+      "xichengqubeijingshiwenwubaohudanwei31.序号",
+      "xichengqubeijingshiwenwubaohudanwei31.名称",
+      "xichengqubeijingshiwenwubaohudanwei31.地址"
+    ]
+  }
+}

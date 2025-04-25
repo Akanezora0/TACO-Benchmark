@@ -1,0 +1,18 @@
+{
+  "sql": "SELECT \"shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239\".\"区域\", \"shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239\".\"街道\", \"shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239\".\"道路\", \"shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239\".\"车位数\" FROM \"shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239\" -\"shijiaotongweigongjiaoxianluxinxichuxingfuwu3666\".线路代码 WHERE \"shijiaotongweigongjiaoxianluxinxichuxingfuwu3666\".\"线路代码\" = '1239';",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ WHERE _ = _ ;",
+  "database": "交通服务",
+  "tables": {
+    "shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239": [
+      "shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239.区域",
+      "shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239.街道",
+      "shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239.道路",
+      "shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239.车位数"
+    ],
+    "shijiaotongweigongjiaoxianluxinxichuxingfuwu3666": [
+      "shijiaotongweigongjiaoxianluxinxichuxingfuwu3666.线路代码",
+      "shijiaotongweigongjiaoxianluxinxichuxingfuwu3666.路线名称"
+    ]
+  }
+}

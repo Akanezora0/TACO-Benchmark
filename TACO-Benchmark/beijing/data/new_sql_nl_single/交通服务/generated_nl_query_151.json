@@ -1,0 +1,25 @@
+{
+  "sql": "SELECT \"shijiaotongweichengkeyindaojichuxinxi3710.公交线路信息\", \"shijiaotongweichengkeyindaojichuxinxi3710.轨道线路信息\", \"shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.地址\" FROM \"shijiaotongweichengkeyindaojichuxinxi3710\" JOIN \"shijiaotongweichaoxianchaozaihuochexiezaichangdi3663\" ON \"shijiaotongweichengkeyindaojichuxinxi3710.更新时间\" = \"shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.行政区划代码\";",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从两个表中联合查询公交线路信息、轨道线路信息以及地址信息，通过更新时间与行政区划代码的关联条件进行数据匹配。\n\n- **详细描述**：\n  - **涉及的表**：\n    1. `shijiaotongweichengkeyindaojichuxinxi3710`：该表可能包含公交线路和轨道线路的基础信息。\n    2. `shijiaotongweichaoxianchaozaihuochexiezaichangdi3663`：该表可能包含地址信息以及与行政区划相关的数据。\n  - **涉及的列**：\n    1. `shijiaotongweichengkeyindaojichuxinxi3710.公交线路信息`：公交线路的具体信息。\n    2. `shijiaotongweichengkeyindaojichuxinxi3710.轨道线路信息`：轨道线路的具体信息。\n    3. `shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.地址`：具体的地址信息。\n  - **关联条件**：通过 `shijiaotongweichengkeyindaojichuxinxi3710.更新时间` 和 `shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.行政区划代码` 进行关联匹配。\n\n- **业务场景**：\n  - 该查询可能用于交通管理部门或城市规划部门，用于分析公交线路、轨道线路与行政区划地址之间的关联关系。\n  - 例如，可以用于检查某个行政区划内的公交和轨道线路覆盖情况，或者用于规划新的交通线路时参考现有线路和地址信息。\n\n- **用户描述**：\n  - 用户可能是交通规划师或城市管理者，他们需要了解特定行政区划内的公交和轨道线路分布情况，以便优化交通网络或解决交通拥堵问题。\n  - 用户可能遇到的实际问题包括：某个区域的公交覆盖不足，或者需要新增轨道线路以缓解交通压力。通过查询这些信息，用户可以更好地制定交通规划方案。",
+  "natural_language_query": "市民反映，朝阳区大屯路这边公交地铁特别不方便，每天早晚高峰都特别堵。想了解一下这片区域的公交线路和地铁线路都是怎么分布的，特别是最近有没有新增或调整的线路。我家住在慧忠北里小区，感觉这边去地铁站要走好久，能不能查查附近有没有规划新的公交站点或者地铁口？最好能看看这些线路都覆盖哪些具体的小区和街道，这样我们居民出行也能更方便些。来电反映朝阳区大屯路周边公交地铁线路覆盖不足的问题。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ ;",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweichengkeyindaojichuxinxi3710": [
+      "shijiaotongweichengkeyindaojichuxinxi3710.序号",
+      "shijiaotongweichengkeyindaojichuxinxi3710.枢纽站信息",
+      "shijiaotongweichengkeyindaojichuxinxi3710.周边交通指南",
+      "shijiaotongweichengkeyindaojichuxinxi3710.公交线路信息",
+      "shijiaotongweichengkeyindaojichuxinxi3710.轨道线路信息",
+      "shijiaotongweichengkeyindaojichuxinxi3710.更新时间",
+      "shijiaotongweichengkeyindaojichuxinxi3710.共享时间 "
+    ],
+    "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663": [
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.行政区划代码",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.站点名称",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.联系电话",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.地址"
+    ]
+  }
+}

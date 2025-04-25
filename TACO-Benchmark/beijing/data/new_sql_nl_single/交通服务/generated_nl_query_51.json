@@ -1,0 +1,18 @@
+{
+  "sql": "SELECT \"shijiaotongweiquanshiqicheweixiuqiyexinxi3673.统一社会信用代码\", \"shijiaotongweiquanshiqicheweixiuqiyexinxi3673.业户名称\" FROM \"shijiaotongweiquanshiqicheweixiuqiyexinxi3673\" -\"shijiaotongweichuzuyehujibenxinxi3664\" WHERE \"shijiaotongweichuzuyehujibenxinxi3664.经营业户名称\" = '经营业户名称';",
+  "problem_description": "### **查询意图**：\n该 SQL 语句的目的是查询存在于表 `shijiaotongweiquanshiqicheweixiuqiyexinxi3673` 但不存在于表 `shijiaotongweichuzuyehujibenxinxi3664` 中的汽车维修企业的统一社会信用代码和业户名称，且筛选条件是 `shijiaotongweichuzuyehujibenxinxi3664` 表中的经营业户名称为 `'经营业户名称'`。\n\n### **详细描述**：\n1. **涉及的表**：\n   - `shijiaotongweiquanshiqicheweixiuqiyexinxi3673`（可能存储的是全市汽车维修企业的基本信息）。\n   - `shijiaotongweichuzuyehujibenxinxi3664`（可能存储的是出租业户的基本信息）。\n\n2. **查询的列**：\n   - `shijiaotongweiquanshiqicheweixiuqiyexinxi3673.统一社会信用代码`（汽车维修企业的统一社会信用代码）。\n   - `shijiaotongweiquanshiqicheweixiuqiyexinxi3673.业户名称`（汽车维修企业的名称）。\n\n3. **查询条件**：\n   - 使用 `-`（差集运算）查询在 `shijiaotongweiquanshiqicheweixiuqiyexinxi3673` 中存在但在 `shijiaotongweichuzuyehujibenxinxi3664` 中不存在的记录。\n   - 进一步筛选 `shijiaotongweichuzuyehujibenxinxi3664.经营业户名称 = '经营业户名称'` 的记录（这里的 `'经营业户名称'` 可能是占位符或实际业务中的特定名称）。\n\n### **业务场景**：\n该查询可能用于以下业务场景：\n1. **汽车维修行业监管**：交通管理部门可能需要找出全市范围内从事汽车维修业务但未在出租业户信息表中登记的企业，以便进行合规性检查或补充管理。\n2. **数据比对与清理**：用于比对两个数据表之间的差异，确保数据一致性或发现遗漏登记的企业。\n3. **行业分类管理**：区分纯汽车维修企业和同时从事出租业务的维修企业，以便分类管理或统计。\n\n### **用户描述**：\n在该业务场景下，用户（如交通管理部门或数据分析人员）可能遇到以下问题或需求：\n1. **合规性检查**：需要确保所有汽车维修企业均已按规定登记，避免存在未纳入管理的企业。\n2. **数据缺失排查**：发现某些企业可能在维修企业信息表中存在，但在出租业户信息表中缺失，需要核实是否数据录入错误或业务范围变更。\n3. **行业分析**：区分纯维修企业和兼营出租业务的企业，以便制定不同的管理政策或统计行业分布情况。\n\n### **备注**：\n- 查询中的 `'经营业户名称'` 可能是占位符，实际使用时可能替换为具体的业户名称或动态参数。\n- 如果 `'经营业户名称'` 是固定值，可能需要确认其业务含义，否则查询结果可能不符合预期。",
+  "natural_language_query": "市民反映，最近在整理汽车维修企业信息时发现一个问题：有些修车厂明明在咱们全市的维修企业名单里，但在出租车辆管理的业户名单里却找不到。特别是那些标着\"经营业户名称\"的维修企业，想请帮忙查一下这些企业的信用代码和具体名称。我怀疑可能是数据漏登记了，或者是有些企业改了经营范围没及时更新。这个情况挺让人头疼的，因为会影响行业监管，万一有企业无证经营出租业务就麻烦了。能不能帮忙核实下哪些维修企业没在出租业户系统里登记？主要是想看看有没有管理漏洞需要补上。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ WHERE _ = _ ;",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweiquanshiqicheweixiuqiyexinxi3673": [
+      "shijiaotongweiquanshiqicheweixiuqiyexinxi3673.统一社会信用代码",
+      "shijiaotongweiquanshiqicheweixiuqiyexinxi3673.业户名称",
+      "shijiaotongweiquanshiqicheweixiuqiyexinxi3673.业户地址"
+    ],
+    "shijiaotongweichuzuyehujibenxinxi3664": [
+      "shijiaotongweichuzuyehujibenxinxi3664.经营业户名称"
+    ]
+  }
+}

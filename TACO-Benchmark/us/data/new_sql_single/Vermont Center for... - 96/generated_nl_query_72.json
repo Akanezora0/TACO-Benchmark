@@ -1,0 +1,52 @@
+{
+  "sql": "SELECT invasive_species.\"InvasiveName\", invasive_species.\"ObservationDate\", vermont_biophysical_regions.\"NAME\" FROM invasive_species, vermont_biophysical_regions WHERE invasive_species.\"InfestedArea\" > 100 AND invasive_species.\"Town\" = 'Burlington' ORDER BY invasive_species.\"TreatmentEffectiveness\" DESC;",
+  "problem_description": "### Query intent:\nThis SQL statement aims to retrieve specific information about invasive species that have spread over an area larger than 100 units within the town of Burlington, Vermont. The data is sorted by the effectiveness of treatments applied to these species in descending order.\n\n### Detailed description:\n- **Tables involved**: `invasive_species` and `vermont_biophysical_regions`.\n  - `invasive_species`: This table contains information about invasive species, including their names (`InvasiveName`), observation dates (`ObservationDate`), the area they have infested (`InfestedArea`), the town they are found in (`Town`), and the effectiveness of treatments applied (`TreatmentEffectiveness`).\n  - `vermont_biophysical_regions`: This table provides geographical information about different regions in Vermont, with each region having a unique name (`NAME`).\n\n- **Columns selected**: `invasive_species.\"InvasiveName\"`, `invasive_species.\"ObservationDate\"`, `vermont_biophysical_regions.\"NAME\"`.\n  - `invasive_species.\"InvasiveName\"`: The name of the invasive species.\n  - `invasive_species.\"ObservationDate\"`: The date when the species was observed.\n  - `vermont_biophysical_regions.\"NAME\"`: The name of the biophysical region where the species is found.\n\n- **Conditions specified**:\n  - `invasive_species.\"InfestedArea\" > 100`: Only invasive species that have infested more than 100 units of area are considered.\n  - `invasive_species.\"Town\" = 'Burlington'`: The query filters for species found specifically in the town of Burlington.\n\n- **Sorting criterion**: `ORDER BY invasive_species.\"TreatmentEffectiveness\" DESC`.\n  - The results are sorted in descending order based on the treatment effectiveness of the species, meaning species with the most effective treatments are listed first.\n\n### Business scenario:\nThis query could be useful in environmental management and conservation efforts. It helps researchers and policymakers understand which invasive species are causing significant ecological damage in a particular area (Burlington, Vermont) and which ones have been treated most effectively. This information can guide resource allocation for further monitoring, prevention strategies, and treatment plans.\n\n### User description:\nA user, such as an environmental scientist or a local government official, might need this information to prioritize which invasive species to manage next based on their impact and the success of past interventions. For example, if the query reveals that certain species have been successfully reduced in size",
+  "natural_language_query": "As an environmental researcher focused on invasive species management in the town of Burlington, Vermont, I am seeking information on species that have spread over an area larger than 100 units. My interest is particularly piqued in those species that were recently observed in the town of Burlington. To better understand our current situation and plan effective interventions, I would like to know the names of these invasive species, the dates they were last observed, and the specific regions they have affected in Burlington. Additionally, sorting the data by the effectiveness of treatments applied against these species in descending order will help us identify which species have responded best to our interventions. This information is crucial for prioritizing future management efforts and ensuring that our resources are allocated efficiently towards the most impactful species.",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ from _ where _ = _ order by _ ;",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "invasive_species": [
+      "invasive_species.X",
+      "invasive_species.Y",
+      "invasive_species.SiteName",
+      "invasive_species.ObservationID",
+      "invasive_species.InvasiveName",
+      "invasive_species.ObservationDate",
+      "invasive_species.Observer",
+      "invasive_species.SurveyType",
+      "invasive_species.Latitude",
+      "invasive_species.Longitude",
+      "invasive_species.Town",
+      "invasive_species.GrossArea",
+      "invasive_species.InfestedArea",
+      "invasive_species.PlantDescription",
+      "invasive_species.DistributionName",
+      "invasive_species.AssessmentDate",
+      "invasive_species.TreatmentDate",
+      "invasive_species.TreatmentEffectiveness",
+      "invasive_species.TreatmentType",
+      "invasive_species.TreatmentPerson",
+      "invasive_species.TreatmentAssessmentDate",
+      "invasive_species.Assessor",
+      "invasive_species.TreatmentAssessmentNotes",
+      "invasive_species.TreatmentHours",
+      "invasive_species.ChemicalName",
+      "invasive_species.ChemicalConsentration",
+      "invasive_species.ChemicalOunces",
+      "invasive_species.ApplicationMethod",
+      "invasive_species.CertifiedApplicator",
+      "invasive_species.EPARegistationNumber"
+    ],
+    "vermont_biophysical_regions": [
+      "vermont_biophysical_regions.OBJECTID",
+      "vermont_biophysical_regions.ACRES",
+      "vermont_biophysical_regions.NAME",
+      "vermont_biophysical_regions.SUBSEC_ID",
+      "vermont_biophysical_regions.BPR_NUM",
+      "vermont_biophysical_regions.BPR_NUMID",
+      "vermont_biophysical_regions.SHAPESTArea",
+      "vermont_biophysical_regions.SHAPESTLength"
+    ]
+  }
+}

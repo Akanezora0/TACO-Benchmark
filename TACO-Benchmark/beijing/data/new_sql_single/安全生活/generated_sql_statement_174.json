@@ -1,0 +1,7 @@
+{
+  "sql": "select t1.col1, t1.col2, t1.col3, t2.col4, t2.col5, t2.col6, t2.col7, t2.col8 \nfrom table1 t1 \nleft join table2 t2 \non t1.id = t2.id \nwhere t1.condition1 = 'value1' \nand t1.condition2 = 'value2' \nand (t2.function(col9), t2.function(col10)) = ('result1', 'result2')\n```",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ from _ left join _ on _ ._ = _ ._ where _ ._ = _ and _ ._ = _ and _ (_ ,_ ) = _",
+  "database": "安全生活",
+  "tables": {}
+}

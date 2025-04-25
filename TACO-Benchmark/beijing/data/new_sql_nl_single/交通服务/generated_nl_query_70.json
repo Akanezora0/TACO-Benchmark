@@ -1,0 +1,27 @@
+{
+  "sql": "SELECT shijiaotongweiguidaoyanshixinxi3711.序号, shijiaotongweiguidaoyanshixinxi3711.总车次, shijiaotongweiguidaoyanshixinxi3711.延时开始时间, shijiaotongweiguidaoyanshixinxi3711.延时结束时间 FROM shijiaotongweiguidaoyanshixinxi3711 WHERE shijiaotongweiguidaoyanshixinxi3711.延时线路 = '指定线路名称'",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从表 `shijiaotongweiguidaoyanshixinxi3711` 中查询指定线路的延时信息，包括序号、总车次、延时开始时间和延时结束时间。\n\n### **详细描述**  \n1. **涉及的表**：  \n   - `shijiaotongweiguidaoyanshixinxi3711`（可能为“市交通违规/轨道延时信息”的拼音缩写，存储轨道交通或公交线路的延时数据）。  \n\n2. **查询的列**：  \n   - `序号`：可能表示记录的编号或排序。  \n   - `总车次`：可能表示该线路受影响的车次总数。  \n   - `延时开始时间`：记录延时事件的起始时间。  \n   - `延时结束时间`：记录延时事件的结束时间。  \n\n3. **查询条件**：  \n   - `延时线路 = '指定线路名称'`：筛选出特定线路（如“1号线”“2号线”等）的延时记录。  \n\n### **业务场景**  \n该查询可用于以下业务场景：  \n1. **交通管理部门**：监控特定线路的延时情况，分析延误频率和时长，优化调度策略。  \n2. **乘客信息服务**：在APP或公告牌上显示某条线路的实时延误信息，帮助乘客调整出行计划。  \n3. **数据分析**：统计某线路的历史延误数据，评估其对整体交通网络的影响。  \n\n### **用户描述**  \n1. **交通管理者**：  \n   - 需求：快速获取某条线路的延误记录，以便排查原因（如设备故障、天气影响等）。  \n   - 问题：需要知道哪些线路延误最频繁，以及每次延误的持续时间。  \n\n2. **乘客**：  \n   - 需求：查询自己乘坐的线路是否延误，避免耽误行程。  \n   - 问题：无法实时获知延误信息，导致等待时间过长或错过重要安排。  \n\n3. **数据分析师**：  \n   - 需求：分析特定线路的延误规律，为优化运营提供依据。  \n   - 问题：缺乏结构化数据支持决策，需从海量记录中提取关键信息。  \n\n### **补充说明**  \n- 表名和字段名为拼音缩写，可能来自中文数据库设计，建议优化命名以提高可读性（如改为 `traffic_delay_info`）。  \n- 若 `指定线路名称` 是变量，实际应用中可能通过参数化查询（如 `WHERE 延时线路 = ?`）动态传入值。",
+  "natural_language_query": "市民反映，最近几天早上坐地铁1号线老是延误，上班都迟到了好几次。想问问这条线到底怎么回事啊？能不能查一下1号线最近一段时间的延误情况，比如一般从几点开始延误、延误多久能恢复？昨天早上好像从7点半就开始堵了，到8点15分才通，这种情况是不是经常发生啊？来电反映地铁1号线频繁延误问题，希望相关部门能给个说法。",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ ,_ from _ where _ = _",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweiguidaoyanshixinxi3711": [
+      "shijiaotongweiguidaoyanshixinxi3711.序号",
+      "shijiaotongweiguidaoyanshixinxi3711.总车次",
+      "shijiaotongweiguidaoyanshixinxi3711.延时开始时间",
+      "shijiaotongweiguidaoyanshixinxi3711.延时结束时间",
+      "shijiaotongweiguidaoyanshixinxi3711.延时线路",
+      "shijiaotongweiguidaoyanshixinxi3711.共享时间",
+      "shijiaotongweiguidaoyanshixinxi3711.更新时间"
+    ],
+    "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210": [
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.监管对象",
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.实施机构",
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.检查行为编号",
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.检查时间",
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.检查人员",
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.检查结果"
+    ]
+  }
+}

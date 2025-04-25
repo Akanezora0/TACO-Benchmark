@@ -1,0 +1,20 @@
+{
+  "sql": "SELECT \n    shijiaotongweiweixianpinyunshuqiye3674.企业名称, \n    shijiaotongweiweixianpinyunshuqiye3674.所属地区, \n    shijiaotongweiweixianpinyunshuqiye3674.经营许可证号, \n    shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.评定等级, \n    shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.所属地区, \n    shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.年份, \n    shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.统一社会信用代码 \nFROM \n    shijiaotongweiweixianpinyunshuqiye3674 \n    INNER JOIN \n    shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672 \n        ON shijiaotongweiweixianpinyunshuqiye3674.企业名称 = shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.企业名称 \nWHERE \n    shijiaotongweiweixianpinyunshuqiye3674.所属地区 = '指定地区' AND shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.评定等级 = '优秀'",
+  "results": 0,
+  "sql skeleton": "SELECT _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ FROM _ WHERE _ ._ = _ AND _ ._ ;",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweiweixianpinyunshuqiye3674": [
+      "shijiaotongweiweixianpinyunshuqiye3674.企业名称",
+      "shijiaotongweiweixianpinyunshuqiye3674.所属地区",
+      "shijiaotongweiweixianpinyunshuqiye3674.经营许可证号"
+    ],
+    "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672": [
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.企业名称",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.评定等级",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.所属地区",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.年份",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.统一社会信用代码"
+    ]
+  }
+}

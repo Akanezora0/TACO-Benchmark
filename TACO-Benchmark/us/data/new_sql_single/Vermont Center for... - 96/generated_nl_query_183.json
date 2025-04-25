@@ -1,0 +1,46 @@
+{
+  "sql": "SELECT \n    river_main_stem_waterbodies_wbid.OBJECTID, \n    river_main_stem_waterbodies_wbid.WBID, \n    river_main_stem_waterbodies_wbid.WBNAME, \n    river_main_stem_waterbodies_wbid.WBDESC, \n    salt_storage_record_table.OBJECTID, \n    salt_storage_record_table.fulcrum_id, \n    salt_storage_record_table.fulcrum_parent_id, \n    salt_storage_record_table.fulcrum_record_id \nFROM \n    river_main_stem_waterbodies_wbid \nJOIN \n    salt_storage_record_table \nON \n    river_main_stem_waterbodies_wbid.OBJECTID = salt_storage_record_table.OBJECTID \nWHERE \n    river_main_stem_waterbodies_wbid.WBID = 'exampleWBID' \nAND \n    salt_storage_record_table.fulcrum_id = 'exampleFulcrumID' \nAND \n    salt_storage_record_table.fulcrum_parent_id = 'exampleParentID';",
+  "problem_description": "### Query intent:\nThe SQL statement is designed to retrieve specific records from two tables (`river_main_stem_waterbodies_wbid` and `salt_storage_record_table`) based on matching `OBJECTID` values and certain criteria within the `salt_storage_record_table`.\n\n### Detailed description:\n1. **Table `river_main_stem_waterbodies_wbid`**:\n   - `OBJECTID`: A unique identifier for each record in this table.\n   - `WBID`, `WBNAME`, `WBDESC`: Columns related to water body identification, name, and description.\n\n2. **Table `salt_storage_record_table`**:\n   - `OBJECTID`: Matches with `river_main_stem_waterbodies_wbid.OBJECTID` to ensure records from both tables are related.\n   - `fulcrum_id`, `fulcrum_parent_id`, `fulcrum_record_id`: Columns likely related to storage records and their hierarchy.\n\n3. **Join Condition**:\n   - The `JOIN` clause links `river_main_stem_waterbodies_wbid` and `salt_storage_record_table` based on matching `OBJECTID` values, ensuring that only records where there is a correspondence between the two tables are included in the result set.\n\n4. **Where Clause**:\n   - `river_main_stem_waterbodies_wbid.WBID = 'exampleWBID'`: This condition filters the records from `river_main_stem_waterbodies_wbid` to those with a specific `WBID`.\n   - `salt_storage_record_table.fulcrum_id = 'exampleFulcrumID'` and `salt_storage_record_table.fulcrum_parent_id = 'exampleParentID'`: These conditions further narrow down the selection within `salt_storage_record_table` to records that match specified `fulcrum_id` and `fulcrum_parent_id`.\n\n### Business scenario:\nThis query could be utilized in a scenario where an environmental monitoring system tracks various water bodies (identified by `WBID`) and associated salt storage records (within `salt_storage_record_table`). For instance, if a user wants to inspect detailed records for a specific water body (`exampleWBID`) and the exact salt storage record (`exampleFulcrumID`) along with its parent record (`exampleParentID`), this query would provide the necessary data.\n\n### User description:\nA user working in environmental management might need to access detailed information about a particular water body's environmental conditions, especially when there is a specific interest in how salt",
+  "natural_language_query": "A user, possibly an environmental officer or a researcher, is looking to gather comprehensive details about the environmental conditions of a specific water body named \"exampleWBID\" in our database. They are particularly interested in tracking the associated salt storage records linked to this water body. Specifically, they want to examine any records that have a fulcrum ID of \"exampleFulcrumID\" and its parent ID as \"exampleParentID\". \n\nTo facilitate this investigation, the user would like to run a SQL query that combines data from two tables: \"river_main_stem_waterbodies_wbid\" and \"salt_storage_record_table\". This query should first join these tables based on matching OBJECTID values to ensure that every piece of data retrieved is directly related and corresponds correctly between the two sets of records. Following this join, the query should filter the results to include only those rows where the WBID matches \"exampleWBID\", and the fulcrum ID and fulcrum parent ID meet the criteria of \"exampleFulcrumID\" and \"exampleParentID\" respectively. This way, the user can effectively analyze the specific environmental and storage conditions related to the mentioned water body and its associated salt storage activities.",
+  "results": 0,
+  "sql skeleton": "SELECT _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ FROM _ JOIN _ ON _ ._ = _ ._ WHERE _ ._ = _ and _ ._ = _ AND _ ._ = _ ;",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "river_main_stem_waterbodies_wbid": [
+      "river_main_stem_waterbodies_wbid.OBJECTID",
+      "river_main_stem_waterbodies_wbid.WBID",
+      "river_main_stem_waterbodies_wbid.WBNAME",
+      "river_main_stem_waterbodies_wbid.WBDESC"
+    ],
+    "salt_storage_record_table": [
+      "salt_storage_record_table.OBJECTID",
+      "salt_storage_record_table.fulcrum_id",
+      "salt_storage_record_table.fulcrum_parent_id",
+      "salt_storage_record_table.fulcrum_record_id",
+      "salt_storage_record_table.version",
+      "salt_storage_record_table.geometry",
+      "salt_storage_record_table.created_at",
+      "salt_storage_record_table.updated_at",
+      "salt_storage_record_table.created_by",
+      "salt_storage_record_table.updated_by",
+      "salt_storage_record_table.address_sub_thoroughfare",
+      "salt_storage_record_table.address_thoroughfare",
+      "salt_storage_record_table.address_suite",
+      "salt_storage_record_table.address_locality",
+      "salt_storage_record_table.address_sub_admin_area",
+      "salt_storage_record_table.address_admin_area",
+      "salt_storage_record_table.address_postal_code",
+      "salt_storage_record_table.address_country",
+      "salt_storage_record_table.address_full",
+      "salt_storage_record_table.material_type",
+      "salt_storage_record_table.material_type_other",
+      "salt_storage_record_table.storage_length_years",
+      "salt_storage_record_table.storage_length_years_range",
+      "salt_storage_record_table.material_covered",
+      "salt_storage_record_table.coverage_method",
+      "salt_storage_record_table.material_on_pad",
+      "salt_storage_record_table.pad_type",
+      "salt_storage_record_table.pad_type_other"
+    ]
+  }
+}

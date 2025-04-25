@@ -1,0 +1,23 @@
+{
+  "sql": "SELECT \n    pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.企业名称 \nFROM \n    pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270 \nJOIN \n    shijiaotongweiguidaoxianluxinxichuxing3671 ON \n        pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.经营许可证号 = shijiaotongweiguidaoxianluxinxichuxing3671.线路编码 \nWHERE \n    pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.评定结果 = '通过' AND \n    shijiaotongweiguidaoxianluxinxichuxing3671.站点数 > 5\n```",
+  "results": 0,
+  "sql skeleton": "select _ from _ where _ = _ and _ (_ ,_ ) = _ and _ in (select _ from _ where _ = _ and _ )",
+  "database": "交通服务",
+  "tables": {
+    "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270": [
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.企业名称",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.经营许可证号",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.企业类型",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.所属区县",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.考核人",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.评定时间",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.评定得分",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.评定结果"
+    ],
+    "shijiaotongweiguidaoxianluxinxichuxing3671": [
+      "shijiaotongweiguidaoxianluxinxichuxing3671.线路编码",
+      "shijiaotongweiguidaoxianluxinxichuxing3671.线路名称",
+      "shijiaotongweiguidaoxianluxinxichuxing3671.站点数"
+    ]
+  }
+}

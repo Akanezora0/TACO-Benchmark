@@ -1,0 +1,21 @@
+{
+  "sql": "SELECT xichengquxichengquxingjifandianminglu19.?星级酒店名称 FROM xichengquxichengquxingjifandianminglu19 WHERE xichengquxichengquxingjifandianminglu19.?星级 = '5' AND xichengquxichengquxingjifandianminglu19.?酒店地址 LIKE '%市中心%'",
+  "results": 0,
+  "sql skeleton": "select _ from _ where _ (_ ,_ ) = _",
+  "database": "旅游住宿",
+  "tables": {
+    "xichengquxichengquxingjifandianminglu19": [
+      "xichengquxichengquxingjifandianminglu19.序号",
+      "xichengquxichengquxingjifandianminglu19.?星级酒店名称",
+      "xichengquxichengquxingjifandianminglu19.?星级",
+      "xichengquxichengquxingjifandianminglu19.?联系电话",
+      "xichengquxichengquxingjifandianminglu19.?酒店地址"
+    ],
+    "fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396": [
+      "fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.旅行社分社及旅行社服务网点明细",
+      "fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.Unnamed: 1",
+      "fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.Unnamed: 2",
+      "fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.Unnamed: 3"
+    ]
+  }
+}

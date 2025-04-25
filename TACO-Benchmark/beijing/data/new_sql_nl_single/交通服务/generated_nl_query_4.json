@@ -1,0 +1,21 @@
+{
+  "sql": "SELECT \"shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239\".\"区域\", \"shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239\".\"街道\", \"shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239\".\"道路\", \"shijiaotongweiquanshiqicheweixiuqiyexinxi3673\".\"统一社会信用代码\", \"shijiaotongweiquanshiqicheweixiuqiyexinxi3673\".\"业户名称\", \"shijiaotongweiquanshiqicheweixiuqiyexinxi3673\".\"业户地址\" FROM \"shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239\" INNER JOIN \"shijiaotongweiquanshiqicheweixiuqiyexinxi3673\" ON \"shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239\".\"统一社会信用代码\" = \"shijiaotongweiquanshiqicheweixiuqiyexinxi3673\".\"统一社会信用代码\" WHERE \"shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239\".\"区域\" = '区域名称' OR \"shijiaotongweiquanshiqicheweixiuqiyexinxi3673\".\"业户名称\" = '业户名称';",
+  "problem_description": "- **查询意图**：  \n该 SQL 语句的目的是从两个表中联合查询特定区域或特定业户名称的相关信息，包括区域、街道、道路、统一社会信用代码、业户名称和业户地址。\n\n- **详细描述**：  \n1. **涉及的表**：  \n   - `shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239`：可能是一个记录北京市石景山区道路停车电子收费道路信息的表。  \n   - `shijiaotongweiquanshiqicheweixiuqiyexinxi3673`：可能是一个记录全市汽车维修企业信息的表。  \n\n2. **涉及的列**：  \n   - 从第一个表中选择的列：`区域`、`街道`、`道路`。  \n   - 从第二个表中选择的列：`统一社会信用代码`、`业户名称`、`业户地址`。  \n\n3. **连接条件**：  \n   - 两个表通过`统一社会信用代码`进行内连接（INNER JOIN），表示只返回两个表中`统一社会信用代码`匹配的记录。  \n\n4. **筛选条件**：  \n   - `区域`字段等于“区域名称”（示例值），或者`业户名称`字段等于“业户名称”（示例值）。  \n\n- **业务场景**：  \n该查询可能用于以下业务场景：  \n1. **城市管理**：查询特定区域（如石景山区）的道路停车收费信息，同时关联该区域内的汽车维修企业信息，用于分析停车需求与维修企业的分布关系。  \n2. **企业监管**：查找特定汽车维修企业（通过`业户名称`筛选）的详细信息及其所在道路的停车收费情况，可能用于企业合规性检查或服务评估。  \n3. **数据整合**：将道路信息和维修企业信息关联起来，为城市交通规划或商业布局提供数据支持。  \n\n- **用户描述**：  \n在上述业务场景下，用户可能遇到的实际问题或需求包括：  \n1. **城市管理者**：需要了解某个区域的停车收费道路是否与汽车维修企业集中区域重叠，以便优化停车管理或调整维修企业的分布。  \n2. **企业监管人员**：可能需要核实某家维修企业是否在特定区域合法经营，或者检查其周边停车是否便利，从而评估企业服务的可达性。  \n3. **数据分析师**：希望整合道路和维修企业数据，分析两者之间的关联性，例如维修企业是否倾向于分布在停车便利的道路附近。  \n\n该查询通过关联两个表并支持区域或企业名称的筛选，能够帮助用户快速获取所需信息，满足上述业务需求。",
+  "natural_language_query": "市民反映，石景山区有些道路停车收费的地方附近好像有很多汽车修理厂，想了解一下这些修理厂的具体情况。比如在某某街道或者某某路附近，有没有叫\"某某汽修\"这样的店铺？主要是想查查这些修理厂的营业执照信息和他们开在哪儿。之前路过看到有些修理厂门口停车特别乱，也不知道是不是正规的，能不能帮忙查查这些修理厂是不是合法经营的？最好能知道是在哪个路段，叫什么名字，具体地址在哪。主要是担心有些无证经营的修理厂会影响周边停车秩序，希望能核实一下情况。",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ ,_ from _ where _ =_ or _ =_ ;",
+  "database": "交通服务",
+  "tables": {
+    "shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239": [
+      "shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239.区域",
+      "shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239.街道",
+      "shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239.道路",
+      "shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239.车位数"
+    ],
+    "shijiaotongweiquanshiqicheweixiuqiyexinxi3673": [
+      "shijiaotongweiquanshiqicheweixiuqiyexinxi3673.统一社会信用代码",
+      "shijiaotongweiquanshiqicheweixiuqiyexinxi3673.业户名称",
+      "shijiaotongweiquanshiqicheweixiuqiyexinxi3673.业户地址"
+    ]
+  }
+}

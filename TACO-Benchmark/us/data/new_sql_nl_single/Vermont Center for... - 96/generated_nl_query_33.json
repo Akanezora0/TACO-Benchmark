@@ -1,0 +1,39 @@
+{
+  "sql": "SELECT waste_water_facilities.X, waste_water_facilities.Y, waste_water_facilities.FacilityName, public_water_sources.SystemName, public_water_sources.WaterType FROM waste_water_facilities INNER JOIN public_water_sources ON waste_water_facilities.FacilityID = public_water_sources.WSID WHERE public_water_sources.SystemStatus = 'Operational' AND public_water_sources.Availability = 'Yes'",
+  "problem_description": "### Query intent:\nThe SQL statement aims to retrieve specific data from two related tables, `waste_water_facilities` and `public_water_sources`, based on certain conditions. The primary goal is to join these tables on their respective IDs and filter the results by system status and availability.\n\n### Detailed description:\n1. **Table `waste_water_facilities`**:\n   - **Columns**: `X`, `Y`, `FacilityName`.\n   - **Purpose**: Represents facilities for waste water treatment.\n   - **Join condition**: `FacilityID`.\n\n2. **Table `public_water_sources`**:\n   - **Columns**: `SystemName`, `WaterType`, `WSID`, `SystemStatus`, `Availability`.\n   - **Purpose**: Provides information about public water sources, including system names, types of water, and operational details.\n   - **Join condition**: `WSID`.\n\n3. **Join operation**:\n   - **Condition**: `waste_water_facilities.FacilityID = public_water_sources.WSID`. This ensures that each facility is matched with its corresponding water source.\n\n4. **Filtering conditions**:\n   - **`public_water_sources.SystemStatus = 'Operational'`**: Ensures that only systems that are currently operational are included in the result set.\n   - **`public_water_sources.Availability = 'Yes'`**: Further filters the results to include only those water sources that are available for use.\n\n### Business scenario:\nThis query is particularly useful in environmental management and urban planning contexts where it's necessary to understand the relationship between waste water treatment facilities and their associated water sources. For instance:\n\n- **Environmental Compliance Monitoring**: Authorities might use this query to ensure that all connected waste water facilities are linked to operational and available water sources, which is crucial for environmental compliance checks.\n- **Resource Allocation Planning**: Planners could employ this information to optimize resource allocation, such as deciding how to distribute water resources efficiently among various facilities based on their operational statuses.\n\n### User description:\nA user, possibly an environmental engineer or a city planner, might need this information to:\n- **Assess System Readiness**: Quickly identify which waste water treatment facilities are correctly linked to operational water sources, ensuring there are no disruptions in water supply to these facilities.\n- **Plan for Expansion**: Determine areas where additional water sources might be required based on the current operational capacities and availabilities.\n- **Emergency Response**: In case of a sudden issue with a water source, this query helps in identifying alternative water supplies quickly for",
+  "natural_language_query": "As an environmental engineer working on urban infrastructure improvements, I'm tasked with ensuring seamless integration between waste water treatment facilities and public water sources. I'm looking to run a SQL query to fetch detailed information about these connections under specific conditions. Specifically, I need to identify all the waste water facilities that are properly linked to operational water sources, with the assurance that these water sources are indeed available for use. \n\nTo achieve this, my query will involve joining the `waste_water_facilities` table with the `public_water_sources` table. The `waste_water_facilities` table contains information about each facility, including their location (`X`, `Y`) and the name (`FacilityName`). On the other hand, the `public_water_sources` table holds details about water sources, such as their system name (`SystemName`), type of water provided (`WaterType`), the unique identifier (`WSID`), their operational status (`SystemStatus`), and whether they're currently available (`Availability`). \n\nThe join condition will be based on matching the `FacilityID` from the `waste_water_facilities` table with the `WSID` from the `public_water_sources` table, ensuring that each facility is correctly paired with its corresponding water source. To refine the results, I'll apply filters: first, only include water sources that are 'Operational', indicating they're functioning as intended. Secondly, I'll also ensure that the water sources are 'Yes' for availability, meaning they're ready for use without any interruptions.\n\nThis query will be instrumental in my work, helping me to:\n- Quickly assess the readiness of our waste water treatment facilities by confirming they're connected to functional water sources.\n- Plan for potential expansions or adjustments by understanding the current operational capacities and availability of water sources.\n- Respond swiftly to emergencies by having a clear picture of alternative water supplies if needed.\n\nIn essence, the SQL query I'm aiming to execute will provide a comprehensive overview of the relationship between waste water facilities and their associated water sources, ensuring optimal environmental management and planning.",
+  "results": 0,
+  "sql skeleton": "select _ as _ ,_ as _ ,_ as _ ,_ as _ ,_ as _ from _ where _",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "waste_water_facilities": [
+      "waste_water_facilities.X",
+      "waste_water_facilities.Y",
+      "waste_water_facilities.FacilityName",
+      "waste_water_facilities.FacilityID",
+      "waste_water_facilities.WWInventoryURL"
+    ],
+    "public_water_sources": [
+      "public_water_sources.X",
+      "public_water_sources.Y",
+      "public_water_sources.TINWSF_IS_NUMBER",
+      "public_water_sources.WSID",
+      "public_water_sources.SystemName",
+      "public_water_sources.SystemType",
+      "public_water_sources.SystemStatus",
+      "public_water_sources.SystemPopulation",
+      "public_water_sources.FacilityName",
+      "public_water_sources.FacilityID",
+      "public_water_sources.FacilityStatus",
+      "public_water_sources.Availability",
+      "public_water_sources.WaterType",
+      "public_water_sources.ConstructedDate",
+      "public_water_sources.PermittedYield",
+      "public_water_sources.WellType",
+      "public_water_sources.Diameter_in",
+      "public_water_sources.WellDepth",
+      "public_water_sources.CasingDepth",
+      "public_water_sources.StaticWaterLevel"
+    ]
+  }
+}

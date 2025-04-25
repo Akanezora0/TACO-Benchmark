@@ -1,0 +1,22 @@
+{
+  "sql": "SELECT \n    \"pingguqupingguqujingpinminsu2083\".\"平谷区2022年精品民宿\",\n    \"pingguqupingguqujingpinminsu2083\".\"Unnamed: 1\",\n    \"pingguqupingguqujingpinminsu2083\".\"Unnamed: 2\",\n    \"xichengquxichengqudengjilvyoujingquminglu14\".\"序号\",\n    \"xichengquxichengqudengjilvyoujingquminglu14\".\"景区名称\",\n    \"xichengquxichengqudengjilvyoujingquminglu14\".\"等级\",\n    \"xichengquxichengqudengjilvyoujingquminglu14\".\"地址\",\n    \"xichengquxichengqudengjilvyoujingquminglu14\".\"咨询电话\",\n    \"xichengquxichengqudengjilvyoujingquminglu14\".\"投诉电话\",\n    \"xichengquxichengqudengjilvyoujingquminglu14\".\"邮编\"\nFROM \n    \"pingguqupingguqujingpinminsu2083\"\nJOIN \n    \"xichengquxichengqudengjilvyoujingquminglu14\"\nON \n    \"pingguqupingguqujingpinminsu2083\".\"Unnamed: 1\" = \"xichengquxichengqudengjilvyoujingquminglu14\".\"序号\"\nWHERE \n    \"xichengquxichengqudengjilvyoujingquminglu14\".\"景区名称\" = '指定景区名称' \nORDER BY \n    \"xichengquxichengqudengjilvyoujingquminglu14\".\"等级\";",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ from _ join _ on _ ._ = _ ._ where _ ._ = _ order by _ ._ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "pingguqupingguqujingpinminsu2083": [
+      "pingguqupingguqujingpinminsu2083.平谷区2022年精品民宿",
+      "pingguqupingguqujingpinminsu2083.Unnamed: 1",
+      "pingguqupingguqujingpinminsu2083.Unnamed: 2"
+    ],
+    "xichengquxichengqudengjilvyoujingquminglu14": [
+      "xichengquxichengqudengjilvyoujingquminglu14.序号",
+      "xichengquxichengqudengjilvyoujingquminglu14.景区名称",
+      "xichengquxichengqudengjilvyoujingquminglu14.等级",
+      "xichengquxichengqudengjilvyoujingquminglu14.地址",
+      "xichengquxichengqudengjilvyoujingquminglu14.咨询电话",
+      "xichengquxichengqudengjilvyoujingquminglu14.投诉电话",
+      "xichengquxichengqudengjilvyoujingquminglu14.邮编"
+    ]
+  }
+}

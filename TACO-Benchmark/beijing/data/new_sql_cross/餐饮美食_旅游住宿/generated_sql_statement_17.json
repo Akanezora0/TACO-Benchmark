@@ -1,0 +1,29 @@
+{
+  "sql": "select \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076\".专用标识牌号, \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076\".专柜名称, \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076\".地址, \"changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842\".\"Unnamed: 1\", \"changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842\".\"Unnamed: 2\", \"changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842\".\"Unnamed: 3\", \"changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842\".\"Unnamed: 4\", \"changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842\".\"Unnamed: 5\" from \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076\" join \"changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842\" on \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076\".地址 = \"changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842\".\"Unnamed: 1\" where \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076\".专用标识牌号 = 'A' and \"changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842\".\"Unnamed: 2\" = 'B'",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ from _ join _ on _ ._ = _ ._ where _ ._ = _ and _ ._ = _",
+  "databases": [
+    "餐饮美食",
+    "旅游住宿"
+  ],
+  "tables": {
+    "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076": {
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076": [
+        "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号",
+        "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称",
+        "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址"
+      ]
+    },
+    "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842": {
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842": [
+        "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.2021年度昌平A级景区数据开放表               ",
+        "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 1",
+        "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 2",
+        "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 3",
+        "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 4",
+        "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 5",
+        "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 6"
+      ]
+    }
+  }
+}

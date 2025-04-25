@@ -1,0 +1,23 @@
+{
+  "sql": "SELECT shunyiqugongjiaoxianlujizhandianjibenxinxi2076.\"Unnamed: 1\", shunyiqugongjiaoxianlujizhandianjibenxinxi2076.\"Unnamed: 2\", shunyiqugongjiaoxianlujizhandianjibenxinxi2076.\"Unnamed: 3\", shunyiqugongjiaoxianlujizhandianjibenxinxi2076.\"Unnamed: 4\", shunyiqugongjiaoxianlujizhandianjibenxinxi2076.\"Unnamed: 5\", shunyiqugongjiaoxianlujizhandianjibenxinxi2076.\"Unnamed: 6\", shijiaotongweigongjiaozhandianxinxichuxingfuwu3665.\"站点名称\", shijiaotongweigongjiaozhandianxinxichuxingfuwu3665.\"方向\", shijiaotongweigongjiaozhandianxinxichuxingfuwu3665.\"站点序号\"\nFROM shunyiqugongjiaoxianlujizhandianjibenxinxi2076\nJOIN shijiaotongweigongjiaozhandianxinxichuxingfuwu3665\nON shunyiqugongjiaoxianlujizhandianjibenxinxi2076.\"线路运营信息\" = shijiaotongweigongjiaozhandianxinxichuxingfuwu3665.\"线路名称\"\nWHERE shunyiqugongjiaoxianlujizhandianjibenxinxi2076.\"站点名称\" = '站点名称' AND shunyiqugongjiaoxianlujizhandianjibenxinxi2076.\"方向\" = '方向' AND shunyiqugongjiaoxianlujizhandianjibenxinxi2076.\"站点序号\" = '站点序号';",
+  "results": 0,
+  "sql skeleton": "select _ ._ ._ , _ ._ , _ ._ ._ , _ ._ from _ join _ on _ ._ = _ ._ where _ ._ = _ and _ ._ = _ and _ ._ = _ ;",
+  "database": "交通服务",
+  "tables": {
+    "shunyiqugongjiaoxianlujizhandianjibenxinxi2076": [
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.线路运营信息",
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 1",
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 2",
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 3",
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 4",
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 5",
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 6"
+    ],
+    "shijiaotongweigongjiaozhandianxinxichuxingfuwu3665": [
+      "shijiaotongweigongjiaozhandianxinxichuxingfuwu3665.线路名称",
+      "shijiaotongweigongjiaozhandianxinxichuxingfuwu3665.站点名称",
+      "shijiaotongweigongjiaozhandianxinxichuxingfuwu3665.方向",
+      "shijiaotongweigongjiaozhandianxinxichuxingfuwu3665.站点序号"
+    ]
+  }
+}

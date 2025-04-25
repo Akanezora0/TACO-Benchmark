@@ -1,0 +1,27 @@
+{
+  "sql": "SELECT shijiaotongweixianchangxunchaxinxi3675.巡查位置, haidianqugonggongjianzhutingchechang3416.详细地址 FROM shijiaotongweixianchangxunchaxinxi3675 INNER JOIN haidianqugonggongjianzhutingchechang3416 ON shijiaotongweixianchangxunchaxinxi3675.巡查位置 = haidianqugonggongjianzhutingchechang3416.详细地址 WHERE shijiaotongweixianchangxunchaxinxi3675.巡查单位 = '共享时间';",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是查询“共享时间”巡查单位在巡查过程中记录的巡查位置，以及这些巡查位置对应的海淀区公共建筑停车场的详细地址。\n\n- **详细描述**：\n  - **涉及的表**：\n    - `shijiaotongweixianchangxunchaxinxi3675`：该表可能存储了社会危险场所的巡查信息，例如巡查位置、巡查单位等。\n    - `haidianqugonggongjianzhutingchechang3416`：该表可能存储了海淀区公共建筑停车场的详细信息，例如详细地址等。\n  - **涉及的列**：\n    - `shijiaotongweixianchangxunchaxinxi3675.巡查位置`：表示巡查记录中的位置信息。\n    - `haidianqugonggongjianzhutingchechang3416.详细地址`：表示海淀区公共建筑停车场的详细地址。\n    - `shijiaotongweixianchangxunchaxinxi3675.巡查单位`：表示执行巡查的单位名称。\n  - **条件**：\n    - `shijiaotongweixianchangxunchaxinxi3675.巡查单位 = '共享时间'`：筛选出巡查单位为“共享时间”的记录。\n    - `shijiaotongweixianchangxunchaxinxi3675.巡查位置 = haidianqugonggongjianzhutingchechang3416.详细地址`：通过内连接（INNER JOIN）将两个表中位置信息匹配的记录关联起来。\n\n- **业务场景**：\n  - 该查询可能用于城市管理或公共安全领域，目的是找出“共享时间”巡查单位在巡查过程中记录的巡查位置是否与海淀区公共建筑停车场的详细地址一致。这可以帮助相关部门验证巡查记录的准确性，或者分析巡查单位的工作覆盖范围。\n\n- **用户描述**：\n  - 用户可能是城市管理人员或公共安全部门的工作人员，他们需要了解“共享时间”巡查单位的工作情况，确保巡查记录与实际公共建筑停车场的位置一致。例如，用户可能需要确认巡查单位是否覆盖了所有重要的公共建筑停车场，或者是否存在巡查遗漏的情况。通过该查询，用户可以快速获取匹配的巡查位置和停车场地址，从而进行进一步的分析或决策。",
+  "natural_language_query": "市民反映，最近注意到\"共享时间\"这个巡查单位在海淀区的工作情况，想了解一下他们巡查过哪些地方。特别是想确认他们有没有巡查过公共建筑周边的停车场，因为听说有些停车场可能存在安全隐患或者管理不到位的问题。比如中关村那边有几个大型公共建筑的停车场，不知道他们有没有去检查过。希望能核实一下\"共享时间\"巡查记录里提到的地点和这些公共建筑停车场的具体位置是不是一致的，这样我们居民也能更放心些。主要是担心有些地方可能被漏查了，毕竟停车场的秩序关系到大家日常出行安全。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ ;",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweixianchangxunchaxinxi3675": [
+      "shijiaotongweixianchangxunchaxinxi3675.序号",
+      "shijiaotongweixianchangxunchaxinxi3675.工作内容",
+      "shijiaotongweixianchangxunchaxinxi3675.巡查时间",
+      "shijiaotongweixianchangxunchaxinxi3675.巡查人次",
+      "shijiaotongweixianchangxunchaxinxi3675.巡查单位",
+      "shijiaotongweixianchangxunchaxinxi3675.巡查位置",
+      "shijiaotongweixianchangxunchaxinxi3675.共享时间",
+      "shijiaotongweixianchangxunchaxinxi3675.更新时间"
+    ],
+    "haidianqugonggongjianzhutingchechang3416": [
+      "haidianqugonggongjianzhutingchechang3416.序号",
+      "haidianqugonggongjianzhutingchechang3416.停车场名称",
+      "haidianqugonggongjianzhutingchechang3416.停车场类型",
+      "haidianqugonggongjianzhutingchechang3416.详细地址",
+      "haidianqugonggongjianzhutingchechang3416.经营单位"
+    ]
+  }
+}

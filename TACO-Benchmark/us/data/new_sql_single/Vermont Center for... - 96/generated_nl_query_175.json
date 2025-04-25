@@ -1,0 +1,35 @@
+{
+  "sql": "SELECT landfills.SITENAME, landfills.STATUS FROM landfills WHERE landfills.OBJECTID = '123';",
+  "problem_description": "### Query intent:\nThe SQL statement aims to retrieve specific information from the `landfills` table based on a particular object ID.\n\n### Detailed description:\n- **Table**: `landfills`: This is the table from which data is being fetched. It likely contains various attributes related to landfills, such as their status and names.\n- **Columns**:\n    - `SITENAME`: The name of the landfill site.\n    - `STATUS`: The operational status of the landfill (e.g., active, inactive, closed).\n- **Condition**:\n    - `OBJECTID = '123'`: This condition filters the rows in the `landfills` table where the `OBJECTID` column has the value '123'. `OBJECTID` might represent a unique identifier for each record in the `landfills` table.\n\n### Business scenario:\nThis SQL query could be used in various business scenarios, such as:\n- **Environmental monitoring**: An environmental agency might use this query to quickly find the status and name of a specific landfill identified by its unique `OBJECTID`.\n- **Reporting and Compliance**: A regulatory body might need to check the status of a particular landfill as part of compliance checks or reporting requirements.\n\n### User description:\nA user might need to know the current status (e.g., open, closed) and the name of a specific landfill they are tracking due to environmental concerns, legal requirements, or operational oversight. For instance, an environmental scientist working for a government agency could use this query to ensure that all landfills within their jurisdiction are correctly classified and managed according to environmental regulations.",
+  "natural_language_query": "I'm trying to track the status and name of a specific landfill that I've been monitoring for environmental reasons. Could you help me with a database query? I'm looking for the details of the landfill with the OBJECTID '123', particularly its SITENAME and STATUS. This will help me ensure that it's being managed according to the latest regulations and standards.",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ WHERE _ = _ ;",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "landfills": [
+      "landfills.X",
+      "landfills.Y",
+      "landfills.OBJECTID",
+      "landfills.PSINUM",
+      "landfills.SWFACID",
+      "landfills.SITENAME",
+      "landfills.LOCCONF",
+      "landfills.DATE_FIRST",
+      "landfills.DATE_LAST",
+      "landfills.ACRES",
+      "landfills.STATUS",
+      "landfills.WQMONITORING",
+      "landfills.GASCOLLECTION",
+      "landfills.TOWNNAME",
+      "landfills.LATITUDE",
+      "landfills.LONGITUDE"
+    ],
+    "waste_water_facilities": [
+      "waste_water_facilities.X",
+      "waste_water_facilities.Y",
+      "waste_water_facilities.FacilityName",
+      "waste_water_facilities.FacilityID",
+      "waste_water_facilities.WWInventoryURL"
+    ]
+  }
+}

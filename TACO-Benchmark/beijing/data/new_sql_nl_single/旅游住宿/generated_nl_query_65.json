@@ -1,0 +1,48 @@
+{
+  "sql": "SELECT xichengquxichengqulvxingsheminglu20.序号, xichengquxichengqulvxingsheminglu20.许可证号, xichengquxichengqulvxingsheminglu20.旅行社名称 FROM xichengquxichengqulvxingsheminglu20 WHERE xichengquxichengqulvxingsheminglu20.许可证号 IN (SELECT shiguihuaziranziyuanweiyinhangpiaohao1522.HID FROM shiguihuaziranziyuanweiyinhangpiaohao1522 WHERE shiguihuaziranziyuanweiyinhangpiaohao1522.HNAME = '经营业务')",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从 `xichengquxichengqulvxingsheminglu20` 表中筛选出许可证号在 `shiguihuaziranziyuanweiyinhangpiaohao1522` 表中且 `HNAME` 字段值为“经营业务”的记录，并返回这些记录的序号、许可证号和旅行社名称。\n\n---\n\n### **详细描述**  \n1. **主查询部分**：  \n   - **表**：`xichengquxichengqulvxingsheminglu20`（可能表示“西城区旅行社名录2020”或类似含义）。  \n   - **列**：  \n     - `序号`：记录的编号或唯一标识。  \n     - `许可证号`：旅行社的经营许可证编号。  \n     - `旅行社名称`：旅行社的名称。  \n   - **操作**：从该表中选择上述三列数据。  \n\n2. **子查询部分**：  \n   - **表**：`shiguihuaziranziyuanweiyinhangpiaohao1522`（可能表示“市规划和自然资源委银行票号1522”或类似含义）。  \n   - **列**：  \n     - `HID`：可能与主查询中的“许可证号”关联的字段。  \n     - `HNAME`：用于筛选的字段，值为“经营业务”。  \n   - **操作**：从该表中选择 `HID` 字段，条件是 `HNAME = '经营业务'`。  \n\n3. **关联条件**：  \n   - 主查询的 `许可证号` 必须等于子查询返回的 `HID` 值（即 `IN` 操作）。  \n\n4. **逻辑关系**：  \n   - 查询的是“西城区旅行社名录”中，许可证号在“规划和自然资源委银行票号”表中被标记为“经营业务”的旅行社信息。  \n\n---\n\n### **业务场景**  \n1. **场景描述**：  \n   - 可能是政府或监管部门需要筛选出西城区内具有合法“经营业务”资质的旅行社名单。  \n   - 或者是银行或金融机构需要验证哪些旅行社的许可证号被登记为可经营业务（例如发放贷款、合作等场景）。  \n\n2. **数据用途**：  \n   - 用于合规性检查（如旅游局核查旅行社资质）。  \n   - 用于业务合作筛选（如银行选择合作旅行社）。  \n\n---\n\n### **用户描述**  \n1. **用户需求**：  \n   - 用户可能是旅游局工作人员，需要统计西城区内实际开展“经营业务”的旅行社名单。  \n   - 或者是银行风控人员，需要确认哪些旅行社的许可证号被官方标记为有效经营状态，以决定是否提供金融服务。  \n\n2. **实际问题**：  \n   - 直接查询旅行社名录可能包含已注销或未实际开展业务的记录，需通过另一张权威表（如“规划和自然资源委”表）进一步筛选。  \n   - 用户需要确保查询结果的准确性和权威性，避免使用无效或过期的许可证号。  \n\n3. **扩展场景**：  \n   - 如果 `HNAME` 还有其他值（如“停业”“注销”），可通过修改子查询条件实现不同筛选需求。",
+  "natural_language_query": "市民反映，我是西城区旅游局的工作人员，最近在整理辖区内的旅行社名单时遇到一个问题。我们手头有一份2020年的旅行社名录，但不确定哪些旅行社现在还在正常开展经营业务。听说规划和自然资源部门那边有个银行票号系统，里面好像能查到哪些旅行社的许可证是有效的\"经营业务\"状态。能不能帮忙查一下，在我们西城区旅行社名录里，哪些旅行社的许可证号是在那个系统里被标注为\"经营业务\"的？我们需要这些旅行社的序号、许可证号和具体名称，好做后续的管理工作。主要是担心有些旅行社可能已经停业或者注销了，但我们名录里还留着，这样会影响我们的管理工作。",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ from _ where _ in (select _ from _ where _ )",
+  "database": "旅游住宿",
+  "tables": {
+    "xichengquxichengqulvxingsheminglu20": [
+      "xichengquxichengqulvxingsheminglu20.序号",
+      "xichengquxichengqulvxingsheminglu20.许可证号",
+      "xichengquxichengqulvxingsheminglu20.旅行社名称",
+      "xichengquxichengqulvxingsheminglu20.经营业务",
+      "xichengquxichengqulvxingsheminglu20.发证日期",
+      "xichengquxichengqulvxingsheminglu20.经营场所",
+      "xichengquxichengqulvxingsheminglu20.有效期"
+    ],
+    "shiguihuaziranziyuanweiyinhangpiaohao1522": [
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.HID",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.FATHERID",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.HNAME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.OTHERNAME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.CATEGORY",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.SUBCATEGOR",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.COUNTYNAME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.STREETNAME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.DYNASTY",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.SUBDYNASTY",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.ADDRESS",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.RANK",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.BATCH",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.PUBTIME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.USERS",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.PURPOSE",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.OWNERSHIP",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.STATEEVALU",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.SINGLERELI",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.PROTECTION",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.ATTACHEDRE",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.RELATEDPEO",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.RELATEDEVE",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.PUBNAME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.SOURCE",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.EDITOR",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.ISREDUNDAN"
+    ]
+  }
+}

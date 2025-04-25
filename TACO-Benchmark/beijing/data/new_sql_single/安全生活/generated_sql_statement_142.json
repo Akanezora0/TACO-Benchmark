@@ -1,0 +1,7 @@
+{
+  "sql": "select table1.\"column1\" from table1 where table1.\"column1\" = 'value1' or table1.\"column1\" like '%value2%'\n```",
+  "results": 0,
+  "sql skeleton": "select _ from _ where _ or _ '%_ %",
+  "database": "安全生活",
+  "tables": {}
+}

@@ -1,0 +1,19 @@
+{
+  "sql": "SELECT \"shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.年份\", \"shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.总量\" FROM \"shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668\" WHERE \"shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.年份\" = '2022' ORDER BY \"shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.总量\" DESC",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从表 `shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668` 中查询 2022 年的交通流量数据，并按总量降序排列。\n\n- **详细描述**：\n  - **涉及的表**：`shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668`，该表名可能表示“市交委郊区普通公路年交通流量3668”，其中“3668”可能是表的编号或标识符。\n  - **涉及的列**：\n    - `年份`：表示数据记录的年份。\n    - `总量`：表示交通流量的总量。\n  - **条件**：`年份 = '2022'`，即只查询 2022 年的数据。\n  - **排序**：`ORDER BY \"总量\" DESC`，表示查询结果按交通流量的总量降序排列。\n\n- **业务场景**：\n  - 该查询可以用于分析 2022 年郊区普通公路的交通流量情况，帮助交通管理部门了解哪些路段或区域的交通流量较大，从而进行交通规划、资源分配或拥堵管理。\n  - 可能的业务场景包括：\n    - 交通流量统计与分析。\n    - 交通拥堵热点识别。\n    - 交通基础设施规划与优化。\n\n- **用户描述**：\n  - 用户可能是交通管理部门的工作人员或数据分析师，他们需要了解 2022 年郊区普通公路的交通流量情况，以便：\n    - 识别交通流量较大的路段或区域，优先进行维护或扩建。\n    - 分析交通流量的分布情况，优化交通信号灯设置或调整限行政策。\n    - 为未来的交通规划提供数据支持，例如新建道路或公共交通线路。",
+  "natural_language_query": "市民反映，想了解2022年郊区那些普通公路的交通情况，特别是哪些路段车流量特别大。最近感觉有些路段特别堵，尤其是早晚高峰的时候，想看看是不是这些地方的车流量比其他地方多很多。希望能帮忙查一下2022年全年的数据，最好能按照车流量从多到少排个序，这样就能知道哪些路段最需要优先治理了。来电咨询郊区公路交通流量情况。",
+  "results": 0,
+  "sql skeleton": "select _ ,_ from _ where _ = _ order by _",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668": [
+      "shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.年份",
+      "shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.总量",
+      "shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.观测站名称"
+    ],
+    "shijiaotongweigongluqixiangshuju233": [
+      "shijiaotongweigongluqixiangshuju233.��\u0011ࡱ\u001a�",
+      "shijiaotongweigongluqixiangshuju233.\u0001\u0001"
+    ]
+  }
+}

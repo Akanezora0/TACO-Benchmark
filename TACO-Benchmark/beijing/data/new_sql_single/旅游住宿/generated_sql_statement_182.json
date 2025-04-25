@@ -1,0 +1,18 @@
+{
+  "sql": "SELECT \"shunyiqushunyiquxingjifandian2102.顺义区星级饭店\", \"shiwenhuahelvyoujuxingjifandianxinxi2036.��\u0011ࡱ\u001a�\" FROM \"shunyiqushunyiquxingjifandian2102\" - \"shiwenhuahelvyoujuxingjifandianxinxi2036\" WHERE \"shunyiqushunyiquxingjifandian2102.顺义区星级饭店\" = '条件值';",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ WHERE _ = _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "shunyiqushunyiquxingjifandian2102": [
+      "shunyiqushunyiquxingjifandian2102.顺义区星级饭店",
+      "shunyiqushunyiquxingjifandian2102.Unnamed: 1",
+      "shunyiqushunyiquxingjifandian2102.Unnamed: 2",
+      "shunyiqushunyiquxingjifandian2102.Unnamed: 3"
+    ],
+    "shiwenhuahelvyoujuxingjifandianxinxi2036": [
+      "shiwenhuahelvyoujuxingjifandianxinxi2036.��\u0011ࡱ\u001a�",
+      "shiwenhuahelvyoujuxingjifandianxinxi2036.\u0001\u0001"
+    ]
+  }
+}

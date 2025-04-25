@@ -1,0 +1,41 @@
+{
+  "sql": "SELECT xichengquxichengqugongjiaochezhanmingdan2478.X, xichengquxichengqugongjiaochezhanmingdan2478.Y, xichengquxichengqugongjiaochezhanmingdan2478.SJXZQHMC, xichengquxichengqugongjiaochezhanmingdan2478.GXSJ, shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.监管对象 FROM xichengquxichengqugongjiaochezhanmingdan2478 INNER JOIN shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210 ON xichengquxichengqugongjiaochezhanmingdan2478.ID = shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.实施机构 WHERE xichengquxichengqugongjiaochezhanmingdan2478.别名 = '站点名称';",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是查询西城区公交车站名单中别名为“站点名称”的车站信息，并与交通监管部门的抽查结果进行关联，获取这些车站的坐标（X、Y）、行政区划名称、更新时间以及对应的监管对象信息。\n\n---\n\n### **详细描述**  \n1. **涉及的表**：  \n   - `xichengquxichengqugongjiaochezhanmingdan2478`：西城区公交车站名单表，包含车站的基本信息（如坐标、行政区划、别名等）。  \n   - `shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210`：交通监管部门对公交车站的随机抽查结果表，包含监管对象和实施机构信息。  \n\n2. **查询的列**：  \n   - 从公交车站名单表中选取：`X`（经度或横坐标）、`Y`（纬度或纵坐标）、`SJXZQHMC`（行政区划名称）、`GXSJ`（更新时间）。  \n   - 从抽查结果表中选取：`监管对象`（可能是车站的监管状态或责任单位）。  \n\n3. **关联条件**：  \n   - 通过 `INNER JOIN` 将两表关联，关联字段为公交车站名单表的 `ID` 和抽查结果表的 `实施机构`，确保只返回两表中匹配的记录。  \n\n4. **筛选条件**：  \n   - `xichengquxichengqugongjiaochezhanmingdan2478.别名 = '站点名称'`：仅查询别名为“站点名称”的车站。  \n\n---\n\n### **业务场景**  \n1. **数据整合**：将公交车站的基础信息（如位置、行政区划）与监管部门的抽查结果关联，便于统一管理。  \n2. **监管分析**：分析特定车站（如别名为“站点名称”的车站）的监管状态或责任单位，可能用于合规检查或问题追踪。  \n3. **地理信息展示**：获取车站的坐标（X、Y），可能用于地图标注或空间分析（如车站分布密度）。  \n\n---\n\n### **用户描述**  \n1. **用户需求**：  \n   - 交通管理部门可能需要监控西城区公交车站的运营情况，尤其是那些被标记为“站点名称”的车站，了解其监管状态（如是否合规、是否有投诉等）。  \n   - 城市规划人员可能需要获取车站的地理位置和行政区划信息，用于优化公交线路或设施布局。  \n\n2. **实际问题**：  \n   - 某车站因别名混乱导致监管困难，需通过关联数据明确其监管责任。  \n   - 需要统计特定行政区划内车站的抽查结果，评估区域公交服务质量。  \n\n3. **扩展场景**：  \n   - 若 `监管对象` 包含问题描述（如“设施损坏”），可进一步筛选需维修的车站。  \n   - 结合时间字段 `GXSJ`，可分析车站信息的更新频率或监管时效性。",
+  "natural_language_query": "市民反映，西城区有些公交车站的站牌标注特别混乱，有的写的是\"站点名称\"，但实际位置和监管单位对不上号。我上周在平安里附近看到一个站牌就写着\"站点名称\"，但地图上查不到具体位置，也不知道归哪个部门管。能不能帮忙查一下这些标注为\"站点名称\"的车站具体在什么位置？最好能知道属于哪个街道管，最近有没有被交通部门检查过。我这边做社区调研需要这些信息，主要是想搞清楚这些车站的实际管理情况，看看到底是哪个环节出了问题导致站名标注不规范。对了，如果能提供车站的经纬度坐标就更好了，方便我们实地走访核实。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ WHERE _ = _ ;",
+  "database": "交通服务",
+  "tables": {
+    "xichengquxichengqugongjiaochezhanmingdan2478": [
+      "xichengquxichengqugongjiaochezhanmingdan2478.ID",
+      "xichengquxichengqugongjiaochezhanmingdan2478.X",
+      "xichengquxichengqugongjiaochezhanmingdan2478.Y",
+      "xichengquxichengqugongjiaochezhanmingdan2478.SJXZQHMC",
+      "xichengquxichengqugongjiaochezhanmingdan2478.QXJXZQHMC",
+      "xichengquxichengqugongjiaochezhanmingdan2478.SJXZQHDM",
+      "xichengquxichengqugongjiaochezhanmingdan2478.QXJXZQHDM",
+      "xichengquxichengqugongjiaochezhanmingdan2478.POISJLY",
+      "xichengquxichengqugongjiaochezhanmingdan2478.RHBZDZ",
+      "xichengquxichengqugongjiaochezhanmingdan2478.CODE",
+      "xichengquxichengqugongjiaochezhanmingdan2478.CODEMC",
+      "xichengquxichengqugongjiaochezhanmingdan2478.GXSJ",
+      "xichengquxichengqugongjiaochezhanmingdan2478.POIMC",
+      "xichengquxichengqugongjiaochezhanmingdan2478.POIDZ",
+      "xichengquxichengqugongjiaochezhanmingdan2478.别名",
+      "xichengquxichengqugongjiaochezhanmingdan2478.POIFLMC",
+      "xichengquxichengqugongjiaochezhanmingdan2478.TEL",
+      "xichengquxichengqugongjiaochezhanmingdan2478.MC",
+      "xichengquxichengqugongjiaochezhanmingdan2478.DZ",
+      "xichengquxichengqugongjiaochezhanmingdan2478.DZMS",
+      "xichengquxichengqugongjiaochezhanmingdan2478.XL"
+    ],
+    "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210": [
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.监管对象",
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.实施机构",
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.检查行为编号",
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.检查时间",
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.检查人员",
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.检查结果"
+    ]
+  }
+}

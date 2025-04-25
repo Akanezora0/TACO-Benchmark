@@ -1,0 +1,36 @@
+{
+  "sql": "SELECT \"shijiaotongweichengkeyindaojichuxinxi3710.序号\", \"shijiaotongweichengkeyindaojichuxinxi3710.枢纽站信息\", \"shijiaotongweichengkeyindaojichuxinxi3710.公交线路信息\", \"shijiaotongweichengkeyindaojichuxinxi3710.轨道线路信息\" FROM \"shijiaotongweichengkeyindaojachuxinxi3710\";",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ ;",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweichengkeyindaojichuxinxi3710": [
+      "shijiaotongweichengkeyindaojichuxinxi3710.序号",
+      "shijiaotongweichengkeyindaojichuxinxi3710.枢纽站信息",
+      "shijiaotongweichengkeyindaojichuxinxi3710.周边交通指南",
+      "shijiaotongweichengkeyindaojichuxinxi3710.公交线路信息",
+      "shijiaotongweichengkeyindaojichuxinxi3710.轨道线路信息",
+      "shijiaotongweichengkeyindaojichuxinxi3710.更新时间",
+      "shijiaotongweichengkeyindaojichuxinxi3710.共享时间 "
+    ],
+    "xichengquxichengquditiezhanmingdan2482": [
+      "xichengquxichengquditiezhanmingdan2482.ID",
+      "xichengquxichengquditiezhanmingdan2482.X",
+      "xichengquxichengquditiezhanmingdan2482.Y",
+      "xichengquxichengquditiezhanmingdan2482.SJXZQHMC",
+      "xichengquxichengquditiezhanmingdan2482.QXJXZQHMC",
+      "xichengquxichengquditiezhanmingdan2482.SJXZQHDM",
+      "xichengquxichengquditiezhanmingdan2482.QXJXZQHDM",
+      "xichengquxichengquditiezhanmingdan2482.POISJLY",
+      "xichengquxichengquditiezhanmingdan2482.RHBZDZ",
+      "xichengquxichengquditiezhanmingdan2482.CODE",
+      "xichengquxichengquditiezhanmingdan2482.CODEMC",
+      "xichengquxichengquditiezhanmingdan2482.GXSJ",
+      "xichengquxichengquditiezhanmingdan2482.POIMC",
+      "xichengquxichengquditiezhanmingdan2482.POIDZ",
+      "xichengquxichengquditiezhanmingdan2482.别名",
+      "xichengquxichengquditiezhanmingdan2482.POIFLMC",
+      "xichengquxichengquditiezhanmingdan2482.TEL"
+    ]
+  }
+}

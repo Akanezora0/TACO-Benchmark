@@ -1,0 +1,269 @@
+{
+  "sql": "SELECT river_main_stem_waterbodies_wbid.OBJECTID, river_main_stem_waterbodies_wbid.WBID, river_main_stem_waterbodies_wbid.WBNAME, river_main_stem_waterbodies_wbid.WBDESC, sand_and_gravel_deposits.OBJECTID FROM river_main_stem_waterbodies_wbid, sand_and_gravel_deposits WHERE river_main_stem_waterbodies_wbid.OBJECTID = sand_and_gravel_deposits.OBJECTID",
+  "problem_description": "### Query intent:\nThe SQL statement aims to retrieve specific information from two related tables, `river_main_stem_waterbodies_wbid` and `sand_and_gravel_deposits`, based on a common identifier (`OBJECTID`), likely to analyze or correlate waterbody information with sand and gravel deposit data.\n\n### Detailed description:\n- **Table `river_main_stem_waterbodies_wbid`**: This table contains records related to waterbodies along a main river stem. It includes at least the `OBJECTID`, `WBID`, `WBNAME`, and `WBDESC` columns. The `OBJECTID` is presumably a unique identifier for each record in this table, while `WBID`, `WBNAME`, and `WBDESC` likely represent identifiers, names, and descriptions of the waterbodies, respectively.\n  \n- **Table `sand_and_gravel_deposits`**: This table contains information about sand and gravel deposits. It has an `OBJECTID` column, which is used as a foreign key or primary key in this context, linking it to the `river_main_stem_waterbodies_wbid` table via the same `OBJECTID`. This implies that there is a relationship between certain waterbodies and their associated sand and gravel deposits.\n\n- **Condition**: The condition `river_main_stem_waterbodies_wbid.OBJECTID = sand_and_gravel_deposits.OBJECTID` ensures that only those waterbodies with matching identifiers in both tables are included in the result set. This condition facilitates the correlation between waterbodies and their associated sand and gravel deposits.\n\n### Business scenario:\nThis SQL query could be used in environmental studies or resource management projects where the impact of waterbodies on sediment deposition is of interest. For instance, understanding how different waterbodies (like rivers, lakes, or wetlands) influence the distribution and characteristics of sand and gravel deposits can help in assessing potential resources, ecological impacts, or planning infrastructure like dams or bridges.\n\n### User description:\nA user might need this information to:\n1. **Resource Assessment**: Identify areas rich in sand and gravel suitable for extraction, considering the proximity and characteristics of nearby waterbodies.\n2. **Environmental Impact Analysis**: Study how changes in water body dynamics (such as flow rates, sediment transport patterns) affect sediment deposition and the local ecosystem.\n3. **Planning and Management**: Inform decisions on water management practices, conservation efforts, or the design of water-related infrastructure to minimize negative impacts on sediment deposition patterns.\n\nBy querying these",
+  "natural_language_query": "As a researcher focusing on environmental impact assessment, I'm trying to understand the relationship between major river water bodies and sand and gravel deposits in a particular region. Specifically, I want to gather detailed information on water bodies along a main river stem, including their names and descriptions, and correlate this with any known sand and gravel deposits in the area. I'm particularly interested in identifying how these deposits might be influenced by the characteristics of the water bodies they're associated with. Could you help me construct a SQL query to extract this information? Ideally, I'd like to see the unique identifier for each water body, its name, and a brief description, alongside details on any sand and gravel deposits linked to it through a shared identifier.",
+  "results": [
+    [
+      2,
+      "VT03-01",
+      "Lower Otter Creek",
+      "Otter Creek mainstem from its mouth to the confluence with the Middlebury River",
+      2
+    ],
+    [
+      3,
+      "VT03-03",
+      "Mid-Mainstem Otter Creek",
+      "Otter Creek Mid-Mainstem from the mouth of the Middlebury River up to the mouth of Furnace Brook",
+      3
+    ],
+    [
+      4,
+      "VT03-05",
+      "Upper  Otter Creek",
+      "Otter Creek mainstem from the confluence of Furnace Brook up to the confluence with the Mill River",
+      4
+    ],
+    [
+      5,
+      "VT06-01",
+      "Lower Missisquoi River",
+      "Missisquoi River mainstem from the mouth to the confluence with Tyler Branch",
+      5
+    ],
+    [
+      6,
+      "VT06-02",
+      "Mid Missisquoi River",
+      "Mississquoi River mainstem from the confluence of Tyler Branch upstream to the Canadian border",
+      6
+    ],
+    [
+      7,
+      "VT07-02",
+      "Lower Mid-Lamoille River",
+      "Lower Mid-Lamoille River from Arrowhead Mountain Lake upstream to Fairfax Dam",
+      7
+    ],
+    [
+      8,
+      "VT07-04",
+      "Upper Mid-Lamoille River",
+      "Upper Mid-Lamoille River mainstem from Fairfax Dam to Cadys Falls Dam",
+      8
+    ],
+    [
+      9,
+      "VT07-07",
+      "Upper Lamoille River",
+      "Upper Lamoille River mainstem from Cadys Falls Dam to Hardwick Dam",
+      9
+    ],
+    [
+      10,
+      "VT08-01",
+      "Lower Winooski River",
+      "Winooski River mainstem from its mouth at Lake Champlain up to the confluence of Alder Brook",
+      10
+    ],
+    [
+      11,
+      "VT08-03",
+      "Lower Mid-Winooski River",
+      "Lower Mid-Winooski mainstem from the confluence of Alder Brook to the confluence of the Little River",
+      11
+    ],
+    [
+      12,
+      "VT08-05",
+      "Upper Mid-Winooski River",
+      "Winooski River mainstem from the confluence of the Little River to the confluence of Stevens Branch",
+      12
+    ],
+    [
+      13,
+      "VT08-07",
+      "Upper Winooski River",
+      "Winooski River mainstem from the confluence of Stevens Branch to the confluence of Molly's Brook",
+      13
+    ],
+    [
+      14,
+      "VT08-18",
+      "Mad River",
+      "Mad River mainstem from its mouth to Stetson Brook",
+      14
+    ],
+    [
+      15,
+      "VT09-01",
+      "Lower White River Main Stem",
+      "White River mainstem from the mouth to the confluence with Third Branch",
+      15
+    ],
+    [
+      16,
+      "VT09-02",
+      "Middle White River Main Stem",
+      "White River mainstem from the Third Branch mouth to the West Branch mouth",
+      16
+    ],
+    [
+      17,
+      "VT10-01",
+      "Lower Ottauquechee River",
+      "Lower Ottauquechee River mainstem from the mouth to the confluence of Kedron Brook excluding North Hartland Reservoir",
+      17
+    ],
+    [
+      19,
+      "VT10-05",
+      "Upper Ottauquechee River",
+      "Ottauquechee River mainstem from confluence of Broad Brook up to confluence of Roaring Brook",
+      19
+    ],
+    [
+      20,
+      "VT10-11",
+      "Lower Black River",
+      "Black River mainstem from mouth to dam at North Springfield Reservoir",
+      20
+    ],
+    [
+      21,
+      "VT11-01",
+      "Lower Williams River",
+      "Williams River mainstem from its mouth to the confluence of the Middle Branch",
+      21
+    ],
+    [
+      22,
+      "VT11-07",
+      "Lower West River",
+      "Lower West River from its mouth to the confluence with Grassy Brook",
+      22
+    ],
+    [
+      23,
+      "VT11-10",
+      "Mid-West River",
+      "West River mainstem from the confluence of Grassy Brook to the confluence of the Winhall River",
+      23
+    ],
+    [
+      24,
+      "VT11-17",
+      "Upper West River",
+      "West River mainstem from confluence of Winhall River to its headwaters",
+      24
+    ],
+    [
+      25,
+      "VT13-01",
+      "Upper Southern Connecticut River",
+      "Connecticut River mainstem from Wilder Dam down to confluence of Sugar River NH /Ascutney VT       (NHR80104060-00.0109; NHR80104090-00.0109)",
+      25
+    ],
+    [
+      26,
+      "VT13-02",
+      "Upper Mid-Southern Connecticut River",
+      "Connecticut River mainstem from the confluence of Sugar River, NH/Ascutney,VT down to Bellows Falls Dam     (NHR80104130-00.0109)",
+      26
+    ],
+    [
+      27,
+      "VT13-03",
+      "Mid-Southern Connecticut River",
+      "Connecticut River mainstem from the Bellows Falls Dam down to confluence of West River    (NHR80104172-00.0109; NHR80104176-00.2009)",
+      27
+    ],
+    [
+      28,
+      "VT13-04",
+      "Vernon Impoundment",
+      "Connecticut River mainstem from the confluence of West River downstream to Vernon Dam                                  NHR80104176-00.0709",
+      28
+    ],
+    [
+      29,
+      "VT13-05",
+      "Lower Connecticut River",
+      "Connecticut River mainstem from the Vernon Dam downstream to the Massachusetts border    (NHR80104176-00.0109; NHR80201070-00.0109)",
+      29
+    ],
+    [
+      30,
+      "VT15-01",
+      "Passumpsic Main Stem",
+      "Passumpsic River mainstem from its mouth to the confluence of the East and West Branches",
+      30
+    ],
+    [
+      31,
+      "VT16-01",
+      "Upper Connecticut River",
+      "Upper Connecticut River mainstem from Canada to the mouth of the Nulhegan River                                               (NHR80101060-00.0109;  NHR 80101110-00.1309).",
+      31
+    ],
+    [
+      32,
+      "VT16-02",
+      "Lower Upper Connecticut",
+      "Upper Connecticut River mainstem from the confluence of the Nulhegan River to the confluence of the Ammonoosuc River     (NHR80101110-00.109; NHR80101140-00.109)",
+      32
+    ],
+    [
+      33,
+      "VT16-03",
+      "Northern Connecticut River",
+      "Connecticut River mainstem from the confluence of Upper Ammonoosuc to Gilman Dam.  (NHR80101160-00.0109; NHR80101180-00.0109; NHR80101230-00.2209)",
+      33
+    ],
+    [
+      34,
+      "VT16-04",
+      "Moore Impoundment",
+      "Moore Impoundment of Connecticut River (Gilman Dam to Moore Dam)  (NHL80101230-00.2001)",
+      34
+    ],
+    [
+      35,
+      "VT16-05",
+      "Comerford Impoundment",
+      "Comerford Impoundment of the Connecticut River ( Moore Dam to Comerford Dam)                                                (NHL80101230-00.1901)",
+      35
+    ],
+    [
+      36,
+      "VT16-06",
+      "Mid-Northern Connecticut River",
+      "Main Stem - Comerford Dam to confluence of Wells River                                                                                                NHL80101230-00.1801; NHR80101230-00.0109",
+      36
+    ],
+    [
+      37,
+      "VT16-07",
+      "Lower Northern Connecticut River",
+      "Connecticut River mainstem - confluence of Wells River to Wilder Dam  NHR80104010-00.0109; NHR80101230-00.2209",
+      37
+    ]
+  ],
+  "sql skeleton": "select _ ,_ ,_ ,_ ,_ from _ where _ =_",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "river_main_stem_waterbodies_wbid": [
+      "river_main_stem_waterbodies_wbid.OBJECTID",
+      "river_main_stem_waterbodies_wbid.WBID",
+      "river_main_stem_waterbodies_wbid.WBNAME",
+      "river_main_stem_waterbodies_wbid.WBDESC"
+    ],
+    "sand_and_gravel_deposits": [
+      "sand_and_gravel_deposits.OBJECTID",
+      "sand_and_gravel_deposits.AG_TYPE",
+      "sand_and_gravel_deposits.GlobalID",
+      "sand_and_gravel_deposits.SHAPEarea",
+      "sand_and_gravel_deposits.SHAPElen"
+    ]
+  }
+}

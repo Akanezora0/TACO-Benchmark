@@ -1,0 +1,36 @@
+{
+  "sql": "SELECT xichengquxichengqugongjiaochezhanmingdan2478.X, xichengquxichengqugongjiaochezhanmingdan2478.Y, shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.总量 FROM xichengquxichengqugongjiaochezhanmingdan2478 INNER JOIN shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668 ON xichengquxichengqugongjiaochezhanmingdan2478.CODE = shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.观测站名称;",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ ;",
+  "database": "交通服务",
+  "tables": {
+    "xichengquxichengqugongjiaochezhanmingdan2478": [
+      "xichengquxichengqugongjiaochezhanmingdan2478.ID",
+      "xichengquxichengqugongjiaochezhanmingdan2478.X",
+      "xichengquxichengqugongjiaochezhanmingdan2478.Y",
+      "xichengquxichengqugongjiaochezhanmingdan2478.SJXZQHMC",
+      "xichengquxichengqugongjiaochezhanmingdan2478.QXJXZQHMC",
+      "xichengquxichengqugongjiaochezhanmingdan2478.SJXZQHDM",
+      "xichengquxichengqugongjiaochezhanmingdan2478.QXJXZQHDM",
+      "xichengquxichengqugongjiaochezhanmingdan2478.POISJLY",
+      "xichengquxichengqugongjiaochezhanmingdan2478.RHBZDZ",
+      "xichengquxichengqugongjiaochezhanmingdan2478.CODE",
+      "xichengquxichengqugongjiaochezhanmingdan2478.CODEMC",
+      "xichengquxichengqugongjiaochezhanmingdan2478.GXSJ",
+      "xichengquxichengqugongjiaochezhanmingdan2478.POIMC",
+      "xichengquxichengqugongjiaochezhanmingdan2478.POIDZ",
+      "xichengquxichengqugongjiaochezhanmingdan2478.别名",
+      "xichengquxichengqugongjiaochezhanmingdan2478.POIFLMC",
+      "xichengquxichengqugongjiaochezhanmingdan2478.TEL",
+      "xichengquxichengqugongjiaochezhanmingdan2478.MC",
+      "xichengquxichengqugongjiaochezhanmingdan2478.DZ",
+      "xichengquxichengqugongjiaochezhanmingdan2478.DZMS",
+      "xichengquxichengqugongjiaochezhanmingdan2478.XL"
+    ],
+    "shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668": [
+      "shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.年份",
+      "shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.总量",
+      "shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.观测站名称"
+    ]
+  }
+}

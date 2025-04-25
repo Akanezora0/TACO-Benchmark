@@ -1,0 +1,26 @@
+{
+  "sql": "SELECT \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYXM\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.FZRQ\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.YXQZ\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.DWMC\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.EXCHANGETIME\" FROM \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\" WHERE \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID\" = '指定ID';",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从表 `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374` 中查询指定许可证 ID（`XKZID`）的相关信息，包括经营者名称、许可证编号、经营场所、经营范围、发证日期、有效期至、许可证 ID、单位名称以及交换时间。\n\n- **详细描述**：\n  - **表**：`shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374`，该表名较长，可能是中文拼音的直译，推测为“市场监督管理局餐饮服务许可证情况信息”相关的表。\n  - **列**：\n    - `JYZMC`：经营者名称\n    - `XKZBH`：许可证编号\n    - `JYCS`：经营场所\n    - `JYXM`：经营范围\n    - `FZRQ`：发证日期\n    - `YXQZ`：有效期至\n    - `XKZID`：许可证 ID\n    - `DWMC`：单位名称\n    - `EXCHANGETIME`：交换时间（可能是数据同步或更新的时间戳）\n  - **条件**：`XKZID = '指定ID'`，即查询许可证 ID 等于指定值的记录。\n\n- **业务场景**：\n  该查询可能用于以下业务场景：\n  1. **许可证信息查询**：市场监督管理部门或相关机构需要查询某家餐饮服务单位的许可证详细信息，包括许可证编号、经营范围、有效期等。\n  2. **许可证验证**：在执法检查或日常监管中，工作人员可能需要通过许可证 ID 快速核实某家单位的许可证是否有效或是否存在违规行为。\n  3. **数据同步或更新**：`EXCHANGETIME` 字段可能用于数据同步或更新时的记录，确保数据的时效性。\n\n- **用户描述**：\n  在上述业务场景中，用户可能遇到的实际问题或需求包括：\n  1. **执法检查**：市场监督管理人员在检查餐饮单位时，需要快速核实其许可证是否有效，或查看其经营范围是否符合规定。\n  2. **许可证管理**：餐饮单位或相关企业可能需要查询自己的许可证信息，例如有效期将至时需提前申请续期。\n  3. **数据整合**：系统可能需要通过许可证 ID 关联其他数据（如企业信用信息、违规记录等），以进行综合评估或分析。",
+  "natural_language_query": "市民反映，自己在朝阳区开了一家火锅店，前两天市场监督管理局来检查时说要核实我们的餐饮服务许可证。我记得许可证编号是XK2023-1101-3587，但工作人员说系统里查不到相关信息。我们店是去年12月刚办的证，地址是朝阳区建国路88号，经营范围是火锅和饮品制售。现在很着急，担心是不是系统录入有问题导致证件无效了，能不能帮忙查一下这个许可证的详细信息？包括发证日期、有效期这些，看看是不是哪里出错了。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ WHERE _ = _ ;",
+  "database": "餐饮美食",
+  "tables": {
+    "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374": [
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYXM",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.FZRQ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.YXQZ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.DWMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.EXCHANGETIME"
+    ],
+    "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076": [
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址"
+    ]
+  }
+}

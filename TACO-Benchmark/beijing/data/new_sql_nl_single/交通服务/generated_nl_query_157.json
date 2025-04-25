@@ -1,0 +1,25 @@
+{
+  "sql": "SELECT \"shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表\", \"shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1\" FROM \"shijiaotongweishoufeigonglushoufeibiaozhun543\" WHERE \"shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表\" = '具体表值'",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从 `shijiaotongweishoufeigonglushoufeibiaozhun543` 表中查询符合特定条件的记录，具体是查找 `\"北京市收费公路收费标准表\"` 列的值等于 `'具体表值'` 的记录，并返回该列以及 `\"Unnamed: 1\"` 列的数据。\n\n### **详细描述**  \n1. **涉及的表**：  \n   - `shijiaotongweishoufeigonglushoufeibiaozhun543`（表名可能为“市交通委收费公路收费标准表”或类似含义，可能是北京市收费公路的收费标准数据表）。  \n\n2. **涉及的列**：  \n   - `\"北京市收费公路收费标准表\"`：可能是该表中的某一列，存储收费公路的标准名称或类别。  \n   - `\"Unnamed: 1\"`：可能是该表中的第二列（未命名或未明确标注含义的列），可能存储与收费标准相关的具体数值（如费率、价格等）。  \n\n3. **查询条件**：  \n   - `WHERE \"北京市收费公路收费标准表\" = '具体表值'`：仅返回该列值等于 `'具体表值'` 的记录。这里的 `'具体表值'` 可能是某个具体的收费公路名称或类别（如“京藏高速”“一类客车”等）。  \n\n### **业务场景**  \n该查询可能用于以下业务场景：  \n- **收费公路费率查询**：用户可能需要查询某条特定收费公路（或某类车辆）的收费标准，例如“京藏高速小型客车每公里收费多少”。  \n- **政策合规性检查**：交通管理部门或企业可能需要核对某类收费公路的收费标准是否符合规定。  \n- **数据报表生成**：在生成收费公路的统计报表时，可能需要提取特定类别的收费标准数据。  \n\n### **用户描述**  \n在该业务场景下，用户可能遇到的实际问题或需求包括：  \n1. **司机或物流公司**：  \n   - 问题：“我经常走京藏高速，但不知道小型客车的具体收费标准是多少？”  \n   - 需求：查询该公路的收费标准，以便计算通行成本。  \n\n2. **交通管理部门**：  \n   - 问题：“我们需要核查某类收费公路的费率是否与政策一致。”  \n   - 需求：从数据库中提取特定收费公路的标准数据，进行比对分析。  \n\n3. **数据分析师**：  \n   - 问题：“在制作年度收费公路报告时，需要汇总某类公路的收费数据。”  \n   - 需求：从数据库中筛选特定类别的收费标准，用于统计分析。  \n\n### **总结**  \n该 SQL 语句的核心是 **从收费公路标准表中查询特定类别（或名称）的收费标准数据**，适用于费用计算、政策核查、数据统计等场景。",
+  "natural_language_query": "市民反映，最近经常开车走京藏高速，但是对小型客车的收费具体标准不太清楚，每次过收费站扣费金额好像不太一样，想了解一下到底是怎么收费的。我记得之前好像在哪个文件里看到过收费标准，但找不到了。能不能帮忙查一下京藏高速这类公路对小轿车的具体收费规定？主要是想知道每公里收多少钱，或者有没有分时段收费的情况。因为马上要跑长途，想提前算算费用，谢谢！",
+  "results": 0,
+  "sql skeleton": "select _ ,_ from _ where _ =_",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweishoufeigonglushoufeibiaozhun543": [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 2",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 3",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 4",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 5"
+    ],
+    "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672": [
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.企业名称",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.评定等级",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.所属地区",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.年份",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.统一社会信用代码"
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sql": "SELECT \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC\", \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号\" FROM \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\" JOIN \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076\" ON \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID\" = \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.XKZID\";",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从两个表中联合查询特定字段的数据，通过许可证 ID（XKZID）关联这两个表，获取餐饮服务许可证情况和清真食品专用标识牌号的信息。\n\n- **详细描述**：\n  - **涉及的表**：\n    1. `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374`（市场监督管理局餐饮服务许可证情况信息表）\n    2. `shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076`（民宗委规范化清真食品专柜数据表）\n  - **涉及的列**：\n    1. `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC`（餐饮服务许可证中的“经营者名称”）\n    2. `shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号`（清真食品专柜的“专用标识牌号”）\n  - **关联条件**：两个表通过 `XKZID`（许可证 ID）字段进行关联，确保查询结果中的每条记录在两个表中都有对应的许可证信息。\n\n- **业务场景**：\n  该查询可能用于以下业务场景：\n  1. **监管合规检查**：市场监督管理局和民宗委可能需要联合检查餐饮服务经营者是否同时具备合法的餐饮服务许可证和清真食品专柜的专用标识牌。\n  2. **数据整合与分析**：将两个部门的数据关联起来，分析清真食品经营者的合规情况，或者统计清真食品专柜的分布情况。\n  3. **跨部门协作**：市场监督管理局和民宗委可能需要共享数据，以确保清真食品经营的合法性和规范性。\n\n- **用户描述**：\n  在上述业务场景下，用户可能遇到的实际问题或需求包括：\n  1. **经营者合规性验证**：用户（如监管人员）需要确认某餐饮服务经营者是否同时具备餐饮服务许可证和清真食品专柜的专用标识牌，以确保其合法经营。\n  2. **数据共享需求**：市场监督管理局和民宗委可能需要共享数据，但各自的数据系统中只有部分信息，需要通过许可证 ID 关联两个系统的数据以获取完整信息。\n  3. **统计分析需求**：用户可能需要统计某地区内具备清真食品专柜的餐饮服务经营者的数量或分布情况，以便进行政策制定或资源分配。",
+  "natural_language_query": "市民反映，我在朝阳区开了一家清真餐厅，最近市场监督管理局来检查时说我的清真食品专柜标识牌和餐饮服务许可证信息对不上。我记得去年明明在民宗委申请了专用标识牌，许可证也是在市场监管局正规办理的，现在两边系统里查出来的信息不一致，搞得我很着急。能不能帮忙查一下\"西北人家清真餐厅\"的经营许可证和清真专柜标识牌是不是匹配的？我担心是不是系统录入出了问题，影响正常营业。来电反映清真餐厅证照信息不一致问题。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ ;",
+  "database": "餐饮美食",
+  "tables": {
+    "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374": [
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYXM",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.FZRQ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.YXQZ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.DWMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.EXCHANGETIME"
+    ],
+    "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076": [
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址"
+    ]
+  }
+}

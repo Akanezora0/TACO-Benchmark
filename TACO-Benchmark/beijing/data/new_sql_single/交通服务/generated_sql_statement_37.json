@@ -1,0 +1,28 @@
+{
+  "sql": "SELECT \"huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.行政相对人名称\", \"huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.许可内容\" FROM \"huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053\" WHERE \"huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.序号\" = '特定序号'",
+  "results": 0,
+  "sql skeleton": "select _ ,_ from _ where _ = _",
+  "database": "交通服务",
+  "tables": {
+    "pingguqupingguqugongjiaozhandianmingxi269": [
+      "pingguqupingguqugongjiaozhandianmingxi269.区内公交线路站点明细",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 1",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 2",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 3",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 4",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 5",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 6",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 7",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 8"
+    ],
+    "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053": [
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.序号",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.行政相对人名称",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.统一社会信用代码",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.行政许可决定文书号",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.许可内容",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.许可决定日期",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.许可机关"
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "sql": "SELECT \n    shiwenhuahelvyoujuxingjifandianxinxi2036.��\u0011ࡱ\u001a�, \n    yanqingquyanqingqulvyoujingquxinxi3381.旅游景区 \nFROM \n    shiwenhuahelvyoujuxingjifandianxinxi2036 \n    INNER JOIN yanqingquyanqingqulvyoujingquxinxi3381 ON shiwenhuahelvyoujuxingjifandianxinxi2036.\u0001\u0001 = yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 1 \nWHERE \n    yanqingquyanqingqulvyoujingquxinxi3381.旅游景区 = '指定旅游景区名称';",
+  "problem_description": "# SQL 查询分析\n\n## 查询意图\n这条SQL语句的目的是从两个表中查询与指定旅游景区相关联的文化和旅游酒店信息。\n\n## 详细描述\n- **涉及的表**：\n  - `shiwenhuahelvyoujuxingjifandianxinxi2036`（文化和旅游酒店信息表）\n  - `yanqingquyanqingqulvyoujingquxinxi3381`（延庆区旅游景区信息表）\n\n- **涉及的列**：\n  - `shiwenhuahelvyoujuxingjifandianxinxi2036`表中的第一个列（列名显示为乱码）\n  - `yanqingquyanqingqulvyoujingquxinxi3381`表中的\"旅游景区\"列\n  - 连接条件使用了`shiwenhuahelvyoujuxingjifandianxinxi2036`表的第一个列和`yanqingquyanqingqulvyoujingquxinxi3381`表的\"Unnamed: 1\"列\n\n- **查询条件**：\n  - 只查询`yanqingquyanqingqulvyoujingquxinxi3381`表中\"旅游景区\"等于'指定旅游景区名称'的记录\n\n- **连接方式**：\n  - 使用INNER JOIN内连接，只返回两个表中匹配的记录\n\n## 业务场景\n这个查询可能用于旅游信息管理系统，目的是找出与特定旅游景区相关联的酒店或住宿设施信息。可能的业务场景包括：\n1. 为游客提供特定景区附近的住宿推荐\n2. 分析景区与周边酒店的关系\n3. 旅游线路规划时查找景区配套住宿设施\n\n## 用户描述\n在实际应用中，用户可能遇到以下情况或需求：\n1. 游客计划前往\"指定旅游景区名称\"游玩，需要查找该景区附近有哪些文化和旅游酒店可供选择\n2. 旅游规划师设计旅游线路时，需要了解特定景区周边的住宿设施情况\n3. 旅游管理部门想统计和分析各景区配套酒店的数量和质量\n4. 酒店经营者想了解自己的酒店与哪些景区有关联，以便进行针对性营销\n\n## 注意事项\n1. 表名和列名中存在乱码，可能是编码问题导致的显示异常\n2. 列名\"Unnamed: 1\"表明数据可能来自未正确命名的Excel或其他数据源导入\n3. 实际应用中应修复这些命名问题以提高查询的可读性和可维护性",
+  "natural_language_query": "市民反映，最近计划去延庆区的某个著名景区旅游，想提前了解一下周边有哪些比较正规的文旅酒店可以住宿。听说有些酒店是和景区有合作关系的，但我在网上查了半天也没找到具体信息。我朋友说之前去过\"指定旅游景区名称\"那边玩，住的酒店还不错，好像是和景区有挂钩的，能不能帮忙查查这个景区周边都有哪些正规的文旅酒店啊？主要是担心订到不靠谱的住宿影响游玩体验。另外想问问这些酒店是不是都和景区有正式合作关系啊？来电咨询景区周边推荐酒店信息。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ WHERE _ = _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "shiwenhuahelvyoujuxingjifandianxinxi2036": [
+      "shiwenhuahelvyoujuxingjifandianxinxi2036.��\u0011ࡱ\u001a�",
+      "shiwenhuahelvyoujuxingjifandianxinxi2036.\u0001\u0001"
+    ],
+    "yanqingquyanqingqulvyoujingquxinxi3381": [
+      "yanqingquyanqingqulvyoujingquxinxi3381.旅游景区",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 1",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 2",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 3",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 4",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 5",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 6",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 7"
+    ]
+  }
+}

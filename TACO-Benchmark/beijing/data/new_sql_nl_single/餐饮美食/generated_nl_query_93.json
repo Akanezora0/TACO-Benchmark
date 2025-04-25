@@ -1,0 +1,26 @@
+{
+  "sql": "SELECT \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC\" as 列1, \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH\" as 列2, \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS\" as 列3, \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYXM\" as 列4, \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.FZRQ\" as 列5 FROM \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\" WHERE \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC\" = '指定品牌' AND \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH\" = '指定编号'",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从表 `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374` 中查询符合特定条件的餐饮服务许可证信息，具体筛选条件是“经营主体名称”（`JYZMC`）为“指定品牌”，且“许可证编号”（`XKZBH`）为“指定编号”。\n\n---\n\n### **详细描述**  \n1. **表信息**：  \n   - 表名：`shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374`（从名称推断，可能是“市场监督管理局餐饮服务许可证情况信息”相关的表）。  \n   - 该表可能存储餐饮服务许可证的登记、审批或监管信息。  \n\n2. **查询列**：  \n   - `JYZMC`（经营主体名称）：查询结果中命名为“列1”，表示企业或品牌名称。  \n   - `XKZBH`（许可证编号）：查询结果中命名为“列2”，可能是餐饮服务许可证的唯一标识。  \n   - `JYCS`（经营场所）：查询结果中命名为“列3”，表示企业实际经营地址。  \n   - `JYXM`（经营项目）：查询结果中命名为“列4”，描述许可的经营范围（如中餐、快餐等）。  \n   - `FZRQ`（发证日期）：查询结果中命名为“列5”，记录许可证的颁发时间。  \n\n3. **筛选条件**：  \n   - `JYZMC = '指定品牌'`：限定查询特定品牌或企业名称的许可证信息。  \n   - `XKZBH = '指定编号'`：进一步限定查询特定许可证编号的记录，确保结果唯一性。  \n\n---\n\n### **业务场景**  \n1. **许可证核验**：  \n   - 市场监督管理部门或第三方平台（如外卖平台）可能需要验证某餐饮品牌是否持有有效的许可证，并核对许可证的详细信息（如经营地址、项目是否合规）。  \n\n2. **企业资质审查**：  \n   - 在商业合作（如连锁加盟、供应链准入）中，合作方需确认目标企业是否具备合法经营资质，此查询可快速获取关键信息。  \n\n3. **监管执法**：  \n   - 执法人员根据企业名称或许可证编号定向检查，确认其许可证状态是否有效，或是否存在违规经营行为。  \n\n---\n\n### **用户描述**  \n1. **监管人员需求**：  \n   - 某地市场监管局接到投诉，称“指定品牌”的某分店可能存在无证经营问题。监管人员通过输入品牌名称和许可证编号，快速定位到该店的许可信息，核实其合法性。  \n\n2. **平台运营需求**：  \n   - 外卖平台在审核新入驻商家时，需确保其上传的许可证编号与官方数据库一致。通过此查询，平台可自动化校验商家资质的真实性。  \n\n3. **企业自查需求**：  \n   - 连锁餐饮企业总部需要统计旗下所有分店的许可证有效期，通过批量查询许可证编号，及时安排续期或更新。  \n\n---\n\n### **补充说明**  \n- 表名和字段名均为中文拼音缩写，可能来自政府或传统行业数据库，设计上未采用英文惯例，需依赖业务背景理解。  \n- 若实际应用中“指定品牌”和“指定编号”是占位符，则此 SQL 可能是模板，供程序动态替换参数后执行。",
+  "natural_language_query": "市民反映，我在美团上看到一家叫\"指定品牌\"的餐饮店，地址显示在朝阳区，但是总觉得不太放心。我查了他们公示的许可证编号是\"指定编号\"，想确认一下这个店是不是真的有正规的餐饮服务许可证。因为最近看到新闻说有商家用假的许可证在外卖平台上开店，担心吃到不卫生的东西。能不能帮忙查查这个许可证是不是真的？包括他们的经营地址、允许经营的项目，还有发证日期这些信息。主要是想确认这个店是不是合法合规经营的，来电反映餐饮店许可证真伪查询问题。",
+  "results": 0,
+  "sql skeleton": "select _ as _ ,_ as _ ,_ as _ ,_ as _ ,_ as _ from _ where _",
+  "database": "餐饮美食",
+  "tables": {
+    "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374": [
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYXM",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.FZRQ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.YXQZ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.DWMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.EXCHANGETIME"
+    ],
+    "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076": [
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址"
+    ]
+  }
+}

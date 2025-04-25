@@ -1,0 +1,20 @@
+{
+  "sql": "SELECT \"pingguqupingguqujingpinminsu2083.平谷区2022年精品民宿\", \"xichengqubeijingshiwenwubaohudanwei31.名称\" FROM \"pingguqupingguqujingpinminsu2083\" - \"xichengqubeijingshiwenwubaohudanwei31\";",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从 `pingguqupingguqujingpinminsu2083` 表中查询 `平谷区2022年精品民宿` 列的数据，并从 `xichengqubeijingshiwenwubaohudanwei31` 表中查询 `名称` 列的数据，最终返回两者的差集（即 `pingguqupingguqujingpinminsu2083` 中存在但 `xichengqubeijingshiwenwubaohudanwei31` 中不存在的记录）。  \n\n---\n\n### **详细描述**  \n1. **涉及的表**：  \n   - `pingguqupingguqujingpinminsu2083`：可能存储北京市平谷区2022年精品民宿的相关信息。  \n   - `xichengqubeijingshiwenwubaohudanwei31`：可能存储北京市西城区的文物保护单位信息。  \n\n2. **涉及的列**：  \n   - `pingguqupingguqujingpinminsu2083.平谷区2022年精品民宿`：表示平谷区的精品民宿名称或标识。  \n   - `xichengqubeijingshiwenwubaohudanwei31.名称`：表示西城区文物保护单位的名称。  \n\n3. **查询逻辑**：  \n   - 使用 `-`（差集运算）返回 `pingguqupingguqujingpinminsu2083` 表中存在但 `xichengqubeijingshiwenwubaohudanwei31` 表中不存在的记录。  \n   - 该查询可能用于对比两个不同数据集的差异，例如找出平谷区的精品民宿中哪些不在西城区的文物保护单位列表中。  \n\n---\n\n### **业务场景**  \n1. **数据对比分析**：  \n   - 可能用于政府或旅游管理部门对比不同区域的文旅资源，例如分析平谷区的精品民宿是否与西城区的文物保护单位有重叠或差异。  \n   - 可用于文旅资源整合，避免重复建设或资源冲突。  \n\n2. **文旅规划决策**：  \n   - 如果某些民宿可能与文物保护单位存在冲突（例如地理位置重叠），该查询可以帮助识别潜在问题。  \n   - 可用于优化区域旅游发展规划，确保文旅资源的合理分布。  \n\n---\n\n### **用户描述**  \n1. **用户需求**：  \n   - 旅游管理部门可能需要了解平谷区的精品民宿是否与西城区的文物保护单位存在重叠或冲突，以便调整政策或规划。  \n   - 民宿经营者可能需要确认自己的民宿是否涉及文物保护范围，以避免违规经营。  \n\n2. **实际问题**：  \n   - 如果某民宿位于文物保护单位附近或范围内，可能会受到政策限制（如建筑改造、经营许可等）。  \n   - 政府可能需要确保文旅资源的合理分布，避免过度集中在某些区域而忽视其他区域的发展。  \n\n该查询可以帮助用户快速识别数据差异，辅助决策或合规检查。",
+  "natural_language_query": "市民反映，最近在平谷区经营民宿时听说西城区那边有些文物保护单位对民宿经营有限制。我是2022年评上的平谷区精品民宿，想确认下我们这些民宿会不会和西城区的文物保护单位有什么冲突啊？因为听说有些地方文物保护单位周边不让开民宿，但具体哪些地方受影响我也不太清楚。能不能帮忙查查我们平谷区这些精品民宿里，有没有哪些是和西城区文物保护单位重合的？主要是担心以后经营会不会受影响。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "pingguqupingguqujingpinminsu2083": [
+      "pingguqupingguqujingpinminsu2083.平谷区2022年精品民宿",
+      "pingguqupingguqujingpinminsu2083.Unnamed: 1",
+      "pingguqupingguqujingpinminsu2083.Unnamed: 2"
+    ],
+    "xichengqubeijingshiwenwubaohudanwei31": [
+      "xichengqubeijingshiwenwubaohudanwei31.序号",
+      "xichengqubeijingshiwenwubaohudanwei31.名称",
+      "xichengqubeijingshiwenwubaohudanwei31.地址"
+    ]
+  }
+}

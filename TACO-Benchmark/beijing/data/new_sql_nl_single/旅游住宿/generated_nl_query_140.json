@@ -1,0 +1,49 @@
+{
+  "sql": "SELECT fengtaiqufengtaiquxingjijiudian1397.\"星级酒店明细\", fengtaiqufengtaiquxingjijiudian1397.Unnamed: 1, fengtaiqufengtaiquxingjijiudian1397.Unnamed: 2, fengtaiqufengtaiquxingjijiudian1397.Unnamed: 3 WHERE fengtaiqufengtaiquxingjijiudian1397.\"星级酒店明细\" = '目标星级酒店' AND fengtaiqufengtaiquxingjijiudian1397.Unnamed: 1 = '条件1' AND fengtaiqufengtaiquxingjijiudian1397.Unnamed: 2 = '条件2'",
+  "problem_description": "### 查询意图：\n该 SQL 语句的目的是从名为 `fengtaiqufengtaiquxingjijiudian1397` 的表中查询符合特定条件的星级酒店明细数据。\n\n### 详细描述：\n1. **表名**：`fengtaiqufengtaiquxingjijiudian1397`  \n   - 从表名来看，该表可能与“丰台区星级酒店”相关，可能是存储丰台区星级酒店信息的表。\n\n2. **查询的列**：\n   - `\"星级酒店明细\"`：可能是酒店的名称或标识字段。\n   - `Unnamed: 1`、`Unnamed: 2`、`Unnamed: 3`：这些列名显示为未命名，可能是数据导入时未指定列名，或者是临时生成的列。具体含义需要结合数据内容判断，可能分别代表酒店的某些属性（如地址、电话、评分等）。\n\n3. **查询条件**：\n   - `\"星级酒店明细\" = '目标星级酒店'`：筛选出“星级酒店明细”列值为“目标星级酒店”的记录。\n   - `Unnamed: 1 = '条件1'`：筛选出“Unnamed: 1”列值为“条件1”的记录。\n   - `Unnamed: 2 = '条件2'`：筛选出“Unnamed: 2”列值为“条件2”的记录。\n\n### 业务场景：\n1. **数据筛选**：该查询可能是为了从大量酒店数据中筛选出符合特定条件的酒店信息。例如：\n   - 查找名为“目标星级酒店”的酒店。\n   - 进一步筛选该酒店的某些属性（如特定地址、特定服务等）。\n\n2. **数据验证**：可能是为了验证某些酒店信息是否存在于数据库中，或者检查数据的完整性。\n\n3. **报表生成**：可能是为生成报表或分析提供基础数据，例如统计特定条件下的酒店数量或属性。\n\n### 用户描述：\n1. **用户需求**：\n   - 用户可能需要查找丰台区名为“目标星级酒店”的详细信息，同时满足其他两个条件（如“条件1”和“条件2”可能是酒店的地址或服务类型）。\n   - 用户可能需要确认该酒店是否存在，或者获取该酒店的某些特定属性（如联系方式、评分等）。\n\n2. **实际问题**：\n   - 用户可能在规划旅行或商务活动时，需要快速定位到符合要求的星级酒店。\n   - 用户可能是数据分析师或管理员，需要验证或提取特定酒店的数据以支持决策或报告。\n\n3. **潜在问题**：\n   - 由于列名“Unnamed: 1”等未明确含义，用户可能需要依赖其他文档或上下文理解这些列的具体内容。\n   - 如果数据量较大，可能需要优化查询条件以提高效率。",
+  "natural_language_query": "市民反映，最近在丰台区想预订一家叫\"目标星级酒店\"的星级酒店，但是通过网上查询发现信息不太一致。这家酒店好像是在某个特定区域（可能是条件1），而且提供某种特色服务（可能是条件2），但不确定具体是不是同一家。之前朋友推荐过，说这家酒店不错，但自己查的时候发现有好几家名字相似的，搞不清楚哪家才是正宗的。能不能帮忙核实一下丰台区这家\"目标星级酒店\"的具体情况？主要是想确认地址和服务项目是不是符合预期，因为要接待重要客户，所以比较着急。来电反映星级酒店信息核实问题。",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ ,_ where _ = _ and _ = _",
+  "database": "旅游住宿",
+  "tables": {
+    "fengtaiqufengtaiquxingjijiudian1397": [
+      "fengtaiqufengtaiquxingjijiudian1397.星级酒店明细",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 1",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 2",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 3",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 4",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 5",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 6"
+    ],
+    "shiguihuaziranziyuanweiqingzhensi1515": [
+      "shiguihuaziranziyuanweiqingzhensi1515.HID",
+      "shiguihuaziranziyuanweiqingzhensi1515.FATHERID",
+      "shiguihuaziranziyuanweiqingzhensi1515.HNAME",
+      "shiguihuaziranziyuanweiqingzhensi1515.OTHERNAME",
+      "shiguihuaziranziyuanweiqingzhensi1515.CATEGORY",
+      "shiguihuaziranziyuanweiqingzhensi1515.SUBCATEGOR",
+      "shiguihuaziranziyuanweiqingzhensi1515.COUNTYNAME",
+      "shiguihuaziranziyuanweiqingzhensi1515.STREETNAME",
+      "shiguihuaziranziyuanweiqingzhensi1515.DYNASTY",
+      "shiguihuaziranziyuanweiqingzhensi1515.SUBDYNASTY",
+      "shiguihuaziranziyuanweiqingzhensi1515.ADDRESS",
+      "shiguihuaziranziyuanweiqingzhensi1515.RANK",
+      "shiguihuaziranziyuanweiqingzhensi1515.BATCH",
+      "shiguihuaziranziyuanweiqingzhensi1515.PUBTIME",
+      "shiguihuaziranziyuanweiqingzhensi1515.USERS",
+      "shiguihuaziranziyuanweiqingzhensi1515.PURPOSE",
+      "shiguihuaziranziyuanweiqingzhensi1515.OWNERSHIP",
+      "shiguihuaziranziyuanweiqingzhensi1515.STATEEVALU",
+      "shiguihuaziranziyuanweiqingzhensi1515.SINGLERELI",
+      "shiguihuaziranziyuanweiqingzhensi1515.PROTECTION",
+      "shiguihuaziranziyuanweiqingzhensi1515.ATTACHEDRE",
+      "shiguihuaziranziyuanweiqingzhensi1515.RELATEDPEO",
+      "shiguihuaziranziyuanweiqingzhensi1515.RELATEDEVE",
+      "shiguihuaziranziyuanweiqingzhensi1515.PUBNAME",
+      "shiguihuaziranziyuanweiqingzhensi1515.SOURCE",
+      "shiguihuaziranziyuanweiqingzhensi1515.EDITOR",
+      "shiguihuaziranziyuanweiqingzhensi1515.ISREDUNDAN",
+      "shiguihuaziranziyuanweiqingzhensi1515.THEME"
+    ]
+  }
+}

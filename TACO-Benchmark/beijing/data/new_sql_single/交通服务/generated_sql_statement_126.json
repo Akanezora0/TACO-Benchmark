@@ -1,0 +1,20 @@
+{
+  "sql": "SELECT \"shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239.区域\", \"shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.地址\" FROM \"shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239\" INNER JOIN \"shijiaotongweichaoxianchaozaihuochexiezaichangdi3663\" ON \"shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239.街道\" = \"shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.行政区划代码\";",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ ;",
+  "database": "交通服务",
+  "tables": {
+    "shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239": [
+      "shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239.区域",
+      "shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239.街道",
+      "shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239.道路",
+      "shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239.车位数"
+    ],
+    "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663": [
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.行政区划代码",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.站点名称",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.联系电话",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.地址"
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "sql": "SELECT \"pingguquzhucegongyuanxinxi780\".\"序号\", \"pingguquzhucegongyuanxinxi780\".\"名称\", \"pingguquzhucegongyuanxinxi780\".\"区\" FROM \"pingguquzhucegongyuanxinxi780\" WHERE \"pingguquzhucegongyuanxinxi780\".\"区\" = 'fengtaiqu'",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从表 `pingguquzhucegongyuanxinxi780` 中查询位于 `fengtaiqu`（丰台区）的公园信息，包括序号、名称和所属区。\n\n- **详细描述**：\n  - **涉及的表**：`pingguquzhucegongyuanxinxi780`（可能为“平谷区注册公园信息780”或其他类似含义的表）。\n  - **涉及的列**：\n    - `序号`：可能表示公园的唯一编号或排序号。\n    - `名称`：表示公园的名称。\n    - `区`：表示公园所属的行政区划。\n  - **条件**：`\"pingguquzhucegongyuanxinxi780\".\"区\" = 'fengtaiqu'`，即筛选出行政区为“丰台区”的公园记录。\n\n- **业务场景**：\n  - 该查询可以用于获取丰台区所有注册公园的基本信息，可能用于以下场景：\n    1. **区域公园管理**：政府部门或公园管理机构需要统计或管理丰台区的公园信息。\n    2. **数据分析**：分析丰台区的公园分布或数量，为城市规划或资源分配提供依据。\n    3. **公众服务**：为市民或游客提供丰台区公园的查询服务，例如在网站或APP上展示公园列表。\n\n- **用户描述**：\n  - **用户需求**：用户可能是政府工作人员、数据分析师或普通市民，需要了解丰台区有哪些注册公园。\n  - **实际问题**：\n    - 政府工作人员可能需要统计丰台区的公园数量或名称，以便进行区域规划或资源管理。\n    - 市民或游客可能想查询丰台区有哪些公园可以游览，需要获取公园的名称和位置信息。\n  - 通过该查询，用户可以快速获取丰台区的公园列表，满足管理或休闲需求。",
+  "natural_language_query": "市民反映，最近想带家人去丰台区的公园玩，但不知道那边都有哪些正规的公园。听说有些公园可能没登记或者设施不完善，想问问丰台区现在正式注册的公园都有哪些？能不能给个完整的名单？主要是想确认一下这些公园是不是正规管理的，免得白跑一趟。之前去过一个公园连厕所都没有，特别不方便。希望相关部门能提供一下丰台区所有正规公园的信息，包括公园名字和具体属于哪个区管的，这样我们老百姓去玩也放心些。",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ from _ where _ =_",
+  "database": "旅游住宿",
+  "tables": {
+    "pingguquzhucegongyuanxinxi780": [
+      "pingguquzhucegongyuanxinxi780.序号",
+      "pingguquzhucegongyuanxinxi780.名称",
+      "pingguquzhucegongyuanxinxi780.区",
+      "pingguquzhucegongyuanxinxi780.街道",
+      "pingguquzhucegongyuanxinxi780.地址",
+      "pingguquzhucegongyuanxinxi780.咨询电话"
+    ],
+    "fengtaiqufengtaiquxingjijiudian1397": [
+      "fengtaiqufengtaiquxingjijiudian1397.星级酒店明细",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 1",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 2",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 3",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 4",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 5",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 6"
+    ]
+  }
+}

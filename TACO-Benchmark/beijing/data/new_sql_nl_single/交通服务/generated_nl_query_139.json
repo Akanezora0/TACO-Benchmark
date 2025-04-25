@@ -1,0 +1,43 @@
+{
+  "sql": "SELECT xichengquxichengqugongjiaochezhanmingdan2478.X, xichengquxichengqugongjiaochezhanmingdan2478.Y FROM xichengquxichengqugongjiaochezhanmingdan2478 WHERE xichengquxichengqugongjiaochezhanmingdan2478.SJXZQHMC = '目标名称';",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从名为 `xichengquxichengqugongjiaochezhanmingdan2478` 的表中查询符合特定行政区划名称条件的公交车站的 X 和 Y 坐标。\n\n- **详细描述**：\n  - **表**：`xichengquxichengqugongjiaochezhanmingdan2478`，该表名可能表示“西城区西城区公交车站名单2478”，其中可能包含西城区公交车站的相关信息。\n  - **列**：\n    - `X` 和 `Y`：可能是公交车站的经纬度坐标或其他平面坐标。\n    - `SJXZQHMC`：可能是“实际行政区划名称”的缩写，用于标识公交车站所属的行政区划。\n  - **条件**：`SJXZQHMC = '目标名称'`，表示只查询行政区划名称为“目标名称”的公交车站的坐标。\n\n- **业务场景**：\n  - 该查询可以用于地理信息系统（GIS）或地图服务中，例如：\n    - 在地图上标记特定行政区划内的所有公交车站。\n    - 分析特定行政区划内公交车站的分布情况。\n    - 为导航或路线规划提供基础数据。\n\n- **用户描述**：\n  - 用户可能是城市规划者、交通管理部门或地图服务提供商，他们需要：\n    - 获取特定行政区划（如“西城区”）内所有公交车站的位置信息，以便进行交通规划或优化。\n    - 在地图上可视化这些公交车站，方便公众查询或导航。\n    - 分析公交车站的分布密度，判断是否需要新增或调整站点。",
+  "natural_language_query": "市民反映，最近在使用地图导航时发现西城区部分公交车站的位置信息不太准确，特别是德胜门附近的几个站点。想了解一下西城区范围内所有公交站点的具体位置坐标，方便核实和更新地图数据。之前在其他区也遇到过类似问题，导致导航指引错误。希望能提供西城区公交站点的位置信息，最好能有经纬度坐标，这样我们做社区交通优化方案时就能更准确地标注这些站点位置了。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ WHERE _ = _ ;",
+  "database": "交通服务",
+  "tables": {
+    "xichengquxichengqugongjiaochezhanmingdan2478": [
+      "xichengquxichengqugongjiaochezhanmingdan2478.ID",
+      "xichengquxichengqugongjiaochezhanmingdan2478.X",
+      "xichengquxichengqugongjiaochezhanmingdan2478.Y",
+      "xichengquxichengqugongjiaochezhanmingdan2478.SJXZQHMC",
+      "xichengquxichengqugongjiaochezhanmingdan2478.QXJXZQHMC",
+      "xichengquxichengqugongjiaochezhanmingdan2478.SJXZQHDM",
+      "xichengquxichengqugongjiaochezhanmingdan2478.QXJXZQHDM",
+      "xichengquxichengqugongjiaochezhanmingdan2478.POISJLY",
+      "xichengquxichengqugongjiaochezhanmingdan2478.RHBZDZ",
+      "xichengquxichengqugongjiaochezhanmingdan2478.CODE",
+      "xichengquxichengqugongjiaochezhanmingdan2478.CODEMC",
+      "xichengquxichengqugongjiaochezhanmingdan2478.GXSJ",
+      "xichengquxichengqugongjiaochezhanmingdan2478.POIMC",
+      "xichengquxichengqugongjiaochezhanmingdan2478.POIDZ",
+      "xichengquxichengqugongjiaochezhanmingdan2478.别名",
+      "xichengquxichengqugongjiaochezhanmingdan2478.POIFLMC",
+      "xichengquxichengqugongjiaochezhanmingdan2478.TEL",
+      "xichengquxichengqugongjiaochezhanmingdan2478.MC",
+      "xichengquxichengqugongjiaochezhanmingdan2478.DZ",
+      "xichengquxichengqugongjiaochezhanmingdan2478.DZMS",
+      "xichengquxichengqugongjiaochezhanmingdan2478.XL"
+    ],
+    "shijiaotongweixianchangxunchaxinxi3675": [
+      "shijiaotongweixianchangxunchaxinxi3675.序号",
+      "shijiaotongweixianchangxunchaxinxi3675.工作内容",
+      "shijiaotongweixianchangxunchaxinxi3675.巡查时间",
+      "shijiaotongweixianchangxunchaxinxi3675.巡查人次",
+      "shijiaotongweixianchangxunchaxinxi3675.巡查单位",
+      "shijiaotongweixianchangxunchaxinxi3675.巡查位置",
+      "shijiaotongweixianchangxunchaxinxi3675.共享时间",
+      "shijiaotongweixianchangxunchaxinxi3675.更新时间"
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "sql": "SELECT \"shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.年份\", \"shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.总量\" FROM \"shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668\" WHERE \"shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.年份\" = '2022' ORDER BY \"shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.总量\" DESC",
+  "results": 0,
+  "sql skeleton": "select _ ,_ from _ where _ = _ order by _",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668": [
+      "shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.年份",
+      "shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.总量",
+      "shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.观测站名称"
+    ],
+    "shijiaotongweigongluqixiangshuju233": [
+      "shijiaotongweigongluqixiangshuju233.��\u0011ࡱ\u001a�",
+      "shijiaotongweigongluqixiangshuju233.\u0001\u0001"
+    ]
+  }
+}

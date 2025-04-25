@@ -1,0 +1,21 @@
+{
+  "sql": "SELECT shijiaotongweiguidaoyanshixinxi3711.延时开始时间 FROM shijiaotongweiguidaoyanshixinxi3711 WHERE shijiaotongweiguidaoyanshixinxi3711.延时线路 = '指定线路代码' AND shijiaotongweigongjiaoxianluxinxichuxingfuwu3666.线路代码 = '指定线路代码'",
+  "results": 0,
+  "sql skeleton": "select _ from _ where _",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweiguidaoyanshixinxi3711": [
+      "shijiaotongweiguidaoyanshixinxi3711.序号",
+      "shijiaotongweiguidaoyanshixinxi3711.总车次",
+      "shijiaotongweiguidaoyanshixinxi3711.延时开始时间",
+      "shijiaotongweiguidaoyanshixinxi3711.延时结束时间",
+      "shijiaotongweiguidaoyanshixinxi3711.延时线路",
+      "shijiaotongweiguidaoyanshixinxi3711.共享时间",
+      "shijiaotongweiguidaoyanshixinxi3711.更新时间"
+    ],
+    "shijiaotongweigongjiaoxianluxinxichuxingfuwu3666": [
+      "shijiaotongweigongjiaoxianluxinxichuxingfuwu3666.线路代码",
+      "shijiaotongweigongjiaoxianluxinxichuxingfuwu3666.路线名称"
+    ]
+  }
+}

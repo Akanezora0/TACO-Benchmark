@@ -1,0 +1,17 @@
+{
+  "sql": "SELECT \n    \"shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239\".\"区域\",\n    \"shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239\".\"街道\",\n    \"shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239\".\"道路\",\n    \"shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239\".\"车位数\",\n    \"zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733\".\"PK\u0003\u0004\"\nFROM \n    \"shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239\",\n    \"zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733\"\nWHERE \n    \"shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239\".\"区域\" = '北京' AND \n    \"shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239\".\"街道\" = '王府井' AND \n    \"shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239\".\"道路\" = '东安路' AND \n    \"zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733\".\"PK\u0003\u0004\" = '123456'",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ ,_ ,_ from _ where _ = _ and _ = _ and _ = _ and _ (_ ,_ ) = _",
+  "database": "交通服务",
+  "tables": {
+    "shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239": [
+      "shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239.区域",
+      "shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239.街道",
+      "shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239.道路",
+      "shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239.车位数"
+    ],
+    "zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733": [
+      "zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733.PK\u0003\u0004"
+    ]
+  }
+}

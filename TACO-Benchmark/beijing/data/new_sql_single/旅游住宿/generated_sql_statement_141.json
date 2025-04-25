@@ -1,0 +1,49 @@
+{
+  "sql": "SELECT HID, HNAME FROM shiguihuaziranziyuanweiwangfu1520 WHERE HID = '1';",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "shiguihuaziranziyuanweiwangfu1520": [
+      "shiguihuaziranziyuanweiwangfu1520.HID",
+      "shiguihuaziranziyuanweiwangfu1520.FATHERID",
+      "shiguihuaziranziyuanweiwangfu1520.HNAME",
+      "shiguihuaziranziyuanweiwangfu1520.OTHERNAME",
+      "shiguihuaziranziyuanweiwangfu1520.CATEGORY",
+      "shiguihuaziranziyuanweiwangfu1520.SUBCATEGOR",
+      "shiguihuaziranziyuanweiwangfu1520.COUNTYNAME",
+      "shiguihuaziranziyuanweiwangfu1520.STREETNAME",
+      "shiguihuaziranziyuanweiwangfu1520.DYNASTY",
+      "shiguihuaziranziyuanweiwangfu1520.SUBDYNASTY",
+      "shiguihuaziranziyuanweiwangfu1520.ADDRESS",
+      "shiguihuaziranziyuanweiwangfu1520.RANK",
+      "shiguihuaziranziyuanweiwangfu1520.BATCH",
+      "shiguihuaziranziyuanweiwangfu1520.PUBTIME",
+      "shiguihuaziranziyuanweiwangfu1520.USERS",
+      "shiguihuaziranziyuanweiwangfu1520.PURPOSE",
+      "shiguihuaziranziyuanweiwangfu1520.OWNERSHIP",
+      "shiguihuaziranziyuanweiwangfu1520.STATEEVALU",
+      "shiguihuaziranziyuanweiwangfu1520.SINGLERELI",
+      "shiguihuaziranziyuanweiwangfu1520.PROTECTION",
+      "shiguihuaziranziyuanweiwangfu1520.ATTACHEDRE",
+      "shiguihuaziranziyuanweiwangfu1520.RELATEDPEO",
+      "shiguihuaziranziyuanweiwangfu1520.RELATEDEVE",
+      "shiguihuaziranziyuanweiwangfu1520.PUBNAME",
+      "shiguihuaziranziyuanweiwangfu1520.SOURCE",
+      "shiguihuaziranziyuanweiwangfu1520.EDITOR",
+      "shiguihuaziranziyuanweiwangfu1520.ISREDUNDAN",
+      "shiguihuaziranziyuanweiwangfu1520.THEME"
+    ],
+    "miyunqubeijingshimiyunquwenhuahelvyoujudisanjiduxingzhengzhifajianchajieguo952": [
+      "miyunqubeijingshimiyunquwenhuahelvyoujudisanjiduxingzhengzhifajianchajieguo952.附件",
+      "miyunqubeijingshimiyunquwenhuahelvyoujudisanjiduxingzhengzhifajianchajieguo952./",
+      "miyunqubeijingshimiyunquwenhuahelvyoujudisanjiduxingzhengzhifajianchajieguo952./.1",
+      "miyunqubeijingshimiyunquwenhuahelvyoujudisanjiduxingzhengzhifajianchajieguo952./.2",
+      "miyunqubeijingshimiyunquwenhuahelvyoujudisanjiduxingzhengzhifajianchajieguo952./.3",
+      "miyunqubeijingshimiyunquwenhuahelvyoujudisanjiduxingzhengzhifajianchajieguo952./.4",
+      "miyunqubeijingshimiyunquwenhuahelvyoujudisanjiduxingzhengzhifajianchajieguo952./.5",
+      "miyunqubeijingshimiyunquwenhuahelvyoujudisanjiduxingzhengzhifajianchajieguo952./.6",
+      "miyunqubeijingshimiyunquwenhuahelvyoujudisanjiduxingzhengzhifajianchajieguo952./.7"
+    ]
+  }
+}

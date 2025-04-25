@@ -1,0 +1,44 @@
+{
+  "sql": "SELECT \"shiguihuaziranziyuanweiqingzhensi1515.HID\", \"shiguihuaziranziyuanweiqingzhensi1515.HNAME\", \"fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.旅行社分社及旅行社服务网点明细\" FROM \"shiguihuaziranziyuanweiqingzhensi1515\" INNER JOIN \"fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396\" ON \"shiguihuaziranziyuanweiqingzhensi1515.HID\" = \"fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.Unnamed: 1\";",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "shiguihuaziranziyuanweiqingzhensi1515": [
+      "shiguihuaziranziyuanweiqingzhensi1515.HID",
+      "shiguihuaziranziyuanweiqingzhensi1515.FATHERID",
+      "shiguihuaziranziyuanweiqingzhensi1515.HNAME",
+      "shiguihuaziranziyuanweiqingzhensi1515.OTHERNAME",
+      "shiguihuaziranziyuanweiqingzhensi1515.CATEGORY",
+      "shiguihuaziranziyuanweiqingzhensi1515.SUBCATEGOR",
+      "shiguihuaziranziyuanweiqingzhensi1515.COUNTYNAME",
+      "shiguihuaziranziyuanweiqingzhensi1515.STREETNAME",
+      "shiguihuaziranziyuanweiqingzhensi1515.DYNASTY",
+      "shiguihuaziranziyuanweiqingzhensi1515.SUBDYNASTY",
+      "shiguihuaziranziyuanweiqingzhensi1515.ADDRESS",
+      "shiguihuaziranziyuanweiqingzhensi1515.RANK",
+      "shiguihuaziranziyuanweiqingzhensi1515.BATCH",
+      "shiguihuaziranziyuanweiqingzhensi1515.PUBTIME",
+      "shiguihuaziranziyuanweiqingzhensi1515.USERS",
+      "shiguihuaziranziyuanweiqingzhensi1515.PURPOSE",
+      "shiguihuaziranziyuanweiqingzhensi1515.OWNERSHIP",
+      "shiguihuaziranziyuanweiqingzhensi1515.STATEEVALU",
+      "shiguihuaziranziyuanweiqingzhensi1515.SINGLERELI",
+      "shiguihuaziranziyuanweiqingzhensi1515.PROTECTION",
+      "shiguihuaziranziyuanweiqingzhensi1515.ATTACHEDRE",
+      "shiguihuaziranziyuanweiqingzhensi1515.RELATEDPEO",
+      "shiguihuaziranziyuanweiqingzhensi1515.RELATEDEVE",
+      "shiguihuaziranziyuanweiqingzhensi1515.PUBNAME",
+      "shiguihuaziranziyuanweiqingzhensi1515.SOURCE",
+      "shiguihuaziranziyuanweiqingzhensi1515.EDITOR",
+      "shiguihuaziranziyuanweiqingzhensi1515.ISREDUNDAN",
+      "shiguihuaziranziyuanweiqingzhensi1515.THEME"
+    ],
+    "fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396": [
+      "fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.旅行社分社及旅行社服务网点明细",
+      "fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.Unnamed: 1",
+      "fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.Unnamed: 2",
+      "fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.Unnamed: 3"
+    ]
+  }
+}

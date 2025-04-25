@@ -1,0 +1,7 @@
+{
+  "sql": "SELECT column1, column2, column3, column4, column5 FROM table1 WHERE condition1 = 'value1' AND condition2 > value2;",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ ,_ ,_ from _ where _",
+  "database": "安全生活",
+  "tables": {}
+}

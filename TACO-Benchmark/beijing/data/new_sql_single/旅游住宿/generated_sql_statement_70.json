@@ -1,0 +1,23 @@
+{
+  "sql": "SELECT \"fengtaiqufengtaiquxingjijiudian1397\".\"星级酒店明细\", \"fengtaiqufengtaiquxingjijiudian1397\".\"Unnamed: 1\", \"fengtaiqufengtaiquxingjijiudian1397\".\"Unnamed: 2\", \"fengtaiqufengtaiquxingjijiudian1397\".\"Unnamed: 3\" FROM \"fengtaiqufengtaiquxingjijiudian1397\" WHERE \"fengtaiqufengtaiquxingjijiudian1397\".\"Unnamed: 1\" = '条件'",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ ,_ from _ where _ = _",
+  "database": "旅游住宿",
+  "tables": {
+    "fengtaiqufengtaiquxingjijiudian1397": [
+      "fengtaiqufengtaiquxingjijiudian1397.星级酒店明细",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 1",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 2",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 3",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 4",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 5",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 6"
+    ],
+    "shunyiquxingjifandian1276": [
+      "shunyiquxingjifandian1276.顺义区星级饭店",
+      "shunyiquxingjifandian1276.Unnamed: 1",
+      "shunyiquxingjifandian1276.Unnamed: 2",
+      "shunyiquxingjifandian1276.Unnamed: 3"
+    ]
+  }
+}

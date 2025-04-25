@@ -1,0 +1,36 @@
+{
+  "sql": "SELECT \n    \"shijiaotongweichuzuyehujibenxinxi3664\".\"经营业户名称\",\n    \"xichengquxichengqutingchechangmingdan2492\".\"ID\",\n    \"xichengquxichengqutingchechangmingdan2492\".\"X\",\n    \"xichengquxichengqutingchechangmingdan2492\".\"Y\",\n    \"xichengquxichengqutingchechangmingdan2492\".\"SJXZQHMC\",\n    \"xichengquxichengqutingchechangmingdan2492\".\"QXJXZQHMC\",\n    \"xichengquxichengqutingchechangmingdan2492\".\"SJXZQHDM\",\n    \"xichengquxichengqutingchechangmingdan2492\".\"QXJXZQHDM\",\n    \"xichengquxichengqutingchechangmingdan2492\".\"POISJLY\",\n    \"xichengquxichengqutingchechangmingdan24992\".\"RHBZDZ\",\n    \"xichengquxichengqutingchechangmingdan2492\".\"CODE\",\n    \"xichengquxichengqutingchechangmingdan2492\".\"CODEMC\",\n    \"xichengquxichengqutingchechangmingdan2492\".\"GXSJ\",\n    \"xichengquxichengqutingchechangmingdan2492\".\"POIMC\",\n    \"xichengquxichengqutingchechangmingdan2492\".\"POIDZ\",\n    \"xichengquxichengqutingchechangmingdan2492\".\"别名\",\n    \"xichengquxichengqutingchechangmingdan2492\".\"POIFLMC\",\n    \"xichengquxichengqutingchechangmingdan2492\".\"TEL\",\n    \"xichengquxichengqutingchechangmingdan2492\".\"ID原\",\n    \"xichengquxichengqutingchechangmingdan2492\".\"MC\",\n    \"xichengquxichengqutingchechangmingdan2492\".\"DZ",
+  "problem_description": "### 查询意图：\n该 SQL 语句的目的是从多个表中查询与停车场相关的详细信息，包括停车场的基本信息、地理位置、行政区划信息、联系方式等，并与经营业户的基本信息进行关联。\n\n### 详细描述：\n1. **涉及的表**：\n   - `shijiaotongweichuzuyehujibenxinxi3664`：经营业户基本信息表，包含经营业户的名称等信息。\n   - `xichengquxichengqutingchechangmingdan2492`：西城区停车场名单表，包含停车场的详细信息，如ID、坐标、行政区划、名称、地址、电话等。\n\n2. **涉及的列**：\n   - `shijiaotongweichuzuyehujibenxinxi3664` 表中的列：\n     - `经营业户名称`：经营业户的名称。\n   - `xichengquxichengqutingchechangmingdan2492` 表中的列：\n     - `ID`：停车场的唯一标识。\n     - `X` 和 `Y`：停车场的经纬度坐标。\n     - `SJXZQHMC` 和 `QXJXZQHMC`：上级行政区划名称和区县级行政区划名称。\n     - `SJXZQHDM` 和 `QXJXZQHDM`：上级行政区划代码和区县级行政区划代码。\n     - `POISJLY`：POI数据来源。\n     - `RHBZDZ`：融合标准地址。\n     - `CODE` 和 `CODEMC`：编码和编码名称。\n     - `GXSJ`：更新时间。\n     - `POIMC` 和 `POIDZ`：POI名称和地址。\n     - `别名`：停车场的别名。\n     - `POIFLMC`：POI分类名称。\n     - `TEL`：联系电话。\n     - `ID原`：原始ID。\n     - `MC` 和 `DZ`：名称和地址。\n\n3. **条件**：\n   - 该 SQL 语句中没有显式的 WHERE 条件，因此是查询所有记录。但在实际业务中，可能会根据需求添加条件，例如按行政区划、名称或更新时间筛选。\n\n### 业务场景：\n1. **停车场信息管理**：\n   - 该查询可以用于管理西城区的停车场信息，包括停车场的基本信息、地理位置、行政区划、联系方式等。\n2. **地理信息系统（GIS）**：\n   - 通过查询停车场的经纬度坐标（`X` 和 `Y`），可以在地图上标注停车场的位置，便于用户查找附近的停车场。\n3. **数据整合与分析**：\n   - 将停车场信息与经营业户信息关联，可以分析停车场的经营情况或进行数据统计。\n4. **公共服务**：\n   - 提供停车场的详细信息，便于市民或游客查询停车场的地址、电话等信息。\n\n### 用户描述：\n1. **市民或游客**：\n   - 用户可能需要查找西城区的停车场，了解其具体位置、地址、联系电话等信息，以便规划出行路线或停车。\n2. **政府部门**：\n   - 政府部门可能需要管理停车场的详细信息，包括行政区划、更新时间等，以便进行数据维护或公共服务管理。\n3. **数据分析人员**：\n   - 数据分析人员可能需要整合停车场和经营业户的信息，进行数据统计或分析，例如评估停车场的分布情况或经营状况。\n4. **地图服务提供商**：\n   - 地图服务提供商可能需要停车场的经纬度坐标和名称，以便在地图上标注并提供导航服务。",
+  "natural_language_query": "市民反映，最近去西城区办事想找个停车场特别不方便，手机地图上显示的停车场信息感觉不太准确。想咨询一下西城区这边正规的停车场都有哪些？最好能提供具体位置和联系电话，上次去金融街那边转了好几圈都没找到停车位。另外有些停车场挂的牌子跟导航上显示的名字对不上，能不能也查查这些停车场的别名或者曾用名？最好能知道这些停车场是属于哪个街道管理的，万一有问题也好找相关部门反映。最近一次更新是什么时候啊？别到时候按导航去了发现停车场已经拆了。来电希望能提供西城区停车场详细信息方便市民停车。",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ from _ left join _ on _ ._ =_ ._ where _ ._ = _",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweichuzuyehujibenxinxi3664": [
+      "shijiaotongweichuzuyehujibenxinxi3664.经营业户名称"
+    ],
+    "xichengquxichengqutingchechangmingdan2492": [
+      "xichengquxichengqutingchechangmingdan2492.ID",
+      "xichengquxichengqutingchechangmingdan2492.X",
+      "xichengquxichengqutingchechangmingdan2492.Y",
+      "xichengquxichengqutingchechangmingdan2492.SJXZQHMC",
+      "xichengquxichengqutingchechangmingdan2492.QXJXZQHMC",
+      "xichengquxichengqutingchechangmingdan2492.SJXZQHDM",
+      "xichengquxichengqutingchechangmingdan2492.QXJXZQHDM",
+      "xichengquxichengqutingchechangmingdan2492.POISJLY",
+      "xichengquxichengqutingchechangmingdan2492.RHBZDZ",
+      "xichengquxichengqutingchechangmingdan2492.CODE",
+      "xichengquxichengqutingchechangmingdan2492.CODEMC",
+      "xichengquxichengqutingchechangmingdan2492.GXSJ",
+      "xichengquxichengqutingchechangmingdan2492.POIMC",
+      "xichengquxichengqutingchechangmingdan2492.POIDZ",
+      "xichengquxichengqutingchechangmingdan2492.别名",
+      "xichengquxichengqutingchechangmingdan2492.POIFLMC",
+      "xichengquxichengqutingchechangmingdan2492.TEL",
+      "xichengquxichengqutingchechangmingdan2492.ID原",
+      "xichengquxichengqutingchechangmingdan2492.MC",
+      "xichengquxichengqutingchechangmingdan2492.DZ",
+      "xichengquxichengqutingchechangmingdan2492.DZMS"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "sql": "SELECT \"shijiaotongweikebianqingbaobanshebeixinxi3519.名称\", \"xichengquxichengquditiezhanmingdan2482.X\", \"xichengquxichengquditiezhanmingdan2482.Y\", \"xichengquxichengquditiezhanmingdan2482.SJXZQHMC\", \"xichengquxichengquditiezhanmingdan2482.QXJXZQHMC\", \"xichengquxichengquditiezhanmingdan2482.SJXZQHDM\", \"xichengquxichengquditiezhanmingdan2482.QXJXZQHDM\", \"xichengquxichengquditiezhanmingdan2482.POISJLY\", \"xichengquxichengquditiezhanmingdan2482.RHBZDZ\", \"xichengquxichengquditiezhanmingdan2482.CODE\", \"xichengquxichengquditiezhanmingdan2482.CODEMC\", \"xichengquxichengquditiezhanmingdan2482.GXSJ\", \"xichengquxichengquditiezhanmingdan2482.POIMC\", \"xichengquxichengquditiezhanmingdan2482.POIDZ\", \"xichengquxichengquditiezhanmingdan2482.别名\", \"xichengquxichengquditiezhanmingdan2482.POIFLMC\", \"xichengquxichengquditiezhanmingdan2482.TEL\" FROM \"shijiaotongweikebianqingbaobanshebeixinxi3519\" INNER JOIN \"xichengquxichengquditiezhanmingdan2482\" ON \"shijiaotongweikebianqingbaobanshebeixinxi3519.唯一标识\" = \"xichengquxichengquditiezhanmingdan2482.ID\";",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ ;",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweikebianqingbaobanshebeixinxi3519": [
+      "shijiaotongweikebianqingbaobanshebeixinxi3519.唯一标识",
+      "shijiaotongweikebianqingbaobanshebeixinxi3519.名称",
+      "shijiaotongweikebianqingbaobanshebeixinxi3519.设备编码"
+    ],
+    "xichengquxichengquditiezhanmingdan2482": [
+      "xichengquxichengquditiezhanmingdan2482.ID",
+      "xichengquxichengquditiezhanmingdan2482.X",
+      "xichengquxichengquditiezhanmingdan2482.Y",
+      "xichengquxichengquditiezhanmingdan2482.SJXZQHMC",
+      "xichengquxichengquditiezhanmingdan2482.QXJXZQHMC",
+      "xichengquxichengquditiezhanmingdan2482.SJXZQHDM",
+      "xichengquxichengquditiezhanmingdan2482.QXJXZQHDM",
+      "xichengquxichengquditiezhanmingdan2482.POISJLY",
+      "xichengquxichengquditiezhanmingdan2482.RHBZDZ",
+      "xichengquxichengquditiezhanmingdan2482.CODE",
+      "xichengquxichengquditiezhanmingdan2482.CODEMC",
+      "xichengquxichengquditiezhanmingdan2482.GXSJ",
+      "xichengquxichengquditiezhanmingdan2482.POIMC",
+      "xichengquxichengquditiezhanmingdan2482.POIDZ",
+      "xichengquxichengquditiezhanmingdan2482.别名",
+      "xichengquxichengquditiezhanmingdan2482.POIFLMC",
+      "xichengquxichengquditiezhanmingdan2482.TEL"
+    ]
+  }
+}

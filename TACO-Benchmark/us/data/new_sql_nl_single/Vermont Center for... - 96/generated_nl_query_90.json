@@ -1,0 +1,36 @@
+{
+  "sql": "SELECT sand_and_gravel_deposits.OBJECTID, sga_phase_2_assessed_reaches.OBJECTID FROM sand_and_gravel_deposits INNER JOIN sga_phase_2_assessed_reaches ON sand_and_gravel_deposits.OBJECTID = sga_phase_2_assessed_reaches.OBJECTID WHERE sga_phase_2_assessed_reaches.ProjectID = '1';",
+  "problem_description": "### Query intent:\nThe SQL statement aims to retrieve specific data by joining two tables (`sand_and_gravel_deposits` and `sga_phase_2_assessed_reaches`) based on a common identifier (`OBJECTID`), and then filtering the results based on a specific condition related to the `ProjectID`.\n\n### Detailed description:\n\n- **Table `sand_and_gravel_deposits`**: This table contains information about sand and gravel deposits. It includes at least an `OBJECTID` column, which is used as a unique identifier for each record.\n\n- **Table `sga_phase_2_assessed_reaches`**: This table likely contains data related to assessed reaches, possibly connected to projects involving sand and gravel. It also includes an `OBJECTID` column for identification purposes.\n\n- **Join**: The `INNER JOIN` clause merges records from both tables where the `OBJECTID` values match in both tables. This means the resulting set will only contain rows where there is a corresponding match between the `OBJECTID` fields in both tables.\n\n- **Filtering**: The `WHERE` clause filters the joined data further, specifically looking for rows in the `sga_phase_2_assessed_reaches` table where the `ProjectID` is exactly '1'. This implies that the user is interested in details related to project number '1'.\n\n### Business scenario:\n\nThis query could be used in a business setting where an organization needs to analyze the relationship between sand and gravel deposits and their assessment phases, particularly focusing on a specific project (identified by `ProjectID` '1'). For instance, it might help in understanding the progress, status, or any specific attributes associated with the deposits relevant to project '1'.\n\n### User description:\n\nA user, possibly from an environmental management or construction company, might need this information to track the progress of a particular project involving sand and gravel extraction. They might want to know which deposits have been assessed in phase 2, how many such deposits exist, or perhaps detailed information about these deposits for planning or compliance purposes. The query helps in extracting this specific subset of data efficiently.",
+  "natural_language_query": "I'm working on a project related to sand and gravel management, and I need to pull some specific data from our system. Specifically, I'm interested in the details of sand and gravel deposits that have been part of phase 2 assessments, particularly for project number '1'. Our database has two tables: 'sand_and_gravel_deposits' and 'sga_phase_2_assessed_reaches'. \n\nTo get the information I need, I'm looking to join these two tables using a common identifier, 'OBJECTID', to match records across them. After the join, I want to filter the results down to only those rows from the 'sga_phase_2_assessed_reaches' table where the 'ProjectID' is exactly '1'. This way, I can focus on the phase 2 assessments specifically linked to this project, helping me understand the current status and progress of the project in terms of sand and gravel management.",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ WHERE _ = _ ;",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "sand_and_gravel_deposits": [
+      "sand_and_gravel_deposits.OBJECTID",
+      "sand_and_gravel_deposits.AG_TYPE",
+      "sand_and_gravel_deposits.GlobalID",
+      "sand_and_gravel_deposits.SHAPEarea",
+      "sand_and_gravel_deposits.SHAPElen"
+    ],
+    "sga_phase_2_assessed_reaches": [
+      "sga_phase_2_assessed_reaches.SGAT_ID",
+      "sga_phase_2_assessed_reaches.ProjectName",
+      "sga_phase_2_assessed_reaches.URLPage1",
+      "sga_phase_2_assessed_reaches.URLPage2",
+      "sga_phase_2_assessed_reaches.ReportList",
+      "sga_phase_2_assessed_reaches.FinalA",
+      "sga_phase_2_assessed_reaches.FinalB",
+      "sga_phase_2_assessed_reaches.FinalC",
+      "sga_phase_2_assessed_reaches.CorridorPlanA",
+      "sga_phase_2_assessed_reaches.CorridorPlanB",
+      "sga_phase_2_assessed_reaches.CorridorPlanC",
+      "sga_phase_2_assessed_reaches.RID",
+      "sga_phase_2_assessed_reaches.SID",
+      "sga_phase_2_assessed_reaches.OBJECTID",
+      "sga_phase_2_assessed_reaches.RchID",
+      "sga_phase_2_assessed_reaches.SegID",
+      "sga_phase_2_assessed_reaches.ProjectID"
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "sql": "select count(*) as total_count, sum(value) as total_value, avg(value) as average_value, min(value) as minimum_value, max(value) as maximum_value from \"table_name\" where condition",
+  "results": 0,
+  "sql skeleton": "select _ as _ ,_ as _ ,_ as _ ,_ as _ ,_ as _ from _ where _",
+  "database": "安全生活",
+  "tables": {}
+}

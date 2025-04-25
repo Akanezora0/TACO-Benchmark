@@ -1,0 +1,9 @@
+{
+  "sql": "SELECT column1, column2 FROM table1 - column3 - column4 ;",
+  "problem_description": "# SQL 语句分析\n\n## 查询意图\n这个 SQL 语句似乎存在语法错误，无法直接确定其查询意图。标准的 SQL 查询语句格式应为 `SELECT 列名 FROM 表名 WHERE 条件`，而当前语句使用了减号(`-`)连接表和列，这不是有效的 SQL 语法。\n\n## 详细描述\n- **表名**: `table1`\n- **列名**: `column1`, `column2`, `column3`, `column4`\n- **语法问题**: 语句中使用了减号(`-`)连接表和列，这不是有效的 SQL 语法\n\n可能的正确形式可能是以下之一：\n1. 简单的 SELECT 查询: `SELECT column1, column2 FROM table1`\n2. 带条件的查询: `SELECT column1, column2 FROM table1 WHERE column3 = column4`\n3. 计算列: `SELECT column1, column2, column3 - column4 FROM table1`\n\n## 业务场景\n由于语法不明确，无法确定具体业务场景。如果是有效的查询，可能涉及：\n- 从 table1 中检索 column1 和 column2 的数据\n- 可能计算 column3 和 column4 之间的差值\n- 可能比较 column3 和 column4 的值\n\n## 用户描述\n用户可能想：\n1. 查看 table1 中的 column1 和 column2 数据\n2. 计算 column3 和 column4 之间的差异（如金额差、时间差等）\n3. 找出 column3 和 column4 值相等的记录\n\n建议用户提供正确的 SQL 语法或澄清查询意图，以便进行更准确的分析。",
+  "natural_language_query": "市民反映，我在系统里想查一些数据，但是输入的命令好像不太对。我是想看看table1里面column1和column2的信息，可能还要比较一下column3和column4的数值差。但是系统老是报错，提示语法有问题。我记得以前看到过用减号连接的写法，但现在怎么试都不行，是不是我记错了？能不能帮忙看看该怎么正确查询这些数据？主要是想了解column3和column4之间的差异情况。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ ;",
+  "database": "安全生活",
+  "tables": {}
+}

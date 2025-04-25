@@ -1,0 +1,7 @@
+{
+  "sql": "select distinct table1.column1, table1.column2, table2.column3 \nfrom table1 \njoin table2 on table1.common_column = table2.common_column \nwhere table1.condition_column = 'condition_value'",
+  "results": 0,
+  "sql skeleton": "select distinct _ ,_ ,_ from _ where _ =_",
+  "database": "安全生活",
+  "tables": {}
+}

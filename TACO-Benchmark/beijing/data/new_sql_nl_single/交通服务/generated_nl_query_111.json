@@ -1,0 +1,43 @@
+{
+  "sql": "SELECT xichengquxichengquguojietianqiaomingdan2490.OBJNAME, huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.行政相对人名称 FROM xichengquxichengquguojietianqiaomingdan2490 INNER JOIN huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053 ON xichengquxichengquguojietianqiaomingdan2490.OBJCODE = huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.统一社会信用代码 WHERE xichengquxichengquguojietianqiaomingdan2490.DEPTNAME1 = '部门1' AND xichengquxichengquguojietianqiaomingdan2490.DEPTNAME2 = '部门2' AND huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.许可决定日期 BETWEEN '2020-01-01' AND '2021-12-31' ORDER BY xichengquxichengquguojietianqiaomingdan2490.CHDATE DESC",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是查询西城区国际天桥名单表中特定部门（部门1和部门2）下的对象名称，并与怀柔区交通局运政行政许可公示信息表中匹配统一社会信用代码的行政相对人名称进行关联，筛选出许可决定日期在2020年1月1日至2021年12月31日之间的记录，并按西城区国际天桥名单表中的变更日期降序排列。\n\n- **详细描述**：\n  - **涉及的表**：\n    - `xichengquxichengquguojietianqiaomingdan2490`（西城区国际天桥名单表）\n    - `huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053`（怀柔区交通局运政行政许可公示信息表）\n  - **涉及的列**：\n    - 西城区国际天桥名单表中的 `OBJNAME`（对象名称）、`OBJCODE`（对象代码）、`DEPTNAME1`（部门1）、`DEPTNAME2`（部门2）、`CHDATE`（变更日期）\n    - 怀柔区交通局运政行政许可公示信息表中的 `行政相对人名称`、`统一社会信用代码`、`许可决定日期`\n  - **条件**：\n    - 西城区国际天桥名单表中的 `DEPTNAME1` 必须等于 '部门1'，`DEPTNAME2` 必须等于 '部门2'。\n    - 怀柔区交通局运政行政许可公示信息表中的 `许可决定日期` 必须在 '2020-01-01' 和 '2021-12-31' 之间。\n    - 两个表通过 `OBJCODE` 和 `统一社会信用代码` 进行关联。\n  - **排序**：结果按西城区国际天桥名单表中的 `CHDATE`（变更日期）降序排列。\n\n- **业务场景**：\n  - 该查询可能用于政府部门或企业进行跨区域或跨部门的数据关联分析。例如，西城区的某个部门需要了解其管辖范围内的对象（如企业或机构）在怀柔区交通局是否获得了特定的行政许可，并获取这些对象的名称和行政相对人名称。\n  - 通过许可决定日期的筛选，可以进一步分析特定时间段内的许可情况，帮助进行合规性检查或数据统计。\n\n- **用户描述**：\n  - 用户可能是西城区某个政府部门的分析师或管理人员，需要了解其管辖范围内的对象在怀柔区交通局的行政许可情况。\n  - 用户的需求可能是为了确保这些对象在跨区域运营时符合相关法规，或者是为了进行数据统计和报告。\n  - 用户可能遇到的实际问题包括：如何快速获取跨区域的数据关联信息？如何筛选特定时间段内的许可记录以便进行合规性分析？如何按变更日期排序以便查看最新的记录？",
+  "natural_language_query": "市民反映，我是西城区政府部门的，我们这边管理的一些企业机构好像涉及到怀柔区交通局那边的行政许可问题。具体是想查一下我们这边\"部门1\"和\"部门2\"管理下的单位，在2020年到2021年期间有没有在怀柔交通局办过什么运输许可。我们这边登记的单位名称和那边公示的信息可能对不上号，能不能帮忙查一下两边信息能对应的单位都有哪些？最好能按我们这边最新的变更记录来排序，这样方便我们跟进最新的情况。主要是担心跨区域运营会不会存在什么合规问题，需要做个摸底排查。",
+  "results": 0,
+  "sql skeleton": "select _ ,_ from _ where _ = _ and _ = _ order by _",
+  "database": "交通服务",
+  "tables": {
+    "xichengquxichengquguojietianqiaomingdan2490": [
+      "xichengquxichengquguojietianqiaomingdan2490.OBJCODE",
+      "xichengquxichengquguojietianqiaomingdan2490.OBJNAME",
+      "xichengquxichengquguojietianqiaomingdan2490.DEPTCODE1",
+      "xichengquxichengquguojietianqiaomingdan2490.DEPTNAME1",
+      "xichengquxichengquguojietianqiaomingdan2490.DEPTCODE2",
+      "xichengquxichengquguojietianqiaomingdan2490.DEPTNAME2",
+      "xichengquxichengquguojietianqiaomingdan2490.DEPTCODE3",
+      "xichengquxichengquguojietianqiaomingdan2490.DEPTNAME3",
+      "xichengquxichengquguojietianqiaomingdan2490.BGCODE",
+      "xichengquxichengquguojietianqiaomingdan2490.OBJSTATE",
+      "xichengquxichengquguojietianqiaomingdan2490.ORDATE",
+      "xichengquxichengquguojietianqiaomingdan2490.CHDATE",
+      "xichengquxichengquguojietianqiaomingdan2490.DATASOURCE",
+      "xichengquxichengquguojietianqiaomingdan2490.OBJPOS",
+      "xichengquxichengquguojietianqiaomingdan2490.NOTE",
+      "xichengquxichengquguojietianqiaomingdan2490.ljdl",
+      "xichengquxichengquguojietianqiaomingdan2490.cd",
+      "xichengquxichengquguojietianqiaomingdan2490.kydw",
+      "xichengquxichengquguojietianqiaomingdan2490.kd",
+      "xichengquxichengquguojietianqiaomingdan2490.gd",
+      "xichengquxichengquguojietianqiaomingdan2490.mc",
+      "xichengquxichengquguojietianqiaomingdan2490.ghspxmh"
+    ],
+    "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053": [
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.序号",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.行政相对人名称",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.统一社会信用代码",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.行政许可决定文书号",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.许可内容",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.许可决定日期",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.许可机关"
+    ]
+  }
+}

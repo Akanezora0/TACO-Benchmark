@@ -1,0 +1,24 @@
+{
+  "sql": "SELECT \n    \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270\".\"企业名称\",\n    \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270\".\"经营许可证号\",\n    \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270\".\"企业类型\",\n    \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270\".\"所属区县\",\n    \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270\".\"考核人\",\n    \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270\".\"评定时间\",\n    \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270\".\"评定得分\",\n    \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270\".\"评定结果\"\nFROM \n    \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270\"\nJOIN \n    \"shijiaotongweichaoxianchaozaihuochexiezaichangdi3663\" \nON \n    \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270\".\"所属区县\" = \"shijiaotongweichaoxianchaozaihuochexiezaichangdi3663\".\"行政区划代码\"\nWHERE \n    \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270\".\"评定结果\" = '合格'\nORDER BY \n    \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyuk",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ from _ join _ on _ ._ = _ ._ where _ ._ = _ order by _ ._ ;",
+  "database": "交通服务",
+  "tables": {
+    "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270": [
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.企业名称",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.经营许可证号",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.企业类型",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.所属区县",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.考核人",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.评定时间",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.评定得分",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.评定结果"
+    ],
+    "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663": [
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.行政区划代码",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.站点名称",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.联系电话",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.地址"
+    ]
+  }
+}

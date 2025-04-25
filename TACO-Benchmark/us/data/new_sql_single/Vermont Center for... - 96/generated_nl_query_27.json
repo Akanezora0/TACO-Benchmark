@@ -1,0 +1,43 @@
+{
+  "sql": "SELECT wetland_ecologist_districts.ABNAME, wetland_ecologist_districts.Address FROM wetland_ecologist_districts INNER JOIN vermont_biophysical_regions ON wetland_ecologist_districts.BOUNDARY = vermont_biophysical_regions.OBJECTID WHERE wetland_ecologist_districts.AGENCY = 'AgencyName';",
+  "problem_description": "### Query intent:\nThe SQL statement is designed to retrieve specific information from two related tables, `wetland_ecologist_districts` and `vermont_biophysical_regions`, with a particular focus on details about districts managed by an agency named 'AgencyName'.\n\n### Detailed description:\n1. **Table `wetland_ecologist_districts`**:\n   - **Columns involved**: `ABNAME` (short name for the district), `Address` (address of the district).\n   - **Join condition**: The join is performed using `wetland_ecologist_districts.BOUNDARY` as the key matching column and `vermont_biophysical_regions.OBJECTID` as the other side's key.\n   - **Purpose**: This table contains information about the districts managed by wetland ecologists.\n\n2. **Table `vermont_biophysical_regions`**:\n   - **Join condition**: It is joined with `wetland_ecologist_districts` based on the condition that the boundary of a district matches the object ID of a biophysical region in Vermont.\n\n3. **Condition `wetland_ecologist_districts.AGENCY = 'AgencyName'`**:\n   - **Purpose**: This condition filters the results to only include districts where the managing agency is specified as 'AgencyName'.\n\n### Business scenario:\nThis query could be used in a scenario where environmental management or conservation agencies need to review or manage districts within their jurisdiction, specifically focusing on those districts that fall under the management of a particular agency. For instance, an agency might want to perform audits, plan interventions, or coordinate efforts across the districts they manage.\n\n### User description:\nA user from an environmental management agency might require this information to efficiently manage resources, understand geographical distribution of their operational areas, or prepare reports on district-specific activities or challenges. The query allows them to quickly access the names and addresses of all districts they are responsible for, facilitating more targeted and effective administrative actions.",
+  "natural_language_query": "An environmental management agency employee needs to access detailed information about districts under their jurisdiction. Specifically, they are interested in obtaining the short names and addresses of all districts managed by their agency named 'AgencyName'. To achieve this, they propose running a SQL query that combines data from two tables: `wetland_ecologist_districts` and `vermont_biophysical_regions`. The goal is to gather comprehensive data that will help them in various administrative tasks such as planning interventions, coordinating efforts, and preparing reports tailored to each district.\n\nThe first table, `wetland_ecologist_districts`, contains columns `ABNAME` which represents the short name for each district, and `Address` indicating the location of the district. The second table, `vermont_biophysical_regions`, holds information relevant to the biophysical characteristics of different regions in Vermont.\n\nTo link these two tables effectively, a join operation is executed based on the condition that the boundary of a district (`wetland_ecologist_districts.BOUNDARY`) matches the object ID of a corresponding biophysical region in Vermont (`vermont_biophysical_regions.OBJECTID`). This ensures that the data retrieved is relevant to the geographical scope of interest.\n\nFurthermore, the query includes a filtering condition (`wetland_ecologist_districts.AGENCY = 'AgencyName'`) to ensure that only districts managed by 'AgencyName' are included in the final output. This criterion narrows down the dataset to precisely what the agency needs, allowing for focused analysis and decision-making.\n\nBy executing this SQL query, the agency employee can efficiently gather the necessary information to support their operational activities, ensuring that resources are allocated appropriately and that all districts under their management are well-documented and understood.",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ ;",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "wetland_ecologist_districts": [
+      "wetland_ecologist_districts.OBJECTID",
+      "wetland_ecologist_districts.ABNAME",
+      "wetland_ecologist_districts.AGENCY",
+      "wetland_ecologist_districts.DEPT",
+      "wetland_ecologist_districts.DIV",
+      "wetland_ecologist_districts.FirstName",
+      "wetland_ecologist_districts.LastName",
+      "wetland_ecologist_districts.Email",
+      "wetland_ecologist_districts.Phone",
+      "wetland_ecologist_districts.Address",
+      "wetland_ecologist_districts.Office",
+      "wetland_ecologist_districts.Town",
+      "wetland_ecologist_districts.BOUNDARY",
+      "wetland_ecologist_districts.PROGMANAGER",
+      "wetland_ecologist_districts.PROGMANAGEREMAIL",
+      "wetland_ecologist_districts.PROGMANAGERPHONE",
+      "wetland_ecologist_districts.BACKUPCONTACT",
+      "wetland_ecologist_districts.BACKUPCONTACTEMAIL",
+      "wetland_ecologist_districts.BACKUPCONTACTPHONE",
+      "wetland_ecologist_districts.PROGRAMEMAIL",
+      "wetland_ecologist_districts.PROGRAMPHONE"
+    ],
+    "vermont_biophysical_regions": [
+      "vermont_biophysical_regions.OBJECTID",
+      "vermont_biophysical_regions.ACRES",
+      "vermont_biophysical_regions.NAME",
+      "vermont_biophysical_regions.SUBSEC_ID",
+      "vermont_biophysical_regions.BPR_NUM",
+      "vermont_biophysical_regions.BPR_NUMID",
+      "vermont_biophysical_regions.SHAPESTArea",
+      "vermont_biophysical_regions.SHAPESTLength"
+    ]
+  }
+}

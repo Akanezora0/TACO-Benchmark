@@ -1,0 +1,23 @@
+{
+  "sql": "SELECT \"pingguqupingguqujingpinminsu2083\".平谷区2022年精品民宿, \"yanqingquyanqingqulvyoujingquxinxi3381\".旅游景区 FROM \"pingguqupingguqujingpinminsu2083\" INNER JOIN \"yanqingquyanqingqulvyoujingquxinxi3381\" ON \"pingguqupingguqujingpinminsu2083\".\"编号\" = \"yanqingquyanqingqulvyoujingquxinxi3381\".\"编号\" WHERE \"pingguqupingguqujingpinminsu2083\".\"编号\" = '特定编号';",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ WHERE _ = _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "pingguqupingguqujingpinminsu2083": [
+      "pingguqupingguqujingpinminsu2083.平谷区2022年精品民宿",
+      "pingguqupingguqujingpinminsu2083.Unnamed: 1",
+      "pingguqupingguqujingpinminsu2083.Unnamed: 2"
+    ],
+    "yanqingquyanqingqulvyoujingquxinxi3381": [
+      "yanqingquyanqingqulvyoujingquxinxi3381.旅游景区",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 1",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 2",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 3",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 4",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 5",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 6",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 7"
+    ]
+  }
+}

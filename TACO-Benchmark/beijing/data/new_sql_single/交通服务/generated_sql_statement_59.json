@@ -1,0 +1,20 @@
+{
+  "sql": "SELECT \n\"huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829\".\"по\u0011Ю║╠\u001aА\",\n\"huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829\".\"\u0001\u0001\",\n\"shijiaotongweishoufeigonglushoufeibiaozhun543\".\"北京市收费公路收费标准表\",\n\"shijiaotongweishoufeigonglushoufeibiaozhun543\".\"Unnamed: 1\",\n\"shijiaotongweishoufeigonglushoufeibiaozhun543\".\"Unnamed: 2\",\n\"shijiaotongweishoufeigonglushoufeibiaozhun543\".\"Unnamed: 3\",\n\"shijiaotongweishoufeigonglushoufeibiaozhun543\".\"Unnamed: 4\",\n\"shijiaotongweishoufeigonglushoufeibiaozhun543\".\"Unnamed: 5\"\nFROM \n\"huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829\"\nJOIN \n\"shijiaotongweishoufeigonglushoufeibiaozhun543\"\nON \n\"huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829\".\"\u0001\u0001\" = \"shijiaotongweishoufeigonglushoufeibiaozhun543\".\"Unnamed: 1\"\nWHERE \n\"shijiaotongweishoufeigonglushoufeibiaozhun543\".\"北京市收费公路收费标准表\" = '特定值' AND \n\"shijiaotongweishoufeigonglushoufeibiaozhun543\".\"Unnamed: 2\" = '特定值' AND \n\"shijiaotongweishoufeigonglushoufeibiaozhun543\".\"Unnamed: 3\" = '特定值'",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ from _ join _ on _ ._ = _ ._ where _ ._ = _ and _ ._ = _ and _ = _",
+  "database": "交通服务",
+  "tables": {
+    "huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829": [
+      "huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829.по\u0011Ю║╠\u001aА",
+      "huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829.\u0001\u0001"
+    ],
+    "shijiaotongweishoufeigonglushoufeibiaozhun543": [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 2",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 3",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 4",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 5"
+    ]
+  }
+}

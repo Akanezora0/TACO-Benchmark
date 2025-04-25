@@ -1,0 +1,9 @@
+{
+  "sql": "select column1, column2 from table1 where condition1 = value1 and condition2 = value2 order by column3 asc",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从表 `table1` 中筛选出满足特定条件的记录，并返回这些记录的 `column1` 和 `column2` 列的值，同时按照 `column3` 列的升序排列结果。\n\n- **详细描述**：\n  - **涉及的表**：`table1` 是该查询的主要表，从中获取数据。\n  - **涉及的列**：\n    - `column1` 和 `column2` 是查询结果中需要返回的列。\n    - `condition1` 和 `condition2` 是用于筛选记录的列。\n    - `column3` 是用于排序的列。\n  - **条件**：\n    - `condition1 = value1` 和 `condition2 = value2` 是筛选条件，只有满足这两个条件的记录才会被选中。\n  - **排序**：查询结果会按照 `column3` 列的升序（从小到大）排列。\n\n- **业务场景**：\n  - 假设 `table1` 是一个订单表，`column1` 是订单编号，`column2` 是订单金额，`condition1` 是订单状态，`value1` 是“已完成”，`condition2` 是客户编号，`value2` 是某个特定客户，`column3` 是订单日期。\n  - 该查询可以用于获取某个特定客户的所有已完成订单的订单编号和金额，并按订单日期升序排列。\n\n- **用户描述**：\n  - 用户可能需要查看某个客户的所有已完成订单的历史记录，以便分析该客户的消费行为或订单趋势。\n  - 用户可能希望按照订单日期排序，以便从最早的订单开始查看，了解客户的订单历史变化。\n  - 用户可能还需要进一步处理这些数据，例如计算总金额、生成报表或进行其他分析。",
+  "natural_language_query": "市民反映，我在你们系统里查不到客户张三的所有已完成订单的详细信息。我记得他去年在我们这里下过不少单子，现在想看看他的消费记录，最好是能按时间顺序排列的。但是系统显示的结果好像不全，有些订单金额和编号都查不到，能不能帮忙看看是怎么回事？我这边需要整理他的历史订单做分析用，特别是想知道他最早的几笔订单情况。",
+  "results": 0,
+  "sql skeleton": "select _ ,_ from _ where _ = _ and _ order by _",
+  "database": "安全生活",
+  "tables": {}
+}

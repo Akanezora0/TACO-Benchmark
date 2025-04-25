@@ -1,0 +1,50 @@
+{
+  "sql": "SELECT invasive_species.\"InvasiveName\", invasive_species.\"ObservationDate\" FROM invasive_species INNER JOIN wildlife_management_units ON invasive_species.\"SiteName\" = wildlife_management_units.\"ABNAME\";",
+  "problem_description": "### Query intent:\nThe SQL statement aims to retrieve specific data related to invasive species from two interconnected tables, `invasive_species` and `wildlife_management_units`, specifically focusing on the name of the invasive species (`InvasiveName`) and the date of observation (`ObservationDate`).\n\n### Detailed description:\n1. **Table `invasive_species`**:\n   - **Columns involved**: `\"InvasiveName\"` (the name of the invasive species), `\"ObservationDate\"` (the date when the observation was made).\n   - **Function**: This table contains records of various invasive species found across different sites.\n\n2. **Table `wildlife_management_units`**:\n   - **Columns involved**: `\"ABNAME\"` (abbreviation of the management unit where the site is located).\n   - **Function**: This table likely contains metadata about the management units overseeing wildlife conservation efforts across various geographic areas.\n\n3. **Join condition**: `\"SiteName\" = \"ABNAME\"`\n   - **Purpose**: The join condition links records from `invasive_species` to corresponding records in `wildlife_management_units` based on the common field `SiteName` (which should match the abbreviation `ABNAME` of the management unit). This allows for the retrieval of invasive species data associated with specific management units.\n\n### Business scenario:\nThis SQL query could be used in environmental monitoring and management systems to track the presence and observation dates of invasive species within specific geographic areas managed by wildlife conservation units. For instance, it might help in:\n\n- **Monitoring**: Tracking the spread and timing of invasive species invasions across different regions.\n- **Reporting**: Providing a summary report of invasive species activity for each management unit.\n- **Decision-making**: Informing conservation strategies and interventions based on the latest observations of invasive species.\n\n### User description:\nA wildlife conservation officer or an environmental scientist might use this query to:\n\n- **Analyze trends**: Identify patterns in the invasion of invasive species over time within specific management units.\n- **Plan interventions**: Determine the most effective times and locations for implementing control measures against invasive species based on historical observation data.\n- **Resource allocation**: Allocate resources to management units where invasive species pose the greatest threat, based on recent observations.",
+  "natural_language_query": "A wildlife conservation officer is tasked with monitoring and managing invasive species across various geographic areas. They need to access detailed information on the specific invasive species observed and the dates these observations were made. To achieve this, they are planning to run a SQL query that combines data from two tables: `invasive_species` and `wildlife_management_units`. \n\nThe goal is to retrieve the name of the invasive species (`InvasiveName`) and the date of its observation (`ObservationDate`). The officer is particularly interested in understanding the presence and timing of these species within the specific management units overseeing wildlife conservation efforts. \n\nTo ensure accurate data retrieval, the officer needs to join these two tables using a common field, `SiteName`, which should match the abbreviation (`ABNAME`) of the management unit in the `wildlife_management_units` table. This join will enable the officer to correlate invasive species data with their respective management units, providing insights into localized invasive species activity.\n\nBy executing this SQL query, the officer aims to:\n\n1. **Monitor Trends:** Track how invasive species have spread over time within specific geographic areas.\n2. **Guide Interventions:** Plan targeted control measures based on the latest observation data of invasive species.\n3. **Optimize Resource Allocation:** Direct resources more effectively to management units where invasive species pose the greatest threat.\n\nThe officer expects the query results to provide them with actionable insights for strategic planning and intervention, ultimately contributing to the conservation and management of wildlife populations in the face of invasive species challenges.",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ ;",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "invasive_species": [
+      "invasive_species.X",
+      "invasive_species.Y",
+      "invasive_species.SiteName",
+      "invasive_species.ObservationID",
+      "invasive_species.InvasiveName",
+      "invasive_species.ObservationDate",
+      "invasive_species.Observer",
+      "invasive_species.SurveyType",
+      "invasive_species.Latitude",
+      "invasive_species.Longitude",
+      "invasive_species.Town",
+      "invasive_species.GrossArea",
+      "invasive_species.InfestedArea",
+      "invasive_species.PlantDescription",
+      "invasive_species.DistributionName",
+      "invasive_species.AssessmentDate",
+      "invasive_species.TreatmentDate",
+      "invasive_species.TreatmentEffectiveness",
+      "invasive_species.TreatmentType",
+      "invasive_species.TreatmentPerson",
+      "invasive_species.TreatmentAssessmentDate",
+      "invasive_species.Assessor",
+      "invasive_species.TreatmentAssessmentNotes",
+      "invasive_species.TreatmentHours",
+      "invasive_species.ChemicalName",
+      "invasive_species.ChemicalConsentration",
+      "invasive_species.ChemicalOunces",
+      "invasive_species.ApplicationMethod",
+      "invasive_species.CertifiedApplicator",
+      "invasive_species.EPARegistationNumber"
+    ],
+    "wildlife_management_units": [
+      "wildlife_management_units.OBJECTID",
+      "wildlife_management_units.ABNAME",
+      "wildlife_management_units.AGENCY",
+      "wildlife_management_units.DEPT",
+      "wildlife_management_units.DIV",
+      "wildlife_management_units.BOUNDARY"
+    ]
+  }
+}

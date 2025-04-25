@@ -1,0 +1,20 @@
+{
+  "sql": "SELECT \"shiwenhuahelvyoujuxingjifandianxinxi2036.��\u0011DOB�\", \"shunyiquxingjifandian1276.顺义区星级饭店\" FROM \"shiwenhuahelvyoujuxingjifandianxinxi2036\" - \"shunyiquxingjifandian1276\" WHERE \"shiwenhuahelvyoujuxingjifandianxinxi2036.��\u0011DOB�\" = '2023-04-01';",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从两个表（`shiwenhuahelvyoujuxingjifandianxinxi2036` 和 `shunyiquxingjifandian1276`）中查询满足特定条件的数据，具体是查找在 `shiwenhuahelvyoujuxingjifandianxinxi2036` 表中 `DOB` 列值为 `2023-04-01` 的记录，并返回该表的 `DOB` 列和 `shunyiquxingjifandian1276` 表中的 `顺义区星级饭店` 列。\n\n- **详细描述**：\n  - **涉及的表**：\n    - `shiwenhuahelvyoujuxingjifandianxinxi2036`：该表可能包含文化和旅游相关的星级饭店信息。\n    - `shunyiquxingjifandian1276`：该表可能包含顺义区星级饭店的信息。\n  - **涉及的列**：\n    - `shiwenhuahelvyoujuxingjifandianxinxi2036.��\u0011DOB�`：该列可能表示某个日期或时间字段，具体含义需要进一步确认。\n    - `shunyiquxingjifandian1276.顺义区星级饭店`：该列可能表示顺义区星级饭店的名称或其他相关信息。\n  - **条件**：\n    - `shiwenhuahelvyoujuxingjifandianxinxi2036.��\u0011DOB� = '2023-04-01'`：查询条件限制为 `DOB` 列的值等于 `2023-04-01` 的记录。\n\n- **业务场景**：该查询可能用于文化和旅游管理部门或相关业务系统中，用于查找在特定日期（2023-04-01）有活动的星级饭店信息，或者用于比较两个表中数据的差异。例如，可能需要找出在某个特定日期有新增或变更的星级饭店信息。\n\n- **用户描述**：\n  - **用户需求**：用户可能需要了解在 2023 年 4 月 1 日有哪些星级饭店在文化和旅游局的记录中有活动或变更，或者需要对比两个表中的数据以找出差异。\n  - **实际问题**：用户可能在管理星级饭店信息时，需要定期检查特定日期的数据更新情况，或者需要确保两个数据源之间的数据一致性。例如，用户可能需要确认顺义区的星级饭店是否在文化和旅游局的记录中有相应的更新。",
+  "natural_language_query": "市民反映，最近在整理文化和旅游局发布的星级饭店资料时遇到一个问题。去年4月1号那天好像更新过一批饭店信息，但不确定具体是哪些。现在需要查一下顺义区这边的星级饭店，看看当时有没有新增或者变更的。因为手头有两份名单对不上，一份是区里的，一份是市文旅局的，想确认下2023年4月1号那天市文旅局记录里涉及顺义区的饭店情况。主要是最近在做年度复核工作，发现数据有出入，挺着急的，希望能帮忙核实清楚。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ WHERE _ = _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "shiwenhuahelvyoujuxingjifandianxinxi2036": [
+      "shiwenhuahelvyoujuxingjifandianxinxi2036.��\u0011ࡱ\u001a�",
+      "shiwenhuahelvyoujuxingjifandianxinxi2036.\u0001\u0001"
+    ],
+    "shunyiquxingjifandian1276": [
+      "shunyiquxingjifandian1276.顺义区星级饭店",
+      "shunyiquxingjifandian1276.Unnamed: 1",
+      "shunyiquxingjifandian1276.Unnamed: 2",
+      "shunyiquxingjifandian1276.Unnamed: 3"
+    ]
+  }
+}

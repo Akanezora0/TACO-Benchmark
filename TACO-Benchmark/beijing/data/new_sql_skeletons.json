@@ -1,0 +1,102 @@
+[
+    {
+        "query": "Retrieve the addresses and submission dates of buildings where house sharing is prohibited.",
+        "sql": "SELECT Address, Recorded Date FROM House_Share_Prohibited_Buildings_List;",
+        "sql_framework": "SELECT _, _ FROM _;"
+    },
+    {
+        "query": "Find the addresses and latitudes of buildings where house sharing is prohibited, recorded on November 3, 2021.",
+        "sql": "SELECT Address, Latitude FROM House_Share_Prohibited_Buildings_List WHERE Recorded Date = '11/03/2021';",
+        "sql_framework": "SELECT _, _ FROM _ WHERE _ = _;"
+    },
+    {
+        "query": "List all violation types and total fines for vacant and abandoned buildings.",
+        "sql": "SELECT Violation Type, Total Fines FROM Vacant_and_Abandoned_Buildings_-_Violations;",
+        "sql_framework": "SELECT _, _ FROM _;"
+    },
+    {
+        "query": "Find the violation types and latitudes of vacant and abandoned buildings with violations issued on March 7, 2011.",
+        "sql": "SELECT Violation Type, Latitude FROM Vacant_and_Abandoned_Buildings_-_Violations WHERE Issued Date = '03/07/2011';",
+        "sql_framework": "SELECT _, _ FROM _ WHERE _ = _;"
+    },
+    {
+        "query": "Retrieve the names and addresses of all Chicago public schools.",
+        "sql": "SELECT Name of School, Street Address FROM Chicago_Public_Schools_-_Progress_Report_Cards__2011-2012;",
+        "sql_framework": "SELECT _, _ FROM _;"
+    },
+    {
+        "query": "Find the names and phone numbers of Chicago public schools located in the ZIP code 60623.",
+        "sql": "SELECT Name of School, Phone Number FROM Chicago_Public_Schools_-_Progress_Report_Cards__2011-2012 WHERE ZIP Code = '60623';",
+        "sql_framework": "SELECT _, _ FROM _ WHERE _ = _;"
+    },
+    {
+        "query": "Retrieve the names and addresses of all libraries.",
+        "sql": "SELECT BRANCH, ADDRESS FROM Libraries_-_Locations___Contact_Information__and_Usual_Hours_of_Operation;",
+        "sql_framework": "SELECT _, _ FROM _;"
+    },
+    {
+        "query": "Find the names and phone numbers of libraries located in the ZIP code 60643.",
+        "sql": "SELECT BRANCH, PHONE FROM Libraries_-_Locations___Contact_Information__and_Usual_Hours_of_Operation WHERE ZIP = '60643';",
+        "sql_framework": "SELECT _, _ FROM _ WHERE _ = _;"
+    },
+    {
+        "query": "Retrieve the application IDs and submission IDs of all buildings where house sharing is prohibited.",
+        "sql": "SELECT Application ID, Submission ID FROM House_Share_Prohibited_Buildings_List;",
+        "sql_framework": "SELECT _, _ FROM _;"
+    },
+    {
+        "query": "List all docket numbers and violation numbers for vacant and abandoned buildings.",
+        "sql": "SELECT Docket Number, Violation Number FROM Vacant_and_Abandoned_Buildings_-_Violations;",
+        "sql_framework": "SELECT _, _ FROM _;"
+    },
+    {
+        "query": "Retrieve the IDs and names of all Chicago public schools.",
+        "sql": "SELECT School ID, Name of School FROM Chicago_Public_Schools_-_Progress_Report_Cards__2011-2012;",
+        "sql_framework": "SELECT _, _ FROM _;"
+    },
+    {
+        "query": "Find the names and service hours of all libraries.",
+        "sql": "SELECT BRANCH, SERVICE HOURS FROM Libraries_-_Locations___Contact_Information__and_Usual_Hours_of_Operation;",
+        "sql_framework": "SELECT _, _ FROM _;"
+    },
+    {
+        "query": "Retrieve the addresses and number of units for buildings where house sharing is prohibited.",
+        "sql": "SELECT Address, Number of Units FROM House_Share_Prohibited_Buildings_List;",
+        "sql_framework": "SELECT _, _ FROM _;"
+    },
+    {
+        "query": "List all property addresses and violation types for vacant and abandoned buildings.",
+        "sql": "SELECT Property Address, Violation Type FROM Vacant_and_Abandoned_Buildings_-_Violations;",
+        "sql_framework": "SELECT _, _ FROM _;"
+    },
+    {
+        "query": "Retrieve the names and network managers of all Chicago public schools.",
+        "sql": "SELECT Name of School, Network Manager FROM Chicago_Public_Schools_-_Progress_Report_Cards__2011-2012;",
+        "sql_framework": "SELECT _, _ FROM _;"
+    },
+    {
+        "query": "Find the names and websites of all libraries.",
+        "sql": "SELECT BRANCH, WEBSITE FROM Libraries_-_Locations___Contact_Information__and_Usual_Hours_of_Operation;",
+        "sql_framework": "SELECT _, _ FROM _;"
+    },
+    {
+        "query": "Retrieve the addresses and signed dates of buildings where house sharing is prohibited.",
+        "sql": "SELECT Address, Signed Date FROM House_Share_Prohibited_Buildings_List;",
+        "sql_framework": "SELECT _, _ FROM _;"
+    },
+    {
+        "query": "List all property addresses and last hearing dates for vacant and abandoned buildings.",
+        "sql": "SELECT Property Address, Last Hearing Date FROM Vacant_and_Abandoned_Buildings_-_Violations;",
+        "sql_framework": "SELECT _, _ FROM _;"
+    },
+    {
+        "query": "Retrieve the names and average student attendance rates of all Chicago public schools.",
+        "sql": "SELECT Name of School, Average Student Attendance FROM Chicago_Public_Schools_-_Progress_Report_Cards__2011-2012;",
+        "sql_framework": "SELECT _, _ FROM _;"
+    },
+    {
+        "query": "Find the names and email addresses of all libraries.",
+        "sql": "SELECT BRANCH, BRANCH EMAIL FROM Libraries_-_Locations___Contact_Information__and_Usual_Hours_of_Operation;",
+        "sql_framework": "SELECT _, _ FROM _;"
+    }
+]

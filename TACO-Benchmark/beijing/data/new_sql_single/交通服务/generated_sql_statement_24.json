@@ -1,0 +1,24 @@
+{
+  "sql": "SELECT \"shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.企业名称\", \"shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.评定等级\" FROM \"shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672\" WHERE \"shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.所属地区\" = '北京';",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ ;",
+  "database": "交通服务",
+  "tables": {
+    "shigonganjujiaotongweifachulijigou1949": [
+      "shigonganjujiaotongweifachulijigou1949.交通违法处理机构",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 1",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 2",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 3",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 4",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 5",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 6"
+    ],
+    "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672": [
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.企业名称",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.评定等级",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.所属地区",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.年份",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.统一社会信用代码"
+    ]
+  }
+}

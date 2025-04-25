@@ -1,0 +1,22 @@
+{
+  "sql": "SELECT \n    xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.\"西城区路侧停车数据\",\n    xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.Unnamed: 1,\n    xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.Unnamed: 2,\n    shijiaotongweiguidaozhandianxinxichuxing3670.\"线路名称\"\nFROM \n    xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392\nJOIN \n    shijiaotongweiguidaozhandianxinxichuxing3670 ON \n        xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.\"西城区路侧停车数据\" = shijiaotongweiguidaozhandianxinxichuxing3670.\"线路名称\"\nWHERE \n    xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.\"西城区路侧停车数据\" = '特定值' AND \n    shijiaotongweiguidaozhandianxinxichuxing3670.\"站点编码\" = '特定编码'",
+  "problem_description": "### **查询意图**：\n该 SQL 语句的目的是从两个表中联合查询数据，筛选出符合特定条件的西城区路侧停车数据与轨道交通站点信息，以便分析两者之间的关联性。\n\n### **详细描述**：\n1. **涉及的表**：\n   - `xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392`（西城区路侧停车收费位信息表）：存储西城区路侧停车相关的数据。\n   - `shijiaotongweiguidaozhandianxinxichuxing3670`（轨道交通站点信息出行表）：存储轨道交通线路及站点信息。\n\n2. **涉及的列**：\n   - `xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392` 表的列：\n     - `\"西城区路侧停车数据\"`：可能是停车位编号、路段名称或其他标识信息。\n     - `Unnamed: 1` 和 `Unnamed: 2`：未命名的列，可能是停车位类型、收费信息或其他辅助数据。\n   - `shijiaotongweiguidaozhandianxinxichuxing3670` 表的列：\n     - `\"线路名称\"`：轨道交通线路的名称。\n     - `\"站点编码\"`：轨道交通站点的唯一编码。\n\n3. **查询条件**：\n   - 两个表通过 `\"西城区路侧停车数据\"` 和 `\"线路名称\"` 进行关联（JOIN 条件）。\n   - WHERE 子句进一步筛选：\n     - `\"西城区路侧停车数据\" = '特定值'`：限定查询特定的停车数据（如某一路段或停车位）。\n     - `\"站点编码\" = '特定编码'`：限定查询特定的轨道交通站点。\n\n### **业务场景**：\n1. **停车与轨道交通的关联分析**：\n   - 查询可能用于分析西城区路侧停车位与附近轨道交通站点的关系，例如哪些停车位靠近某条地铁线路或特定站点。\n   - 可能的用途包括优化停车资源分配、研究“停车+换乘”（P+R）的便利性，或评估交通拥堵与停车需求的关系。\n\n2. **数据验证或匹配**：\n   - 可能是为了验证停车数据与轨道交通数据的一致性，例如检查停车位是否正确地关联到附近的轨道交通站点。\n\n3. **特定需求查询**：\n   - 用户可能需要查找某一特定停车位（如‘特定值’）是否靠近某一特定地铁站点（如‘特定编码’），以便提供导航或规划建议。\n\n### **用户描述**：\n1. **城市规划者或交通管理部门**：\n   - 需求：了解西城区路侧停车位与轨道交通站点的分布关系，以便优化停车资源或改善换乘体验。\n   - 实际问题：某些地铁站点周边停车位紧张，需要数据支持以决定是否增设停车位。\n\n2. **出行服务提供商（如导航APP）**：\n   - 需求：为用户提供“停车+地铁”的出行建议，例如推荐停车后换乘地铁的最佳路线。\n   - 实际问题：用户希望知道开车到某地铁站附近是否有方便的停车位。\n\n3. **数据分析师**：\n   - 需求：验证停车数据与轨道交通数据的关联性，确保数据质量。\n   - 实际问题：数据中可能存在停车位与地铁站点匹配错误的情况，需要排查。\n\n### **其他说明**：\n- 表中存在未命名的列（`Unnamed: 1` 和 `Unnamed: 2`），可能是数据导出或设计时的遗漏，实际使用中应明确其含义。\n- 查询中的‘特定值’和‘特定编码’是占位符，实际执行时会替换为具体值。",
+  "natural_language_query": "市民反映，最近开车去西城区地铁站附近办事，想找路边的停车位特别难。比如4号线宣武门站那边，绕了好几圈都找不到停车的地方，感觉停车位和地铁站的配套不太合理。想问问政府能不能查一下这些地铁站周围到底有多少正规的路侧停车位？特别是像西单、宣武门这些大站，感觉停车需求很大但车位根本不够用。另外有些停车位虽然划了线，但根本不清楚是不是正规收费车位，怕停了又被贴条。希望能帮忙核实下西城区主要地铁站周边的路侧停车位情况，看看能不能增加些车位或者优化下管理。",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ from _ where _ = _ and _ = (select from _ where _ = _ and _ = _ and _ (_ ,_ ) = _ )",
+  "database": "交通服务",
+  "tables": {
+    "xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392": [
+      "xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.西城区路侧停车数据",
+      "xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.Unnamed: 1",
+      "xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.Unnamed: 2",
+      "xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.Unnamed: 3",
+      "xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.Unnamed: 4"
+    ],
+    "shijiaotongweiguidaozhandianxinxichuxing3670": [
+      "shijiaotongweiguidaozhandianxinxichuxing3670.线路名称",
+      "shijiaotongweiguidaozhandianxinxichuxing3670.站点编码",
+      "shijiaotongweiguidaozhandianxinxichuxing3670.车站名"
+    ]
+  }
+}

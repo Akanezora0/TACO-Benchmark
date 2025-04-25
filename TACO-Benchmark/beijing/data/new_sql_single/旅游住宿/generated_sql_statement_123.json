@@ -1,0 +1,43 @@
+{
+  "sql": "SELECT xichengquxichengquwenwubaohudanwei35.名称, xichengquxichengquwenwubaohudanwei35.地址 FROM xichengquxichengquwenwubaohudanwei35 WHERE xichengquxichengquwenwubaohudanwei35.序号 = 1 AND xichengquxichengquwenwubaohudanwei35.名称 = '特定名称';",
+  "results": 0,
+  "sql skeleton": "SELECT _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ FROM _ WHERE _ ._ = _ AND _ ._ = _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "xichengquxichengquwenwubaohudanwei35": [
+      "xichengquxichengquwenwubaohudanwei35.序号",
+      "xichengquxichengquwenwubaohudanwei35.名称",
+      "xichengquxichengquwenwubaohudanwei35.地址"
+    ],
+    "shiguihuaziranziyuanweiyuanlin1526": [
+      "shiguihuaziranziyuanweiyuanlin1526.HID",
+      "shiguihuaziranziyuanweiyuanlin1526.FATHERID",
+      "shiguihuaziranziyuanweiyuanlin1526.HNAME",
+      "shiguihuaziranziyuanweiyuanlin1526.OTHERNAME",
+      "shiguihuaziranziyuanweiyuanlin1526.CATEGORY",
+      "shiguihuaziranziyuanweiyuanlin1526.SUBCATEGOR",
+      "shiguihuaziranziyuanweiyuanlin1526.COUNTYNAME",
+      "shiguihuaziranziyuanweiyuanlin1526.STREETNAME",
+      "shiguihuaziranziyuanweiyuanlin1526.DYNASTY",
+      "shiguihuaziranziyuanweiyuanlin1526.SUBDYNASTY",
+      "shiguihuaziranziyuanweiyuanlin1526.ADDRESS",
+      "shiguihuaziranziyuanweiyuanlin1526.RANK",
+      "shiguihuaziranziyuanweiyuanlin1526.BATCH",
+      "shiguihuaziranziyuanweiyuanlin1526.PUBTIME",
+      "shiguihuaziranziyuanweiyuanlin1526.USERS",
+      "shiguihuaziranziyuanweiyuanlin1526.PURPOSE",
+      "shiguihuaziranziyuanweiyuanlin1526.OWNERSHIP",
+      "shiguihuaziranziyuanweiyuanlin1526.STATEEVALU",
+      "shiguihuaziranziyuanweiyuanlin1526.SINGLERELI",
+      "shiguihuaziranziyuanweiyuanlin1526.PROTECTION",
+      "shiguihuaziranziyuanweiyuanlin1526.ATTACHEDRE",
+      "shiguihuaziranziyuanweiyuanlin1526.RELATEDPEO",
+      "shiguihuaziranziyuanweiyuanlin1526.RELATEDEVE",
+      "shiguihuaziranziyuanweiyuanlin1526.PUBNAME",
+      "shiguihuaziranziyuanweiyuanlin1526.SOURCE",
+      "shiguihuaziranziyuanweiyuanlin1526.EDITOR",
+      "shiguihuaziranziyuanweiyuanlin1526.ISREDUNDAN",
+      "shiguihuaziranziyuanweiyuanlin1526.THEME"
+    ]
+  }
+}

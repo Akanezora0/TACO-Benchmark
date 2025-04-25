@@ -1,0 +1,20 @@
+{
+  "sql": "select \"shiwenhuahelvyoujulvxingshexinxi3530.旅行社名称\" as 列1, \"shiwenhuahelvyoujulvxingshexinxi3530.许可经营业务\" as 列2, \"shiwenhuahelvyoujulvxingshexinxi3530.许可时间\" as 列3 from \"shiwenhuahelvyoujulvxingshexinxi3530\" where \"shiwenhuahelvyoujulvxingshexinxi3530.许可经营业务\" = '旅游' and \"shiwenhuahelvyoujulvxingshexinxi3530.许可时间\" like '2022%'",
+  "results": 0,
+  "sql skeleton": "select _ as _ ,_ as _ ,_ as _ from _ where _ = _ and _ = _",
+  "database": "旅游住宿",
+  "tables": {
+    "shiwenhuahelvyoujulvxingshexinxi3530": [
+      "shiwenhuahelvyoujulvxingshexinxi3530.旅行社名称",
+      "shiwenhuahelvyoujulvxingshexinxi3530.旅行社业务经营许可证编号",
+      "shiwenhuahelvyoujulvxingshexinxi3530.许可经营业务",
+      "shiwenhuahelvyoujulvxingshexinxi3530.许可时间"
+    ],
+    "shunyiqushunyiquxingjifandian2102": [
+      "shunyiqushunyiquxingjifandian2102.顺义区星级饭店",
+      "shunyiqushunyiquxingjifandian2102.Unnamed: 1",
+      "shunyiqushunyiquxingjifandian2102.Unnamed: 2",
+      "shunyiqushunyiquxingjifandian2102.Unnamed: 3"
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "sql": "SELECT \"shijiaotongweichaoxianchaozaihuochexiezaicha\"ng.\"行政区划代码\" AS 列1, \"shijiaotongweichaoxianchaozaihuochexiezaicha\"ng.\"站点名称\" AS 列2, \"shijiaotongweichaoxianchaozaihuochexiezaicha\"ng.\"联系电话\" AS 列3 FROM \"shijiaotongweichaoxianchaozaihuochexiezaicha\"ng WHERE \"shijiaotongweichaoxianchaozaihuochexiezaicha\"ng.\"行政区划代码\" = '3663' AND \"shijiaotongweichaoxianchaozaihuochexiezaicha\"ng.\"站点名称\" = '站点名称值'",
+  "results": 0,
+  "sql skeleton": "select _ as _ ,_ as _ ,_ as _ from _ where _ = _ and _ = _",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663": [
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.行政区划代码",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.站点名称",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.联系电话",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.地址"
+    ],
+    "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053": [
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.序号",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.行政相对人名称",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.统一社会信用代码",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.行政许可决定文书号",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.许可内容",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.许可决定日期",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.许可机关"
+    ]
+  }
+}

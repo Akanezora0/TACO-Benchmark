@@ -1,0 +1,26 @@
+{
+  "sql": "SELECT \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYXM\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.FZRQ\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.YXQZ\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.DWMC\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.EXCHANGETIME\" FROM \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\" WHERE \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID\" = '指定ID';",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从表 `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374` 中查询指定许可证 ID（`XKZID`）的相关信息，包括经营者名称、许可证编号、经营场所、经营范围、发证日期、有效期至、许可证 ID、单位名称以及数据交换时间。\n\n- **详细描述**：\n  - **表名**：`shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374`（从名称推断，可能是“市场监管餐饮服务许可证情况信息”表）。\n  - **查询列**：\n    - `JYZMC`：经营者名称（可能对应“经营者名称”）。\n    - `XKZBH`：许可证编号（可能对应“许可证编号”）。\n    - `JYCS`：经营场所（可能对应“经营场所”）。\n    - `JYXM`：经营范围（可能对应“经营范围”）。\n    - `FZRQ`：发证日期（可能对应“发证日期”）。\n    - `YXQZ`：有效期至（可能对应“有效期至”）。\n    - `XKZID`：许可证 ID（可能对应“许可证 ID”）。\n    - `DWMC`：单位名称（可能对应“单位名称”）。\n    - `EXCHANGETIME`：数据交换时间（可能记录数据同步或更新的时间）。\n  - **查询条件**：`XKZID = '指定ID'`，即筛选出许可证 ID 等于指定值的记录。\n\n- **业务场景**：\n  - 该查询可能用于市场监管部门或餐饮服务相关机构，用于快速检索特定餐饮服务许可证的详细信息。\n  - 可以用于许可证的核验、监管、续期或数据同步等场景。\n  - 例如，监管部门可能需要根据许可证 ID 查询某家餐饮单位的经营资质是否有效，或者检查其经营场所和范围是否符合规定。\n\n- **用户描述**：\n  - 用户可能是市场监管人员、餐饮服务经营者或系统管理员。\n  - 实际需求可能包括：\n    - 市场监管人员需要核实某家餐饮单位的许可证是否在有效期内，或者检查其经营信息是否与登记一致。\n    - 餐饮经营者可能需要查询自己的许可证信息，以确认是否需要更新或续期。\n    - 系统管理员可能需要同步或检查许可证数据的更新时间（`EXCHANGETIME`），以确保数据的准确性。",
+  "natural_language_query": "市民反映，自己经营的餐饮店（许可证ID：XKZ202300123）在市场监管局网站上查不到最新的许可证信息，明明去年12月就续期了，有效期应该到2025年才对。现在美团平台说我们证照信息不符要下架店铺，特别着急。想问问：\n1. 我们店的经营者名称和许可证编号对不对？\n2. 经营场所写的还是不是朝阳区建国路88号？\n3. 经营范围包含网络餐饮服务吗？\n4. 发证日期和有效期能不能帮忙确认下？\n5. 这个情况是不是系统数据没更新啊？\n\n来电要求核实餐饮许可证信息不匹配问题，希望能尽快处理，店铺停业一天损失很大。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ WHERE _ = _ ;",
+  "database": "餐饮美食",
+  "tables": {
+    "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374": [
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYXM",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.FZRQ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.YXQZ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.DWMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.EXCHANGETIME"
+    ],
+    "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076": [
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址"
+    ]
+  }
+}

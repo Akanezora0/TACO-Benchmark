@@ -1,0 +1,21 @@
+{
+  "sql": "SELECT \"pingguqupingguqujingpinminsu2083\".\"平谷区2022年精品民宿\" FROM \"pingguqupingguqujingpinminsu2083\" WHERE \"pingguqupingguqujingpinminsu2083\".\"Unnamed: 1\" = '条件' AND \"pingguqupingguqujingpinminsu2083\".\"Unnamed: 2\" = '条件'",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从表 `pingguqupingguqujingpinminsu2083` 中查询满足特定条件的平谷区2022年精品民宿记录。\n\n- **详细描述**：\n  - **涉及的表**：`pingguqupingguqujingpinminsu2083`，该表可能存储了平谷区2022年精品民宿的相关信息。\n  - **涉及的列**：\n    - `\"平谷区2022年精品民宿\"`：该列可能存储了精品民宿的名称或其他标识信息。\n    - `\"Unnamed: 1\"` 和 `\"Unnamed: 2\"`：这两列的名称未明确标注，可能是表中的第二和第三列，用于存储某些条件或属性。\n  - **查询条件**：\n    - `\"Unnamed: 1\" = '条件'`：筛选出第二列等于特定条件的记录。\n    - `\"Unnamed: 2\" = '条件'`：筛选出第三列等于特定条件的记录。\n\n- **业务场景**：\n  - 该查询可能用于筛选平谷区2022年精品民宿中符合某些特定条件的记录。例如，`\"Unnamed: 1\"` 和 `\"Unnamed: 2\"` 可能分别代表民宿的地理位置、星级评分、价格区间或其他筛选条件。\n  - 通过该查询，用户可以快速找到符合其需求的精品民宿信息，例如位于特定区域且价格在某一范围内的民宿。\n\n- **用户描述**：\n  - 用户可能需要在平谷区2022年的精品民宿中查找符合某些条件的民宿，例如：\n    - 查找位于某个特定景点附近的民宿（`\"Unnamed: 1\" = '景点附近'`）。\n    - 查找价格在某一范围内的民宿（`\"Unnamed: 2\" = '价格区间'`）。\n  - 用户的需求可能是为了规划旅行或住宿安排，希望通过筛选条件快速找到合适的民宿选项。",
+  "natural_language_query": "市民反映，想咨询一下平谷区2022年那些精品民宿的情况。去年去玩的时候听说有些民宿条件特别好，但记不清具体是哪些了。好像有些是在景区附近的，还有些是价格比较实惠的。现在想带家人再去玩，能不能帮忙查查符合这些条件的民宿？主要是想知道哪些民宿既离景点近，价格又在可接受范围内。之前听朋友说有几家很不错，但网上信息太乱了，希望官方能给个准确的信息。",
+  "results": 0,
+  "sql skeleton": "select _ from _ where _ = _ and _",
+  "database": "旅游住宿",
+  "tables": {
+    "pingguqupingguqujingpinminsu2083": [
+      "pingguqupingguqujingpinminsu2083.平谷区2022年精品民宿",
+      "pingguqupingguqujingpinminsu2083.Unnamed: 1",
+      "pingguqupingguqujingpinminsu2083.Unnamed: 2"
+    ],
+    "shunyiqushunyiquxingjifandian2102": [
+      "shunyiqushunyiquxingjifandian2102.顺义区星级饭店",
+      "shunyiqushunyiquxingjifandian2102.Unnamed: 1",
+      "shunyiqushunyiquxingjifandian2102.Unnamed: 2",
+      "shunyiqushunyiquxingjifandian2102.Unnamed: 3"
+    ]
+  }
+}

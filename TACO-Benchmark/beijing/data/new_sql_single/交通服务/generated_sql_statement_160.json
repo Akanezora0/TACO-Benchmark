@@ -1,0 +1,16 @@
+{
+  "sql": "SELECT \"huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829\".\"по\u0011Ю║╠\u001aА\", \"daxingqudaxingqugonggongzixingchededianweixinxi440\".\"公共自行车点位\" FROM \"huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829\" WHERE \"huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829\".\"\u0001\u0001\" = '特定值' AND \"daxingqudaxingqugonggongzixingchededianweixinxi440\".\"序号\" = 1 ORDER BY \"daxingqudaxingqugonggongzixingchededianweixinxi440\".\"公共自行车点位\" ASC",
+  "results": 0,
+  "sql skeleton": "select _ ,_ from _ where _ = _ and _ order by _",
+  "database": "交通服务",
+  "tables": {
+    "huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829": [
+      "huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829.по\u0011Ю║╠\u001aА",
+      "huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829.\u0001\u0001"
+    ],
+    "daxingqudaxingqugonggongzixingchededianweixinxi440": [
+      "daxingqudaxingqugonggongzixingchededianweixinxi440.序号",
+      "daxingqudaxingqugonggongzixingchededianweixinxi440.公共自行车点位"
+    ]
+  }
+}

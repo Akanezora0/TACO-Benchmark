@@ -1,0 +1,14 @@
+[
+  {
+    "idx": 8,
+    "sql_query": "SELECT column1, column2 FROM table1 - column3 - column4 ;",
+    "stage": "problem_description",
+    "prompt": "\n请阅读以下 SQL 语句，逐步分析并用详细的语言描述该 SQL 语句的查询意图，包括涉及的表、列、条件，以及可能的业务场景。\n\nSQL 语句：\nSELECT column1, column2 FROM table1 - column3 - column4 ;\n\n请按照以下格式输出：\n- **查询意图**：简要说明 SQL 语句的目的。\n- **详细描述**：详细解释查询涉及的表、列、条件等信息。\n- **业务场景**：查询到的表、列、条件等可以用来解决什么业务场景。\n- **用户描述**：上面的业务场景下用户可能遇到的实际问题或需求。\n"
+  },
+  {
+    "idx": 8,
+    "problem_description": "# SQL 语句分析\n\n## 查询意图\n这个 SQL 语句似乎存在语法错误，无法直接确定其查询意图。标准的 SQL 查询语句格式应为 `SELECT 列名 FROM 表名 WHERE 条件`，而当前语句使用了减号(`-`)连接表和列，这不是有效的 SQL 语法。\n\n## 详细描述\n- **表名**: `table1`\n- **列名**: `column1`, `column2`, `column3`, `column4`\n- **语法问题**: 语句中使用了减号(`-`)连接表和列，这不是有效的 SQL 语法\n\n可能的正确形式可能是以下之一：\n1. 简单的 SELECT 查询: `SELECT column1, column2 FROM table1`\n2. 带条件的查询: `SELECT column1, column2 FROM table1 WHERE column3 = column4`\n3. 计算列: `SELECT column1, column2, column3 - column4 FROM table1`\n\n## 业务场景\n由于语法不明确，无法确定具体业务场景。如果是有效的查询，可能涉及：\n- 从 table1 中检索 column1 和 column2 的数据\n- 可能计算 column3 和 column4 之间的差值\n- 可能比较 column3 和 column4 的值\n\n## 用户描述\n用户可能想：\n1. 查看 table1 中的 column1 和 column2 数据\n2. 计算 column3 和 column4 之间的差异（如金额差、时间差等）\n3. 找出 column3 和 column4 值相等的记录\n\n建议用户提供正确的 SQL 语法或澄清查询意图，以便进行更准确的分析。",
+    "stage": "natural_language_query",
+    "prompt": "\n根据以下问题描述，模拟真实用户的提问，生成一段自然语言查询。要求如下：\n- 语言风格要符合真实场景中的用户提问，可能包含意图不明、信息冗余等特点。\n- 用户意图可能不够明确，用户无法指定具体要查询什么表或列，只描述自己遇到的场景，包含模糊或不确定的表述。\n- 用户偏向于详细描述自己遇到的场景，可能包含自己的个人信息或者相关事件的信息。\n- 表达方式可以不够专业，可能包含模糊或不确定的表述。\n- 有可能融入情感倾向，如抱怨、不满、疑惑等。\n\n严格要求：\n- **用户自然语言中不要出现具体的表名或列名，因为用户不了解底层数据库结构。**\n\n### 示例\n- 问题描述：\n查询顺义区杨镇汉石桥事地村的隐患名称，包括可能存在的卫生、安全等问题。\n- 自然语言查询：\n市民反映，顺义区杨镇汉石桥事地村，在桥头有售卖小孩玩的烟花爆竹，存在安全隐患，希望尽快进行核实处理，来电反映违规售卖烟花爆竹问题。\n\n### 示例\n- 问题描述：\n根据父母双方的姓名，在婚姻登记信息中查找有无存在对应记录。\n- 自然语言查询：\n市民反映，新生儿办理出生一件事的时候，显示父母双方小明和小红结婚证信息不匹配，自己的结婚证是22年3月25号在海淀区民政局登记的，希望能帮助核实处理一下是什么情况，来电反映结婚证信息不匹配问题。\n\n### 示例\n- 问题描述：\n查询这家企业在纳税方面有没有问题。\n- 自然语言查询：\n市民反映，通过拼多多购买北京金汇发商贸有限公司的可乐，地址：顺义区顺鑫石门农产品批发市场，但是购买后一直不给开发票，找各种理由推拖，订单号：240123149364469331471，来电反映金汇发不给开发票问题。\n\n\n### 问题描述：\n# SQL 语句分析\n\n## 查询意图\n这个 SQL 语句似乎存在语法错误，无法直接确定其查询意图。标准的 SQL 查询语句格式应为 `SELECT 列名 FROM 表名 WHERE 条件`，而当前语句使用了减号(`-`)连接表和列，这不是有效的 SQL 语法。\n\n## 详细描述\n- **表名**: `table1`\n- **列名**: `column1`, `column2`, `column3`, `column4`\n- **语法问题**: 语句中使用了减号(`-`)连接表和列，这不是有效的 SQL 语法\n\n可能的正确形式可能是以下之一：\n1. 简单的 SELECT 查询: `SELECT column1, column2 FROM table1`\n2. 带条件的查询: `SELECT column1, column2 FROM table1 WHERE column3 = column4`\n3. 计算列: `SELECT column1, column2, column3 - column4 FROM table1`\n\n## 业务场景\n由于语法不明确，无法确定具体业务场景。如果是有效的查询，可能涉及：\n- 从 table1 中检索 column1 和 column2 的数据\n- 可能计算 column3 和 column4 之间的差值\n- 可能比较 column3 和 column4 的值\n\n## 用户描述\n用户可能想：\n1. 查看 table1 中的 column1 和 column2 数据\n2. 计算 column3 和 column4 之间的差异（如金额差、时间差等）\n3. 找出 column3 和 column4 值相等的记录\n\n建议用户提供正确的 SQL 语法或澄清查询意图，以便进行更准确的分析。\n\n请根据上述问题描述，生成对应的自然语言查询。\n"
+  }
+]

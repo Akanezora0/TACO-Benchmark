@@ -1,0 +1,25 @@
+{
+  "sql": "SELECT \n    xichengquxichengqudengjilvyoujingquminglu14.序号,\n    xichengquxichengqudengjilvyoujingquminglu14.景区名称,\n    xichengquxichengqudengjilvyoujingquminglu14.等级,\n    xichengquxichengqudengjilvyoujingquminglu14.地址,\n    xichengquxichengqudengjilvyoujingquminglu14.咨询电话,\n    xichengquxichengqudengjilvyoujingquminglu14.投诉电话,\n    xichengquxichengqudengjilvyoujingquminglu14.邮编,\n    shiwenhuahelvyoujulvxingshexinxi3530.旅行社名称\nFROM \n    xichengquxichengqudengjilvyoujingquminglu14\nJOIN \n    shiwenhuahelvyoujulvxingshexinxi3530\nON \n    xichengquxichengqudengjilvyoujingquminglu14.序号 = shiwenhuahelvyoujulvxingshexinxi3530.旅行社业务经营许可证编号\nWHERE \n    xichengquxichengqudengjilvyoujingquminglu14.等级 = 'AAAA'",
+  "problem_description": "### **查询意图**：\n该 SQL 语句的目的是查询西城区登记在册的 AAAA 级旅游景区的详细信息，并关联这些景区对应的旅行社名称。\n\n### **详细描述**：\n1. **涉及的表**：\n   - `xichengquxichengqudengjilvyoujingquminglu14`：西城区登记的旅游景区名录表，包含景区的基本信息。\n   - `shiwenhuahelvyoujulvxingshexinxi3530`：文化和旅游局旅行社信息表，包含旅行社的相关信息。\n\n2. **查询的列**：\n   - 从 `xichengquxichengqudengjilvyoujingquminglu14` 表中查询：\n     - `序号`：景区的唯一标识。\n     - `景区名称`：景区的名称。\n     - `等级`：景区的等级（如 AAAA、AAA 等）。\n     - `地址`：景区的具体地址。\n     - `咨询电话`：景区的联系电话。\n     - `投诉电话`：景区的投诉电话。\n     - `邮编`：景区的邮政编码。\n   - 从 `shiwenhuahelvyoujulvxingshexinxi3530` 表中查询：\n     - `旅行社名称`：与景区关联的旅行社名称。\n\n3. **关联条件**：\n   - 通过 `xichengquxichengqudengjilvyoujingquminglu14.序号 = shiwenhuahelvyoujulvxingshexinxi3530.旅行社业务经营许可证编号` 进行关联，表示景区的序号与旅行社业务经营许可证编号相匹配。\n\n4. **筛选条件**：\n   - `xichengquxichengqudengjilvyoujingquminglu14.等级 = 'AAAA'`：只查询等级为 AAAA 的景区。\n\n### **业务场景**：\n1. **旅游信息管理**：该查询可用于旅游管理部门或旅游服务平台，展示西城区所有 AAAA 级景区的详细信息及其关联的旅行社，方便游客或管理者查阅。\n2. **旅行社业务推广**：旅行社可以通过该查询了解自己合作的 AAAA 级景区，从而更好地推广相关旅游产品。\n3. **景区评级分析**：旅游管理部门可以通过该查询分析高等级景区（如 AAAA 级）的分布情况及其合作旅行社的情况。\n\n### **用户描述**：\n1. **游客需求**：游客可能希望了解西城区有哪些 AAAA 级景区，以及这些景区的基本信息（如地址、电话等），同时想知道哪些旅行社提供相关景区的旅游服务，以便选择适合的旅行社或规划行程。\n2. **旅行社需求**：旅行社可能需要查询自己合作的 AAAA 级景区，以便设计旅游线路或推广相关产品。\n3. **管理部门需求**：旅游管理部门可能需要统计或展示辖区内的高等级景区及其合作旅行社，以便进行监管或优化旅游资源配置。\n\n### **总结**：\n该 SQL 查询主要用于获取西城区 AAAA 级景区的详细信息及其关联的旅行社名称，适用于旅游信息展示、旅行社业务推广和旅游管理分析等场景。",
+  "natural_language_query": "市民反映，最近想带家人去西城区玩，听说那边有几个4A级景区挺不错的，但是不太清楚具体有哪些景点。想问问西城区这边登记在册的4A级景区都有哪些啊？最好能提供景区的地址、联系电话这些基本信息。另外还想了解一下这些景点都是和哪些旅行社合作的，因为想找个靠谱的旅行社安排行程。之前在网上查的信息太零散了，有的连投诉电话都找不到，感觉特别不方便。能不能帮忙整理一下西城区所有4A景区的完整信息和对应的旅行社啊？这样我们游客规划行程也能更放心些。",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ from _ join _ on _ ._ = _ ._ where _ ._ = _",
+  "database": "旅游住宿",
+  "tables": {
+    "xichengquxichengqudengjilvyoujingquminglu14": [
+      "xichengquxichengqudengjilvyoujingquminglu14.序号",
+      "xichengquxichengqudengjilvyoujingquminglu14.景区名称",
+      "xichengquxichengqudengjilvyoujingquminglu14.等级",
+      "xichengquxichengqudengjilvyoujingquminglu14.地址",
+      "xichengquxichengqudengjilvyoujingquminglu14.咨询电话",
+      "xichengquxichengqudengjilvyoujingquminglu14.投诉电话",
+      "xichengquxichengqudengjilvyoujingquminglu14.邮编"
+    ],
+    "shiwenhuahelvyoujulvxingshexinxi3530": [
+      "shiwenhuahelvyoujulvxingshexinxi3530.旅行社名称",
+      "shiwenhuahelvyoujulvxingshexinxi3530.旅行社业务经营许可证编号",
+      "shiwenhuahelvyoujulvxingshexinxi3530.许可经营业务",
+      "shiwenhuahelvyoujulvxingshexinxi3530.许可时间"
+    ]
+  }
+}

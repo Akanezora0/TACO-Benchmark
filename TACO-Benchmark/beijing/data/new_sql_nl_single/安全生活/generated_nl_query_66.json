@@ -1,0 +1,9 @@
+{
+  "sql": "SELECT column1, column2, column3 FROM table1 WHERE condition1 = 'value1' AND condition2 > 10;",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从 `table1` 表中筛选出满足特定条件的数据，并返回 `column1`、`column2` 和 `column3` 这三列的值。\n\n- **详细描述**：\n  - **涉及的表**：`table1` 是该查询的主要表，数据将从该表中提取。\n  - **涉及的列**：\n    - `column1`、`column2`、`column3`：查询结果中需要返回的列。\n    - `condition1` 和 `condition2`：用于筛选数据的条件列。\n  - **条件**：\n    - `condition1 = 'value1'`：筛选出 `condition1` 列的值等于 `'value1'` 的记录。\n    - `condition2 > 10`：筛选出 `condition2` 列的值大于 10 的记录。\n  - **查询逻辑**：该查询会返回 `table1` 表中同时满足 `condition1` 等于 `'value1'` 且 `condition2` 大于 10 的所有记录的 `column1`、`column2` 和 `column3` 列的值。\n\n- **业务场景**：\n  - 该查询可以用于需要筛选特定条件下的数据的业务场景。例如：\n    - 在销售数据中筛选出某个特定产品（`condition1 = 'value1'`）且销售额超过 10 元（`condition2 > 10`）的记录。\n    - 在用户行为数据中筛选出某个特定行为（`condition1 = 'value1'`）且行为次数超过 10 次（`condition2 > 10`）的用户记录。\n  - 查询结果可以用于生成报表、数据分析或进一步的处理。\n\n- **用户描述**：\n  - 用户可能需要分析特定产品的销售表现，例如找出某个产品（`'value1'`）在高销售额（>10）时的销售数据。\n  - 用户可能需要识别高频行为用户，例如找出执行某个特定行为（`'value1'`）超过 10 次的用户，以便进行精准营销或行为分析。\n  - 用户的需求可能集中在从大量数据中快速提取符合特定条件的记录，以便进行后续的业务决策或分析。",
+  "natural_language_query": "市民反映，我在分析我们店铺的销售数据时遇到一个问题。我们有个特别畅销的商品（具体名称是\"value1\"），想查一下这个商品销售额超过10块钱的所有销售记录。主要是想看看这些卖得比较好的订单里，都包含哪些具体信息，比如顾客买了什么、买了多少之类的。但是我在系统里找不到直接查这个的功能，能不能帮忙看看怎么查这些数据？主要是想了解这个商品卖得好的时候的具体情况，好做后续的进货和促销计划。",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ from _ where _ = _ and _",
+  "database": "安全生活",
+  "tables": {}
+}

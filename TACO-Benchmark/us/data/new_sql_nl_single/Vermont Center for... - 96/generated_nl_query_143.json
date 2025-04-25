@@ -1,0 +1,37 @@
+{
+  "sql": "SELECT DISTINCT wildlife_management_units.OBJECTID, wildlife_management_units.ABNAME, wildlife_management_units.AGENCY, wildlife_management_units.DEPT, wildlife_management_units.DIV, wildlife_management_units.BOUNDARY, sga_phase_2_assessed_reaches.SGAT_ID, sga_phase_2_assessed_reaches.ProjectName, sga_phase_2_assessed_reaches.URLPage1, sga_phase_2_assessed_reaches.URLPage2, sga_phase_2_assessed_reaches.ReportList, sga_phase_2_assessed_reaches.FinalA, sga_phase_2_assessed_reaches.FinalB, sga_phase_2_assessed_reaches.FinalC, sga_phase_2_assessed_reaches.CorridorPlanA, sga_phase_2_assessed_reaches.CorridorPlanB, sga_phase_2_assessed_reaches.CorridorPlanC, sga_phase_2_assessed_reaches.RID, sga_phase_2_assessed_reaches.SID, sga_phase_2_assessed_reaches.OBJECTID, sga_phase_2_assessed_reaches.RchID, sga_phase_2_assessed_reaches.SegID, sga_phase_2_assessed_reaches.ProjectID \nFROM wildlife_management_units \nJOIN sga_phase_2_assessed_reaches ON wildlife_management_units.OBJECTID = sga_phase_2_assessed_reaches.OBJECTID \nWHERE sga_phase_2_assessed_reaches.ProjectName = 'ProjectNameValue'",
+  "problem_description": "### Query intent:\nThe SQL statement is designed to retrieve specific information from two related tables, `wildlife_management_units` and `sga_phase_2_assessed_reaches`, based on a condition related to a project name.\n\n### Detailed description:\n- **Table `wildlife_management_units`**: This table contains various attributes about wildlife management units, including `OBJECTID` (unique identifier), `ABNAME`, `AGENCY`, `DEPT`, `DIV`, `BOUNDARY`, etc.\n- **Table `sga_phase_2_assessed_reaches`**: This table seems to contain detailed records about phase 2 assessed reaches related to a specific project, such as `SGAT_ID`, `ProjectName`, `URLPage1`, `URLPage2`, `ReportList`, `FinalA`, `FinalB`, `FinalC`, `CorridorPlanA`, `CorridorPlanB`, `CorridorPlanC`, `RID`, `SID`, `OJECTID`, `RchID`, `SegID`, `ProjectID`.\n\n- **Join**: The two tables are joined based on the common `OBJECTID` column, which means for each record in `wildlife_management_units`, the corresponding records in `sga_phase_2_assessed_reaches` will be included in the result set if they share the same `OBJECTID`.\n\n- **Condition**: The `WHERE` clause filters the results to only include rows where the `ProjectName` column in `sga_phase_2_assessed_reaches` equals 'ProjectNameValue'. This means the query aims to find all details related to a specific project with this name.\n\n### Business scenario:\nThis query could be used in a scenario where an environmental management team needs to gather comprehensive information about a particular phase 2 project that involves wildlife management. For instance, they might need to understand the geographical boundaries (`BOUNDARY`) of the wildlife management units associated with this project, as well as any specific reports (`ReportList`), final assessments (`FinalA`, `FinalB`, `FinalC`), and corridor plans (`CorridorPlanA`, `CorridorPlanB`, `CorridorPlanC`) related to it.\n\n### User description:\nA user working in wildlife conservation or environmental management might require this data to make informed decisions regarding the project's progress, compliance with regulations, or strategic planning. They would use this query to fetch all pertinent details about a specific project, aiding in the evaluation of its impact on wildlife habitats and guiding future conservation efforts.",
+  "natural_language_query": "As a wildlife conservation officer, I'm looking to gather comprehensive information about a specific phase 2 project focusing on wildlife management. I need details on the geographical boundaries of the wildlife management units involved, along with any relevant reports, final assessments, and corridor plans. Could you please help me retrieve all these details for the project named 'ProjectNameValue'? I believe this information will be crucial for assessing the project's impact on wildlife habitats and planning future conservation efforts.",
+  "results": 0,
+  "sql skeleton": "SELECT DISTINCT _ ._ , _ ._ , _ ._ , _ ._ = _ ._ = _ AS _ FROM _ JOIN _ ON _ ._ = _ ._ where _ ._ = _",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "wildlife_management_units": [
+      "wildlife_management_units.OBJECTID",
+      "wildlife_management_units.ABNAME",
+      "wildlife_management_units.AGENCY",
+      "wildlife_management_units.DEPT",
+      "wildlife_management_units.DIV",
+      "wildlife_management_units.BOUNDARY"
+    ],
+    "sga_phase_2_assessed_reaches": [
+      "sga_phase_2_assessed_reaches.SGAT_ID",
+      "sga_phase_2_assessed_reaches.ProjectName",
+      "sga_phase_2_assessed_reaches.URLPage1",
+      "sga_phase_2_assessed_reaches.URLPage2",
+      "sga_phase_2_assessed_reaches.ReportList",
+      "sga_phase_2_assessed_reaches.FinalA",
+      "sga_phase_2_assessed_reaches.FinalB",
+      "sga_phase_2_assessed_reaches.FinalC",
+      "sga_phase_2_assessed_reaches.CorridorPlanA",
+      "sga_phase_2_assessed_reaches.CorridorPlanB",
+      "sga_phase_2_assessed_reaches.CorridorPlanC",
+      "sga_phase_2_assessed_reaches.RID",
+      "sga_phase_2_assessed_reaches.SID",
+      "sga_phase_2_assessed_reaches.OBJECTID",
+      "sga_phase_2_assessed_reaches.RchID",
+      "sga_phase_2_assessed_reaches.SegID",
+      "sga_phase_2_assessed_reaches.ProjectID"
+    ]
+  }
+}

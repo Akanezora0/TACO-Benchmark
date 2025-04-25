@@ -1,0 +1,27 @@
+{
+  "sql": "SELECT \"shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.名称\", \"shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.级别\", \"yanqingquyanqingqulvyoujingquxinxi3381.旅游景区\", \"yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 1\" FROM \"shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640\" INNER JOIN \"yanqingquyanqingqulvyoujingquxinxi3381\" ON \"shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.序号\" = \"yanqingquyanqingqulvyoujingquxinxi3381.旅游景区\";",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是通过内连接（INNER JOIN）查询两个表中的数据，获取顺义区非物质文化遗产项目信息和延庆区旅游景区信息之间的关联数据。  \n\n### **详细描述**  \n1. **涉及的表**：  \n   - `shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640`（顺义区非物质文化遗产名录项目信息表）  \n   - `yanqingquyanqingqulvyoujingquxinxi3381`（延庆区旅游景区信息表）  \n\n2. **查询的列**：  \n   - 从顺义区非遗项目表中选择 `名称`（项目名称）和 `级别`（非遗级别）。  \n   - 从延庆区旅游景区表中选择 `旅游景区`（景区名称）和 `Unnamed: 1`（可能是景区类别或其他未命名的信息）。  \n\n3. **连接条件**：  \n   - 使用 `INNER JOIN` 连接两个表，连接条件是顺义区非遗项目的 `序号` 与延庆区旅游景区的 `旅游景区` 列相等。  \n   - 即 `shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.序号 = yanqingquyanqingqulvyoujingquxinxi3381.旅游景区`。  \n\n### **业务场景**  \n该查询可能用于以下业务场景：  \n1. **文旅资源整合**：  \n   - 政府或旅游管理部门可能需要分析顺义区的非物质文化遗产与延庆区旅游景区之间的关联，以促进跨区域文化旅游合作。  \n2. **旅游推广**：  \n   - 旅行社或文化推广机构可能希望结合非遗项目和旅游景区，设计特色旅游线路，吸引游客。  \n3. **数据分析**：  \n   - 研究非遗项目的分布与旅游景区的关系，以优化文旅资源分配。  \n\n### **用户描述**  \n1. **政府文旅部门**：  \n   - 需要了解顺义区的非遗项目是否与延庆区的某些旅游景区存在关联，以便制定跨区域文化推广政策。  \n2. **旅游企业**：  \n   - 希望找到可以结合非遗文化的旅游景点，推出“非遗+旅游”特色产品，提升游客体验。  \n3. **数据分析师**：  \n   - 需要研究不同区域的文化资源与旅游资源的匹配情况，以优化文旅产业布局。  \n\n### **可能的疑问**  \n- 为什么用 `序号` 和 `旅游景区` 进行关联？这两个字段是否真的存在逻辑关系？  \n- `Unnamed: 1` 列的具体含义是什么？可能是数据导入时的未命名列，需要进一步确认。  \n- 如果连接条件不合理，可能导致查询结果为空或数据不准确。",
+  "natural_language_query": "市民反映，最近在规划一条跨区域的文化旅游线路，想了解一下顺义区那些非物质文化遗产项目，比如什么剪纸啊、皮影戏之类的，能不能和延庆区的旅游景点结合起来推广。听说有些非遗项目是有编号的，不知道这些编号是不是和景区的信息能对应上？比如顺义的某个非遗项目的序号会不会正好是延庆某个景区的代码？希望能查一下两边有没有能匹配上的资源，方便我们设计旅游产品。另外延庆景区信息里有个没标名称的列（显示Unnamed:1），不知道是不是景区类型或者开放时间，这个也希望能一起看看。主要是想搞明白两边资源怎么搭配比较好，现在数据有点乱，不太确定该怎么关联查询。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640": [
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.序号",
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.名称",
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.类别",
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.公布时间",
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.级别"
+    ],
+    "yanqingquyanqingqulvyoujingquxinxi3381": [
+      "yanqingquyanqingqulvyoujingquxinxi3381.旅游景区",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 1",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 2",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 3",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 4",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 5",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 6",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 7"
+    ]
+  }
+}

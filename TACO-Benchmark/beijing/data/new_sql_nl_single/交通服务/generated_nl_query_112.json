@@ -1,0 +1,27 @@
+{
+  "sql": "SELECT \"xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.西城区路侧停车数据\", \"shijiaotongweixianchangxunchaxinxi3675.巡查位置\" FROM \"xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392\" INNER JOIN \"shijiaotongweixianchangxunchaxinxi3675\" ON \"xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.西城区路侧停车数据\".\"编号\" = \"shijiaotongweixianchangxunchaxinxi3675.序号\";",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从两个表中联合查询数据，通过特定的关联条件（编号与序号匹配）获取西城区路侧停车数据和交通委现场巡查位置的相关信息。\n\n---\n\n### **详细描述**  \n1. **涉及的表**：  \n   - `xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392`（西城区路侧停车数据表）  \n   - `shijiaotongweixianchangxunchaxinxi3675`（交通委现场巡查信息表）  \n\n2. **查询的列**：  \n   - `xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.西城区路侧停车数据`  \n   - `shijiaotongweixianchangxunchaxinxi3675.巡查位置`  \n\n3. **关联条件**：  \n   - 使用 `INNER JOIN` 连接两个表，关联条件是：  \n     ```  \n     \"xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.西城区路侧停车数据\".\"编号\" = \"shijiaotongweixianchangxunchaxinxi3675.序号\"  \n     ```  \n     即，停车数据的 `编号` 字段与巡查信息的 `序号` 字段匹配。  \n\n4. **查询逻辑**：  \n   - 仅返回两个表中编号和序号匹配的记录。  \n   - 查询结果包含停车数据和对应的巡查位置信息。  \n\n---\n\n### **业务场景**  \n该查询可能用于以下业务场景：  \n1. **停车管理与巡查监管**：  \n   - 交通管理部门可能需要将路侧停车数据与现场巡查记录关联，以检查停车位是否合规或是否存在违规停车情况。  \n2. **数据分析与报告**：  \n   - 统计哪些停车位被巡查过，分析巡查覆盖率和停车管理情况。  \n3. **执法与整改**：  \n   - 通过关联数据，可以快速定位问题停车位，便于执法或整改。  \n\n---\n\n### **用户描述**  \n在该业务场景下，用户可能遇到的实际问题或需求包括：  \n1. **停车管理效率低**：  \n   - 停车管理部门需要手动比对停车数据和巡查记录，耗时耗力，希望系统自动关联数据以提高效率。  \n2. **巡查覆盖不全面**：  \n   - 交通委需要确保所有停车位都被巡查过，但缺乏有效的数据支持，查询结果可以帮助发现未巡查的停车位。  \n3. **违规停车监管**：  \n   - 某些停车位可能存在违规停车（如占用消防通道），通过关联数据可以快速定位问题区域并采取执法措施。  \n4. **数据整合需求**：  \n   - 不同部门（如停车管理部门和交通巡查部门）的数据分散，需要整合以支持决策分析。  \n\n该 SQL 查询通过关联两个表的数据，帮助用户更高效地管理停车位和巡查工作，提升城市交通管理的智能化水平。",
+  "natural_language_query": "市民反映，西城区这边路侧停车管理感觉有点混乱，经常看到有车乱停乱放也没人管。我住在白纸坊这边，发现好多停车位明明划了线，但有的车就是斜着停占两个车位，还有的直接停在消防通道上。上周向街道反映过，他们说会安排交通委的人来巡查，但过了好几天也没见改善。想问问这些停车位到底有没有被巡查到？能不能查一下哪些地方是已经检查过的，哪些是还没查到的？我们这边停车本来就紧张，这样乱停更影响居民生活了。主要是想知道巡查和停车管理这两边信息能不能对得上，别是光登记不管理。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ ;",
+  "database": "交通服务",
+  "tables": {
+    "xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392": [
+      "xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.西城区路侧停车数据",
+      "xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.Unnamed: 1",
+      "xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.Unnamed: 2",
+      "xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.Unnamed: 3",
+      "xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.Unnamed: 4"
+    ],
+    "shijiaotongweixianchangxunchaxinxi3675": [
+      "shijiaotongweixianchangxunchaxinxi3675.序号",
+      "shijiaotongweixianchangxunchaxinxi3675.工作内容",
+      "shijiaotongweixianchangxunchaxinxi3675.巡查时间",
+      "shijiaotongweixianchangxunchaxinxi3675.巡查人次",
+      "shijiaotongweixianchangxunchaxinxi3675.巡查单位",
+      "shijiaotongweixianchangxunchaxinxi3675.巡查位置",
+      "shijiaotongweixianchangxunchaxinxi3675.共享时间",
+      "shijiaotongweixianchangxunchaxinxi3675.更新时间"
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "sql": "select \n    table1.\"column1\", \n    table1.\"column2\", \n    table1.\"column3\", \n    table1.\"column4\" \nfrom \n    table1 \nwhere \n    table1.\"column5\" = 'value' \n    and (table1.\"column6\" = 'value1' or table1.\"column7\" = 'value2') \n    and table1.\"column8\" >= 'date';",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ ,_ from _ where _ = _ and (_ = _ or _ = _ ) and _ (_ )>=_ ;",
+  "database": "安全生活",
+  "tables": {}
+}

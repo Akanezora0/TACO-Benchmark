@@ -1,0 +1,40 @@
+{
+  "sql": "SELECT xichengquxichengquguojietianqiaomingdan2490.OBJNAME, shijiaotongweijiapeijigouxinxi3667.驾培机构名称 FROM xichengquxichengquguojietianqiaomingdan2490 INNER JOIN shijiaotongweijiapeijigouxinxi3667 ON xichengquxichengquguojietianqiaomingdan2490.OBJCODE = shijiaotongweijiapeijigouxinxi3667.统一社会信用代码 WHERE xichengquxichengquguojietianqiaomingdan2490.OBJSTATE = '已报名';",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是查询西城区国际街桥报名名单中状态为“已报名”的条目，并关联获取对应的驾培机构名称。\n\n### **详细描述**  \n1. **涉及的表**：\n   - `xichengquxichengquguojietianqiaomingdan2490`（西城区国际街桥报名名单表）：存储报名信息，包含报名对象的基本信息。\n   - `shijiaotongweijiapeijigouxinxi3667`（市交委驾培机构信息表）：存储驾培机构的信息，包括机构名称和统一社会信用代码。\n\n2. **涉及的列**：\n   - `xichengquxichengquguojietianqiaomingdan2490.OBJNAME`：报名对象的名称（可能是个人或单位）。\n   - `shijiaotongweijiapeijigouxinxi3667.驾培机构名称`：驾培机构的名称。\n   - `xichengquxichengquguojietianqiaomingdan2490.OBJCODE`：报名对象的代码（可能是身份证号或机构代码）。\n   - `shijiaotongweijiapeijigouxinxi3667.统一社会信用代码`：驾培机构的统一社会信用代码（用于关联）。\n   - `xichengquxichengquguojietianqiaomingdan2490.OBJSTATE`：报名对象的状态（此处筛选“已报名”）。\n\n3. **查询条件**：\n   - 通过 `INNER JOIN` 关联两个表，关联条件是 `xichengquxichengquguojietianqiaomingdan2490.OBJCODE = shijiaotongweijiapeijigouxinxi3667.统一社会信用代码`，即报名对象的代码与驾培机构的统一社会信用代码匹配。\n   - 筛选条件为 `xichengquxichengquguojietianqiaomingdan2490.OBJSTATE = '已报名'`，仅查询状态为“已报名”的条目。\n\n### **业务场景**  \n该查询可用于以下业务场景：\n1. **报名管理**：西城区国际街桥的报名系统中，管理员需要查看已报名的对象及其对应的驾培机构名称，以便进行后续的资格审核或培训安排。\n2. **数据统计**：统计已报名的驾培机构分布情况，分析哪些机构参与度高。\n3. **信息核对**：确保报名对象的代码与驾培机构的统一社会信用代码一致，避免数据错误。\n\n### **用户描述**  \n在该业务场景下，用户（如报名系统管理员或交管部门工作人员）可能遇到以下问题或需求：\n1. **审核需求**：需要快速查看哪些人或单位已经完成报名，并确认其关联的驾培机构是否合规。\n2. **数据关联需求**：报名表中可能只存储了代码，但实际业务中需要显示驾培机构名称，以便更直观地管理信息。\n3. **状态筛选需求**：仅关注“已报名”的条目，排除未提交或已取消的报名记录，提高工作效率。",
+  "natural_language_query": "市民反映，我在西城区国际街桥报名系统后台查看报名情况时，发现只能看到报名人的姓名和编号，但是不知道这些人对应的是哪个驾校。现在需要统计已经完成报名的人员名单，并且要能看到他们所属的驾校名称。系统里显示有些人是\"已报名\"状态，但就是查不到具体是哪个驾培机构的学员，这样很影响我们后续安排培训和审核工作。希望能帮忙解决这个问题，让我们能查到已报名人员对应的驾校全称。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ WHERE _ = _ ;",
+  "database": "交通服务",
+  "tables": {
+    "xichengquxichengquguojietianqiaomingdan2490": [
+      "xichengquxichengquguojietianqiaomingdan2490.OBJCODE",
+      "xichengquxichengquguojietianqiaomingdan2490.OBJNAME",
+      "xichengquxichengquguojietianqiaomingdan2490.DEPTCODE1",
+      "xichengquxichengquguojietianqiaomingdan2490.DEPTNAME1",
+      "xichengquxichengquguojietianqiaomingdan2490.DEPTCODE2",
+      "xichengquxichengquguojietianqiaomingdan2490.DEPTNAME2",
+      "xichengquxichengquguojietianqiaomingdan2490.DEPTCODE3",
+      "xichengquxichengquguojietianqiaomingdan2490.DEPTNAME3",
+      "xichengquxichengquguojietianqiaomingdan2490.BGCODE",
+      "xichengquxichengquguojietianqiaomingdan2490.OBJSTATE",
+      "xichengquxichengquguojietianqiaomingdan2490.ORDATE",
+      "xichengquxichengquguojietianqiaomingdan2490.CHDATE",
+      "xichengquxichengquguojietianqiaomingdan2490.DATASOURCE",
+      "xichengquxichengquguojietianqiaomingdan2490.OBJPOS",
+      "xichengquxichengquguojietianqiaomingdan2490.NOTE",
+      "xichengquxichengquguojietianqiaomingdan2490.ljdl",
+      "xichengquxichengquguojietianqiaomingdan2490.cd",
+      "xichengquxichengquguojietianqiaomingdan2490.kydw",
+      "xichengquxichengquguojietianqiaomingdan2490.kd",
+      "xichengquxichengquguojietianqiaomingdan2490.gd",
+      "xichengquxichengquguojietianqiaomingdan2490.mc",
+      "xichengquxichengquguojietianqiaomingdan2490.ghspxmh"
+    ],
+    "shijiaotongweijiapeijigouxinxi3667": [
+      "shijiaotongweijiapeijigouxinxi3667.驾培机构名称",
+      "shijiaotongweijiapeijigouxinxi3667.训练地址",
+      "shijiaotongweijiapeijigouxinxi3667.统一社会信用代码",
+      "shijiaotongweijiapeijigouxinxi3667.法定代表人"
+    ]
+  }
+}

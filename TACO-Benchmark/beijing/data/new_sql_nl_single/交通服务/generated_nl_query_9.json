@@ -1,0 +1,23 @@
+{
+  "sql": "SELECT \n    pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.企业名称, \n    pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.经营许可证号, \n    pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.企业类型, \n    pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.所属区县, \n    pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.考核人, \n    pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.评定时间, \n    pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.评定得分, \n    pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.评定结果 \nFROM \n    pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270 \nINNER JOIN \n    shijiaotongweichuzuyehujibenxinxi3664 \nON \n    pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.经营业户名称 = shijiaotongweichuzuyehujibenxinxi3664.经营业户名称 \nWHERE \n    shijiaotongweichuzuyehujibenxinxi3664.经营业户名称 IN (SELECT \n        shijiaotongweichuzuyehujibenxinxi3664.经营业户名称 \n    FROM \n        shijiaotongweichuzuyehujibenxinxi3664 \n    WHERE \n        shijiaotongweich",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是查询 **2019 年某地区普通货运企业质量信誉考核结果**，并结合 **交通运输业户基本信息**，筛选出符合特定条件的货运企业信息。  \n\n---\n\n### **详细描述**  \n#### **涉及的表**  \n1. **`pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270`**  \n   - 表名翻译：`平谷区2019年普通货运质量信誉考核结果270`  \n   - 存储内容：2019 年某地区（平谷区）普通货运企业的质量信誉考核结果。  \n   - 涉及的列：  \n     - `企业名称`（企业名称）  \n     - `经营许可证号`（经营许可证编号）  \n     - `企业类型`（企业类型，如个体、公司等）  \n     - `所属区县`（企业所属行政区域）  \n     - `考核人`（负责考核的人员）  \n     - `评定时间`（考核时间）  \n     - `评定得分`（考核得分）  \n     - `评定结果`（考核等级，如优秀、合格、不合格等）  \n\n2. **`shijiaotongweichuzuyehujibenxinxi3664`**  \n   - 表名翻译：`市交通运输局业户基本信息3664`  \n   - 存储内容：交通运输行业经营业户的基本信息。  \n   - 涉及的列：  \n     - `经营业户名称`（企业或个体经营户的名称）  \n\n#### **查询逻辑**  \n1. **主查询**：从 `pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270` 表中选取企业的考核信息（如企业名称、许可证号、考核得分等）。  \n2. **JOIN 连接**：通过 `经营业户名称` 与 `shijiaotongweichuzuyehujibenxinxi3664` 表关联，确保查询的企业在交通运输局有备案。  \n3. **WHERE 子查询**：进一步筛选出 `shijiaotongweichuzuyehujibenxinxi3664` 表中存在的经营业户（即合法注册的企业）。  \n\n（注：SQL 语句不完整，WHERE 子查询的完整条件未知，但推测可能是筛选特定状态的业户，如“有效”“已注销”等。）  \n\n---\n\n### **业务场景**  \n该查询可能用于以下业务场景：  \n1. **行业监管**：交通运输管理部门需要核查 2019 年普通货运企业的质量信誉考核结果，并结合业户注册信息，确保考核的企业均为合法经营。  \n2. **企业信用评估**：政府或行业协会可能需要统计企业的信用等级（如优秀、合格、不合格），用于政策扶持或行业整顿。  \n3. **数据比对**：确保考核数据与交通运输局的备案数据一致，避免“黑户”企业混入考核名单。  \n\n---\n\n### **用户描述**  \n在该业务场景下，用户（如交通运输局工作人员）可能遇到以下问题或需求：  \n1. **问题**：  \n   - 部分货运企业可能未在交通运输局备案，但参与了考核，需要剔除这些非法企业。  \n   - 需要统计某地区的货运企业信用状况，但数据分散在不同系统，需关联查询。  \n2. **需求**：  \n   - 获取 **已注册且参与考核** 的企业名单，确保数据权威性。  \n   - 分析考核结果（如优秀率、不合格率），用于行业报告或政策制定。  \n   - 对低分企业进行重点监管或整改。  \n\n（由于 SQL 语句不完整，部分分析基于推测，但核心逻辑是 **关联考核数据与业户注册信息**。）",
+  "natural_language_query": "市民反映，自己是平谷区一家普通货运公司的负责人，想咨询2019年全区货运企业质量信誉考核的事情。听说有些没在交通局正规注册的公司也参加了考核，这样对我们这些正规企业很不公平。能不能帮忙查一下，到底哪些货运公司是既在交通局有正规备案，又参加了2019年考核的？我们公司叫\"平安货运\"，特别想知道我们当时的考核结果是什么等级，还有全区考核优秀的公司有多少家。最近要申请一个运输项目，招标方要求提供这些信用证明，但是我在网上查不到完整信息，很着急。另外想问下，如果对考核结果有异议的话，应该找哪个部门申诉？",
+  "results": 0,
+  "sql skeleton": "select _ from _ where _ in (select _ from _ where _ )",
+  "database": "交通服务",
+  "tables": {
+    "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270": [
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.企业名称",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.经营许可证号",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.企业类型",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.所属区县",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.考核人",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.评定时间",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.评定得分",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.评定结果"
+    ],
+    "shijiaotongweichuzuyehujibenxinxi3664": [
+      "shijiaotongweichuzuyehujibenxinxi3664.经营业户名称"
+    ]
+  }
+}

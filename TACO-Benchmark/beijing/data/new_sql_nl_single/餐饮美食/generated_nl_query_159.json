@@ -1,0 +1,26 @@
+{
+  "sql": "SELECT \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYXM\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.FZRQ\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.YXQZ\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.DWMC\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.EXCHANGETIME\" FROM \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\" - \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076\".\"专用标识牌号\" WHERE \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\".\"JYZMC\" = '某品牌' ;",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从表 `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374` 中查询特定品牌（'某品牌'）的餐饮服务许可证相关信息，并排除与表 `shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076` 中的“专用标识牌号”相关联的记录。\n\n- **详细描述**：\n  - **涉及的表**：\n    - 主表：`shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374`，该表可能存储了餐饮服务许可证的详细信息。\n    - 排除表：`shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076`，该表可能存储了某些特定标识牌号的信息。\n  - **查询的列**：\n    - `JYZMC`：经营者名称\n    - `XKZBH`：许可证编号\n    - `JYCS`：经营场所\n    - `JYXM`：经营项目\n    - `FZRQ`：发证日期\n    - `YXQZ`：有效期至\n    - `XKZID`：许可证ID\n    - `DWMC`：单位名称\n    - `EXCHANGETIME`：交换时间\n  - **条件**：\n    - `JYZMC = '某品牌'`：筛选出经营者名称为“某品牌”的记录。\n    - 排除与表 `shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076` 中的“专用标识牌号”相关联的记录。\n\n- **业务场景**：\n  - 该查询可能用于市场监管部门或餐饮服务监管部门，用于检查特定品牌（'某品牌'）的餐饮服务许可证的合规情况。\n  - 排除某些特定标识牌号的记录可能意味着这些记录已经被标记为不规范或需要特别关注，因此在查询结果中排除这些记录。\n\n- **用户描述**：\n  - 用户可能是市场监管部门的工作人员，需要查询某品牌的所有餐饮服务许可证信息，以确保其合规经营。\n  - 用户可能需要排除某些已经被标记为不规范或存在问题的许可证记录，以便重点关注其他记录。\n  - 用户的需求可能是为了进行定期检查、合规审计或处理投诉等业务场景。",
+  "natural_language_query": "市民反映，最近在检查\"某品牌\"连锁餐饮店的经营资质时遇到困惑。我们市场监管所想要了解这个品牌在我们辖区的所有门店的餐饮服务许可情况，包括他们的营业执照、经营项目这些基本信息。但是之前有些门店因为清真食品标识不规范被我们记录在案了，这次查询的时候希望能把这些有过问题的门店先排除掉，重点看看其他门店的证件是否齐全有效。能不能帮忙查一下这个品牌目前在营的所有门店的许可信息？主要是想看他们证件是否在有效期内，经营项目是否符合规定这些。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ WHERE _ = _ ;",
+  "database": "餐饮美食",
+  "tables": {
+    "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374": [
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYXM",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.FZRQ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.YXQZ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.DWMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.EXCHANGETIME"
+    ],
+    "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076": [
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址"
+    ]
+  }
+}

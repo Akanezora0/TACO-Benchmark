@@ -1,0 +1,41 @@
+{
+  "sql": "SELECT xichengquxichengquditieyoumingdan2496.\"别名\", huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.\"行政许可决定文书号\" FROM xichengquxichengquditieyoumingdan2496 JOIN huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053 ON xichengquxichengquditieyoumingdan2496.ID = huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.序号 WHERE xichengquxichengquditieyoumingdan2496.上图 IS NOT NULL AND huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.\"许可决定日期\" > '2022-01-01'",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从两个表中联合查询数据，获取满足特定条件的记录，具体是查询西城区地铁站点的别名以及怀柔区交通局颁发的行政许可决定文书号，且这些记录需要满足一定的筛选条件。\n\n---\n\n### **详细描述**  \n1. **涉及的表**：\n   - `xichengquxichengquditieyoumingdan2496`：西城区地铁站点名单表，可能包含地铁站点的基本信息。\n   - `huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053`：怀柔区交通局运政行政许可公示信息表，可能包含交通相关的行政许可信息。\n\n2. **查询的列**：\n   - `xichengquxichengquditieyoumingdan2496.\"别名\"`：西城区地铁站点的别名。\n   - `huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.\"行政许可决定文书号\"`：怀柔区交通局颁发的行政许可决定文书号。\n\n3. **连接条件**：\n   - 通过 `JOIN` 操作将两个表关联，关联条件是 `xichengquxichengquditieyoumingdan2496.ID = huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.序号`，即西城区地铁站点的 `ID` 与怀柔区交通局行政许可信息的 `序号` 字段匹配。\n\n4. **筛选条件**：\n   - `xichengquxichengquditieyoumingdan2496.上图 IS NOT NULL`：西城区地铁站点记录中“上图”字段不为空（可能表示该站点在地图上有标注）。\n   - `huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.\"许可决定日期\" > '2022-01-01'`：怀柔区交通局行政许可决定的日期在 2022 年 1 月 1 日之后。\n\n---\n\n### **业务场景**  \n该查询可能用于以下业务场景：  \n1. **跨区域交通管理**：西城区的地铁站点与怀柔区交通局的行政许可信息关联，可能是为了分析或统计某些地铁站点相关的交通行政许可情况。  \n2. **数据整合与报告**：需要将不同区域的数据（如地铁站点信息和行政许可信息）关联起来，生成综合报告或分析结果。  \n3. **合规性检查**：检查西城区的地铁站点是否涉及怀柔区交通局近年（2022 年后）颁发的行政许可，可能用于合规性验证或审计。  \n\n---\n\n### **用户描述**  \n在该业务场景下，用户可能遇到的实际问题或需求包括：  \n1. **需求**：用户（如交通管理部门或数据分析师）需要了解西城区的地铁站点是否与怀柔区近年颁发的交通行政许可相关，以便进行跨区域协调或政策制定。  \n2. **问题**：用户可能需要验证某些地铁站点的运营是否合法合规，尤其是那些在地图上有标注（“上图”不为空）的站点。  \n3. **目标**：通过关联查询，快速获取符合条件的站点及其对应的行政许可信息，辅助决策或生成报告。  \n\n---\n\n### **总结**  \n该 SQL 查询的核心是通过关联西城区地铁站点和怀柔区交通局行政许可信息，筛选出“上图”不为空且许可日期在 2022 年之后的记录，从而支持跨区域交通管理或合规性分析的需求。",
+  "natural_language_query": "市民反映，最近在西城区坐地铁时发现有些站点的名字和实际位置对不上，特别是那些在地图上能查到的站点。听说怀柔区交通局这两年发过一些交通许可，不知道这些站点是不是和怀柔区那边的审批有关系。想问问能不能查一下，主要是2022年以后批的那些许可，看看西城区这些地铁站是不是都合规。因为经常有乘客反映找不到地方，感觉挺混乱的，希望能帮忙核实一下这些站点的命名和许可情况。",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ from _ join _ on _ ._ = _ ._ where _ ._ and _ ._",
+  "database": "交通服务",
+  "tables": {
+    "xichengquxichengquditieyoumingdan2496": [
+      "xichengquxichengquditieyoumingdan2496.ID",
+      "xichengquxichengquditieyoumingdan2496.X",
+      "xichengquxichengquditieyoumingdan2496.Y",
+      "xichengquxichengquditieyoumingdan2496.SJXZQHMC",
+      "xichengquxichengquditieyoumingdan2496.QXJXZQHMC",
+      "xichengquxichengquditieyoumingdan2496.SJXZQHDM",
+      "xichengquxichengquditieyoumingdan2496.QXJXZQHDM",
+      "xichengquxichengquditieyoumingdan2496.POISJLY",
+      "xichengquxichengquditieyoumingdan2496.RHBZDZ",
+      "xichengquxichengquditieyoumingdan2496.CODE",
+      "xichengquxichengquditieyoumingdan2496.CODEMC",
+      "xichengquxichengquditieyoumingdan2496.GXSJ",
+      "xichengquxichengquditieyoumingdan2496.POIMC",
+      "xichengquxichengquditieyoumingdan2496.POIDZ",
+      "xichengquxichengquditieyoumingdan2496.别名",
+      "xichengquxichengquditieyoumingdan2496.POIFLMC",
+      "xichengquxichengquditieyoumingdan2496.TEL",
+      "xichengquxichengquditieyoumingdan2496.ID原",
+      "xichengquxichengquditieyoumingdan2496.备注",
+      "xichengquxichengquditieyoumingdan2496.上图"
+    ],
+    "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053": [
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.序号",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.行政相对人名称",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.统一社会信用代码",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.行政许可决定文书号",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.许可内容",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.许可决定日期",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.许可机关"
+    ]
+  }
+}

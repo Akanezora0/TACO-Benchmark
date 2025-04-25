@@ -1,0 +1,44 @@
+{
+  "sql": "SELECT \"shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.名称\", \"shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.级别\" FROM \"shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640\" WHERE \"shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.级别\" = '高级';",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ WHERE _ = _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640": [
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.序号",
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.名称",
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.类别",
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.公布时间",
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.级别"
+    ],
+    "shiguihuaziranziyuanweitongxunshe1518": [
+      "shiguihuaziranziyuanweitongxunshe1518.HID",
+      "shiguihuaziranziyuanweitongxunshe1518.FATHERID",
+      "shiguihuaziranziyuanweitongxunshe1518.HNAME",
+      "shiguihuaziranziyuanweitongxunshe1518.OTHERNAME",
+      "shiguihuaziranziyuanweitongxunshe1518.CATEGORY",
+      "shiguihuaziranziyuanweitongxunshe1518.SUBCATEGOR",
+      "shiguihuaziranziyuanweitongxunshe1518.COUNTYNAME",
+      "shiguihuaziranziyuanweitongxunshe1518.STREETNAME",
+      "shiguihuaziranziyuanweitongxunshe1518.DYNASTY",
+      "shiguihuaziranziyuanweitongxunshe1518.SUBDYNASTY",
+      "shiguihuaziranziyuanweitongxunshe1518.ADDRESS",
+      "shiguihuaziranziyuanweitongxunshe1518.RANK",
+      "shiguihuaziranziyuanweitongxunshe1518.BATCH",
+      "shiguihuaziranziyuanweitongxunshe1518.PUBTIME",
+      "shiguihuaziranziyuanweitongxunshe1518.USERS",
+      "shiguihuaziranziyuanweitongxunshe1518.PURPOSE",
+      "shiguihuaziranziyuanweitongxunshe1518.OWNERSHIP",
+      "shiguihuaziranziyuanweitongxunshe1518.STATEEVALU",
+      "shiguihuaziranziyuanweitongxunshe1518.SINGLERELI",
+      "shiguihuaziranziyuanweitongxunshe1518.PROTECTION",
+      "shiguihuaziranziyuanweitongxunshe1518.ATTACHEDRE",
+      "shiguihuaziranziyuanweitongxunshe1518.RELATEDPEO",
+      "shiguihuaziranziyuanweitongxunshe1518.RELATEDEVE",
+      "shiguihuaziranziyuanweitongxunshe1518.PUBNAME",
+      "shiguihuaziranziyuanweitongxunshe1518.SOURCE",
+      "shiguihuaziranziyuanweitongxunshe1518.EDITOR",
+      "shiguihuaziranziyuanweitongxunshe1518.ISREDUNDAN"
+    ]
+  }
+}

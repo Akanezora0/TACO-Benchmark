@@ -1,0 +1,44 @@
+{
+  "sql": "SELECT fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.旅行社分社及旅行社服务网点明细, fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.Unnamed: 1, fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.Unnamed: 2, fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.Unnamed: 3, shiguihuaziranziyuanweiyuanlin1526.HID FROM fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396 INNER JOIN shiguihuaziranziyuanweiyuanlin1526 ON fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.旅行社分社及旅行社服务网点明细 = shiguihuaziranziyuanweiyuanlin1526.HNAME WHERE fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.Unnamed: 1 = '条件1' AND fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.Unnamed: 2 = '条件2' AND fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.Unnamed: 3 = '条件3' AND shiguihuaziranziyuanweiyuanlin1526.HID = '特定值' AND shiguihuaziranziyuanweiyuanlin1526.CATEGORY = '分类' AND shiguihuaziranziyuanweiyuanlin1526.SUBCATEGOR = '子分类' AND shiguihuaziranziyuanweiyuanlin152",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ ,_ ,_ from _ where _ = _ and _ = _ and _ = _ and _ (_ ,_ ) = _",
+  "database": "旅游住宿",
+  "tables": {
+    "fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396": [
+      "fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.旅行社分社及旅行社服务网点明细",
+      "fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.Unnamed: 1",
+      "fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.Unnamed: 2",
+      "fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.Unnamed: 3"
+    ],
+    "shiguihuaziranziyuanweiyuanlin1526": [
+      "shiguihuaziranziyuanweiyuanlin1526.HID",
+      "shiguihuaziranziyuanweiyuanlin1526.FATHERID",
+      "shiguihuaziranziyuanweiyuanlin1526.HNAME",
+      "shiguihuaziranziyuanweiyuanlin1526.OTHERNAME",
+      "shiguihuaziranziyuanweiyuanlin1526.CATEGORY",
+      "shiguihuaziranziyuanweiyuanlin1526.SUBCATEGOR",
+      "shiguihuaziranziyuanweiyuanlin1526.COUNTYNAME",
+      "shiguihuaziranziyuanweiyuanlin1526.STREETNAME",
+      "shiguihuaziranziyuanweiyuanlin1526.DYNASTY",
+      "shiguihuaziranziyuanweiyuanlin1526.SUBDYNASTY",
+      "shiguihuaziranziyuanweiyuanlin1526.ADDRESS",
+      "shiguihuaziranziyuanweiyuanlin1526.RANK",
+      "shiguihuaziranziyuanweiyuanlin1526.BATCH",
+      "shiguihuaziranziyuanweiyuanlin1526.PUBTIME",
+      "shiguihuaziranziyuanweiyuanlin1526.USERS",
+      "shiguihuaziranziyuanweiyuanlin1526.PURPOSE",
+      "shiguihuaziranziyuanweiyuanlin1526.OWNERSHIP",
+      "shiguihuaziranziyuanweiyuanlin1526.STATEEVALU",
+      "shiguihuaziranziyuanweiyuanlin1526.SINGLERELI",
+      "shiguihuaziranziyuanweiyuanlin1526.PROTECTION",
+      "shiguihuaziranziyuanweiyuanlin1526.ATTACHEDRE",
+      "shiguihuaziranziyuanweiyuanlin1526.RELATEDPEO",
+      "shiguihuaziranziyuanweiyuanlin1526.RELATEDEVE",
+      "shiguihuaziranziyuanweiyuanlin1526.PUBNAME",
+      "shiguihuaziranziyuanweiyuanlin1526.SOURCE",
+      "shiguihuaziranziyuanweiyuanlin1526.EDITOR",
+      "shiguihuaziranziyuanweiyuanlin1526.ISREDUNDAN",
+      "shiguihuaziranziyuanweiyuanlin1526.THEME"
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "sql": "SELECT \n    xichengquxichengquwenwubaohudanwei35.序号,\n    xichengquxichengquwenwubaohudanwei35.名称,\n    xichengquxichengquwenwubaohudanwei35.地址,\n    huairouquhuairouqujingqumenpiaojiage1592.怀柔区政府定价景区门票价格\nFROM\n    xichengquxichengquwenwubaohudanwei35,\n    huairouquhuairouqujingqumenpiaojiage1592\nWHERE\n    xichengquxichengquwenwubaohudanwei35.名称 = huairouquhuairouqujingqumenpiaojiage1592.怀柔区政府定价景区名称;",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从两个表中联合查询数据，获取西城区文物保护单位的基本信息（序号、名称、地址）以及对应的怀柔区政府定价景区门票价格。  \n\n### **详细描述**  \n1. **涉及的表**：  \n   - `xichengquxichengquwenwubaohudanwei35`：西城区文物保护单位信息表，包含序号、名称、地址等字段。  \n   - `huairouquhuairouqujingqumenpiaojiage1592`：怀柔区政府定价景区门票价格表，包含景区名称和门票价格字段。  \n\n2. **查询的列**：  \n   - `xichengquxichengquwenwubaohudanwei35.序号`：文物保护单位的唯一标识。  \n   - `xichengquxichengquwenwubaohudanwei35.名称`：文物保护单位的名称。  \n   - `xichengquxichengquwenwubaohudanwei35.地址`：文物保护单位的地理位置。  \n   - `huairouquhuairouqujingqumenpiaojiage1592.怀柔区政府定价景区门票价格`：对应景区的门票价格。  \n\n3. **查询条件**：  \n   - 通过 `名称 = 怀柔区政府定价景区名称` 进行关联，即文物保护单位的名称必须与怀柔区景区名称一致才会被查询出来。  \n\n### **业务场景**  \n该查询可能用于以下业务场景：  \n- **文化旅游管理**：政府或旅游管理部门需要统计哪些文物保护单位同时也是怀柔区的收费景区，并获取其门票价格信息。  \n- **旅游数据分析**：分析文物保护单位中哪些被开发为景区并收费，以便进行旅游政策调整或游客流量管理。  \n- **跨区域数据整合**：西城区和怀柔区的数据可能需要联合分析，例如统计哪些文物保护单位被纳入政府定价景区体系。  \n\n### **用户描述**  \n1. **政府文旅部门**：  \n   - 需求：需要了解哪些文物保护单位被列为怀柔区的收费景区，以便监管门票定价情况。  \n   - 问题：文物保护单位的管理和景区运营可能涉及不同部门，数据分散，需要联合查询才能获取完整信息。  \n\n2. **旅游规划机构**：  \n   - 需求：分析文物保护单位的旅游价值，例如哪些单位已开发为景区并收费，哪些尚未开发。  \n   - 问题：需要跨表查询才能获取文物保护单位与景区门票的关联数据。  \n\n3. **游客或研究人员**：  \n   - 需求：查询哪些文物保护单位可以参观，并了解其门票价格。  \n   - 问题：文物保护单位和景区信息可能存储在不同系统中，需要联合查询才能获取完整信息。  \n\n### **总结**  \n该 SQL 查询主要用于关联西城区文物保护单位信息和怀柔区景区门票价格，适用于文旅管理、旅游数据分析等场景，帮助用户获取跨区域的文物保护与景区运营数据。",
+  "natural_language_query": "市民反映，最近想带孩子去参观一些有文化价值的景点，听说西城区有不少文物保护单位，但不知道哪些是开放参观的，也不知道要不要门票。特别是听说怀柔区有些文物保护单位被开发成景区了，想问问这些地方的门票价格是多少？比如西城区的某某故居或者某某遗址，如果同时也是怀柔区的收费景区的话，能不能查到具体收费情况？因为网上信息太乱了，有的说要预约，有的说免费，还有的说归怀柔管要收费，搞得特别糊涂。来电希望帮忙核实西城区这些文物保护点到底哪些要收费，具体价格是多少，好提前规划行程。",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ ,_ from _ where _ =_ or _ =_ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "xichengquxichengquwenwubaohudanwei35": [
+      "xichengquxichengquwenwubaohudanwei35.序号",
+      "xichengquxichengquwenwubaohudanwei35.名称",
+      "xichengquxichengquwenwubaohudanwei35.地址"
+    ],
+    "huairouquhuairouqujingqumenpiaojiage1592": [
+      "huairouquhuairouqujingqumenpiaojiage1592.怀柔区政府定价景区门票价格",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 1",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 2",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 3",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 4"
+    ]
+  }
+}

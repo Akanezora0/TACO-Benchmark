@@ -1,0 +1,24 @@
+{
+  "sql": "SELECT \"pingguqupingguqugongjiaozhandianmingxi269.区内公交线路站点明细\", \"zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733.PK\u0003\u0004\" FROM \"pingguqupingguqugongjiaozhandianmingxi269\" INNER JOIN \"zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733\" ON \"pingguqupingguqugongjiaozhandianmingxi269.区内公交线路站点明细\" = \"zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733.PK\u0003\u0004\" WHERE \"pingguqupingguqugongjiaozhandianmingxi269.区内公交线路站点明细\" = '具体值';",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从两个表中查询匹配的公交站点信息，具体是查询某个特定公交站点的详细信息。\n\n- **详细描述**：\n  - **涉及的表**：\n    1. `pingguqupingguqugongjiaozhandianmingxi269`（区内公交线路站点明细表）：该表可能存储了平谷区内的公交线路站点详细信息。\n    2. `zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733`（重点站区管委会北京西站地区点位信息表）：该表可能存储了北京西站地区的重点站点信息。\n  - **涉及的列**：\n    1. `pingguqupingguqugongjiaozhandianmingxi269.区内公交线路站点明细`：该列可能存储了平谷区内公交站点的名称或标识。\n    2. `zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733.PK\u0003\u0004`：该列可能存储了北京西站地区点位的唯一标识或名称。\n  - **条件**：\n    - `pingguqupingguqugongjiaozhandianmingxi269.区内公交线路站点明细 = '具体值'`：该条件限制了查询结果只包含公交站点名称为“具体值”的记录。\n    - `pingguqupingguqugongjiaozhandianmingxi269.区内公交线路站点明细 = zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733.PK\u0003\u0004`：该条件表示两个表通过公交站点名称或标识进行关联。\n\n- **业务场景**：\n  - 该查询可能用于公交线路规划或站点管理，例如：\n    - 验证某个公交站点是否属于重点站区（如北京西站地区）。\n    - 获取某个公交站点在重点站区的详细信息。\n    - 分析平谷区公交站点与北京西站地区站点的关联情况。\n\n- **用户描述**：\n  - 用户可能是公交线路规划人员或站点管理人员，他们需要了解某个公交站点是否属于重点站区（如北京西站地区），或者需要获取该站点在重点站区的详细信息。\n  - 例如，用户可能需要知道“具体值”这个公交站点是否在北京西站地区，或者需要获取该站点在北京西站地区的具体位置或其他属性信息。",
+  "natural_language_query": "市民反映，最近在平谷区乘坐公交时发现有个叫\"具体值\"的站点（可能是站牌上这么写的），但不确定这个站是不是也属于北京西站那边的重点站点区域。因为工作需要规划公交线路对接，想确认下这个平谷的\"具体值\"站和北京西站地区的站点是不是同一个？如果是的话，能不能帮忙查下这个站在西站那边的具体位置和相关信息？现在两边信息对不上特别麻烦，来电咨询公交站点信息匹配问题。",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ from _ where _ = _ ;",
+  "database": "交通服务",
+  "tables": {
+    "pingguqupingguqugongjiaozhandianmingxi269": [
+      "pingguqupingguqugongjiaozhandianmingxi269.区内公交线路站点明细",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 1",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 2",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 3",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 4",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 5",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 6",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 7",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 8"
+    ],
+    "zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733": [
+      "zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733.PK\u0003\u0004"
+    ]
+  }
+}

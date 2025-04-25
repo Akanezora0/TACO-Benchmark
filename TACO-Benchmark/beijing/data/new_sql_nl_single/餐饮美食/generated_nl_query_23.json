@@ -1,0 +1,26 @@
+{
+  "sql": "SELECT \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYXM\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.FZRQ\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.YXQZ\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.DWMC\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.EXCHANGETIME\" FROM \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\" - \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076\" WHERE \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID\" = \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.XKZID\";",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从表 `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374` 中查询餐饮服务许可证的相关信息，但排除那些在表 `shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076` 中存在的记录（即通过 `XKZID` 字段匹配的记录）。  \n\n### **详细描述**  \n1. **涉及的表**：  \n   - **主表**：`shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374`（可能表示“市场监管餐饮服务许可证情况信息”）  \n   - **排除表**：`shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076`（可能表示“民族宗教委规范化清真食品专柜数据”）  \n\n2. **查询的列**（来自主表）：  \n   - `JYZMC`（经营者名称）  \n   - `XKZBH`（许可证编号）  \n   - `JYCS`（经营场所）  \n   - `JYXM`（经营项目）  \n   - `FZRQ`（发证日期）  \n   - `YXQZ`（有效期至）  \n   - `XKZID`（许可证ID）  \n   - `DWMC`（单位名称）  \n   - `EXCHANGETIME`（更新时间）  \n\n3. **查询条件**：  \n   - 使用 `WHERE` 子句，通过 `XKZID`（许可证ID）字段匹配两个表。  \n   - 查询的是主表中 **不包含** 在排除表中的记录（通过 `-` 或 `EXCEPT` 操作实现）。  \n\n### **业务场景**  \n该查询可能用于以下业务场景：  \n- **市场监管**：查询所有餐饮服务许可证信息，但排除已经纳入清真食品专柜管理的许可证（即普通餐饮许可证与清真食品专柜许可证的去重）。  \n- **数据比对**：监管部门可能需要统计未纳入清真食品管理的餐饮服务单位，以便进行后续检查或政策调整。  \n- **合规性检查**：确保清真食品专柜的许可证数据与普通餐饮许可证数据不重复，避免管理混乱。  \n\n### **用户描述**  \n在该业务场景下，用户（如市场监管部门或民族宗教事务管理机构）可能遇到以下问题或需求：  \n1. **数据去重**：需要区分普通餐饮许可证和清真食品专柜许可证，避免重复统计或管理。  \n2. **监管需求**：检查哪些餐饮单位未纳入清真食品管理，以便进行专项检查或政策推广。  \n3. **数据同步**：确保两个系统的许可证数据（普通餐饮和清真食品）不冲突，避免同一许可证被重复管理。  \n\n该查询帮助用户快速筛选出 **仅属于普通餐饮服务** 的许可证信息，从而支持精准监管或数据分析。",
+  "natural_language_query": "市民反映，最近在整理餐饮服务许可证数据时遇到一个问题：我们想查一下全市所有普通餐饮店的许可证信息，但是发现有些店已经申请了清真食品专柜的资质。现在需要把这些已经纳入清真食品管理的餐饮店排除掉，只保留普通餐饮店的许可证信息。具体想了解这些普通餐饮店的经营者名称、许可证编号、经营地址、经营范围、发证日期和有效期这些信息。因为两个系统的数据可能有重复，担心统计的时候会搞混，希望能帮忙核实一下哪些是纯粹的普通餐饮店，不要包含那些已经做了清真专柜的店铺。主要是为了后续开展食品安全检查工作，需要准确区分这两类店铺。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ WHERE _ = _ ;",
+  "database": "餐饮美食",
+  "tables": {
+    "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374": [
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYXM",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.FZRQ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.YXQZ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.DWMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.EXCHANGETIME"
+    ],
+    "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076": [
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址"
+    ]
+  }
+}

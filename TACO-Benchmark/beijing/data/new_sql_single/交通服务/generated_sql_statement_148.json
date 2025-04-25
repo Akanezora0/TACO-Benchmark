@@ -1,0 +1,39 @@
+{
+  "sql": "SELECT xichengquxichengquditieyoumingdan2496.\"别名\", huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.\"行政许可决定文书号\" FROM xichengquxichengquditieyoumingdan2496 JOIN huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053 ON xichengquxichengquditieyoumingdan2496.ID = huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.序号 WHERE xichengquxichengquditieyoumingdan2496.上图 IS NOT NULL AND huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.\"许可决定日期\" > '2022-01-01'",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ from _ join _ on _ ._ = _ ._ where _ ._ and _ ._",
+  "database": "交通服务",
+  "tables": {
+    "xichengquxichengquditieyoumingdan2496": [
+      "xichengquxichengquditieyoumingdan2496.ID",
+      "xichengquxichengquditieyoumingdan2496.X",
+      "xichengquxichengquditieyoumingdan2496.Y",
+      "xichengquxichengquditieyoumingdan2496.SJXZQHMC",
+      "xichengquxichengquditieyoumingdan2496.QXJXZQHMC",
+      "xichengquxichengquditieyoumingdan2496.SJXZQHDM",
+      "xichengquxichengquditieyoumingdan2496.QXJXZQHDM",
+      "xichengquxichengquditieyoumingdan2496.POISJLY",
+      "xichengquxichengquditieyoumingdan2496.RHBZDZ",
+      "xichengquxichengquditieyoumingdan2496.CODE",
+      "xichengquxichengquditieyoumingdan2496.CODEMC",
+      "xichengquxichengquditieyoumingdan2496.GXSJ",
+      "xichengquxichengquditieyoumingdan2496.POIMC",
+      "xichengquxichengquditieyoumingdan2496.POIDZ",
+      "xichengquxichengquditieyoumingdan2496.别名",
+      "xichengquxichengquditieyoumingdan2496.POIFLMC",
+      "xichengquxichengquditieyoumingdan2496.TEL",
+      "xichengquxichengquditieyoumingdan2496.ID原",
+      "xichengquxichengquditieyoumingdan2496.备注",
+      "xichengquxichengquditieyoumingdan2496.上图"
+    ],
+    "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053": [
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.序号",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.行政相对人名称",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.统一社会信用代码",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.行政许可决定文书号",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.许可内容",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.许可决定日期",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.许可机关"
+    ]
+  }
+}

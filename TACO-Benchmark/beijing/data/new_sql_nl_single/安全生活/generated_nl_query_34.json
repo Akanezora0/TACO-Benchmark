@@ -1,0 +1,9 @@
+{
+  "sql": "SELECT column_name FROM table_name WHERE condition_column1 = value1 AND condition_column2 = value2 AND condition_column3 = value3",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从指定的表中选择满足多个条件的特定列的数据。\n\n- **详细描述**：\n  - **表**：`table_name` 是查询的目标表，其中存储了相关的数据。\n  - **列**：\n    - `column_name` 是查询结果中需要返回的列。\n    - `condition_column1`, `condition_column2`, `condition_column3` 是用于筛选数据的条件列。\n  - **条件**：\n    - `condition_column1 = value1`：筛选 `condition_column1` 列的值等于 `value1` 的记录。\n    - `condition_column2 = value2`：筛选 `condition_column2` 列的值等于 `value2` 的记录。\n    - `condition_column3 = value3`：筛选 `condition_column3` 列的值等于 `value3` 的记录。\n  - 查询将返回 `column_name` 列中满足所有三个条件的记录。\n\n- **业务场景**：\n  - 该查询可以用于需要精确匹配多个条件的业务场景。例如：\n    - 在电商平台中，查询某个特定类别（`condition_column1`）、特定价格范围（`condition_column2`）且库存充足（`condition_column3`）的商品名称（`column_name`）。\n    - 在员工管理系统中，查询某个部门（`condition_column1`）、特定职位（`condition_column2`）且入职时间在某个日期之后（`condition_column3`）的员工姓名（`column_name`）。\n    - 在客户关系管理系统中，查询某个地区（`condition_column1`）、特定消费水平（`condition_column2`）且最近有购买行为（`condition_column3`）的客户联系方式（`column_name`）。\n\n- **用户描述**：\n  - 用户可能需要从大量数据中快速找到符合多个特定条件的记录。例如：\n    - 电商平台的运营人员希望找到符合促销活动条件的商品，以便进行推广。\n    - 人力资源部门的员工需要筛选出符合某个职位要求的候选人名单。\n    - 销售团队希望找到潜在的高价值客户，以便进行定向营销。\n  - 用户的需求通常是通过多个维度的筛选来缩小数据范围，从而更高效地获取所需信息。",
+  "natural_language_query": "市民反映，最近在XX电商平台想找一些符合要求的商品，但是筛选起来特别麻烦。具体想要找的是家居用品类别里，价格在100-200元之间，而且显示有现货的商品名称。之前试过平台自带的筛选功能，但总是找不到符合全部条件的商品，要么价格不对要么没货，特别耽误时间。希望能帮忙查一下到底有哪些商品是同时满足这三个条件的，这样购物能方便些。来电反映电商平台筛选功能不精准的问题。",
+  "results": 0,
+  "sql skeleton": "select _ from _ where _ (_ ,_ ,_ ) = _",
+  "database": "安全生活",
+  "tables": {}
+}

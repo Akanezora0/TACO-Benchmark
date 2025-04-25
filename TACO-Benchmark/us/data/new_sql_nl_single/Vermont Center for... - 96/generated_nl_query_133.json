@@ -1,0 +1,46 @@
+{
+  "sql": "SELECT \"river_main_stem_waterbodies_wbid.OBJECTID\", \"salt_storage_record_table.fulcrum_id\" FROM \"river_main_stem_waterbodies_wbid\" - \"salt_storage_record_table\" WHERE \"salt_storage_record_table.fulcrum_id\" = '某个具体值' ;",
+  "problem_description": "### Query intent:\nThe SQL statement aims to retrieve specific data from two tables: `river_main_stem_waterbodies_wbid` and `salt_storage_record_table`. It appears to be extracting unique identifiers (`OBJECTID` from `river_main_stem_waterbodies_wbid` and `fulcrum_id` from `salt_storage_record_table`) based on a matching condition between these two tables.\n\n### Detailed description:\n- **Table `river_main_stem_waterbodies_wbid`**: This table likely contains information related to main stem water bodies (e.g., rivers, streams) within a geographic area. The column `OBJECTID` is probably an identifier for each record in this table, serving as a unique reference.\n- **Table `salt_storage_record_table`**: This table might store records of salt storage locations or operations. The column `fulcrum_id` could be a unique identifier for each record in this table, possibly linking it to specific salt storage sites or activities.\n- **Condition**: The WHERE clause specifies that the `fulcrum_id` from `salt_storage_record_table` should match a particular value. This condition is crucial for filtering which records are included in the final result set.\n\n### Business scenario:\nThis query could be part of a system designed to manage environmental data, particularly focusing on water body management and salt storage logistics. For instance, it might be used to correlate specific salt storage locations (`fulcrum_id`) with their corresponding geographical features (`OBJECTID`) for regulatory compliance checks, environmental impact assessments, or operational planning purposes.\n\n### User description:\nUsers who need to ensure that all salt storage facilities are properly mapped and associated with their respective environmental impacts or regulatory requirements might find this query useful. For example, an environmental compliance officer might use this query to verify that each salt storage site has been accurately geolocated and linked to its environmental impact assessment data. Similarly, a logistics manager might use this query to optimize supply chain routes by correlating salt storage locations with water body data to understand potential transportation challenges or risks.",
+  "natural_language_query": "As an environmental compliance officer, I'm tasked with ensuring that our company's salt storage operations are not only efficient but also compliant with environmental regulations. To achieve this, I need to verify that each salt storage facility is correctly mapped and associated with its environmental impact assessment data. Specifically, I'm looking to cross-reference our list of salt storage locations (identified by 'fulcrum_id' in our 'salt_storage_record_table') with the geographical details of the water bodies they might potentially impact (represented by 'OBJECTID' in our 'river_main_stem_waterbodies_wbid' table). By doing so, we can identify any discrepancies or missing links that might indicate a risk or non-compliance issue. Can you help me write a SQL query that would extract the unique identifiers ('OBJECTID') from the 'river_main_stem_waterbodies_wbid' table and match them with the corresponding 'fulcrum_id' values from the 'salt_storage_record_table'? This will allow us to validate our records against a comprehensive database of water bodies.",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ WHERE _ = _ ;",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "river_main_stem_waterbodies_wbid": [
+      "river_main_stem_waterbodies_wbid.OBJECTID",
+      "river_main_stem_waterbodies_wbid.WBID",
+      "river_main_stem_waterbodies_wbid.WBNAME",
+      "river_main_stem_waterbodies_wbid.WBDESC"
+    ],
+    "salt_storage_record_table": [
+      "salt_storage_record_table.OBJECTID",
+      "salt_storage_record_table.fulcrum_id",
+      "salt_storage_record_table.fulcrum_parent_id",
+      "salt_storage_record_table.fulcrum_record_id",
+      "salt_storage_record_table.version",
+      "salt_storage_record_table.geometry",
+      "salt_storage_record_table.created_at",
+      "salt_storage_record_table.updated_at",
+      "salt_storage_record_table.created_by",
+      "salt_storage_record_table.updated_by",
+      "salt_storage_record_table.address_sub_thoroughfare",
+      "salt_storage_record_table.address_thoroughfare",
+      "salt_storage_record_table.address_suite",
+      "salt_storage_record_table.address_locality",
+      "salt_storage_record_table.address_sub_admin_area",
+      "salt_storage_record_table.address_admin_area",
+      "salt_storage_record_table.address_postal_code",
+      "salt_storage_record_table.address_country",
+      "salt_storage_record_table.address_full",
+      "salt_storage_record_table.material_type",
+      "salt_storage_record_table.material_type_other",
+      "salt_storage_record_table.storage_length_years",
+      "salt_storage_record_table.storage_length_years_range",
+      "salt_storage_record_table.material_covered",
+      "salt_storage_record_table.coverage_method",
+      "salt_storage_record_table.material_on_pad",
+      "salt_storage_record_table.pad_type",
+      "salt_storage_record_table.pad_type_other"
+    ]
+  }
+}

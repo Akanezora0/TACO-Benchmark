@@ -1,0 +1,25 @@
+{
+  "sql": "SELECT shunyiqugongjiaoxianlujizhandianjibenxinxi2076.\"Unnamed: 1\", shunyiqugongjiaoxianlujizhandianjibenxinxi2076.\"Unnamed: 2\", shunyiqugongjiaoxianlujizhandianjibenxinxi2076.\"Unnamed: 3\", shunyiqugongjiaoxianlujizhandianjibenxinxi2076.\"Unnamed: 4\", shunyiqugongjiaoxianlujizhandianjibenxinxi2076.\"Unnamed: 5\", shunyiqugongjiaoxianlujizhandianjibenxinxi2076.\"Unnamed: 6\", shijiaotongweigongjiaozhandianxinxichuxingfuwu3665.\"站点名称\", shijiaotongweigongjiaozhandianxinxichuxingfuwu3665.\"方向\", shijiaotongweigongjiaozhandianxinxichuxingfuwu3665.\"站点序号\"\nFROM shunyiqugongjiaoxianlujizhandianjibenxinxi2076\nJOIN shijiaotongweigongjiaozhandianxinxichuxingfuwu3665\nON shunyiqugongjiaoxianlujizhandianjibenxinxi2076.\"线路运营信息\" = shijiaotongweigongjiaozhandianxinxichuxingfuwu3665.\"线路名称\"\nWHERE shunyiqugongjiaoxianlujizhandianjibenxinxi2076.\"站点名称\" = '站点名称' AND shunyiqugongjiaoxianlujizhandianjibenxinxi2076.\"方向\" = '方向' AND shunyiqugongjiaoxianlujizhandianjibenxinxi2076.\"站点序号\" = '站点序号';",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从两个表中联合查询公交线路和站点的基本信息，并通过特定的条件筛选出符合条件的记录。  \n\n### **详细描述**  \n1. **涉及的表**：  \n   - `shunyiqugongjiaoxianlujizhandianjibenxinxi2076`（顺义区公交线路及站点基本信息表）  \n   - `shijiaotongweigongjiaozhandianxinxichuxingfuwu3665`（市交通委公交站点信息出行服务表）  \n\n2. **查询的列**：  \n   - 从 `shunyiqugongjiaoxianlujizhandianjibenxinxi2076` 表中选择 `\"Unnamed: 1\"` 到 `\"Unnamed: 6\"`（可能是未命名的列，如站点编号、经度、纬度等）。  \n   - 从 `shijiaotongweigongjiaozhandianxinxichuxingfuwu3665` 表中选择 `\"站点名称\"`、`\"方向\"`、`\"站点序号\"`。  \n\n3. **连接条件**：  \n   - 两个表通过 `shunyiqugongjiaoxianlujizhandianjibenxinxi2076.\"线路运营信息\"` 和 `shijiaotongweigongjiaozhandianxinxichuxingfuwu3665.\"线路名称\"` 进行关联，表示查询的是同一公交线路的信息。  \n\n4. **筛选条件**：  \n   - `shunyiqugongjiaoxianlujizhandianjibenxinxi2076.\"站点名称\" = '站点名称'`（筛选特定站点）。  \n   - `shunyiqugongjiaoxianlujizhandianjibenxinxi2076.\"方向\" = '方向'`（筛选特定方向，如上行/下行）。  \n   - `shunyiqugongjiaoxianlujizhandianjibenxinxi2076.\"站点序号\" = '站点序号'`（筛选特定站点序号）。  \n\n### **业务场景**  \n该查询可能用于以下业务场景：  \n1. **公交线路信息整合**：将区级公交站点数据与市级公交出行服务数据进行关联，以获取更全面的公交站点信息。  \n2. **站点查询服务**：用户输入站点名称、方向和序号，查询该站点的详细信息（如位置、运营信息等）。  \n3. **公交调度管理**：公交公司或交通管理部门可能需要比对不同数据源的站点信息，以确保数据一致性或优化线路规划。  \n\n### **用户描述**  \n用户可能遇到的实际问题或需求包括：  \n1. **乘客查询**：乘客想了解某公交线路的某个站点（如“XX路公交的A站点”）的具体信息，包括位置、方向、序号等，以便规划出行路线。  \n2. **数据核对**：公交公司或交通管理部门需要核对区级数据和市级数据是否一致，以确保公交信息的准确性。  \n3. **线路优化**：交通规划人员可能需要分析某条公交线路的站点分布情况，以优化站点设置或调整运营方向。  \n\n该 SQL 查询可以帮助用户快速获取特定公交站点的详细信息，并确保数据来源的完整性和一致性。",
+  "natural_language_query": "市民反映，最近在顺义区乘坐XX路公交车时发现站牌信息和手机查询的不太一致。具体是在\"A站点\"这个位置（往XX方向开的第3站），站牌上写的运营时间和手机APP显示的有出入。想请帮忙核实一下这个站点的具体信息，包括位置坐标、运营时间还有方向序号这些，看看是不是数据没同步更新。主要是担心等车时间不准耽误上班，上周就因为这个问题迟到了一次。来电希望核实公交站点信息不一致的情况。",
+  "results": 0,
+  "sql skeleton": "select _ ._ ._ , _ ._ , _ ._ ._ , _ ._ from _ join _ on _ ._ = _ ._ where _ ._ = _ and _ ._ = _ and _ ._ = _ ;",
+  "database": "交通服务",
+  "tables": {
+    "shunyiqugongjiaoxianlujizhandianjibenxinxi2076": [
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.线路运营信息",
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 1",
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 2",
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 3",
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 4",
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 5",
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 6"
+    ],
+    "shijiaotongweigongjiaozhandianxinxichuxingfuwu3665": [
+      "shijiaotongweigongjiaozhandianxinxichuxingfuwu3665.线路名称",
+      "shijiaotongweigongjiaozhandianxinxichuxingfuwu3665.站点名称",
+      "shijiaotongweigongjiaozhandianxinxichuxingfuwu3665.方向",
+      "shijiaotongweigongjiaozhandianxinxichuxingfuwu3665.站点序号"
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "sql": "SELECT \n    shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.业户名称,\n    shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.评定等级,\n    shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.所属地区\nFROM \n    shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669\nWHERE \n    shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.统一社会信用代码 IN (\n        '1', '2', '3', '4', '5', '6'\n    )\nORDER BY \n    shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.评定等级;",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ from _ where _ in (_ ,_ ,_ ,_ ,_ ,_ ) order by _ ;",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669": [
+      "shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.业户名称",
+      "shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.评定等级",
+      "shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.所属地区",
+      "shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.年份",
+      "shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.统一社会信用代码"
+    ],
+    "shijiaotongweichuzuyehujibenxinxi3664": [
+      "shijiaotongweichuzuyehujibenxinxi3664.经营业户名称"
+    ]
+  }
+}

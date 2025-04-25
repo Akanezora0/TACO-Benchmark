@@ -1,0 +1,22 @@
+{
+  "sql": "SELECT shijiaotongweikebianqingbaobanshebeixinxi3519.名称, shijiaotongweiguidaoyanshixinxi3711.共享时间 FROM shijiaotongweikebianqingbaobanshebeixinxi3519 INNER JOIN shijiaotongweiguidaoyanshixinxi3711 ON shijiaotongweikebianqingbaobanshebeixinxi3519.唯一标识 = shijiaotongweiguidaoyanshixinxi3711.设备编码 WHERE shijiaotongweiguidaoyanshixinxi3711.延时线路 = '特定线路编号' AND shijiaotongweiguidaoyanshixinxi3711.共享时间 > '特定日期'",
+  "results": 0,
+  "sql skeleton": "select _ as _ from _ where _",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweikebianqingbaobanshebeixinxi3519": [
+      "shijiaotongweikebianqingbaobanshebeixinxi3519.唯一标识",
+      "shijiaotongweikebianqingbaobanshebeixinxi3519.名称",
+      "shijiaotongweikebianqingbaobanshebeixinxi3519.设备编码"
+    ],
+    "shijiaotongweiguidaoyanshixinxi3711": [
+      "shijiaotongweiguidaoyanshixinxi3711.序号",
+      "shijiaotongweiguidaoyanshixinxi3711.总车次",
+      "shijiaotongweiguidaoyanshixinxi3711.延时开始时间",
+      "shijiaotongweiguidaoyanshixinxi3711.延时结束时间",
+      "shijiaotongweiguidaoyanshixinxi3711.延时线路",
+      "shijiaotongweiguidaoyanshixinxi3711.共享时间",
+      "shijiaotongweiguidaoyanshixinxi3711.更新时间"
+    ]
+  }
+}

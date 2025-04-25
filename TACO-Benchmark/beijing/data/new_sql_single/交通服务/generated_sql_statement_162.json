@@ -1,0 +1,25 @@
+{
+  "sql": "SELECT shijiaotongweixianchangxunchaxinxi3675.巡查位置, haidianqugonggongjianzhutingchechang3416.详细地址 FROM shijiaotongweixianchangxunchaxinxi3675 INNER JOIN haidianqugonggongjianzhutingchechang3416 ON shijiaotongweixianchangxunchaxinxi3675.巡查位置 = haidianqugonggongjianzhutingchechang3416.详细地址 WHERE shijiaotongweixianchangxunchaxinxi3675.巡查单位 = '共享时间';",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ ;",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweixianchangxunchaxinxi3675": [
+      "shijiaotongweixianchangxunchaxinxi3675.序号",
+      "shijiaotongweixianchangxunchaxinxi3675.工作内容",
+      "shijiaotongweixianchangxunchaxinxi3675.巡查时间",
+      "shijiaotongweixianchangxunchaxinxi3675.巡查人次",
+      "shijiaotongweixianchangxunchaxinxi3675.巡查单位",
+      "shijiaotongweixianchangxunchaxinxi3675.巡查位置",
+      "shijiaotongweixianchangxunchaxinxi3675.共享时间",
+      "shijiaotongweixianchangxunchaxinxi3675.更新时间"
+    ],
+    "haidianqugonggongjianzhutingchechang3416": [
+      "haidianqugonggongjianzhutingchechang3416.序号",
+      "haidianqugonggongjianzhutingchechang3416.停车场名称",
+      "haidianqugonggongjianzhutingchechang3416.停车场类型",
+      "haidianqugonggongjianzhutingchechang3416.详细地址",
+      "haidianqugonggongjianzhutingchechang3416.经营单位"
+    ]
+  }
+}

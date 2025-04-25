@@ -1,0 +1,22 @@
+{
+  "sql": "SELECT shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.名称, shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.级别 FROM shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640 WHERE shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.级别 = '高级'",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从表中查询出所有级别为\"高级\"的非物质文化遗产项目的名称和级别信息。\n\n- **详细描述**：\n  - **涉及的表**：`shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640`（顺义区顺义区区级非物质文化遗产名录项目信息3640）\n  - **涉及的列**：\n    - `名称`：非物质文化遗产项目的名称\n    - `级别`：非物质文化遗产项目的级别\n  - **查询条件**：只选择`级别`等于\"高级\"的记录\n\n- **业务场景**：\n  1. 文化管理部门需要统计和了解本地区所有高级别的非物质文化遗产项目\n  2. 用于制作高级别非物质文化遗产项目的宣传材料或展示列表\n  3. 为文化遗产保护工作提供重点保护对象清单\n  4. 为学术研究提供高级别非物质文化遗产项目的基础数据\n\n- **用户描述**：\n  1. 文化局工作人员需要向上级汇报本地区重要的非物质文化遗产保护情况，需要快速获取所有高级别项目清单\n  2. 非遗保护中心计划对高级别项目进行重点保护，需要明确这些项目的名称和级别信息\n  3. 研究人员正在撰写关于地区高级非遗项目的论文，需要准确的项目名称列表\n  4. 当地政府准备制作文化旅游宣传手册，需要筛选出最具代表性的非遗项目进行重点介绍",
+  "natural_language_query": "我想了解一下咱们顺义区那些特别重要的非物质文化遗产项目。是这样的，我们文化馆最近在准备一个非遗保护宣传展，领导说要重点展示那些级别高的、有代表性的项目。我听同事说好像有个什么\"高级\"级别的分类？能不能帮我查查这些高级非遗都有哪些啊？具体就是想知道这些项目的名字和它们的级别信息。\n\n我们主要想用这些资料做两件事：一个是给上级部门写保护工作汇报，另一个是准备制作宣传手册。之前有专家来调研时也提到过，说应该优先保护这些高级别的项目，但我们现在手头没有完整的名单，挺着急的。对了，如果这些信息能直接打印出来就最好了，我们好拿去给领导看。\n\n（语气有些着急）因为下周就要交材料了，麻烦尽快帮忙查一下，主要是要确认清楚哪些是\"高级\"的，可千万别漏掉了。上次做活动就漏了一个很重要的项目，被领导批评了...",
+  "results": 0,
+  "sql skeleton": "select _ ,_ from _ where _ = _",
+  "database": "旅游住宿",
+  "tables": {
+    "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640": [
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.序号",
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.名称",
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.类别",
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.公布时间",
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.级别"
+    ],
+    "xichengqubeijingshiwenwubaohudanwei31": [
+      "xichengqubeijingshiwenwubaohudanwei31.序号",
+      "xichengqubeijingshiwenwubaohudanwei31.名称",
+      "xichengqubeijingshiwenwubaohudanwei31.地址"
+    ]
+  }
+}

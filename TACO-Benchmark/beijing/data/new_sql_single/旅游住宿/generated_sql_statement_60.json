@@ -1,0 +1,27 @@
+{
+  "sql": "SELECT \"xichengquxichengqudengjilvyoujingquminglu14.序号\" as 序号, \"xichengquxichengqudengjilvyoujingquminglu14.景区名称\" as 景区名称, \"xichengquxichengqudengjilvyoujingquminglu14.等级\" as 等级 from xichengquxichengqudengjilvyoujingquminglu14 where \"xichengquxichengqudengjilvyoujingquminglu14.等级\" = 'AAAAA' order by 序号 asc",
+  "results": 0,
+  "sql skeleton": "select _ as _ ,_ as _ ,_ as _ from _ where _ = _ order by _",
+  "database": "旅游住宿",
+  "tables": {
+    "yanqingquyanqingqulvyoujingquxinxi3381": [
+      "yanqingquyanqingqulvyoujingquxinxi3381.旅游景区",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 1",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 2",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 3",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 4",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 5",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 6",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 7"
+    ],
+    "xichengquxichengqudengjilvyoujingquminglu14": [
+      "xichengquxichengqudengjilvyoujingquminglu14.序号",
+      "xichengquxichengqudengjilvyoujingquminglu14.景区名称",
+      "xichengquxichengqudengjilvyoujingquminglu14.等级",
+      "xichengquxichengqudengjilvyoujingquminglu14.地址",
+      "xichengquxichengqudengjilvyoujingquminglu14.咨询电话",
+      "xichengquxichengqudengjilvyoujingquminglu14.投诉电话",
+      "xichengquxichengqudengjilvyoujingquminglu14.邮编"
+    ]
+  }
+}

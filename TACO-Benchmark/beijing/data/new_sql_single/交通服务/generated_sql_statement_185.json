@@ -1,0 +1,16 @@
+{
+  "sql": "SELECT \n    shijiaotongweizulinyehujibenxinxi3677.经营业户名称, \n    shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.序号, \n    shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.服务机构名称, \n    shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.地址 \nFROM \n    shijiaotongweizulinyehujibenxinxi3677, \n    shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678 \nWHERE \n    shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.服务机构名称 = '目标服务机构名称' AND shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.序号 = '特定序号'",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ ,_ ,_ from _ where _ = _ and _ = _",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweizulinyehujibenxinxi3677": [
+      "shijiaotongweizulinyehujibenxinxi3677.经营业户名称"
+    ],
+    "shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678": [
+      "shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.序号",
+      "shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.服务机构名称",
+      "shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.地址"
+    ]
+  }
+}

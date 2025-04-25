@@ -1,0 +1,7 @@
+{
+  "sql": "select distinct A._ as _ ,A._ as _ from ( select A._ as _,A._ as _ from Table1.A join Table1.B on Table1.A.id = Table1.B.fk_id union select B._ as _,B._ as _ from Table2.B join Table2.C on Table2.B.id = Table2.C.fk_id ) A\n```",
+  "results": 0,
+  "sql skeleton": "select distinct _ ._ as _ ,_ ._ as _ from ( select _ as _ ,_ as _ from _ where _ union select _ as _ ,_ as _ from _ where _ ) _",
+  "database": "安全生活",
+  "tables": {}
+}

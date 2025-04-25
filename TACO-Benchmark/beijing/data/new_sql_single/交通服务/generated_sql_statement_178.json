@@ -1,0 +1,22 @@
+{
+  "sql": "SELECT \n    shijiaotongweiweixianpinyunshuqiye3674.企业名称,\n    shijiaotongweiweixianpinyunshuqiye3674.所属地区,\n    shijiaotongweichengkeyindaojichuxinxi3710.更新时间\nFROM \n    shijiaotongweiweixianpinyunshuqiye3674\nWHERE \n    shijiaotongweiweixianpinyunshuqiye3674.经营许可证号 = (SELECT \n        shijiaotongweichengkeyindaojichuxinxi3710.序号\n    FROM \n        shijiaotongweichengkeyindaojichuxinxi3710)\n```",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ from _ where _ = (select _ from _ where _ );",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweiweixianpinyunshuqiye3674": [
+      "shijiaotongweiweixianpinyunshuqiye3674.企业名称",
+      "shijiaotongweiweixianpinyunshuqiye3674.所属地区",
+      "shijiaotongweiweixianpinyunshuqiye3674.经营许可证号"
+    ],
+    "shijiaotongweichengkeyindaojichuxinxi3710": [
+      "shijiaotongweichengkeyindaojichuxinxi3710.序号",
+      "shijiaotongweichengkeyindaojichuxinxi3710.枢纽站信息",
+      "shijiaotongweichengkeyindaojichuxinxi3710.周边交通指南",
+      "shijiaotongweichengkeyindaojichuxinxi3710.公交线路信息",
+      "shijiaotongweichengkeyindaojichuxinxi3710.轨道线路信息",
+      "shijiaotongweichengkeyindaojichuxinxi3710.更新时间",
+      "shijiaotongweichengkeyindaojichuxinxi3710.共享时间 "
+    ]
+  }
+}

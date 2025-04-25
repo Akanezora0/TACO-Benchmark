@@ -1,0 +1,24 @@
+{
+  "sql": "SELECT \"chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337\".\"酒仙桥街道社区地址及联系电话\", \"chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337\".\"Unnamed: 1\", \"chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337\".\"Unnamed: 2\", \"chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337\".\"Unnamed: 3\", \"chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337\".\"Unnamed: 4\" FROM \"chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337\" WHERE \"chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337\".\"Unnamed: 4\" = '查询条件'\n\nSELECT \"shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777\".\"本市市管游览参观点门票价格\", \"shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777\".\"Unnamed: 1\", \"shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777\".\"Unnamed: 2\", \"shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777\".\"Unnamed: 3\", \"shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777\".\"Unnamed: 4\", \"shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi177",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ ,_ ,_ from _ where _ =_",
+  "database": "旅游住宿",
+  "tables": {
+    "chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337": [
+      "chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337.酒仙桥街道社区地址及联系电话",
+      "chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337.Unnamed: 1",
+      "chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337.Unnamed: 2",
+      "chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337.Unnamed: 3",
+      "chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337.Unnamed: 4"
+    ],
+    "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777": [
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.本市市管游览参观点门票价格",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 1",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 2",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 3",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 4",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 5",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 6"
+    ]
+  }
+}

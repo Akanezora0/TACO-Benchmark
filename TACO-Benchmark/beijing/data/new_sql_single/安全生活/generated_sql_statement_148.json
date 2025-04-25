@@ -1,0 +1,7 @@
+{
+  "sql": "select A._A_, B._B_, C._C_ from A join B on A._A_ = B._B_ join C on A._A_ = C._C_ where A._A_ and B._B_ and C._C_",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ from _ join _ on _ ._ = _ ._ where _ ._ and _ ._",
+  "database": "安全生活",
+  "tables": {}
+}

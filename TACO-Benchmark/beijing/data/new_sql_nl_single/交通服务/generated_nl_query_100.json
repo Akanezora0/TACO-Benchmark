@@ -1,0 +1,44 @@
+{
+  "sql": "SELECT xichengquxichengqutingchechangmingdan2492.X, xichengquxichengqutingchechangmingdan2492.Y, xichengquxichengqutingchechangmingdan2492.别名 FROM xichengquxichengqutingchechangmingdan2492 WHERE xichengquxichengqutingchechangmingdan2492.别名 = (SELECT pingguqupingguqugongjiaozhandianmingxi269.区内公交线路站点明细 FROM pingguqupingguqugongjiaozhandianmingxi269 WHERE pingguqupingguqugongjiaozhandianmingxi269.区内公交线路站点明细 = '特定值');",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从 `xichengquxichengqutingchechangmingdan2492` 表中查询满足特定条件的停车场的坐标（X、Y）和别名信息。具体条件是：停车场的别名必须与 `pingguqupingguqugongjiaozhandianmingxi269` 表中某个公交站点的名称（“区内公交线路站点明细”）完全匹配，且该公交站点的名称为“特定值”。\n\n---\n\n### **详细描述**  \n1. **主查询部分**：  \n   - **表**：`xichengquxichengqutingchechangmingdan2492`（可能表示“西城区西城区停车场名单”）。  \n   - **查询列**：`X`、`Y`（可能是停车场的经纬度坐标或其他坐标值）、`别名`（停车场的别名）。  \n   - **条件**：停车场的别名必须等于子查询返回的结果。  \n\n2. **子查询部分**：  \n   - **表**：`pingguqupingguqugongjiaozhandianmingxi269`（可能表示“平谷区平谷区公交站点明细”）。  \n   - **查询列**：`区内公交线路站点明细`（公交站点的名称）。  \n   - **条件**：公交站点的名称必须等于“特定值”（可能是某个具体的公交站点名称，如“XX路公交站”）。  \n\n3. **查询逻辑**：  \n   - 首先，子查询在 `pingguqupingguqugongjiaozhandianmingxi269` 表中查找 `区内公交线路站点明细` 列等于“特定值”的记录，并返回该列的值。  \n   - 然后，主查询在 `xichengquxichengqutingchechangmingdan2492` 表中查找 `别名` 列等于子查询结果的记录，并返回这些记录的 `X`、`Y` 和 `别名` 信息。  \n\n---\n\n### **业务场景**  \n该查询可能用于以下业务场景：  \n1. **停车场与公交站点关联查询**：  \n   - 用户可能需要查找某个公交站点附近的停车场（例如，公交站点“XX路公交站”附近是否有停车场）。  \n   - 通过公交站点的名称匹配停车场的别名，从而获取停车场的坐标信息（用于地图展示或导航）。  \n\n2. **交通规划或导航服务**：  \n   - 在交通管理系统或导航应用中，用户输入一个公交站点名称，系统自动查询该站点附近的停车场位置。  \n   - 可能用于城市停车资源管理，分析公交站点与停车场的分布关系。  \n\n---\n\n### **用户描述**  \n1. **用户需求**：  \n   - 用户可能是司机或出行者，希望知道某个公交站点附近是否有停车场，以便规划停车和换乘公交。  \n   - 也可能是城市交通管理部门，需要统计公交站点与停车场的关联情况，优化交通资源配置。  \n\n2. **实际问题**：  \n   - 例如，用户搜索“XX路公交站”时，系统需要显示附近的停车场位置（通过坐标 `X`、`Y` 标注）。  \n   - 如果停车场的别名与公交站点名称一致（如“XX路停车场”），则可以直接关联查询。  \n\n3. **数据特点**：  \n   - 该查询依赖于停车场别名和公交站点名称的一致性，可能要求数据标准化（如统一命名规则）。  \n   - 如果数据不规范（如别名与公交站点名称不完全匹配），可能需要更复杂的模糊匹配或关联逻辑。",
+  "natural_language_query": "市民反映，自己经常在西城区活动，最近发现有些公交站附近明明有停车场，但导航软件上却查不到。比如平谷区那边的\"XX路公交站\"（具体站名记不清了），听说附近应该有个同名的停车场才对。现在想确认一下这个公交站对应的停车场具体在什么位置，能不能查到准确的坐标信息？因为最近要去那边办事，开车过去的话需要提前知道停车的地方。感觉这个信息不太透明，希望能帮忙核实一下公交站和附近停车场的对应关系。",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ from _ where _ = (select _ from _ where _ = _ );",
+  "database": "交通服务",
+  "tables": {
+    "xichengquxichengqutingchechangmingdan2492": [
+      "xichengquxichengqutingchechangmingdan2492.ID",
+      "xichengquxichengqutingchechangmingdan2492.X",
+      "xichengquxichengqutingchechangmingdan2492.Y",
+      "xichengquxichengqutingchechangmingdan2492.SJXZQHMC",
+      "xichengquxichengqutingchechangmingdan2492.QXJXZQHMC",
+      "xichengquxichengqutingchechangmingdan2492.SJXZQHDM",
+      "xichengquxichengqutingchechangmingdan2492.QXJXZQHDM",
+      "xichengquxichengqutingchechangmingdan2492.POISJLY",
+      "xichengquxichengqutingchechangmingdan2492.RHBZDZ",
+      "xichengquxichengqutingchechangmingdan2492.CODE",
+      "xichengquxichengqutingchechangmingdan2492.CODEMC",
+      "xichengquxichengqutingchechangmingdan2492.GXSJ",
+      "xichengquxichengqutingchechangmingdan2492.POIMC",
+      "xichengquxichengqutingchechangmingdan2492.POIDZ",
+      "xichengquxichengqutingchechangmingdan2492.别名",
+      "xichengquxichengqutingchechangmingdan2492.POIFLMC",
+      "xichengquxichengqutingchechangmingdan2492.TEL",
+      "xichengquxichengqutingchechangmingdan2492.ID原",
+      "xichengquxichengqutingchechangmingdan2492.MC",
+      "xichengquxichengqutingchechangmingdan2492.DZ",
+      "xichengquxichengqutingchechangmingdan2492.DZMS"
+    ],
+    "pingguqupingguqugongjiaozhandianmingxi269": [
+      "pingguqupingguqugongjiaozhandianmingxi269.区内公交线路站点明细",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 1",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 2",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 3",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 4",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 5",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 6",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 7",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 8"
+    ]
+  }
+}

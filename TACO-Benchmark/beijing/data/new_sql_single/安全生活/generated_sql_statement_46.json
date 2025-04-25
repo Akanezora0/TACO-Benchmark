@@ -1,0 +1,7 @@
+{
+  "sql": "SELECT table1.column1, table1.column2, table1.column3, table2.column4, table2.column5, table2.column6 \nFROM table1 JOIN table2 ON table1.common_column = table2.common_column \nWHERE table1.unique_column = value1 AND table1.another_column = value2 AND (table2.function_column, table2.another_function_column) = value_tuple;",
+  "results": 0,
+  "sql skeleton": "SELECT _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ FROM _ JOIN _ ON _ ._ = _ ._ WHERE _ ._ = _ AND _ ._ = _ and _ (_ ._ , _ ) = _ ;",
+  "database": "安全生活",
+  "tables": {}
+}

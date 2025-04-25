@@ -1,0 +1,35 @@
+{
+  "sql": "SELECT xichengquxichengquditiezhanmingdan2482.X, xichengquxichengquditiezhanmingdan2482.Y FROM xichengquxichengquditiezhanmingdan2482 WHERE xichengquxichengquditiezhanmingdan2482.QXJXZQHMC = (SELECT DISTINCT shijiaotongweigongjiaozhandianxinxichuxingfuwu3665.站点名称 FROM shijiaotongweigongjiaozhandianxinxichuxingfuwu3665 WHERE shijiaotongweigongjiaozhandianxinxichuxingfuwu3665.线路名称 = '指定线路名称')\n```",
+  "problem_description": "### 查询意图：\n该 SQL 语句的目的是从“xichengquxichengquditiezhanmingdan2482”表中查询满足特定条件的记录的地理坐标（X 和 Y 列），这些记录的区域名称（QXJXZQHMC）需要匹配“shijiaotongweigongjiaozhandianxinxichuxingfuwu3665”表中线路名称为“指定线路名称”的站点名称。\n\n### 详细描述：\n1. **主查询部分**：\n   - **表**：`xichengquxichengquditiezhanmingdan2482`\n   - **列**：`X` 和 `Y`（可能代表地理坐标，如经度和纬度）\n   - **条件**：`QXJXZQHMC` 列的值需要等于子查询的结果。\n\n2. **子查询部分**：\n   - **表**：`shijiaotongweigongjiaozhandianxinxichuxingfuwu3665`\n   - **列**：`站点名称`（DISTINCT 确保结果唯一）\n   - **条件**：`线路名称` 等于“指定线路名称”。\n\n### 业务场景：\n该查询可能用于以下业务场景：\n1. **交通规划或分析**：用户可能需要获取某条特定公交线路（“指定线路名称”）所经过的西城区地铁站的坐标信息。\n2. **地理信息系统（GIS）应用**：将查询到的坐标用于地图绘制或空间分析，例如显示某条公交线路附近的地铁站分布。\n3. **出行服务**：为用户提供换乘信息，例如查询某条公交线路附近的地铁站位置。\n\n### 用户描述：\n用户可能遇到的实际问题或需求包括：\n1. **出行规划**：用户想知道乘坐“指定线路名称”公交后，可以在哪些地铁站换乘，以及这些地铁站的具体位置。\n2. **数据分析**：交通管理部门可能需要分析某条公交线路与地铁站的衔接情况，以优化公共交通网络。\n3. **地图标注**：开发人员需要在地图上标注出与某条公交线路相关的地铁站位置，以便在应用程序中展示。\n\n### 补充说明：\n- 表名和列名较长且复杂，可能是自动生成的或来自特定系统。\n- `X` 和 `Y` 列可能代表地理坐标，但具体是经纬度还是其他坐标系需要进一步确认。\n- “指定线路名称”是一个占位符，实际查询中应替换为具体的线路名称（如“1路”或“地铁2号线”）。",
+  "natural_language_query": "市民反映，我最近在做一个出行规划的项目，需要查一下西城区这边地铁站的位置信息。具体是想知道某条公交线路（比如\"1路\"）沿线附近有哪些地铁站可以换乘，最好能提供这些地铁站的具体位置坐标。因为我在做地图标注，需要把这些换乘点标出来。但是不太清楚该怎么查，之前问过别人说好像公交站点和地铁站的信息不在一个系统里？现在就是卡在这里了，希望能帮忙查一下这条公交线经过的西城区地铁站都在哪些位置。对了，坐标最好是那种能直接在地图上用的经纬度数据。",
+  "results": 0,
+  "sql skeleton": "select _ ,_ from _ where _ = (select distinct _ from _ where _ = _ )",
+  "database": "交通服务",
+  "tables": {
+    "xichengquxichengquditiezhanmingdan2482": [
+      "xichengquxichengquditiezhanmingdan2482.ID",
+      "xichengquxichengquditiezhanmingdan2482.X",
+      "xichengquxichengquditiezhanmingdan2482.Y",
+      "xichengquxichengquditiezhanmingdan2482.SJXZQHMC",
+      "xichengquxichengquditiezhanmingdan2482.QXJXZQHMC",
+      "xichengquxichengquditiezhanmingdan2482.SJXZQHDM",
+      "xichengquxichengquditiezhanmingdan2482.QXJXZQHDM",
+      "xichengquxichengquditiezhanmingdan2482.POISJLY",
+      "xichengquxichengquditiezhanmingdan2482.RHBZDZ",
+      "xichengquxichengquditiezhanmingdan2482.CODE",
+      "xichengquxichengquditiezhanmingdan2482.CODEMC",
+      "xichengquxichengquditiezhanmingdan2482.GXSJ",
+      "xichengquxichengquditiezhanmingdan2482.POIMC",
+      "xichengquxichengquditiezhanmingdan2482.POIDZ",
+      "xichengquxichengquditiezhanmingdan2482.别名",
+      "xichengquxichengquditiezhanmingdan2482.POIFLMC",
+      "xichengquxichengquditiezhanmingdan2482.TEL"
+    ],
+    "shijiaotongweigongjiaozhandianxinxichuxingfuwu3665": [
+      "shijiaotongweigongjiaozhandianxinxichuxingfuwu3665.线路名称",
+      "shijiaotongweigongjiaozhandianxinxichuxingfuwu3665.站点名称",
+      "shijiaotongweigongjiaozhandianxinxichuxingfuwu3665.方向",
+      "shijiaotongweigongjiaozhandianxinxichuxingfuwu3665.站点序号"
+    ]
+  }
+}

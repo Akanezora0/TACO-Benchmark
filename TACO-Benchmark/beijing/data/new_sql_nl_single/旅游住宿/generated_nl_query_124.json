@@ -1,0 +1,45 @@
+{
+  "sql": "SELECT xichengqubeijingshiwenwubaohudanwei31.名称, xichengqubeijingshiwenwubaohudanwei31.地址 FROM xichengqubeijingshiwenwubaohudanwei31 JOIN shiguihuaziranziyuanweishiguan1516 ON xichengqubeijingshiwenwubaohudanwei31.序号 = shiguihuaziranziyuanweishiguan1516.HID WHERE xichengqubeijingshiwenwubaohudanwei31.名称 = '特定名称' AND shiguihuaziranziyuanweishiguan1516.PROTECTION = '一级保护'",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是查询北京市西城区文物保护单位中名称为“特定名称”且被列为“一级保护”的文物单位的名称和地址。\n\n### **详细描述**  \n1. **涉及的表**：  \n   - `xichengqubeijingshiwenwubaohudanwei31`：存储北京市西城区文物保护单位的基本信息，如名称、地址、序号等。  \n   - `shiguihuaziranziyuanweishiguan1516`：存储文物保护单位的规划或自然资源的监管信息，可能包括保护等级（PROTECTION）、关联的文物单位序号（HID）等。  \n\n2. **涉及的列**：  \n   - `xichengqubeijingshiwenwubaohudanwei31.名称`：文物保护单位的名称。  \n   - `xichengqubeijingshiwenwubaohudanwei31.地址`：文物保护单位的地址。  \n   - `xichengqubeijingshiwenwubaohudanwei31.序号`：文物保护单位的唯一标识，用于关联另一张表。  \n   - `shiguihuaziranziyuanweishiguan1516.HID`：与文物保护单位序号关联的外键。  \n   - `shiguihuaziranziyuanweishiguan1516.PROTECTION`：文物保护等级（如“一级保护”）。  \n\n3. **查询条件**：  \n   - `xichengqubeijingshiwenwubaohudanwei31.名称 = '特定名称'`：筛选名称为“特定名称”的文物保护单位。  \n   - `shiguihuaziranziyuanweishiguan1516.PROTECTION = '一级保护'`：筛选保护等级为“一级保护”的记录。  \n\n4. **关联方式**：  \n   - 通过 `xichengqubeijingshiwenwubaohudanwei31.序号 = shiguihuaziranziyuanweishiguan1516.HID` 进行内连接（INNER JOIN），确保只返回两表中匹配的记录。  \n\n### **业务场景**  \n该查询可用于文物保护单位的管理或研究，例如：  \n- 政府或文物保护机构需要查找特定名称且属于最高保护级别（一级保护）的文物单位，以便进行重点维护或监管。  \n- 研究人员或游客希望了解某处文物（如“特定名称”）是否属于一级保护单位，并获取其地址信息。  \n\n### **用户描述**  \n1. **文物保护部门**：  \n   - 需求：需要统计或核实北京市西城区内所有名称为“特定名称”且属于一级保护的文物单位，以便制定保护措施或安排巡查。  \n   - 问题：如何快速获取这些文物的名称和地址？  \n\n2. **游客或历史爱好者**：  \n   - 需求：想参观北京市西城区内某处著名文物（如“特定名称”），但不确定它是否属于一级保护单位，以及具体位置在哪里。  \n   - 问题：如何查询该文物的保护等级和地址？  \n\n3. **城市规划或开发商**：  \n   - 需求：在规划建设时需避开一级保护文物单位，需要确认“特定名称”是否属于此类。  \n   - 问题：如何验证该文物的保护等级？  \n\n通过该 SQL 查询，可以快速获取符合条件的文物保护单位信息，满足上述业务需求。",
+  "natural_language_query": "市民反映，最近在北京市西城区参观时听说有个叫\"特定名称\"的文物保护单位特别重要，好像是一级保护的文物。想确认一下这个信息是不是真的，如果是的话具体地址在哪里？因为想带家人去参观，但网上查到的信息不太一致，有的说是一级保护，有的又没说清楚。另外如果真是一级保护的话，是不是有什么特殊的参观要求啊？希望相关部门能帮忙核实一下这个\"特定名称\"文物保护单位的具体情况和准确地址，谢谢！",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ from _ join _ on _ ._ = _ ._ where _ ._ = _ and _ ._",
+  "database": "旅游住宿",
+  "tables": {
+    "xichengqubeijingshiwenwubaohudanwei31": [
+      "xichengqubeijingshiwenwubaohudanwei31.序号",
+      "xichengqubeijingshiwenwubaohudanwei31.名称",
+      "xichengqubeijingshiwenwubaohudanwei31.地址"
+    ],
+    "shiguihuaziranziyuanweishiguan1516": [
+      "shiguihuaziranziyuanweishiguan1516.HID",
+      "shiguihuaziranziyuanweishiguan1516.FATHERID",
+      "shiguihuaziranziyuanweishiguan1516.HNAME",
+      "shiguihuaziranziyuanweishiguan1516.OTHERNAME",
+      "shiguihuaziranziyuanweishiguan1516.CATEGORY",
+      "shiguihuaziranziyuanweishiguan1516.SUBCATEGOR",
+      "shiguihuaziranziyuanweishiguan1516.COUNTYNAME",
+      "shiguihuaziranziyuanweishiguan1516.STREETNAME",
+      "shiguihuaziranziyuanweishiguan1516.DYNASTY",
+      "shiguihuaziranziyuanweishiguan1516.SUBDYNASTY",
+      "shiguihuaziranziyuanweishiguan1516.ADDRESS",
+      "shiguihuaziranziyuanweishiguan1516.RANK",
+      "shiguihuaziranziyuanweishiguan1516.BATCH",
+      "shiguihuaziranziyuanweishiguan1516.PUBTIME",
+      "shiguihuaziranziyuanweishiguan1516.USERS",
+      "shiguihuaziranziyuanweishiguan1516.PURPOSE",
+      "shiguihuaziranziyuanweishiguan1516.OWNERSHIP",
+      "shiguihuaziranziyuanweishiguan1516.STATEEVALU",
+      "shiguihuaziranziyuanweishiguan1516.SINGLERELI",
+      "shiguihuaziranziyuanweishiguan1516.PROTECTION",
+      "shiguihuaziranziyuanweishiguan1516.ATTACHEDRE",
+      "shiguihuaziranziyuanweishiguan1516.RELATEDPEO",
+      "shiguihuaziranziyuanweishiguan1516.RELATEDEVE",
+      "shiguihuaziranziyuanweishiguan1516.PUBNAME",
+      "shiguihuaziranziyuanweishiguan1516.SOURCE",
+      "shiguihuaziranziyuanweishiguan1516.EDITOR",
+      "shiguihuaziranziyuanweishiguan1516.ISREDUNDAN",
+      "shiguihuaziranziyuanweishiguan1516.THEME"
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "sql": "SELECT s.and_g_type FROM sand_and_gravel_deposits s WHERE s.SHAPEarea >= 100 AND s.OBJECTID IN (SELECT w.eco_district_id FROM wetland_ecologist_districts w WHERE w.AGENCY = 'State Department of Natural Resources')",
+  "problem_description": "### Query intent:\nThe SQL statement aims to retrieve the type of \"sand and gravel deposits\" that have an area of at least 100 square units, which are associated with ecological districts managed by the \"State Department of Natural Resources\".\n\n### Detailed description:\n- **Table(s)**: The query involves two tables - `sand_and_gravel_deposits` and `wetland_ecologist_districts`. The first table contains information about sand and gravel deposits, while the second table holds details about ecological districts.\n- **Column(s)**:\n    - From `sand_and_gravel_deposits`: `s.and_g_type`, which is the type of the sand and gravel deposit.\n    - From `wetland_ecologist_districts`: `eco_district_id`, which identifies the ecological district.\n- **Condition(s)**:\n    - `s.SHAPEarea >= 100`: This condition filters out sand and gravel deposits whose area is 100 square units or more.\n    - `s.OBJECTID IN (SELECT w.eco_district_id ...)`: This condition ensures that only those sand and gravel deposits are selected where their OBJECTID matches with an `eco_district_id` from the `wetland_ecologist_districts` table, specifically those managed by the \"State Department of Natural Resources\". The `OBJECTID` is likely a unique identifier for records in the `sand_and_gravel_deposits` table.\n\n### Business scenario:\nThis query could be part of a larger system designed to manage and analyze natural resources. Specifically, it might be used by environmental management or resource extraction companies to identify specific types of sand and gravel deposits within areas of interest managed by the State Department of Natural Resources. This could help in planning extraction activities, assessing environmental impact, or complying with regulatory requirements related to resource management.\n\n### User description:\nA user, possibly an environmental scientist, a resource manager, or a policy analyst, might need this information to understand the distribution and type of sand and gravel deposits within a certain ecological district. For example, they might want to know if there are any deposits of a particular type (like fine-grained sand) that meet certain size criteria within areas protected or managed by the State Department of Natural Resources. This information could inform decisions on sustainable extraction practices, conservation strategies, or legal compliance checks.",
+  "natural_language_query": "User: I'm working on a project that involves analyzing natural resources, particularly focusing on sand and gravel deposits. I need to find out about deposits that are large enough, at least 100 square units, and are located within ecological districts managed by the State Department of Natural Resources. Could you help me with a SQL query to extract this information?\n\nAssistant: User: I'm looking into a dataset that combines information about sand and gravel deposits with data on ecological districts managed by the State Department of Natural Resources. My goal is to identify specific types of sand and gravel deposits that are large enough, measuring at least 100 square units. These deposits should be found within the districts under the management of the State Department of Natural Resources. Could you provide a SQL query that would help me fetch this information?",
+  "results": 0,
+  "sql skeleton": "select _ from _ where _ (_ ,_ ) >= _ and _ in (select _ from _ where _ = _ )",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "sand_and_gravel_deposits": [
+      "sand_and_gravel_deposits.OBJECTID",
+      "sand_and_gravel_deposits.AG_TYPE",
+      "sand_and_gravel_deposits.GlobalID",
+      "sand_and_gravel_deposits.SHAPEarea",
+      "sand_and_gravel_deposits.SHAPElen"
+    ],
+    "wetland_ecologist_districts": [
+      "wetland_ecologist_districts.OBJECTID",
+      "wetland_ecologist_districts.ABNAME",
+      "wetland_ecologist_districts.AGENCY",
+      "wetland_ecologist_districts.DEPT",
+      "wetland_ecologist_districts.DIV",
+      "wetland_ecologist_districts.FirstName",
+      "wetland_ecologist_districts.LastName",
+      "wetland_ecologist_districts.Email",
+      "wetland_ecologist_districts.Phone",
+      "wetland_ecologist_districts.Address",
+      "wetland_ecologist_districts.Office",
+      "wetland_ecologist_districts.Town",
+      "wetland_ecologist_districts.BOUNDARY",
+      "wetland_ecologist_districts.PROGMANAGER",
+      "wetland_ecologist_districts.PROGMANAGEREMAIL",
+      "wetland_ecologist_districts.PROGMANAGERPHONE",
+      "wetland_ecologist_districts.BACKUPCONTACT",
+      "wetland_ecologist_districts.BACKUPCONTACTEMAIL",
+      "wetland_ecologist_districts.BACKUPCONTACTPHONE",
+      "wetland_ecologist_districts.PROGRAMEMAIL",
+      "wetland_ecologist_districts.PROGRAMPHONE"
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "sql": "SELECT \n    shunyiqushunyiquxingjifandian2102.顺义区星级饭店, \n    shunyiqushunyiquxingjifandian2102.Unnamed: 1, \n    shunyiqushunyiquxingjifandian2102.Unnamed: 2, \n    shunyiqushunyiquxingjifandian2102.Unnamed: 3, \n    shiwenhuahelvyoujuxingjifandianxinxi2036.��\u0011ࡱ\u001a�, \n    shiwenhuahelvyoujuxingjifandianxinxi2036.\u0001\u0001  \nFROM \n    shunyiqushunyiquxingjifandian2102 JOIN \n    shiwenhuahelvyoujuxingjifandianxinxi2036 ON \n    shunyiqushunyiquxingjifandian2102.顺义区星级饭店 = shiwenhuahelvyoujuxingjifandianxinxi2036.��\u0011ࡱ\u001a� AND \n    shunyiqushunyiquxingjifandian2102.Unnamed: 1 = shiwenhuahelvyoujuxingjifandianxinxi2036.\u0001\u0001 \nWHERE \n    shunyiqushunyiquxingjifandian2102.顺义区星级饭店 = '条件' AND \n    shunyiqushunyiquxingjifandian2102.Unnamed: 1 = '条件' and (shiwenhuahelvyoujuxingjifandianxinxi2036.��\u0011ࡱ\u001a�,shiwenhuahelvyoujuxingjifandianxinxi2036.\u0001\u0001) = '条件';",
+  "problem_description": "### **查询意图**  \n该 SQL 语句旨在从两个表中联合查询数据，通过特定的匹配条件筛选出符合条件的记录。查询的核心是关联 `shunyiqushunyiquxingjifandian2102`（顺义区星级饭店表）和 `shiwenhuahelvyoujuxingjifandianxinxi2036`（市文化和旅游局星级饭店信息表），并基于多个条件过滤结果。\n\n---\n\n### **详细描述**  \n1. **涉及的表**：\n   - `shunyiqushunyiquxingjifandian2102`（顺义区星级饭店表）  \n     - 包含列：`顺义区星级饭店`、`Unnamed: 1`、`Unnamed: 2`、`Unnamed: 3`（后三列可能代表饭店的其他属性，如地址、星级、联系电话等，但列名未明确标注）。\n   - `shiwenhuahelvyoujuxingjifandianxinxi2036`（市文化和旅游局星级饭店信息表）  \n     - 包含列：`��\u0011ࡱ\u001a�`（可能是乱码或编码问题，实际应为“饭店名称”或类似字段）、`\u0001\u0001`（可能代表另一属性，如饭店编号或星级）。\n\n2. **关联条件**（JOIN ON）：\n   - 两表通过 `顺义区星级饭店 = ��\u0011ࡱ\u001a�` 和 `Unnamed: 1 = \u0001\u0001` 进行关联，即通过饭店名称和另一未知字段匹配。\n\n3. **筛选条件**（WHERE）：\n   - `顺义区星级饭店 = '条件'`：限定顺义区表中的饭店名称符合特定条件。\n   - `Unnamed: 1 = '条件'`：限定顺义区表中某未知字段符合特定条件。\n   - `(shiwenhuahelvyoujuxingjifandianxinxi2036.��\u0011ࡱ\u001a�, shiwenhuahelvyoujuxingjifandianxinxi2036.\u0001\u0001) = '条件'`：联合检查市文旅局表中的两个字段是否符合条件（语法可能有误，因直接对多列赋值为字符串不合法，可能是逻辑错误）。\n\n4. **查询列**：\n   - 输出两表中的部分字段，包括饭店名称和未明确命名的列。\n\n---\n\n### **业务场景**  \n1. **数据核对**：  \n   - 可能是顺义区旅游局与市文旅局的星级饭店数据比对，确保两地数据一致（如饭店名称、星级等）。\n2. **信息补全**：  \n   - 通过关联查询，补充顺义区表中缺失的饭店信息（如从市文旅局表获取更详细的属性）。\n3. **条件筛选**：  \n   - 查找同时满足两地特定条件的饭店（如“五星级且位于顺义区”）。\n\n---\n\n### **用户描述**  \n1. **问题需求**：  \n   - 用户（如顺义区旅游局工作人员）可能需要确认本区登记的星级饭店是否与市级系统中的记录一致，避免数据冲突或遗漏。  \n   - 用户可能需要联合查询某家饭店的完整信息（如名称、星级、地址），但数据分散在两个系统中。  \n2. **实际痛点**：  \n   - 数据来源不同导致字段命名混乱（如 `Unnamed: 1` 和乱码列），需依赖隐含逻辑关联。  \n   - 需要严格匹配条件（如饭店名称和编号）以确保查询准确性。  \n\n---\n\n### **注意事项**  \n1. **列名问题**：  \n   - 实际列名应为有意义的名称（如 `hotel_name`、`star_level`），当前列名可能是数据导出或编码错误导致，需修复。  \n2. **语法修正**：  \n   - WHERE 子句中的多列比较 `(col1, col2) = '条件'` 不合法，应改为 `col1 = '条件1' AND col2 = '条件2'`。  \n3. **业务扩展**：  \n   - 若需更复杂的分析（如统计星级分布），可进一步聚合查询或增加分组条件。",
+  "natural_language_query": "市民反映，顺义区文旅局这边登记的星级饭店信息，跟市文旅局系统里的数据对不上，我们这边有个饭店叫\"XX大酒店\"（具体名称可能记不全），星级显示是五星的，但是在市里系统查的时候总是匹配不到。我们之前提交过材料，编号应该是SY2023-001这样的，但不确定是不是这个格式。能不能帮忙查一下，到底是我们登记错了还是市里系统漏了？现在领导催着要统一数据，特别着急！\n\n补充说明：我们这边表格有些字段名称也看不明白，就记得饭店名称和大概的编号，市里系统打开更是乱码一堆，根本看不懂哪些是饭店名称哪些是星级。上次打电话问市里，他们说系统在升级，但都两个月了还是这样。能不能尽快帮忙核实下，到底哪个环节出问题了？",
+  "results": 0,
+  "sql skeleton": "SELECT _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ FROM _ JOIN _ ON _ ._ = _ ._ WHERE _ ._ = _ AND _ ._ = _ and _ (_ ._ ._ ,_ ) = _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "shunyiqushunyiquxingjifandian2102": [
+      "shunyiqushunyiquxingjifandian2102.顺义区星级饭店",
+      "shunyiqushunyiquxingjifandian2102.Unnamed: 1",
+      "shunyiqushunyiquxingjifandian2102.Unnamed: 2",
+      "shunyiqushunyiquxingjifandian2102.Unnamed: 3"
+    ],
+    "shiwenhuahelvyoujuxingjifandianxinxi2036": [
+      "shiwenhuahelvyoujuxingjifandianxinxi2036.��\u0011ࡱ\u001a�",
+      "shiwenhuahelvyoujuxingjifandianxinxi2036.\u0001\u0001"
+    ]
+  }
+}

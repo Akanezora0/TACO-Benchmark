@@ -1,0 +1,24 @@
+{
+  "sql": "SELECT \n    shijiaotongweikebianqingbaobanshebeixinxi3519.唯一标识, \n    shijiaotongweikebianqingbaobanshebeixinxi3519.名称, \n    shijiaotongweikebianqingbaobanshebeixinxi3519.设备编码, \n    shunyiqugongjiaoxianlujizhandianjibenxinxi2076.线路运营信息, \n    shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 1, \n    shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 2 \nFROM \n    shijiaotongweikebianqingbaobanshebeixinxi3519 \nJOIN \n    shunyiqugongjiaoxianlujizhandianjibenxinxi2076 \nON \n    shijiaotongweikebianqingbaobanshebeixinxi3519.设备编码 = shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 1 \nWHERE \n    shijiaotongweikebianqingbaobanshebeixinxi3519.名称 = '指定名称' \nAND \n    shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 2 = '指定值' \nAND \n    (shunyiqugongjiaoxianlujizhandianjibenxinxi2076.线路运营信息, shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 3) = ('指定信息', '指定值')",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从两个表中联合查询特定条件下的设备信息及其关联的公交线路信息，筛选出符合特定名称、编码和运营条件的记录。  \n\n---\n\n### **详细描述**  \n\n#### **涉及的表**  \n1. **`shijiaotongweikebianqingbaobanshebeixinxi3519`**（可译为“视交通微可变情报板设备信息3519”）  \n   - 存储设备的基本信息，如唯一标识、名称、设备编码等。  \n   - 主要列：  \n     - `唯一标识`（设备的唯一ID）  \n     - `名称`（设备的名称，如“XX情报板”）  \n     - `设备编码`（设备的编码，可能与公交线路关联）  \n\n2. **`shunyiqugongjiaoxianlujizhandianjibenxinxi2076`**（可译为“顺义区公交线路及站点基本信息2076”）  \n   - 存储公交线路的运营信息、站点信息等。  \n   - 主要列：  \n     - `线路运营信息`（公交线路的运营状态或描述）  \n     - `Unnamed: 1`（未命名字段1，可能与设备编码关联）  \n     - `Unnamed: 2`（未命名字段2，用于筛选特定值）  \n     - `Unnamed: 3`（未命名字段3，用于筛选特定值）  \n\n#### **JOIN 条件**  \n- 通过 `shijiaotongweikebianqingbaobanshebeixinxi3519.设备编码` 和 `shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 1` 进行关联，表示设备编码与公交线路的某个字段（可能是线路编码或站点编码）匹配。  \n\n#### **WHERE 条件**  \n1. **设备名称筛选**：  \n   - `shijiaotongweikebianqingbaobanshebeixinxi3519.名称 = '指定名称'`  \n   - 只查询名称为“指定名称”的设备（如“XX路公交情报板”）。  \n\n2. **公交线路筛选**：  \n   - `shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 2 = '指定值'`  \n   - 公交线路的某个字段（如线路状态）必须等于“指定值”（如“运营中”）。  \n\n3. **复合条件筛选**：  \n   - `(shunyiqugongjiaoxianlujizhandianjibenxinxi2076.线路运营信息, shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 3) = ('指定信息', '指定值')`  \n   - 公交线路的“线路运营信息”和另一个未命名字段必须同时匹配给定的值（如“高峰线路”和“早班车”）。  \n\n#### **查询结果**  \n返回符合条件的设备唯一标识、名称、设备编码，以及关联的公交线路信息（线路运营信息、Unnamed: 1、Unnamed: 2）。  \n\n---\n\n### **业务场景**  \n该查询可能用于**公交智能调度系统**或**交通信息发布系统**，例如：  \n1. **公交电子站牌管理**：  \n   - 查询某条公交线路上安装的特定电子情报板设备（如“XX路公交站牌”），并关联线路运营信息，确保设备显示正确的线路信息。  \n2. **设备运维检查**：  \n   - 筛选出符合特定运营条件（如“高峰线路”）的设备，进行故障排查或信息更新。  \n3. **数据分析**：  \n   - 统计某类设备（如“可变情报板”）在特定线路上的分布情况。  \n\n---\n\n### **用户描述**  \n1. **公交公司运维人员**：  \n   - 需求：“我需要找出所有安装在‘XX路’公交线上的电子站牌设备，并且这些线路必须是‘高峰运营’状态，以便检查设备是否正常显示班次信息。”  \n2. **交通信息管理部门**：  \n   - 需求：“我们想统计所有名称为‘快速公交情报板’的设备，并关联其所在线路的运营信息，确保信息发布准确。”  \n3. **系统管理员**：  \n   - 需求：“在设备管理后台，我想筛选出设备编码匹配某条线路且状态为‘启用’的记录，以便批量更新数据。”  \n\n---\n\n### **总结**  \n该 SQL 是一个典型的**多表关联查询**，用于在交通管理系统中**关联设备信息和公交线路信息**，并通过严格的条件筛选出目标数据，支持设备运维、信息发布或数据分析等业务需求。",
+  "natural_language_query": "市民反映，我是顺义区公交公司的设备维护人员，最近在检查电子站牌时遇到一些问题。我们这条线上有好几块显示公交信息的电子屏，但不知道哪些是专门用于高峰线路的。特别是那些名字里带\"XX路\"的站牌设备，我们想确认一下它们是不是都正常连接了正在运营的公交线路。因为最近有乘客投诉说有些电子屏显示的信息和实际发车情况对不上，比如早班车时间显示错误。能不能帮忙查一下这些设备的具体情况？主要是想看看设备名称、编号和对应的线路运营状态是不是匹配，特别是那些标注了高峰线路的设备。来电反映公交电子站牌信息不准确问题。",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ from _ join _ on _ ._ = _ ._ where _ ._ = _ and _ = _ and _ (_ ,_ ) = _",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweikebianqingbaobanshebeixinxi3519": [
+      "shijiaotongweikebianqingbaobanshebeixinxi3519.唯一标识",
+      "shijiaotongweikebianqingbaobanshebeixinxi3519.名称",
+      "shijiaotongweikebianqingbaobanshebeixinxi3519.设备编码"
+    ],
+    "shunyiqugongjiaoxianlujizhandianjibenxinxi2076": [
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.线路运营信息",
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 1",
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 2",
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 3",
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 4",
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 5",
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 6"
+    ]
+  }
+}

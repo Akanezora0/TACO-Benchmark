@@ -1,0 +1,16 @@
+{
+  "sql": "SELECT \"shijiaotongweiquanshiqicheweixiuqiyexinxi3673.统一社会信用代码\", \"shijiaotongweiquanshiqicheweixiuqiyexinxi3673.业户名称\" FROM \"shijiaotongweiquanshiqicheweixiuqiyexinxi3673\" -\"shijiaotongweichuzuyehujibenxinxi3664\" WHERE \"shijiaotongweichuzuyehujibenxinxi3664.经营业户名称\" = '经营业户名称';",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ WHERE _ = _ ;",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweiquanshiqicheweixiuqiyexinxi3673": [
+      "shijiaotongweiquanshiqicheweixiuqiyexinxi3673.统一社会信用代码",
+      "shijiaotongweiquanshiqicheweixiuqiyexinxi3673.业户名称",
+      "shijiaotongweiquanshiqicheweixiuqiyexinxi3673.业户地址"
+    ],
+    "shijiaotongweichuzuyehujibenxinxi3664": [
+      "shijiaotongweichuzuyehujibenxinxi3664.经营业户名称"
+    ]
+  }
+}

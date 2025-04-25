@@ -1,0 +1,45 @@
+{
+  "sql": "SELECT DISTINCT shiguihuaziranziyuanweishiguan1516.HID, shiguihuaziranziyuanweishiguan1516.HNAME, huairouquhuairouqujingqumenpiaojiage1592.\"怀柔区政府定价景区门票价格\" FROM shiguihuaziranziyuanweishiguan1516 INNER JOIN huairouquhuairouqujingqumenpiaojiage1592 ON shiguihuaziranziyuanweishiguan1516.HID = huairouquhuairouqujingqumenpiaojiage1592.HID WHERE shiguihuaziranziyuanweishiguan1516.HID = '特定HID'",
+  "results": 0,
+  "sql skeleton": "select distinct _ ,_ ,_ from _ where _ =_",
+  "database": "旅游住宿",
+  "tables": {
+    "shiguihuaziranziyuanweishiguan1516": [
+      "shiguihuaziranziyuanweishiguan1516.HID",
+      "shiguihuaziranziyuanweishiguan1516.FATHERID",
+      "shiguihuaziranziyuanweishiguan1516.HNAME",
+      "shiguihuaziranziyuanweishiguan1516.OTHERNAME",
+      "shiguihuaziranziyuanweishiguan1516.CATEGORY",
+      "shiguihuaziranziyuanweishiguan1516.SUBCATEGOR",
+      "shiguihuaziranziyuanweishiguan1516.COUNTYNAME",
+      "shiguihuaziranziyuanweishiguan1516.STREETNAME",
+      "shiguihuaziranziyuanweishiguan1516.DYNASTY",
+      "shiguihuaziranziyuanweishiguan1516.SUBDYNASTY",
+      "shiguihuaziranziyuanweishiguan1516.ADDRESS",
+      "shiguihuaziranziyuanweishiguan1516.RANK",
+      "shiguihuaziranziyuanweishiguan1516.BATCH",
+      "shiguihuaziranziyuanweishiguan1516.PUBTIME",
+      "shiguihuaziranziyuanweishiguan1516.USERS",
+      "shiguihuaziranziyuanweishiguan1516.PURPOSE",
+      "shiguihuaziranziyuanweishiguan1516.OWNERSHIP",
+      "shiguihuaziranziyuanweishiguan1516.STATEEVALU",
+      "shiguihuaziranziyuanweishiguan1516.SINGLERELI",
+      "shiguihuaziranziyuanweishiguan1516.PROTECTION",
+      "shiguihuaziranziyuanweishiguan1516.ATTACHEDRE",
+      "shiguihuaziranziyuanweishiguan1516.RELATEDPEO",
+      "shiguihuaziranziyuanweishiguan1516.RELATEDEVE",
+      "shiguihuaziranziyuanweishiguan1516.PUBNAME",
+      "shiguihuaziranziyuanweishiguan1516.SOURCE",
+      "shiguihuaziranziyuanweishiguan1516.EDITOR",
+      "shiguihuaziranziyuanweishiguan1516.ISREDUNDAN",
+      "shiguihuaziranziyuanweishiguan1516.THEME"
+    ],
+    "huairouquhuairouqujingqumenpiaojiage1592": [
+      "huairouquhuairouqujingqumenpiaojiage1592.怀柔区政府定价景区门票价格",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 1",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 2",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 3",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 4"
+    ]
+  }
+}

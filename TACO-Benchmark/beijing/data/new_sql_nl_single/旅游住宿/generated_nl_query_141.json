@@ -1,0 +1,51 @@
+{
+  "sql": "SELECT HID, HNAME FROM shiguihuaziranziyuanweiwangfu1520 WHERE HID = '1';",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从表 `shiguihuaziranziyuanweiwangfu1520` 中查询 `HID` 等于 `'1'` 的记录，并返回这些记录的 `HID` 和 `HNAME` 列的值。\n\n### **详细描述**  \n1. **涉及的表**：  \n   - `shiguihuaziranziyuanweiwangfu1520`（表名较长，可能是中文拼音或特定编码，如“市规划自然资源委网服1520”或类似含义）。  \n\n2. **涉及的列**：  \n   - `HID`：可能是某个实体的唯一标识符（如“规划ID”、“房屋ID”或“户号ID”）。  \n   - `HNAME`：可能是与 `HID` 对应的名称（如“规划名称”、“户主姓名”或“房屋名称”）。  \n\n3. **查询条件**：  \n   - `HID = '1'`：筛选 `HID` 值为 `'1'` 的记录（`HID` 可能是字符串类型，因为使用了单引号）。  \n\n4. **返回结果**：  \n   - 仅返回符合条件的记录的 `HID` 和 `HNAME` 列。  \n\n### **业务场景**  \n1. **可能的业务背景**：  \n   - 该表可能存储了城市规划、自然资源管理或房屋登记信息（如“市规划自然资源委”相关数据）。  \n   - `HID` 可能是某个规划项目、地块或房屋的唯一编号，`HNAME` 可能是其名称或描述。  \n\n2. **查询用途**：  \n   - 用户可能需要查找特定编号（如 `HID='1'`）的规划项目或房屋的详细信息（如名称）。  \n   - 例如，在政府政务系统中，工作人员或市民通过输入编号查询某个规划方案或房产信息。  \n\n### **用户描述**  \n1. **用户需求**：  \n   - 用户可能需要在系统中快速查找编号为 `1` 的规划项目或房屋的名称。  \n   - 例如，市民在政务服务网站输入“户号1”查询自己的房产信息，或工作人员核对某个规划项目的名称。  \n\n2. **实际问题**：  \n   - 如果 `HID` 是主键或唯一标识符，此查询可精准定位某条记录。  \n   - 如果 `HID` 不是唯一值（如分区编号），可能需要结合其他条件进一步筛选。  \n\n### **补充说明**  \n- 表名和列名的拼音特征表明可能是中文系统或政府数据库，业务场景可能涉及政务管理、不动产登记或自然资源规划。  \n- 若 `HID` 是数字类型，建议优化查询为 `HID = 1`（去掉单引号以提高效率）。",
+  "natural_language_query": "市民反映，在政务服务网站上查询自己家的房产信息时，输入了户号\"1\"，但是系统显示的信息不太清楚，想确认一下这个户号对应的具体房产名称是什么。之前听街道说我们这片区是归规划自然资源委管理的，但是网上查到的信息不太明白，希望能帮忙核实一下户号1对应的房产全称是什么，因为涉及到一些继承手续需要办理，比较着急。来电反映查询户号信息不明确问题。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "shiguihuaziranziyuanweiwangfu1520": [
+      "shiguihuaziranziyuanweiwangfu1520.HID",
+      "shiguihuaziranziyuanweiwangfu1520.FATHERID",
+      "shiguihuaziranziyuanweiwangfu1520.HNAME",
+      "shiguihuaziranziyuanweiwangfu1520.OTHERNAME",
+      "shiguihuaziranziyuanweiwangfu1520.CATEGORY",
+      "shiguihuaziranziyuanweiwangfu1520.SUBCATEGOR",
+      "shiguihuaziranziyuanweiwangfu1520.COUNTYNAME",
+      "shiguihuaziranziyuanweiwangfu1520.STREETNAME",
+      "shiguihuaziranziyuanweiwangfu1520.DYNASTY",
+      "shiguihuaziranziyuanweiwangfu1520.SUBDYNASTY",
+      "shiguihuaziranziyuanweiwangfu1520.ADDRESS",
+      "shiguihuaziranziyuanweiwangfu1520.RANK",
+      "shiguihuaziranziyuanweiwangfu1520.BATCH",
+      "shiguihuaziranziyuanweiwangfu1520.PUBTIME",
+      "shiguihuaziranziyuanweiwangfu1520.USERS",
+      "shiguihuaziranziyuanweiwangfu1520.PURPOSE",
+      "shiguihuaziranziyuanweiwangfu1520.OWNERSHIP",
+      "shiguihuaziranziyuanweiwangfu1520.STATEEVALU",
+      "shiguihuaziranziyuanweiwangfu1520.SINGLERELI",
+      "shiguihuaziranziyuanweiwangfu1520.PROTECTION",
+      "shiguihuaziranziyuanweiwangfu1520.ATTACHEDRE",
+      "shiguihuaziranziyuanweiwangfu1520.RELATEDPEO",
+      "shiguihuaziranziyuanweiwangfu1520.RELATEDEVE",
+      "shiguihuaziranziyuanweiwangfu1520.PUBNAME",
+      "shiguihuaziranziyuanweiwangfu1520.SOURCE",
+      "shiguihuaziranziyuanweiwangfu1520.EDITOR",
+      "shiguihuaziranziyuanweiwangfu1520.ISREDUNDAN",
+      "shiguihuaziranziyuanweiwangfu1520.THEME"
+    ],
+    "miyunqubeijingshimiyunquwenhuahelvyoujudisanjiduxingzhengzhifajianchajieguo952": [
+      "miyunqubeijingshimiyunquwenhuahelvyoujudisanjiduxingzhengzhifajianchajieguo952.附件",
+      "miyunqubeijingshimiyunquwenhuahelvyoujudisanjiduxingzhengzhifajianchajieguo952./",
+      "miyunqubeijingshimiyunquwenhuahelvyoujudisanjiduxingzhengzhifajianchajieguo952./.1",
+      "miyunqubeijingshimiyunquwenhuahelvyoujudisanjiduxingzhengzhifajianchajieguo952./.2",
+      "miyunqubeijingshimiyunquwenhuahelvyoujudisanjiduxingzhengzhifajianchajieguo952./.3",
+      "miyunqubeijingshimiyunquwenhuahelvyoujudisanjiduxingzhengzhifajianchajieguo952./.4",
+      "miyunqubeijingshimiyunquwenhuahelvyoujudisanjiduxingzhengzhifajianchajieguo952./.5",
+      "miyunqubeijingshimiyunquwenhuahelvyoujudisanjiduxingzhengzhifajianchajieguo952./.6",
+      "miyunqubeijingshimiyunquwenhuahelvyoujudisanjiduxingzhengzhifajianchajieguo952./.7"
+    ]
+  }
+}

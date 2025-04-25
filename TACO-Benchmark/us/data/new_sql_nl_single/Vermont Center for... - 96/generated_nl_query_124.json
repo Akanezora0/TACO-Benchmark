@@ -1,0 +1,52 @@
+{
+  "sql": "SELECT \n    wetland_ecologist_districts.\"FirstName\",\n    wetland_ecologist_districts.\"LastName\",\n    wetland_ecologist_districts.\"Email\",\n    wetland_ecologist_districts.\"Phone\",\n    sga_phase_2_assessed_reaches.\"ProjectName\",\n    sga_phase_2_assessed_reaches.\"URLPage1\",\n    sga_phase_2_assessed_reaches.\"ReportList\",\n    sga_phase_2_assessed_reaches.\"FinalA\"\nFROM \n    wetland_ecologist_districts\nJOIN \n    sga_phase_2_assessed_reaches\nON \n    wetland_ecologist_districts.\"OBJECTID\" = sga_phase_2_assessed_reaches.\"RID\"\nWHERE \n    wetland_ecologist_districts.\"ABNAME\" = 'California' AND \n    sga_phase_2_assessed_reaches.\"ProjectName\" = 'Project1';",
+  "problem_description": "### Query intent:\nThe SQL statement aims to retrieve specific information about wetland ecologists and their associated project details from two related tables: `wetland_ecologist_districts` and `sga_phase_2_assessed_reaches`.\n\n### Detailed description:\n\n#### Tables and Columns:\n- **`wetland_ecologist_districts`**:\n  - `\"FirstName\"`: First name of the wetland ecologist.\n  - `\"LastName\"`: Last name of the wetland ecologist.\n  - `\"Email\"`: Email address of the wetland ecologist.\n  - `\"Phone\"`: Contact phone number of the wetland ecologist.\n  - `\"ABNAME\"`: Abbreviation or name of the district.\n\n- **`sga_phase_2_assessed_reaches`**:\n  - `\"ProjectName\"`: Name of the project.\n  - `\"URLPage1\"`: URL for the first page of the project report.\n  - `\"ReportList\"`: List of reports related to the project.\n  - `\"FinalA\"`: A field possibly indicating a status or score related to the project.\n\n#### Conditions:\n- The query filters for records where the district's abbreviation (`\"ABNAME\"`) is 'California'.\n- It also joins the `sga_phase_2_assessed_reaches` table on a condition that matches the `OBJECTID` from `wetland_ecologist_districts` with the `RID` from `sga_phase_2_assessed_reaches`.\n- Further filtering narrows down the results to only those rows where the project name (`\"ProjectName\"`) is specifically 'Project1'.\n\n### Business scenario:\nThis SQL query is likely used in an environmental management or conservation context. The query might be part of a system designed to manage data about wetland ecologists who are involved in assessing and managing waterways or wetlands, particularly focusing on a specific project ('Project1') in California.\n\n### User description:\nAn environmental scientist or a project manager might use this query to gather detailed information about the team members (their names, contact details) who are responsible for a specific phase of a project focused on California's wetlands. This could be useful for coordination purposes, ensuring that all relevant stakeholders are aware of their responsibilities and contact information, especially for a critical project phase ('Project1').",
+  "natural_language_query": "As an environmental scientist working on a project in California, I'm looking to gather some crucial information for our team. Specifically, I need to find out more about the wetland ecologists who are involved in our project. Our project, named 'Project1', focuses on the assessment and management of waterways in California.\n\nCould you help me with a query that would provide me with the following details for each ecologist associated with our project? I'm interested in knowing their full names (First Name and Last Name), their email addresses, and any contact phone numbers they have provided. Additionally, it would be very helpful if we could also see the name of the district they are working in, which should be California.\n\nFurthermore, I'd like to get a comprehensive list of resources related to our project. This includes the URL for the main report page and any other reports that might be relevant to our work. Lastly, I'm curious about the status or score of our project as indicated by a specific field in our records, which seems to be labeled as 'FinalA' in our database.\n\nCould you draft a SQL query that would fetch this information for me, making sure to include only the records that match our project and are located within the California district?",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ from _ join _ on _ ._ = _ ._ where _ ._ = _ and _ ._ = _",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "wetland_ecologist_districts": [
+      "wetland_ecologist_districts.OBJECTID",
+      "wetland_ecologist_districts.ABNAME",
+      "wetland_ecologist_districts.AGENCY",
+      "wetland_ecologist_districts.DEPT",
+      "wetland_ecologist_districts.DIV",
+      "wetland_ecologist_districts.FirstName",
+      "wetland_ecologist_districts.LastName",
+      "wetland_ecologist_districts.Email",
+      "wetland_ecologist_districts.Phone",
+      "wetland_ecologist_districts.Address",
+      "wetland_ecologist_districts.Office",
+      "wetland_ecologist_districts.Town",
+      "wetland_ecologist_districts.BOUNDARY",
+      "wetland_ecologist_districts.PROGMANAGER",
+      "wetland_ecologist_districts.PROGMANAGEREMAIL",
+      "wetland_ecologist_districts.PROGMANAGERPHONE",
+      "wetland_ecologist_districts.BACKUPCONTACT",
+      "wetland_ecologist_districts.BACKUPCONTACTEMAIL",
+      "wetland_ecologist_districts.BACKUPCONTACTPHONE",
+      "wetland_ecologist_districts.PROGRAMEMAIL",
+      "wetland_ecologist_districts.PROGRAMPHONE"
+    ],
+    "sga_phase_2_assessed_reaches": [
+      "sga_phase_2_assessed_reaches.SGAT_ID",
+      "sga_phase_2_assessed_reaches.ProjectName",
+      "sga_phase_2_assessed_reaches.URLPage1",
+      "sga_phase_2_assessed_reaches.URLPage2",
+      "sga_phase_2_assessed_reaches.ReportList",
+      "sga_phase_2_assessed_reaches.FinalA",
+      "sga_phase_2_assessed_reaches.FinalB",
+      "sga_phase_2_assessed_reaches.FinalC",
+      "sga_phase_2_assessed_reaches.CorridorPlanA",
+      "sga_phase_2_assessed_reaches.CorridorPlanB",
+      "sga_phase_2_assessed_reaches.CorridorPlanC",
+      "sga_phase_2_assessed_reaches.RID",
+      "sga_phase_2_assessed_reaches.SID",
+      "sga_phase_2_assessed_reaches.OBJECTID",
+      "sga_phase_2_assessed_reaches.RchID",
+      "sga_phase_2_assessed_reaches.SegID",
+      "sga_phase_2_assessed_reaches.ProjectID"
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "sql": "SELECT DISTINCT 列1, 列2, 列3 FROM 表名 WHERE 列4 = 值1 OR 列5 = 值2 OR 列6 = 值3",
+  "results": 0,
+  "sql skeleton": "select distinct _ ,_ ,_ from _ where _ = _ or _ =_ or _ =_",
+  "database": "安全生活",
+  "tables": {}
+}

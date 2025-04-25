@@ -1,0 +1,18 @@
+{
+  "sql": "SELECT \"shijiaotongweiguidaozhandianxinxichuxing3670.线路名称\", \"shijiaotongweiguidaozhandianxinxichuxing3670.车站名\" FROM \"shijiaotongweiguidaozhandianxinxichuxing3670\" - \"shijiaotongweiguidaoxianluxinxichuxing3671\" WHERE \"shijiaotongweiguidaozhandianxinxichuxing3670.线路编码\" = \"shijiaotongweiguidaoxianluxinxichuxing3671.线路编码\";",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ WHERE _ = _ ;",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweiguidaozhandianxinxichuxing3670": [
+      "shijiaotongweiguidaozhandianxinxichuxing3670.线路名称",
+      "shijiaotongweiguidaozhandianxinxichuxing3670.站点编码",
+      "shijiaotongweiguidaozhandianxinxichuxing3670.车站名"
+    ],
+    "shijiaotongweiguidaoxianluxinxichuxing3671": [
+      "shijiaotongweiguidaoxianluxinxichuxing3671.线路编码",
+      "shijiaotongweiguidaoxianluxinxichuxing3671.线路名称",
+      "shijiaotongweiguidaoxianluxinxichuxing3671.站点数"
+    ]
+  }
+}

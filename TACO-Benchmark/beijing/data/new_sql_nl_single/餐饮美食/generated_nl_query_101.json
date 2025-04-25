@@ -1,0 +1,26 @@
+{
+  "sql": "SELECT \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC\",\"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH\",\"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS\" FROM \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\" WHERE \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH\" = '_' ORDER BY \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.YXQZ\";",
+  "problem_description": "### **查询意图**：\n该 SQL 语句的目的是从表 `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374` 中查询特定许可证编号（`XKZBH`）为 `'_'` 的记录，并返回这些记录的经营者名称（`JYZMC`）、许可证编号（`XKZBH`）和经营场所（`JYCS`），最后按照有效期至（`YXQZ`）进行排序。\n\n### **详细描述**：\n1. **涉及的表**：\n   - `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374`（表名较长，可能表示“市场监管局餐饮服务许可证情况信息”或类似含义）。\n\n2. **查询的列**：\n   - `JYZMC`（经营者名称）：可能指餐饮服务提供者的名称。\n   - `XKZBH`（许可证编号）：餐饮服务许可证的唯一编号。\n   - `JYCS`（经营场所）：餐饮服务提供者的经营地址或场所。\n\n3. **查询条件**：\n   - `XKZBH = '_'`：筛选许可证编号为 `'_'` 的记录。这里的 `'_'` 可能是占位符，表示许可证编号为空或未填写的情况，也可能是数据异常（如录入错误）。\n\n4. **排序方式**：\n   - `ORDER BY YXQZ`：按照 `YXQZ`（有效期至）升序排列，可能是为了查看最早或最晚到期的记录。\n\n### **业务场景**：\n该查询可能用于以下业务场景：\n1. **数据清洗或异常检测**：查找许可证编号异常（如未填写或格式错误）的餐饮服务经营者记录。\n2. **监管检查**：市场监管部门可能需要检查许可证编号无效或缺失的餐饮企业，以便后续跟进处理（如补录或处罚）。\n3. **统计分析**：分析许可证编号缺失或异常的记录数量及分布情况，评估数据质量或监管漏洞。\n\n### **用户描述**：\n在该业务场景下，用户（如市场监管人员或数据分析师）可能遇到以下问题或需求：\n1. **数据质量问题**：许可证编号是重要监管信息，但部分记录可能未正确填写（如录入时遗漏或错误填写为 `'_'`），需要找出这些记录以便修正。\n2. **合规性检查**：餐饮企业需持有效许可证经营，但某些企业可能因许可证编号缺失或无效而违规，需排查并督促整改。\n3. **报表生成**：用户可能需要统计许可证编号异常的经营者名单，并按照有效期排序，以优先处理即将过期的记录。",
+  "natural_language_query": "市民反映，最近在整理餐饮服务许可证数据时，发现有些商家的许可证编号显示异常，只有一个下划线\"_\"，不知道是系统录入错误还是其他原因。想查一下这些许可证编号有问题的商家具体叫什么名字、在哪里经营，最好能按有效期排个序，看看哪些是最紧急需要处理的。比如有些店可能快到期了还没补上正规编号，得赶紧联系他们整改。",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ from _ where _ = _ order by _ ;",
+  "database": "餐饮美食",
+  "tables": {
+    "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374": [
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYXM",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.FZRQ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.YXQZ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.DWMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.EXCHANGETIME"
+    ],
+    "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076": [
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址"
+    ]
+  }
+}

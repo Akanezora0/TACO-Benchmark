@@ -1,0 +1,24 @@
+{
+  "sql": "SELECT xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.\"西城区路侧停车数据\" FROM xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392 WHERE xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.\"Unnamed: 1\" = '条件1' AND (xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.\"Unnamed: 2\" IN (SELECT shigonganjujiaotongweifachulijigou1949.\"交通违法处理机构\" FROM shigonganjujiaotongweifachulijigou1949 WHERE shigonganjujiaotongweifachulijigou1949.\"Unnamed: 1\" = '条件2' OR shigonganjujiaotongweifachulijigou1949.\"Unnamed: 3\" = '条件3' OR shigonganjujiaotongweifachulijigou1949.\"Unnamed: 4\" = '条件4'))\n```",
+  "results": 0,
+  "sql skeleton": "select _ from _ where _ = _ and _ (_ ,_ ) in (select _ (_ ,_ ,_ ) from _ where _ = _ and (_ or _ or _ ))",
+  "database": "交通服务",
+  "tables": {
+    "xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392": [
+      "xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.西城区路侧停车数据",
+      "xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.Unnamed: 1",
+      "xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.Unnamed: 2",
+      "xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.Unnamed: 3",
+      "xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.Unnamed: 4"
+    ],
+    "shigonganjujiaotongweifachulijigou1949": [
+      "shigonganjujiaotongweifachulijigou1949.交通违法处理机构",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 1",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 2",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 3",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 4",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 5",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 6"
+    ]
+  }
+}

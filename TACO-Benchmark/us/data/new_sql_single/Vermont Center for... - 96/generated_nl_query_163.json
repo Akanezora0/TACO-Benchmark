@@ -1,0 +1,44 @@
+{
+  "sql": "SELECT dfirm_floodways.OBJECTID, dfirm_floodways.DFIRM_ID, dfirm_floodways.FLD_AR_ID, dfirm_floodways.FLD_ZONE, dfirm_floodways.FLOODWAY, dfirm_floodways.SFHA_TF, dfirm_floodways.AR_REVERT, dfirm_floodways.SOURCE_CIT, public_water_sources.WSID, public_water_sources.SystemName FROM dfirm_floodways LEFT JOIN public_water_sources ON dfirm_floodways.SOURCE_CIT = public_water_sources.WSID WHERE public_water_sources.SystemStatus = 'Operational' AND public_water_sources.Availability = 'Available' AND (public_water_sources.SystemPopulation > 1000 AND public_water_sources.PermittedYield > 500)",
+  "problem_description": "### Query intent:\nThe SQL statement is designed to retrieve specific information related to floodways and public water sources, with a focus on operational systems that have both a population served greater than 1000 and a permitted yield greater than 500.\n\n### Detailed description:\n- **Table `dfirm_floodways`**:\n  - `OBJECTID`: A unique identifier for each record in the floodways dataset.\n  - `DFIRM_ID`: An identifier specific to the floodway within the dataset.\n  - `FLD_AR_ID`: The administrative region ID associated with the floodway.\n  - `FLD_ZONE`: The zone classification of the floodway.\n  - `FLOODWAY`: The name of the floodway.\n  - `SFHA_TF`: A flag indicating if the floodway is part of a Special Flood Hazard Area.\n  - `AR_REVERT`: Information about the possibility of restoring an area to its original state after flood events.\n  - `SOURCE_CIT`: The identifier for the source of the floodway data, linking it to another dataset.\n\n- **Table `public_water_sources`**:\n  - `WSID`: A unique identifier for each water source.\n  - `SystemName`: The name of the water source system.\n  - `SystemStatus`: The operational status of the water source system.\n  - `Availability`: The availability status of the water source.\n  - `SystemPopulation`: The number of people served by the water source.\n  - `PermittedYield`: The maximum amount of water that can be withdrawn from the source per year.\n\n- **Join operation**:\n  The `LEFT JOIN` clause combines records from `dfirm_floodways` and `public_water_sources` based on the matching `SOURCE_CIT` and `WSID`.\n\n- **Where clause**:\n  - Ensures that only records from `public_water_sources` where `SystemStatus` is 'Operational' and `Availability` is 'Available' are considered.\n  - Further filters these records to include only those with `SystemPopulation > 1000` and `PermittedYield > 500`.\n\n### Business scenario:\nThis query could be useful in environmental management or urban planning contexts, particularly when assessing the impact of floodways in relation to nearby water sources. For example, it might help identify floodways near operational water supply systems that serve large populations and have significant water withdrawal capacities.\n\n### User description:\nA city planner or environmental scientist might need",
+  "natural_language_query": "A city planner or environmental scientist might need to analyze the relationship between flood management systems and the operational water supply infrastructure within their jurisdiction. Specifically, they are interested in identifying floodways that intersect with areas served by water systems capable of providing substantial volumes of water (greater than 500 units per year) to populations exceeding 1,000 individuals. This analysis could be crucial for understanding potential vulnerabilities in water supply during flood events, ensuring that critical water infrastructure remains functional and accessible even under adverse conditions. To conduct this study, they would query the database using a SQL statement that joins datasets related to floodways and public water sources, filtering the results to highlight systems that meet the specified criteria for population served and water yield capacity.",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ from _ left join _ on _ ._ = _ ._ where _ ._ = _ and _ ._ = _ and _ (_ ,_ ) = _",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "dfirm_floodways": [
+      "dfirm_floodways.OBJECTID",
+      "dfirm_floodways.DFIRM_ID",
+      "dfirm_floodways.FLD_AR_ID",
+      "dfirm_floodways.FLD_ZONE",
+      "dfirm_floodways.FLOODWAY",
+      "dfirm_floodways.SFHA_TF",
+      "dfirm_floodways.AR_REVERT",
+      "dfirm_floodways.SOURCE_CIT",
+      "dfirm_floodways.HYDRO_ID",
+      "dfirm_floodways.CST_MDL_ID"
+    ],
+    "public_water_sources": [
+      "public_water_sources.X",
+      "public_water_sources.Y",
+      "public_water_sources.TINWSF_IS_NUMBER",
+      "public_water_sources.WSID",
+      "public_water_sources.SystemName",
+      "public_water_sources.SystemType",
+      "public_water_sources.SystemStatus",
+      "public_water_sources.SystemPopulation",
+      "public_water_sources.FacilityName",
+      "public_water_sources.FacilityID",
+      "public_water_sources.FacilityStatus",
+      "public_water_sources.Availability",
+      "public_water_sources.WaterType",
+      "public_water_sources.ConstructedDate",
+      "public_water_sources.PermittedYield",
+      "public_water_sources.WellType",
+      "public_water_sources.Diameter_in",
+      "public_water_sources.WellDepth",
+      "public_water_sources.CasingDepth",
+      "public_water_sources.StaticWaterLevel"
+    ]
+  }
+}

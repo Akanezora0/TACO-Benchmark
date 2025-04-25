@@ -1,0 +1,24 @@
+{
+  "sql": "SELECT shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.本市市管游览参观点门票价格 FROM shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777 WHERE shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.本市市管游览参观点门票价格 IN (\n    SELECT xichengquxichengquxingjifandianminglu19.?星级酒店名称 FROM xichengquxichengquxingjifandianminglu19 WHERE xichengquxichengquxingjifandianminglu19.?星级 = '5'\n)\n```",
+  "results": 0,
+  "sql skeleton": "select _ from _ where _ in (select _ from _ where _ )",
+  "database": "旅游住宿",
+  "tables": {
+    "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777": [
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.本市市管游览参观点门票价格",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 1",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 2",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 3",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 4",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 5",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 6"
+    ],
+    "xichengquxichengquxingjifandianminglu19": [
+      "xichengquxichengquxingjifandianminglu19.序号",
+      "xichengquxichengquxingjifandianminglu19.?星级酒店名称",
+      "xichengquxichengquxingjifandianminglu19.?星级",
+      "xichengquxichengquxingjifandianminglu19.?联系电话",
+      "xichengquxichengquxingjifandianminglu19.?酒店地址"
+    ]
+  }
+}

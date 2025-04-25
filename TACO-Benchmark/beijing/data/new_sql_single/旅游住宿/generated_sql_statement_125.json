@@ -1,0 +1,20 @@
+{
+  "sql": "SELECT \n    shiwenhuahelvyoujulvxingshexinxi3530.旅行社名称, \n    shiwenhuahelvyoujulvxingshexinxi3530.许可经营业务, \n    shiwenhuahelvyoujulvxingshexinxi3530.许可时间, \n    shunyiqushunyiquxingjifandian2102.顺义区星级饭店 \nFROM \n    shiwenhuahelvyoujulvxingshexinxi3530, \n    shunyiqushunyiquxingjifandian2102 \nWHERE \n    shiwenhuahelvyoujulvxingshexinxi3530.旅行社业务经营许可证编号 = shunyiqushunyiquxingjifandian2102.Unnamed: 2",
+  "results": 0,
+  "sql skeleton": "SELECT _ _ FROM _ WHERE _",
+  "database": "旅游住宿",
+  "tables": {
+    "shiwenhuahelvyoujulvxingshexinxi3530": [
+      "shiwenhuahelvyoujulvxingshexinxi3530.旅行社名称",
+      "shiwenhuahelvyoujulvxingshexinxi3530.旅行社业务经营许可证编号",
+      "shiwenhuahelvyoujulvxingshexinxi3530.许可经营业务",
+      "shiwenhuahelvyoujulvxingshexinxi3530.许可时间"
+    ],
+    "shunyiqushunyiquxingjifandian2102": [
+      "shunyiqushunyiquxingjifandian2102.顺义区星级饭店",
+      "shunyiqushunyiquxingjifandian2102.Unnamed: 1",
+      "shunyiqushunyiquxingjifandian2102.Unnamed: 2",
+      "shunyiqushunyiquxingjifandian2102.Unnamed: 3"
+    ]
+  }
+}

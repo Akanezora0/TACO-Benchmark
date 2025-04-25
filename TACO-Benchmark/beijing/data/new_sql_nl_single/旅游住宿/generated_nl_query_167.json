@@ -1,0 +1,23 @@
+{
+  "sql": "SELECT \"pingguquzhucegongyuanxinxi780\".\"序号\",\"pingguquzhucegongyuanxinxi780\".名称,\"pingguquzhucegongyuanxinxi780\".\"区\",\"pingguquzhucegongyuanxinxi780\".\"街道\",\"pingguquzhucegongyuanxinxi780\".\"地址\",\"pingguquzhucegongyuanxinxi780\".\"咨询电话\",\"xichengqubeijingshiwenwubaohudanwei31\".\"序号\",\"xichengqubeijingshiwenwubaohudanwei31\".名称,\"xichengqubeijingshiwenwubaohudanwei31\".\"地址\" FROM \"pingguquzhucegongyuanxinxi780\" JOIN \"xichengqubeijingshiwenwubaohudanwei31\" ON \"pingguquzhucegongyuanxinxi780\".\"序号\"=\"xichengqubeijingshiwenwubaohudanwei31\".\"序号\" WHERE \"pingguquzhucegongyuanxinxi780\".名称 = '目标名称' AND \"pingguquzhucegongyuanxinxi780\".\"区\" = '目标区' and (CASE WHEN \"xichengqubeijingshiwenwubaohudanwei31\".\"地址\" IS NOT NULL THEN \"xichengqubeijingshiwenwubaohudanwei31\".\"地址\" ELSE '' END) = '目标地址' and \"xichengqubeijingshiwenwubaohudanwei31\".\"名称\" = '目标名称';",
+  "problem_description": "### 查询意图：\n该 SQL 语句的目的是从两个表中联合查询特定条件下的记录，主要关注的是在平谷区注册的公园信息与西城区北京市文物保护单位信息之间的关联数据。\n\n### 详细描述：\n1. **涉及的表**：\n   - `pingguquzhucegongyuanxinxi780`（平谷区注册公园信息表）\n   - `xichengqubeijingshiwenwubaohudanwei31`（西城区北京市文物保护单位信息表）\n\n2. **查询的列**：\n   - 从`pingguquzhucegongyuanxinxi780`表中查询：序号、名称、区、街道、地址、咨询电话\n   - 从`xichengqubeijingshiwenwubaohudanwei31`表中查询：序号、名称、地址\n\n3. **连接条件**：\n   - 两个表通过`序号`列进行JOIN连接，即`pingguquzhucegongyuanxinxi780.序号 = xichengqubeijingshiwenwubaohudanwei31.序号`\n\n4. **筛选条件**：\n   - `pingguquzhucegongyuanxinxi780.名称 = '目标名称'`：平谷区注册公园的名称为\"目标名称\"\n   - `pingguquzhucegongyuanxinxi780.区 = '目标区'`：平谷区注册公园所在区为\"目标区\"\n   - `(CASE WHEN xichengqubeijingshiwenwubaohudanwei31.地址 IS NOT NULL THEN xichengqubeijingshiwenwubaohudanwei31.地址 ELSE '' END) = '目标地址'`：西城区文物保护单位的地址如果存在则等于\"目标地址\"，如果不存在则空字符串等于\"目标地址\"\n   - `xichengqubeijingshiwenwubaohudanwei31.名称 = '目标名称'`：西城区文物保护单位的名称为\"目标名称\"\n\n### 业务场景：\n这个查询可能用于以下业务场景：\n1. 需要查找同时在平谷区注册为公园且在西城区被列为文物保护单位的地点信息。\n2. 可能用于跨区域的文化遗产管理，需要确认某些地点在不同行政区域的不同身份（既是公园又是文物保护单位）。\n3. 可能用于旅游信息整合，查找具有双重身份（公园+文物保护）的旅游景点。\n\n### 用户描述：\n在这种业务场景下，用户可能遇到以下实际问题或需求：\n1. 文化管理部门需要核实某个地点是否同时具有公园和文物保护单位的双重身份。\n2. 旅游规划者需要查找具有特殊身份（既是公园又是文物）的景点以便设计特色旅游路线。\n3. 城市管理者需要协调不同区域对同一地点的不同管理要求。\n4. 研究人员需要统计跨区域、跨类别（公园+文物）的公共设施数量。\n5. 可能存在数据核对需求，验证两个系统中关于同一地点的信息是否一致。\n\n注意：查询条件中的\"目标名称\"、\"目标区\"、\"目标地址\"在实际使用中应该是具体的值，这里可能是占位符。",
+  "natural_language_query": "市民反映，我在规划一个文化旅游项目时遇到个问题。平谷区有个叫\"目标名称\"的公园，听说在西城区那边也被列为文物保护单位了，但我不太确定是不是同一个地方。这个公园在平谷区\"目标区\"那块，具体地址好像是\"目标地址\"附近。我想查一下这个公园在两个区的登记信息是不是一致的，包括它的具体位置和联系方式这些。因为要安排旅游线路，需要确认这个景点是不是真的有双重身份，既是公园又是文物保护单位。之前听朋友说好像两个区的登记信息有点出入，所以想请帮忙核实一下。来电咨询平谷区公园与西城区文物保护单位信息是否匹配的问题。",
+  "results": 0,
+  "sql skeleton": "SELECT _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ FROM _ JOIN _ ON _ ._ = _ ._ WHERE _ ._ = _ AND _ ._ = _ and _ (_ ._ , _ ) = _ and _ ._ = _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "pingguquzhucegongyuanxinxi780": [
+      "pingguquzhucegongyuanxinxi780.序号",
+      "pingguquzhucegongyuanxinxi780.名称",
+      "pingguquzhucegongyuanxinxi780.区",
+      "pingguquzhucegongyuanxinxi780.街道",
+      "pingguquzhucegongyuanxinxi780.地址",
+      "pingguquzhucegongyuanxinxi780.咨询电话"
+    ],
+    "xichengqubeijingshiwenwubaohudanwei31": [
+      "xichengqubeijingshiwenwubaohudanwei31.序号",
+      "xichengqubeijingshiwenwubaohudanwei31.名称",
+      "xichengqubeijingshiwenwubaohudanwei31.地址"
+    ]
+  }
+}

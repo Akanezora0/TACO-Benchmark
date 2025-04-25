@@ -1,0 +1,27 @@
+{
+  "sql": "SELECT \n    shijiaotongweiguidaoyanshixinxi3711.延时开始时间, \n    shijiaotongweiguidaoyanshixinxi3711.延时结束时间, \n    shijiaotongweiguidaoyanshixinxi3711.延时线路, \n    shijiaotongweiguidaoyanshixinxi3711.更新时间, \n    shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 5 \nFROM \n    shijiaotongweiguidaoyanshixinxi3711 \nLEFT JOIN \n    shijiaotongweishoufeigonglushoufeibiaozhun543 \nON \n    shijiaotongweiguidaoyanshixinxi3711.序号 = shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1 \nWHERE \n    shijiaotongweiguidaoyanshixinxi3711.共享时间 = '指定日期'",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是查询指定日期的轨道交通延时信息，并关联收费公路的收费标准数据，以获取延时线路、时间范围以及可能的收费信息。\n\n---\n\n### **详细描述**  \n1. **涉及的表**：  \n   - `shijiaotongweiguidaoyanshixinxi3711`（轨道交通延时信息表）：存储轨道交通的延时相关信息，如延时时间、线路等。  \n   - `shijiaotongweishoufeigonglushoufeibiaozhun543`（收费公路收费标准表）：存储收费公路的收费标准信息。  \n\n2. **查询的列**：  \n   - 从 `shijiaotongweiguidaoyanshixinxi3711` 表中选取：  \n     - `延时开始时间`（延时事件的起始时间）  \n     - `延时结束时间`（延时事件的结束时间）  \n     - `延时线路`（受影响的轨道交通线路）  \n     - `更新时间`（该信息的最后更新时间）  \n   - 从 `shijiaotongweishoufeigonglushoufeibiaozhun543` 表中选取：  \n     - `Unnamed: 5`（可能是某种收费标准的数值或描述，列名未明确标注）  \n\n3. **关联条件**：  \n   - 使用 `LEFT JOIN` 关联两个表，关联字段为：  \n     - `shijiaotongweiguidaoyanshixinxi3711.序号` = `shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1`  \n     - （即通过序号匹配，可能是某种线路或收费标准的对应关系）  \n\n4. **筛选条件**：  \n   - `shijiaotongweiguidaoyanshixinxi3711.共享时间 = '指定日期'`  \n   - 仅查询指定日期的延时信息。  \n\n---\n\n### **业务场景**  \n该查询可能用于以下业务场景：  \n1. **交通管理部门**：监控轨道交通的延时情况，并关联收费公路的收费标准，分析延时是否影响收费政策（如免费或调整收费）。  \n2. **出行服务平台**：向用户推送指定日期的轨道交通延时信息，并提示可能的收费变化（如因延时导致的收费减免或调整）。  \n3. **数据分析**：统计延时事件与收费公路运营的关联性，优化交通调度或收费策略。  \n\n---\n\n### **用户描述**  \n在该业务场景下，用户可能遇到以下问题或需求：  \n1. **乘客查询**：  \n   - “明天地铁XX线是否延时？具体时间是什么？会影响我的出行吗？”  \n   - “如果地铁延时，高速公路是否会免费或调整收费？”  \n2. **交通管理需求**：  \n   - “我们需要统计某天的轨道交通延时情况，并检查是否触发了关联收费公路的应急政策。”  \n3. **运营分析需求**：  \n   - “分析延时事件是否导致收费公路车流量变化，是否需要调整收费标准？”  \n\n该 SQL 查询的结果可帮助回答上述问题，提供数据支持。",
+  "natural_language_query": "市民反映，今天早上坐地铁10号线时发现列车晚点了将近20分钟，站台广播说是信号故障导致的延误。想了解一下今天（2023年11月15日）全市地铁线路的延误情况，特别是早高峰时段哪些线路受到了影响，具体延误了多长时间。另外听说遇到地铁延误的情况，部分高速公路会减免通行费，不知道是不是真的？如果是的话想了解具体哪些路段会有优惠。因为明天还要赶早班飞机，很担心又遇到类似情况耽误行程，希望能查询到准确的延误信息和可能的补偿政策。",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ from _ left join _ on _ ._ = _ ._ where _ ._ = _",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweiguidaoyanshixinxi3711": [
+      "shijiaotongweiguidaoyanshixinxi3711.序号",
+      "shijiaotongweiguidaoyanshixinxi3711.总车次",
+      "shijiaotongweiguidaoyanshixinxi3711.延时开始时间",
+      "shijiaotongweiguidaoyanshixinxi3711.延时结束时间",
+      "shijiaotongweiguidaoyanshixinxi3711.延时线路",
+      "shijiaotongweiguidaoyanshixinxi3711.共享时间",
+      "shijiaotongweiguidaoyanshixinxi3711.更新时间"
+    ],
+    "shijiaotongweishoufeigonglushoufeibiaozhun543": [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 2",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 3",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 4",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 5"
+    ]
+  }
+}

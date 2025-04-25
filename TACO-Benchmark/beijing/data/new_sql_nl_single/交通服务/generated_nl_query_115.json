@@ -1,0 +1,438 @@
+{
+  "sql": "SELECT \"shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表\", \"shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1\" FROM \"zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733\";",
+  "problem_description": "### 查询意图：\n该 SQL 语句的目的是从指定的表中查询北京市收费公路收费标准的相关信息。\n\n### 详细描述：\n1. **表信息**：\n   - 表名：`\"zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733\"`\n   - 该表名较长且包含数字，可能是某个特定项目或系统中的表，名称可能表示“重点站区管委北京西站地区电子信息”或其他类似含义。\n\n2. **列信息**：\n   - 查询的列1：`\"shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表\"`\n     - 列名中包含“北京市收费公路收费标准表”，表明该列存储的是北京市收费公路的收费标准信息。\n   - 查询的列2：`\"shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1\"`\n     - 列名中的“Unnamed: 1”可能是该列在原始数据中没有明确的列名，或者是临时生成的列。\n\n3. **条件**：\n   - 该 SQL 语句没有显式的 WHERE 条件，因此是查询表中的所有行，但只返回指定的两列。\n\n### 业务场景：\n1. **收费公路管理**：\n   - 该查询可能用于收费公路管理系统，用于获取北京市收费公路的收费标准信息。\n   - 可能的业务场景包括：\n     - 收费公路的费率查询。\n     - 收费公路的费率对比或分析。\n     - 收费公路的费率更新或维护。\n\n2. **数据报表生成**：\n   - 该查询可能是为了生成收费公路的费率报表，供管理层或相关部门参考。\n\n3. **数据迁移或整合**：\n   - 该查询可能是为了从现有系统中提取收费公路的费率数据，用于迁移到新系统或与其他系统整合。\n\n### 用户描述：\n1. **收费公路管理人员**：\n   - 用户可能需要查询北京市收费公路的最新收费标准，以便更新收费系统或向公众发布。\n   - 用户可能需要对比不同时间段的收费标准，分析费率变化的影响。\n\n2. **数据分析师**：\n   - 用户可能需要提取收费公路的费率数据，用于生成报表或进行数据分析，例如分析收费公路的收入情况或交通流量与费率的关系。\n\n3. **系统开发人员**：\n   - 用户可能需要从现有系统中提取收费公路的费率数据，用于开发新的收费系统或与其他系统（如交通管理系统）进行数据整合。\n\n### 总结：\n该 SQL 语句主要用于从特定表中查询北京市收费公路的收费标准信息，可能是为了收费管理、报表生成或数据整合等业务需求。用户可能是收费公路管理人员、数据分析师或系统开发人员，他们需要这些数据来支持决策、分析或系统开发。",
+  "natural_language_query": "市民反映，最近开车走北京市的收费公路时发现收费标准好像有变动，但是找不到最新的官方公告。想了解一下现在北京各个收费公路的具体收费标准是多少？比如不同车型怎么收费、不同路段有没有区别之类的。之前好像在交通委网站上看到过相关文件，但找不到了。另外听说有些ETC用户能打折，这个具体是怎么规定的？希望能提供详细的收费标准说明，方便我们司机朋友了解情况。",
+  "results": [
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ],
+    [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1"
+    ]
+  ],
+  "sql skeleton": "SELECT _ , _ FROM _ -_ ;",
+  "database": "交通服务",
+  "tables": {
+    "zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733": [
+      "zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733.PK\u0003\u0004"
+    ],
+    "shijiaotongweishoufeigonglushoufeibiaozhun543": [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 2",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 3",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 4",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 5"
+    ]
+  }
+}

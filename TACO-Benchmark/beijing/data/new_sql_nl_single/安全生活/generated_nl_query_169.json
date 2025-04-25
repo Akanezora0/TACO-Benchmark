@@ -1,0 +1,9 @@
+{
+  "sql": "select count(*) as total_records, sum(amount) as total_amount, min(date) as earliest_transaction, max(date) as latest_transaction, avg(amount) as average_amount from transactions where status = 'completed'",
+  "problem_description": "### **查询意图**：\n该 SQL 语句的目的是从 `transactions` 表中统计所有状态为 `'completed'` 的交易记录，计算其总记录数、总金额、最早交易日期、最晚交易日期以及平均交易金额。\n\n### **详细描述**：\n1. **涉及的表**：\n   - `transactions`：交易记录表，存储交易相关的数据。\n\n2. **涉及的列**：\n   - `status`：交易状态列，用于筛选已完成（`'completed'`）的交易。\n   - `amount`：交易金额列，用于计算总金额（`sum(amount)`）和平均金额（`avg(amount)`）。\n   - `date`：交易日期列，用于查找最早（`min(date)`）和最晚（`max(date)`）的交易日期。\n\n3. **条件**：\n   - `where status = 'completed'`：仅筛选状态为 `'completed'` 的交易记录。\n\n4. **计算指标**：\n   - `count(*) as total_records`：统计符合条件的交易记录总数。\n   - `sum(amount) as total_amount`：计算所有已完成交易的总金额。\n   - `min(date) as earliest_transaction`：查找最早的交易日期。\n   - `max(date) as latest_transaction`：查找最晚的交易日期。\n   - `avg(amount) as average_amount`：计算已完成交易的平均金额。\n\n### **业务场景**：\n该查询可用于以下业务场景：\n1. **财务分析**：统计已完成交易的总金额和平均金额，帮助财务团队了解收入情况。\n2. **交易监控**：通过最早和最晚交易日期，分析交易的时间分布，判断是否存在异常交易时段。\n3. **报表生成**：生成交易汇总报表，供管理层或审计部门查阅。\n4. **业务优化**：通过分析交易金额的平均值，优化定价策略或促销活动。\n\n### **用户描述**：\n1. **财务人员**：需要统计本季度已完成交易的总收入，并计算平均交易金额，以便进行财务预测或预算调整。\n2. **运营团队**：希望了解交易的时间分布，比如最早的交易是否在合理范围内，或者是否存在长时间未更新的交易记录。\n3. **管理层**：需要一份交易汇总报表，以便快速掌握公司业务的整体情况。\n4. **风控团队**：通过分析交易金额的平均值，识别是否存在异常交易行为（如金额过高或过低）。\n\n该查询可以帮助用户快速获取关键交易指标，支持决策制定或问题排查。",
+  "natural_language_query": "市民反映，我在查看公司最近的交易情况时遇到一些问题。我们财务这边需要统计一下已经完成的交易数据，但是系统里信息太分散了，能不能帮忙查一下：\n\n1. 总共完成了多少笔交易啊？\n2. 这些交易总共收了多少钱？\n3. 最早一笔完成交易是什么时候办的？\n4. 最近一笔完成交易又是什么时候？\n5. 平均每笔交易金额大概是多少？\n\n主要是想了解一下最近业务的整体情况，做财务分析用。之前自己手动统计特别麻烦，还容易出错，希望能有个准确的汇总数据。对了，只要查那些状态显示\"已完成\"的交易就行，其他的不用算进来。",
+  "results": 0,
+  "sql skeleton": "select _ as _ ,_ as _ ,_ as _ ,_ as _ ,_ as _ from _ where _ = _",
+  "database": "安全生活",
+  "tables": {}
+}

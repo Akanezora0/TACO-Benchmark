@@ -1,0 +1,46 @@
+{
+  "sql": "SELECT \"shiguihuaziranziyuanweiyinhangpiaohao1522.HID\", \"chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337.酒仙桥街道社区地址及联系电话\" FROM \"shiguihuaziranziyuanweiyinhangpiaohao1522\" INNER JOIN \"chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337\" ON \"shiguihuaziranziyuanweiyinhangpiaohao1522.HID\" = \"chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337.HID\" WHERE \"shiguihuaziranziyuanweiyinhangpiaohao1522.HID\" = '1';",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是通过关联两个表，查询特定 HID（假设是酒店ID）对应的银行票号信息和酒店的联系信息。\n\n- **详细描述**：\n  - **涉及的表**：\n    1. `shiguihuaziranziyuanweiyinhangpiaohao1522`：可能是一个存储银行票号信息的表，表名中的“shiguihuaziranziyuanweiyinhangpiaohao”可能指的是“规划自然资源银行票号”。\n    2. `chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337`：可能是一个存储酒店信息的表，表名中的“chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi”可能指的是“朝阳区酒仙桥街道下辖宾馆酒店信息”。\n  - **涉及的列**：\n    1. `shiguihuaziranziyuanweiyinhangpiaohao1522.HID`：银行票号表中的酒店ID字段。\n    2. `chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337.酒仙桥街道社区地址及联系电话`：酒店信息表中的地址和联系电话字段。\n  - **关联条件**：两个表通过 `HID` 字段进行内连接（INNER JOIN），确保只返回两个表中都存在的 HID 记录。\n  - **筛选条件**：`shiguihuaziranziyuanweiyinhangpiaohao1522.HID = '1'`，即只查询 HID 为 '1' 的记录。\n\n- **业务场景**：\n  - 该查询可能用于银行或财务系统与酒店管理系统之间的数据关联。例如，银行需要查询某个特定酒店（HID=1）的银行票号信息及其对应的地址和联系电话，以便进行财务核对或联系。\n  - 另一个可能的场景是酒店管理系统需要整合银行票号信息和酒店基础信息，以便生成报表或进行内部审计。\n\n- **用户描述**：\n  - 用户可能是银行工作人员或酒店财务人员，他们需要获取某个特定酒店的银行票号及其联系信息。例如：\n    - 银行工作人员可能需要核对酒店提交的票号信息是否与系统中的记录一致，并需要联系酒店确认某些财务细节。\n    - 酒店财务人员可能需要生成一份包含银行票号和酒店联系信息的报表，用于内部审计或提交给管理层。\n  - 用户的需求是快速、准确地获取特定酒店的银行票号和联系信息，避免手动在两个系统中分别查询的繁琐操作。",
+  "natural_language_query": "市民反映，我是朝阳区酒仙桥街道某酒店的财务人员，现在需要核对我们酒店（系统里编号好像是1）的银行票据信息，但是系统里显示不全。我们酒店在街道的登记信息应该是有的，能不能帮忙查一下这个酒店的银行票号还有我们酒店登记的联系地址和电话？因为马上要报税了，财务那边催得急，现在找不到完整信息特别着急。之前问过银行说票号没问题，但我们这边系统就是显示不全，想确认一下是不是信息没同步好。来电希望能尽快核实酒店编号1的银行票号和联系方式问题。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ WHERE _ = _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "shiguihuaziranziyuanweiyinhangpiaohao1522": [
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.HID",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.FATHERID",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.HNAME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.OTHERNAME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.CATEGORY",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.SUBCATEGOR",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.COUNTYNAME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.STREETNAME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.DYNASTY",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.SUBDYNASTY",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.ADDRESS",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.RANK",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.BATCH",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.PUBTIME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.USERS",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.PURPOSE",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.OWNERSHIP",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.STATEEVALU",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.SINGLERELI",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.PROTECTION",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.ATTACHEDRE",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.RELATEDPEO",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.RELATEDEVE",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.PUBNAME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.SOURCE",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.EDITOR",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.ISREDUNDAN"
+    ],
+    "chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337": [
+      "chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337.酒仙桥街道社区地址及联系电话",
+      "chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337.Unnamed: 1",
+      "chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337.Unnamed: 2",
+      "chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337.Unnamed: 3",
+      "chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337.Unnamed: 4"
+    ]
+  }
+}

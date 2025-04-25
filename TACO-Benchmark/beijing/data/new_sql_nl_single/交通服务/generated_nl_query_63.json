@@ -1,0 +1,23 @@
+{
+  "sql": "SELECT \"shijiaotongweigongjiaoxianluxinxichuxingfuwu3666.线路代码\", \"shijiaotongweigongjiaoxianluxinxichuxingfuwu3666.路线名称\" FROM \"shijiaotongweigongjiaoxianluxinxichuxingfuwu3666\" - \"shigonganjujiaotongweifachulijigou1949\" WHERE \"shigonganjujiaotongweifachulijigou1949.交通违法处理机构\" = '机构名称';",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从表 `shijiaotongweigongjiaoxianluxinxichuxingfuwu3666` 中查询公交线路信息（线路代码和路线名称），并排除与表 `shigonganjujiaotongweifachulijigou1949` 中特定交通违法处理机构相关的记录。  \n\n### **详细描述**  \n1. **涉及的表**：  \n   - `shijiaotongweigongjiaoxianluxinxichuxingfuwu3666`（可能是一个公交线路信息表，存储公交线路的基本信息）。  \n   - `shigonganjujiaotongweifachulijigou1949`（可能是一个交通违法处理机构表，存储交通违法处理机构的信息）。  \n\n2. **涉及的列**：  \n   - `shijiaotongweigongjiaoxianluxinxichuxingfuwu3666.线路代码`（公交线路的唯一标识）。  \n   - `shijiaotongweigongjiaoxianluxinxichuxingfuwu3666.路线名称`（公交线路的名称）。  \n   - `shigonganjujiaotongweifachulijigou1949.交通违法处理机构`（交通违法处理机构的名称）。  \n\n3. **查询条件**：  \n   - 查询 `shijiaotongweigongjiaoxianluxinxichuxingfuwu3666` 表中的公交线路信息。  \n   - 使用 `-`（差集运算）排除与 `shigonganjujiaotongweifachulijigou1949` 表中 `交通违法处理机构 = '机构名称'` 的记录相关联的公交线路。  \n\n### **业务场景**  \n该查询可能用于以下业务场景：  \n- **公交线路优化**：交通管理部门可能需要分析哪些公交线路不经过特定的交通违法处理机构（例如，某些机构可能位于拥堵区域，需要优化公交线路）。  \n- **违法处理机构影响分析**：查询哪些公交线路不受特定交通违法处理机构的影响（例如，某些机构可能因执法严格导致公交运营受限）。  \n- **数据清洗**：从公交线路数据中排除与特定机构相关的记录，以便进行更精准的交通规划或统计。  \n\n### **用户描述**  \n在该业务场景下，用户（如交通规划人员或数据分析师）可能遇到以下问题或需求：  \n1. **问题**：  \n   - 某些公交线路可能因途经交通违法处理机构（如交警大队）而受到执法检查或拥堵影响，导致运营效率下降。  \n   - 需要找出不受特定机构影响的公交线路，以便优化公交调度或调整路线。  \n\n2. **需求**：  \n   - 获取所有公交线路信息，但排除与特定交通违法处理机构相关的线路，以便分析哪些线路可以自由调整或优化。  \n   - 可能需要结合其他数据（如违法记录、交通流量）进一步分析公交线路的运营状况。  \n\n### **补充说明**  \n- 该 SQL 使用了 `-`（差集运算），但具体语法可能因数据库系统（如 PostgreSQL、Oracle）而异，部分数据库可能使用 `EXCEPT` 或 `MINUS`。  \n- 表名和列名较长且带有数字后缀，可能是自动生成的临时表或数据仓库中的表，表明该查询可能是某个大数据分析或ETL流程的一部分。",
+  "natural_language_query": "市民反映，最近坐公交车老是遇到交警查车，特别耽误时间。想问问能不能查一下哪些公交线路不会经过那些经常查车的交警大队或者交通执法站？我家住朝阳区，平时主要坐300路和特8路，但听说有些线路因为总被查所以经常晚点。最好能避开这些有检查点的线路，查一下现在还有哪些线路是可以正常跑的，不会被这些执法机构影响的。主要是想看看除了我常坐的这几条线，还有哪些线路是可以选择的，来电反映公交线路受检查影响问题。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ WHERE _ = _ ;",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweigongjiaoxianluxinxichuxingfuwu3666": [
+      "shijiaotongweigongjiaoxianluxinxichuxingfuwu3666.线路代码",
+      "shijiaotongweigongjiaoxianluxinxichuxingfuwu3666.路线名称"
+    ],
+    "shigonganjujiaotongweifachulijigou1949": [
+      "shigonganjujiaotongweifachulijigou1949.交通违法处理机构",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 1",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 2",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 3",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 4",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 5",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 6"
+    ]
+  }
+}

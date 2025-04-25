@@ -1,0 +1,71 @@
+{
+  "sql": "SELECT \n    shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.本市市管游览参观点门票价格\nFROM \n    shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777\nWHERE \n    shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.本市市管游览参观点门票价格 > 0;",
+  "problem_description": "### 查询意图：\n该 SQL 语句的目的是从表 `shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777` 中查询所有门票价格大于零的“本市市管游览参观点门票价格”数据。\n\n### 详细描述：\n1. **表名**：`shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777`  \n   - 这是一个非常长的表名，可能包含“市发改委”、“游览参观点”、“现行门票价格及原价格信息”等信息。推测该表可能存储了由市发改委管理的游览参观点的门票价格信息，包括现行价格和原价格。\n\n2. **列名**：`本市市管游览参观点门票价格`  \n   - 该列存储了“本市市管游览参观点”的门票价格信息。列名明确表示这是本市管理的游览参观点的门票价格。\n\n3. **条件**：`shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.本市市管游览参观点门票价格 > 0`  \n   - 该条件筛选出所有门票价格大于零的记录。这意味着查询排除了门票价格为0或为负数的记录。\n\n### 业务场景：\n1. **价格监控与分析**：  \n   - 该查询可能用于监控和分析本市市管游览参观点的门票价格情况，确保价格合理且符合政策要求。\n\n2. **价格调整决策**：  \n   - 政府部门或相关管理机构可能需要了解当前门票价格分布，以便决定是否需要调整价格或制定新的价格政策。\n\n3. **免费或优惠活动排除**：  \n   - 查询排除了价格为0的记录，可能意味着需要关注的是收费的游览参观点，而忽略免费开放的景点。\n\n4. **数据清洗与验证**：  \n   - 该查询可能用于数据清洗，确保价格数据是有效的（即大于零），排除无效或错误的数据。\n\n### 用户描述：\n1. **政府部门或价格监管机构**：  \n   - 用户可能是市发改委或其他价格监管机构的工作人员，需要了解本市管理的游览参观点的收费情况，以便制定或调整价格政策。\n\n2. **业务需求**：  \n   - 用户可能需要生成一份报告，列出所有收费的游览参观点及其价格，用于政策研究或价格审查。\n   - 用户可能希望排除免费景点，专注于收费景点的价格管理。\n\n3. **实际问题**：  \n   - 用户可能遇到的问题是：某些景点可能因政策调整或活动促销而临时免费，但用户只关心长期收费的景点。\n   - 用户可能需要确保价格数据的准确性，避免因价格为零或负数而导致的分析错误。\n\n### 总结：\n该 SQL 语句主要用于从价格信息表中筛选出所有收费（价格大于零）的本市市管游览参观点门票价格数据，可能是为了价格监管、政策制定或数据分析等目的。",
+  "natural_language_query": "市民反映，想了解一下咱们北京市那些需要买票的公园和景点的收费情况。就是那种归市里直接管理的旅游景点，不是免费的，要花钱买门票的那种。听说有些景点可能搞活动会免票，但我想查的是正常收费的景点价格。最近在做一个关于景区票价的市场调研，需要这些数据做参考。能不能帮忙查查现在还在收费的市管景点都有哪些？价格是多少？主要是担心有些景点明明该收费但系统里显示免费，或者价格标错了影响调研结果。",
+  "results": [
+    [
+      "发布日期：2006-07-24   "
+    ],
+    [
+      "序号"
+    ],
+    [
+      "1"
+    ],
+    [
+      "2"
+    ],
+    [
+      "3"
+    ],
+    [
+      "4"
+    ],
+    [
+      "5"
+    ],
+    [
+      "6"
+    ],
+    [
+      "7"
+    ],
+    [
+      "8"
+    ],
+    [
+      "9"
+    ],
+    [
+      "10"
+    ],
+    [
+      "11"
+    ],
+    [
+      "12"
+    ],
+    [
+      "13"
+    ]
+  ],
+  "sql skeleton": "select _ from _ where _",
+  "database": "旅游住宿",
+  "tables": {
+    "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777": [
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.本市市管游览参观点门票价格",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 1",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 2",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 3",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 4",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 5",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 6"
+    ],
+    "shunyiquxingjifandian1276": [
+      "shunyiquxingjifandian1276.顺义区星级饭店",
+      "shunyiquxingjifandian1276.Unnamed: 1",
+      "shunyiquxingjifandian1276.Unnamed: 2",
+      "shunyiquxingjifandian1276.Unnamed: 3"
+    ]
+  }
+}

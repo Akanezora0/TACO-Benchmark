@@ -1,0 +1,51 @@
+{
+  "sql": "SELECT sga_phase_2_assessed_reaches.SGAT_ID, public_water_sources.SystemName FROM sga_phase_2_assessed_reaches INNER JOIN public_water_sources ON sga_phase_2_assessed_reaches.RchID = public_water_sources.RID WHERE sga_phase_2_assessed_reaches.FinalA = 'High';",
+  "problem_description": "### Query intent:\nThe SQL statement aims to retrieve specific data from two tables (`sga_phase_2_assessed_reaches` and `public_water_sources`) by performing an inner join based on a matching condition between their respective `RchID` and `RID` fields. The goal is to select records where the `FinalA` field in the `sga_phase_2_assessed_reaches` table has the value 'High', and then return the corresponding `SGAT_ID` from this table along with the `SystemName` from the `public_water_sources` table.\n\n### Detailed description:\n- **Tables involved**: \n    - `sga_phase_2_assessed_reaches`: This table likely contains information related to assessed reaches (possibly waterways) within a specific phase or project. It includes at least a column named `SGAT_ID` which serves as a unique identifier for each reach, and a `FinalA` field that might denote the final assessment level or criteria met.\n    - `public_water_sources`: This table appears to contain details about public water sources, possibly including a `SystemName` column that identifies different systems or sources of water.\n\n- **Join operation**: An `INNER JOIN` clause is used to combine rows from both tables based on matching values in the `RchID` column of `sga_phase_2_assessed_reaches` and the `RID` column of `public_water_sources`. This ensures that only records with matching identifiers are included in the result set.\n\n- **Selection criteria**:\n    - The `WHERE` clause filters the combined results to include only those rows where the `FinalA` field in the `sga_phase_2_assessed_reaches` table has the value 'High'. This implies that the SQL statement is looking for reaches that have been assessed at a high level of quality or compliance.\n\n### Business scenario:\nThis query could be utilized in a variety of environmental or water management contexts. For instance, it might be used by regulatory bodies, water utility companies, or environmental conservation organizations to identify high-quality water sources or reaches that have undergone rigorous assessment processes. This could be crucial for planning maintenance schedules, prioritizing resource allocation, or identifying areas for further improvement or protection.\n\n### User description:\nUsers might encounter situations where they need to analyze the status of various water sources or reaches based on predefined assessment criteria. For example, an environmental engineer or a water system manager might require a list of high-quality water sources that have been recently assessed and deemed to",
+  "natural_language_query": "A user interested in environmental management or water quality assessment might ask:\n\n\"I'm conducting a study on the high-quality water sources in our region. Specifically, I'm looking for information on any reaches that have been assessed and marked as 'High' in terms of their quality or compliance standards. Could you provide me with a list of these reaches along with the names of the corresponding public water systems? I'm particularly interested in understanding which systems meet these high standards so we can ensure continued monitoring and maintenance.\"\n\nThis query reflects a user's interest in obtaining detailed information about high-assessment water reaches and their associated public water systems, potentially for the purpose of environmental monitoring, compliance verification, or resource management.",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ WHERE _ = _ ;",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "sga_phase_2_assessed_reaches": [
+      "sga_phase_2_assessed_reaches.SGAT_ID",
+      "sga_phase_2_assessed_reaches.ProjectName",
+      "sga_phase_2_assessed_reaches.URLPage1",
+      "sga_phase_2_assessed_reaches.URLPage2",
+      "sga_phase_2_assessed_reaches.ReportList",
+      "sga_phase_2_assessed_reaches.FinalA",
+      "sga_phase_2_assessed_reaches.FinalB",
+      "sga_phase_2_assessed_reaches.FinalC",
+      "sga_phase_2_assessed_reaches.CorridorPlanA",
+      "sga_phase_2_assessed_reaches.CorridorPlanB",
+      "sga_phase_2_assessed_reaches.CorridorPlanC",
+      "sga_phase_2_assessed_reaches.RID",
+      "sga_phase_2_assessed_reaches.SID",
+      "sga_phase_2_assessed_reaches.OBJECTID",
+      "sga_phase_2_assessed_reaches.RchID",
+      "sga_phase_2_assessed_reaches.SegID",
+      "sga_phase_2_assessed_reaches.ProjectID"
+    ],
+    "public_water_sources": [
+      "public_water_sources.X",
+      "public_water_sources.Y",
+      "public_water_sources.TINWSF_IS_NUMBER",
+      "public_water_sources.WSID",
+      "public_water_sources.SystemName",
+      "public_water_sources.SystemType",
+      "public_water_sources.SystemStatus",
+      "public_water_sources.SystemPopulation",
+      "public_water_sources.FacilityName",
+      "public_water_sources.FacilityID",
+      "public_water_sources.FacilityStatus",
+      "public_water_sources.Availability",
+      "public_water_sources.WaterType",
+      "public_water_sources.ConstructedDate",
+      "public_water_sources.PermittedYield",
+      "public_water_sources.WellType",
+      "public_water_sources.Diameter_in",
+      "public_water_sources.WellDepth",
+      "public_water_sources.CasingDepth",
+      "public_water_sources.StaticWaterLevel"
+    ]
+  }
+}

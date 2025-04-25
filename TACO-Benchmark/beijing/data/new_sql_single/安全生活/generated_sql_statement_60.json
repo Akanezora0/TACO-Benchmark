@@ -1,0 +1,7 @@
+{
+  "sql": "SELECT column1 AS alias1, column2 AS alias2, column3 AS alias3 FROM table1 WHERE condition = 'value' ORDER BY column4 DESC",
+  "results": 0,
+  "sql skeleton": "select _ as _ ,_ as _ ,_ as _ from _ where _ = _ order by _",
+  "database": "安全生活",
+  "tables": {}
+}

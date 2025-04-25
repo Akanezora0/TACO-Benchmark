@@ -1,0 +1,9 @@
+{
+  "sql": "SELECT column1, column2 FROM table1 - table2 WHERE condition;",
+  "problem_description": "# SQL 语句分析\n\n## 查询意图\n这个 SQL 语句的目的是从 `table1` 和 `table2` 的差集（即存在于 `table1` 但不存在于 `table2` 的记录）中选择满足特定条件的 `column1` 和 `column2` 数据。\n\n## 详细描述\n- **涉及的表**：\n  - `table1`：主表，从中获取基础数据\n  - `table2`：用于与 `table1` 进行比较的表\n\n- **操作**：\n  - `table1 - table2`：这是一个集合差集操作（在某些数据库中可能使用 `EXCEPT` 或 `MINUS` 关键字），返回在 `table1` 中存在但在 `table2` 中不存在的记录\n\n- **选择的列**：\n  - `column1` 和 `column2`：从差集结果中选择这两列的数据\n\n- **条件**：\n  - `WHERE condition`：对差集结果进一步筛选，只有满足该条件的记录才会被返回\n\n## 业务场景\n这种查询在以下业务场景中非常有用：\n1. **数据对比**：找出在一个系统中存在但在另一个系统中不存在的数据\n2. **数据同步**：识别需要从源系统同步到目标系统的记录\n3. **异常检测**：发现应该存在但实际上缺失的数据\n4. **数据清理**：识别可以安全删除的孤立数据\n\n## 用户描述\n用户可能面临以下实际问题或需求：\n- \"我需要找出哪些客户在我们的主数据库中，但还没有同步到营销系统中\"\n- \"我想知道哪些产品在库存系统中，但从未出现在销售记录中\"\n- \"请帮我识别已注册但从未登录过的用户账户\"\n- \"我需要找出哪些订单已经创建但尚未处理的记录\"\n\n注意：这个SQL语法`table1 - table2`不是标准SQL语法，在大多数数据库中，集合差集操作使用`EXCEPT`(SQL Server, PostgreSQL)或`MINUS`(Oracle)关键字。标准写法应该是：\n```sql\nSELECT column1, column2 FROM table1\nEXCEPT\nSELECT column1, column2 FROM table2\nWHERE condition;\n```",
+  "natural_language_query": "市民反映，我们公司最近在做系统数据核对时发现一个问题：主系统里的客户资料好像和营销系统对不上。我这边能看到很多客户在我们内部管理系统里是存在的，但是营销部门的同事说他们系统里查不到这些客户信息。能不能帮忙查一下，到底有哪些客户是只在我们主系统里有记录，但营销系统里没有的？特别是那些注册超过一个月但从来没收到过营销推送的客户。我们担心是不是数据同步出了问题，导致这部分客户漏掉了营销服务。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ ;",
+  "database": "安全生活",
+  "tables": {}
+}

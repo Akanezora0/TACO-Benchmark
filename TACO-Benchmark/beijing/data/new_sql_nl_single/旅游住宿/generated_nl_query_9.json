@@ -1,0 +1,26 @@
+{
+  "sql": "SELECT shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.本市市管游览参观点门票价格 FROM shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777 WHERE shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.本市市管游览参观点门票价格 IN (\n    SELECT xichengquxichengquxingjifandianminglu19.?星级酒店名称 FROM xichengquxichengquxingjifandianminglu19 WHERE xichengquxichengquxingjifandianminglu19.?星级 = '5'\n)\n```",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是查询本市市管游览参观点门票价格表中，门票价格与西城区五星级酒店名称相匹配的记录。\n\n- **详细描述**：\n  - **主查询**：从表 `shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777` 中选择列 `本市市管游览参观点门票价格`。\n  - **子查询**：从表 `xichengquxichengquxingjifandianminglu19` 中选择列 `?星级酒店名称`，条件是 `?星级` 等于 '5'（即五星级酒店）。\n  - **条件**：主查询中的 `本市市管游览参观点门票价格` 必须出现在子查询的结果中（即门票价格与五星级酒店名称相匹配）。\n\n- **业务场景**：\n  - 该查询可能用于分析或比较本市市管游览参观点门票价格与西城区五星级酒店名称之间的关系。例如，可能用于研究门票价格是否与高端酒店名称有某种关联，或者用于筛选特定类型的门票价格数据。\n  - 另一个可能的场景是数据验证或数据清理，确保门票价格与已知的五星级酒店名称一致。\n\n- **用户描述**：\n  - 用户可能需要了解本市市管游览参观点门票价格是否与高端酒店（如五星级酒店）的名称有某种关联，以便进行市场分析或定价策略调整。\n  - 用户可能需要验证门票价格数据是否与已知的五星级酒店名称一致，以确保数据的准确性和一致性。\n  - 用户可能在进行某种数据整合或匹配任务，需要找出门票价格与五星级酒店名称相匹配的记录，以便进一步分析或报告。",
+  "natural_language_query": "市民反映一个比较奇怪的情况，想咨询一下：最近在整理旅游景点资料时发现，本市一些著名景点的门票价格居然和西城区那些高档五星级酒店的名字一模一样。比如看到\"颐和园门票价格是888元\"，而西城区正好有个\"888大酒店\"还是五星级的。这种情况正常吗？能不能帮忙查查到底有多少个景点的门票价格是和五星级酒店名字重合的？我这边在做旅游市场调研，发现这个现象特别有意思，想了解一下是巧合还是有什么特殊原因。主要是西城区挂牌的五星级酒店名称和景点门票价格相同的这些情况。",
+  "results": 0,
+  "sql skeleton": "select _ from _ where _ in (select _ from _ where _ )",
+  "database": "旅游住宿",
+  "tables": {
+    "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777": [
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.本市市管游览参观点门票价格",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 1",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 2",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 3",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 4",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 5",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 6"
+    ],
+    "xichengquxichengquxingjifandianminglu19": [
+      "xichengquxichengquxingjifandianminglu19.序号",
+      "xichengquxichengquxingjifandianminglu19.?星级酒店名称",
+      "xichengquxichengquxingjifandianminglu19.?星级",
+      "xichengquxichengquxingjifandianminglu19.?联系电话",
+      "xichengquxichengquxingjifandianminglu19.?酒店地址"
+    ]
+  }
+}

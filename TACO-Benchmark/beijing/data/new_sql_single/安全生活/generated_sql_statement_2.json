@@ -1,0 +1,7 @@
+{
+  "sql": "SELECT DISTINCT table1.\"column1\" as alias1, table1.\"column2\" as alias2, table1.\"column3\" as alias3, table1.\"column4\" = 'value' as alias4 FROM table1 where table1.\"column5\" = 'value'",
+  "results": 0,
+  "sql skeleton": "SELECT DISTINCT _ ._ as _ ,_ ._ as _ ,_ ._ as _ ,_ ._ = _ as _ FROM _ where _ ._ = _",
+  "database": "安全生活",
+  "tables": {}
+}

@@ -1,0 +1,21 @@
+{
+  "sql": "SELECT \"shijiaotongweiweixianpinyunshuqiye3674.企业名称\", \"shijiaotongweichaoxianchaozaihuochexiezaicha\"ng地点\" FROM \"shijiaotongweiweixianpinyunshuqiye3674\" - \"shijiaotongweichaoxianchaozaihuochexiezaichangdi3663\" WHERE \"shijiaotongweiweixianpinyunshuqiye3674.所属地区\" = \"shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.行政区划代码\";",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从危险品运输企业表中筛选出与超限超载货车卸货场地点相关的企业信息，并仅返回企业名称和卸货场地点两列数据。查询通过匹配所属地区和行政区划代码来关联两个表。\n\n---\n\n### **详细描述**  \n1. **涉及的表**：  \n   - `shijiaotongweiweixianpinyunshuqiye3674`（危险品运输企业表）  \n   - `shijiaotongweichaoxianchaozaihuochexiezaichangdi3663`（超限超载货车卸货场地点表）  \n\n2. **查询的列**：  \n   - `shijiaotongweiweixianpinyunshuqiye3674.企业名称`（危险品运输企业的名称）  \n   - `shijiaotongweichaoxianchaozaihuochexiezaichang地点`（超限超载货车的卸货场地点）  \n\n3. **查询条件**：  \n   - `shijiaotongweiweixianpinyunshuqiye3674.所属地区 = shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.行政区划代码`  \n     - 表示仅选择危险品运输企业所属地区与卸货场地点表中行政区划代码相匹配的记录。  \n\n4. **操作**：  \n   - 使用 `表A - 表B` 的语法（可能是集合差集操作，但在此上下文中更可能是 JOIN 或数据关联的误写）。  \n   - 实际意图可能是通过 `WHERE` 条件关联两表，而非集合运算。  \n\n---\n\n### **业务场景**  \n该查询可能用于以下业务场景：  \n1. **危险品运输监管**：  \n   - 监管部门需要掌握哪些危险品运输企业（如化工、易燃易爆品运输公司）在特定行政区划内运营，并与超限超载货车的卸货场地点相关联。  \n2. **交通安全管理**：  \n   - 分析危险品运输企业与货车超载卸货场的分布关系，以评估高风险区域或规划执法检查重点。  \n3. **数据整合分析**：  \n   - 将企业信息与卸货场地点数据关联，生成报表供交通管理部门决策使用。  \n\n---\n\n### **用户描述**  \n在上述业务场景中，用户（如交通管理局或安监部门工作人员）可能面临以下问题或需求：  \n1. **需求**：  \n   - 需要快速定位哪些危险品运输企业可能涉及超限超载运输行为，以便针对性检查。  \n   - 希望了解企业与其卸货场的地理分布关系，优化监管资源分配。  \n2. **痛点**：  \n   - 数据分散在不同表中，需手动关联分析，效率低下。  \n   - 缺乏直观的关联视图，难以直接发现高风险企业或区域。  \n3. **解决方案**：  \n   - 通过该 SQL 查询自动关联两表数据，直接输出企业名称和对应卸货场地点，辅助监管决策。  \n\n---\n\n### **备注**  \n- 如果 `表A - 表B` 确实是集合差集操作（如排除某些记录），则查询意图可能是“找出未在卸货场地点表中登记的危险品运输企业”。需根据实际业务确认语法意图。  \n- 表名和列名较长且为拼音缩写，建议优化命名规范以提高可读性。",
+  "natural_language_query": "市民反映，最近在顺义区李桥镇附近经常看到一些运输化学品的大货车，感觉这些车辆可能存在超载问题，卸货地点也不太规范。想问问咱们交通管理部门能不能查一下，这些危险品运输公司都在哪些地方卸货？特别是那些和企业注册地址不一致的卸货点，感觉挺不安全的。我邻居说在张镇就看到过这种危险品车在路边随便卸货，希望你们能重点查查这些企业，看是不是存在违规操作。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ WHERE _ = _ ;",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweiweixianpinyunshuqiye3674": [
+      "shijiaotongweiweixianpinyunshuqiye3674.企业名称",
+      "shijiaotongweiweixianpinyunshuqiye3674.所属地区",
+      "shijiaotongweiweixianpinyunshuqiye3674.经营许可证号"
+    ],
+    "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663": [
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.行政区划代码",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.站点名称",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.联系电话",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.地址"
+    ]
+  }
+}

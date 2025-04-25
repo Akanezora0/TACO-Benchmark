@@ -1,0 +1,1716 @@
+{
+  "sql": "SELECT DISTINCT outdoor_recreation_sites_inventory.NAME, outdoor_recreation_sites_inventory.SITE_NAME, outdoor_recreation_sites_inventory.ACREAGE FROM outdoor_recreation_sites_inventory WHERE outdoor_recreation_sites_inventory.ACREAGE > 100;",
+  "problem_description": "### Query intent:\nThe SQL statement is designed to select unique combinations of certain attributes from a database table related to outdoor recreation sites.\n\n### Detailed description:\n- **Table**: `outdoor_recreation_sites_inventory` - This table likely contains records about various outdoor recreation sites, possibly including details such as site names, acreages, locations, and other relevant information.\n- **Columns**:\n  - `NAME`: A unique identifier for each record or perhaps another name for the site, possibly not distinct due to the `DISTINCT` keyword being used.\n  - `SITE_NAME`: The name of the outdoor recreation site.\n  - `ACREAGE`: The size of the site in acres.\n- **Condition**:\n  - `outdoor_recreation_sites_inventory.ACREAGE > 100`: This condition filters the records to only include those sites that have more than 100 acres.\n\n### Business scenario:\nThis query is typically used in scenarios where administrators or managers need to identify large outdoor recreation sites, which might be of particular interest for various reasons such as planning large-scale events, assessing land use, or evaluating potential investment opportunities.\n\n### User description:\nUsers who are tasked with managing or analyzing outdoor recreation sites would find this query useful. For example, a park manager might want to quickly see a list of all large parks (over 100 acres) within their jurisdiction for planning purposes. Similarly, an environmental scientist studying the impact of land use on biodiversity might need data on larger sites to conduct more detailed studies.",
+  "natural_language_query": "\"Hello, I'm looking for a list of large outdoor recreation areas. Specifically, I'm interested in finding sites that cover more than 100 acres. Can you provide me with the names and sizes of these areas? This information will help me in planning upcoming events and understanding the scope of our recreational spaces.\"",
+  "results": [
+    [
+      "ORLEANS",
+      "HAZEN'S NOTCH STATE PARK",
+      197.0
+    ],
+    [
+      "FRANKLIN",
+      "HAZEN'S NOTCH NORDIC SKI AREA",
+      2000.0
+    ],
+    [
+      "ORLEANS",
+      "ALPINE HAVEN",
+      160.0
+    ],
+    [
+      "ORLEANS",
+      "JAY PEAK SKI RESORT",
+      3000.0
+    ],
+    [
+      "ORLEANS",
+      "HIGHLAND LODGE",
+      150.0
+    ],
+    [
+      "LAMOILLE",
+      "EAST HILL WMA",
+      257.0
+    ],
+    [
+      "LAMOILLE",
+      "CENTER FOR NORTHERN STUDIES",
+      350.0
+    ],
+    [
+      "ORLEANS",
+      "STERLING COLLEGE",
+      250.0
+    ],
+    [
+      "ORLEANS",
+      "CRAFTSBURY SPORTS CENTER",
+      140.0
+    ],
+    [
+      "ORLEANS",
+      "BARR HILL NATURAL AREA",
+      256.0
+    ],
+    [
+      "CALEDONIA",
+      "HARDWICK VILLAGE MUNICIPAL FOREST",
+      341.0
+    ],
+    [
+      "LAMOILLE",
+      "WAPANACKI PROGRAM CENTER",
+      235.0
+    ],
+    [
+      "ORLEANS",
+      "DERBY TOWN FOREST",
+      283.0
+    ],
+    [
+      "ORLEANS",
+      "SOUTH BAY WMA",
+      1559.0
+    ],
+    [
+      "ORLEANS",
+      "HEERMAN SMITH FARM INN",
+      125.0
+    ],
+    [
+      "ORLEANS",
+      "NEWPORT COUNTRY CLUB",
+      121.0
+    ],
+    [
+      "ORLEANS",
+      "ORLEANS COUNTRY CLUB",
+      103.0
+    ],
+    [
+      "ORLEANS",
+      "WILLOUGHBY FALLS WMA",
+      130.0
+    ],
+    [
+      "ORLEANS",
+      "BILL SLADYK WMA 1",
+      9386.0
+    ],
+    [
+      "CALEDONIA",
+      "BALD HILL WMA",
+      931.55
+    ],
+    [
+      "CALEDONIA",
+      "CENTER POND LAND",
+      700.0
+    ],
+    [
+      "ORLEANS",
+      "SELDOM REST FARM",
+      140.0
+    ],
+    [
+      "ORLEANS",
+      "WILLIAMS LOT FOREST",
+      213.0
+    ],
+    [
+      "ORLEANS",
+      "CHARLESTON MUNICIPAL FOREST",
+      236.0
+    ],
+    [
+      "CALEDONIA",
+      "WILLOUGHBY SF ACCESS 2",
+      7300.0
+    ],
+    [
+      "ESSEX",
+      "BRIGHTON STATE PARK DAY USE AREA",
+      152.4
+    ],
+    [
+      "ESSEX",
+      "BRIGHTON STATE PARK CAMPGROUND",
+      152.0
+    ],
+    [
+      "ESSEX",
+      "BRIGHTON WATERSHED -NORTH",
+      315.0
+    ],
+    [
+      "ESSEX",
+      "BRIGHTON WATERSHED - SOUTH",
+      435.0
+    ],
+    [
+      "ESSEX",
+      "AVERILL MOUNTAIN WMA",
+      510.0
+    ],
+    [
+      "ESSEX",
+      "QUIMBY COUNTRY INC.",
+      600.0
+    ],
+    [
+      "ESSEX",
+      "BLACK TURN BROOK STATE FOREST",
+      592.0
+    ],
+    [
+      "ESSEX",
+      "WENLOCK WMA",
+      1994.0
+    ],
+    [
+      "ESSEX",
+      "VICTORY BASIN WMA",
+      4970.0
+    ],
+    [
+      "ESSEX",
+      "VICTORY STATE FOREST",
+      13226.0
+    ],
+    [
+      "ESSEX",
+      "MAIDSTONE STATE FOREST",
+      469.0
+    ],
+    [
+      "CALEDONIA",
+      "ROY MOUNTAIN WMA",
+      1184.0
+    ],
+    [
+      "CALEDONIA",
+      "LEVI POND WMA",
+      259.0
+    ],
+    [
+      "CALEDONIA",
+      "GROTON STATE FOREST",
+      26000.0
+    ],
+    [
+      "CALEDONIA",
+      "ST. JOHNSBURY COUNTRY CLUB",
+      118.0
+    ],
+    [
+      "CALEDONIA",
+      "LYNDON STATE COLLEGE",
+      500.0
+    ],
+    [
+      "CALEDONIA",
+      "BURKE MOUNTAIN",
+      130.0
+    ],
+    [
+      "CALEDONIA",
+      "BURKE MTN. CROSS COUNTRY",
+      2000.0
+    ],
+    [
+      "CALEDONIA",
+      "BURKE MTN. CAMPGROUND",
+      200.0
+    ],
+    [
+      "CALEDONIA",
+      "CALENDAR BROOK WMA",
+      340.0
+    ],
+    [
+      "CALEDONIA",
+      "MATTHEWSON STATE FOREST",
+      794.0
+    ],
+    [
+      "CALEDONIA",
+      "STEAM MILL BROOK WMA",
+      8441.0
+    ],
+    [
+      "CALEDONIA",
+      "WOODLAND LODGE",
+      102.0
+    ],
+    [
+      "CALEDONIA",
+      "MOUNTAIN VIEW CREAMERY",
+      440.0
+    ],
+    [
+      "LAMOILLE",
+      "TOPNOTCH RESORT X-C SKI CENTER",
+      120.0
+    ],
+    [
+      "LAMOILLE",
+      "TOPNOTCH AT STOWE RESORT & SPA",
+      120.0
+    ],
+    [
+      "LAMOILLE",
+      "TRAPP FAMILY LODGE X-COUNTRY SKI",
+      2000.0
+    ],
+    [
+      "LAMOILLE",
+      "STERLING VALLEY MUNICIPAL FOREST",
+      2150.0
+    ],
+    [
+      "LAMOILLE",
+      "EDSON HILL MANOR & SKI TOURING CTR.",
+      225.0
+    ],
+    [
+      "LAMOILLE",
+      "STOWE MT. CROSS COUNTRY CENTER",
+      1000.0
+    ],
+    [
+      "LAMOILLE",
+      "PEOPLE'S ACADEMY",
+      307.0
+    ],
+    [
+      "LAMOILLE",
+      "THE FARM RESORT",
+      200.0
+    ],
+    [
+      "LAMOILLE",
+      "MORRISTOWN FOREST",
+      557.0
+    ],
+    [
+      "LAMOILLE",
+      "GREEN RIVER RESERVOIR",
+      650.0
+    ],
+    [
+      "LAMOILLE",
+      "MT. NORRIS SCOUT RESERVATION",
+      900.0
+    ],
+    [
+      "LAMOILLE",
+      "WILD BRANCH WMA",
+      410.0
+    ],
+    [
+      "LAMOILLE",
+      "ELMORE STATE PARK",
+      709.0
+    ],
+    [
+      "LAMOILLE",
+      "SMUGGLERS' NOTCH RESORT",
+      1200.0
+    ],
+    [
+      "FRANKLIN",
+      "THE TYLER PLACE",
+      165.0
+    ],
+    [
+      "FRANKLIN",
+      "LAKE CARMI STATE PARK",
+      482.0
+    ],
+    [
+      "FRANKLIN",
+      "FRANKLIN BOG",
+      176.0
+    ],
+    [
+      "FRANKLIN",
+      "WOODS ISLAND STATE PARK",
+      120.0
+    ],
+    [
+      "FRANKLIN",
+      "BURTON ISLAND STATE PARK",
+      253.0
+    ],
+    [
+      "FRANKLIN",
+      "FAIRFIELD POND BEACH",
+      464.0
+    ],
+    [
+      "FRANKLIN",
+      "TOWN FOREST",
+      105.0
+    ],
+    [
+      "GRAND ISLE",
+      "NORTH HERO STATE PARK",
+      399.0
+    ],
+    [
+      "GRAND ISLE",
+      "APPLE TREE BAY RESORT",
+      188.0
+    ],
+    [
+      "GRAND ISLE",
+      "EAGLE CAMP, INC.",
+      175.0
+    ],
+    [
+      "GRAND ISLE",
+      "ALBURG COUNTRY CLUB",
+      400.0
+    ],
+    [
+      "GRAND ISLE",
+      "KNIGHT ISLAND STATE PARK",
+      175.0
+    ],
+    [
+      "ORANGE",
+      "SKITCHWANG WMA",
+      218.0
+    ],
+    [
+      "ORANGE",
+      "WASHINGTON WMA",
+      260.0
+    ],
+    [
+      "ORANGE",
+      "WASHINGTON STATE FOREST",
+      430.0
+    ],
+    [
+      "ORANGE",
+      "THETFORD HILL STATE PARK",
+      262.0
+    ],
+    [
+      "WINDSOR",
+      "DOWNER SF",
+      705.0
+    ],
+    [
+      "WINDSOR",
+      "WHITE RIVER WMA",
+      623.0
+    ],
+    [
+      "ORANGE",
+      "CLOVER HILL WMA",
+      505.73
+    ],
+    [
+      "ORANGE",
+      "WEST FAIRLEE WMA",
+      101.1
+    ],
+    [
+      "ORANGE",
+      "PODUNK WMA",
+      923.7
+    ],
+    [
+      "ORANGE",
+      "THREE STALION INN",
+      1300.0
+    ],
+    [
+      "ORANGE",
+      "AINSWORTH SP",
+      880.0
+    ],
+    [
+      "ORANGE",
+      "ALLIS STATE PARK 1",
+      487.0
+    ],
+    [
+      "ADDISON",
+      "GRANVILLE GULF RESERVATION",
+      171.0
+    ],
+    [
+      "WASHINGTON",
+      "ROXBURY STATE FOREST",
+      5509.56
+    ],
+    [
+      "ADDISON",
+      "KILLOOLEET CAMP",
+      300.0
+    ],
+    [
+      "WINDSOR",
+      "RILEY BOSTWICK WMA",
+      364.0
+    ],
+    [
+      "WINDSOR",
+      "ROCHESTER WMA",
+      251.0
+    ],
+    [
+      "RUTLAND",
+      "AIKEN STATE FOREST",
+      918.0
+    ],
+    [
+      "WINDSOR",
+      "DENOMORE WMA",
+      251.6
+    ],
+    [
+      "WINDSOR",
+      "COOLIDGE STATE FOREST",
+      1465.0
+    ],
+    [
+      "WINDSOR",
+      "OTTAQUEECHEE WMA",
+      283.0
+    ],
+    [
+      "WINDSOR",
+      "COOLIDGE SF",
+      264.0
+    ],
+    [
+      "WINDSOR",
+      "HURRICANE HILL FOREST & WILDLIFE RE",
+      142.0
+    ],
+    [
+      "WINDSOR",
+      "QUECHEE STATE PARK",
+      612.0
+    ],
+    [
+      "WINDSOR",
+      "BILLINGS PARK",
+      125.0
+    ],
+    [
+      "WINDSOR",
+      "AMITY POND NAT. AREA SP",
+      184.0
+    ],
+    [
+      "WINDSOR",
+      "PARADISE PARK",
+      135.5
+    ],
+    [
+      "WINDSOR",
+      "MT. ASCUTNEY STATE PARK",
+      2366.46
+    ],
+    [
+      "WINDSOR",
+      "LITTLE ASCUTNEY WMA",
+      656.0
+    ],
+    [
+      "WINDSOR",
+      "KNAPP POND WMA",
+      631.0
+    ],
+    [
+      "WINDSOR",
+      "HAWKS MOUNTAIN WMA",
+      2331.0
+    ],
+    [
+      "WINDSOR",
+      "OKEMO MOUNTAIN SKI RESORT",
+      485.0
+    ],
+    [
+      "RUTLAND",
+      "OKEMO STATE FOREST",
+      5235.0
+    ],
+    [
+      "WINDSOR",
+      "CAMP PLYMOUTH STATE PARK",
+      300.0
+    ],
+    [
+      "WINDSOR",
+      "PROCTOR PIPER STATE FOREST",
+      1913.0
+    ],
+    [
+      "WINDSOR",
+      "ZEULEIKA FARMS",
+      485.0
+    ],
+    [
+      "WINDSOR",
+      "COOLIDGE STATE FOREST",
+      1221.0
+    ],
+    [
+      "WINDSOR",
+      "COOLIDGE STATE PARK",
+      16165.0
+    ],
+    [
+      "WINDSOR",
+      "COOLIDGE STATE FOREST",
+      926.0
+    ],
+    [
+      "WINDSOR",
+      "HAWK INN & MOUNTAIN RESORT",
+      1200.0
+    ],
+    [
+      "WINDSOR",
+      "BARN DAY CAMP (FARM&WILDERNESS)",
+      500.0
+    ],
+    [
+      "WINDSOR",
+      "WANTASTIQUET TROUT CLUB",
+      288.0
+    ],
+    [
+      "BENNINGTON",
+      "HAPGOOD SF",
+      118.0
+    ],
+    [
+      "WINDHAM",
+      "LOWELL LAKE SP",
+      461.0
+    ],
+    [
+      "WINDHAM",
+      "GALE MEADOWS WMA",
+      483.0
+    ],
+    [
+      "WINDHAM",
+      "JAMAICA STATE PARK ACCESS 1",
+      689.0
+    ],
+    [
+      "WINDHAM",
+      "BELLOWS FALLS UHS RECREATION AREA",
+      120.0
+    ],
+    [
+      "WINDHAM",
+      "HAYDEN BROWN PARK",
+      853.0
+    ],
+    [
+      "WINDHAM",
+      "GRAFTON PONDS CROSS COUNTRY SKI CTR",
+      200.0
+    ],
+    [
+      "WINDHAM",
+      "W.C. PUTNAM SF",
+      151.0
+    ],
+    [
+      "WINDHAM",
+      "MOLLIE BEATTIE STATE FOREST",
+      203.0
+    ],
+    [
+      "WINDHAM",
+      "J.J. DORAND SF",
+      518.0
+    ],
+    [
+      "WINDSOR",
+      "WILLIAMS RIVER SF",
+      108.0
+    ],
+    [
+      "WINDSOR",
+      "GREEN MOUNTAIN UHSD #35 HS",
+      160.0
+    ],
+    [
+      "WINDSOR",
+      "CHESTER ROD AND GUN CLUB",
+      120.0
+    ],
+    [
+      "BENNINGTON",
+      "LYE BROOK WILDRNESS AREA",
+      15680.0
+    ],
+    [
+      "WINDHAM",
+      "GROUT POND",
+      160.0
+    ],
+    [
+      "WINDHAM",
+      "STRATTON MOUNTAIN SKI & SUMMER RES.",
+      4000.0
+    ],
+    [
+      "WINDHAM",
+      "DOVER TOWN FOREST",
+      1600.0
+    ],
+    [
+      "WINDHAM",
+      "LANDMARK COLLEGE",
+      128.0
+    ],
+    [
+      "WINDHAM",
+      "PUTNEY SCHOOL REC. AREA",
+      400.0
+    ],
+    [
+      "WINDHAM",
+      "NEWFANE OFF-ROAD BIKING",
+      1000.0
+    ],
+    [
+      "WINDHAM",
+      "WINCHESTER STABLES",
+      1000.0
+    ],
+    [
+      "WINDHAM",
+      "MARLBORO COLLEGE",
+      280.0
+    ],
+    [
+      "WINDHAM",
+      "FORT DUMMER STATE PARK",
+      217.0
+    ],
+    [
+      "WINDHAM",
+      "ROARING BROOK WMA",
+      1374.9
+    ],
+    [
+      "WINDHAM",
+      "BRATTLEBORO COUNTRY CLUB",
+      150.0
+    ],
+    [
+      "WINDHAM",
+      "MOLLY STARK STATE PARK",
+      158.0
+    ],
+    [
+      "BENNINGTON",
+      "LION'S PARK",
+      400.0
+    ],
+    [
+      "BENNINGTON",
+      "STAMFORD MEADOWS WMA",
+      4691.0
+    ],
+    [
+      "BENNINGTON",
+      "WOODFORD SP",
+      401.1
+    ],
+    [
+      "BENNINGTON",
+      "PROSPECT MOUNTAIN SKI AREA",
+      150.0
+    ],
+    [
+      "CHITTENDEN",
+      "BOLTON VALLEY RESORT",
+      5200.0
+    ],
+    [
+      "CHITTENDEN",
+      "ROBBINS MOUNTAIN WMA",
+      888.0
+    ],
+    [
+      "WASHINGTON",
+      "WRIGHTSVILLE DAM",
+      753.65
+    ],
+    [
+      "WASHINGTON",
+      "BUCK LAKE F&W ACCESS",
+      275.0
+    ],
+    [
+      "WASHINGTON",
+      "COVENANT HILLS CHRISTIAN CAMP",
+      186.0
+    ],
+    [
+      "WASHINGTON",
+      "U-32 TRACK AND SOCCER FIELD",
+      140.0
+    ],
+    [
+      "GRAND ISLE",
+      "MUD CREEK WMA",
+      1151.49
+    ],
+    [
+      "FRANKLIN",
+      "MAQUAM BAY WMA",
+      828.9
+    ],
+    [
+      "GRAND ISLE",
+      "ALBURG DUNES STATE PARK",
+      622.18
+    ],
+    [
+      "FRANKLIN",
+      "FAIRFIELD SWAMP -",
+      1526.0
+    ],
+    [
+      "FRANKLIN",
+      "ELM BROOK WMA",
+      208.0
+    ],
+    [
+      "FRANKLIN",
+      "AVERY'S GORE WMA",
+      259.2
+    ],
+    [
+      "WASHINGTON",
+      "BLUEBERRY LAKE CROSS COUNTRY SKI",
+      1000.0
+    ],
+    [
+      "WASHINGTON",
+      "OLE'S CROSS COUNTRY CENTER",
+      110.0
+    ],
+    [
+      "WASHINGTON",
+      "SUGARBUSH GOLF COURSE",
+      200.0
+    ],
+    [
+      "WASHINGTON",
+      "SUGARBUSH SKI RESORT",
+      5872.0
+    ],
+    [
+      "WASHINGTON",
+      "MONTPELIER COUNTRY CLUB",
+      143.0
+    ],
+    [
+      "WASHINGTON",
+      "MAD RIVER GLEN SKI AREA",
+      700.0
+    ],
+    [
+      "RUTLAND",
+      "GIFFORD WOODS STATE PARK",
+      114.0
+    ],
+    [
+      "RUTLAND",
+      "KILLINGTON GOLF COURSE",
+      103.0
+    ],
+    [
+      "RUTLAND",
+      "MOUNTAIN TOP SKI TOURING CENTER",
+      500.0
+    ],
+    [
+      "RUTLAND",
+      "NESHOBE GOLF COURSE",
+      150.0
+    ],
+    [
+      "RUTLAND",
+      "PICO SKI RESORT",
+      200.0
+    ],
+    [
+      "RUTLAND",
+      "PROCTOR PITTSFORD COUNTRY CLUB",
+      143.0
+    ],
+    [
+      "RUTLAND",
+      "RUTLAND COUNTRY CLUB",
+      400.0
+    ],
+    [
+      "ORANGE",
+      "PINE MOUNTAIN WMA",
+      2271.0
+    ],
+    [
+      "WINDSOR",
+      "SONNENBERG",
+      235.0
+    ],
+    [
+      "WINDHAM",
+      "BALL MT LAKE FLOOD CONTROL RESERVOI",
+      1227.0
+    ],
+    [
+      "ADDISON",
+      "RALPH MYRE GOLF COURSE",
+      110.0
+    ],
+    [
+      "ADDISON",
+      "BLUEBERRY HILL",
+      150.0
+    ],
+    [
+      "CHITTENDEN",
+      "BURLINGTON COUNTRY CLUB",
+      140.0
+    ],
+    [
+      "CHITTENDEN",
+      "TWIN HILLS",
+      270.7
+    ],
+    [
+      "CHITTENDEN",
+      "ROCKY RIDGE GOLF COURSE",
+      130.0
+    ],
+    [
+      "CHITTENDEN",
+      "WILLISTON GOLF COURSE",
+      115.0
+    ],
+    [
+      "CHITTENDEN",
+      "CATAMOUNT FAMILY CENTER, INC.",
+      500.0
+    ],
+    [
+      "RUTLAND",
+      "MOUNT CARMEL STATE FOREST",
+      263.0
+    ],
+    [
+      "RUTLAND",
+      "KENT POND F&W ACCESS",
+      128.0
+    ],
+    [
+      "WINDSOR",
+      "FLYING CLOUD(FARM &WILDERNESS)",
+      500.0
+    ],
+    [
+      "RUTLAND",
+      "OTTER CREEK WMA ACCESS 1",
+      1142.0
+    ],
+    [
+      "WINDHAM",
+      "TOWNSHEND STATE PARK",
+      856.0
+    ],
+    [
+      "WINDHAM",
+      "BALD MOUNTAIN CAMPGROUND",
+      160.0
+    ],
+    [
+      "WINDHAM",
+      "ATHERTON MEADOW WMA",
+      799.0
+    ],
+    [
+      "WINDHAM",
+      "SADAWGA DAM PS",
+      203.0
+    ],
+    [
+      "BENNINGTON",
+      "HILDENE SKI TOURING CENTER",
+      412.0
+    ],
+    [
+      "BENNINGTON",
+      "DORSET FIELD CLUB",
+      108.0
+    ],
+    [
+      "BENNINGTON",
+      "EKWANOK COUNTRY CLUB",
+      150.0
+    ],
+    [
+      "BENNINGTON",
+      "GLENEAGLES GOLF COURSE AT EQUINOX",
+      120.0
+    ],
+    [
+      "WINDHAM",
+      "HERMITAGE TOURING CENTER",
+      1000.0
+    ],
+    [
+      "BENNINGTON",
+      "STRATTON MOUNTAIN COUNTRY CLUB",
+      200.0
+    ],
+    [
+      "CHITTENDEN",
+      "MILTON TOWN FOREST",
+      353.0
+    ],
+    [
+      "CHITTENDEN",
+      "MALLETTS BAY STATE PARK",
+      290.0
+    ],
+    [
+      "CHITTENDEN",
+      "MCREA FARM",
+      288.0
+    ],
+    [
+      "CHITTENDEN",
+      "ETHAN ALLEN HOMESTEAD",
+      284.0
+    ],
+    [
+      "CHITTENDEN",
+      "COLCHESTER AA",
+      693.0
+    ],
+    [
+      "CHITTENDEN",
+      "ESSEX COUNTRY CLUB",
+      140.0
+    ],
+    [
+      "CHITTENDEN",
+      "INDIAN BROOK RESERVOIR",
+      501.0
+    ],
+    [
+      "CHITTENDEN",
+      "JERICHO TOWN FARM FOREST",
+      230.0
+    ],
+    [
+      "CHITTENDEN",
+      "ETHAN ALLEN FIRING RANGE",
+      11200.0
+    ],
+    [
+      "CHITTENDEN",
+      "LAKE IROQUOIS BEACH & REC. AREA",
+      150.0
+    ],
+    [
+      "CHITTENDEN",
+      "MUD POND CONSERVATION LAND",
+      143.0
+    ],
+    [
+      "CHITTENDEN",
+      "ST. MICHAEL'S COLLEGE",
+      120.0
+    ],
+    [
+      "CHITTENDEN",
+      "WINOOSKI NATURE TRAIL",
+      125.0
+    ],
+    [
+      "CHITTENDEN",
+      "CALKINS FARM",
+      103.0
+    ],
+    [
+      "CHITTENDEN",
+      "ROCK POINT SCHOOL",
+      125.0
+    ],
+    [
+      "CHITTENDEN",
+      "KWINIASKA GOLF CLUB",
+      280.0
+    ],
+    [
+      "CHITTENDEN",
+      "TAPROOT STABLES",
+      200.0
+    ],
+    [
+      "CHITTENDEN",
+      "PEASE MOUNTAIN NATURAL AREA",
+      200.0
+    ],
+    [
+      "CHITTENDEN",
+      "MT PHILO STATE PARK",
+      168.0
+    ],
+    [
+      "ADDISON",
+      "FORT CASSIN F&W ACCESS",
+      659.38
+    ],
+    [
+      "ADDISON",
+      "KINGSLAND BAY STATE PARK",
+      264.0
+    ],
+    [
+      "ADDISON",
+      "SOUTH LITTLE OTTER CREEK WMA",
+      1091.91
+    ],
+    [
+      "ADDISON",
+      "BASIN HARBOR CLUB",
+      600.0
+    ],
+    [
+      "ADDISON",
+      "BUTTON BAY STATE PARK",
+      253.0
+    ],
+    [
+      "ADDISON",
+      "WATERSHED CENTER",
+      664.0
+    ],
+    [
+      "ADDISON",
+      "BRISTOL POND WMA",
+      190.21
+    ],
+    [
+      "ADDISON",
+      "LINCOLN TOWN FOREST",
+      170.0
+    ],
+    [
+      "WASHINGTON",
+      "PHEN BASIN",
+      2760.0
+    ],
+    [
+      "ADDISON",
+      "WEYBRIDGE CAVE STATE PARK",
+      121.0
+    ],
+    [
+      "ADDISON",
+      "CHIPMAN HILL",
+      127.8
+    ],
+    [
+      "ADDISON",
+      "OTTER CREEK ACCESS",
+      1391.0
+    ],
+    [
+      "ADDISON",
+      "EAST CREEK WMA",
+      397.76
+    ],
+    [
+      "ADDISON",
+      "RICHVILLE WMA",
+      157.93
+    ],
+    [
+      "ADDISON",
+      "RICHVILLE F&W ACCESS",
+      157.93
+    ],
+    [
+      "ADDISON",
+      "STONEWOOD FARM STABLES",
+      600.0
+    ],
+    [
+      "RUTLAND",
+      "BRANDON MUNICIPAL FOREST",
+      291.0
+    ],
+    [
+      "RUTLAND",
+      "4 LEAF CLOVER",
+      184.0
+    ],
+    [
+      "RUTLAND",
+      "POND WOODS WMA",
+      1477.0
+    ],
+    [
+      "RUTLAND",
+      "FAIR HAVEN MUNICIPAL FOREST",
+      154.0
+    ],
+    [
+      "RUTLAND",
+      "WEST RUTLAND STATE FOREST",
+      344.0
+    ],
+    [
+      "RUTLAND",
+      "SANGAMON CAMP",
+      150.0
+    ],
+    [
+      "RUTLAND",
+      "GREEN MOUNTAIN COLLEGE",
+      155.0
+    ],
+    [
+      "RUTLAND",
+      "WEST RUTLAND MUNICIPAL FOREST",
+      110.0
+    ],
+    [
+      "RUTLAND",
+      "WEST RUTLAND MARSH",
+      300.0
+    ],
+    [
+      "RUTLAND",
+      "PINE HILL PARK",
+      300.0
+    ],
+    [
+      "RUTLAND",
+      "LAKE SAINT CATHERINE STATE PARK",
+      117.0
+    ],
+    [
+      "RUTLAND",
+      "TINMOUTH CHANNEL WMA",
+      1148.0
+    ],
+    [
+      "RUTLAND",
+      "TINMOUTH HUNTING PRESERVE",
+      800.0
+    ],
+    [
+      "BENNINGTON",
+      "MERCK FOREST FOUNDATION",
+      2820.0
+    ],
+    [
+      "BENNINGTON",
+      "EMERALD LAKE STATE PARK",
+      430.0
+    ],
+    [
+      "BENNINGTON",
+      "RUPERT STATE FOREST",
+      336.0
+    ],
+    [
+      "BENNINGTON",
+      "GREEN PEAK BAT CAVES TRAIL",
+      175.0
+    ],
+    [
+      "BENNINGTON",
+      "MANCHESTER COUNTRY CLUB",
+      176.0
+    ],
+    [
+      "BENNINGTON",
+      "SOUTHERN VT COLLEGE",
+      200.0
+    ],
+    [
+      "BENNINGTON",
+      "SOUTH STREAM WMA",
+      130.0
+    ],
+    [
+      "BENNINGTON",
+      "ARLINGTON SF",
+      225.0
+    ],
+    [
+      "WASHINGTON",
+      "CAMELS HUMP TRAIL (MONROE TRAIL)",
+      23010.0
+    ],
+    [
+      "WASHINGTON",
+      "MONTPELIER NORTH BRANCH PARK",
+      129.0
+    ],
+    [
+      "WASHINGTON",
+      "HUBBARD PARK",
+      187.0
+    ],
+    [
+      "CHITTENDEN",
+      "CEDAR KNOLL COUNTRY CLUB",
+      300.0
+    ],
+    [
+      "WASHINGTON",
+      "CAMEL HUMP SF",
+      590.0
+    ],
+    [
+      "WASHINGTON",
+      "NORTHFIELD ELEM. SCHOOL",
+      150.0
+    ],
+    [
+      "WASHINGTON",
+      "NORTHFIELD VILLAGE FOREST",
+      300.0
+    ],
+    [
+      "WASHINGTON",
+      "THUNDER ROAD INTERNATIONAL SPEEDBOWL",
+      116.0
+    ],
+    [
+      "ADDISON",
+      "CAMP THORPE",
+      200.0
+    ],
+    [
+      "ADDISON",
+      "CHSF",
+      2255.0
+    ],
+    [
+      "CHITTENDEN",
+      "HUNTINGTON GAP WMA",
+      1315.0
+    ],
+    [
+      "CHITTENDEN",
+      "LEWIS CREEK SB",
+      132.9
+    ],
+    [
+      "CHITTENDEN",
+      "FRED JOHNSON WMA",
+      1069.8
+    ],
+    [
+      "CHITTENDEN",
+      "MOUNT MANSFIELD SF",
+      1843.0
+    ],
+    [
+      "LAMOILLE",
+      "MT. MANSFIELD STATE FOREST",
+      38612.0
+    ],
+    [
+      "WASHINGTON",
+      "MT MANSFIELD SF",
+      38612.0
+    ],
+    [
+      "CHITTENDEN",
+      "HALFMOON COVE WMA",
+      294.49
+    ],
+    [
+      "CHITTENDEN",
+      "SAND BAR STATE PARK",
+      1560.0
+    ],
+    [
+      "CHITTENDEN",
+      "LOWER LAMOILLE RIVER WMA",
+      234.0
+    ],
+    [
+      "FRANKLIN",
+      "ROCK RIVER WMA",
+      296.5
+    ],
+    [
+      "FRANKLIN",
+      "BLACK CREEK WMA",
+      158.0
+    ],
+    [
+      "LAMOILLE",
+      "LONG TRAIL STATE FOREST",
+      7733.0
+    ],
+    [
+      "ORLEANS",
+      "SENTINAL ROCK SP",
+      330.0
+    ],
+    [
+      "GRAND ISLE",
+      "ED WEED FISH CULTURE STATION",
+      160.0
+    ],
+    [
+      "CALEDONIA",
+      "HOLBROOK SP",
+      202.1
+    ],
+    [
+      "ESSEX",
+      "MAIDSTONE STATE FOREST",
+      475.0
+    ],
+    [
+      "WASHINGTON",
+      "BOYER SF",
+      213.0
+    ],
+    [
+      "ADDISON",
+      "LEWIS CREEK WMA",
+      1978.7
+    ],
+    [
+      "WASHINGTON",
+      "C.C. PUTNAM S.F.",
+      13421.08
+    ],
+    [
+      "CALEDONIA",
+      "DARLING STATE PARK",
+      1997.87
+    ],
+    [
+      "LAMOILLE",
+      "WOLCOTT POND DAM",
+      196.0
+    ],
+    [
+      "WASHINGTON",
+      "EAST BARRE DAM",
+      282.0
+    ],
+    [
+      "ADDISON",
+      "BREADLOAF WILDERNESS",
+      21480.0
+    ],
+    [
+      "ADDISON",
+      "GREEN MOUNTAIN N.F- MIDDLEBURY DISTRICT",
+      64000.0
+    ],
+    [
+      "ADDISON",
+      "BRISTOL CLIFFS WILDERNESS",
+      3738.0
+    ],
+    [
+      "ADDISON",
+      "WHITNEY/HOSPITAL CREEK WMA",
+      103.53
+    ],
+    [
+      "ADDISON",
+      "BRANDON SWAMP WMA",
+      239.0
+    ],
+    [
+      "WINDSOR",
+      "GREEN MOUNTAIN NATIONAL FOREST-ROCHESTER DISTRICT",
+      61000.0
+    ],
+    [
+      "RUTLAND",
+      "WEST HAVEN WETLANDS WMA",
+      429.0
+    ],
+    [
+      "RUTLAND",
+      "BOMOSEEN SP UNDEVELOPED LANDS",
+      2742.0
+    ],
+    [
+      "RUTLAND",
+      "HUBBARDTON BATTLEFIELD WMA",
+      254.0
+    ],
+    [
+      "RUTLAND",
+      "WHIPPLE HOLLOW WMA",
+      451.0
+    ],
+    [
+      "WINDSOR",
+      "LES NEWELL WMA",
+      6044.0
+    ],
+    [
+      "RUTLAND",
+      "BLUEBERRY HILL WMA",
+      1151.0
+    ],
+    [
+      "RUTLAND",
+      "BIRD MOUNTAIN WMA",
+      640.0
+    ],
+    [
+      "RUTLAND",
+      "COOLIDGE SF/ PLYMSBURY WMA",
+      17152.0
+    ],
+    [
+      "WINDSOR",
+      "COOLIDGE STATE FOREST",
+      734.0
+    ],
+    [
+      "WINDSOR",
+      "ARTHUR DAVIS W.M.A.",
+      7788.0
+    ],
+    [
+      "WINDSOR",
+      "COOLIDGE STATE FOREST",
+      347.0
+    ],
+    [
+      "RUTLAND",
+      "SPRING LAKE RANCH ROAD",
+      134.0
+    ],
+    [
+      "RUTLAND",
+      "TINY POND WMA",
+      497.0
+    ],
+    [
+      "RUTLAND",
+      "D&H RAIL TRAIL",
+      158.0
+    ],
+    [
+      "BENNINGTON",
+      "PERU PEAK WILDERNESS",
+      6920.0
+    ],
+    [
+      "RUTLAND",
+      "BIG BRANCH WILDERNESS",
+      6720.0
+    ],
+    [
+      "WINDSOR",
+      "OKEMO STATE PARK",
+      2091.0
+    ],
+    [
+      "BENNINGTON",
+      "GREEN MOUNTAIN FOREST- MANCHESTER DISTRICT",
+      158000.0
+    ],
+    [
+      "BENNINGTON",
+      "BENNINGTON HATCHERY",
+      235.0
+    ],
+    [
+      "BENNINGTON",
+      "GEORGE D. AIKEN WILDERNESS",
+      5060.0
+    ],
+    [
+      "ADDISON",
+      "SNAKE MOUNTAIN WILDLIFE AREA",
+      1214.95
+    ],
+    [
+      "ADDISON",
+      "DEAD CREEK WMA",
+      2858.36
+    ]
+  ],
+  "sql skeleton": "select distinct _ ,_ ,_ from _ where _ =_",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "vermont_biophysical_regions": [
+      "vermont_biophysical_regions.OBJECTID",
+      "vermont_biophysical_regions.ACRES",
+      "vermont_biophysical_regions.NAME",
+      "vermont_biophysical_regions.SUBSEC_ID",
+      "vermont_biophysical_regions.BPR_NUM",
+      "vermont_biophysical_regions.BPR_NUMID",
+      "vermont_biophysical_regions.SHAPESTArea",
+      "vermont_biophysical_regions.SHAPESTLength"
+    ],
+    "outdoor_recreation_sites_inventory": [
+      "outdoor_recreation_sites_inventory.X",
+      "outdoor_recreation_sites_inventory.Y",
+      "outdoor_recreation_sites_inventory.OBJECTID",
+      "outdoor_recreation_sites_inventory.MAP",
+      "outdoor_recreation_sites_inventory.MAP_NUMBER",
+      "outdoor_recreation_sites_inventory.SITE_NAME",
+      "outdoor_recreation_sites_inventory.PUBLIC_PRI",
+      "outdoor_recreation_sites_inventory.BOATING_MA",
+      "outdoor_recreation_sites_inventory.CAMPING",
+      "outdoor_recreation_sites_inventory.FIELD_SPOR",
+      "outdoor_recreation_sites_inventory.COURT_SPOR",
+      "outdoor_recreation_sites_inventory.GOLF",
+      "outdoor_recreation_sites_inventory.SWIMMING",
+      "outdoor_recreation_sites_inventory.TRAIL",
+      "outdoor_recreation_sites_inventory.PICNIC_PLA",
+      "outdoor_recreation_sites_inventory.SKIING",
+      "outdoor_recreation_sites_inventory.FIPS_CODE",
+      "outdoor_recreation_sites_inventory.DATE_",
+      "outdoor_recreation_sites_inventory.ALT_NAME",
+      "outdoor_recreation_sites_inventory.S_ADDRESS",
+      "outdoor_recreation_sites_inventory.S_TOWN",
+      "outdoor_recreation_sites_inventory.S_PHONE",
+      "outdoor_recreation_sites_inventory.CONTACT",
+      "outdoor_recreation_sites_inventory.ORGANIZ",
+      "outdoor_recreation_sites_inventory.CO_ADDRESS",
+      "outdoor_recreation_sites_inventory.CO_TOWN",
+      "outdoor_recreation_sites_inventory.CO_STATE",
+      "outdoor_recreation_sites_inventory.CO_ZIP",
+      "outdoor_recreation_sites_inventory.CO_PHONE",
+      "outdoor_recreation_sites_inventory.CO_FAX",
+      "outdoor_recreation_sites_inventory.OPERATOR",
+      "outdoor_recreation_sites_inventory.A_ARCHTARG",
+      "outdoor_recreation_sites_inventory.B_BASESOFT",
+      "outdoor_recreation_sites_inventory.C_BICYCL",
+      "outdoor_recreation_sites_inventory.D_BOATMTR",
+      "outdoor_recreation_sites_inventory.E_BOATNMTR",
+      "outdoor_recreation_sites_inventory.F_CAMP",
+      "outdoor_recreation_sites_inventory.G_FISH",
+      "outdoor_recreation_sites_inventory.H_FTSOCLAC",
+      "outdoor_recreation_sites_inventory.I_GOLF",
+      "outdoor_recreation_sites_inventory.J_HIKING",
+      "outdoor_recreation_sites_inventory.K_HISTIMP",
+      "outdoor_recreation_sites_inventory.L_HORSRID",
+      "outdoor_recreation_sites_inventory.M_HUNT",
+      "outdoor_recreation_sites_inventory.N_ICESKAT",
+      "outdoor_recreation_sites_inventory.O_INSKAT",
+      "outdoor_recreation_sites_inventory.P_MTRCYL",
+      "outdoor_recreation_sites_inventory.Q_MTBIKE",
+      "outdoor_recreation_sites_inventory.R_NATATTR",
+      "outdoor_recreation_sites_inventory.S_NATOBSER",
+      "outdoor_recreation_sites_inventory.T_ORGEVENT",
+      "outdoor_recreation_sites_inventory.U_PICNIC",
+      "outdoor_recreation_sites_inventory.V_SKIDOWN",
+      "outdoor_recreation_sites_inventory.W_SKICROSS",
+      "outdoor_recreation_sites_inventory.X_SKINSCUB",
+      "outdoor_recreation_sites_inventory.Y_SLIDE",
+      "outdoor_recreation_sites_inventory.Z_SNOWMOB",
+      "outdoor_recreation_sites_inventory.AA_SNOWSHO",
+      "outdoor_recreation_sites_inventory.AB_SWIMPOO",
+      "outdoor_recreation_sites_inventory.AC_SWIMLAK",
+      "outdoor_recreation_sites_inventory.AD_SWIMRIV",
+      "outdoor_recreation_sites_inventory.AE_TENNIS",
+      "outdoor_recreation_sites_inventory.AF_VOLLEY",
+      "outdoor_recreation_sites_inventory.AG_WALKJOG",
+      "outdoor_recreation_sites_inventory.AH_O1_YN",
+      "outdoor_recreation_sites_inventory.AH_OTHR1",
+      "outdoor_recreation_sites_inventory.AI_O2_YN",
+      "outdoor_recreation_sites_inventory.AI_OTHR2",
+      "outdoor_recreation_sites_inventory.ENTERPRISE",
+      "outdoor_recreation_sites_inventory.ENT_OTHR",
+      "outdoor_recreation_sites_inventory.ACREAGE",
+      "outdoor_recreation_sites_inventory.N_PARKSUM",
+      "outdoor_recreation_sites_inventory.N_PARKWIN",
+      "outdoor_recreation_sites_inventory.Q_WATACC",
+      "outdoor_recreation_sites_inventory.WATER_NM",
+      "outdoor_recreation_sites_inventory.Q_AMUSE",
+      "outdoor_recreation_sites_inventory.Q_NATRCENT",
+      "outdoor_recreation_sites_inventory.N_CARLAUND",
+      "outdoor_recreation_sites_inventory.N_PAVERAMP",
+      "outdoor_recreation_sites_inventory.N_GRAVRAMP",
+      "outdoor_recreation_sites_inventory.N_BOATSLIP",
+      "outdoor_recreation_sites_inventory.N_MOORING",
+      "outdoor_recreation_sites_inventory.N_DRYDOCK",
+      "outdoor_recreation_sites_inventory.Q_TRANSIEN",
+      "outdoor_recreation_sites_inventory.Q_PUMPING",
+      "outdoor_recreation_sites_inventory.Q_BOATRENT",
+      "outdoor_recreation_sites_inventory.N_TENTS",
+      "outdoor_recreation_sites_inventory.N_SHELTER",
+      "outdoor_recreation_sites_inventory.N_WINCABIN",
+      "outdoor_recreation_sites_inventory.N_VEHICLE",
+      "outdoor_recreation_sites_inventory.Q_SEWERAGE",
+      "outdoor_recreation_sites_inventory.N_ELECTRY",
+      "outdoor_recreation_sites_inventory.N_WATER",
+      "outdoor_recreation_sites_inventory.N_BOTH",
+      "outdoor_recreation_sites_inventory.Q_GROUP",
+      "outdoor_recreation_sites_inventory.Q_PRIM",
+      "outdoor_recreation_sites_inventory.Q_WINCAMP",
+      "outdoor_recreation_sites_inventory.TOTALFLDS",
+      "outdoor_recreation_sites_inventory.Q_BASEB",
+      "outdoor_recreation_sites_inventory.Q_SOFTB",
+      "outdoor_recreation_sites_inventory.Q_LITLEA",
+      "outdoor_recreation_sites_inventory.Q_SOCCR",
+      "outdoor_recreation_sites_inventory.Q_FOOTB",
+      "outdoor_recreation_sites_inventory.OTHFLD",
+      "outdoor_recreation_sites_inventory.TOTALCRTS",
+      "outdoor_recreation_sites_inventory.Q_TENNIS",
+      "outdoor_recreation_sites_inventory.Q_BASKET",
+      "outdoor_recreation_sites_inventory.Q_VOLLEY",
+      "outdoor_recreation_sites_inventory.OTHCRTS",
+      "outdoor_recreation_sites_inventory.Q_PICNIC",
+      "outdoor_recreation_sites_inventory.Q_PICSHEL",
+      "outdoor_recreation_sites_inventory.PLYGND",
+      "outdoor_recreation_sites_inventory.N_REGHOLES",
+      "outdoor_recreation_sites_inventory.N_PAR3HOLE",
+      "outdoor_recreation_sites_inventory.Q_DRIVING",
+      "outdoor_recreation_sites_inventory.Q_MINATURE",
+      "outdoor_recreation_sites_inventory.F_BEACH",
+      "outdoor_recreation_sites_inventory.N_OUTPOOLS",
+      "outdoor_recreation_sites_inventory.SKITYPE",
+      "outdoor_recreation_sites_inventory.N_DOWNHILL",
+      "outdoor_recreation_sites_inventory.N_LIFTS",
+      "outdoor_recreation_sites_inventory.Q_SNOWMAKE",
+      "outdoor_recreation_sites_inventory.N_XCSKI",
+      "outdoor_recreation_sites_inventory.M_TRLTOTAL",
+      "outdoor_recreation_sites_inventory.Q_HIKING",
+      "outdoor_recreation_sites_inventory.Q_BIKING",
+      "outdoor_recreation_sites_inventory.MOUNTBIK",
+      "outdoor_recreation_sites_inventory.Q_ATV",
+      "outdoor_recreation_sites_inventory.Q_SNOWMOBL",
+      "outdoor_recreation_sites_inventory.Q_XSKI",
+      "outdoor_recreation_sites_inventory.Q_HORSEBK",
+      "outdoor_recreation_sites_inventory.CNTYCODE",
+      "outdoor_recreation_sites_inventory.NAME"
+    ]
+  }
+}

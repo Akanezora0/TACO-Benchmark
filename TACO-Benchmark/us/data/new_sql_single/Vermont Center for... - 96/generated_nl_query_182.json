@@ -1,0 +1,51 @@
+{
+  "sql": "SELECT public_water_sources.X, public_water_sources.Y FROM sga_phase_2_assessed_reaches INNER JOIN public_water_sources ON sga_phase_2_assessed_reaches.RchID = public_water_sources.WSID WHERE sga_phase_2_assessed_reaches.ProjectID = '1';",
+  "problem_description": "### Query intent:\nThe SQL statement aims to retrieve specific data from two related tables: `sga_phase_2_assessed_reaches` and `public_water_sources`. The primary goal is to extract geographic coordinates (X, Y) associated with each reach identified by `RchID` in the `sga_phase_2_assessed_reaches` table.\n\n### Detailed description:\n- **Table `sga_phase_2_assessed_reaches`**: This table contains information about assessed reaches in phase 2 of some project. It includes at least an `RchID` column which uniquely identifies each reach and a `ProjectID` column which identifies the project these reaches belong to.\n- **Table `public_water_sources`**: This table likely contains detailed information about water sources, possibly including their geographic locations specified by `X` and `Y` coordinates. It also includes a `WSID` column, which acts as a unique identifier for each water source.\n- **Join condition**: The SQL statement uses an inner join based on the equality of `RchID` from `sga_phase_2_assessed_reaches` and `WSID` from `public_water_sources`. This ensures that only those reaches with matching water sources are included in the result set.\n- **Filtering condition**: The WHERE clause filters the results to include only those rows where the `ProjectID` is exactly '1'. This implies that the user is interested in data pertaining to a specific project (with ID '1').\n\n### Business scenario:\nThis SQL query can be used in scenarios where environmental studies or management require spatial data analysis, particularly focusing on water sources associated with specific projects. For example:\n\n- **Environmental Monitoring**: To track the location of water sources affected by a particular project (identified by its `ProjectID`) for monitoring purposes.\n- **Resource Management**: For managing water resources efficiently, especially if the project involves activities affecting water quality or quantity.\n\n### User description:\nA user might need this information when they want to understand or visualize the spatial distribution of water sources related to a specific project. This could be crucial for planning mitigation strategies, conducting environmental impact assessments, or ensuring compliance with regulations regarding water resource protection.",
+  "natural_language_query": "I'm looking to gather details about water sources connected to a specific project. Specifically, I need the geographic coordinates (X, Y) for each reach identified by their RchID in the 'sga_phase_2_assessed_reaches' table. The project I'm focusing on has an ID of '1'. Could you help me with this query?",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ ;",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "sga_phase_2_assessed_reaches": [
+      "sga_phase_2_assessed_reaches.SGAT_ID",
+      "sga_phase_2_assessed_reaches.ProjectName",
+      "sga_phase_2_assessed_reaches.URLPage1",
+      "sga_phase_2_assessed_reaches.URLPage2",
+      "sga_phase_2_assessed_reaches.ReportList",
+      "sga_phase_2_assessed_reaches.FinalA",
+      "sga_phase_2_assessed_reaches.FinalB",
+      "sga_phase_2_assessed_reaches.FinalC",
+      "sga_phase_2_assessed_reaches.CorridorPlanA",
+      "sga_phase_2_assessed_reaches.CorridorPlanB",
+      "sga_phase_2_assessed_reaches.CorridorPlanC",
+      "sga_phase_2_assessed_reaches.RID",
+      "sga_phase_2_assessed_reaches.SID",
+      "sga_phase_2_assessed_reaches.OBJECTID",
+      "sga_phase_2_assessed_reaches.RchID",
+      "sga_phase_2_assessed_reaches.SegID",
+      "sga_phase_2_assessed_reaches.ProjectID"
+    ],
+    "public_water_sources": [
+      "public_water_sources.X",
+      "public_water_sources.Y",
+      "public_water_sources.TINWSF_IS_NUMBER",
+      "public_water_sources.WSID",
+      "public_water_sources.SystemName",
+      "public_water_sources.SystemType",
+      "public_water_sources.SystemStatus",
+      "public_water_sources.SystemPopulation",
+      "public_water_sources.FacilityName",
+      "public_water_sources.FacilityID",
+      "public_water_sources.FacilityStatus",
+      "public_water_sources.Availability",
+      "public_water_sources.WaterType",
+      "public_water_sources.ConstructedDate",
+      "public_water_sources.PermittedYield",
+      "public_water_sources.WellType",
+      "public_water_sources.Diameter_in",
+      "public_water_sources.WellDepth",
+      "public_water_sources.CasingDepth",
+      "public_water_sources.StaticWaterLevel"
+    ]
+  }
+}

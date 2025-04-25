@@ -1,0 +1,7 @@
+{
+  "sql": "select table1._,table2._,table3._,table4._,table5._,table6._,table7._,table8._,table9._,table10._,table11._,table12._,table13._ from table1 join table2 on table1._=table2._ join table3 on table2._=table3._ join table4 on table3._=table4._ join table5 on table4._=table5._ join table6 on table5._=table6._ join table7 on table6._=table7._ join table8 on table7._=table8._ join table9 on table8._=table9._ join table10 on table9._=table10._ join table11 on table10._=table11._ join table12 on table11._=table12._ join table13 on table12._=table13._ where table1._=value_and_table2._=value_and_table3._=value_and_table4._=value_and_table5._=value_and_table6._=value_and_table7._=value_and_table8._=value_and_table9._=value_and_table10._=value_and_table11._=value_and_table12._=value_and_table13._=value and (table1._,table2._)=value",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ from _ join _ on _ ._ = _ ._ join _ on _ ._ = _ ._ where _ ._ = _ and _ ._ = _ and _ (_ ._ ,_ ) = _",
+  "database": "安全生活",
+  "tables": {}
+}

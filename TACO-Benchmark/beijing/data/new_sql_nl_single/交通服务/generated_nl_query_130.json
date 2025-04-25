@@ -1,0 +1,28 @@
+{
+  "sql": "SELECT \n    \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270\".企业名称,\n    \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270\".经营许可证号,\n    \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270\".企业类型,\n    \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270\".所属区县,\n    \"shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210\".监管对象\nFROM\n    \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270\",\n    \"shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210\"\nWHERE\n    \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270\".企业名称 = \"shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210\".监管对象;",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从两个表中查询并关联企业名称相同的记录，获取企业的基本信息及其监管对象信息。\n\n- **详细描述**：\n  - **涉及的表**：\n    1. `pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270`：该表可能存储了2019年平谷区普通货运质量信誉考核结果的相关信息。\n    2. `shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210`：该表可能存储了市交通委公交双随机抽查结果的公示信息。\n  - **涉及的列**：\n    - 从第一个表中选择了`企业名称`、`经营许可证号`、`企业类型`、`所属区县`。\n    - 从第二个表中选择了`监管对象`。\n  - **条件**：两个表通过`企业名称`和`监管对象`列进行关联，即只返回两个表中企业名称相同的记录。\n\n- **业务场景**：\n  - 该查询可能用于交通管理部门或相关监管机构，用于比对2019年平谷区普通货运企业的质量信誉考核结果与市交通委的随机抽查结果。\n  - 通过关联两个表的数据，可以快速识别哪些企业在质量信誉考核中被抽查，并查看其基本信息。\n\n- **用户描述**：\n  - 用户可能是交通管理部门的工作人员，需要了解哪些货运企业在2019年的质量信誉考核中被抽查，并获取这些企业的详细信息（如经营许可证号、企业类型、所属区县等）。\n  - 用户的需求可能是为了进一步分析或报告这些企业的考核和抽查情况，或者是为了监管和评估企业的合规性。",
+  "natural_language_query": "市民反映，自己是交通管理部门的工作人员，最近在整理2019年平谷区货运企业考核资料时遇到一个问题。想查一下当时那些参加质量信誉考核的货运企业，有没有被市里随机抽查过的记录。主要是想看看哪些企业既参加了区里的考核又被市里抽查了，需要知道这些企业的具体信息，比如经营许可证号码、是什么类型的企业、属于哪个区县这些基本情况。因为要做个汇总报告，所以需要把这些信息都整理出来，麻烦帮忙查询一下。",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ ,_ ,_ from _ where _ =_",
+  "database": "交通服务",
+  "tables": {
+    "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270": [
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.企业名称",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.经营许可证号",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.企业类型",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.所属区县",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.考核人",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.评定时间",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.评定得分",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.评定结果"
+    ],
+    "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210": [
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.监管对象",
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.实施机构",
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.检查行为编号",
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.检查时间",
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.检查人员",
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.检查结果"
+    ]
+  }
+}

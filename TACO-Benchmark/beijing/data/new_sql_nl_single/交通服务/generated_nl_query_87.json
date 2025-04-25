@@ -1,0 +1,37 @@
+{
+  "sql": "SELECT xichengquxichengquditieyoumingdan2496.ID, xichengquxichengquditieyoumingdan2496.POISJLY FROM xichengquxichengquditieyoumingdan2496 WHERE xichengquxichengquditieyoumingdan2496.QXJXZQHMC = '目标区县' AND xichengquxichengquditieyoumingdan2496.POISJLY IS NOT NULL;",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从表 `xichengquxichengquditieyoumingdan2496` 中筛选出位于特定区县（'目标区县'）且具有有效 POI 数据记录（POISJLY 不为空）的地铁站点信息。\n\n- **详细描述**：\n  - **涉及的表**：`xichengquxichengquditieyoumingdan2496`，该表可能存储了某地区（如西城区）的地铁站点信息。\n  - **涉及的列**：\n    - `ID`：可能是地铁站点的唯一标识符。\n    - `POISJLY`：可能是与地铁站点相关的 POI（Point of Interest）数据记录，具体内容可能包括站点名称、位置信息等。\n    - `QXJXZQHMC`：可能是区县行政区域名称，用于标识地铁站点所在的区县。\n  - **条件**：\n    - `QXJXZQHMC = '目标区县'`：筛选出位于特定区县（如“西城区”）的地铁站点。\n    - `POISJLY IS NOT NULL`：确保筛选出的地铁站点具有有效的 POI 数据记录。\n\n- **业务场景**：\n  - 该查询可以用于城市交通规划、地铁站点管理或商业选址分析等场景。例如，城市规划部门可能需要统计某个区县内所有具有 POI 数据的地铁站点，以便进行交通流量分析或设施优化。\n  - 商业公司可能利用此查询结果分析特定区县内地铁站点的分布情况，从而决定在哪些站点附近开设新店铺或投放广告。\n\n- **用户描述**：\n  - 用户可能是城市规划师或商业分析师，他们需要获取某个区县内所有具有 POI 数据的地铁站点信息。\n  - 用户可能面临的问题是：如何快速找到某个区县内所有有效的地铁站点数据，以便进行后续分析或决策。例如，他们可能需要确保数据完整性（POISJLY 不为空）以避免分析中的缺失值问题。",
+  "natural_language_query": "市民反映，最近在做西城区的地铁站点调研时遇到困难，想查询这个区所有有完整信息的地铁站。具体来说就是需要知道哪些地铁站是有详细位置记录的，不要那些信息不全的站点。因为之前查到的数据有些站点连具体位置信息都没有，导致分析工作没法进行。希望能帮忙核实一下西城区范围内，所有信息完整的地铁站点情况，最好能提供这些站点的具体位置信息。来电反映地铁站点信息不完整问题。",
+  "results": 0,
+  "sql skeleton": "select _ ,_ from _ where _ = _ and _ = _",
+  "database": "交通服务",
+  "tables": {
+    "xichengquxichengquditieyoumingdan2496": [
+      "xichengquxichengquditieyoumingdan2496.ID",
+      "xichengquxichengquditieyoumingdan2496.X",
+      "xichengquxichengquditieyoumingdan2496.Y",
+      "xichengquxichengquditieyoumingdan2496.SJXZQHMC",
+      "xichengquxichengquditieyoumingdan2496.QXJXZQHMC",
+      "xichengquxichengquditieyoumingdan2496.SJXZQHDM",
+      "xichengquxichengquditieyoumingdan2496.QXJXZQHDM",
+      "xichengquxichengquditieyoumingdan2496.POISJLY",
+      "xichengquxichengquditieyoumingdan2496.RHBZDZ",
+      "xichengquxichengquditieyoumingdan2496.CODE",
+      "xichengquxichengquditieyoumingdan2496.CODEMC",
+      "xichengquxichengquditieyoumingdan2496.GXSJ",
+      "xichengquxichengquditieyoumingdan2496.POIMC",
+      "xichengquxichengquditieyoumingdan2496.POIDZ",
+      "xichengquxichengquditieyoumingdan2496.别名",
+      "xichengquxichengquditieyoumingdan2496.POIFLMC",
+      "xichengquxichengquditieyoumingdan2496.TEL",
+      "xichengquxichengquditieyoumingdan2496.ID原",
+      "xichengquxichengquditieyoumingdan2496.备注",
+      "xichengquxichengquditieyoumingdan2496.上图"
+    ],
+    "shijiaotongweiguidaoxianluxinxichuxing3671": [
+      "shijiaotongweiguidaoxianluxinxichuxing3671.线路编码",
+      "shijiaotongweiguidaoxianluxinxichuxing3671.线路名称",
+      "shijiaotongweiguidaoxianluxinxichuxing3671.站点数"
+    ]
+  }
+}

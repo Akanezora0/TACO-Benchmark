@@ -1,0 +1,49 @@
+{
+  "sql": "SELECT \"shiguihuaziranziyuanweiqingzhensi1515.HID\", \"shiguihuaziranziyuanweiqingzhensi1515.HNAME\", \"xichengquxichengqudengjilvyoujingquminglu14.景区名称\", \"xichengquxichengqudengjilvyoujingquminglu14.等级\" FROM \"shiguihuaziranziyuanweiqingzhensi1515\" INNER JOIN \"xichengquxichengqudengjilvyoujingquminglu14\" ON \"shiguihuaziranziyuanweiqingzhensi1515.HID\" = \"xichengquxichengqudengjilvyoujingquminglu14.序号\" WHERE \"shiguihuaziranziyuanweiqingzhensi1515.DYNASTY\" = '唐代' AND \"xichengquxichengqudengjilvyoujingquminglu14.等级\" > 3;",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是查询唐代时期且等级大于3的旅游景点信息，包括景点的ID、名称、景区名称和等级。\n\n- **详细描述**：\n  - **涉及的表**：\n    - `shiguihuaziranziyuanweiqingzhensi1515`：该表可能包含历史或自然资源的详细信息，例如景点的ID（HID）、名称（HNAME）和朝代（DYNASTY）。\n    - `xichengquxichengqudengjilvyoujingquminglu14`：该表可能包含旅游景点的详细信息，例如景区名称、等级和序号（可能是与第一个表关联的键）。\n  - **涉及的列**：\n    - `shiguihuaziranziyuanweiqingzhensi1515.HID`：景点的唯一标识符。\n    - `shiguihuaziranziyuanweiqingzhensi1515.HNAME`：景点的名称。\n    - `xichengquxichengqudengjilvyoujingquminglu14.景区名称`：景区的名称。\n    - `xichengquxichengqudengjilvyoujingquminglu14.等级`：景区的等级。\n  - **条件**：\n    - `shiguihuaziranziyuanweiqingzhensi1515.DYNASTY = '唐代'`：筛选出朝代是唐代的景点。\n    - `xichengquxichengqudengjilvyoujingquminglu14.等级 > 3`：筛选出等级大于3的景区。\n\n- **业务场景**：\n  - 该查询可以用于旅游规划或历史文化研究中，帮助用户快速找到唐代时期且等级较高的旅游景点。例如，旅游公司可能希望推荐高等级的历史景点给对唐代文化感兴趣的游客。\n\n- **用户描述**：\n  - 用户可能是一个旅游规划师或历史文化爱好者，希望找到唐代时期的高等级旅游景点，以便规划旅游路线或进行历史文化研究。用户的需求是快速筛选出符合条件（唐代且等级大于3）的景点，以便进一步了解或推荐给游客。",
+  "natural_language_query": "市民反映，最近在规划一条唐代文化主题的旅游线路，想找一些唐代留下来的、比较有名气的旅游景点。听说景点是有分等级的，希望能推荐等级高一点的（最好是在3级以上），包括景点叫什么名字、属于哪个景区这些信息。之前在网上查资料看到西城区好像有个名录，但不太确定具体怎么查，希望能帮忙核实一下唐代的高等级景点有哪些。来电咨询唐代旅游景点推荐问题。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "shiguihuaziranziyuanweiqingzhensi1515": [
+      "shiguihuaziranziyuanweiqingzhensi1515.HID",
+      "shiguihuaziranziyuanweiqingzhensi1515.FATHERID",
+      "shiguihuaziranziyuanweiqingzhensi1515.HNAME",
+      "shiguihuaziranziyuanweiqingzhensi1515.OTHERNAME",
+      "shiguihuaziranziyuanweiqingzhensi1515.CATEGORY",
+      "shiguihuaziranziyuanweiqingzhensi1515.SUBCATEGOR",
+      "shiguihuaziranziyuanweiqingzhensi1515.COUNTYNAME",
+      "shiguihuaziranziyuanweiqingzhensi1515.STREETNAME",
+      "shiguihuaziranziyuanweiqingzhensi1515.DYNASTY",
+      "shiguihuaziranziyuanweiqingzhensi1515.SUBDYNASTY",
+      "shiguihuaziranziyuanweiqingzhensi1515.ADDRESS",
+      "shiguihuaziranziyuanweiqingzhensi1515.RANK",
+      "shiguihuaziranziyuanweiqingzhensi1515.BATCH",
+      "shiguihuaziranziyuanweiqingzhensi1515.PUBTIME",
+      "shiguihuaziranziyuanweiqingzhensi1515.USERS",
+      "shiguihuaziranziyuanweiqingzhensi1515.PURPOSE",
+      "shiguihuaziranziyuanweiqingzhensi1515.OWNERSHIP",
+      "shiguihuaziranziyuanweiqingzhensi1515.STATEEVALU",
+      "shiguihuaziranziyuanweiqingzhensi1515.SINGLERELI",
+      "shiguihuaziranziyuanweiqingzhensi1515.PROTECTION",
+      "shiguihuaziranziyuanweiqingzhensi1515.ATTACHEDRE",
+      "shiguihuaziranziyuanweiqingzhensi1515.RELATEDPEO",
+      "shiguihuaziranziyuanweiqingzhensi1515.RELATEDEVE",
+      "shiguihuaziranziyuanweiqingzhensi1515.PUBNAME",
+      "shiguihuaziranziyuanweiqingzhensi1515.SOURCE",
+      "shiguihuaziranziyuanweiqingzhensi1515.EDITOR",
+      "shiguihuaziranziyuanweiqingzhensi1515.ISREDUNDAN",
+      "shiguihuaziranziyuanweiqingzhensi1515.THEME"
+    ],
+    "xichengquxichengqudengjilvyoujingquminglu14": [
+      "xichengquxichengqudengjilvyoujingquminglu14.序号",
+      "xichengquxichengqudengjilvyoujingquminglu14.景区名称",
+      "xichengquxichengqudengjilvyoujingquminglu14.等级",
+      "xichengquxichengqudengjilvyoujingquminglu14.地址",
+      "xichengquxichengqudengjilvyoujingquminglu14.咨询电话",
+      "xichengquxichengqudengjilvyoujingquminglu14.投诉电话",
+      "xichengquxichengqudengjilvyoujingquminglu14.邮编"
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "sql": "SELECT xichengquxichengquwenwubaohudanwei35.名称, xichengquxichengqudengjilvyoujingquminglu14.景区名称 FROM xichengquxichengquwenwubaohudanwei35 INNER JOIN xichengquxichengqudengjilvyoujingquminglu14 ON xichengquxichengquwenwubaohudanwei35.序号 = xichengquxichengqudengjilvyoujingquminglu14.序号 WHERE xichengquxichengquwenwubaohudanwei35.地址 LIKE '%北京市西城区%' ;",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是查询位于北京市西城区的文物保护单位及其对应的旅游景区名称。\n\n- **详细描述**：\n  - **涉及的表**：\n    - `xichengquxichengquwenwubaohudanwei35`：文物保护单位表，存储文物保护单位的相关信息。\n    - `xichengquxichengqudengjilvyoujingquminglu14`：登记旅游景区名录表，存储旅游景区名称等相关信息。\n  - **涉及的列**：\n    - `xichengquxichengquwenwubaohudanwei35.名称`：文物保护单位的名称。\n    - `xichengquxichengqudengjilvyoujingquminglu14.景区名称`：旅游景区的名称。\n    - `xichengquxichengquwenwubaohudanwei35.序号` 和 `xichengquxichengqudengjilvyoujingquminglu14.序号`：用于连接两个表的关联字段。\n    - `xichengquxichengquwenwubaohudanwei35.地址`：文物保护单位的地址信息。\n  - **条件**：\n    - 通过 `INNER JOIN` 连接两个表，连接条件是 `xichengquxichengquwenwubaohudanwei35.序号 = xichengquxichengqudengjilvyoujingquminglu14.序号`。\n    - 使用 `WHERE` 子句筛选出地址中包含“北京市西城区”的文物保护单位。\n\n- **业务场景**：\n  - 该查询可以用于文化旅游管理部门或旅游服务平台，用于展示北京市西城区内的文物保护单位及其对应的旅游景区名称。\n  - 可以用于旅游线路规划，帮助游客了解西城区内有哪些文物保护单位同时也是旅游景区。\n  - 也可以用于文化保护部门统计和管理西城区内的文物保护单位及其旅游开发情况。\n\n- **用户描述**：\n  - 用户可能是文化旅游管理部门的工作人员，需要统计或展示西城区内的文物保护单位和旅游景区的对应关系。\n  - 用户也可能是游客或旅游服务平台的运营者，希望了解西城区内有哪些文物保护单位可以作为旅游景点参观。\n  - 用户的需求是快速获取西城区内文物保护单位及其对应的旅游景区名称，以便进行进一步的文化旅游推广或旅游线路规划。",
+  "natural_language_query": "市民反映，最近想带家人去北京市西城区游玩，听说那边有很多文物保护单位同时也是旅游景点，但网上信息比较零散。想了解西城区范围内哪些挂牌的文物保护单位是开放参观的旅游景区？比如像北海公园、恭王府这样的地方，希望能提供一个完整的名单方便规划路线。主要想确认这些文物保护单位的准确名称和对应的景区名称是否一致，避免跑错地方。来电咨询西城区文保单位旅游开放情况。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ WHERE _ = _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "xichengquxichengquwenwubaohudanwei35": [
+      "xichengquxichengquwenwubaohudanwei35.序号",
+      "xichengquxichengquwenwubaohudanwei35.名称",
+      "xichengquxichengquwenwubaohudanwei35.地址"
+    ],
+    "xichengquxichengqudengjilvyoujingquminglu14": [
+      "xichengquxichengqudengjilvyoujingquminglu14.序号",
+      "xichengquxichengqudengjilvyoujingquminglu14.景区名称",
+      "xichengquxichengqudengjilvyoujingquminglu14.等级",
+      "xichengquxichengqudengjilvyoujingquminglu14.地址",
+      "xichengquxichengqudengjilvyoujingquminglu14.咨询电话",
+      "xichengquxichengqudengjilvyoujingquminglu14.投诉电话",
+      "xichengquxichengqudengjilvyoujingquminglu14.邮编"
+    ]
+  }
+}

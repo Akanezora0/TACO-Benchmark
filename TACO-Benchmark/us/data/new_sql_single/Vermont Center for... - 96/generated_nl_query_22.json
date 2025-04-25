@@ -1,0 +1,27 @@
+{
+  "sql": "SELECT \"vermont_biophysical_regions.NAME\", \"waste_water_facilities.FacilityName\" FROM \"vermont_biophysical_regions\" -\"waste_water_facilities\" WHERE \"vermont_biophysical_regions.BPR_NUM\" = \"waste_water_facilities.FacilityID\";",
+  "problem_description": "### Query intent:\nThe SQL statement aims to find a specific relationship between two tables: `vermont_biophysical_regions` and `waste_water_facilities`. It seeks to retrieve the names from both tables where there is a matching condition based on a numeric identifier.\n\n### Detailed description:\n1. **Table**: `\"vermont_biophysical_regions\"` and `\"waste_water_facilities\"`\n   - The query involves two tables. One is named `vermont_biophysical_regions`, and the other is `waste_water_facilities`.\n\n2. **Columns**:\n   - From the table `vermont_biophysical_regions`, it selects the column `NAME`.\n   - From the table `waste_water_facilities`, it selects the column `FacilityName`.\n\n3. **Conditions**:\n   - The WHERE clause specifies that the value in the `BPR_NUM` column of `vermont_biophysical_regions` must match the `FacilityID` column of `waste_water_facilities`. This condition ensures that only rows with corresponding identifiers between the two tables are selected.\n\n### Business scenario:\nThis query might be part of an environmental management system or regulatory compliance tool used by facilities in Vermont. The system could be designed to monitor and manage waste water treatment facilities (`waste_water_facilities`) in relation to their geographical location (`vermont_biophysical_regions`).\n\n### User description:\nA user of such a system, perhaps an environmental regulator or a facility manager, might need to verify if a specific waste water facility (`FacilityName`) is located within a certain biophysical region (`NAME`). This could be crucial for ensuring compliance with local environmental regulations, assessing potential impacts on ecosystems, or planning mitigation strategies based on regional characteristics.\n\nFor example, a facility manager might want to know if their facility is located within a sensitive ecological zone that requires special handling of waste water due to its impact on local flora and fauna. Alternatively, an environmental inspector might need to confirm if a facility's operations are being conducted in accordance with the biophysical characteristics of its surrounding area, which could affect pollution levels and water quality.",
+  "natural_language_query": "I'm trying to find out which waste water facilities are located within the biophysical regions of Vermont. Specifically, I need to see if a particular facility, let's say \"Green Lake Water Treatment Plant\", is situated in a specific region like the \"Lake Region\". How can I use my database to check this?",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ WHERE _ = _ ;",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "vermont_biophysical_regions": [
+      "vermont_biophysical_regions.OBJECTID",
+      "vermont_biophysical_regions.ACRES",
+      "vermont_biophysical_regions.NAME",
+      "vermont_biophysical_regions.SUBSEC_ID",
+      "vermont_biophysical_regions.BPR_NUM",
+      "vermont_biophysical_regions.BPR_NUMID",
+      "vermont_biophysical_regions.SHAPESTArea",
+      "vermont_biophysical_regions.SHAPESTLength"
+    ],
+    "waste_water_facilities": [
+      "waste_water_facilities.X",
+      "waste_water_facilities.Y",
+      "waste_water_facilities.FacilityName",
+      "waste_water_facilities.FacilityID",
+      "waste_water_facilities.WWInventoryURL"
+    ]
+  }
+}

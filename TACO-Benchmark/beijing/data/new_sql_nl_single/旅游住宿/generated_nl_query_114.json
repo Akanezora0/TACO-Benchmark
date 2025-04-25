@@ -1,0 +1,22 @@
+{
+  "sql": "SELECT \"shiwenhuahelvyoujuxingjifandianxinxi2036.��\u0011ࡱ\u001a�\", \"pingguquzhucegongyuanxinxi780.名称\" FROM \"shiwenhuahelvyoujuxingjifandianxinxi2036\" - \"pingguquzhucegongyuanxinxi780\" WHERE \"shiwenhuahelvyoujuxingjifandianxinxi2036.��\u0011ࡱ\u001a�\" = '条件';",
+  "problem_description": "# SQL 语句分析\n\n## 查询意图\n这个SQL语句的目的是从\"shiwenhuahelvyoujuxingjifandianxinxi2036\"表中筛选出符合特定条件的记录，并排除\"pingguquzhucegongyuanxinxi780\"表中的记录，最终返回两个特定列的数据。\n\n## 详细描述\n\n1. **涉及的表**：\n   - 主表：`shiwenhuahelvyoujuxingjifandianxinxi2036`（可能表示\"文化和旅游星级饭店信息2036\"）\n   - 排除表：`pingguquzhucegongyuanxinxi780`（可能表示\"平谷区注册公园信息780\"）\n\n2. **涉及的列**：\n   - 从主表选择的列：`\"shiwenhuahelvyoujuxingjifandianxinxi2036.��\u0011ࡱ\u001a�\"`（列名显示为乱码，可能是编码问题）\n   - 从排除表选择的列：`\"pingguquzhucegongyuanxinxi780.名称\"`（公园名称）\n\n3. **查询条件**：\n   - 主表中`\"shiwenhuahelvyoujuxingjifandianxinxi2036.��\u0011ࡱ\u001a�\"`列的值必须等于'条件'（这里的'条件'是字面值，实际使用时可能是具体条件值）\n\n4. **操作**：\n   - 使用`-`运算符表示从主表结果中排除排除表中的记录（这是非标准SQL语法，可能是特定数据库的扩展）\n\n## 业务场景\n\n这个查询可能用于以下业务场景：\n1. 文化和旅游管理部门需要获取特定条件的星级饭店信息\n2. 需要排除已经注册在平谷区公园信息数据库中的相关记录\n3. 可能用于旅游资源的统计、分析或规划工作\n\n## 用户描述\n\n在这种业务场景下，用户可能遇到以下实际问题或需求：\n1. 需要了解符合特定标准（如星级评定）的旅游饭店信息\n2. 需要确保查询结果不包含已经作为公园注册的场所（避免重复统计）\n3. 可能需要为旅游规划或政策制定提供数据支持\n4. 可能需要识别哪些旅游饭店不在公园注册信息中（可能是为了检查合规性或完整性）\n\n**注意**：由于列名显示为乱码，部分分析基于猜测。实际应用中应确认正确的列名和表名含义以获得更准确的理解。",
+  "natural_language_query": "市民反映，我在帮文旅局做旅游资源调研时遇到个问题。我们想查一下符合星级标准的饭店信息，但是发现有些饭店可能同时也注册在公园系统里，这种情况需要排除掉。具体来说，我们想找那些满足特定评定条件的星级饭店，但不要包含那些已经在平谷区注册为公园的场所。之前尝试查询时系统总是报错，显示有些字段识别不出来，可能是编码问题？希望能帮忙核实一下这个数据，看看能不能准确筛选出我们需要的纯饭店信息，不要和公园混在一起。来电主要反映旅游资源数据查询不准确的问题。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ WHERE _ = _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "shiwenhuahelvyoujuxingjifandianxinxi2036": [
+      "shiwenhuahelvyoujuxingjifandianxinxi2036.��\u0011ࡱ\u001a�",
+      "shiwenhuahelvyoujuxingjifandianxinxi2036.\u0001\u0001"
+    ],
+    "pingguquzhucegongyuanxinxi780": [
+      "pingguquzhucegongyuanxinxi780.序号",
+      "pingguquzhucegongyuanxinxi780.名称",
+      "pingguquzhucegongyuanxinxi780.区",
+      "pingguquzhucegongyuanxinxi780.街道",
+      "pingguquzhucegongyuanxinxi780.地址",
+      "pingguquzhucegongyuanxinxi780.咨询电话"
+    ]
+  }
+}

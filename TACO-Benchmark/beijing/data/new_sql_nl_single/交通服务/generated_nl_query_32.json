@@ -1,0 +1,20 @@
+{
+  "sql": "SELECT \"shijiaotongweiquanshiqicheweixiuqiyexinxi3673.统一社会信用代码\", \"shijiaotongweiquanshiqicheweixiuqiyexinxi3673.业户名称\" FROM \"shijiaotongweiquanshiqicheweixiuqiyexinxi3673\" INNER JOIN \"shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678\" ON \"shijiaotongweiquanshiqicheweixiuqiyexinxi3673.统一社会信用代码\" = \"shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.序号\";",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从两个表中查询并关联数据，获取汽车维修企业的统一社会信用代码和业户名称，条件是这些企业的统一社会信用代码与执法检查机构的序号相匹配。\n\n### **详细描述**  \n1. **涉及的表**：\n   - `shijiaotongweiquanshiqicheweixiuqiyexinxi3673`（可能是“市交通委全市汽车维修企业信息”表，存储汽车维修企业的基本信息）。\n   - `shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678`（可能是“市交通委执法检查、案件处理机构信息”表，存储执法检查机构的相关信息）。\n\n2. **涉及的列**：\n   - `shijiaotongweiquanshiqicheweixiuqiyexinxi3673.统一社会信用代码`（汽车维修企业的统一社会信用代码）。\n   - `shijiaotongweiquanshiqicheweixiuqiyexinxi3673.业户名称`（汽车维修企业的名称）。\n   - `shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.序号`（执法检查机构的序号，可能与企业的信用代码关联）。\n\n3. **查询条件**：\n   - 使用 `INNER JOIN` 关联两个表，关联条件是 `shijiaotongweiquanshiqicheweixiuqiyexinxi3673.统一社会信用代码` = `shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.序号`。\n\n### **业务场景**  \n该查询可能用于以下业务场景：\n1. **执法检查管理**：交通执法部门需要查询哪些汽车维修企业已被执法检查机构记录，以便进行监管或后续处理。\n2. **企业合规性分析**：检查哪些维修企业的信用代码与执法机构的案件相关联，可能用于评估企业的合规性。\n3. **数据关联分析**：将企业信息与执法机构信息关联，便于统计或生成报告。\n\n### **用户描述**  \n在该业务场景下，用户（如交通管理部门或数据分析人员）可能遇到以下问题或需求：\n1. **问题**：\n   - 需要快速查找已被执法机构检查或处理的汽车维修企业名单。\n   - 需要验证企业的信用代码是否与执法机构的案件记录匹配，以避免数据不一致。\n2. **需求**：\n   - 获取已被执法机构关注的维修企业名称及其信用代码，以便进一步调查或通知。\n   - 生成一份报告，列出所有涉及执法案件的企业，供上级部门审查。  \n\n该查询帮助用户高效关联企业信息和执法信息，支持监管决策或合规性检查。",
+  "natural_language_query": "市民反映，自己是交通管理局的工作人员，最近在整理汽车维修企业的监管数据时遇到一个问题。我们手头有两份名单，一份是全市汽车维修企业的基本信息，另一份是执法检查机构的案件处理记录。现在需要找出那些被执法机构检查过的维修企业，但是发现有些企业的信用代码和执法机构的案件编号好像对不上号。比如前几天检查的\"顺义汽车修理厂\"，在系统里就查不到对应的执法记录，不知道是数据没录入还是哪里出了问题。能不能帮忙查一下，哪些维修企业的信用代码是和执法案件匹配上的？我们需要这些企业的名称和信用代码信息，好进行后续的跟进处理。主要是担心有些企业可能被检查过但是系统里没关联上，这样会影响我们的监管工作。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ ;",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweiquanshiqicheweixiuqiyexinxi3673": [
+      "shijiaotongweiquanshiqicheweixiuqiyexinxi3673.统一社会信用代码",
+      "shijiaotongweiquanshiqicheweixiuqiyexinxi3673.业户名称",
+      "shijiaotongweiquanshiqicheweixiuqiyexinxi3673.业户地址"
+    ],
+    "shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678": [
+      "shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.序号",
+      "shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.服务机构名称",
+      "shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.地址"
+    ]
+  }
+}

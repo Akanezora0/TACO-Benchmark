@@ -1,0 +1,22 @@
+{
+  "sql": "SELECT xichengqubeijingshiwenwubaohudanwei31.名称, xichengqubeijingshiwenwubaohudanwei31.地址, xichengquxichengquxingjifandianminglu19.?星级酒店名称, xichengquxichengquxingjifandianminglu19.?联系电话, xichengquxichengquxingjifandianminglu19.?酒店地址 \nFROM xichengqubeijingshiwenwubaohudanwei31 \nJOIN xichengquxichengquxingjifandianminglu19 ON xichengqubeijingshiwenwubaohudanwei31.序号 = xichengquxichengquxingjifandianminglu19.序号",
+  "problem_description": "### **查询意图**：\n该 SQL 语句的目的是从两个表中联合查询北京市西城区的文物保护单位和星级酒店的相关信息，包括文物保护单位的名称和地址，以及对应星级酒店的名称、联系电话和地址。\n\n### **详细描述**：\n1. **涉及的表**：\n   - `xichengqubeijingshiwenwubaohudanwei31`（北京市西城区文物保护单位表）：存储西城区文物保护单位的信息。\n   - `xichengquxichengquxingjifandianminglu19`（西城区星级饭店名录表）：存储西城区星级酒店的信息。\n\n2. **涉及的列**：\n   - `xichengqubeijingshiwenwubaohudanwei31` 表的列：\n     - `名称`：文物保护单位的名称。\n     - `地址`：文物保护单位的地址。\n     - `序号`：用于与星级酒店表关联的字段。\n   - `xichengquxichengquxingjifandianminglu19` 表的列：\n     - `?星级酒店名称`（可能为 `星级酒店名称` 或类似字段）：星级酒店的名称。\n     - `?联系电话`（可能为 `联系电话` 或类似字段）：星级酒店的联系电话。\n     - `?酒店地址`（可能为 `酒店地址` 或类似字段）：星级酒店的地址。\n     - `序号`：用于与文物保护单位表关联的字段。\n\n3. **查询条件**：\n   - 通过 `JOIN` 操作，将两个表按照 `序号` 字段进行关联，即 `xichengqubeijingshiwenwubaohudanwei31.序号 = xichengquxichengquxingjifandianminglu19.序号`。\n\n### **业务场景**：\n该查询可能用于以下业务场景：\n1. **文化旅游规划**：政府或旅游机构可能需要了解西城区文物保护单位附近的星级酒店信息，以便规划旅游路线或推荐住宿。\n2. **游客服务**：游客在参观文物保护单位时，可能需要查询附近的星级酒店信息，以便安排住宿。\n3. **商业分析**：酒店或文物保护单位的管理者可能需要分析两者之间的地理位置关系，以优化商业合作或宣传策略。\n\n### **用户描述**：\n1. **政府或旅游机构**：\n   - 需求：在制定西城区文化旅游推广方案时，需要知道哪些文物保护单位附近有星级酒店，以便为游客提供更便捷的旅游服务。\n   - 问题：如何快速获取文物保护单位及其附近酒店的信息？\n\n2. **游客**：\n   - 需求：计划参观西城区的某个文物保护单位，想了解附近有哪些星级酒店可以住宿。\n   - 问题：如何找到离目标文物保护单位最近的星级酒店及其联系方式？\n\n3. **酒店管理者**：\n   - 需求：希望与附近的文物保护单位合作，推出联合优惠活动或文化体验项目。\n   - 问题：如何查询与酒店地理位置相近的文物保护单位信息？",
+  "natural_language_query": "市民反映，最近计划带家人去西城区游玩，想参观一些文物保护单位比如恭王府、白塔寺这些地方，但是对周边住宿不太熟悉。想问问西城区这些有名的文物保护景点附近有没有星级酒店可以住？最好能提供酒店的联系方式和具体地址，方便提前预订。听说有些文物保护单位和酒店离得很近，但不知道具体是哪些，希望帮忙查一下这些信息。来电咨询西城区文物保护单位附近星级酒店情况。",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ ,_ where _ = _",
+  "database": "旅游住宿",
+  "tables": {
+    "xichengqubeijingshiwenwubaohudanwei31": [
+      "xichengqubeijingshiwenwubaohudanwei31.序号",
+      "xichengqubeijingshiwenwubaohudanwei31.名称",
+      "xichengqubeijingshiwenwubaohudanwei31.地址"
+    ],
+    "xichengquxichengquxingjifandianminglu19": [
+      "xichengquxichengquxingjifandianminglu19.序号",
+      "xichengquxichengquxingjifandianminglu19.?星级酒店名称",
+      "xichengquxichengquxingjifandianminglu19.?星级",
+      "xichengquxichengquxingjifandianminglu19.?联系电话",
+      "xichengquxichengquxingjifandianminglu19.?酒店地址"
+    ]
+  }
+}

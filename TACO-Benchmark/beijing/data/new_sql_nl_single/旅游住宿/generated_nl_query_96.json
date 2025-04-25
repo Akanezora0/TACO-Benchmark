@@ -1,0 +1,45 @@
+{
+  "sql": "SELECT \"pingguqupingguqushandongzhuangzhendengjiminsu3496\".\"山东庄镇等级民宿\", \"shiguihuaziranziyuanweiwangfu1520\".\"HNAME\", \"shiguihuaziranziyuanweiwangfu1520\".\"COUNTYNAME\", \"shiguihuaziranziyuanweiwangfu1520\".\"RANK\" FROM \"pingguqupingguqushandongzhuangzhendengjiminsu3496\" INNER JOIN \"shiguihuaziranziyuanweiwangfu1520\" ON \"pingguqupingguqushandongzhuangzhendengjiminsu3496\".\"Unnamed: 1\" = \"shiguihuaziranziyuanweiwangfu1520\".\"HID\" WHERE \"shiguihuaziranziyuanweiwangfu1520\".\"RANK\" > 3 ORDER BY \"shiguihuaziranziyuanweiwangfu1520\".\"RANK\" DESC;",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是查询并关联两个表中的数据，获取山东庄镇等级民宿的详细信息，包括民宿名称、所在县名称以及等级排名，并且只筛选出等级排名大于3的记录，最后按等级排名降序排列。\n\n- **详细描述**：\n  - **涉及的表**：\n    - `pingguqupingguqushandongzhuangzhendengjiminsu3496`：该表包含山东庄镇等级民宿的信息，其中列`山东庄镇等级民宿`可能存储民宿的名称或其他标识信息。\n    - `shiguihuaziranziyuanweiwangfu1520`：该表包含自然资源的规划信息，其中列`HNAME`可能存储名称，`COUNTYNAME`存储县名称，`RANK`存储等级排名，`HID`可能是唯一标识符。\n  - **关联条件**：通过`pingguqupingguqushandongzhuangzhendengjiminsu3496`表中的`Unnamed: 1`列与`shiguihuaziranziyuanweiwangfu1520`表中的`HID`列进行内连接。\n  - **筛选条件**：只选择`shiguihuaziranziyuanweiwangfu1520`表中`RANK`大于3的记录。\n  - **排序条件**：结果按`shiguihuaziranziyuanweiwangfu1520`表中的`RANK`列降序排列。\n\n- **业务场景**：\n  - 该查询可能用于旅游或民宿管理系统中，目的是筛选出高等级（排名大于3）的山东庄镇民宿，并展示其名称、所在县和具体排名。这有助于游客或管理者快速识别优质的民宿资源。\n  - 例如，旅游平台可能使用此查询来推荐高等级民宿给用户，或者地方政府可能用于统计和展示辖区内的高质量民宿。\n\n- **用户描述**：\n  - 用户可能是旅游平台的运营人员或地方政府的管理者，他们需要快速获取山东庄镇的高等级民宿列表，以便进行推荐或统计分析。\n  - 用户的需求可能包括：\n    - 了解哪些民宿的等级较高（排名大于3）。\n    - 获取民宿的详细地理位置信息（如所在县）。\n    - 按等级排名排序，以便优先展示或处理排名靠前的民宿。",
+  "natural_language_query": "市民反映，最近想去平谷区山东庄镇旅游，想找些评价比较好的民宿住。听说那边有些民宿是评了等级的，能不能帮忙查查等级比较高的民宿啊？最好是排名靠前的那种，3星以下的就不要了。想了解一下这些民宿都叫什么名字，在哪个县，还有具体的等级排名情况。最好能按等级从高到低排个序，这样方便我们选择。之前听朋友说住过那边一家叫\"山水人家\"的民宿感觉不错，但不知道具体排名怎样，希望能查到详细信息。",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ ,_ from _ where _ and _ order by _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "pingguqupingguqushandongzhuangzhendengjiminsu3496": [
+      "pingguqupingguqushandongzhuangzhendengjiminsu3496.山东庄镇等级民宿",
+      "pingguqupingguqushandongzhuangzhendengjiminsu3496.Unnamed: 1",
+      "pingguqupingguqushandongzhuangzhendengjiminsu3496.Unnamed: 2"
+    ],
+    "shiguihuaziranziyuanweiwangfu1520": [
+      "shiguihuaziranziyuanweiwangfu1520.HID",
+      "shiguihuaziranziyuanweiwangfu1520.FATHERID",
+      "shiguihuaziranziyuanweiwangfu1520.HNAME",
+      "shiguihuaziranziyuanweiwangfu1520.OTHERNAME",
+      "shiguihuaziranziyuanweiwangfu1520.CATEGORY",
+      "shiguihuaziranziyuanweiwangfu1520.SUBCATEGOR",
+      "shiguihuaziranziyuanweiwangfu1520.COUNTYNAME",
+      "shiguihuaziranziyuanweiwangfu1520.STREETNAME",
+      "shiguihuaziranziyuanweiwangfu1520.DYNASTY",
+      "shiguihuaziranziyuanweiwangfu1520.SUBDYNASTY",
+      "shiguihuaziranziyuanweiwangfu1520.ADDRESS",
+      "shiguihuaziranziyuanweiwangfu1520.RANK",
+      "shiguihuaziranziyuanweiwangfu1520.BATCH",
+      "shiguihuaziranziyuanweiwangfu1520.PUBTIME",
+      "shiguihuaziranziyuanweiwangfu1520.USERS",
+      "shiguihuaziranziyuanweiwangfu1520.PURPOSE",
+      "shiguihuaziranziyuanweiwangfu1520.OWNERSHIP",
+      "shiguihuaziranziyuanweiwangfu1520.STATEEVALU",
+      "shiguihuaziranziyuanweiwangfu1520.SINGLERELI",
+      "shiguihuaziranziyuanweiwangfu1520.PROTECTION",
+      "shiguihuaziranziyuanweiwangfu1520.ATTACHEDRE",
+      "shiguihuaziranziyuanweiwangfu1520.RELATEDPEO",
+      "shiguihuaziranziyuanweiwangfu1520.RELATEDEVE",
+      "shiguihuaziranziyuanweiwangfu1520.PUBNAME",
+      "shiguihuaziranziyuanweiwangfu1520.SOURCE",
+      "shiguihuaziranziyuanweiwangfu1520.EDITOR",
+      "shiguihuaziranziyuanweiwangfu1520.ISREDUNDAN",
+      "shiguihuaziranziyuanweiwangfu1520.THEME"
+    ]
+  }
+}

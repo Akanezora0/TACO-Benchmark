@@ -1,0 +1,28 @@
+{
+  "sql": "SELECT wildlife_management_units.ABNAME, vermont_biophysical_regions.NAME FROM wildlife_management_units INNER JOIN vermont_biophysical_regions ON wildlife_management_units.OBJECTID = vermont_biophysical_regions.OBJECTID WHERE wildlife_management_units.AGENCY = 'State of Vermont' AND vermont_biophysical_regions.SUBSEC_ID = '1';",
+  "problem_description": "### Query intent:\nThe SQL statement aims to retrieve specific information about wildlife management units and their associated biophysical regions within the jurisdiction of the State of Vermont.\n\n### Detailed description:\n- **Tables involved**:\n  - `wildlife_management_units`: This table likely contains records of various wildlife management units, including an `OBJECTID` for identification, `ABNAME` for the name of the unit, and `AGENCY` indicating the agency managing the unit.\n  - `vermont_biophysical_regions`: This table is related to the biophysical characteristics of different regions within Vermont, with an `OBJECTID` for identification, `NAME` for the region's name, and `SUBSEC_ID` as a subcategory identifier.\n\n- **Columns involved**:\n  - From `wildlife_management_units`: `ABNAME`, which represents the name of the wildlife management unit, and `OBJECTID`.\n  - From `vermont_biophysical_regions`: `NAME`, representing the name of the biophysical region, and `OBJECTID`.\n\n- **Conditions**:\n  - The `wildlife_management_units.AGENCY = 'State of Vermont'` condition filters out only those wildlife management units that are managed by the State of Vermont.\n  - The `vermont_biophysical_regions.SUBSEC_ID = '1'` condition further narrows down the results to only those biophysical regions where the subcategory identifier is '1'.\n\n### Business scenario:\nThis SQL query can be used in environmental management, conservation planning, or wildlife protection efforts. For instance, it might help in identifying specific wildlife management units (e.g., state parks, wildlife reserves) that are located within certain biophysical regions of interest in Vermont, such as forested areas, wetlands, or mountainous regions.\n\n### User description:\nA user, possibly from an environmental conservation organization or a governmental agency responsible for wildlife management, might need this information to:\n- Plan conservation strategies based on the specific characteristics of each biophysical region.\n- Allocate resources for wildlife protection efforts more effectively by focusing on areas that require particular attention due to their unique environmental features.\n- Conduct research or monitoring activities targeted at specific wildlife management units within defined biophysical regions.\n- Develop educational materials or public awareness campaigns highlighting the importance of certain regions for wildlife biodiversity.",
+  "natural_language_query": "User: Hi there! I'm working with a project that involves analyzing wildlife management efforts in Vermont. Specifically, I'm interested in finding out which wildlife management units are under the direct management of the State of Vermont, and where these units are located within the biophysical regions of Vermont. Could you help me write a SQL query for this?\n\nAssistant: User: I'm trying to gather data for a report on how wildlife management units in Vermont are distributed across different biophysical regions. I want to focus on units managed by the State of Vermont. Also, I'm curious about the specific regions where these units are situated. Can you guide me on how to structure a SQL query for this purpose?",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ ;",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "wildlife_management_units": [
+      "wildlife_management_units.OBJECTID",
+      "wildlife_management_units.ABNAME",
+      "wildlife_management_units.AGENCY",
+      "wildlife_management_units.DEPT",
+      "wildlife_management_units.DIV",
+      "wildlife_management_units.BOUNDARY"
+    ],
+    "vermont_biophysical_regions": [
+      "vermont_biophysical_regions.OBJECTID",
+      "vermont_biophysical_regions.ACRES",
+      "vermont_biophysical_regions.NAME",
+      "vermont_biophysical_regions.SUBSEC_ID",
+      "vermont_biophysical_regions.BPR_NUM",
+      "vermont_biophysical_regions.BPR_NUMID",
+      "vermont_biophysical_regions.SHAPESTArea",
+      "vermont_biophysical_regions.SHAPESTLength"
+    ]
+  }
+}

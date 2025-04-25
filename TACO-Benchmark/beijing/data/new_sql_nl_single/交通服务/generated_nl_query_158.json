@@ -1,0 +1,20 @@
+{
+  "sql": "SELECT DISTINCT daxingqudaxingqugonggongzixingchededianweixinxi440.序号, daxingqudaxingqugonggongzixingchededianweixinxi440.公共自行车点位, shijiaotongweigongjiaozhandianxinxichuxingfuwu3665.站点名称, shijiaotongweigongjiaozhandianxinxichuxingfuwu3665.方向 = daxingqudaxingqugonggongzixingchededianweixinxi440.公共自行车点位 AS 公共自行车匹配方向 FROM daxingqudaxingqugonggongzixingchededianweixinxi440 JOIN shijiaotongweigongjiaozhandianxinxichuxingfuwu3665 ON daxingqudaxingqugonggongzixingchededianweixinxi440.公共自行车点位 = shijiaotongweigongjiaozhandianxinxichuxingfuwu3665.站点名称 where shijiaotongweigongjiaozhandianxinxichuxingfuwu3665.线路名称 = '1号线'",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是查询大兴区公共自行车点位与公交站点名称匹配的信息，并筛选出公交线路名称为“1号线”的记录，同时检查公交站点的“方向”是否与公共自行车点位名称一致。\n\n### **详细描述**  \n1. **涉及的表**：  \n   - `daxingqudaxingqugonggongzixingchededianweixinxi440`（大兴区公共自行车点位信息表）  \n   - `shijiaotongweigongjiaozhandianxinxichuxingfuwu3665`（市交通委公交站点信息出行服务表）  \n\n2. **涉及的列**：  \n   - `daxingqudaxingqugonggongzixingchededianweixinxi440` 表的列：  \n     - `序号`（唯一标识）  \n     - `公共自行车点位`（公共自行车站点的名称）  \n   - `shijiaotongweigongjiaozhandianxinxichuxingfuwu3665` 表的列：  \n     - `站点名称`（公交站点的名称）  \n     - `方向`（公交站点的方向信息）  \n     - `线路名称`（公交线路名称）  \n\n3. **查询逻辑**：  \n   - 使用 `JOIN` 连接两个表，连接条件是 `公共自行车点位 = 站点名称`，即公共自行车点位名称与公交站点名称相同。  \n   - 筛选条件：`shijiaotongweigongjiaozhandianxinxichuxingfuwu3665.线路名称 = '1号线'`，即只查询公交线路为“1号线”的记录。  \n   - 计算一个布尔值列 `公共自行车匹配方向`，判断公交站点的“方向”是否等于公共自行车点位的名称。  \n   - 使用 `DISTINCT` 去重，确保结果唯一。  \n\n4. **输出列**：  \n   - `序号`（公共自行车点位的唯一标识）  \n   - `公共自行车点位`（公共自行车站点的名称）  \n   - `站点名称`（公交站点的名称）  \n   - `公共自行车匹配方向`（布尔值，表示公交站点的“方向”是否与公共自行车点位名称一致）  \n\n### **业务场景**  \n该查询可用于城市交通规划或出行服务优化，例如：  \n1. **公交与自行车接驳分析**：检查公交站点附近是否有公共自行车点位，方便乘客换乘。  \n2. **数据一致性校验**：验证公交站点的“方向”信息是否与公共自行车点位名称一致，避免误导乘客。  \n3. **出行服务推荐**：为乘坐“1号线”公交的乘客推荐附近的公共自行车点位，提升出行便利性。  \n\n### **用户描述**  \n1. **交通规划人员**：可能需要分析“1号线”公交沿线是否有足够的公共自行车点位，以优化接驳设施布局。  \n2. **出行App开发者**：希望提供“公交+自行车”的出行方案，需要查询哪些公交站点附近有自行车租赁点。  \n3. **数据治理团队**：需要检查公交站点信息（如“方向”）是否与公共自行车点位名称一致，确保数据准确性。  \n\n### **总结**  \n该 SQL 查询的核心是匹配大兴区公共自行车点位与“1号线”公交站点，并验证方向信息是否一致，适用于交通接驳优化、数据校验和出行服务推荐等场景。",
+  "natural_language_query": "市民反映大兴区这边有个挺奇怪的情况，想咨询一下：我经常坐1号线公交上下班，发现有些公交站旁边明明有公共自行车点，但站牌上写的方向和自行车点的名字对不上。比如昨天在金星站下车，站牌写着\"往西直门方向\"，但旁边的自行车点却叫\"金星东站自行车点\"，这让人很困惑啊。能不能帮忙查查1号线沿线到底有多少个这样的站点？主要是想确认一下这些自行车点和公交站的方向信息是不是一致的，感觉现在这样容易误导我们老百姓。特别是早晚高峰赶时间的时候，经常因为搞不清方向耽误事。",
+  "results": 0,
+  "sql skeleton": "SELECT DISTINCT _ ._ , _ ._ , _ ._ , _ ._ = _ ._ = _ AS _ FROM _ JOIN _ ON _ ._ = _ ._ where _ ._ = _",
+  "database": "交通服务",
+  "tables": {
+    "daxingqudaxingqugonggongzixingchededianweixinxi440": [
+      "daxingqudaxingqugonggongzixingchededianweixinxi440.序号",
+      "daxingqudaxingqugonggongzixingchededianweixinxi440.公共自行车点位"
+    ],
+    "shijiaotongweigongjiaozhandianxinxichuxingfuwu3665": [
+      "shijiaotongweigongjiaozhandianxinxichuxingfuwu3665.线路名称",
+      "shijiaotongweigongjiaozhandianxinxichuxingfuwu3665.站点名称",
+      "shijiaotongweigongjiaozhandianxinxichuxingfuwu3665.方向",
+      "shijiaotongweigongjiaozhandianxinxichuxingfuwu3665.站点序号"
+    ]
+  }
+}

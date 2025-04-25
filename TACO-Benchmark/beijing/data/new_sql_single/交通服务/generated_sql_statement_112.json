@@ -1,0 +1,25 @@
+{
+  "sql": "SELECT \"xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.西城区路侧停车数据\", \"shijiaotongweixianchangxunchaxinxi3675.巡查位置\" FROM \"xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392\" INNER JOIN \"shijiaotongweixianchangxunchaxinxi3675\" ON \"xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.西城区路侧停车数据\".\"编号\" = \"shijiaotongweixianchangxunchaxinxi3675.序号\";",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ ;",
+  "database": "交通服务",
+  "tables": {
+    "xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392": [
+      "xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.西城区路侧停车数据",
+      "xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.Unnamed: 1",
+      "xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.Unnamed: 2",
+      "xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.Unnamed: 3",
+      "xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.Unnamed: 4"
+    ],
+    "shijiaotongweixianchangxunchaxinxi3675": [
+      "shijiaotongweixianchangxunchaxinxi3675.序号",
+      "shijiaotongweixianchangxunchaxinxi3675.工作内容",
+      "shijiaotongweixianchangxunchaxinxi3675.巡查时间",
+      "shijiaotongweixianchangxunchaxinxi3675.巡查人次",
+      "shijiaotongweixianchangxunchaxinxi3675.巡查单位",
+      "shijiaotongweixianchangxunchaxinxi3675.巡查位置",
+      "shijiaotongweixianchangxunchaxinxi3675.共享时间",
+      "shijiaotongweixianchangxunchaxinxi3675.更新时间"
+    ]
+  }
+}

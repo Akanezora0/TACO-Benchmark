@@ -1,0 +1,23 @@
+{
+  "sql": "SELECT \"shijiaotongweichuzuyehujibenxinxi3664.经营业户名称\", \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.评定结果\" FROM \"shijiaotongweichuzuyehujibenxinxi3664\" INNER JOIN \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270\" ON \"shijiaotongweichuzuyehujibenxinxi3664.经营业户名称\" = \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.企业名称\" WHERE \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.评定结果\" = '合格' ;",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是查询2019年普通货运质量信誉考核结果为“合格”的经营业户的基本信息，包括其名称和考核结果。\n\n- **详细描述**：\n  - **涉及的表**：\n    1. `shijiaotongweichuzuyehujibenxinxi3664`：该表可能存储了交通运输管理部门登记的经营业户的基本信息。\n    2. `pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270`：该表可能存储了2019年普通货运质量信誉考核的结果。\n  - **涉及的列**：\n    1. `shijiaotongweichuzuyehujibenxinxi3664.经营业户名称`：经营业户的名称。\n    2. `pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.评定结果`：考核的评定结果。\n    3. `pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.企业名称`：考核结果中对应的企业名称。\n  - **条件**：\n    1. 通过 `INNER JOIN` 连接两个表，连接条件是经营业户名称与企业名称相等。\n    2. `WHERE` 子句筛选出评定结果为“合格”的记录。\n\n- **业务场景**：\n  - 该查询可以用于交通运输管理部门或相关监管机构，筛选出2019年普通货运质量信誉考核合格的企业名单。\n  - 可能的用途包括：\n    - 监管合规性检查，确保只有合格的企业可以继续从事货运业务。\n    - 提供给其他企业或公众查询，了解哪些货运企业信誉良好。\n    - 用于政策制定或行业分析，了解货运行业的整体质量信誉状况。\n\n- **用户描述**：\n  - 用户可能是交通运输管理部门的工作人员，需要快速获取2019年普通货运质量信誉考核合格的企业名单，以便进行后续的监管或公示工作。\n  - 用户也可能是货运企业或相关从业人员，希望通过查询了解自己或竞争对手的考核结果，确保业务合规或选择合作伙伴。\n  - 用户还可能是有货运需求的客户，希望通过查询选择信誉良好的货运企业，确保货物运输的安全和质量。",
+  "natural_language_query": "市民反映，想了解一下2019年那些跑普通货运的公司哪些是通过了信誉考核的。最近要找货运公司拉货，听说有些公司考核不合格不太靠谱，想查查那些被评上\"合格\"的运输公司名单。之前合作过一家叫XX货运的，不知道他们这次考核过没过，能不能帮忙查一下这些合格公司的信息？主要是想知道哪些公司信誉比较好，这样发货也放心些。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ WHERE _ = _ ;",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweichuzuyehujibenxinxi3664": [
+      "shijiaotongweichuzuyehujibenxinxi3664.经营业户名称"
+    ],
+    "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270": [
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.企业名称",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.经营许可证号",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.企业类型",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.所属区县",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.考核人",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.评定时间",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.评定得分",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.评定结果"
+    ]
+  }
+}

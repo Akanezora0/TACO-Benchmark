@@ -1,0 +1,23 @@
+{
+  "sql": "SELECT \n    shiwenhuahelvyoujulvxingshexinxi3530.\"旅行社名称\",\n    shiwenhuahelvyoujulvxingshexinxi3530.\"旅行社业务经营许可证编号\",\n    shiwenhuahelvyoujulvxingshexinxi3530.\"许可经营业务\",\n    shiwenhuahelvyoujulvxingshexinxi3530.\"许可时间\",\n    huairouquhuairouqujingqumenpiaojiage1592.\"怀柔区政府定价景区门票价格\",\n    huairouquhuairouqujingqumenpiaojiage1592.\"Unnamed: 1\",\n    huairouquhuairouqujingqumenpiaojiage1592.\"Unnamed: 2\",\n    huairouquhuairouqujingqumenpiaojiage1592.\"Unnamed: 3\",\n    huairouquhuairouqujingqumenpiaojiage1592.\"Unnamed: 4\"\nFROM \n    shiwenhuahelvyoujulvxingshexinxi3530 \nJOIN \n    huairouquhuairouqujingqumenpiaojiage1592 \nON \n    shiwenhuahelvyoujulvxingshexinxi3530.\"旅行社业务经营许可证编号\" = huairouquhuairouqujingqumenpiaojiage1592.\"Unnamed: 1\" \nWHERE \n    shiwenhuahelvyoujulvxingshexinxi3530.\"许可时间\" = '2022-01-01' \nAND \n    huairouquhuairouqujingqumenpiaojiage1592.\"Unnamed: 1\" = '指定编号';",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是查询在特定许可时间（2022年1月1日）下，具有指定业务经营许可证编号的旅行社信息，并关联查询这些旅行社在怀柔区政府定价景区门票价格表中的相关信息。\n\n- **详细描述**：\n  - **涉及的表**：\n    1. `shiwenhuahelvyoujulvxingshexinxi3530`：该表存储了旅行社的基本信息，包括旅行社名称、业务经营许可证编号、许可经营业务和许可时间等。\n    2. `huairouquhuairouqujingqumenpiaojiage1592`：该表存储了怀柔区政府定价景区门票价格的相关信息，包括门票价格和其他未命名的列（Unnamed: 1 到 Unnamed: 4）。\n  \n  - **涉及的列**：\n    1. `shiwenhuahelvyoujulvxingshexinxi3530` 表中的列：\n      - `旅行社名称`：旅行社的名称。\n      - `旅行社业务经营许可证编号`：旅行社的业务经营许可证编号。\n      - `许可经营业务`：旅行社被许可经营的业务范围。\n      - `许可时间`：旅行社获得许可的时间。\n    2. `huairouquhuairouqujingqumenpiaojiage1592` 表中的列：\n      - `怀柔区政府定价景区门票价格`：景区门票的价格。\n      - `Unnamed: 1` 到 `Unnamed: 4`：未命名的列，可能包含其他相关信息（如景区名称、优惠政策等）。\n  \n  - **条件**：\n    1. `shiwenhuahelvyoujulvxingshexinxi3530.\"许可时间\" = '2022-01-01'`：筛选出许可时间为2022年1月1日的旅行社。\n    2. `huairouquhuairouqujingqumenpiaojiage1592.\"Unnamed: 1\" = '指定编号'`：筛选出 `Unnamed: 1` 列值为“指定编号”的记录。\n    3. 两个表通过 `shiwenhuahelvyoujulvxingshexinxi3530.\"旅行社业务经营许可证编号\" = huairouquhuairouqujingqumenpiaojiage1592.\"Unnamed: 1\"` 进行关联。\n\n- **业务场景**：该查询可以用于以下业务场景：\n  - **旅行社与景区合作管理**：查询特定时间段内获得许可的旅行社，并关联这些旅行社在怀柔区景区的门票价格或其他合作信息。\n  - **政策执行情况检查**：检查在2022年1月1日获得许可的旅行社是否在怀柔区景区有相应的门票定价或合作记录。\n  - **数据分析**：分析特定时间段内获得许可的旅行社与景区门票价格之间的关系，为后续政策调整或合作优化提供数据支持。\n\n- **用户描述**：\n  - 用户可能是旅游管理部门的工作人员，需要了解在2022年1月1日获得许可的旅行社是否与怀柔区景区有合作，并查看具体的门票价格或其他相关信息。\n  - 用户也可能是旅行社的管理人员，需要确认自己旅行社在怀柔区景区的门票价格或合作状态是否符合预期。\n  - 用户还可能是数据分析师，希望通过该查询获取特定时间段内旅行社与景区合作的数据，以便进行进一步的分析或报告生成。",
+  "natural_language_query": "市民反映，去年1月1号新批的几家旅行社，听说在怀柔那边的景区有合作，但查不到具体信息。我这边有个旅行社的业务许可证编号是\"指定编号\"，想问问他们在怀柔景区的门票价格是怎么定的？是不是有什么优惠政策啊？因为最近有游客投诉说门票价格和宣传的不一样，我们这边也很着急，希望能帮忙查一下具体情况。对了，重点是想知道去年年初批的那批旅行社在怀柔景区的合作情况，特别是门票价格这块，看是不是符合规定。",
+  "results": 0,
+  "sql skeleton": "SELECT _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ FROM _ JOIN _ ON _ ._ = _ ._ WHERE _ ._ = _ and _ ._ = _ AND _ ._ = _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "shiwenhuahelvyoujulvxingshexinxi3530": [
+      "shiwenhuahelvyoujulvxingshexinxi3530.旅行社名称",
+      "shiwenhuahelvyoujulvxingshexinxi3530.旅行社业务经营许可证编号",
+      "shiwenhuahelvyoujulvxingshexinxi3530.许可经营业务",
+      "shiwenhuahelvyoujulvxingshexinxi3530.许可时间"
+    ],
+    "huairouquhuairouqujingqumenpiaojiage1592": [
+      "huairouquhuairouqujingqumenpiaojiage1592.怀柔区政府定价景区门票价格",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 1",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 2",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 3",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 4"
+    ]
+  }
+}

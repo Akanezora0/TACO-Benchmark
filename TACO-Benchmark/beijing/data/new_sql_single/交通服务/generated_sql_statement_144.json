@@ -1,0 +1,19 @@
+{
+  "sql": "SELECT \"shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.业户名称\", \"shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.评定等级\" FROM \"shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669\" WHERE \"shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.评定等级\" = '优秀';",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ ;",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669": [
+      "shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.业户名称",
+      "shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.评定等级",
+      "shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.所属地区",
+      "shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.年份",
+      "shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.统一社会信用代码"
+    ],
+    "shijiaotongweigongluqixiangshuju233": [
+      "shijiaotongweigongluqixiangshuju233.��\u0011ࡱ\u001a�",
+      "shijiaotongweigongluqixiangshuju233.\u0001\u0001"
+    ]
+  }
+}

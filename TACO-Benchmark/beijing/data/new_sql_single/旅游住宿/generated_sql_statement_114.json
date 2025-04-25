@@ -1,0 +1,20 @@
+{
+  "sql": "SELECT \"shiwenhuahelvyoujuxingjifandianxinxi2036.��\u0011ࡱ\u001a�\", \"pingguquzhucegongyuanxinxi780.名称\" FROM \"shiwenhuahelvyoujuxingjifandianxinxi2036\" - \"pingguquzhucegongyuanxinxi780\" WHERE \"shiwenhuahelvyoujuxingjifandianxinxi2036.��\u0011ࡱ\u001a�\" = '条件';",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ WHERE _ = _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "shiwenhuahelvyoujuxingjifandianxinxi2036": [
+      "shiwenhuahelvyoujuxingjifandianxinxi2036.��\u0011ࡱ\u001a�",
+      "shiwenhuahelvyoujuxingjifandianxinxi2036.\u0001\u0001"
+    ],
+    "pingguquzhucegongyuanxinxi780": [
+      "pingguquzhucegongyuanxinxi780.序号",
+      "pingguquzhucegongyuanxinxi780.名称",
+      "pingguquzhucegongyuanxinxi780.区",
+      "pingguquzhucegongyuanxinxi780.街道",
+      "pingguquzhucegongyuanxinxi780.地址",
+      "pingguquzhucegongyuanxinxi780.咨询电话"
+    ]
+  }
+}

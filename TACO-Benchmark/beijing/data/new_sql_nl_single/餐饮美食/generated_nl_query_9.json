@@ -1,0 +1,26 @@
+{
+  "sql": "SELECT shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC FROM shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374 WHERE shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID IN (SELECT shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.XKZID FROM shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076 WHERE shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号 = '特定值')",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从表 `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374` 中查询符合条件的经营主体名称（`JYZMC`），这些主体的许可证 ID（`XKZID`）必须存在于另一个表 `shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076` 中，且满足特定条件（`专用标识牌号 = '特定值'`）。\n\n### **详细描述**  \n1. **主查询表**：`shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374`  \n   - 查询列：`JYZMC`（经营主体名称）  \n   - 条件：该表的 `XKZID`（许可证 ID）必须存在于子查询结果中。  \n\n2. **子查询表**：`shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076`  \n   - 查询列：`XKZID`（许可证 ID）  \n   - 条件：`专用标识牌号 = '特定值'`（即筛选出具有特定标识牌号的记录）。  \n\n3. **查询逻辑**：  \n   - 首先，子查询从 `shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076` 表中找出所有 `专用标识牌号` 为 `'特定值'` 的许可证 ID（`XKZID`）。  \n   - 然后，主查询从 `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374` 表中筛选出 `XKZID` 在子查询结果中的记录，并返回这些记录的 `JYZMC`（经营主体名称）。  \n\n### **业务场景**  \n该查询可能用于以下业务场景：  \n- **市场监管或宗教食品合规管理**：  \n  - 表 `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374` 可能存储餐饮服务许可证信息，包括经营主体名称和许可证 ID。  \n  - 表 `shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076` 可能存储清真食品或宗教合规相关的数据，其中 `专用标识牌号` 用于标识符合特定宗教或民族标准的食品经营主体。  \n- **查询目标**：找出所有持有特定清真或宗教合规标识（`专用标识牌号 = '特定值'`）的餐饮经营主体名称。  \n\n### **用户描述**  \n在该业务场景下，用户可能是：  \n1. **市场监管部门**：  \n   - 需要核查哪些餐饮企业具备清真食品经营资质（即拥有特定标识牌号）。  \n   - 例如，确保清真餐厅符合宗教规范，避免违规经营。  \n\n2. **宗教或民族事务管理机构**：  \n   - 需要统计或监管符合特定宗教食品标准（如清真认证）的餐饮服务提供者。  \n   - 例如，为少数民族或宗教群体提供合规餐饮场所信息。  \n\n3. **消费者或第三方平台**：  \n   - 可能需要查询合规的清真餐厅名单，以便选择符合自身需求的就餐场所。  \n\n### **总结**  \n该 SQL 查询的核心是 **“找出具有特定宗教或合规标识的餐饮经营主体”**，适用于市场监管、宗教合规管理或消费者信息服务等场景。",
+  "natural_language_query": "市民反映，想找一些有正规清真认证的餐馆吃饭，但是发现有些挂着清真牌子的餐馆感觉不太正规。之前听说政府会给合规的清真餐厅发专门的标识牌，能不能帮忙查一下哪些餐馆是真正有这个特定清真标识的？主要是担心吃到不合规的食品，家里老人特别在意这个。来电咨询如何查询正规清真餐饮商家的问题。",
+  "results": 0,
+  "sql skeleton": "select _ from _ where _ in (select _ from _ where _ )",
+  "database": "餐饮美食",
+  "tables": {
+    "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374": [
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYXM",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.FZRQ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.YXQZ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.DWMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.EXCHANGETIME"
+    ],
+    "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076": [
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址"
+    ]
+  }
+}

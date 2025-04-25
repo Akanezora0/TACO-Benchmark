@@ -1,0 +1,21 @@
+{
+  "sql": "SELECT DISTINCT shijiaotongweiguidaoyanshixinxi3711.延时开始时间, daxingqudaxingqugonggongzixingchededianweixinxi440.公共自行车点位 FROM shijiaotongweiguidaoyanshixinxi3711 WHERE shijiaotongweiguidaoyanshixinxi3711.延时开始时间 IS NOT NULL UNION SELECT DISTINCT shijiaotongweiguidaoyanshixinxi3711.延时结束时间, daxingqudaxingqugonggongzixingchededianweixinxi440.公共自行车点位 FROM shijiaotongweiguidaoyanshixinxi3711 WHERE shijiaotongweiguidaoyanshixinxi3711.延时结束时间 IS NOT NULL",
+  "results": 0,
+  "sql skeleton": "select distinct _ ._ as _ ,_ ._ as _ from ( select _ as _ ,_ as _ from _ where _ union select _ as _ ,_ as _ from _ where _ ) _",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweiguidaoyanshixinxi3711": [
+      "shijiaotongweiguidaoyanshixinxi3711.序号",
+      "shijiaotongweiguidaoyanshixinxi3711.总车次",
+      "shijiaotongweiguidaoyanshixinxi3711.延时开始时间",
+      "shijiaotongweiguidaoyanshixinxi3711.延时结束时间",
+      "shijiaotongweiguidaoyanshixinxi3711.延时线路",
+      "shijiaotongweiguidaoyanshixinxi3711.共享时间",
+      "shijiaotongweiguidaoyanshixinxi3711.更新时间"
+    ],
+    "daxingqudaxingqugonggongzixingchededianweixinxi440": [
+      "daxingqudaxingqugonggongzixingchededianweixinxi440.序号",
+      "daxingqudaxingqugonggongzixingchededianweixinxi440.公共自行车点位"
+    ]
+  }
+}

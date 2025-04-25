@@ -1,0 +1,22 @@
+{
+  "sql": "SELECT \"shijiaotongweigongjiaoxianluxinxichuxingfuwu3666.线路代码\", \"shijiaotongweigongjiaoxianluxinxichuxingfuwu3666.路线名称\", \"shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.检查结果\" \nFROM \"shijiaotongweigongjiaoxianluxinxichuxingfuwu3666\"\nJOIN \"shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210\" ON \"shijiaotongweigongjiaoxianluxinxichuxingfuwu3666.线路代码\" = \"shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.实施机构\"\nWHERE \"shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.实施机构\" = '特定值' AND \"shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.检查结果\" = '特定结果'",
+  "problem_description": "### **查询意图**：  \n该 SQL 语句的目的是从公交线路信息表和随机抽查结果表中，查询符合特定条件的公交线路代码、线路名称以及对应的检查结果。  \n\n---\n\n### **详细描述**：  \n1. **涉及的表**：  \n   - `shijiaotongweigongjiaoxianluxinxichuxingfuwu3666`（公交线路信息出行服务表）：存储公交线路的基本信息，如线路代码、线路名称等。  \n   - `shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210`（公交随机抽查结果公示表）：存储公交线路的抽查结果，包括实施机构（线路代码）和检查结果。  \n\n2. **查询的列**：  \n   - 公交线路信息表中的 `线路代码` 和 `路线名称`。  \n   - 随机抽查结果表中的 `检查结果`。  \n\n3. **连接条件**：  \n   - 通过 `线路代码`（公交线路信息表）和 `实施机构`（抽查结果表）进行关联，确保查询的是同一线路的数据。  \n\n4. **筛选条件**：  \n   - `实施机构 = '特定值'`：限定抽查的公交线路为某一特定线路（如某条具体公交线路）。  \n   - `检查结果 = '特定结果'`：限定只查询符合特定检查结果的记录（如“合格”“不合格”或“需整改”等）。  \n\n---\n\n### **业务场景**：  \n该查询可用于以下业务场景：  \n1. **公交服务质量监管**：交通管理部门或公交公司需要检查某条特定线路的抽查结果，以评估其运营合规性。  \n2. **问题线路排查**：如果某条线路的检查结果不合格，可以通过该查询快速定位问题线路，并进一步分析整改措施。  \n3. **公众信息公示**：政府或公交公司可能需要在官方网站或APP上公示某条线路的抽查结果，供乘客参考。  \n\n---\n\n### **用户描述**：  \n1. **交通管理部门**：  \n   - *需求*：定期抽查公交线路的运营情况，确保符合安全和服务标准。  \n   - *问题*：某条线路（如“线路代码=123”）近期投诉较多，需要查看其最近的抽查结果是否合格。  \n\n2. **公交公司管理人员**：  \n   - *需求*：监控公司旗下线路的抽查情况，对不合格的线路进行整改。  \n   - *问题*：接到通知称某线路（如“线路代码=456”）在随机抽查中“不合格”，需要核实具体信息并制定改进计划。  \n\n3. **乘客或公众**：  \n   - *需求*：查询某条常坐公交线路的服务质量（如是否通过安全检查）。  \n   - *问题*：想知道“XX路公交”是否在最近的抽查中达标，以确保出行安全。  \n\n通过该 SQL 查询，可以快速获取目标线路的抽查结果，辅助决策或信息公示。",
+  "natural_language_query": "市民反映经常乘坐的358路公交车最近服务特别差，车上空调经常不制冷，司机还总是急刹车。上周五在\"北京公交\"APP上看到新闻说交通局抽查了一些线路的服务质量，想问问358路公交的检查结果怎么样啊？是不是合格？因为每天都要坐这趟车送孩子上学，很担心安全问题。来电希望帮忙查一下358路最近的抽查情况，看看有没有什么问题需要整改的。",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ from _ where _ = _ and _",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweigongjiaoxianluxinxichuxingfuwu3666": [
+      "shijiaotongweigongjiaoxianluxinxichuxingfuwu3666.线路代码",
+      "shijiaotongweigongjiaoxianluxinxichuxingfuwu3666.路线名称"
+    ],
+    "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210": [
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.监管对象",
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.实施机构",
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.检查行为编号",
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.检查时间",
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.检查人员",
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.检查结果"
+    ]
+  }
+}

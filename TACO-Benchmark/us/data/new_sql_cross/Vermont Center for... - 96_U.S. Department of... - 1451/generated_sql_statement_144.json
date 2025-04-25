@@ -1,0 +1,66 @@
+{
+  "sql": "SELECT \"provisional_death_counts_for_influenza_pneumonia_and_covid19.Data As Of\", \"provisional_death_counts_for_influenza_pneumonia_and_covid19.Total Deaths\" FROM \"provisional_death_counts_for_influenza_pneumonia_and_covid19\" WHERE \"provisional_death_counts_for_influenza_pneumonia_and_covid19.MMWRyear\" = '2022' AND \"provisional_death_counts_for_influenza_pneumonia_and_covid19.MMWRweek\" = '10';",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ WHERE _ = _ ;",
+  "databases": [
+    "Vermont Center for... - 96",
+    "U.S. Department of... - 1451"
+  ],
+  "tables": {
+    "invasive_species": {
+      "invasive_species": [
+        "invasive_species.X",
+        "invasive_species.Y",
+        "invasive_species.SiteName",
+        "invasive_species.ObservationID",
+        "invasive_species.InvasiveName",
+        "invasive_species.ObservationDate",
+        "invasive_species.Observer",
+        "invasive_species.SurveyType",
+        "invasive_species.Latitude",
+        "invasive_species.Longitude",
+        "invasive_species.Town",
+        "invasive_species.GrossArea",
+        "invasive_species.InfestedArea",
+        "invasive_species.PlantDescription",
+        "invasive_species.DistributionName",
+        "invasive_species.AssessmentDate",
+        "invasive_species.TreatmentDate",
+        "invasive_species.TreatmentEffectiveness",
+        "invasive_species.TreatmentType",
+        "invasive_species.TreatmentPerson",
+        "invasive_species.TreatmentAssessmentDate",
+        "invasive_species.Assessor",
+        "invasive_species.TreatmentAssessmentNotes",
+        "invasive_species.TreatmentHours",
+        "invasive_species.ChemicalName",
+        "invasive_species.ChemicalConsentration",
+        "invasive_species.ChemicalOunces",
+        "invasive_species.ApplicationMethod",
+        "invasive_species.CertifiedApplicator",
+        "invasive_species.EPARegistationNumber"
+      ]
+    },
+    "provisional_death_counts_for_influenza_pneumonia_and_covid19": {
+      "provisional_death_counts_for_influenza_pneumonia_and_covid19": [
+        "provisional_death_counts_for_influenza_pneumonia_and_covid19.Data As Of",
+        "provisional_death_counts_for_influenza_pneumonia_and_covid19.Start Week",
+        "provisional_death_counts_for_influenza_pneumonia_and_covid19.End Week",
+        "provisional_death_counts_for_influenza_pneumonia_and_covid19.MMWRyear",
+        "provisional_death_counts_for_influenza_pneumonia_and_covid19.MMWRweek",
+        "provisional_death_counts_for_influenza_pneumonia_and_covid19.Week Ending Date",
+        "provisional_death_counts_for_influenza_pneumonia_and_covid19.Group",
+        "provisional_death_counts_for_influenza_pneumonia_and_covid19.Indicator",
+        "provisional_death_counts_for_influenza_pneumonia_and_covid19.Jurisdiction",
+        "provisional_death_counts_for_influenza_pneumonia_and_covid19.Age Group",
+        "provisional_death_counts_for_influenza_pneumonia_and_covid19.COVID-19 Deaths",
+        "provisional_death_counts_for_influenza_pneumonia_and_covid19.Total Deaths",
+        "provisional_death_counts_for_influenza_pneumonia_and_covid19.Pneumonia Deaths",
+        "provisional_death_counts_for_influenza_pneumonia_and_covid19.Influenza Deaths",
+        "provisional_death_counts_for_influenza_pneumonia_and_covid19.Pneumonia or Influenza",
+        "provisional_death_counts_for_influenza_pneumonia_and_covid19.Pneumonia, Influenza, or COVID-19 Deaths",
+        "provisional_death_counts_for_influenza_pneumonia_and_covid19.Footnote"
+      ]
+    }
+  }
+}

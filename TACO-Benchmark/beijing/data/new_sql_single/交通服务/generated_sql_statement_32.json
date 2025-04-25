@@ -1,0 +1,18 @@
+{
+  "sql": "SELECT \"shijiaotongweiquanshiqicheweixiuqiyexinxi3673.统一社会信用代码\", \"shijiaotongweiquanshiqicheweixiuqiyexinxi3673.业户名称\" FROM \"shijiaotongweiquanshiqicheweixiuqiyexinxi3673\" INNER JOIN \"shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678\" ON \"shijiaotongweiquanshiqicheweixiuqiyexinxi3673.统一社会信用代码\" = \"shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.序号\";",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ ;",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweiquanshiqicheweixiuqiyexinxi3673": [
+      "shijiaotongweiquanshiqicheweixiuqiyexinxi3673.统一社会信用代码",
+      "shijiaotongweiquanshiqicheweixiuqiyexinxi3673.业户名称",
+      "shijiaotongweiquanshiqicheweixiuqiyexinxi3673.业户地址"
+    ],
+    "shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678": [
+      "shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.序号",
+      "shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.服务机构名称",
+      "shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.地址"
+    ]
+  }
+}

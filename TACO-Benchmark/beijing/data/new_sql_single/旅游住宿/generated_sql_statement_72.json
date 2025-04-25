@@ -1,0 +1,43 @@
+{
+  "sql": "SELECT shiguihuaziranziyuanweitongxunshe1518.HID, shunyiqushunyiquxingjifandian2102.顺义区星级饭店 FROM shiguihuaziranziyuanweitongxunshe1518 WHERE shiguihuaziranziyuanweitongxunshe1518.HID (_shunyiqushunyiquxingjifandian2102.顺义区星级饭店 ,shunyiqushunyiquxingjifandian2102.顺义区星级饭店 ) >= 5 AND shunyiqushunyiquxingjifandian2102.顺义区星级饭店 in (SELECT shunyiqushunyiquxingjifandian2102.顺义区星级饭店 FROM shunyiqushunyiquxingjifandian2102 WHERE shunyiqushunyiquxingjifandian2102.顺义区星级饭店 = '四星')",
+  "results": 0,
+  "sql skeleton": "select _ from _ where _ (_ ,_ ) >= _ and _ in (select _ from _ where _ = _ )",
+  "database": "旅游住宿",
+  "tables": {
+    "shiguihuaziranziyuanweitongxunshe1518": [
+      "shiguihuaziranziyuanweitongxunshe1518.HID",
+      "shiguihuaziranziyuanweitongxunshe1518.FATHERID",
+      "shiguihuaziranziyuanweitongxunshe1518.HNAME",
+      "shiguihuaziranziyuanweitongxunshe1518.OTHERNAME",
+      "shiguihuaziranziyuanweitongxunshe1518.CATEGORY",
+      "shiguihuaziranziyuanweitongxunshe1518.SUBCATEGOR",
+      "shiguihuaziranziyuanweitongxunshe1518.COUNTYNAME",
+      "shiguihuaziranziyuanweitongxunshe1518.STREETNAME",
+      "shiguihuaziranziyuanweitongxunshe1518.DYNASTY",
+      "shiguihuaziranziyuanweitongxunshe1518.SUBDYNASTY",
+      "shiguihuaziranziyuanweitongxunshe1518.ADDRESS",
+      "shiguihuaziranziyuanweitongxunshe1518.RANK",
+      "shiguihuaziranziyuanweitongxunshe1518.BATCH",
+      "shiguihuaziranziyuanweitongxunshe1518.PUBTIME",
+      "shiguihuaziranziyuanweitongxunshe1518.USERS",
+      "shiguihuaziranziyuanweitongxunshe1518.PURPOSE",
+      "shiguihuaziranziyuanweitongxunshe1518.OWNERSHIP",
+      "shiguihuaziranziyuanweitongxunshe1518.STATEEVALU",
+      "shiguihuaziranziyuanweitongxunshe1518.SINGLERELI",
+      "shiguihuaziranziyuanweitongxunshe1518.PROTECTION",
+      "shiguihuaziranziyuanweitongxunshe1518.ATTACHEDRE",
+      "shiguihuaziranziyuanweitongxunshe1518.RELATEDPEO",
+      "shiguihuaziranziyuanweitongxunshe1518.RELATEDEVE",
+      "shiguihuaziranziyuanweitongxunshe1518.PUBNAME",
+      "shiguihuaziranziyuanweitongxunshe1518.SOURCE",
+      "shiguihuaziranziyuanweitongxunshe1518.EDITOR",
+      "shiguihuaziranziyuanweitongxunshe1518.ISREDUNDAN"
+    ],
+    "shunyiqushunyiquxingjifandian2102": [
+      "shunyiqushunyiquxingjifandian2102.顺义区星级饭店",
+      "shunyiqushunyiquxingjifandian2102.Unnamed: 1",
+      "shunyiqushunyiquxingjifandian2102.Unnamed: 2",
+      "shunyiqushunyiquxingjifandian2102.Unnamed: 3"
+    ]
+  }
+}

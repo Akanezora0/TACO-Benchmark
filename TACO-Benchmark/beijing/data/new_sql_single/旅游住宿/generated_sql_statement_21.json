@@ -1,0 +1,21 @@
+{
+  "sql": "SELECT \"changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.2021年度昌平A级景区数据开放表\", \"shiwenhuahelvyoujuxingjifandianxinxi2036.��\u0011ࡱ\u001a�\" FROM \"changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842\" INNER JOIN \"shiwenhuahelvyoujuxingjifandianxinxi2036\" ON \"changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 1\" = \"shiwenhuahelvyoujuxingjifandianxinxi2036.\u0001\u0001\" ;",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842": [
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.2021年度昌平A级景区数据开放表               ",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 1",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 2",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 3",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 4",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 5",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 6"
+    ],
+    "shiwenhuahelvyoujuxingjifandianxinxi2036": [
+      "shiwenhuahelvyoujuxingjifandianxinxi2036.��\u0011ࡱ\u001a�",
+      "shiwenhuahelvyoujuxingjifandianxinxi2036.\u0001\u0001"
+    ]
+  }
+}

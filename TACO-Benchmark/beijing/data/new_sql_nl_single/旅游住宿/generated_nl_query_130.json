@@ -1,0 +1,26 @@
+{
+  "sql": "SELECT \"chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337\".\"酒仙桥街道社区地址及联系电话\", \"chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337\".\"Unnamed: 1\", \"chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337\".\"Unnamed: 2\", \"chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337\".\"Unnamed: 3\", \"chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337\".\"Unnamed: 4\" FROM \"chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337\" WHERE \"chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337\".\"Unnamed: 4\" = '查询条件'\n\nSELECT \"shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777\".\"本市市管游览参观点门票价格\", \"shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777\".\"Unnamed: 1\", \"shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777\".\"Unnamed: 2\", \"shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777\".\"Unnamed: 3\", \"shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777\".\"Unnamed: 4\", \"shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi177",
+  "problem_description": "### 第一个SQL语句分析：\n\n- **查询意图**：查询朝阳区酒仙桥街道下辖社区宾馆酒店信息中满足特定条件的记录。\n\n- **详细描述**：\n  - 表名：`chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337`（朝阳区酒仙桥街道下辖区宾馆酒店信息表）\n  - 查询列：\n    - `酒仙桥街道社区地址及联系电话`（社区地址和联系电话）\n    - `Unnamed: 1`（未命名列1）\n    - `Unnamed: 2`（未命名列2）\n    - `Unnamed: 3`（未命名列3）\n    - `Unnamed: 4`（未命名列4）\n  - 条件：`Unnamed: 4`列的值等于'查询条件'\n\n- **业务场景**：\n  该查询可能用于获取酒仙桥街道辖区内符合特定条件的宾馆酒店信息，如特定类型、特定服务或特定状态的宾馆酒店。\n\n- **用户描述**：\n  用户可能是街道管理人员、社区服务人员或需要住宿信息的访客，他们可能需要：\n  1. 查找特定类型的宾馆（如经济型、豪华型）\n  2. 查找提供特定服务的酒店（如会议室、停车场）\n  3. 查找符合特定条件的住宿地点（如价格范围、评分）\n\n### 第二个SQL语句分析（不完整部分）：\n\n- **查询意图**：查询本市市管游览参观点门票价格及相关信息。\n\n- **详细描述**：\n  - 表名：`shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777`（市发改委为市管游览参观点现行门票价格及原价格信息表）\n  - 查询列：\n    - `本市市管游览参观点门票价格`（当前门票价格）\n    - `Unnamed: 1`（未命名列1）\n    - `Unnamed: 2`（未命名列2）\n    - `Unnamed: 3`（未命名列3）\n    - `Unnamed: 4`（未命名列4）\n    - 语句不完整，缺少后续部分\n\n- **业务场景**：\n  该查询可能用于：\n  1. 比较游览参观点现行价格与原价格\n  2. 分析价格调整情况\n  3. 获取旅游景点价格信息用于规划\n\n- **用户描述**：\n  用户可能是：\n  1. 旅游管理部门工作人员监控价格执行情况\n  2. 旅行社规划旅游线路和预算\n  3. 游客查询景点门票价格\n  4. 价格监管部门进行价格合规检查\n\n注：第二个SQL语句不完整，缺少WHERE条件和可能的其他列，因此分析有限。从表名和已出现的列名看，这似乎是一个关于旅游景点门票价格信息的查询。",
+  "natural_language_query": "1. 关于酒仙桥街道宾馆酒店的查询：\n\"您好，我最近要在酒仙桥这边找个住的地方，但是不太清楚这边宾馆的情况。想问问这边社区里都有哪些宾馆酒店啊？最好是那种带停车场和早餐的，价格最好在300-500之间的。我上次路过看到有几家但不知道具体条件怎么样，能不能帮忙查查？对了，最好能提供下联系电话，我想提前问问房间情况。\"\n\n2. 关于游览参观点门票价格的查询：\n\"喂，我想反映个情况啊。上周带家人去市里那个著名景点玩，发现门票比去年贵了好多！我记得以前是60现在要80了，这涨价也太快了吧？能不能帮忙查查现在市里这些景点的门票价格都是多少啊？特别是那些市里直接管的景点，我想看看是不是都涨价了，还是就这一个景点涨了。还有能不能查到以前的价格做个对比？这涨价也太不合理了！\"",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ ,_ ,_ from _ where _ =_",
+  "database": "旅游住宿",
+  "tables": {
+    "chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337": [
+      "chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337.酒仙桥街道社区地址及联系电话",
+      "chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337.Unnamed: 1",
+      "chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337.Unnamed: 2",
+      "chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337.Unnamed: 3",
+      "chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337.Unnamed: 4"
+    ],
+    "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777": [
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.本市市管游览参观点门票价格",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 1",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 2",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 3",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 4",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 5",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 6"
+    ]
+  }
+}

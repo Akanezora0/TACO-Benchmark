@@ -1,0 +1,19 @@
+{
+  "sql": "SELECT \n\"shiwenhuahelvyoujuxingjifandianxinxi2036\".\"��\u0011ࡱ\u001a�\",\n\"shiwenhuahelvyoujuxingjifandianxinxi2036\".\"\u0001\u0001\",\n\"xichengqubeijingshiwenwubaohudanwei31\".\"序号\",\n\"xichengqubeijingshiwenwubaohudanwei31\".名称,\n\"xichengqubeijingshiwenwubaohudanwei31\".地址\nFROM \n\"shiwenhuahelvyoujuxingjifandianxinxi2036\"\nJOIN \n\"xichengqubeijingshiwenwubaohudanwei31\"\nON \n\"shiwenhuahelvyoujuxingjifandianxinxi2036\".\"��\u0011ࡱ\u001a�\" = \"xichengqubeijingshiwenwubaohudanwei31\".\"序号\"\nWHERE \n\"xichengqubeijingshiwenwubaohudanwei31\".名称 = '特定名称' AND \n\"xichengqubeijingshiwenwubaohudanwei31\".地址 = '特定地址' AND \n(GeoDistance(\"shiwenhuahelvyoujuxingjifandianxinxi2036\".\"\u0001\u0001\", \"xichengqubeijingshiwenwubaohudanwei31\".地址) = '特定距离');",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从两个表中联合查询特定条件下的数据，主要涉及文化和旅游相关的酒店信息与文物保护单位信息，并通过地理位置距离进行筛选。\n\n- **详细描述**：\n  - **涉及的表**：\n    1. `shiwenhuahelvyoujuxingjifandianxinxi2036`：该表可能存储文化与旅游相关的酒店或景点信息。\n    2. `xichengqubeijingshiwenwubaohudanwei31`：该表可能存储北京市西城区的文物保护单位信息。\n  - **涉及的列**：\n    1. `shiwenhuahelvyoujuxingjifandianxinxi2036` 表中的 `��\u0011ࡱ\u001a�` 和 `\u0001\u0001` 列（列名显示为乱码，可能是编码问题或列名未正确显示）。\n    2. `xichengqubeijingshiwenwubaohudanwei31` 表中的 `序号`、`名称` 和 `地址` 列。\n  - **条件**：\n    1. 通过 `JOIN` 操作将两个表关联，关联条件是 `shiwenhuahelvyoujuxingjifandianxinxi2036` 表中的 `��\u0011ࡱ\u001a�` 列与 `xichengqubeijingshiwenwubaohudanwei31` 表中的 `序号` 列相等。\n    2. `WHERE` 子句进一步筛选：\n       - `xichengqubeijingshiwenwubaohudanwei31` 表中的 `名称` 列等于 `'特定名称'`。\n       - `xichengqubeijingshiwenwubaohudanwei31` 表中的 `地址` 列等于 `'特定地址'`。\n       - 通过 `GeoDistance` 函数计算 `shiwenhuahelvyoujuxingjifandianxinxi2036` 表中的 `\u0001\u0001` 列（可能是地理位置信息）与 `xichengqubeijingshiwenwubaohudanwei31` 表中的 `地址` 列之间的距离等于 `'特定距离'`。\n\n- **业务场景**：\n  该查询可能用于文化和旅游相关的业务场景，例如：\n  - 查找特定文物保护单位附近的酒店或景点信息。\n  - 分析特定区域内文化与旅游资源的分布情况。\n  - 为游客推荐距离文物保护单位较近的住宿或旅游景点。\n\n- **用户描述**：\n  用户可能是旅游规划者、文化保护单位工作人员或游客，他们可能遇到以下问题或需求：\n  - **旅游规划者**：需要了解特定文物保护单位附近的酒店或景点，以便为游客设计合理的旅游路线。\n  - **文化保护单位工作人员**：需要分析文物保护单位周边的旅游设施分布，以便更好地管理资源或提出改进建议。\n  - **游客**：希望找到距离特定文物保护单位较近的住宿或景点，方便游览。",
+  "natural_language_query": "市民反映，最近想带家人去西城区参观一个文物保护单位，名字好像叫\"特定名称\"，地址是在\"特定地址\"附近。但是对那边不太熟悉，想找找看周围有没有合适的文化旅游酒店或者景点可以住。最好是走路就能到的距离，大概\"特定距离\"范围内吧。之前在网上查了半天也没找到准确信息，感觉这种文化旅游信息特别难找。能不能帮忙看看这附近有没有配套的住宿或者旅游景点啊？主要是带着老人孩子，想提前安排好行程。来电咨询文物保护单位周边旅游设施信息。",
+  "results": 0,
+  "sql skeleton": "SELECT _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ FROM _ JOIN _ ON _ ._ = _ ._ WHERE _ ._ = _ AND _ ._ = _ and _ (_ ._ , _ ) = _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "shiwenhuahelvyoujuxingjifandianxinxi2036": [
+      "shiwenhuahelvyoujuxingjifandianxinxi2036.��\u0011ࡱ\u001a�",
+      "shiwenhuahelvyoujuxingjifandianxinxi2036.\u0001\u0001"
+    ],
+    "xichengqubeijingshiwenwubaohudanwei31": [
+      "xichengqubeijingshiwenwubaohudanwei31.序号",
+      "xichengqubeijingshiwenwubaohudanwei31.名称",
+      "xichengqubeijingshiwenwubaohudanwei31.地址"
+    ]
+  }
+}

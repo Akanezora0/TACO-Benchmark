@@ -1,0 +1,46 @@
+{
+  "sql": "SELECT shiguihuaziranziyuanweiyinhangpiaohao1522.HID FROM shiguihuaziranziyuanweiyinhangpiaohao1522 WHERE shiguihuaziranziyuanweiyinhangpiaohao1522.HNAME = '故宫' AND shiguihuaziranziyuanweiyinhangpiaohao1522.DYNASTY = '明朝' AND shiguihuaziranziyuanweiyinhangpiaohao1522.BATCH = '2010年' AND shiguihuaziranziyuanweiyinhangpiaohao1522.PURPOSE IN (SELECT shiguihuaziranziyuanweiyinhangpiaohao1522.PURPOSE FROM changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842 WHERE changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 1 = '免费开放')",
+  "results": 0,
+  "sql skeleton": "select _ from _ where _ = _ and _ (_ ,_ ) = _ and _ in (select _ from _ where _ = _ and _ )",
+  "database": "旅游住宿",
+  "tables": {
+    "shiguihuaziranziyuanweiyinhangpiaohao1522": [
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.HID",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.FATHERID",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.HNAME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.OTHERNAME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.CATEGORY",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.SUBCATEGOR",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.COUNTYNAME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.STREETNAME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.DYNASTY",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.SUBDYNASTY",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.ADDRESS",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.RANK",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.BATCH",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.PUBTIME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.USERS",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.PURPOSE",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.OWNERSHIP",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.STATEEVALU",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.SINGLERELI",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.PROTECTION",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.ATTACHEDRE",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.RELATEDPEO",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.RELATEDEVE",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.PUBNAME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.SOURCE",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.EDITOR",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.ISREDUNDAN"
+    ],
+    "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842": [
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.2021年度昌平A级景区数据开放表               ",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 1",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 2",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 3",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 4",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 5",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 6"
+    ]
+  }
+}

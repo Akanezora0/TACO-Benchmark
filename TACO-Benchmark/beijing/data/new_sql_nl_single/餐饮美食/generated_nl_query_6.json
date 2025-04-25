@@ -1,0 +1,26 @@
+{
+  "sql": "SELECT \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYXM\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.FZRQ\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.YXQZ\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.DWMC\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.EXCHANGETIME\", \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号\", \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称\", \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址\" FROM \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\", \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076\" WHERE \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID\" = \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.XKZID\";",
+  "problem_description": "- **查询意图**：  \n该 SQL 语句的目的是从两个表中联合查询餐饮服务许可证信息和清真食品专柜信息，通过许可证 ID（XKZID）关联这两个表，获取相关的许可证详情和清真食品专柜的标识信息。\n\n- **详细描述**：  \n1. **涉及的表**：  \n   - `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374`：该表存储餐饮服务许可证的详细信息，包括企业名称、许可证编号、经营场所、经营范围、发证日期、有效期等。  \n   - `shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076`：该表存储清真食品专柜的相关信息，包括专用标识牌号、专柜名称、地址等。  \n\n2. **查询的列**：  \n   - 从第一个表（`shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374`）中查询的列包括：  \n     - `JYZMC`（经营者名称）  \n     - `XKZBH`（许可证编号）  \n     - `JYCS`（经营场所）  \n     - `JYXM`（经营范围）  \n     - `FZRQ`（发证日期）  \n     - `YXQZ`（有效期至）  \n     - `XKZID`（许可证 ID）  \n     - `DWMC`（单位名称）  \n     - `EXCHANGETIME`（交换时间）  \n   - 从第二个表（`shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076`）中查询的列包括：  \n     - `专用标识牌号`（清真食品专柜的标识牌号）  \n     - `专柜名称`（清真食品专柜的名称）  \n     - `地址`（专柜的地址）  \n\n3. **查询条件**：  \n   - 通过 `XKZID`（许可证 ID）关联两个表，确保查询结果中的餐饮服务许可证和清真食品专柜信息是匹配的。  \n\n- **业务场景**：  \n该查询可用于以下业务场景：  \n1. **清真食品合规性检查**：监管部门可能需要检查哪些餐饮服务许可证持有者同时经营清真食品专柜，并核实其清真食品专柜的标识是否合规。  \n2. **许可证与专柜信息关联查询**：企业或监管部门可能需要查询特定许可证下的清真食品专柜信息，以进行日常管理或审计。  \n3. **数据整合与分析**：将餐饮服务许可证信息与清真食品专柜信息关联，便于生成综合报告或进行数据分析。  \n\n- **用户描述**：  \n在上述业务场景中，用户可能遇到以下实际问题或需求：  \n1. **监管部门**：需要快速获取哪些餐饮企业同时经营清真食品专柜，并检查其清真标识是否合法，以确保符合民族宗教规范。  \n2. **企业管理者**：可能需要查询自己名下的餐饮许可证是否关联了清真食品专柜，并核对专柜信息是否正确，以避免合规风险。  \n3. **数据分析人员**：可能需要整合餐饮许可证和清真专柜数据，生成统计报表，分析清真食品市场的分布或合规情况。  \n\n该 SQL 查询通过关联两个表的关键字段（`XKZID`），为用户提供了综合的许可证和清真专柜信息，帮助解决上述业务需求。",
+  "natural_language_query": "市民反映，想了解一下自己经营的清真牛肉面馆（许可证编号：京餐证字2023-12345）有没有按要求设置清真食品专柜。去年在朝阳区办理的餐饮许可证，现在店里专门划了区域卖清真食品，但最近有顾客质疑我们的清真标识牌是不是正规的。想请帮忙查一下：\n1. 我们这个餐饮许可证是不是登记了清真专柜信息？\n2. 如果登记了的话，专柜的标识牌号是多少？地址是不是和我们现在的经营地址一致？\n3. 另外想确认下专柜名称写的是不是\"老马家清真专区\"？\n\n因为涉及到少数民族顾客的用餐问题，特别担心哪里没做到位会引起误会，希望能尽快核实清楚。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ ;",
+  "database": "餐饮美食",
+  "tables": {
+    "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374": [
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYXM",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.FZRQ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.YXQZ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.DWMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.EXCHANGETIME"
+    ],
+    "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076": [
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址"
+    ]
+  }
+}

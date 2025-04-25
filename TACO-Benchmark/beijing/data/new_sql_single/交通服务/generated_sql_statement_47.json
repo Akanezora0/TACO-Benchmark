@@ -1,0 +1,24 @@
+{
+  "sql": "SELECT \"shijiaotongweichengkeyindaojichuxinxi3710.序号\", \"shijiaotongweichengkeyindaojichuxinxi3710.周边交通指南\", \"shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.企业名称\", \"shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.评定等级\" FROM \"shijiaotongweichengkeyindaojichuxinxi3710\" INNER JOIN \"shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672\" ON \"shijiaotongweichengkeyindaojichuxinxi3710.序号\" = \"shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.序号\";",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ ;",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweichengkeyindaojichuxinxi3710": [
+      "shijiaotongweichengkeyindaojichuxinxi3710.序号",
+      "shijiaotongweichengkeyindaojichuxinxi3710.枢纽站信息",
+      "shijiaotongweichengkeyindaojichuxinxi3710.周边交通指南",
+      "shijiaotongweichengkeyindaojichuxinxi3710.公交线路信息",
+      "shijiaotongweichengkeyindaojichuxinxi3710.轨道线路信息",
+      "shijiaotongweichengkeyindaojichuxinxi3710.更新时间",
+      "shijiaotongweichengkeyindaojichuxinxi3710.共享时间 "
+    ],
+    "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672": [
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.企业名称",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.评定等级",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.所属地区",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.年份",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.统一社会信用代码"
+    ]
+  }
+}

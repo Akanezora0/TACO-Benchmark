@@ -1,0 +1,17 @@
+{
+  "sql": "SELECT \"shijiaotongweichuzuyehujibenxinxi3664.经营业户名称\", \"huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829.по\u0011Ю║╠\u001aА\", \"huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829.\u0001\u0001\" FROM \"shijiaotongweichuzuyehujibenxinxi3664\" INNER JOIN \"huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829\" ON \"shijiaotongweichuzuyehujibenxinxi3664.编号\" = \"huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829.编号\" WHERE \"shijiaotongweichuzuyehujibenxinxi3664.经营业户名称\" = '指定营业户名称' AND \"huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829.по\u0011Ю║╠\u001aА\" > 0 AND \"huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829.\u0001\u0001\" IS NOT NULL",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从两个表中联合查询特定营业户的基本信息和相关许可信息，筛选出满足特定条件的记录。\n\n- **详细描述**：\n  - **涉及的表**：\n    1. `shijiaotongweichuzuyehujibenxinxi3664`：可能是一个包含租赁业户基本信息的表。\n    2. `huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829`：可能是一个包含交通局行政许可信息的表。\n  - **涉及的列**：\n    1. `shijiaotongweichuzuyehujibenxinxi3664.经营业户名称`：租赁业户的名称。\n    2. `huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829.по\u0011Ю║╠\u001aА`：可能是一个数值型列，具体含义不明（列名包含乱码）。\n    3. `huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829.\u0001\u0001`：可能是一个文本或数值型列，具体含义不明（列名包含乱码）。\n    4. `shijiaotongweichuzuyehujibenxinxi3664.编号` 和 `huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829.编号`：用于连接两个表的编号字段。\n  - **条件**：\n    1. `shijiaotongweichuzuyehujibenxinxi3664.经营业户名称 = '指定营业户名称'`：筛选特定名称的营业户。\n    2. `huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829.по\u0011Ю║╠\u001aА > 0`：筛选该列值大于0的记录。\n    3. `huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829.\u0001\u0001 IS NOT NULL`：筛选该列值不为空的记录。\n\n- **业务场景**：\n  - 该查询可能用于交通管理部门或租赁行业监管部门，用于检查特定营业户的行政许可信息是否合规。\n  - 例如，可能需要确认某个租赁业户是否有有效的行政许可（列值大于0且不为空），或者统计特定营业户的许可情况。\n\n- **用户描述**：\n  - 用户可能是交通管理部门的工作人员，需要查询某个租赁业户的行政许可状态，以确保其合法经营。\n  - 用户可能遇到的问题是某个营业户的名称在系统中存在，但不确定其许可是否有效，或者需要核实其许可的具体数值（如许可数量、许可金额等）。\n  - 用户的需求是快速找到特定营业户的许可信息，并根据条件（如许可值大于0且不为空）筛选出合规的记录。",
+  "natural_language_query": "市民反映，我在怀柔区交通局办理业务时遇到问题。我们单位最近在核查\"顺达汽车租赁公司\"的经营资质，但在系统里查到的信息不太明确。想咨询一下这家公司有没有有效的经营许可证？就是那种许可证数量要大于零的，而且许可证信息要完整有效的。之前听说有些公司虽然登记了但许可证可能过期或者信息不全，我们特别担心这种情况。能不能帮忙查查这家\"顺达汽车租赁公司\"的许可证是不是真实有效的？主要是看许可证数量够不够，信息完不完整。因为最近要开展行业检查，得确保这些租赁公司都是合规经营的。来电反映想核实汽车租赁公司经营许可是否有效的问题。",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ ,_ from _ where _ =_",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweichuzuyehujibenxinxi3664": [
+      "shijiaotongweichuzuyehujibenxinxi3664.经营业户名称"
+    ],
+    "huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829": [
+      "huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829.по\u0011Ю║╠\u001aА",
+      "huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829.\u0001\u0001"
+    ]
+  }
+}

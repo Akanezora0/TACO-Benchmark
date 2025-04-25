@@ -1,0 +1,21 @@
+{
+  "sql": "SELECT \n    shijiaotongweikebianqingbaobanshebeixinxi3519.唯一标识, \n    shijiaotongweikebianqingbaobanshebeixinxi3519.名称, \n    shijiaotongweikebianqingbaobanshebeixinxi3519.设备编码, \n    shijiaotongweichaoxianchaozaihuochexiezaicha  \n    ngangdi3663.行政区划代码, \n    shijiaotongweichaoxianchaozaihuochexiezaicha  \n    ngangdi3663.站点名称, \n    shijiaotongweichaoxianchaozaihuochexiezaicha  \n    ngangdi3663.联系电话, \n    shijiaotongweichaoxianchaozaihuochexiezaicha  \n    ngangdi3663.地址 \nFROM \n    shijiaotongweikebianqingbaobanshebeixinxi3519, \n    shijiaotongweichaoxianchaozaihuochexiezaicha  \n    ngangdi3663 \nWHERE \n    shijiaotongweikebianqingbaobanshebeixinxi3519.唯一标识 = shijiaotongweichaoxianchaozaihuochexiezaicha  \n    ngangdi3663.唯一标识",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从两个表中联合查询设备信息和站点信息，通过 `唯一标识` 进行关联，获取设备的唯一标识、名称、设备编码，以及对应站点的行政区划代码、站点名称、联系电话和地址。\n\n---\n\n### **详细描述**  \n1. **涉及的表**：\n   - `shijiaotongweikebianqingbaobanshebeixinxi3519`（设备信息表）：存储设备的基本信息，如唯一标识、名称、设备编码等。\n   - `shijiaotongweichaoxianchaozaihuochexiezaichangangdi3663`（站点信息表）：存储站点的相关信息，如行政区划代码、站点名称、联系电话、地址等。\n\n2. **查询的列**：\n   - 设备信息表的列：\n     - `唯一标识`：设备的唯一标识符。\n     - `名称`：设备的名称。\n     - `设备编码`：设备的编码信息。\n   - 站点信息表的列：\n     - `行政区划代码`：站点所属的行政区划代码。\n     - `站点名称`：站点的名称。\n     - `联系电话`：站点的联系电话。\n     - `地址`：站点的具体地址。\n\n3. **查询条件**：\n   - 通过 `WHERE` 子句，使用 `唯一标识` 作为关联条件，确保设备信息表和站点信息表中的记录是匹配的。\n\n4. **查询方式**：\n   - 这是一个简单的内连接查询（隐式连接），通过 `WHERE` 子句实现两个表的关联。\n\n---\n\n### **业务场景**  \n该查询可能用于以下业务场景：\n1. **设备与站点信息关联查询**：  \n   - 需要查看某个设备所属的站点信息，包括站点的行政区划、名称、联系方式等。\n2. **设备管理**：  \n   - 在设备维护或巡检时，可能需要快速获取设备所在站点的详细信息，以便联系或定位。\n3. **数据整合**：  \n   - 将分散的设备信息和站点信息整合在一起，便于报表生成或数据分析。\n\n---\n\n### **用户描述**  \n在该业务场景下，用户可能遇到的实际问题或需求包括：\n1. **设备定位问题**：  \n   - 用户需要知道某个设备具体安装在哪个站点，以便进行维护或故障排查。\n2. **站点联系需求**：  \n   - 用户可能需要联系设备所属站点的负责人，因此需要获取站点的联系电话和地址。\n3. **数据关联分析**：  \n   - 用户可能需要分析设备分布情况，例如某个行政区划内有哪些设备，因此需要设备与站点的关联信息。\n4. **报表生成**：  \n   - 用户需要生成包含设备信息和站点信息的综合报表，以便上级部门或合作伙伴查阅。\n\n该 SQL 查询通过关联两个表，提供了一种便捷的方式，让用户可以一次性获取设备及其所属站点的完整信息，从而提高工作效率。",
+  "natural_language_query": "市民反映，我们单位最近在整理一批设备信息，但是系统里查到的设备数据都不完整。比如说有个叫\"智能监测仪\"的设备，只知道它的编号是DT-2023-045，但不知道具体安装在哪个站点，也查不到站点联系方式。我们领导要求把所有设备对应的站点信息都整理出来，包括站点地址、联系电话这些。特别是朝阳区那边的几个设备，上周巡检时都找不到具体位置，耽误了好多时间。能不能帮忙查一下这些设备对应的站点信息？最好是能一次性看到设备名称、编号和它所属站点的完整信息，这样我们工作起来也方便些。",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ ,_ ,_ ,_ from _ where _ = _",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweikebianqingbaobanshebeixinxi3519": [
+      "shijiaotongweikebianqingbaobanshebeixinxi3519.唯一标识",
+      "shijiaotongweikebianqingbaobanshebeixinxi3519.名称",
+      "shijiaotongweikebianqingbaobanshebeixinxi3519.设备编码"
+    ],
+    "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663": [
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.行政区划代码",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.站点名称",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.联系电话",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.地址"
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "sql": "SELECT T1.col1, T1.col2, T1.col3, T2.col4, T3.col5, T4.col6 \nFROM table1 AS T1 \nJOIN table2 AS T2 ON T1.id = T2.ref_id \nJOIN table3 AS T3 ON T2.another_id = T3.id \nJOIN table4 AS T4 ON T3.related_id = T4.id \nWHERE T1.status = 'active' AND T2.date = '2022-01-01' AND T4.value > 100\n```",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ from _ join _ on _ ._ = _ ._ where _ ._ = _ and _ = _ and _ (_ ,_ ) = _",
+  "database": "安全生活",
+  "tables": {}
+}

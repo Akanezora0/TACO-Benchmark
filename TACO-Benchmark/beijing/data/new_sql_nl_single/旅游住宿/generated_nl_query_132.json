@@ -1,0 +1,44 @@
+{
+  "sql": "SELECT shiguihuaziranziyuanweixuetangshuyuan1521.HID, shiguihuaziranziyuanweixuetangshuyuan1521.HNAME FROM shiguihuaziranziyuanweixuetangshuyuan1521 WHERE shiguihuaziranziyuanweixuetangshuyuan1521.HNAME = '通州区乡村民宿情况表（规范化审核52家）'",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从表 `shiguihuaziranziyuanweixuetangshuyuan1521` 中查询满足特定条件的记录，具体是查找 `HNAME` 列值为“通州区乡村民宿情况表（规范化审核52家）”的记录的 `HID` 和 `HNAME` 列。\n\n- **详细描述**：\n  - **涉及的表**：`shiguihuaziranziyuanweixuetangshuyuan1521`。从表名来看，可能是一个与“规划自然资源”或“乡村民宿”相关的数据表。\n  - **涉及的列**：\n    - `HID`：可能是表中记录的唯一标识符或主键。\n    - `HNAME`：可能是记录的名称或标题字段。\n  - **条件**：`HNAME = '通州区乡村民宿情况表（规范化审核52家）'`，即只选择 `HNAME` 列值完全匹配该字符串的记录。\n\n- **业务场景**：\n  - 该查询可能用于获取“通州区乡村民宿情况表（规范化审核52家）”的相关信息。例如，可能是政府部门或规划机构在审核或管理乡村民宿时使用的数据表。\n  - 通过查询 `HID` 和 `HNAME`，可以快速定位到该特定记录，可能是为了进一步查看或操作该记录的其他字段（如审核状态、民宿详情等）。\n\n- **用户描述**：\n  - 用户可能是政府工作人员或数据分析师，需要获取“通州区乡村民宿情况表（规范化审核52家）”的具体信息。\n  - 用户的需求可能是：\n    - 确认该记录是否存在。\n    - 获取该记录的 `HID` 以便进行后续操作（如更新、删除或关联查询）。\n    - 验证或核对“规范化审核52家”的具体数据。\n  - 用户可能遇到的问题：\n    - 表名复杂且难以记忆，需要明确查询条件。\n    - 数据量较大时，需要快速定位特定记录。",
+  "natural_language_query": "市民反映，最近在整理通州区乡村民宿的规范化审核材料时，发现有个叫\"通州区乡村民宿情况表（规范化审核52家）\"的文件找不到了。之前记得是在规划自然资源相关的系统里看到过，现在需要核实这份文件的具体编号和信息。因为下周就要向领导汇报52家民宿的审核情况，但系统里文件太多实在找不到，希望能帮忙查一下这个文件的具体编号和完整名称。来电反映需要查询乡村民宿审核文件信息问题。",
+  "results": 0,
+  "sql skeleton": "select _ as _ ,_ as _ from _ where _",
+  "database": "旅游住宿",
+  "tables": {
+    "shiguihuaziranziyuanweixuetangshuyuan1521": [
+      "shiguihuaziranziyuanweixuetangshuyuan1521.HID",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.FATHERID",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.HNAME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.OTHERNAME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.CATEGORY",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.SUBCATEGOR",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.COUNTYNAME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.STREETNAME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.DYNASTY",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.SUBDYNASTY",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.ADDRESS",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.RANK",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.BATCH",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.PUBTIME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.USERS",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.PURPOSE",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.OWNERSHIP",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.STATEEVALU",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.SINGLERELI",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.PROTECTION",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.ATTACHEDRE",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.RELATEDPEO",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.RELATEDEVE",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.PUBNAME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.SOURCE",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.EDITOR",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.ISREDUNDAN"
+    ],
+    "tongzhouqutongzhouquxiangcunminsuxinxi2979": [
+      "tongzhouqutongzhouquxiangcunminsuxinxi2979.通州区乡村民宿情况表（规范化审核52家）",
+      "tongzhouqutongzhouquxiangcunminsuxinxi2979.Unnamed: 1",
+      "tongzhouqutongzhouquxiangcunminsuxinxi2979.Unnamed: 2"
+    ]
+  }
+}

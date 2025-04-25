@@ -1,0 +1,18 @@
+{
+  "sql": "select \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号\", \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称\", \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址\" from shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076 where \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号\" =\"123456\" and \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址\" =\"上海市黄浦区南京东路1号\"",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ ,_ from _ where _ =_ and _ =_",
+  "databases": [
+    "安全生活",
+    "餐饮美食"
+  ],
+  "tables": {
+    "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076": {
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076": [
+        "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号",
+        "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称",
+        "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址"
+      ]
+    }
+  }
+}

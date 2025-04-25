@@ -1,0 +1,41 @@
+{
+  "sql": "SELECT `huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.序号`, `huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.行政相对人名称` FROM `huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053` WHERE `huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.许可机关` = '北京市怀柔区交通局';",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从 `huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053` 表中查询由“北京市怀柔区交通局”许可的行政相对人（可能是企业或个人）的序号和名称。\n\n### **详细描述**  \n1. **涉及的表**：  \n   - `huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053`  \n     该表名称较长，可能是一个存储北京市怀柔区交通局相关行政许可信息的表，包含序号、行政相对人名称、许可机关等字段。\n\n2. **涉及的列**：  \n   - `序号`：可能是每条记录的唯一标识或排序编号。  \n   - `行政相对人名称`：指接受行政许可的企业、组织或个人名称。  \n   - `许可机关`：指颁发该行政许可的政府部门，此处限定为“北京市怀柔区交通局”。\n\n3. **查询条件**：  \n   - `许可机关 = '北京市怀柔区交通局'`：仅筛选由该机关审批的行政许可记录。\n\n### **业务场景**  \n该查询可用于以下业务场景：  \n1. **行政许可管理**：交通局或其他监管部门需要统计或查询由怀柔区交通局审批的行政相对人信息。  \n2. **合规性检查**：企业或个人可能需要确认自己是否在怀柔区交通局的许可名单中。  \n3. **数据分析**：政府或研究机构分析怀柔区交通局的行政许可发放情况，如哪些企业或个人获得了许可。  \n\n### **用户描述**  \n1. **政府部门工作人员**：  \n   - 需要快速查看由怀柔区交通局审批的行政相对人名单，以便进行监管或审计。  \n   - 例如：“请列出所有由怀柔区交通局许可的企业名称，我们需要核对其合规性。”  \n\n2. **企业或个人申请者**：  \n   - 想确认自己是否在许可名单中，或查询竞争对手是否获得了相关许可。  \n   - 例如：“我们公司申请了运输许可，想确认是否已通过怀柔区交通局的审批。”  \n\n3. **数据分析师**：  \n   - 研究怀柔区交通局的行政许可分布情况，比如哪些行业或企业类型更容易获得许可。  \n   - 例如：“分析过去一年怀柔区交通局发放的许可中，物流企业占比多少？”  \n\n### **总结**  \n该 SQL 语句主要用于从行政许可信息表中筛选特定机关（怀柔区交通局）审批的记录，提取序号和行政相对人名称，适用于监管、合规确认或数据分析等场景。",
+  "natural_language_query": "市民反映，自己是一家物流公司的负责人，前段时间向怀柔区交通局提交了道路运输经营许可证的申请材料，但一直没收到明确回复。想帮忙查一下我们公司\"顺达快运\"在不在交通局的许可名单里？另外能不能看看最近都有哪些运输企业通过了审批啊？感觉现在审批特别慢，是不是卡在哪个环节了？我们车队都准备好了就等这个证，特别着急。来电主要想确认公司是否已获得许可，并咨询审批进度问题。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ WHERE _ = _ ;",
+  "database": "交通服务",
+  "tables": {
+    "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053": [
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.序号",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.行政相对人名称",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.统一社会信用代码",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.行政许可决定文书号",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.许可内容",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.许可决定日期",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.许可机关"
+    ],
+    "xichengquxichengquditieyoumingdan2496": [
+      "xichengquxichengquditieyoumingdan2496.ID",
+      "xichengquxichengquditieyoumingdan2496.X",
+      "xichengquxichengquditieyoumingdan2496.Y",
+      "xichengquxichengquditieyoumingdan2496.SJXZQHMC",
+      "xichengquxichengquditieyoumingdan2496.QXJXZQHMC",
+      "xichengquxichengquditieyoumingdan2496.SJXZQHDM",
+      "xichengquxichengquditieyoumingdan2496.QXJXZQHDM",
+      "xichengquxichengquditieyoumingdan2496.POISJLY",
+      "xichengquxichengquditieyoumingdan2496.RHBZDZ",
+      "xichengquxichengquditieyoumingdan2496.CODE",
+      "xichengquxichengquditieyoumingdan2496.CODEMC",
+      "xichengquxichengquditieyoumingdan2496.GXSJ",
+      "xichengquxichengquditieyoumingdan2496.POIMC",
+      "xichengquxichengquditieyoumingdan2496.POIDZ",
+      "xichengquxichengquditieyoumingdan2496.别名",
+      "xichengquxichengquditieyoumingdan2496.POIFLMC",
+      "xichengquxichengquditieyoumingdan2496.TEL",
+      "xichengquxichengquditieyoumingdan2496.ID原",
+      "xichengquxichengquditieyoumingdan2496.备注",
+      "xichengquxichengquditieyoumingdan2496.上图"
+    ]
+  }
+}

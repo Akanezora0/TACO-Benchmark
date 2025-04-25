@@ -1,0 +1,22 @@
+{
+  "sql": "SELECT shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.企业名称, shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.评定等级, shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.所属地区, shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.年份, shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.统一社会信用代码 FROM shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672 WHERE shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.评定等级 = '优秀' AND shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.年份 = 2022 AND shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.年份 = 2022 AND shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.总量 > 10000",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是查询2022年评定等级为“优秀”的汽车租赁企业，并且这些企业所在地区的普通公路年交通流量超过10000辆。\n\n- **详细描述**：\n  - **涉及的表**：\n    - `shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672`：存储汽车租赁企业信用评价结果的数据表。\n    - `shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668`：存储地区普通公路年交通流量的数据表。\n  - **涉及的列**：\n    - `shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672` 表的列：\n      - `企业名称`：汽车租赁企业的名称。\n      - `评定等级`：企业的信用评价等级。\n      - `所属地区`：企业所在的地区。\n      - `年份`：评价结果的年份。\n      - `统一社会信用代码`：企业的统一社会信用代码。\n    - `shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668` 表的列：\n      - `年份`：交通流量数据的年份。\n      - `总量`：普通公路的年交通流量。\n  - **条件**：\n    - `shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.评定等级 = '优秀'`：筛选出信用评价等级为“优秀”的企业。\n    - `shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.年份 = 2022`：筛选2022年的评价结果。\n    - `shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.年份 = 2022`：筛选2022年的交通流量数据。\n    - `shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.总量 > 10000`：筛选交通流量超过10000辆的地区。\n\n- **业务场景**：该查询可以用于识别在交通流量较大的地区中，信用评价优秀的汽车租赁企业。这种查询可能用于政府监管、市场分析或企业合作选择等场景。\n\n- **用户描述**：用户可能是政府交通管理部门或市场研究人员，他们需要了解哪些汽车租赁企业在交通繁忙地区表现优秀，以便进行政策制定、市场推广或合作伙伴选择。例如，政府可能希望奖励这些优秀企业，或者市场研究人员可能希望分析这些企业的成功因素。",
+  "natural_language_query": "市民反映，想了解一下2022年哪些汽车租赁公司比较靠谱，就是那种信用评价特别好的，最好是在交通比较繁忙的地区运营的。听说有些地方公路车流量特别大，一年能超过1万辆车的那种路段，想找这些地方的优秀租车公司。因为最近想选个可靠的租车公司合作，但不知道哪些公司既在热门地段又服务好，希望能帮忙查查去年评上\"优秀\"的那些租车公司都在哪些车多的区域运营。主要是担心选到服务不好的公司，所以想找交通量大地方的优质企业。",
+  "results": 0,
+  "sql skeleton": "select _ from _ where _ (_ ,_ ,_ ) = _",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672": [
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.企业名称",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.评定等级",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.所属地区",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.年份",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.统一社会信用代码"
+    ],
+    "shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668": [
+      "shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.年份",
+      "shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.总量",
+      "shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.观测站名称"
+    ]
+  }
+}

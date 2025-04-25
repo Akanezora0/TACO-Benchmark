@@ -1,0 +1,22 @@
+{
+  "sql": "SELECT \n    shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.服务机构名称, \n    shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.评定等级\nFROM \n    shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678\nJOIN \n    shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669 ON shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.服务机构名称 = shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.业户名称",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从两个表中联合查询“服务机构名称”和“评定等级”信息，通过“服务机构名称”和“业户名称”的关联，获取相关机构的信用评价结果。  \n\n### **详细描述**  \n1. **涉及的表**：  \n   - `shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678`（可能为“市交通委查处非现场案件处理机构信息”表）：存储了交通管理部门查处的非现场案件处理机构的基本信息。  \n   - `shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669`（可能为“市交通委旅游客运企业信用评价结果数据”表）：存储了旅游客运企业的信用评价结果数据。  \n\n2. **涉及的列**：  \n   - `shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.服务机构名称`：表示被查处的非现场案件处理机构的名称。  \n   - `shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.评定等级`：表示旅游客运企业的信用评价等级（如A、B、C等）。  \n\n3. **关联条件**：  \n   - 通过 `shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.服务机构名称 = shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.业户名称` 进行关联，即“服务机构名称”与“业户名称”匹配的记录会被连接。  \n\n### **业务场景**  \n该查询可能用于以下业务场景：  \n- **交通管理部门监管**：交通管理部门需要了解被查处的非现场案件处理机构的信用状况，以便评估其合规性和服务质量。  \n- **企业信用评估**：查询结果可用于分析旅游客运企业的信用等级，辅助决策是否继续合作或加强监管。  \n- **数据整合分析**：将案件处理机构信息与信用评价数据关联，便于综合评估企业的运营情况。  \n\n### **用户描述**  \n在该业务场景下，用户（如交通管理部门或行业监管机构）可能遇到以下问题或需求：  \n1. **监管需求**：需要知道哪些被查处的机构信用评级较低，以便重点监管或采取相应措施。  \n2. **信用评估**：希望了解被查处机构的信用状况，判断其是否值得信任或继续合作。  \n3. **数据关联分析**：需要将案件处理数据与信用评价数据结合，形成更全面的企业评估报告。  \n\n该 SQL 查询帮助用户快速获取相关机构的信用评价信息，辅助决策和管理。",
+  "natural_language_query": "市民反映，最近在处理一些交通违规案件时，发现有几家处理机构总是出问题，想了解一下这些机构的信用情况。比如说，之前有家叫\"XX事故处理中心\"的机构，帮我们处理过几个非现场案件，但总觉得他们办事不太靠谱。能不能帮忙查查这类机构的信用评级啊？我们想知道这些被查过的处理机构里面，哪些是信用好的，哪些是信用差的，这样以后分配案件的时候心里也有个数。主要是担心万一信用不好的机构继续处理案件，可能会引发更多问题。最好能有个评级结果，比如A级B级这样的，方便我们做工作参考。",
+  "results": 0,
+  "sql skeleton": "SELECT _ _ FROM _ WHERE _",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678": [
+      "shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.序号",
+      "shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.服务机构名称",
+      "shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.地址"
+    ],
+    "shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669": [
+      "shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.业户名称",
+      "shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.评定等级",
+      "shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.所属地区",
+      "shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.年份",
+      "shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.统一社会信用代码"
+    ]
+  }
+}

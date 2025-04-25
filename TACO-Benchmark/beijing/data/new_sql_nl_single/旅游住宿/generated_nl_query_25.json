@@ -1,0 +1,44 @@
+{
+  "sql": "SELECT shiguihuaziranziyuanweixuetangshuyuan1521.HID FROM shiguihuaziranziyuanweixuetangshuyuan1521 WHERE shiguihuaziranziyuanweixuetangshuyuan1521.HNAME = '李四'",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从表 `shiguihuaziranziyuanweixuetangshuyuan1521` 中查询满足条件 `HNAME = '李四'` 的记录，并返回这些记录的 `HID` 字段值。  \n\n### **详细描述**  \n1. **涉及的表**：  \n   - `shiguihuaziranziyuanweixuetangshuyuan1521`：这是一个表名，可能表示某个特定业务场景下的数据表，例如可能是某个学校、机构或系统的数据表。  \n\n2. **涉及的列**：  \n   - `HID`：该列可能是表的主键或唯一标识符，用于唯一标识表中的某条记录。  \n   - `HNAME`：该列可能是存储名称或姓名的字段，用于筛选符合条件的记录。  \n\n3. **查询条件**：  \n   - `HNAME = '李四'`：表示只查询 `HNAME` 列的值等于 `'李四'` 的记录。  \n\n4. **返回结果**：  \n   - 查询结果仅包含符合条件的记录的 `HID` 值。  \n\n### **业务场景**  \n该查询可能用于以下业务场景：  \n- **学生信息管理**：如果 `shiguihuaziranziyuanweixuetangshuyuan1521` 是某个学校的学生信息表，`HID` 可能是学号，`HNAME` 是学生姓名，那么该查询可用于查找名为“李四”的学生的学号。  \n- **员工信息查询**：如果该表是公司员工信息表，`HID` 可能是员工工号，`HNAME` 是员工姓名，那么该查询可用于查找名为“李四”的员工工号。  \n- **会员或用户管理**：如果该表是某个系统的用户表，`HID` 可能是用户ID，`HNAME` 是用户名，那么该查询可用于查找用户名为“李四”的用户ID。  \n\n### **用户描述**  \n在该业务场景下，用户可能遇到以下实际问题或需求：  \n1. **查找特定人员的信息**：例如，管理员需要查询“李四”的学号或工号，以便进一步处理相关业务（如成绩录入、工资发放等）。  \n2. **数据关联查询**：用户可能需要先通过姓名找到对应的ID，再使用该ID去关联其他表的数据（如课程表、考勤表等）。  \n3. **数据验证**：用户可能想确认系统中是否存在名为“李四”的记录，并获取其唯一标识符（`HID`）以便后续操作。  \n\n### **总结**  \n该 SQL 语句的核心功能是通过姓名（`HNAME`）查询对应的唯一标识（`HID`），适用于需要根据名称快速定位特定记录的场景。表名较长且具有特定含义，可能属于某个定制化系统或特定行业的数据表。",
+  "natural_language_query": "市民反映，我在学校系统里查一个叫李四的同学的信息，但是系统显示不出来他的学号。我记得他是我们班的，上学期还一起参加过活动。现在老师让我帮忙统计班级资料，需要他的学号来录入成绩，可是怎么都查不到。能不能帮忙看看是怎么回事？是不是系统出问题了？我确定他的名字就是李四，去年入学的时候还一起办过学生证。",
+  "results": 0,
+  "sql skeleton": "select _ from _ where _ = _",
+  "database": "旅游住宿",
+  "tables": {
+    "shiguihuaziranziyuanweixuetangshuyuan1521": [
+      "shiguihuaziranziyuanweixuetangshuyuan1521.HID",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.FATHERID",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.HNAME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.OTHERNAME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.CATEGORY",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.SUBCATEGOR",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.COUNTYNAME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.STREETNAME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.DYNASTY",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.SUBDYNASTY",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.ADDRESS",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.RANK",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.BATCH",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.PUBTIME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.USERS",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.PURPOSE",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.OWNERSHIP",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.STATEEVALU",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.SINGLERELI",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.PROTECTION",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.ATTACHEDRE",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.RELATEDPEO",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.RELATEDEVE",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.PUBNAME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.SOURCE",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.EDITOR",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.ISREDUNDAN"
+    ],
+    "pingguqupingguqujingpinminsu2083": [
+      "pingguqupingguqujingpinminsu2083.平谷区2022年精品民宿",
+      "pingguqupingguqujingpinminsu2083.Unnamed: 1",
+      "pingguqupingguqujingpinminsu2083.Unnamed: 2"
+    ]
+  }
+}

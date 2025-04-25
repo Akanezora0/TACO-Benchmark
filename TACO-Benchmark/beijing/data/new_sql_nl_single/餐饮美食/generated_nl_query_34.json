@@ -1,0 +1,26 @@
+{
+  "sql": "SELECT shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC FROM shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374 WHERE shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID = '20210101' AND shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS = '合格' AND shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYXM = '检测' AND shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.FZRQ >= '2021-01-01' AND shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.YXQZ = '已验收'",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从表 `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374` 中查询符合条件的经营主体名称（`JYZMC`），这些主体需要满足特定的许可证状态、经营项目、检查结果、发证日期和有效期状态。\n\n- **详细描述**：\n  - **表**：`shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374`（可能是一个存储市场监督管理相关的餐饮服务许可证信息的表）。\n  - **列**：\n    - `JYZMC`：经营主体名称，查询的目标字段。\n    - `XKZID`：许可证ID，条件为等于 `'20210101'`。\n    - `JYCS`：检查结果，条件为等于 `'合格'`。\n    - `JYXM`：经营项目，条件为等于 `'检测'`。\n    - `FZRQ`：发证日期，条件为大于等于 `'2021-01-01'`。\n    - `YXQZ`：有效期状态，条件为等于 `'已验收'`。\n  - **条件**：查询的条件包括许可证ID、检查结果、经营项目、发证日期和有效期状态，这些条件共同筛选出符合条件的经营主体名称。\n\n- **业务场景**：\n  - 该查询可能用于市场监督管理部门对餐饮服务许可证的管理和统计。例如，监管部门可能需要查找在2021年1月1日之后发证的、经营项目为“检测”且检查结果为“合格”的、已验收的许可证对应的经营主体名称。\n  - 这种查询可以帮助监管部门快速定位符合特定条件的经营主体，便于后续的监管、检查或统计工作。\n\n- **用户描述**：\n  - 用户可能是市场监督管理部门的工作人员，他们需要定期检查餐饮服务许可证的合规情况。\n  - 用户的需求可能是：查找所有在2021年1月1日之后发证的、经营项目为“检测”且检查结果为“合格”的、已验收的许可证对应的经营主体名称，以便进行进一步的合规检查或统计报告。\n  - 用户可能遇到的问题包括：许可证数量庞大，手动筛选效率低下；需要确保查询结果的准确性和时效性；需要快速响应上级部门的检查或统计需求。",
+  "natural_language_query": "市民反映，我是市场监督管理局的工作人员，现在需要查找一些餐饮服务单位的信息。具体是想找那些在2021年之后拿到许可证的，主要做检测业务的，而且最近检查都合格了的商家。这些商家的许可证状态应该是已经通过验收的。因为最近上级要求我们统计这方面的数据，手动查起来太麻烦了，能不能帮忙看看有哪些商家符合这些条件？主要是要这些商家的名字，好做后续的检查工作。",
+  "results": 0,
+  "sql skeleton": "select _ from _ where _ (_ ,_ ,_ ) = _",
+  "database": "餐饮美食",
+  "tables": {
+    "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374": [
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYXM",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.FZRQ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.YXQZ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.DWMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.EXCHANGETIME"
+    ],
+    "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076": [
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址"
+    ]
+  }
+}

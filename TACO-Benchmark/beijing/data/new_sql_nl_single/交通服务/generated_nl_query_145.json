@@ -1,0 +1,40 @@
+{
+  "sql": "SELECT xichengquxichengqutingchechangmingdan2492.\"别名\", haidianqugonggongjianzhutingchechang3416.停车场名称 FROM xichengquxichengqutingchechangmingdan2492 LEFT JOIN haidianqugonggongjianzhutingchechang3416 ON xichengquxichengqutingchechangmingdan2492.\"别名\" = haidianqugonggongjianzhutingchechang3416.序号 WHERE haidianqugonggongjianzhutingchechang3416.经营单位 IN (SELECT haidianqugonggongjianzhutingchechang3416.经营单位 FROM haidianqugonggongjianzhutingchechang3416 WHERE haidianqugonggongjianzhutingchechang3416.详细地址 IS NOT NULL)\n```",
+  "problem_description": "### **查询意图**：\n该 SQL 语句的目的是查询西城区停车场的别名与海淀区公共建筑停车场的名称，条件是海淀区停车场的经营单位必须在那些详细地址不为空的海淀区停车场经营单位列表中。\n\n### **详细描述**：\n1. **涉及的表**：\n   - `xichengquxichengqutingchechangmingdan2492`（西城区西城区停车场名单表）\n   - `haidianqugonggongjianzhutingchechang3416`（海淀区公共建筑停车场表）\n\n2. **涉及的列**：\n   - `xichengquxichengqutingchechangmingdan2492.\"别名\"`（西城区停车场的别名）\n   - `haidianqugonggongjianzhutingchechang3416.停车场名称`（海淀区停车场的名称）\n   - `haidianqugonggongjianzhutingchechang3416.经营单位`（海淀区停车场的经营单位）\n   - `haidianqugonggongjianzhutingchechang3416.详细地址`（海淀区停车场的详细地址）\n   - `haidianqugonggongjianzhutingchechang3416.序号`（海淀区停车场的序号）\n\n3. **查询逻辑**：\n   - 使用 `LEFT JOIN` 连接两个表，连接条件是西城区停车场的别名等于海淀区停车场的序号。\n   - 使用 `WHERE` 子句筛选海淀区停车场的经营单位必须存在于子查询返回的经营单位列表中。\n   - 子查询返回的是海淀区停车场中详细地址不为空的经营单位。\n\n### **业务场景**：\n该查询可能用于以下业务场景：\n- **跨区域停车场数据对比**：比如西城区和海淀区的停车场数据需要关联查询，找出西城区停车场的别名与海淀区停车场的名称之间的对应关系。\n- **数据清洗或验证**：确保查询的海淀区停车场数据是有效的（即详细地址不为空）。\n- **经营单位筛选**：只关注那些在海淀区有详细地址的经营单位管理的停车场。\n\n### **用户描述**：\n在该业务场景下，用户可能遇到的实际问题或需求包括：\n1. **数据整合需求**：用户可能需要将西城区和海淀区的停车场数据进行关联，以便分析两个区域的停车场分布或管理情况。\n2. **数据质量检查**：用户希望确保查询的停车场数据是完整的，因此筛选掉那些没有详细地址的记录。\n3. **经营单位分析**：用户可能想了解哪些经营单位在两个区域都有停车场，或者哪些经营单位的数据更完整（如地址信息齐全）。\n4. **报表或可视化需求**：用户可能需要生成一个报表或地图，展示符合条件的停车场信息，因此需要先筛选出有效数据。",
+  "natural_language_query": "市民反映，最近在使用西城区和海淀区的停车场时发现信息不太一致。想咨询一下，西城区那些有别名标注的停车场，和海淀区公共建筑停车场之间有没有什么关联？特别是海淀区那些地址信息完整的停车场经营单位，他们在西城区管理的停车场是否也有对应记录？因为工作需要整理两个区的停车场数据，但发现有些经营单位在两个区的信息对不上，希望能帮忙核实一下这种情况。主要是想了解海淀区地址齐全的停车场经营单位，是否同时管理西城区那些有别名标注的停车场。",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ from _ left join _ on _ ._ = _ ._ where _ in (select _ from _ where _ )",
+  "database": "交通服务",
+  "tables": {
+    "xichengquxichengqutingchechangmingdan2492": [
+      "xichengquxichengqutingchechangmingdan2492.ID",
+      "xichengquxichengqutingchechangmingdan2492.X",
+      "xichengquxichengqutingchechangmingdan2492.Y",
+      "xichengquxichengqutingchechangmingdan2492.SJXZQHMC",
+      "xichengquxichengqutingchechangmingdan2492.QXJXZQHMC",
+      "xichengquxichengqutingchechangmingdan2492.SJXZQHDM",
+      "xichengquxichengqutingchechangmingdan2492.QXJXZQHDM",
+      "xichengquxichengqutingchechangmingdan2492.POISJLY",
+      "xichengquxichengqutingchechangmingdan2492.RHBZDZ",
+      "xichengquxichengqutingchechangmingdan2492.CODE",
+      "xichengquxichengqutingchechangmingdan2492.CODEMC",
+      "xichengquxichengqutingchechangmingdan2492.GXSJ",
+      "xichengquxichengqutingchechangmingdan2492.POIMC",
+      "xichengquxichengqutingchechangmingdan2492.POIDZ",
+      "xichengquxichengqutingchechangmingdan2492.别名",
+      "xichengquxichengqutingchechangmingdan2492.POIFLMC",
+      "xichengquxichengqutingchechangmingdan2492.TEL",
+      "xichengquxichengqutingchechangmingdan2492.ID原",
+      "xichengquxichengqutingchechangmingdan2492.MC",
+      "xichengquxichengqutingchechangmingdan2492.DZ",
+      "xichengquxichengqutingchechangmingdan2492.DZMS"
+    ],
+    "haidianqugonggongjianzhutingchechang3416": [
+      "haidianqugonggongjianzhutingchechang3416.序号",
+      "haidianqugonggongjianzhutingchechang3416.停车场名称",
+      "haidianqugonggongjianzhutingchechang3416.停车场类型",
+      "haidianqugonggongjianzhutingchechang3416.详细地址",
+      "haidianqugonggongjianzhutingchechang3416.经营单位"
+    ]
+  }
+}

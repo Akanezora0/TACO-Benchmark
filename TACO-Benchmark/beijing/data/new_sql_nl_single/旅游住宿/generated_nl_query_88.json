@@ -1,0 +1,47 @@
+{
+  "sql": "SELECT DISTINCT shiguihuaziranziyuanweishiguan1516.HID, shiguihuaziranziyuanweishiguan1516.HNAME, huairouquhuairouqujingqumenpiaojiage1592.\"怀柔区政府定价景区门票价格\" FROM shiguihuaziranziyuanweishiguan1516 INNER JOIN huairouquhuairouqujingqumenpiaojiage1592 ON shiguihuaziranziyuanweishiguan1516.HID = huairouquhuairouqujingqumenpiaojiage1592.HID WHERE shiguihuaziranziyuanweishiguan1516.HID = '特定HID'",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是查询特定 HID（可能是某个景区或资源的唯一标识）的详细信息，包括其名称（HNAME）以及对应的怀柔区政府定价景区门票价格。  \n\n### **详细描述**  \n1. **涉及的表**：  \n   - `shiguihuaziranziyuanweishiguan1516`：可能是一个存储景区或自然资源的表，包含 HID（唯一标识）和 HNAME（名称）等信息。  \n   - `huairouquhuairouqujingqumenpiaojiage1592`：可能是一个存储怀柔区政府定价景区门票价格的表，包含 HID 和对应的门票价格。  \n\n2. **涉及的列**：  \n   - `shiguihuaziranziyuanweishiguan1516.HID`：景区或自然资源的唯一标识。  \n   - `shiguihuaziranziyuanweishiguan1516.HNAME`：景区或自然资源的名称。  \n   - `huairouquhuairouqujingqumenpiaojiage1592.\"怀柔区政府定价景区门票价格\"`：怀柔区政府定价的门票价格。  \n\n3. **查询条件**：  \n   - 使用 `INNER JOIN` 关联两个表，确保只返回在两个表中都存在的 HID 记录。  \n   - `WHERE shiguihuaziranziyuanweishiguan1516.HID = '特定HID'`：筛选特定 HID 的记录。  \n   - `DISTINCT` 确保结果不重复。  \n\n### **业务场景**  \n该查询可能用于以下业务场景：  \n- **景区门票价格查询**：用户（如游客、旅行社或景区管理者）需要获取某个特定景区的政府定价门票价格。  \n- **数据关联分析**：政府或旅游管理部门可能需要核对景区基本信息与定价数据是否匹配。  \n- **价格公示**：在旅游网站或景区公告中展示景区的官方定价信息。  \n\n### **用户描述**  \n在该业务场景下，用户可能遇到的实际问题或需求包括：  \n1. **游客查询门票价格**：  \n   - 游客计划前往怀柔区的某个景区，想提前了解政府定价的门票价格，以便规划预算。  \n   - 例如，游客搜索“XX 景区门票价格”，系统返回该景区的名称和官方定价。  \n\n2. **景区管理核对数据**：  \n   - 景区管理者需要确保系统中存储的景区名称与政府定价数据一致，避免价格信息错误。  \n   - 例如，景区管理员输入 HID 查询，确认门票价格是否正确。  \n\n3. **旅游平台数据整合**：  \n   - 旅游网站或 App 需要整合景区基本信息和价格数据，确保展示的信息准确无误。  \n   - 例如，平台通过 HID 关联两个表，获取景区的名称和价格，用于展示或比价功能。  \n\n综上，该 SQL 查询主要用于获取特定景区的名称和门票价格，适用于旅游信息查询、数据核对和价格公示等场景。",
+  "natural_language_query": "市民反映，最近想去怀柔区玩，听说有个叫\"XX景区\"的地方挺不错的，但不知道门票多少钱。我在政府官网上看到说有些景区是政府统一定价的，想确认一下这个景区的官方门票价格是多少。我朋友说好像每个景区都有个编号，但我不知道具体是哪个，就记得名字大概叫\"XX景区\"。能不能帮忙查一下这个景区的正规门票价格？主要是怕到了现场被乱收费，想提前了解一下正规价格。",
+  "results": 0,
+  "sql skeleton": "select distinct _ ,_ ,_ from _ where _ =_",
+  "database": "旅游住宿",
+  "tables": {
+    "shiguihuaziranziyuanweishiguan1516": [
+      "shiguihuaziranziyuanweishiguan1516.HID",
+      "shiguihuaziranziyuanweishiguan1516.FATHERID",
+      "shiguihuaziranziyuanweishiguan1516.HNAME",
+      "shiguihuaziranziyuanweishiguan1516.OTHERNAME",
+      "shiguihuaziranziyuanweishiguan1516.CATEGORY",
+      "shiguihuaziranziyuanweishiguan1516.SUBCATEGOR",
+      "shiguihuaziranziyuanweishiguan1516.COUNTYNAME",
+      "shiguihuaziranziyuanweishiguan1516.STREETNAME",
+      "shiguihuaziranziyuanweishiguan1516.DYNASTY",
+      "shiguihuaziranziyuanweishiguan1516.SUBDYNASTY",
+      "shiguihuaziranziyuanweishiguan1516.ADDRESS",
+      "shiguihuaziranziyuanweishiguan1516.RANK",
+      "shiguihuaziranziyuanweishiguan1516.BATCH",
+      "shiguihuaziranziyuanweishiguan1516.PUBTIME",
+      "shiguihuaziranziyuanweishiguan1516.USERS",
+      "shiguihuaziranziyuanweishiguan1516.PURPOSE",
+      "shiguihuaziranziyuanweishiguan1516.OWNERSHIP",
+      "shiguihuaziranziyuanweishiguan1516.STATEEVALU",
+      "shiguihuaziranziyuanweishiguan1516.SINGLERELI",
+      "shiguihuaziranziyuanweishiguan1516.PROTECTION",
+      "shiguihuaziranziyuanweishiguan1516.ATTACHEDRE",
+      "shiguihuaziranziyuanweishiguan1516.RELATEDPEO",
+      "shiguihuaziranziyuanweishiguan1516.RELATEDEVE",
+      "shiguihuaziranziyuanweishiguan1516.PUBNAME",
+      "shiguihuaziranziyuanweishiguan1516.SOURCE",
+      "shiguihuaziranziyuanweishiguan1516.EDITOR",
+      "shiguihuaziranziyuanweishiguan1516.ISREDUNDAN",
+      "shiguihuaziranziyuanweishiguan1516.THEME"
+    ],
+    "huairouquhuairouqujingqumenpiaojiage1592": [
+      "huairouquhuairouqujingqumenpiaojiage1592.怀柔区政府定价景区门票价格",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 1",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 2",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 3",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 4"
+    ]
+  }
+}

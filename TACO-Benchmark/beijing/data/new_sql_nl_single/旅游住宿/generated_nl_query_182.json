@@ -1,0 +1,20 @@
+{
+  "sql": "SELECT \"shunyiqushunyiquxingjifandian2102.顺义区星级饭店\", \"shiwenhuahelvyoujuxingjifandianxinxi2036.��\u0011ࡱ\u001a�\" FROM \"shunyiqushunyiquxingjifandian2102\" - \"shiwenhuahelvyoujuxingjifandianxinxi2036\" WHERE \"shunyiqushunyiquxingjifandian2102.顺义区星级饭店\" = '条件值';",
+  "problem_description": "### **查询意图**：\n该 SQL 语句的目的是从两个表（`shunyiqushunyiquxingjifandian2102` 和 `shiwenhuahelvyoujuxingjifandianxinxi2036`）中查询满足特定条件的记录，具体是查找 `shunyiqushunyiquxingjifandian2102` 表中 `顺义区星级饭店` 列等于某个特定值（'条件值'）的记录，并返回该列以及 `shiwenhuahelvyoujuxingjifandianxinxi2036` 表中的某一列（列名显示为乱码）。\n\n### **详细描述**：\n1. **涉及的表**：\n   - `shunyiqushunyiquxingjifandian2102`：可能是一个存储顺义区星级饭店信息的表。\n   - `shiwenhuahelvyoujuxingjifandianxinxi2036`：可能是一个存储文化和旅游局星级饭店信息的表。\n\n2. **涉及的列**：\n   - `shunyiqushunyiquxingjifandian2102.顺义区星级饭店`：顺义区星级饭店的名称或标识。\n   - `shiwenhuahelvyoujuxingjifandianxinxi2036` 中的某一列（列名显示为乱码，可能是编码问题）：可能是文化和旅游局星级饭店的某种信息（如星级、地址、联系方式等）。\n\n3. **查询条件**：\n   - `WHERE \"shunyiqushunyiquxingjifandian2102.顺义区星级饭店\" = '条件值'`：筛选出 `shunyiqushunyiquxingjifandian2102` 表中 `顺义区星级饭店` 列等于 `'条件值'` 的记录。\n\n4. **查询操作**：\n   - 该查询使用了集合差操作（`-`），即从 `shunyiqushunyiquxingjifandian2102` 表中减去 `shiwenhuahelvyoujuxingjifandianxinxi2036` 表中的记录，然后筛选出符合条件的记录。\n\n### **业务场景**：\n1. **数据比对**：\n   - 该查询可能用于比对顺义区星级饭店和文化旅游局星级饭店的信息，找出仅在顺义区表中存在但不在文化和旅游局表中的饭店。\n\n2. **数据验证**：\n   - 可能是为了验证顺义区星级饭店是否在文化和旅游局的官方列表中注册或备案。\n\n3. **数据同步**：\n   - 可能是为了找出需要同步到文化和旅游局数据库中的顺义区星级饭店信息。\n\n### **用户描述**：\n1. **用户需求**：\n   - 用户可能是顺义区旅游局或相关管理部门的工作人员，需要确认哪些顺义区的星级饭店尚未在文化和旅游局的官方系统中登记。\n   - 用户希望通过查询找出这些遗漏的饭店，以便进行后续的补充登记或数据同步。\n\n2. **实际问题**：\n   - 可能存在部分星级饭店在顺义区的本地数据库中有记录，但在文化和旅游局的统一系统中缺失，导致统计不准确或管理不便。\n   - 用户需要快速定位这些差异数据，以便进行数据修正或政策执行（如补贴发放、星级评定等）。\n\n3. **其他可能**：\n   - 如果列名乱码问题是由于编码错误，用户可能需要修复列名以确保查询的准确性和可读性。",
+  "natural_language_query": "市民反映，顺义区有几家星级饭店在本地系统里能查到，但是在市文化和旅游局的官网上找不到相关信息。比如\"XX大酒店\"（这里用条件值替代）明明评上了三星级，在区里名单里都有，可到了市里系统就查不到了。我们最近在做星级饭店的补贴发放工作，这种情况导致补贴发放出现了问题。想请帮忙核实一下，到底是我们区里上报漏了，还是市里系统录入出了问题？特别是想知道像XX大酒店这样的饭店，为什么在市级系统里找不到记录？",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ WHERE _ = _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "shunyiqushunyiquxingjifandian2102": [
+      "shunyiqushunyiquxingjifandian2102.顺义区星级饭店",
+      "shunyiqushunyiquxingjifandian2102.Unnamed: 1",
+      "shunyiqushunyiquxingjifandian2102.Unnamed: 2",
+      "shunyiqushunyiquxingjifandian2102.Unnamed: 3"
+    ],
+    "shiwenhuahelvyoujuxingjifandianxinxi2036": [
+      "shiwenhuahelvyoujuxingjifandianxinxi2036.��\u0011ࡱ\u001a�",
+      "shiwenhuahelvyoujuxingjifandianxinxi2036.\u0001\u0001"
+    ]
+  }
+}

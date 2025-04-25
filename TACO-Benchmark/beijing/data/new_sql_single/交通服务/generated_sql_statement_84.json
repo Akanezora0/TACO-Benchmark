@@ -1,0 +1,18 @@
+{
+  "sql": "SELECT DISTINCT shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.\"序号\" AS 序号, shijiaotongweikebianqingbaobanshebeixinxi3519.\"名称\" AS 名称 FROM shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678 UNION SELECT shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.\"序号\" AS 序号, shijiaotongweikebianqingbaobanshebeixinxi3519.\"名称\" AS 名称 FROM shijiaotongweikebianqingbaobanshebeixinxi3519 UNION SELECT shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.\"序号\" AS 序号, shijiaotongweikebianqingbaobanshebeixinxi3519.\"名称\" AS 名称 FROM shijiaotongweikebianqingbaobanshebeixinxi3519",
+  "results": 0,
+  "sql skeleton": "select distinct _ ._ as _ ,_ ._ as _ from ( select _ as _ ,_ as _ from _ where _ = _ union select _ as _ ,_ as _ from _ where _ = _ union select _ as _ ,_ as _ from _ where _ = _ ) _",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678": [
+      "shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.序号",
+      "shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.服务机构名称",
+      "shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.地址"
+    ],
+    "shijiaotongweikebianqingbaobanshebeixinxi3519": [
+      "shijiaotongweikebianqingbaobanshebeixinxi3519.唯一标识",
+      "shijiaotongweikebianqingbaobanshebeixinxi3519.名称",
+      "shijiaotongweikebianqingbaobanshebeixinxi3519.设备编码"
+    ]
+  }
+}

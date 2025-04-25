@@ -1,0 +1,18 @@
+{
+  "sql": "SELECT xichengquxichengquguojiajizhongdianwenwubaohudanwei60.名称, pingguqupingguqujingpinminsu2083.平谷区2022年精品民宿 FROM xichengquxichengquguojiajizhongdianwenwubaohudanwei60, pingguqupingguqujingpinminsu2083 WHERE xichengquxichengquguojiajizhongdianwenwubaohudanwei60.序号 = pingguqupingguqujingpinminsu2083.Unnamed: 1;",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "xichengquxichengquguojiajizhongdianwenwubaohudanwei60": [
+      "xichengquxichengquguojiajizhongdianwenwubaohudanwei60.序号",
+      "xichengquxichengquguojiajizhongdianwenwubaohudanwei60.名称",
+      "xichengquxichengquguojiajizhongdianwenwubaohudanwei60.地址"
+    ],
+    "pingguqupingguqujingpinminsu2083": [
+      "pingguqupingguqujingpinminsu2083.平谷区2022年精品民宿",
+      "pingguqupingguqujingpinminsu2083.Unnamed: 1",
+      "pingguqupingguqujingpinminsu2083.Unnamed: 2"
+    ]
+  }
+}

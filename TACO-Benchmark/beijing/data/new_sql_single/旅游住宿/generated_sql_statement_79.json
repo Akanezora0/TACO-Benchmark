@@ -1,0 +1,22 @@
+{
+  "sql": "SELECT \"景区名称\" as \"景名字\", \"等级\" as \"景区等级\", \"地址\" as \"景区地址\", \"咨询电话\" as \"咨询电话\", \"投诉电话\" as \"投诉电话\", \"邮编\" as \"邮编\" FROM \"xichengquxichengqudengjilvyoujingquminglu14\" WHERE \"等级\" = 'AAAA'",
+  "results": 0,
+  "sql skeleton": "select _ as _ from _ where _",
+  "database": "旅游住宿",
+  "tables": {
+    "xichengquxichengqudengjilvyoujingquminglu14": [
+      "xichengquxichengqudengjilvyoujingquminglu14.序号",
+      "xichengquxichengqudengjilvyoujingquminglu14.景区名称",
+      "xichengquxichengqudengjilvyoujingquminglu14.等级",
+      "xichengquxichengqudengjilvyoujingquminglu14.地址",
+      "xichengquxichengqudengjilvyoujingquminglu14.咨询电话",
+      "xichengquxichengqudengjilvyoujingquminglu14.投诉电话",
+      "xichengquxichengqudengjilvyoujingquminglu14.邮编"
+    ],
+    "pingguqupingguqujingpinminsu2083": [
+      "pingguqupingguqujingpinminsu2083.平谷区2022年精品民宿",
+      "pingguqupingguqujingpinminsu2083.Unnamed: 1",
+      "pingguqupingguqujingpinminsu2083.Unnamed: 2"
+    ]
+  }
+}

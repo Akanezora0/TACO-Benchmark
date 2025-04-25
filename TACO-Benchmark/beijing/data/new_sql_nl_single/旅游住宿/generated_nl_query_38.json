@@ -1,0 +1,44 @@
+{
+  "sql": "SELECT \"tongzhouqutongzhouquxiangcunminsuxinxi2979.通州区乡村民宿情况表（规范化审核52家）\", \"shiguihuaziranziyuanweiyinhangpiaohao1522.HNAME\" FROM \"tongzhouqutongzhouquxiangcunminsuxinxi2979\" INNER JOIN \"shiguihuaziranziyuanweiyinhangpiaohao1522\" ON \"tongzhouqutongzhouquxiangcunminsuxinxi2979.通州区乡村民宿情况表（规范化审核52家）\".\"编号\" = \"shiguihuaziranziyuanweiyinhangpiaohao1522.HID\" WHERE \"shiguihuaziranziyuanweiyinhangpiaohao1522.HNAME\" = '特定名称';",
+  "problem_description": "- **查询意图**：  \n  该 SQL 语句的目的是从两个表中联合查询数据，筛选出符合特定条件的记录。具体来说，它试图找出通州区乡村民宿情况表中与自然资源规划银行票号表中特定名称（'特定名称'）相匹配的民宿信息。\n\n- **详细描述**：  \n  - **涉及的表**：  \n    1. `tongzhouqutongzhouquxiangcunminsuxinxi2979.通州区乡村民宿情况表（规范化审核52家）`：该表存储了通州区乡村民宿的相关信息，可能包括民宿编号、名称、地址等字段。  \n    2. `shiguihuaziranziyuanweiyinhangpiaohao1522`：该表存储了自然资源规划银行票号的相关信息，可能包括票号ID（HID）、名称（HNAME）等字段。  \n\n  - **涉及的列**：  \n    1. `tongzhouqutongzhouquxiangcunminsuxinxi2979.通州区乡村民宿情况表（规范化审核52家）`：该表的具体列未明确列出，但通过查询语句可以看出，至少包含一个名为“编号”的列，用于与另一表的HID列进行关联。  \n    2. `shiguihuaziranziyuanweiyinhangpiaohao1522.HNAME`：该列存储了银行票号的名称，查询中用于筛选特定名称的记录。  \n\n  - **关联条件**：  \n    通过 `INNER JOIN` 将两个表关联，关联条件是民宿表的“编号”列与银行票号表的“HID”列相等。  \n\n  - **筛选条件**：  \n    使用 `WHERE` 子句筛选出银行票号表中 `HNAME` 列值为“特定名称”的记录。  \n\n- **业务场景**：  \n  该查询可能用于以下业务场景：  \n  1. **民宿与银行合作管理**：通州区的乡村民宿可能与某些银行（如自然资源规划银行）有合作关系，例如通过银行发放优惠券或票号。查询可以帮助管理者快速找到与特定银行合作的民宿信息。  \n  2. **数据核对与审核**：在民宿规范化审核过程中，可能需要核对民宿与银行票号的对应关系，确保数据的准确性和一致性。  \n  3. **特定银行合作分析**：分析特定银行（如“特定名称”对应的银行）与民宿的合作情况，为后续合作优化提供数据支持。  \n\n- **用户描述**：  \n  在实际业务中，用户可能是通州区民宿管理部门或银行合作方的管理人员。他们可能遇到以下问题或需求：  \n  1. **合作验证**：需要确认哪些民宿与特定银行（如“特定名称”银行）存在合作关系，以便进行后续的结算或优惠活动管理。  \n  2. **数据整合**：需要将民宿信息与银行票号信息关联起来，生成一份完整的合作清单，便于统一管理。  \n  3. **问题排查**：在发现银行票号数据异常时，可能需要快速定位与之关联的民宿信息，以便进一步核实或修正数据。",
+  "natural_language_query": "市民反映，我是通州区这边负责乡村民宿管理的工作人员，最近在和一家叫\"特定名称\"的银行合作搞优惠活动。但是我们现在搞不清楚到底哪些民宿是跟这家银行有合作关系的，系统里也查不到明确的清单。之前好像有听说过是通过票号来关联的，但我们这边只有民宿的基本信息，银行那边提供的票号数据也对不上号。能不能帮忙查一下，通州区这边已经通过规范化审核的52家民宿里，哪些是和这家\"特定名称\"银行有票号关联的？我们这边急着要这份名单来核对优惠券发放情况，不然游客投诉说用不了优惠我们很难办。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ WHERE _ = _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "tongzhouqutongzhouquxiangcunminsuxinxi2979": [
+      "tongzhouqutongzhouquxiangcunminsuxinxi2979.通州区乡村民宿情况表（规范化审核52家）",
+      "tongzhouqutongzhouquxiangcunminsuxinxi2979.Unnamed: 1",
+      "tongzhouqutongzhouquxiangcunminsuxinxi2979.Unnamed: 2"
+    ],
+    "shiguihuaziranziyuanweiyinhangpiaohao1522": [
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.HID",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.FATHERID",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.HNAME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.OTHERNAME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.CATEGORY",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.SUBCATEGOR",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.COUNTYNAME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.STREETNAME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.DYNASTY",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.SUBDYNASTY",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.ADDRESS",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.RANK",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.BATCH",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.PUBTIME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.USERS",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.PURPOSE",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.OWNERSHIP",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.STATEEVALU",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.SINGLERELI",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.PROTECTION",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.ATTACHEDRE",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.RELATEDPEO",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.RELATEDEVE",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.PUBNAME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.SOURCE",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.EDITOR",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.ISREDUNDAN"
+    ]
+  }
+}

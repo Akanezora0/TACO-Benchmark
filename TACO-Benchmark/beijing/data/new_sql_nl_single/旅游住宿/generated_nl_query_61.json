@@ -1,0 +1,49 @@
+{
+  "sql": "SELECT HID, HNAME, ADDRESS FROM shiguihuaziranziyuanweitongxunshe1518 WHERE STATEEVALU = '优秀'",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从表 `shiguihuaziranziyuanweitongxunshe1518` 中筛选出状态评估为“优秀”的记录，并返回这些记录的 HID、HNAME 和 ADDRESS 字段。\n\n- **详细描述**：\n  - **涉及的表**：`shiguihuaziranziyuanweitongxunshe1518`（表名可能为“市规划自然资源委通讯社1518”或类似含义）。\n  - **涉及的列**：\n    - `HID`：可能是某个实体的唯一标识符，如“编号”或“ID”。\n    - `HNAME`：可能是名称字段，如“名称”或“单位名称”。\n    - `ADDRESS`：地址信息字段。\n    - `STATEEVALU`：状态评估字段，用于标识记录的状态（如“优秀”“良好”等）。\n  - **条件**：`STATEEVALU = '优秀'`，表示只选择状态评估为“优秀”的记录。\n\n- **业务场景**：\n  - 该查询可能用于筛选出在某个评估中表现优秀的单位或项目。例如：\n    - 城市规划或自然资源管理领域的优秀单位评选。\n    - 某个通讯社或机构对下属单位或项目的定期评估。\n    - 资源分配或奖励发放前的筛选（仅选择优秀单位）。\n  - 查询结果（HID、HNAME、ADDRESS）可以用于生成优秀单位名单、联系信息或进一步分析。\n\n- **用户描述**：\n  - 用户可能是城市规划部门的管理人员或评估人员，需要快速获取评估结果为“优秀”的单位信息，以便进行表彰、资源分配或后续合作。\n  - 用户的需求可能是：\n    - “我需要知道哪些单位在最近的自然资源管理评估中被评为‘优秀’，以便安排表彰会议。”\n    - “请列出所有地址和名称，方便我们联系这些优秀单位进行下一步合作。”\n    - “筛选出优秀单位，用于优先分配下一阶段的资源或资金。”",
+  "natural_language_query": "市民反映，最近市里对自然资源管理单位进行了评估工作，想了解一下哪些单位被评为\"优秀\"等级。我是区规划局的工作人员，领导要求整理这批优秀单位的联系信息，好安排后续的表彰大会和资源对接。能不能帮忙查一下这些优秀单位的具体名称和办公地址？我们这边需要尽快联系他们准备相关材料。对了，最好能把每个单位的编号也一并提供，方便我们归档整理。之前听说有些单位虽然评上了优秀但地址可能有变动，希望能核实一下最新信息。",
+  "results": 0,
+  "sql skeleton": "SELECT _ _ FROM  WHERE ",
+  "database": "旅游住宿",
+  "tables": {
+    "shiguihuaziranziyuanweitongxunshe1518": [
+      "shiguihuaziranziyuanweitongxunshe1518.HID",
+      "shiguihuaziranziyuanweitongxunshe1518.FATHERID",
+      "shiguihuaziranziyuanweitongxunshe1518.HNAME",
+      "shiguihuaziranziyuanweitongxunshe1518.OTHERNAME",
+      "shiguihuaziranziyuanweitongxunshe1518.CATEGORY",
+      "shiguihuaziranziyuanweitongxunshe1518.SUBCATEGOR",
+      "shiguihuaziranziyuanweitongxunshe1518.COUNTYNAME",
+      "shiguihuaziranziyuanweitongxunshe1518.STREETNAME",
+      "shiguihuaziranziyuanweitongxunshe1518.DYNASTY",
+      "shiguihuaziranziyuanweitongxunshe1518.SUBDYNASTY",
+      "shiguihuaziranziyuanweitongxunshe1518.ADDRESS",
+      "shiguihuaziranziyuanweitongxunshe1518.RANK",
+      "shiguihuaziranziyuanweitongxunshe1518.BATCH",
+      "shiguihuaziranziyuanweitongxunshe1518.PUBTIME",
+      "shiguihuaziranziyuanweitongxunshe1518.USERS",
+      "shiguihuaziranziyuanweitongxunshe1518.PURPOSE",
+      "shiguihuaziranziyuanweitongxunshe1518.OWNERSHIP",
+      "shiguihuaziranziyuanweitongxunshe1518.STATEEVALU",
+      "shiguihuaziranziyuanweitongxunshe1518.SINGLERELI",
+      "shiguihuaziranziyuanweitongxunshe1518.PROTECTION",
+      "shiguihuaziranziyuanweitongxunshe1518.ATTACHEDRE",
+      "shiguihuaziranziyuanweitongxunshe1518.RELATEDPEO",
+      "shiguihuaziranziyuanweitongxunshe1518.RELATEDEVE",
+      "shiguihuaziranziyuanweitongxunshe1518.PUBNAME",
+      "shiguihuaziranziyuanweitongxunshe1518.SOURCE",
+      "shiguihuaziranziyuanweitongxunshe1518.EDITOR",
+      "shiguihuaziranziyuanweitongxunshe1518.ISREDUNDAN"
+    ],
+    "yanqingquyanqingqulvyoujingquxinxi3381": [
+      "yanqingquyanqingqulvyoujingquxinxi3381.旅游景区",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 1",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 2",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 3",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 4",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 5",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 6",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 7"
+    ]
+  }
+}

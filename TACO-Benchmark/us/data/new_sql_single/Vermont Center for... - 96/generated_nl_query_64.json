@@ -1,0 +1,47 @@
+{
+  "sql": "SELECT sand_and_gravel_deposits.OBJECTID, sand_and_gravel_deposits.AG_TYPE, sand_and_gravel_deposits.GlobalID, sand_and_gravel_deposits.SHAPEarea, sand_and_gravel_deposits.SHAPElen, salt_storage_record_table.OBJECTID FROM sand_and_gravel_deposits INNER JOIN salt_storage_record_table ON sand_and_gravel_deposits.GlobalID = salt_storage_record_table.fulcrum_id WHERE salt_storage_record_table.fulcrum_id = '特定ID' AND salt_storage_record_table.fulcrum_parent_id = '特定父ID';",
+  "problem_description": "### Query intent:\nThe SQL statement aims to retrieve specific information related to sand and gravel deposits and their corresponding records in a salt storage database.\n\n### Detailed description:\n1. **Table Involved**:\n   - `sand_and_gravel_deposits`: Contains details about sand and gravel deposits, including an `OBJECTID` (unique identifier), `AG_TYPE` (type of deposit), `GlobalID`, `SHAPEarea` (area of the deposit), and `SHAPElen` (length of the deposit).\n   - `salt_storage_record_table`: Records information about salt storage, with `OBJECTID` (unique identifier), `fulcrum_id` (linking to `GlobalID` in `sand_and_gravel_deposits`), and `fulcrum_parent_id` (parent identifier).\n\n2. **Columns Selected**:\n   - `OBJECTID`, `AG_TYPE`, `GlobalID`, `SHAPEarea`, `SHAPElen` from `sand_and_gravel_deposits`\n   - `OBJECTID` from `salt_storage_record_table`\n\n3. **Join Condition**:\n   - `INNER JOIN` is used to match rows between `sand_and_gravel_deposits` and `salt_storage_record_table` based on the equality of `GlobalID` in `sand_and_gravel_deposits` and `fulcrum_id` in `salt_storage_record_table`.\n\n4. **Where Clause Conditions**:\n   - `salt_storage_record_table.fulcrum_id = '特定ID'`: Filters records in `salt_storage_record_table` based on a specific `fulcrum_id`.\n   - `salt_storage_record_table.fulcrum_parent_id = '特定父ID'`: Filters further by ensuring that the `fulcrum_id` corresponds to a specific `fulcrum_parent_id`.\n\n### Business scenario:\nThis SQL query is likely used in a scenario where there's a need to correlate data about sand and gravel deposits (`sand_and_gravel_deposits`) with specific salt storage records (`salt_storage_record_table`). This could be useful for environmental monitoring, resource management, or compliance checks, where the relationship between these two types of deposits and their storage needs to be analyzed.\n\n### User description:\nA user might need this information to understand how certain sand and gravel deposits relate to salt storage facilities, possibly to assess potential impacts of the deposits on the storage areas, manage resources more efficiently, or ensure regulatory compliance regarding the proximity and interaction between different materials at storage sites.",
+  "natural_language_query": "User: I'm working on a project that involves analyzing the relationship between sand and gravel deposits and salt storage facilities. Specifically, I need to find out detailed information about the deposits and their corresponding records in the salt storage database. Could you help me formulate the SQL query for this task?\n\nAssistant: User: I'm trying to identify any discrepancies or issues related to the storage of salt at various locations linked to sand and gravel deposits. I've been given a specific ID for one of these locations and need to verify if it matches correctly in the salt storage record table. Additionally, I also need to ensure that this location is properly categorized under its parent location in the records. How would I go about writing the SQL query for this?\n\nUser: For my research, I need to cross-reference data about sand and gravel deposits with information on salt storage. My goal is to gather details about the deposits themselves, such as their type, size, and shape, alongside the records of where they're stored. The catch is, I'm only interested in data that pertains to a particular salt storage facility, which has a unique ID, and this facility should also be a part of a larger storage network, indicated by another unique ID. Can you guide me on how to structure the SQL query for this?",
+  "results": 0,
+  "sql skeleton": "SELECT _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ FROM _ WHERE _ ._ = _ AND _ ._ = _ ;",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "sand_and_gravel_deposits": [
+      "sand_and_gravel_deposits.OBJECTID",
+      "sand_and_gravel_deposits.AG_TYPE",
+      "sand_and_gravel_deposits.GlobalID",
+      "sand_and_gravel_deposits.SHAPEarea",
+      "sand_and_gravel_deposits.SHAPElen"
+    ],
+    "salt_storage_record_table": [
+      "salt_storage_record_table.OBJECTID",
+      "salt_storage_record_table.fulcrum_id",
+      "salt_storage_record_table.fulcrum_parent_id",
+      "salt_storage_record_table.fulcrum_record_id",
+      "salt_storage_record_table.version",
+      "salt_storage_record_table.geometry",
+      "salt_storage_record_table.created_at",
+      "salt_storage_record_table.updated_at",
+      "salt_storage_record_table.created_by",
+      "salt_storage_record_table.updated_by",
+      "salt_storage_record_table.address_sub_thoroughfare",
+      "salt_storage_record_table.address_thoroughfare",
+      "salt_storage_record_table.address_suite",
+      "salt_storage_record_table.address_locality",
+      "salt_storage_record_table.address_sub_admin_area",
+      "salt_storage_record_table.address_admin_area",
+      "salt_storage_record_table.address_postal_code",
+      "salt_storage_record_table.address_country",
+      "salt_storage_record_table.address_full",
+      "salt_storage_record_table.material_type",
+      "salt_storage_record_table.material_type_other",
+      "salt_storage_record_table.storage_length_years",
+      "salt_storage_record_table.storage_length_years_range",
+      "salt_storage_record_table.material_covered",
+      "salt_storage_record_table.coverage_method",
+      "salt_storage_record_table.material_on_pad",
+      "salt_storage_record_table.pad_type",
+      "salt_storage_record_table.pad_type_other"
+    ]
+  }
+}

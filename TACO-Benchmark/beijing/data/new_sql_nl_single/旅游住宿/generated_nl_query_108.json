@@ -1,0 +1,29 @@
+{
+  "sql": "SELECT xichengquxichengqudengjilvyoujingquminglu14.景区名称, xichengquxichengqudengjilvyoujingquminglu14.等级, xichengquxichengqudengjilvyoujingquminglu14.地址 FROM xichengquxichengqudengjilvyoujingquminglu14 WHERE xichengquxichengqudengjilvyoujingquminglu14.等级 = 'AAAA'",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从西城区等级旅游景区名录表中查询所有等级为\"AAAA\"的景区信息，包括景区名称、等级和地址。\n\n- **详细描述**：\n  - **涉及的表**：`xichengquxichengqudengjilvyoujingquminglu14`（西城区等级旅游景区名录表）\n  - **涉及的列**：\n    - `景区名称`：表示旅游景区的名称\n    - `等级`：表示旅游景区的评级等级\n    - `地址`：表示旅游景区的具体位置\n  - **查询条件**：`等级 = 'AAAA'`，即只选择等级为4A级的旅游景区\n\n- **业务场景**：\n  1. 旅游信息查询：为游客或旅行社提供西城区内4A级旅游景区的详细信息\n  2. 旅游规划：帮助游客筛选高质量的旅游景区进行参观游览\n  3. 旅游宣传：政府部门或旅游平台可以展示区域内的高等级景区\n  4. 数据分析：统计区域内高等级景区的分布情况\n\n- **用户描述**：\n  1. 一位计划到北京西城区旅游的游客想要了解该区域内有哪些4A级景区，以便优先参观这些高质量景点\n  2. 旅行社需要为旅游团筛选西城区内的高等级景区，设计精品旅游路线\n  3. 旅游管理部门需要统计辖区内4A级景区的数量和分布情况，用于旅游发展规划\n  4. 本地居民想了解家附近有哪些高等级景区，方便周末出游选择\n  5. 旅游APP开发者需要获取权威的景区等级信息，为用户提供准确的景区推荐",
+  "natural_language_query": "我想了解一下北京西城区这边有哪些比较好的旅游景区啊？听说4A级的景区都挺不错的，能不能帮我查查西城区内所有4A景区都有哪些？最好能告诉我这些景区的具体名字和地址，这样我周末带家人去玩的时候也好安排路线。对了，我住在西单附近，不知道这周围有没有4A景区？之前听朋友说西城区好像有几个特别有名的4A景点，但具体是哪些记不清了，麻烦帮忙查一下详细的名单和位置信息。",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ , from _ where _ =_",
+  "database": "旅游住宿",
+  "tables": {
+    "yanqingquyanqingqulvyoujingquxinxi3381": [
+      "yanqingquyanqingqulvyoujingquxinxi3381.旅游景区",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 1",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 2",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 3",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 4",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 5",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 6",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 7"
+    ],
+    "xichengquxichengqudengjilvyoujingquminglu14": [
+      "xichengquxichengqudengjilvyoujingquminglu14.序号",
+      "xichengquxichengqudengjilvyoujingquminglu14.景区名称",
+      "xichengquxichengqudengjilvyoujingquminglu14.等级",
+      "xichengquxichengqudengjilvyoujingquminglu14.地址",
+      "xichengquxichengqudengjilvyoujingquminglu14.咨询电话",
+      "xichengquxichengqudengjilvyoujingquminglu14.投诉电话",
+      "xichengquxichengqudengjilvyoujingquminglu14.邮编"
+    ]
+  }
+}

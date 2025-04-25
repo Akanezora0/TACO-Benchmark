@@ -1,0 +1,17 @@
+{
+  "sql": "SELECT \n\"shiwenhuahelvyoujuxingjifandianxinxi2036\".\"��\u0011ࡱ\u001a�\",\n\"shiwenhuahelvyoujuxingjifandianxinxi2036\".\"\u0001\u0001\",\n\"xichengqubeijingshiwenwubaohudanwei31\".\"序号\",\n\"xichengqubeijingshiwenwubaohudanwei31\".名称,\n\"xichengqubeijingshiwenwubaohudanwei31\".地址\nFROM \n\"shiwenhuahelvyoujuxingjifandianxinxi2036\"\nJOIN \n\"xichengqubeijingshiwenwubaohudanwei31\"\nON \n\"shiwenhuahelvyoujuxingjifandianxinxi2036\".\"��\u0011ࡱ\u001a�\" = \"xichengqubeijingshiwenwubaohudanwei31\".\"序号\"\nWHERE \n\"xichengqubeijingshiwenwubaohudanwei31\".名称 = '特定名称' AND \n\"xichengqubeijingshiwenwubaohudanwei31\".地址 = '特定地址' AND \n(GeoDistance(\"shiwenhuahelvyoujuxingjifandianxinxi2036\".\"\u0001\u0001\", \"xichengqubeijingshiwenwubaohudanwei31\".地址) = '特定距离');",
+  "results": 0,
+  "sql skeleton": "SELECT _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ FROM _ JOIN _ ON _ ._ = _ ._ WHERE _ ._ = _ AND _ ._ = _ and _ (_ ._ , _ ) = _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "shiwenhuahelvyoujuxingjifandianxinxi2036": [
+      "shiwenhuahelvyoujuxingjifandianxinxi2036.��\u0011ࡱ\u001a�",
+      "shiwenhuahelvyoujuxingjifandianxinxi2036.\u0001\u0001"
+    ],
+    "xichengqubeijingshiwenwubaohudanwei31": [
+      "xichengqubeijingshiwenwubaohudanwei31.序号",
+      "xichengqubeijingshiwenwubaohudanwei31.名称",
+      "xichengqubeijingshiwenwubaohudanwei31.地址"
+    ]
+  }
+}

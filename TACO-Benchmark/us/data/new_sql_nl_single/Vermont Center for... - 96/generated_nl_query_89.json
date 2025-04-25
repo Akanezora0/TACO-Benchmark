@@ -1,0 +1,50 @@
+{
+  "sql": "SELECT invasive_species.InvasiveName, invasive_species.ObservationDate, invasive_species.TreatmentDate, invasive_species.TreatmentEffectiveness \nFROM invasive_species \nJOIN wildlife_management_units ON invasive_species.TreatmentPerson = wildlife_management_units.AGENCY \nWHERE invasive_species.TreatmentType = 'chemical' AND invasive_species.TreatmentAssessmentNotes LIKE '%effective%' AND invasive_species.ObservationDate BETWEEN '2023-01-01' AND '2023-12-31' AND invasive_species.TreatmentAssessmentDate IN (SELECT invasive_species.AssessmentDate FROM invasive_species WHERE invasive_species.TreatmentDate IS NOT NULL AND invasive_species.TreatmentAssessmentDate IS NOT NULL) AND invasive_species.TreatmentHours > 5 AND invasive_species.ChemicalName = 'example chemical' AND invasive_species.ChemicalConsentration > 100 AND invasive_species.ChemicalOunces > 50 AND invasive_species.ApplicationMethod = 'spray' AND invasive_species.CertifiedApplicator = 'John Doe' AND invasive_species.EPARegistationNumber = 'XYZ123' AND invasive_species.Town = 'Example Town' AND invasive_species.GrossArea > 1000 AND invasive_species.InfestedArea > 500 AND invasive_species.Assessor = 'Jane Smith' AND invasive_species.DistributionName = 'Example Distribution' AND invasive_species.AssessmentDate >= '2023-01-01' AND invasive_species.AssessmentDate <= '2023-12-31' AND invasive_species.TreatmentAssessmentNotes LIKE '%success%' AND invasive_species.TreatmentAssessmentNotes LIKE '%no adverse effects%' AND invasive_species.TreatmentAssessmentNotes LIKE '%reduced infestation%' AND invasive_species.TreatmentAssessmentNotes LIKE '%improved plant health%' AND invasive_species.TreatmentAssessmentNotes LIKE '%increased biodiversity%' AND invasive_species.TreatmentAssessmentNotes LIKE '%controlled spread%' AND invasive_species.TreatmentAssessmentNotes LIKE '%eliminated invasive species%' AND invasive_species.TreatmentAssessmentNotes LIKE '%restored ecosystem%' AND invasive_species.TreatmentAssessmentNotes LIKE '%enhanced ecological function%' AND invasive_species.TreatmentAssessmentNotes LIKE '%supported native species%' AND invasive_species.TreatmentAssessmentNotes LIKE '%improved landscape aesthetics%' AND invasive_species.TreatmentAssessmentNotes LIKE '%sustainable management%' AND invasive_species.TreatmentAssessmentNotes LIKE '%long-term benefits%' AND invasive_species.Treatment",
+  "problem_description": "### **Query intent**: \nThis SQL statement aims to retrieve detailed information about the treatment effectiveness of invasive species, focusing on specific conditions related to treatment type, assessment notes, chemicals used, application methods, personnel, and geographical details.\n\n### **Detailed description**:\n- **Tables Involved**: `invasive_species` is the primary table, which contains records of invasive species treatments. The `wildlife_management_units` table is joined based on the `TreatmentPerson` column, indicating the agency responsible for the treatment.\n- **Columns Selected**: `InvasiveName`, `ObservationDate`, `TreatmentDate`, and `TreatmentEffectiveness` are selected from the `invasive_species` table. These columns provide information about the species being treated, when observations were made, when treatments were applied, and the effectiveness of those treatments.\n- **Conditions Applied**:\n  - `TreatmentType = 'chemical'`: Narrowing down treatments that involve chemical substances.\n  - `TreatmentAssessmentNotes LIKE '%effective%'`: Filtering for treatments where the assessment notes indicate effectiveness.\n  - `ObservationDate BETWEEN '2023-01-01' AND '2023-12-31'`: Limiting the observation period to a specific year.\n  - `TreatmentAssessmentDate IN (SELECT invasive_species.AssessmentDate FROM invasive_species WHERE invasive_species.TreatmentDate IS NOT NULL AND invasive_species.TreatmentAssessmentDate IS NOT NULL)`: Ensuring that the treatment assessment date aligns with valid treatment dates.\n  - `TreatmentHours > 5`, `ChemicalName = 'example chemical'`, `ChemicalConsentration > 100`, `ChemicalOunces > 50`, `ApplicationMethod = 'spray'`, `CertifiedApplicator = 'John Doe'`, `EPARegistationNumber = 'XYZ123'`, `Town = 'Example Town'`, `GrossArea > 1000`, `InfestedArea > 500`, `Assessor = 'Jane Smith'`, `DistributionName = 'Example Distribution'`: Additional filters to specify the duration, chemical specifics, application method, personnel, location, and other attributes of interest.\n  - `AssessmentDate >= '2023-01-01' AND AssessmentDate <= '2023-12-31'`: Restricting the assessment period to the same as the observation period.\n  - `Treatment",
+  "natural_language_query": "User: Hi, I'm trying to look into the effectiveness of treatments for invasive species in a specific area. I'm particularly interested in treatments that involve chemicals, have been deemed effective based on assessment notes, and took place within the year 2023. Also, I'd like to know more about the treatment details such as the type of chemical used, its concentration, the person who applied it, the method of application, the town where it was done, and the size of the area affected. Could you help me find this information?\n\nDatabase Expert: Sure, I can assist you with that. To get the information you're looking for, we'll need to query our database. Here's how we'll structure the SQL statement:\n\n```sql\nSELECT \n    invasive_species.InvasiveName,\n    invasive_species.ObservationDate,\n    invasive_species.TreatmentDate,\n    invasive_species.TreatmentEffectiveness,\n    wildlife_management_units.TreatmentPerson,\n    invasive_species.TreatmentType,\n    invasive_species.TreatmentAssessmentNotes,\n    invasive_species.ChemicalName,\n    invasive_species.ChemicalConsentration,\n    invasive_species.ChemicalOunces,\n    invasive_species.ApplicationMethod,\n    invasive_species.CertifiedApplicator,\n    invasive_species.EPARegistationNumber,\n    invasive_species.Town,\n    invasive_species.GrossArea,\n    invasive_species.InfestedArea,\n    invasive_species.Assessor,\n    invasive_species.DistributionName\nFROM \n    invasive_species\nJOIN \n    wildlife_management_units ON invasive_species.TreatmentPerson = wildlife_management_units.WildlifeManagementUnitID\nWHERE \n    invasive_species.TreatmentType = 'chemical'\nAND \n    invasive_species.TreatmentAssessmentNotes LIKE '%effective%'\nAND \n    invasive_species.ObservationDate BETWEEN '2023-01-01' AND '2023-12-31'\nAND \n    invasive_species.TreatmentAssessmentDate IN (SELECT invasive_species.AssessmentDate FROM invasive_species WHERE invasive_species.TreatmentDate IS NOT NULL AND invasive_species.TreatmentAssessmentDate IS NOT NULL)\nAND \n    invasive_species.TreatmentHours > 5\nAND \n    invasive_species.ChemicalName = 'example chemical'\nAND \n    invasive_species.ChemicalConsentration > 100\nAND \n    invasive_species.ChemicalOunces > 50\nAND \n    invasive_species.ApplicationMethod = 'spray'\nAND \n    invasive_species.CertifiedApplicator = 'John",
+  "results": 0,
+  "sql skeleton": "select _ from _ where _ = _ and _ (_ ,_ ) = _ and _ in (select _ from _ where _ = _ and _ )",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "invasive_species": [
+      "invasive_species.X",
+      "invasive_species.Y",
+      "invasive_species.SiteName",
+      "invasive_species.ObservationID",
+      "invasive_species.InvasiveName",
+      "invasive_species.ObservationDate",
+      "invasive_species.Observer",
+      "invasive_species.SurveyType",
+      "invasive_species.Latitude",
+      "invasive_species.Longitude",
+      "invasive_species.Town",
+      "invasive_species.GrossArea",
+      "invasive_species.InfestedArea",
+      "invasive_species.PlantDescription",
+      "invasive_species.DistributionName",
+      "invasive_species.AssessmentDate",
+      "invasive_species.TreatmentDate",
+      "invasive_species.TreatmentEffectiveness",
+      "invasive_species.TreatmentType",
+      "invasive_species.TreatmentPerson",
+      "invasive_species.TreatmentAssessmentDate",
+      "invasive_species.Assessor",
+      "invasive_species.TreatmentAssessmentNotes",
+      "invasive_species.TreatmentHours",
+      "invasive_species.ChemicalName",
+      "invasive_species.ChemicalConsentration",
+      "invasive_species.ChemicalOunces",
+      "invasive_species.ApplicationMethod",
+      "invasive_species.CertifiedApplicator",
+      "invasive_species.EPARegistationNumber"
+    ],
+    "wildlife_management_units": [
+      "wildlife_management_units.OBJECTID",
+      "wildlife_management_units.ABNAME",
+      "wildlife_management_units.AGENCY",
+      "wildlife_management_units.DEPT",
+      "wildlife_management_units.DIV",
+      "wildlife_management_units.BOUNDARY"
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "sql": "SELECT xichengquxichengqulvxingsheminglu20.序号, xichengquxichengqulvxingsheminglu20.许可证号, xichengquxichengqulvxingsheminglu20.旅行社名称 FROM xichengquxichengqulvxingsheminglu20 WHERE xichengquxichengqulvxingsheminglu20.许可证号 IN (SELECT shiguihuaziranziyuanweiyinhangpiaohao1522.HID FROM shiguihuaziranziyuanweiyinhangpiaohao1522 WHERE shiguihuaziranziyuanweiyinhangpiaohao1522.HNAME = '经营业务')",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ from _ where _ in (select _ from _ where _ )",
+  "database": "旅游住宿",
+  "tables": {
+    "xichengquxichengqulvxingsheminglu20": [
+      "xichengquxichengqulvxingsheminglu20.序号",
+      "xichengquxichengqulvxingsheminglu20.许可证号",
+      "xichengquxichengqulvxingsheminglu20.旅行社名称",
+      "xichengquxichengqulvxingsheminglu20.经营业务",
+      "xichengquxichengqulvxingsheminglu20.发证日期",
+      "xichengquxichengqulvxingsheminglu20.经营场所",
+      "xichengquxichengqulvxingsheminglu20.有效期"
+    ],
+    "shiguihuaziranziyuanweiyinhangpiaohao1522": [
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.HID",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.FATHERID",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.HNAME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.OTHERNAME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.CATEGORY",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.SUBCATEGOR",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.COUNTYNAME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.STREETNAME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.DYNASTY",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.SUBDYNASTY",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.ADDRESS",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.RANK",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.BATCH",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.PUBTIME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.USERS",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.PURPOSE",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.OWNERSHIP",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.STATEEVALU",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.SINGLERELI",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.PROTECTION",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.ATTACHEDRE",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.RELATEDPEO",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.RELATEDEVE",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.PUBNAME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.SOURCE",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.EDITOR",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.ISREDUNDAN"
+    ]
+  }
+}

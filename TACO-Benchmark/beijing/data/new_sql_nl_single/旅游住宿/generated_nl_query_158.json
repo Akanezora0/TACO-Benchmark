@@ -1,0 +1,46 @@
+{
+  "sql": "SELECT DISTINCT shiguihuaziranziyuanweiyinshiye1523.HID, shiguihuaziranziyuanweiyinshiye1523.HNAME, shiguihuaziranziyuanweiyinshiye1523.CATEGORY, shunyiquxingjifandian1276.顺义区星级饭店 = '高级' AS 标签 FROM shiguihuaziranziyuanweiyinshiye1523 JOIN shunyiquxingjifandian1276 ON shiguihuaziranziyuanweiyinshiye1523.HID = shunyiquxingjifandian1276.HID WHERE shiguihuaziranziyuanweiyinshiye1523.DYNASTY = '明朝'",
+  "problem_description": "### **查询意图**：\n该 SQL 语句的目的是从两个表中联合查询数据，筛选出符合特定条件的记录，并为这些记录打上标签。具体来说，它查找明朝时期的规划自然资源委员会（或类似机构）管理的资源，同时关联顺义区星级饭店的信息，并标记哪些饭店是“高级”星级饭店。\n\n---\n\n### **详细描述**：\n1. **涉及的表**：\n   - `shiguihuaziranziyuanweiyinshiye1523`（可能是一个规划自然资源委员会或类似机构的数据表）\n   - `shunyiquxingjifandian1276`（顺义区星级饭店数据表）\n\n2. **查询的列**：\n   - `shiguihuaziranziyuanweiyinshiye1523` 表的 `HID`（可能是资源或机构的唯一标识符）、`HNAME`（名称）、`CATEGORY`（类别）。\n   - `shunyiquxingjifandian1276` 表的 `顺义区星级饭店` 列，判断其是否为“高级”，并生成一个名为 `标签` 的布尔列（`TRUE` 表示是“高级”饭店，`FALSE` 表示不是）。\n\n3. **关联条件**：\n   - 两个表通过 `HID`（可能是酒店或资源的 ID）进行 `JOIN` 关联。\n\n4. **筛选条件**：\n   - `shiguihuaziranziyuanweiyinshiye1523.DYNASTY = '明朝'`，即只查询明朝时期的数据。\n\n5. **去重**：\n   - 使用 `DISTINCT` 确保结果不重复。\n\n---\n\n### **业务场景**：\n1. **历史文化与旅游管理**：\n   - 该查询可能用于历史文化研究或旅游管理，例如分析明朝时期的自然资源或建筑（如古建筑、园林）是否与现今的高星级饭店（特别是“高级”饭店）存在关联。\n   - 可能用于文旅融合项目，例如“明朝古迹+现代高端酒店”的旅游路线规划。\n\n2. **数据整合与标签化**：\n   - 将历史数据（明朝）与现代商业数据（星级饭店）关联，并打上标签，便于后续分析或推荐。\n\n3. **政府或规划部门决策**：\n   - 可能用于城市更新或文化遗产保护，例如评估哪些明朝时期的资源周边有高端酒店，从而制定相应的保护或开发政策。\n\n---\n\n### **用户描述**：\n1. **旅游规划师**：\n   - 用户可能需要设计一条融合历史文化和现代高端住宿的旅游路线，例如“明朝古迹+高级酒店”的套餐，因此需要查询哪些明朝资源附近有高级饭店。\n\n2. **历史文化研究员**：\n   - 用户可能想研究明朝时期的自然资源或建筑是否被现代商业机构（如高端酒店）所利用或影响，从而分析历史与现实的关联性。\n\n3. **政府或文旅部门**：\n   - 用户可能需要统计哪些明朝遗产点周边有高端旅游设施，以便制定保护政策或推广文旅项目。\n\n---\n\n### **总结**：\n该 SQL 查询的核心是**关联历史数据与现代商业数据，并筛选出符合条件的记录**，适用于文旅融合、城市规划或历史研究等场景。",
+  "natural_language_query": "市民反映，最近在规划一条\"明朝文化体验游\"的旅游线路，想了解一下顺义区这边有没有什么明朝时期留下来的古迹或者自然资源景点，最好是附近还有高档酒店的。听说有些星级饭店是\"高级\"标准的，不知道这些景点周围有没有这样的酒店？比如像规划自然资源委员会管理的那种历史资源点，能不能查到它们和现在的高端酒店的对应关系？希望能帮忙核实一下，方便我们设计旅游产品。来电咨询明朝历史景点与高级酒店关联情况。",
+  "results": 0,
+  "sql skeleton": "SELECT DISTINCT _ ._ , _ ._ , _ ._ , _ ._ = _ ._ = _ AS _ FROM _ JOIN _ ON _ ._ = _ ._ where _ ._ = _",
+  "database": "旅游住宿",
+  "tables": {
+    "shiguihuaziranziyuanweiyinshiye1523": [
+      "shiguihuaziranziyuanweiyinshiye1523.HID",
+      "shiguihuaziranziyuanweiyinshiye1523.FATHERID",
+      "shiguihuaziranziyuanweiyinshiye1523.HNAME",
+      "shiguihuaziranziyuanweiyinshiye1523.OTHERNAME",
+      "shiguihuaziranziyuanweiyinshiye1523.CATEGORY",
+      "shiguihuaziranziyuanweiyinshiye1523.SUBCATEGOR",
+      "shiguihuaziranziyuanweiyinshiye1523.COUNTYNAME",
+      "shiguihuaziranziyuanweiyinshiye1523.STREETNAME",
+      "shiguihuaziranziyuanweiyinshiye1523.DYNASTY",
+      "shiguihuaziranziyuanweiyinshiye1523.SUBDYNASTY",
+      "shiguihuaziranziyuanweiyinshiye1523.ADDRESS",
+      "shiguihuaziranziyuanweiyinshiye1523.RANK",
+      "shiguihuaziranziyuanweiyinshiye1523.BATCH",
+      "shiguihuaziranziyuanweiyinshiye1523.PUBTIME",
+      "shiguihuaziranziyuanweiyinshiye1523.USERS",
+      "shiguihuaziranziyuanweiyinshiye1523.PURPOSE",
+      "shiguihuaziranziyuanweiyinshiye1523.OWNERSHIP",
+      "shiguihuaziranziyuanweiyinshiye1523.STATEEVALU",
+      "shiguihuaziranziyuanweiyinshiye1523.SINGLERELI",
+      "shiguihuaziranziyuanweiyinshiye1523.PROTECTION",
+      "shiguihuaziranziyuanweiyinshiye1523.ATTACHEDRE",
+      "shiguihuaziranziyuanweiyinshiye1523.RELATEDPEO",
+      "shiguihuaziranziyuanweiyinshiye1523.RELATEDEVE",
+      "shiguihuaziranziyuanweiyinshiye1523.PUBNAME",
+      "shiguihuaziranziyuanweiyinshiye1523.SOURCE",
+      "shiguihuaziranziyuanweiyinshiye1523.EDITOR",
+      "shiguihuaziranziyuanweiyinshiye1523.ISREDUNDAN",
+      "shiguihuaziranziyuanweiyinshiye1523.THEME"
+    ],
+    "shunyiquxingjifandian1276": [
+      "shunyiquxingjifandian1276.顺义区星级饭店",
+      "shunyiquxingjifandian1276.Unnamed: 1",
+      "shunyiquxingjifandian1276.Unnamed: 2",
+      "shunyiquxingjifandian1276.Unnamed: 3"
+    ]
+  }
+}

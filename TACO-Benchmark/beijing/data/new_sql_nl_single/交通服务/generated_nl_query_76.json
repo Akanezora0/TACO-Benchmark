@@ -1,0 +1,20 @@
+{
+  "sql": "SELECT \"shijiaotongweichaoxianchaozaihuochexiezaicha\"ng\"站名称\", \"shijiaotongweichaoxianchaozaihuochexiezaicha\"ng\"地址\" FROM \"shijiaotongweichaoxianchaozaihuochexiezaicha\"nddi3663 WHERE \"shijiaotongweichaoxianchaozaihuochexiezaicha\"ng\"行政区划代码\" = '指定代码';",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从指定表中查询特定行政区划代码对应的站点名称和地址信息。\n\n- **详细描述**：\n  - **表名**：`\"shijiaotongweichaoxianchaozaihuochexiezaicha\"nddi3663`（可能是一个拼写错误或编码错误的表名，实际表名可能是“轨道交通站点信息”或类似名称）。\n  - **查询列**：\n    - `\"shijiaotongweichaoxianchaozaihuochexiezaicha\"ng\"站名称\"`（站点名称）\n    - `\"shijiaotongweichaoxianchaozaihuochexiezaicha\"ng\"地址\"`（站点地址）\n  - **条件**：\n    - `\"shijiaotongweichaoxianchaozaihuochexiezaicha\"ng\"行政区划代码\" = '指定代码'`（筛选出行政区划代码等于“指定代码”的记录）。\n\n- **业务场景**：\n  - 该查询可能用于城市轨道交通或公共交通信息系统中，用于获取特定行政区划内所有站点的名称和地址信息。\n  - 可能的业务场景包括：\n    - 为乘客提供特定行政区划内的站点信息。\n    - 用于站点管理或规划，例如统计某个行政区内的站点分布情况。\n    - 结合其他数据（如客流量、站点设施等）进行进一步分析。\n\n- **用户描述**：\n  - 用户可能是交通管理部门的工作人员或系统开发者，需要获取特定行政区划内的站点信息。\n  - 用户可能遇到的实际问题或需求包括：\n    - 需要快速查询某个行政区内的所有站点名称和地址，以便进行站点管理或规划。\n    - 为乘客提供准确的站点信息，例如在网站或APP上显示某个行政区内的站点列表。\n    - 结合其他数据（如客流量、站点设施等）进行进一步分析，例如评估某个行政区内的交通便利性。",
+  "natural_language_query": "市民反映，最近在使用交通查询APP时发现，想查看朝阳区所有的地铁站信息，但是系统显示不太准确。自己住在朝阳区望京这边，经常需要查询附近的地铁站位置，但APP上只能看到部分站点，不知道是不是系统有问题。特别是14号线和15号线沿线站点，有时候查不到完整信息，给日常出行带来很多不便。希望能帮忙核实一下朝阳区范围内到底有哪些地铁站，包括站名和具体位置都要，这样坐地铁换乘的时候能更方便规划路线。来电反映地铁站点信息不全的问题。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ WHERE _ = _ ;",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663": [
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.行政区划代码",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.站点名称",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.联系电话",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.地址"
+    ],
+    "huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829": [
+      "huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829.по\u0011Ю║╠\u001aА",
+      "huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829.\u0001\u0001"
+    ]
+  }
+}

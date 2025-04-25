@@ -1,0 +1,34 @@
+{
+  "sql": "SELECT DISTINCT xichengquxichengquditiezhanmingdan2482.\"别名\" AS 别名, shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.\"服务机构名称\" AS 服务机构名称, xichengquxichengquditiezhanmingdan2482.\"序号\" = shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.\"序号\" = 1 AND xichengquxichengquditiezhanmingdan2482.\"服务机构名称\" = shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.\"服务机构名称\" = 1 AND xichengquxichengquditiezhanmingdan2482.\"地址\" = shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.\"地址\" = 1 AS 合并条件, xichengquxichengquditiezhanmingdan2482.\"序号\" AS 序号 FROM xichengquxichengquditiezhanmingdan2482, shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678 WHERE xichengquxichengquditiezhanmingdan2482.\"序号\" = shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.\"序号\" ORDER BY xichengquxichengquditiezhanmingdan2482.\"序号\" ASC",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从两个表中查询并合并信息，获取西城区地铁站名单和交通违规处理机构的相关信息，并按照序号排序。\n\n- **详细描述**：\n  - **涉及的表**：\n    - `xichengquxichengquditiezhanmingdan2482`：西城区地铁站名单表，包含地铁站的别名、序号、服务机构名称、地址等信息。\n    - `shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678`：交通违规处理机构信息表，包含服务机构名称、序号等信息。\n  - **涉及的列**：\n    - `xichengquxichengquditiezhanmingdan2482.\"别名\"`：地铁站的别名。\n    - `shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.\"服务机构名称\"`：交通违规处理机构的名称。\n    - `xichengquxichengquditiezhanmingdan2482.\"序号\"` 和 `shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.\"序号\"`：用于关联两个表的序号。\n    - `xichengquxichengquditiezhanmingdan2482.\"地址\"`：地铁站的地址。\n  - **条件**：\n    - 两个表的序号必须相等（`xichengquxichengquditiezhanmingdan2482.\"序号\" = shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.\"序号\"`）。\n    - 合并条件（`xichengquxichengquditiezhanmingdan2482.\"序号\" = shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.\"序号\" = 1 AND xichengquxichengquditiezhanmingdan2482.\"服务机构名称\" = shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.\"服务机构名称\" = 1 AND xichengquxichengquditiezhanmingdan2482.\"地址\" = shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.\"地址\" = 1`）似乎是一个逻辑表达式，但语法上存在问题，可能是笔误或逻辑错误。\n  - **排序**：结果按照地铁站名单表中的序号升序排列（`ORDER BY xichengquxichengquditiezhanmingdan2482.\"序号\" ASC`）。\n\n- **业务场景**：\n  - 该查询可能用于交通管理部门或市民服务系统，目的是将地铁站信息与附近的交通违规处理机构信息关联起来，方便市民查询或管理部门进行数据分析。\n  - 例如，市民可能想在地铁站附近找到交通违规处理机构，或者管理部门需要统计每个地铁站附近的处理机构数量。\n\n- **用户描述**：\n  - 市民可能遇到的实际问题：我需要在地铁站附近处理交通违规，但不知道最近的交通违规处理机构在哪里。\n  - 管理部门的需求：我们需要了解每个地铁站附近的交通违规处理机构分布情况，以便优化资源配置或提供更好的市民服务。",
+  "natural_language_query": "市民反映，最近在西城区地铁站附近收到了一张交通罚单，想查询一下附近哪里可以处理违章。比如平安里地铁站或者西单地铁站周围有没有交通执法站？听说有些地铁站旁边就有处理点，但不太确定具体位置。能不能帮忙查查西城区各个地铁站附近的交通违章处理点都在哪儿？最好能按地铁站的顺序列出来，这样方便查找。上次去新街口那边办事，好像看到有个处理点但记不清具体位置了，现在急需处理违章又怕跑错地方。",
+  "results": 0,
+  "sql skeleton": "select distinct _ as _ ,_ as _ ,_ (_ in _ ._ ) = _ (_ in _ ._ ) = _ (_ in _ ._ ) = _ (_ in _ ._ ) = _ as _ ,_ ._ as _ from _ ,_ where _ ._ = _ ._ and _ = (select _ from _ where _ = _ ) order by _ ._",
+  "database": "交通服务",
+  "tables": {
+    "xichengquxichengquditiezhanmingdan2482": [
+      "xichengquxichengquditiezhanmingdan2482.ID",
+      "xichengquxichengquditiezhanmingdan2482.X",
+      "xichengquxichengquditiezhanmingdan2482.Y",
+      "xichengquxichengquditiezhanmingdan2482.SJXZQHMC",
+      "xichengquxichengquditiezhanmingdan2482.QXJXZQHMC",
+      "xichengquxichengquditiezhanmingdan2482.SJXZQHDM",
+      "xichengquxichengquditiezhanmingdan2482.QXJXZQHDM",
+      "xichengquxichengquditiezhanmingdan2482.POISJLY",
+      "xichengquxichengquditiezhanmingdan2482.RHBZDZ",
+      "xichengquxichengquditiezhanmingdan2482.CODE",
+      "xichengquxichengquditiezhanmingdan2482.CODEMC",
+      "xichengquxichengquditiezhanmingdan2482.GXSJ",
+      "xichengquxichengquditiezhanmingdan2482.POIMC",
+      "xichengquxichengquditiezhanmingdan2482.POIDZ",
+      "xichengquxichengquditiezhanmingdan2482.别名",
+      "xichengquxichengquditiezhanmingdan2482.POIFLMC",
+      "xichengquxichengquditiezhanmingdan2482.TEL"
+    ],
+    "shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678": [
+      "shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.序号",
+      "shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.服务机构名称",
+      "shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.地址"
+    ]
+  }
+}

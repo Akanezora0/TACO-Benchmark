@@ -1,0 +1,1575 @@
+{
+  "tables": [
+    {
+      "table_name": "sga_phase_2_assessed_reaches",
+      "table_comment": "sga_phase_2_assessed_reaches",
+      "table_description": "",
+      "columns": [
+        {
+          "column_name": "SGAT_ID",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "ProjectName",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "URLPage1",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "URLPage2",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "ReportList",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "FinalA",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "FinalB",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "FinalC",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "CorridorPlanA",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "CorridorPlanB",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "CorridorPlanC",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "RID",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "SID",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "OBJECTID",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "RchID",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "SegID",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "ProjectID",
+          "data_type": "INTEGER"
+        }
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    },
+    {
+      "table_name": "outdoor_recreation_sites_inventory",
+      "table_comment": "outdoor_recreation_sites_inventory",
+      "table_description": "",
+      "columns": [
+        {
+          "column_name": "X",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Y",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "OBJECTID",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "MAP",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "MAP_NUMBER",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "SITE_NAME",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "PUBLIC_PRI",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "BOATING_MA",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "CAMPING",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "FIELD_SPOR",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "COURT_SPOR",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "GOLF",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "SWIMMING",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "TRAIL",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "PICNIC_PLA",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "SKIING",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "FIPS_CODE",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "DATE_",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "ALT_NAME",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "S_ADDRESS",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "S_TOWN",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "S_PHONE",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "CONTACT",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "ORGANIZ",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "CO_ADDRESS",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "CO_TOWN",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "CO_STATE",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "CO_ZIP",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "CO_PHONE",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "CO_FAX",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "OPERATOR",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "A_ARCHTARG",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "B_BASESOFT",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "C_BICYCL",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "D_BOATMTR",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "E_BOATNMTR",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "F_CAMP",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "G_FISH",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "H_FTSOCLAC",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "I_GOLF",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "J_HIKING",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "K_HISTIMP",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "L_HORSRID",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "M_HUNT",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "N_ICESKAT",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "O_INSKAT",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "P_MTRCYL",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Q_MTBIKE",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "R_NATATTR",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "S_NATOBSER",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "T_ORGEVENT",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "U_PICNIC",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "V_SKIDOWN",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "W_SKICROSS",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "X_SKINSCUB",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Y_SLIDE",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Z_SNOWMOB",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "AA_SNOWSHO",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "AB_SWIMPOO",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "AC_SWIMLAK",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "AD_SWIMRIV",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "AE_TENNIS",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "AF_VOLLEY",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "AG_WALKJOG",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "AH_O1_YN",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "AH_OTHR1",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "AI_O2_YN",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "AI_OTHR2",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "ENTERPRISE",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "ENT_OTHR",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "ACREAGE",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "N_PARKSUM",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "N_PARKWIN",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "Q_WATACC",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "WATER_NM",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Q_AMUSE",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Q_NATRCENT",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "N_CARLAUND",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "N_PAVERAMP",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "N_GRAVRAMP",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "N_BOATSLIP",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "N_MOORING",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "N_DRYDOCK",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "Q_TRANSIEN",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Q_PUMPING",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Q_BOATRENT",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "N_TENTS",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "N_SHELTER",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "N_WINCABIN",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "N_VEHICLE",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "Q_SEWERAGE",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "N_ELECTRY",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "N_WATER",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "N_BOTH",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "Q_GROUP",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Q_PRIM",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Q_WINCAMP",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "TOTALFLDS",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "Q_BASEB",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Q_SOFTB",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Q_LITLEA",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Q_SOCCR",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Q_FOOTB",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "OTHFLD",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "TOTALCRTS",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "Q_TENNIS",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Q_BASKET",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Q_VOLLEY",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "OTHCRTS",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Q_PICNIC",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Q_PICSHEL",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "PLYGND",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "N_REGHOLES",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "N_PAR3HOLE",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "Q_DRIVING",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Q_MINATURE",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "F_BEACH",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "N_OUTPOOLS",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "SKITYPE",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "N_DOWNHILL",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "N_LIFTS",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "Q_SNOWMAKE",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "N_XCSKI",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "M_TRLTOTAL",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Q_HIKING",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Q_BIKING",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "MOUNTBIK",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Q_ATV",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Q_SNOWMOBL",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Q_XSKI",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Q_HORSEBK",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "CNTYCODE",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "NAME",
+          "data_type": "TEXT"
+        }
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    },
+    {
+      "table_name": "vermont_biophysical_regions",
+      "table_comment": "vermont_biophysical_regions",
+      "table_description": "",
+      "columns": [
+        {
+          "column_name": "OBJECTID",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "ACRES",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "NAME",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "SUBSEC_ID",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "BPR_NUM",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "BPR_NUMID",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "SHAPESTArea",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "SHAPESTLength",
+          "data_type": "REAL"
+        }
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    },
+    {
+      "table_name": "lakepond_wbids_and_wbid_segments",
+      "table_comment": "lakepond_wbids_and_wbid_segments",
+      "table_description": "",
+      "columns": [
+        {
+          "column_name": "OBJECTID",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "Source",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "WBID",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "LAKEID",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "EventType",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "GISAcres",
+          "data_type": "REAL"
+        }
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    },
+    {
+      "table_name": "dfirm_floodways",
+      "table_comment": "dfirm_floodways",
+      "table_description": "",
+      "columns": [
+        {
+          "column_name": "OBJECTID",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "DFIRM_ID",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "FLD_AR_ID",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "FLD_ZONE",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "FLOODWAY",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "SFHA_TF",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "AR_REVERT",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "SOURCE_CIT",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "HYDRO_ID",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "CST_MDL_ID",
+          "data_type": "REAL"
+        }
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    },
+    {
+      "table_name": "waste_water_facilities",
+      "table_comment": "waste_water_facilities",
+      "table_description": "",
+      "columns": [
+        {
+          "column_name": "X",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Y",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "FacilityName",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "FacilityID",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "WWInventoryURL",
+          "data_type": "TEXT"
+        }
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    },
+    {
+      "table_name": "landslides",
+      "table_comment": "landslides",
+      "table_description": "",
+      "columns": [
+        {
+          "column_name": "X",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Y",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "OBJECTID",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "FIELD_VISIT",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "VISIT_DATE",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "OBSERVER",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "ORGANIZATION",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "STYLE_FAIL",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "LS_TYPE1",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "LS_TYPE2",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "MATERIAL",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "ACTIVITY",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "FAIL_DATE",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "WIDTH_M",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "DEPTH_M",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "LENGTH_M",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "HEIGHT_M",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "ELEV_CROWN",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "ASPECT",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "SLIDE_ANGLE",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "SLOPE_ANGLE",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "AREA_ESTIMATE",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "TOE_CONDITION",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "BR_ON_SLOPE",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "BR_CONTROL",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "TALUS",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "SPRINGS",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "SEEPS",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "PIPING",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "OUTSIDE_ME",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "HEADCUTS",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "SURF_OBSERV",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "CAUSE1",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "CAUSE2",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "COMMENTS",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "SOURCE",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "SOURCEPUB_DATE",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "BANK_POSITION",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "REMEDIATED",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "TOWN",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "GlobalID",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Creator",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "CreateDate",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Editor",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "EditDate",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "VERIFIED",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "RPTDATE_GEO",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "LS_DAY_GEO",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "LS_MONTH_GEO",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "LS_YEAR_GEO",
+          "data_type": "REAL"
+        }
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    },
+    {
+      "table_name": "public_water_sources",
+      "table_comment": "public_water_sources",
+      "table_description": "",
+      "columns": [
+        {
+          "column_name": "X",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Y",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "TINWSF_IS_NUMBER",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "WSID",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "SystemName",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "SystemType",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "SystemStatus",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "SystemPopulation",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "FacilityName",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "FacilityID",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "FacilityStatus",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Availability",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "WaterType",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "ConstructedDate",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "PermittedYield",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "WellType",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Diameter_in",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "WellDepth",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "CasingDepth",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "StaticWaterLevel",
+          "data_type": "TEXT"
+        }
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    },
+    {
+      "table_name": "invasive_species",
+      "table_comment": "invasive_species",
+      "table_description": "",
+      "columns": [
+        {
+          "column_name": "X",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Y",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "SiteName",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "ObservationID",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "InvasiveName",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "ObservationDate",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Observer",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "SurveyType",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Latitude",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Longitude",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Town",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "GrossArea",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "InfestedArea",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "PlantDescription",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "DistributionName",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "AssessmentDate",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "TreatmentDate",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "TreatmentEffectiveness",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "TreatmentType",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "TreatmentPerson",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "TreatmentAssessmentDate",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Assessor",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "TreatmentAssessmentNotes",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "TreatmentHours",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "ChemicalName",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "ChemicalConsentration",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "ChemicalOunces",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "ApplicationMethod",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "CertifiedApplicator",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "EPARegistationNumber",
+          "data_type": "TEXT"
+        }
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    },
+    {
+      "table_name": "salt_storage_record_table",
+      "table_comment": "salt_storage_record_table",
+      "table_description": "",
+      "columns": [
+        {
+          "column_name": "OBJECTID",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "fulcrum_id",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "fulcrum_parent_id",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "fulcrum_record_id",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "version",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "geometry",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "created_at",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "updated_at",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "created_by",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "updated_by",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "address_sub_thoroughfare",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "address_thoroughfare",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "address_suite",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "address_locality",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "address_sub_admin_area",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "address_admin_area",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "address_postal_code",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "address_country",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "address_full",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "material_type",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "material_type_other",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "storage_length_years",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "storage_length_years_range",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "material_covered",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "coverage_method",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "material_on_pad",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "pad_type",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "pad_type_other",
+          "data_type": "TEXT"
+        }
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    },
+    {
+      "table_name": "sand_and_gravel_deposits",
+      "table_comment": "sand_and_gravel_deposits",
+      "table_description": "",
+      "columns": [
+        {
+          "column_name": "OBJECTID",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "AG_TYPE",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "GlobalID",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "SHAPEarea",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "SHAPElen",
+          "data_type": "REAL"
+        }
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    },
+    {
+      "table_name": "wildlife_management_units",
+      "table_comment": "wildlife_management_units",
+      "table_description": "",
+      "columns": [
+        {
+          "column_name": "OBJECTID",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "ABNAME",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "AGENCY",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "DEPT",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "DIV",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "BOUNDARY",
+          "data_type": "TEXT"
+        }
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    },
+    {
+      "table_name": "wetland_ecologist_districts",
+      "table_comment": "wetland_ecologist_districts",
+      "table_description": "",
+      "columns": [
+        {
+          "column_name": "OBJECTID",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "ABNAME",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "AGENCY",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "DEPT",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "DIV",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "FirstName",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "LastName",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Email",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Phone",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Address",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Office",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Town",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "BOUNDARY",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "PROGMANAGER",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "PROGMANAGEREMAIL",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "PROGMANAGERPHONE",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "BACKUPCONTACT",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "BACKUPCONTACTEMAIL",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "BACKUPCONTACTPHONE",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "PROGRAMEMAIL",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "PROGRAMPHONE",
+          "data_type": "REAL"
+        }
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    },
+    {
+      "table_name": "landfills",
+      "table_comment": "landfills",
+      "table_description": "",
+      "columns": [
+        {
+          "column_name": "X",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Y",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "OBJECTID",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "PSINUM",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "SWFACID",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "SITENAME",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "LOCCONF",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "DATE_FIRST",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "DATE_LAST",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "ACRES",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "STATUS",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "WQMONITORING",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "GASCOLLECTION",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "TOWNNAME",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "LATITUDE",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "LONGITUDE",
+          "data_type": "REAL"
+        }
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    },
+    {
+      "table_name": "river_main_stem_waterbodies_wbid",
+      "table_comment": "river_main_stem_waterbodies_wbid",
+      "table_description": "",
+      "columns": [
+        {
+          "column_name": "OBJECTID",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "WBID",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "WBNAME",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "WBDESC",
+          "data_type": "TEXT"
+        }
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    }
+  ]
+}

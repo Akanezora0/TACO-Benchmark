@@ -1,0 +1,23 @@
+{
+  "sql": "SELECT sand_and_gravel_deposits.OBJECTID, sand_and_gravel_deposits.AG_TYPE FROM sand_and_gravel_deposits INNER JOIN river_main_stem_waterbodies_wbid ON sand_and_gravel_deposits.OBJECTID = river_main_stem_waterbodies_wbid.OBJECTID WHERE river_main_stem_waterbodies_wbid.WBID = '_';",
+  "problem_description": "### Query intent:\nThe SQL statement aims to retrieve specific information from two related databases (tables) related to sand and gravel deposits and river main stem waterbodies.\n\n### Detailed description:\n1. **Tables Involved**: The query involves two tables - `sand_and_gravel_deposits` and `river_main_stem_waterbodies_wbid`. The former likely contains data about sand and gravel deposits, while the latter might contain data about river main stem waterbodies with a unique identifier (`WBID`) and an associated object identifier (`OBJECTID`).\n\n2. **Columns Selected**: The query selects two columns: `OBJECTID` and `AG_TYPE` from the `sand_and_gravel_deposits` table. `OBJECTID` is presumably a unique identifier for each deposit, and `AG_TYPE` might represent the type of aggregate material present.\n\n3. **Join Condition**: The `INNER JOIN` clause links these two tables based on their common column `OBJECTID`. This means the query will only return rows where there's a match between the `OBJECTID` in both tables.\n\n4. **Filtering Condition**: The `WHERE` clause filters the results further by specifying that the `WBID` from the `river_main_stem_waterbodies_wbid` table must be `_`. This condition could be used to focus on a particular river segment or basin where the sand and gravel deposits are located.\n\n### Business Scenario:\nThis query is typically used in environmental management, geological surveys, or resource exploration projects. It allows professionals to analyze the distribution and characteristics of sand and gravel deposits within a specific river system or basin. For example, it could help in assessing potential areas for mining, understanding sediment dynamics, or planning infrastructure projects that require sand and gravel as a construction material.\n\n### User Description:\nUsers might face the need to identify suitable locations for extracting sand and gravel, assess the environmental impact of such extraction, or plan for sustainable resource use. By querying these specific attributes (like `OBJECTID` and `AG_TYPE`) linked to a particular river system, users can make informed decisions about where to conduct further investigations or extract resources without causing environmental harm.",
+  "natural_language_query": "As a concerned professional working in environmental management, I often need to analyze the spatial distribution and types of sand and gravel deposits within our local river systems. Today, I'm particularly interested in identifying any sand and gravel deposits that are situated along a specific river main stem identified by its unique identifier, which happens to be \"_\". To achieve this, I am conducting a database query to retrieve relevant information.\n\nMy SQL query looks like this:\n\n```sql\nSELECT sand_and_gravel_deposits.OBJECTID, sand_and_gravel_deposits.AG_TYPE \nFROM sand_and_gravel_deposits \nINNER JOIN river_main_stem_waterbodies_wbid ON sand_and_gravel_deposits.OBJECTID = river_main_stem_waterbodies_wbid.OBJECTID \nWHERE river_main_stem_waterbodies_wbid.WBID = '_';\n```\n\nBy running this query, I aim to gather detailed information about the sand and gravel deposits, specifically their unique identifiers and the type of aggregate materials they contain. This data will be crucial for my team to understand the potential for sustainable resource extraction along the targeted river segment, ensuring minimal environmental impact while meeting the demands for construction materials in our area.",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ ;",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "sand_and_gravel_deposits": [
+      "sand_and_gravel_deposits.OBJECTID",
+      "sand_and_gravel_deposits.AG_TYPE",
+      "sand_and_gravel_deposits.GlobalID",
+      "sand_and_gravel_deposits.SHAPEarea",
+      "sand_and_gravel_deposits.SHAPElen"
+    ],
+    "river_main_stem_waterbodies_wbid": [
+      "river_main_stem_waterbodies_wbid.OBJECTID",
+      "river_main_stem_waterbodies_wbid.WBID",
+      "river_main_stem_waterbodies_wbid.WBNAME",
+      "river_main_stem_waterbodies_wbid.WBDESC"
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "sql": "SELECT \n    pingguquzhucegongyuanxinxi780.名称, \n    pingguquzhucegongyuanxinxi780.区, \n    pingguquzhucegongyuanxinxi780.街道, \n    pingguquzhucegongyuanxinxi780.地址, \n    pingguquzhucegongyuanxinxi780.咨询电话 \nFROM \n    pingguquzhucegongyuanxinxi780 \nJOIN \n    shiguihuaziranziyuanweiyuanlin1526 \nON \n    pingguquzhucegongyuanxinxi780.序号 = shiguihuaziranziyuanweiyuanlin1526.HID \nWHERE \n    shiguihuaziranziyuanweiyuanlin1526.HNAME = '特定名称' AND \n    shiguihuaziranziyuanweiyuanlin1526.COUNTYNAME = '特定区';",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是查询北京市平谷区注册公园的信息，这些公园与特定名称和特定区的规划自然资源委员会（园林）相关联。\n\n- **详细描述**：\n  - **涉及的表**：\n    - `pingguquzhucegongyuanxinxi780`：存储平谷区注册公园的基本信息，包括名称、区、街道、地址和咨询电话等。\n    - `shiguihuaziranziyuanweiyuanlin1526`：存储规划自然资源委员会（园林）的相关信息，包括 HID（可能是公园的唯一标识符）、HNAME（名称）和 COUNTYNAME（区名）等。\n  - **涉及的列**：\n    - `pingguquzhucegongyuanxinxi780` 表中的 `名称`、`区`、`街道`、`地址`、`咨询电话` 和 `序号`。\n    - `shiguihuaziranziyuanweiyuanlin1526` 表中的 `HID`、`HNAME` 和 `COUNTYNAME`。\n  - **条件**：\n    - `shiguihuaziranziyuanweiyuanlin1526.HNAME = '特定名称'`：筛选出规划自然资源委员会（园林）名称为“特定名称”的记录。\n    - `shiguihuaziranziyuanweiyuanlin1526.COUNTYNAME = '特定区'`：筛选出规划自然资源委员会（园林）区名为“特定区”的记录。\n    - `pingguquzhucegongyuanxinxi780.序号 = shiguihuaziranziyuanweiyuanlin1526.HID`：通过序号和 HID 关联两个表，确保查询的公园信息与规划自然资源委员会（园林）的记录匹配。\n\n- **业务场景**：\n  - 该查询可以用于政府或相关管理部门对平谷区注册公园的管理和监控。例如，可能需要查找特定名称和特定区的规划自然资源委员会（园林）所管理的公园信息，以便进行资源分配、维护或公众服务。\n  - 也可以用于公众查询，例如市民想了解特定区域的公园信息及其联系方式。\n\n- **用户描述**：\n  - 政府工作人员可能需要查找特定规划自然资源委员会（园林）所管理的公园信息，以便进行资源调配或维护工作。\n  - 市民或游客可能想了解特定区域的公园信息，包括地址和咨询电话，以便规划出行或获取更多信息。",
+  "natural_language_query": "市民反映，想了解北京市平谷区一些公园的具体情况。听说这些公园是和区里某个叫\"特定名称\"的园林管理部门有关的，但不太确定具体是哪个部门管。想查查这些公园都在哪些街道，具体地址在哪里，有没有联系电话可以咨询。之前去平谷玩的时候看到有些公园维护得不太好，想知道这些是不是归这个部门管的，能不能反映一下改善公园设施的问题。来电主要想咨询平谷区这些注册公园的管理信息和联系方式。",
+  "results": 0,
+  "sql skeleton": "SELECT _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ FROM _ JOIN _ ON _ ._ = _ ._ WHERE _ ._ = _ AND _ ._ = _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "pingguquzhucegongyuanxinxi780": [
+      "pingguquzhucegongyuanxinxi780.序号",
+      "pingguquzhucegongyuanxinxi780.名称",
+      "pingguquzhucegongyuanxinxi780.区",
+      "pingguquzhucegongyuanxinxi780.街道",
+      "pingguquzhucegongyuanxinxi780.地址",
+      "pingguquzhucegongyuanxinxi780.咨询电话"
+    ],
+    "shiguihuaziranziyuanweiyuanlin1526": [
+      "shiguihuaziranziyuanweiyuanlin1526.HID",
+      "shiguihuaziranziyuanweiyuanlin1526.FATHERID",
+      "shiguihuaziranziyuanweiyuanlin1526.HNAME",
+      "shiguihuaziranziyuanweiyuanlin1526.OTHERNAME",
+      "shiguihuaziranziyuanweiyuanlin1526.CATEGORY",
+      "shiguihuaziranziyuanweiyuanlin1526.SUBCATEGOR",
+      "shiguihuaziranziyuanweiyuanlin1526.COUNTYNAME",
+      "shiguihuaziranziyuanweiyuanlin1526.STREETNAME",
+      "shiguihuaziranziyuanweiyuanlin1526.DYNASTY",
+      "shiguihuaziranziyuanweiyuanlin1526.SUBDYNASTY",
+      "shiguihuaziranziyuanweiyuanlin1526.ADDRESS",
+      "shiguihuaziranziyuanweiyuanlin1526.RANK",
+      "shiguihuaziranziyuanweiyuanlin1526.BATCH",
+      "shiguihuaziranziyuanweiyuanlin1526.PUBTIME",
+      "shiguihuaziranziyuanweiyuanlin1526.USERS",
+      "shiguihuaziranziyuanweiyuanlin1526.PURPOSE",
+      "shiguihuaziranziyuanweiyuanlin1526.OWNERSHIP",
+      "shiguihuaziranziyuanweiyuanlin1526.STATEEVALU",
+      "shiguihuaziranziyuanweiyuanlin1526.SINGLERELI",
+      "shiguihuaziranziyuanweiyuanlin1526.PROTECTION",
+      "shiguihuaziranziyuanweiyuanlin1526.ATTACHEDRE",
+      "shiguihuaziranziyuanweiyuanlin1526.RELATEDPEO",
+      "shiguihuaziranziyuanweiyuanlin1526.RELATEDEVE",
+      "shiguihuaziranziyuanweiyuanlin1526.PUBNAME",
+      "shiguihuaziranziyuanweiyuanlin1526.SOURCE",
+      "shiguihuaziranziyuanweiyuanlin1526.EDITOR",
+      "shiguihuaziranziyuanweiyuanlin1526.ISREDUNDAN",
+      "shiguihuaziranziyuanweiyuanlin1526.THEME"
+    ]
+  }
+}

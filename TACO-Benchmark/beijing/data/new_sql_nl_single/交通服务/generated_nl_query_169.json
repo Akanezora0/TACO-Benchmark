@@ -1,0 +1,18 @@
+{
+  "sql": "SELECT \"shijiaotongweichuzuyehujibenxinxi3664.经营业户名称\" AS 列1, \"shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.服务机构名称\" AS 列2, \"shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.序号\" AS 列3, \"shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.地址\" AS 列4 FROM shijiaotongweichuzuyehujibenxinxi3664 INNER JOIN shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678 ON shijiaotongweichuzuyehujibenxinxi3664.经营业户名称 = shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.服务机构名称 WHERE \"shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.序号\" = '指定序号'",
+  "problem_description": "- **查询意图**：  \n  该 SQL 语句的目的是从两个表中查询并关联数据，获取特定序号下的经营业户名称、服务机构名称、序号和地址信息。\n\n- **详细描述**：  \n  - **涉及的表**：  \n    1. `shijiaotongweichuzuyehujibenxinxi3664`（可能为“市交通委出租业户基本信息”表）：存储出租业户的基本信息。  \n    2. `shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678`（可能为“市交通委执法案件处理机构信息”表）：存储执法案件处理机构的相关信息。  \n\n  - **涉及的列**：  \n    1. `shijiaotongweichuzuyehujibenxinxi3664.经营业户名称`：出租业户的名称。  \n    2. `shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.服务机构名称`：执法案件处理机构的名称。  \n    3. `shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.序号`：执法案件处理机构的序号。  \n    4. `shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.地址`：执法案件处理机构的地址。  \n\n  - **关联条件**：  \n    通过 `INNER JOIN` 将两个表关联，关联条件是 `shijiaotongweichuzuyehujibenxinxi3664.经营业户名称 = shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.服务机构名称`，即出租业户名称与执法案件处理机构名称相同。  \n\n  - **筛选条件**：  \n    `WHERE \"shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.序号\" = '指定序号'`，仅查询序号为“指定序号”的记录。  \n\n- **业务场景**：  \n  该查询可能用于交通管理部门对出租业户和执法案件处理机构的信息进行关联分析。例如：  \n  - 检查某个特定序号下的执法案件处理机构是否与某个出租业户相关联。  \n  - 获取特定序号下执法案件处理机构的详细信息（如名称、地址）及其对应的出租业户名称。  \n\n- **用户描述**：  \n  用户可能是交通管理部门的工作人员，需要解决以下问题或需求：  \n  1. 确认某个执法案件处理机构（如序号为“指定序号”）是否与某个出租业户有业务关联。  \n  2. 获取特定执法案件处理机构的详细信息，并了解其对应的出租业户名称，以便进行后续的管理或调查工作。  \n  3. 在执法或监管过程中，快速查询特定序号下机构与业户的关联关系，确保信息的准确性和一致性。",
+  "natural_language_query": "市民反映，最近在处理交通执法案件时遇到一个问题，编号为\"指定序号\"的这个执法单位，我们想查一下它是不是跟某个出租车公司有业务往来关系。我是交通局的工作人员，现在需要核实这个执法单位的具体办公地址，还有它对应的出租车公司名称。因为最近有群众投诉说这个编号的执法单位和某家出租车公司可能存在利益关系，我们想查清楚到底是怎么回事。能不能帮忙查一下这个编号对应的执法单位信息，以及它关联的出租车公司名称？主要是想确认一下他们之间是否存在业务关联，好做进一步处理。",
+  "results": 0,
+  "sql skeleton": "select _ as _ ,_ as _ ,_ as _ ,_ as _ ,_ as _ from _ where _ = _",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweichuzuyehujibenxinxi3664": [
+      "shijiaotongweichuzuyehujibenxinxi3664.经营业户名称"
+    ],
+    "shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678": [
+      "shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.序号",
+      "shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.服务机构名称",
+      "shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.地址"
+    ]
+  }
+}

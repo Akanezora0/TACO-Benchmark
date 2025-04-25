@@ -1,0 +1,26 @@
+{
+  "sql": "SELECT \n    \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076\".\"专用标识牌号\",\n    \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076\".\"专柜名称\",\n    \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076\".\"地址\",\n    \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\".\"JYZMC\",\n    \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\".\"XKZBH\",\n    \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\".\"JYCS\",\n    \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\".\"JYXM\",\n    \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\".\"FZRQ\",\n    \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\".\"YXQZ\",\n    \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\".\"XKZID\",\n    \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\".\"DWMC\",\n    \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\".\"EXCHANGETIME\"\nFROM\n    \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076\"\nJOIN\n    \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\"\nON\n    \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076\".\"地址\" = \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\".\"DWMC\"\nWHERE\n    (\"shiminzuzongjiaowe",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从两个表中联合查询清真食品专柜信息和餐饮服务许可证信息，通过地址或单位名称进行关联，筛选出符合特定条件的记录。\n\n- **详细描述**：\n  - **涉及的表**：\n    1. `shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076`（清真食品专柜数据表）：存储清真食品专柜的相关信息。\n    2. `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374`（餐饮服务许可证信息表）：存储餐饮服务许可证的相关信息。\n  \n  - **查询的列**：\n    - 从清真食品专柜数据表中查询：\n      - `专用标识牌号`：专柜的专用标识牌编号。\n      - `专柜名称`：专柜的名称。\n      - `地址`：专柜的地址。\n    - 从餐饮服务许可证信息表中查询：\n      - `JYZMC`（经营者名称）：许可证的经营者名称。\n      - `XKZBH`（许可证编号）：许可证的编号。\n      - `JYCS`（经营场所）：经营场所信息。\n      - `JYXM`（经营项目）：经营项目信息。\n      - `FZRQ`（发证日期）：许可证的发证日期。\n      - `YXQZ`（有效期至）：许可证的有效期截止日期。\n      - `XKZID`（许可证ID）：许可证的唯一标识。\n      - `DWMC`（单位名称）：许可证对应的单位名称。\n      - `EXCHANGETIME`（交换时间）：数据交换的时间。\n\n  - **关联条件**：\n    - 通过 `shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076` 表中的 `地址` 列与 `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374` 表中的 `DWMC`（单位名称）列进行关联。\n\n  - **筛选条件**：\n    - 由于 SQL 语句不完整，WHERE 子句的条件未完全显示，但可以推测可能是对某些字段进行筛选，例如许可证的有效期、专柜的状态等。\n\n- **业务场景**：\n  - 该查询可能用于监管部门对清真食品专柜的合规性检查，确保专柜的经营者持有有效的餐饮服务许可证，并且许可证信息与专柜信息一致。\n  - 也可以用于市场调研或数据分析，了解清真食品专柜的分布情况及其经营者的许可证状态。\n\n- **用户描述**：\n  - 用户可能是市场监管部门的工作人员，需要核实清真食品专柜是否合法经营，是否有有效的许可证。\n  - 用户可能遇到的问题是某些专柜可能存在无证经营或许可证过期的情况，需要通过查询快速定位这些问题专柜。\n  - 用户的需求是获取专柜及其许可证的详细信息，以便进行后续的合规性检查或执法行动。",
+  "natural_language_query": "市民反映，最近在检查清真食品专柜时发现有些摊位可能没有正规的餐饮许可证，或者许可证已经过期了。比如在牛街附近有几家挂着清真标识的食品摊位，但不确定他们是否有有效的经营许可。希望能帮忙查一下这些专柜的具体信息，包括他们的标识牌号、专柜名称和地址，还有对应的许可证情况，比如经营者名称、许可证编号、有效期这些。特别想了解那些地址和单位名称能对得上的专柜，看看他们是不是都合规经营。最近接到好几起投诉说有些清真食品摊位卫生条件不达标，怀疑可能是无证经营，所以想全面排查一下这个问题。",
+  "results": 0,
+  "sql skeleton": "select _ from _ where _ (_ ,_ ) = _ or _ (_ ,_ ) = _",
+  "database": "餐饮美食",
+  "tables": {
+    "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076": [
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址"
+    ],
+    "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374": [
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYXM",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.FZRQ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.YXQZ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.DWMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.EXCHANGETIME"
+    ]
+  }
+}

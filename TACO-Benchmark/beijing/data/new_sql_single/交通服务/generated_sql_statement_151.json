@@ -1,0 +1,23 @@
+{
+  "sql": "SELECT \"shijiaotongweichengkeyindaojichuxinxi3710.公交线路信息\", \"shijiaotongweichengkeyindaojichuxinxi3710.轨道线路信息\", \"shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.地址\" FROM \"shijiaotongweichengkeyindaojichuxinxi3710\" JOIN \"shijiaotongweichaoxianchaozaihuochexiezaichangdi3663\" ON \"shijiaotongweichengkeyindaojichuxinxi3710.更新时间\" = \"shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.行政区划代码\";",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ ;",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweichengkeyindaojichuxinxi3710": [
+      "shijiaotongweichengkeyindaojichuxinxi3710.序号",
+      "shijiaotongweichengkeyindaojichuxinxi3710.枢纽站信息",
+      "shijiaotongweichengkeyindaojichuxinxi3710.周边交通指南",
+      "shijiaotongweichengkeyindaojichuxinxi3710.公交线路信息",
+      "shijiaotongweichengkeyindaojichuxinxi3710.轨道线路信息",
+      "shijiaotongweichengkeyindaojichuxinxi3710.更新时间",
+      "shijiaotongweichengkeyindaojichuxinxi3710.共享时间 "
+    ],
+    "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663": [
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.行政区划代码",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.站点名称",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.联系电话",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.地址"
+    ]
+  }
+}

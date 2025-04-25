@@ -1,0 +1,7 @@
+{
+  "sql": "SELECT \n    table1.column1, \n    table1.column2, \n    table2.column3, \n    table3.column4, \n    table4.column5 \nFROM \n    table1 \nJOIN \n    table2 ON table1.common_column = table2.common_column \nJOIN \n    table3 ON table2.common_column = table3.common_column \nJOIN \n    table4 ON table3.common_column = table4.common_column \nWHERE \n    table1.column6 = 'value' \n    AND table2.column7 = 'value' \n    AND table3.column8 = 'value' \n    AND (table4.column9 > 10 AND table4.column9 < 20)",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ ,_ ,_ from _ where _ = _ and _ = _ and _ = _ and _ (_ ,_ ) = _",
+  "database": "安全生活",
+  "tables": {}
+}

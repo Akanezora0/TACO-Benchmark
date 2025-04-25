@@ -1,0 +1,16 @@
+{
+  "sql": "SELECT \"shijiaotongweichuzuyehujibenxinxi3664.经营业户名称\", \"shijiaotongweiweixianpinyunshuqiye3674.企业名称\" FROM \"shijiaotongweichuzuyehujibenxinxi3664\" JOIN \"shijiaotongweiweixianpinyunshuqiye3674\" ON \"shijiaotongweichuzuyehujibenxinxi3664.经营业户名称\" = \"shijiaotongweiweixianpinyunshuqiye3674.企业名称\";",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ ;",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweichuzuyehujibenxinxi3664": [
+      "shijiaotongweichuzuyehujibenxinxi3664.经营业户名称"
+    ],
+    "shijiaotongweiweixianpinyunshuqiye3674": [
+      "shijiaotongweiweixianpinyunshuqiye3674.企业名称",
+      "shijiaotongweiweixianpinyunshuqiye3674.所属地区",
+      "shijiaotongweiweixianpinyunshuqiye3674.经营许可证号"
+    ]
+  }
+}

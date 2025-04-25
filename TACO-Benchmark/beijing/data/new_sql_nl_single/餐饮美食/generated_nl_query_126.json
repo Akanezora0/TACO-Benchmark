@@ -1,0 +1,26 @@
+{
+  "sql": "SELECT \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYXM\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.FZRQ\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.YXQZ\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.DWMC\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.EXCHANGETIME\" FROM \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\" - \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076\" WHERE \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号\" = '指定标识牌号';",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从餐饮服务许可证信息表中查询特定标识牌号对应的许可证详细信息，同时排除与民族宗教违规规范化清真食品专柜数据表中相同标识牌号的记录。\n\n- **详细描述**：\n  - **涉及的表**：\n    1. `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374`（市场监督管理局餐饮服务许可证情况信息表）\n    2. `shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076`（民族宗教违规规范化清真食品专柜数据表）\n  \n  - **查询的列**（来自许可证信息表）：\n    - `JYZMC`（经营者名称）\n    - `XKZBH`（许可证编号）\n    - `JYCS`（经营场所）\n    - `JYXM`（经营项目）\n    - `FZRQ`（发证日期）\n    - `YXQZ`（有效期至）\n    - `XKZID`（许可证ID）\n    - `DWMC`（单位名称）\n    - `EXCHANGETIME`（交换时间）\n\n  - **条件**：\n    - 使用集合差操作（`表A - 表B`）获取在许可证表中存在但在清真食品专柜表中不存在的记录\n    - 附加条件：`shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号 = '指定标识牌号'`，限定清真食品专柜表中的特定标识牌号\n\n- **业务场景**：\n  1. **许可证合规检查**：监管部门需要核查餐饮服务许可证信息，确保经营者持有有效许可证\n  2. **清真食品专项检查**：识别未在民族宗教部门备案的清真食品经营者\n  3. **数据交叉验证**：比较不同监管系统的数据一致性，发现可能存在违规的经营者\n\n- **用户描述**：\n  1. 市场监管人员需要定期检查餐饮服务提供者的许可证情况，确保所有经营者都合法合规\n  2. 民族宗教事务管理部门需要核实清真食品专柜的合法性，防止未经认证的经营者使用清真标识\n  3. 可能存在以下实际问题：\n     - 某些餐饮经营者可能未取得清真食品经营许可就擅自使用清真标识\n     - 需要快速识别出许可证系统中存在但未在清真食品专柜备案的经营者\n     - 监管部门需要获取这些经营者的详细信息以便进行后续核查或执法",
+  "natural_language_query": "市民反映，在清真食品专项检查中发现\"老马家牛肉面\"（标识牌号：NX-2023-0587）可能存在违规使用清真标识的情况。我们市场监管部门想核实一下，这家店有没有正规的餐饮服务许可证？特别是想查查那些挂着清真牌子但实际上没在我们民族宗教备案系统里登记的餐馆。能不能帮忙看看这类餐馆的老板名字、许可证号、经营地址这些信息？我们手头有这个店的专用标识牌号，但系统里查不到他们的备案记录，担心是不是无证经营或者违规使用清真标识。来电主要想确认这类餐馆的合法经营资质问题，好进行后续处理。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ ;",
+  "database": "餐饮美食",
+  "tables": {
+    "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374": [
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYXM",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.FZRQ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.YXQZ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.DWMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.EXCHANGETIME"
+    ],
+    "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076": [
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址"
+    ]
+  }
+}

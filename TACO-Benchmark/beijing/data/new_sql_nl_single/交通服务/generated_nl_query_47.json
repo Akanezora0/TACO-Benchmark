@@ -1,0 +1,26 @@
+{
+  "sql": "SELECT \"shijiaotongweichengkeyindaojichuxinxi3710.序号\", \"shijiaotongweichengkeyindaojichuxinxi3710.周边交通指南\", \"shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.企业名称\", \"shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.评定等级\" FROM \"shijiaotongweichengkeyindaojichuxinxi3710\" INNER JOIN \"shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672\" ON \"shijiaotongweichengkeyindaojichuxinxi3710.序号\" = \"shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.序号\";",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从两个表中联合查询数据，获取与城市交通引导基础信息和汽车租赁企业信用评价结果相关的信息。\n\n- **详细描述**：\n  - **涉及的表**：\n    1. `shijiaotongweichengkeyindaojichuxinxi3710`（城市交通引导基础信息表）\n    2. `shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672`（汽车租赁企业信用评价结果数据表）\n  - **涉及的列**：\n    1. `shijiaotongweichengkeyindaojichuxinxi3710.序号`（城市交通引导基础信息的序号）\n    2. `shijiaotongweichengkeyindaojichuxinxi3710.周边交通指南`（城市交通引导基础信息中的周边交通指南）\n    3. `shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.企业名称`（汽车租赁企业的名称）\n    4. `shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.评定等级`（汽车租赁企业的信用评定等级）\n  - **查询条件**：通过 `INNER JOIN` 连接两个表，连接条件是 `shijiaotongweichengkeyindaojichuxinxi3710.序号` 等于 `shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.序号`。\n\n- **业务场景**：\n  - 该查询可以用于城市交通管理部门或汽车租赁服务平台，将城市交通引导基础信息与汽车租赁企业的信用评价结果关联起来。\n  - 通过查询结果，可以了解某个序号对应的周边交通指南以及该序号对应的汽车租赁企业的名称和信用等级。\n  - 这种关联查询可以帮助用户或管理者快速找到特定区域的交通信息和该区域内汽车租赁企业的信用状况。\n\n- **用户描述**：\n  - 用户可能是城市交通管理部门的工作人员，需要了解特定区域的交通引导信息以及该区域内汽车租赁企业的信用状况，以便进行监管或服务优化。\n  - 用户也可能是汽车租赁服务平台的运营人员，需要将交通信息与企业信用评价结果结合起来，为用户提供更全面的服务信息。\n  - 用户还可能是一般消费者，希望通过查询了解某个区域的交通便利性以及该区域内汽车租赁企业的信用等级，从而做出更明智的租赁选择。",
+  "natural_language_query": "市民反映，最近想在朝阳区望京附近租车，但发现有些租车公司评价参差不齐，想了解下这个区域的交通指引和周边靠谱的租车公司情况。听说政府有发布过相关信用评级，能不能帮忙查查望京这一片的交通指南和正规租车企业的信用等级？主要是想找那些评级比较好的公司，免得遇到不靠谱的。另外想问下这些信息是不是最新的，因为上个月好像有家公司被曝光过问题，但不知道现在处理得怎么样了。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ ;",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweichengkeyindaojichuxinxi3710": [
+      "shijiaotongweichengkeyindaojichuxinxi3710.序号",
+      "shijiaotongweichengkeyindaojichuxinxi3710.枢纽站信息",
+      "shijiaotongweichengkeyindaojichuxinxi3710.周边交通指南",
+      "shijiaotongweichengkeyindaojichuxinxi3710.公交线路信息",
+      "shijiaotongweichengkeyindaojichuxinxi3710.轨道线路信息",
+      "shijiaotongweichengkeyindaojichuxinxi3710.更新时间",
+      "shijiaotongweichengkeyindaojichuxinxi3710.共享时间 "
+    ],
+    "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672": [
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.企业名称",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.评定等级",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.所属地区",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.年份",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.统一社会信用代码"
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "sql": "SELECT column1, column2, column3 FROM table1 WHERE column4 IN ('value1', 'value2', 'value3', 'value4', 'value5', 'value6') ORDER BY column7;",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ from _ where _ in (_ ,_ ,_ ,_ ,_ ,_ ) order by _ ;",
+  "database": "安全生活",
+  "tables": {}
+}

@@ -1,0 +1,7 @@
+{
+  "sql": "select A._A_, B._B_, C._C_, D._D_, E._E_, F._F_, G._G_, H._H_, I._I_, J._J_ from A join B on A._ID_ = B._FK_A_ID_ where A._Condition_ = 'value' and B._AnotherCondition_ = 'anotherValue' and C._ThirdCondition_ = 'thirdValue'",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ from _ join _ on _ ._ = _ ._ where _ ._ = _ and _ ._ = _ and _ = _",
+  "database": "安全生活",
+  "tables": {}
+}

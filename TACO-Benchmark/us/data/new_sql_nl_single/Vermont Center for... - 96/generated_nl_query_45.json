@@ -1,0 +1,40 @@
+{
+  "sql": "SELECT \n    public_water_sources.\"SystemName\",\n    public_water_sources.\"FacilityName\"\nFROM \n    lakepond_wbids_and_wbid_segments\nLEFT JOIN \n    public_water_sources ON lakepond_wbids_and_wbid_segments.WBID = public_water_sources.WSID\nWHERE \n    public_water_sources.\"SystemStatus\" = 'Active'",
+  "problem_description": "### Query intent:\nThe SQL statement aims to retrieve specific details from two related databases (tables) about active water sources.\n\n### Detailed description:\n1. **Table and Column Information**:\n   - **lakepond_wbids_and_wbid_segments**: This table likely contains information about segments or parts of a larger system, possibly related to water management or distribution systems. The `WBID` column is likely an identifier for these segments.\n   - **public_water_sources**: This table holds data on water sources, with `WSID` as its identifier. It includes details such as `SystemName` and `FacilityName`.\n   - **\"SystemStatus\"**: A column in `public_water_sources` that indicates the status of the water source. In this case, it's filtered to only include 'Active' statuses.\n\n2. **Join Operation**:\n   - A LEFT JOIN is used between `lakepond_wbids_and_wbid_segments` and `public_water_sources`. This operation ensures that all records from the `lakepond_wbids_and_wbid_segments` table are included in the result set, even if there is no match in the `public_water_sources` table. The join is based on matching `WBID` in `lakepond_wbids_and_wbid_segments` with `WSID` in `public_water_sources`.\n\n3. **Where Clause**:\n   - The `WHERE` clause filters the results to only include rows where the `SystemStatus` in `public_water_sources` is 'Active'. This ensures that only active water sources are returned in the query result.\n\n### Business Scenario:\nThis query is useful in scenarios where maintenance, monitoring, or operational activities need to be performed on active water sources. For instance, it could help in identifying which active water sources are part of a specific distribution network (`WBID`) for targeted maintenance checks, updates, or inspections.\n\n### User Description:\nA water management or environmental protection agency might use this query when they need to quickly identify which of their active water sources are part of a particular segment or network. This could be crucial for planning maintenance schedules, ensuring compliance with regulations, or responding to emergencies related to water supply infrastructure. Users might also need to filter by additional criteria like location, type of water source, or other attributes, which could be added to the WHERE clause or handled through additional JOINs or GROUP BY operations, depending on the specific requirements.",
+  "natural_language_query": "A water management agency is looking to gather detailed information on active water sources that are part of a specific network or segment within their infrastructure. They want to ensure that all operational aspects related to these sources are up-to-date and functioning efficiently. To achieve this, they plan to run a SQL query that combines data from two relevant databases.\n\nThe first database, `lakepond_wbids_and_wbid_segments`, contains records that detail various segments or parts of the water management network, each identified by a unique `WBID`. The second database, `public_water_sources`, holds comprehensive information on individual water sources, including their `WSID`, `SystemName`, and `FacilityName`. Importantly, the `SystemStatus` field in `public_water_sources` indicates whether a given water source is currently active or not.\n\nTo perform this task, the agency will execute a SQL LEFT JOIN operation between `lakepond_wbids_and_wbid_segments` and `public_water_sources`. This join strategy ensures that every segment record from the first database is considered, even if there isn't a corresponding water source record in the second database. The join is based on matching the `WBID` from the first table with the `WSID` in the second table.\n\nFollowing the join, a WHERE clause filters the resulting dataset to include only those records where the `SystemStatus` in `public_water_sources` is set to 'Active'. This filtering step is crucial, as it narrows down the focus to active water sources that are part of the specified network segment.\n\nIn summary, the SQL query serves as a powerful tool for the agency to efficiently manage and monitor their water infrastructure, ensuring that all active components are well-documented and operational. This can aid in various tasks, such as scheduling maintenance, verifying compliance with environmental regulations, or preparing for potential emergencies related to water supply networks. The query can be further refined by incorporating additional criteria, such as geographical location or water source type, depending on the specific needs of the agency.",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ from _ left join _ on _ ._ = _ ._ where _ in (select _ from _ where _ )",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "lakepond_wbids_and_wbid_segments": [
+      "lakepond_wbids_and_wbid_segments.OBJECTID",
+      "lakepond_wbids_and_wbid_segments.Source",
+      "lakepond_wbids_and_wbid_segments.WBID",
+      "lakepond_wbids_and_wbid_segments.LAKEID",
+      "lakepond_wbids_and_wbid_segments.EventType",
+      "lakepond_wbids_and_wbid_segments.GISAcres"
+    ],
+    "public_water_sources": [
+      "public_water_sources.X",
+      "public_water_sources.Y",
+      "public_water_sources.TINWSF_IS_NUMBER",
+      "public_water_sources.WSID",
+      "public_water_sources.SystemName",
+      "public_water_sources.SystemType",
+      "public_water_sources.SystemStatus",
+      "public_water_sources.SystemPopulation",
+      "public_water_sources.FacilityName",
+      "public_water_sources.FacilityID",
+      "public_water_sources.FacilityStatus",
+      "public_water_sources.Availability",
+      "public_water_sources.WaterType",
+      "public_water_sources.ConstructedDate",
+      "public_water_sources.PermittedYield",
+      "public_water_sources.WellType",
+      "public_water_sources.Diameter_in",
+      "public_water_sources.WellDepth",
+      "public_water_sources.CasingDepth",
+      "public_water_sources.StaticWaterLevel"
+    ]
+  }
+}

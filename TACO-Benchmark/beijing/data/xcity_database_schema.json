@@ -1,0 +1,3465 @@
+{
+  "tables": [
+    {
+      "table_name": "o_ql_SSWJ_YHSZSXX",
+      "table_comment": "市税务局-印花税征收信息",
+      "table_description": "印花税是对经济活动和经济交往中书立、领受具有法律效力的凭证的行为所征收的一种税，因采用在应税凭证上粘贴印花税票作为完税的标志而得名。其征税范围广泛，包括经济合同、产权转移书据、营业账簿、权利许可证照等应税凭证文件，纳税人需按规定应税的比例和定额自行购买并粘贴印花税票，以完成纳税义务。",
+      "columns": [
+        {
+          "column_name": "nsrmc",
+          "data_type": "varchar",
+          "column_comment": "纳税人名称",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "ssny",
+          "data_type": "varchar",
+          "column_comment": "所属年月",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "rkje",
+          "data_type": "NUMBER(20,2)",
+          "column_comment": "入库金额",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_ab01_add",
+      "table_comment": "市人力社保局-登记变更_单位基础信息",
+      "table_description": "登记变更_单位基础信息旨在确保信息的准确性和时效性。，主要应用场景为企业信息变更、税务登记变更、社会保险登记变更等。",
+      "columns": [
+        {
+          "column_name": "aac001",
+          "data_type": "numeric",
+          "column_comment": "人员编号",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "aab004",
+          "data_type": "varchar",
+          "column_comment": "性别",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_ac01_add",
+      "table_comment": "市人力社保局-登记变更_人员基本信息",
+      "table_description": "登记变更_人员基本信息是为了确保人员信息的准确性和合法性，主要应用于个人身份与权益保障、企业人力资源管理、政府管理与服务优化等。登记变更_人员基本信息不仅涉及个人的身份与权益保障，也关乎政府的管理与服务优化以及企业的人力资源管理",
+      "columns": [
+        {
+          "column_name": "aac001",
+          "data_type": "numeric",
+          "column_comment": "人员编号",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "aac147",
+          "data_type": "varchar",
+          "column_comment": "证件号码",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_ac43_add",
+      "table_comment": "市人力社保局-征收缴费_人员征缴明细",
+      "table_description": "是用人单位在为员工缴纳社会保险（如养老保险、医疗保险、失业保险等）时，记录每位员工的缴费情况的详细信息，主要包括员工的个人信息、缴费基数、缴费比例、缴费金额以及缴费时间等，主要用于社保基金安全监管、社保管理信息系统、社保卡居民服务“一卡通”等多个应用场景。",
+      "columns": [
+        {
+          "column_name": "aab001",
+          "data_type": "varchar",
+          "column_comment": "单位编号",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "aae002",
+          "data_type": "int8",
+          "column_comment": "费款所属期",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "aae003",
+          "data_type": "int8",
+          "column_comment": "对应费款所属期",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "aaa115",
+          "data_type": "varchar",
+          "column_comment": "应缴类型",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "aae036",
+          "data_type": "int8",
+          "column_comment": "经办时间",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_cl_cjrxx",
+      "table_comment": "市残联-残疾人信息",
+      "table_description": "收集和记录有关残疾人的各类信息，这些信息对于理解残疾人的需求、提供适当的支持和服务、制定相关政策以及进行社会管理等方面都至关重要。包括残疾人的健康状况、教育背景、就业状况、残疾类型和程度等，主要用于政府管理和服务、医疗服务和健康管理、就业服务、教育服务、社会服务等。残疾人信息在多个领域都有着广泛的应用，为残疾人提供了更加全面、个性化的服务和管理。",
+      "columns": [
+        {
+          "column_name": "card_num",
+          "data_type": "varchar",
+          "column_comment": "残疾证号",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "citizen_id",
+          "data_type": "varchar",
+          "column_comment": "身份证号",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_cl_cjrxxzb",
+      "table_comment": "市残联_残疾人信息主表_验证类",
+      "table_description": "收集和记录有关残疾人的各类信息，这些信息对于理解残疾人的需求、提供适当的支持和服务、制定相关政策以及进行社会管理等方面都至关重要。包括残疾人的健康状况、教育背景、就业状况、残疾类型和程度等，主要用于政府管理和服务、医疗服务和健康管理、就业服务、教育服务、社会服务等。残疾人信息在多个领域都有着广泛的应用，为残疾人提供了更加全面、个性化的服务和管理。",
+      "columns": [
+        {
+          "column_name": "name",
+          "data_type": "varchar",
+          "column_comment": "姓名",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "citizen_id",
+          "data_type": "varchar",
+          "column_comment": "残疾人身份证号",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "cityid_addrstr",
+          "data_type": "varchar",
+          "column_comment": "户籍地地址",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "residentcity_addrstr",
+          "data_type": "varchar",
+          "column_comment": "居住地地址",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "zhuxiao_time",
+          "data_type": "timestamp",
+          "column_comment": "注销时间",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "had_final_reviewed",
+          "data_type": "varchar",
+          "column_comment": "持证状态",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_cl_cjrxxzbas",
+      "table_comment": "市残联-残疾人信息主表AS",
+      "table_description": "残疾人信息的应用场景涵盖了就业、康复、政策、辅助器具配置、无障碍出行和社会参与等多个方面。这些应用场景通过数字化和智能化的手段，为残疾人提供了更加便捷、高效和精准的服务和支持。",
+      "columns": [
+        {
+          "column_name": "create_date",
+          "data_type": "varchar",
+          "column_comment": "残疾人证申请时间",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "citizen_id",
+          "data_type": "varchar",
+          "column_comment": "身份证号",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_cl_cjrzbb",
+      "table_comment": "市残联-残疾人证补办",
+      "table_description": "残疾人证补办主要用于证件遗失或被盗、证件损坏、信息变更、户口迁移、跨省通办等重要应用场景，体现了残疾人证补办在维护残疾人权益、提供便捷服务、促进政策落实等方面的重要作用。",
+      "columns": [
+        {
+          "column_name": "citizen_id",
+          "data_type": "varchar",
+          "column_comment": "身份证号",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_cl_cjrzhl",
+      "table_comment": "市残联-残疾人证换领",
+      "table_description": "残疾人证换领主要用于证件到期更换、个人信息变更、证件遗失或损坏等重要应用场景，体现了残疾人证换领在维护残疾人权益、提供便捷服务、促进政策落实等方面的重要作用。",
+      "columns": [
+        {
+          "column_name": "citizen_name",
+          "data_type": "varchar",
+          "column_comment": "姓名",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "citizen_id",
+          "data_type": "varchar",
+          "column_comment": "身份证号",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_csglw_cdzjbxx",
+      "table_comment": "市城市管理委-充电站基本信息",
+      "table_description": "充电站基本信息主要应用于电动汽车用户导航与充电规划、充电网络规划与建设、充电设施运营与维护等。充电站基本信息是为了给公众提供便利的充电服务。",
+      "columns": [
+        {
+          "column_name": "cdzdbzmc",
+          "data_type": "varchar",
+          "column_comment": "充电站点标准名称",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "jtdz",
+          "data_type": "varchar",
+          "column_comment": "具体地址",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_fgjjglzx_grzfgjjjcmxxx",
+      "table_comment": "住房公积金管理中心-个人住房公积金缴存明细信息",
+      "table_description": "个人住房公积金缴存明细信息主要是为了方便对的公积金缴存信息查询，主要应用于申请贷款、提取公积金、财务规划、办理业务等。个人住房公积金缴存明细信息在促进住房领域和金融领域发展中的起到了重要作用。",
+      "columns": [
+        {
+          "column_name": "jzrq",
+          "data_type": "varchar",
+          "column_comment": "记账日期",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "hbjny",
+          "data_type": "varchar",
+          "column_comment": "汇补缴年月",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "dwmc",
+          "data_type": "varchar",
+          "column_comment": "缴存人所在单位名称",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "fse",
+          "data_type": "numeric",
+          "column_comment": "缴存金额",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "grzhye",
+          "data_type": "numeric",
+          "column_comment": "缴存人账户当前余额",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "zjhm",
+          "data_type": "varchar",
+          "column_comment": "缴存人证件号码",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_fgjjglzx_grzfgjjtqmxxx",
+      "table_comment": "住房公积金管理中心-个人住房公积金提取明细信息",
+      "table_description": "个人住房公积金缴存明细信息主要是为了方便对的公积金缴存信息查询，主要应用于申请贷款、提取公积金、财务规划、办理业务等。个人住房公积金缴存明细信息在促进住房领域和金融领域发展中的起到了重要作用。",
+      "columns": [
+        {
+          "column_name": "jzrq",
+          "data_type": "varchar",
+          "column_comment": "提取时间",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "fse",
+          "data_type": "numeric",
+          "column_comment": "本期提取本金",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "grzh",
+          "data_type": "varchar",
+          "column_comment": "个人账号",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "tqyy",
+          "data_type": "varchar",
+          "column_comment": "提取原因",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "zjhm",
+          "data_type": "varchar",
+          "column_comment": "缴存人证件号码",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_gaj_bjsjzz",
+      "table_comment": "市公安局-北京市居住证",
+      "table_description": "北京居住证是在北京居住的非京籍人员需要办理的一种证件，它关系到个人在京的居住、工作、学习等多方面的权益。主要用于劳动就业、社会保障、住房住房公积金、义务教育、公共卫生服务、法律援助、积分落户等多个重点应用场景。",
+      "columns": [
+        {
+          "column_name": "jzzslh",
+          "data_type": "varchar",
+          "column_comment": "居住证受理号",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "qfjg",
+          "data_type": "varchar",
+          "column_comment": "签发机关",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "dzmc",
+          "data_type": "varchar",
+          "column_comment": "地址名称",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "qfrq",
+          "data_type": "varchar",
+          "column_comment": "签发日期",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "yxjzsj",
+          "data_type": "varchar",
+          "column_comment": "有效结束时间",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "yxkssj",
+          "data_type": "varchar",
+          "column_comment": "有效开始时间",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "xm",
+          "data_type": "varchar",
+          "column_comment": "姓名",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "zh_zjhm",
+          "data_type": "varchar",
+          "column_comment": "证件号码",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "hjdz",
+          "data_type": "varchar",
+          "column_comment": "户籍地址",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_gaj_czfxx",
+      "table_comment": "市公安局-出租房信息",
+      "table_description": "出租房信息主要是在房屋租赁市场，为房东提供房源发布平台，为租客提供寻找合适房源的途径，促进房屋资源的有效配置和租赁交易的达成，主要应用于个人租房需求、企业租房需求、中介服务、房地产投资与管理等。出租房信息有助于增加市场透明度、优化资源配置。",
+      "columns": [
+        {
+          "column_name": "fcz_czqssj",
+          "data_type": "varchar",
+          "column_comment": "出租起始时间",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "bih_hlocus_add",
+          "data_type": "varchar",
+          "column_comment": "详细地址",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "fcz_czjzsj",
+          "data_type": "varchar",
+          "column_comment": "出租截止时间",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "fcz_czqssj",
+          "data_type": "varchar",
+          "column_comment": "出租起始时间",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "howner_fzzjhm",
+          "data_type": "varchar",
+          "column_comment": "房主身份证号码",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "howner_fzxm",
+          "data_type": "varchar",
+          "column_comment": "房主姓名",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_gaj_fjdcdjxxddzxchcjrzylyc",
+      "table_comment": "市公安局-非机动车登记信息（电动自行车和残疾人专用轮椅车）",
+      "table_description": "非机动车登记数据是指对非机动车辆进行登记时所收集和记录的各类信息，主要包括机动车基本信息、所有权信息、技术参数、保险信息、使用情况等，主要用于上牌管理、交通管理、充停管理、维修服务、个性化服务、安全管理等。",
+      "columns": [
+        {
+          "column_name": "hphm",
+          "data_type": "varchar",
+          "column_comment": "号牌号码 完整号牌号码，含汉字。",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "zbzl",
+          "data_type": "NUMBER(4,0)",
+          "column_comment": "装配完成的电动自行车的整车质量",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "cpxh",
+          "data_type": "varchar",
+          "column_comment": "产品型号",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "djxh",
+          "data_type": "varchar",
+          "column_comment": "电动自行车登记序号",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "lxdz",
+          "data_type": "varchar",
+          "column_comment": "联系地址",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "sfzmhm",
+          "data_type": "varchar",
+          "column_comment": "身份证明号码",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_gaj_hjrkdjxx",
+      "table_comment": "北京市公安局-户籍人口登记信息",
+      "table_description": "户籍人口登记信息是公民身份和权益的重要凭证，主要应用于社会保障与福利分配、公共服务提供、社区服务与管理、数字化与智慧城市建设。户籍人口登记信息不仅有助于提升政府服务效率和水平，还有助于促进社会和谐稳定和发展。",
+      "columns": [
+        {
+          "column_name": "hid",
+          "data_type": "varchar",
+          "column_comment": "户号",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "yhzgx",
+          "data_type": "varchar",
+          "column_comment": "与户主关系",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "sfzhm",
+          "data_type": "varchar",
+          "column_comment": "身份证号码",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "xm",
+          "data_type": "varchar",
+          "column_comment": "姓名",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "zxbs",
+          "data_type": "varchar",
+          "column_comment": "注销标识",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "hjdz",
+          "data_type": "varchar",
+          "column_comment": "户籍地址",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "xxdz",
+          "data_type": "varchar",
+          "column_comment": "详细地址",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_gaj_hkb",
+      "table_comment": "市公安局-户口本",
+      "table_description": "户口本是中国特有的记录公民身份信息、家庭关系以及个人基本情况的官方证明文件。",
+      "columns": [
+        {
+          "column_name": " ",
+          "data_type": "varchar",
+          "column_comment": "首页地址省市县（区）代码",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "hh",
+          "data_type": "varchar",
+          "column_comment": "户号",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "hdz_qhnxxdz",
+          "data_type": "varchar",
+          "column_comment": "首页住址",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "hlxdm",
+          "data_type": "varchar",
+          "column_comment": "户别",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "gmsfhm",
+          "data_type": "varchar",
+          "column_comment": "公民身份号码",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_gaj_jdcjcxx",
+      "table_comment": "市公安局-机动车基础数据",
+      "table_description": "是指与机动车相关的一系列基本信息，主要包括车辆识别码、车牌号码、车辆类型、制造年份、发动机信息、车辆颜色、安全设备等为了方便进行机动车管理，主要应用于车辆管理与监控、道路安全与执法、车辆保险与金融服务、智能交通系统等。机动车基础数据有助于提高交通管理效率、保障道路安全、优化交通布局和提升车辆使用效率。",
+      "columns": [
+        {
+          "column_name": "syxz",
+          "data_type": "varchar",
+          "column_comment": "使用性质",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "yxqx",
+          "data_type": "timestamp",
+          "column_comment": "有效期限",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "clsbdh",
+          "data_type": "varchar",
+          "column_comment": "车辆识别",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "cph",
+          "data_type": "varchar",
+          "column_comment": "车牌号",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "hpzl",
+          "data_type": "varchar",
+          "column_comment": "号牌种类",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "syr",
+          "data_type": "varchar",
+          "column_comment": "所有人",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "sfzmhm",
+          "data_type": "varchar",
+          "column_comment": "身份证号",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_gaj_jsz",
+      "table_comment": "市公安局-驾驶证",
+      "table_description": "驾驶证是驾驶人员具备驾驶机动车资格的法定证明文件，持有驾驶证的人员，经过相关培训和考试合格，具备了在道路上安全驾驶机动车的能力和资格，从而能够合法地驾驶相应类型的机动车，确保自身和他人的交通安全。",
+      "columns": [
+        {
+          "column_name": "yxqs",
+          "data_type": "timestamp",
+          "column_comment": "有效期始",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "yxqz",
+          "data_type": "timestamp",
+          "column_comment": "有效期止",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "zjcx",
+          "data_type": "varchar",
+          "column_comment": "证件车型",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "djzsxxdz",
+          "data_type": "varchar",
+          "column_comment": "登记证书详细地址",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "sfzmhm",
+          "data_type": "varchar",
+          "column_comment": "身份证明号码",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_gaj_jtwfcfxx",
+      "table_comment": "市公安局-交通违法处罚信息",
+      "table_description": "交通违法处罚信息是为了维护道路交通秩序，保障道路交通安全和畅通，预防和减少交通事故的发生，通过依法对交通违法行为进行处罚，教育和警示驾驶员和行人遵守交通规则，提高交通参与者的安全意识和法律意识。主要应用于交通违法行为的查处与处罚、交通安全宣传教育、交通拥堵治理等。",
+      "columns": [
+        {
+          "column_name": "wfdd",
+          "data_type": "varchar",
+          "column_comment": "违法地点",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "zjhm",
+          "data_type": "varchar",
+          "column_comment": "证件号码",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "xm",
+          "data_type": "varchar",
+          "column_comment": "姓名",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "wfxw",
+          "data_type": "varchar",
+          "column_comment": "违法行为",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "wfsj",
+          "data_type": "varchar",
+          "column_comment": "违章时间",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "cph",
+          "data_type": "varchar",
+          "column_comment": "车牌号",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_gaj_mlpdjxx",
+      "table_comment": "市公安局-门楼牌登记信息",
+      "table_description": "门楼牌登记信息有助于实现精准定位和地址管理，主要应用于城市规划与土地管理、公共服务与民生改善、数据管理与分析等。",
+      "columns": [
+        {
+          "column_name": "jwhmc",
+          "data_type": "varchar",
+          "column_comment": "居委会",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "qhnxzdz",
+          "data_type": "varchar",
+          "column_comment": "地址址",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_gaj_pcsxgsj",
+      "table_comment": "市公安局-派出所相关数据",
+      "table_description": "派出所相关信息主要满足于派出所位置的查询，便于市民办理户籍、出入境等相关事项和城市治安、案件、交通、消防、安全检查等相关工作。",
+      "columns": [
+        {
+          "column_name": "pcsmc",
+          "data_type": "varchar",
+          "column_comment": "派出所名称",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "pcsdz",
+          "data_type": "varchar",
+          "column_comment": "派出所地址",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_gaj_swzxdjxx",
+      "table_comment": "市公安局-死亡注销登记信息",
+      "table_description": "死亡注销登记信息旨在准确记录公民死亡信息，维护户籍管理秩序，主要应用于财产继承与处置、避免身份冒用与欺诈、社会服务与数据统计等。",
+      "columns": [
+        {
+          "column_name": "swsj",
+          "data_type": "timestamp",
+          "column_comment": "死亡时间",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "swzxyy",
+          "data_type": "varchar",
+          "column_comment": "死亡注销原因",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "sfzhm",
+          "data_type": "varchar",
+          "column_comment": "身份证号码",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "xm",
+          "data_type": "varchar",
+          "column_comment": "姓名",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_gaj_xsz",
+      "table_comment": "市公安局-行驶证",
+      "table_description": "行驶证是准予机动车在本国境内道路上行驶的法定证件，详细记录了车辆的基本信息和检验记录，用于核查比对机动车真伪、查询机动车信息，为车主提供出行安全保障。",
+      "columns": [
+        {
+          "column_name": "syr",
+          "data_type": "varchar",
+          "column_comment": "所有人",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "yxqz",
+          "data_type": "timestamp",
+          "column_comment": "检验有效期止",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "clsbdh",
+          "data_type": "varchar",
+          "column_comment": "车辆识别代号",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "clxh",
+          "data_type": "varchar",
+          "column_comment": "车辆型号",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "hphm",
+          "data_type": "varchar",
+          "column_comment": "号牌号码",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "sfzmhm",
+          "data_type": "varchar",
+          "column_comment": "身份证明号码",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "fdjh",
+          "data_type": "varchar",
+          "column_comment": "发动机号",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_ghzrzyw_bdcq",
+      "table_comment": "市规划自然资源委-不动产权",
+      "table_description": "不动产权通过不动产统一登记制度进行管理，确保权属的明确性和法律保护的效力，主要应用于交易与融资、城市规划与建设、税收征管等。",
+      "columns": [
+        {
+          "column_name": "createrightdate",
+          "data_type": "timestamp",
+          "column_comment": "登记时间",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "zl",
+          "data_type": "varchar",
+          "column_comment": "坐落",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "subtypename",
+          "data_type": "varchar",
+          "column_comment": "办理业务类别",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "qlr",
+          "data_type": "varchar",
+          "column_comment": "权利人",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "qlrzjh",
+          "data_type": "varchar",
+          "column_comment": "权利人证件号",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "isvalid",
+          "data_type": "numeric",
+          "column_comment": "是否有效",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "certno",
+          "data_type": "varchar",
+          "column_comment": "权证号",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "fwxz",
+          "data_type": "varchar",
+          "column_comment": "房屋性质",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_gxyxxml_heimdfr",
+      "table_comment": "公共信用信息目录-黑名单(法人)",
+      "table_description": "黑名单（法人）即失信被执行人名单中的企业法人，被列入黑名单的法人将受到信用惩戒，主要应用于市场监管、招投标管理、金融信贷、商业合作、供应链管理等。黑名单(法人)在维护市场秩序、保障交易安全、促进信用体系建设等方面的积极作用。",
+      "columns": [
+        {
+          "column_name": "zzmc",
+          "data_type": "varchar",
+          "column_comment": "组织名称",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "lrmdsy",
+          "data_type": "varchar",
+          "column_comment": "列入名单事由",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "lrrq",
+          "data_type": "timestamp",
+          "column_comment": "列入日期",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_jjxxhj_bjth",
+      "table_comment": "市经济信息化局-北京通号",
+      "table_description": "北京通号注册北京通APP的用户信息，主要应用于政务服务、智慧城市服务、数据服务与管理等。",
+      "columns": [
+        {
+          "column_name": "name",
+          "data_type": "varchar",
+          "column_comment": "姓名",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "id_card",
+          "data_type": "varchar",
+          "column_comment": "身份证号",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_jtw_batccxx",
+      "table_comment": "市交通委-备案停车场信息",
+      "table_description": "备案停车场信息主要为了便于市民查询停车场的具体位置，主要用于停车引导、交通规划、收费管理、智能交通、停车预约服务等多个应用场景。备案停车场信息的有效管理和应用，对于提高城市停车管理效率、优化交通环境、提升居民生活质量等方面都具有重要意义。",
+      "columns": [
+        {
+          "column_name": "licence",
+          "data_type": "varchar",
+          "column_comment": "停车场备案号",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "park_name",
+          "data_type": "timestamp",
+          "column_comment": "停车场名称",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_jtw_cljbxx",
+      "table_comment": "市交通委-车辆基本信息",
+      "table_description": "车辆基本信息用于标识和记录车辆的身份和状态。，主要应用于车辆管理、保险服务、车辆租赁。",
+      "columns": [
+        {
+          "column_name": "jgbi_code",
+          "data_type": "varchar",
+          "column_comment": "车辆编码",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "jgbi_status",
+          "data_type": "NUMBER",
+          "column_comment": "车辆状态 ",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_jtw_clxymd",
+      "table_comment": "市交通委-车辆信用名单",
+      "table_description": "车辆信用名单是系统对存在不诚信行为的车辆进行的一种管理方式，主要应用于ETC系统管理、出租车管理、高速公路管理等。车辆信用名单旨在规范车辆和驾驶员的行为，维护交通秩序和公共安全。",
+      "columns": [
+        {
+          "column_name": "punish_money",
+          "data_type": "numeric(5,0)",
+          "column_comment": "处罚金额",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "vehicle_no",
+          "data_type": "varchar",
+          "column_comment": "车牌号码",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "illegal_time",
+          "data_type": "timestamp",
+          "column_comment": "违法时间",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_jtw_czcjsyfwjdkxx",
+      "table_comment": "市交通委-出租车驾驶员服务监督卡信息",
+      "table_description": "主要包括驾驶员基本信息、从业资格、服务记录、乘客评价、违规记录、投诉记录、培训信息等，主要是为了对车租车驾驶员的身份认证，主要应用于确认驾驶员身份与资质、监督服务质量、保障乘客权益、提高行业透明度与公信力。",
+      "columns": [
+        {
+          "column_name": "name",
+          "data_type": "varchar",
+          "column_comment": "驾驶员姓名",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "plate_no",
+          "data_type": "varchar",
+          "column_comment": "车号/车牌号",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "id_card",
+          "data_type": "varchar",
+          "column_comment": "身份证号",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_jtw_czcljbxx",
+      "table_comment": "市交通委-出租车辆基本信息",
+      "table_description": "出租车辆信息为群众安全出行提供了专业保障，主要应用于日常出行、旅游服务、交通监管等，出租车辆信息有助于提高交通管理效率、保障道路安全。",
+      "columns": [
+        {
+          "column_name": "net_yehu_name",
+          "data_type": "varchar",
+          "column_comment": "入网企业名称",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "plate_no",
+          "data_type": "varchar",
+          "column_comment": "车牌号",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_jtw_dlyszxx",
+      "table_comment": "市交通委-道路运输证信息",
+      "table_description": "道路运输证信息是车辆合法从事道路运输经营活动的必要证件，用于证明车辆及驾驶员具备从事道路运输的资质和条件,主要应用于资格核查与合法性验证、跨省份信息共享与查验、监管与执法等。道路运输证信息的合理运用不仅能够提高了道路运输管理的效率和质量，也为道路运输市场的健康发展提供了有力保障。",
+      "columns": [
+        {
+          "column_name": "driver_license_no",
+          "data_type": "varchar",
+          "column_comment": "经营业户经营许可证号",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "current_add",
+          "data_type": "varchar",
+          "column_comment": "道路运输证号",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "end",
+          "data_type": "date",
+          "column_comment": "有效期至",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "vehicle_no",
+          "data_type": "varchar",
+          "column_comment": "车牌号",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_jtw_gxzxcjtqxx",
+      "table_comment": "市交通委-共享自行车禁停区信息",
+      "table_description": "共享自行车禁停区信息旨在确保道路交通的顺畅与安全，同时维护公共秩序和设施的正常使用，主要应用于规范停车行为、提升停车效率、优化交通环境等。",
+      "columns": [
+        {
+          "column_name": "jgna_address",
+          "data_type": "varchar",
+          "column_comment": "地址",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_jtw_gxzxctfqxx",
+      "table_comment": "市交通委-共享自行车停放区信息",
+      "table_description": "共享自行车停放区信息确保了车辆有序停放和及时调度，主要应用于提高停车效率、优化城市交通环境、支持智慧城市建设等。共享自行车停放区信息的合理运用有助于提升城市管理水平和服务质量，为市民提供更加便捷、高效的出行服务。",
+      "columns": [
+        {
+          "column_name": "jgpa_address",
+          "data_type": "varchar",
+          "column_comment": "{@FLDNAME=地址} {@ISSHOW=1}",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_jtw_jpjgxx",
+      "table_comment": "市交通委-驾培机构信息",
+      "table_description": "驾培机构信息是提供机动车驾驶培训服务的机构信息，这些机构负责培训初学驾驶员、增加准驾车型的驾驶人员以及道路运输驾驶人员，提供从理论到实际操作的全方位教学服务，主要应用于学员选择和决策、行业监管和评估、数字化和信息化建设等。",
+      "columns": [
+        {
+          "column_name": "lic_num",
+          "data_type": "varchar",
+          "column_comment": "业务许可证",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "legal",
+          "data_type": "varchar",
+          "column_comment": "法定代表人",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "train_address",
+          "data_type": "varchar",
+          "column_comment": "训练地址",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "name",
+          "data_type": "varchar",
+          "column_comment": "驾培机构名称",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_jtw_lccwbaxx",
+      "table_comment": "市交通委-路侧车位备案信息",
+      "table_description": "路侧车位备案信息旨在规范路侧停车秩序，确保道路交通的顺畅与安全，主要应用于规范停车管理、提高停车效率、优化资源配置、提升服务质量、支持智慧停车系统等。路侧车位备案信息有助于提升城市交通管理水平和服务质量，为市民提供更加便捷、高效的停车服务。",
+      "columns": [
+        {
+          "column_name": "berth_sn_outside",
+          "data_type": "varchar",
+          "column_comment": "外部编号",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "parking_name",
+          "data_type": "varchar",
+          "column_comment": "停车场名称",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_jtw_lccwfbxx",
+      "table_comment": "市交通委-路侧车位分布信息",
+      "table_description": "路侧车位分布信息旨在帮助市民和驾驶员快速了解并找到合适的停车位置，从而规范停车秩序，提高道路使用效率，主要应用于驾驶导航与路线规划、停车需求预测与规划、智慧停车系统建设等。路侧车位分布信息的充分利用，可以提高城市停车管理水平，优化交通环境，提升城市居民的生活质量。",
+      "columns": [
+        {
+          "column_name": "parking_name",
+          "data_type": "varchar",
+          "column_comment": "停车场名称",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "position_id",
+          "data_type": "varchar",
+          "column_comment": "位置ID",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_jtw_lccwslxx",
+      "table_comment": "市交通委-路侧车位数量信息",
+      "table_description": "路侧车位数量信息旨在满足市民的停车需求，同时确保道路交通的顺畅和安全，主要应用于停车需求预测、智慧停车系统建设、交通流量调控等。路侧车位数量信息对于提高城市停车管理水平、优化交通环境、提升居民生活质量具有重要意义。",
+      "columns": [
+        {
+          "column_name": "position_num",
+          "data_type": "numeric",
+          "column_comment": "车位数量",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "position_id",
+          "data_type": "varchar(80)",
+          "column_comment": "道路ID",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_jtw_lctcglybaxx",
+      "table_comment": "市交通委-路侧停车管理员备案信息",
+      "table_description": "路侧停车管理员备案信息确保管理员具备合法身份和专业素质，能够规范、高效地执行路侧停车管理任务，保障道路交通秩序和市民停车需求，主要应用于提高服务质量、责任追溯与监督、公共安全与应急响应等。路侧停车管理员备案信息对于提升路侧停车管理水平、优化停车资源配置具有重要意义。",
+      "columns": [
+        {
+          "column_name": "emp_code",
+          "data_type": "varchar",
+          "column_comment": "员工编码",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "depart_name",
+          "data_type": "varchar",
+          "column_comment": "所属部门",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_jtw_lctczyxx",
+      "table_comment": "市交通委-路侧停车占用信息",
+      "table_description": "路侧停车占用信息旨在充分利用道路空间资源，满足短时停车需求，同时确保道路交通的顺畅和安全，主要应用于交通流量管理与规划、提高停车资源利用效率、提升城市停车服务质量等。充分利用路侧停车占用信息，可以推动城市交通的可持续发展，提高城市治理水平。",
+      "columns": [
+        {
+          "column_name": "use",
+          "data_type": "varchar",
+          "column_comment": "是否占用",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "parking_name",
+          "data_type": "varchar",
+          "column_comment": "停车场名称",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_jtw_tccsj",
+      "table_comment": "市交通委-停车场数据-停车场位置信息",
+      "table_description": "停车场数据-停车场位置信息方便用户快速定位并找到停车场，主要应用于导航系统、智能出行规划、城市规划和交通管理等。",
+      "columns": [
+        {
+          "column_name": "parking_name",
+          "data_type": "varchar",
+          "column_comment": "位置名称",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "position_id",
+          "data_type": "varchar(80)",
+          "column_comment": "位置ID",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_jtw_tccsj_bw",
+      "table_comment": "市交通委-停车场数据-泊位",
+      "table_description": "停车场数据-泊位是指泊位在停车场内的具体布局和位置安排，主要应用于智能停车导航、停车场运营管理、城市交通规划、智慧城市建设、公共服务与便民应用等。停车场数据中的泊位信息在城市发展中具有重要作用。",
+      "columns": [
+        {
+          "column_name": "valid",
+          "data_type": "varchar",
+          "column_comment": "状态（是否有效）",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "parking_id",
+          "data_type": "varchar(80)",
+          "column_comment": "停车场ID",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_jtw_tccsj_tcc",
+      "table_comment": "市交通委-停车场数据-停车场基础信息",
+      "table_description": "停车场数据-停车场基础信息为车主提供停车选择和决策的重要依据，主要应用于导航服务、停车规划、城市交通管理等。停车场数据-停车场基础信息为驾驶者提供便捷的停车指引，并为城市管理者提供有效的决策支持。",
+      "columns": [
+        {
+          "column_name": "position_name",
+          "data_type": "varchar",
+          "column_comment": "位置名称",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "address",
+          "data_type": "varchar",
+          "column_comment": "地址",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_jtw_wfwzcfxxzrrhdw",
+      "table_comment": "市交通委-违法违章处罚信息（自然人或单位）",
+      "table_description": "旨在规范个人和单位的行为，维护社会秩序和公共利益，主要应用于交通执法、商务应用、社会管理等。违法违章处罚信息（自然人或单位）不仅有助于维护社会的公平正义和公共利益，还能够促进社会的和谐稳定和发展。",
+      "columns": [
+        {
+          "column_name": "chk_peccancy_type",
+          "data_type": "varchar",
+          "column_comment": "违章行为",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "chk_deal_state",
+          "data_type": "varchar",
+          "column_comment": "处理状态",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "chk_jasj",
+          "data_type": "varchar",
+          "column_comment": "结案时间",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "chk_check_date",
+          "data_type": "timestamp",
+          "column_comment": "检查时间",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_jtw_wxhwysxgxx",
+      "table_comment": "市交通委-危险货物运输相关信息",
+      "table_description": "危险货物运输相关信息涵盖了从运输前的准备、运输过程中的监控到运输后的管理等多个环节，主要用于运输节点的管理、省内外车辆管理、智慧物流应用、运输过程中的监控等应用场景。",
+      "columns": [
+        {
+          "column_name": "name",
+          "data_type": "varchar",
+          "column_comment": "单位名称",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "manager_phone",
+          "data_type": "varchar",
+          "column_comment": "联系电话",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "plate_no",
+          "data_type": "varchar",
+          "column_comment": "车牌号",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_jtw_xkcdwzbpzjgxx",
+      "table_comment": "市交通委-小客车单位指标配置结果信息",
+      "table_description": "小客车单位指标配置结果信息反映了单位申请小客车指标的竞争情况，体现了政府对小客车数量调控的效果，主要应用于单位车辆管理、交通政策遵守、资源配置优化等。小客车单位指标配置结果帮助单位做好车辆管理和交通政策应对工作，以适应交通政策的变化和市场需求的变化。",
+      "columns": [
+        {
+          "column_name": "apply_code",
+          "data_type": "varchar",
+          "column_comment": "单位申请编码",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "ballot_issue_id",
+          "data_type": "varchar",
+          "column_comment": "单位配置指标期号",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_jtw_xkcgrzbpzjgxx",
+      "table_comment": "市交通委-小客车个人指标配置结果信息",
+      "table_description": "小客车个人指标配置结果信息主要应用于购车决策、指标使用和管理、政策了解和遵守以及后续申请和轮候等。小客车个人指标配置结果信息对于车主或潜在购车者来说具有重要的指导意义和实用价值。",
+      "columns": [
+        {
+          "column_name": "apply_code",
+          "data_type": "varchar",
+          "column_comment": "个人申请编码",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "issue_create_time",
+          "data_type": "timestamp",
+          "column_comment": "个人指标配置时间",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_jtw_zdspjkxx",
+      "table_comment": "市交通委-站点视频监控信息",
+      "table_description": "站点视频监控信息用于安全监控、管理可视化及事件回溯等目的，主要应用于安全监控、交通管理、公共服务、商业运营等。站点视频监控信息对于提高社会治理水平、优化公共服务、保障公共安全等方面都具有重要意义。",
+      "columns": [
+        {
+          "column_name": "video_code",
+          "data_type": "varchar",
+          "column_comment": "视频设备编号",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "address",
+          "data_type": "varchar",
+          "column_comment": "布设地点",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_jw_ptzzzygzcrzzxsxjxx",
+      "table_comment": "市教委-普通中专、职业高中、成人中专学生学籍信息",
+      "table_description": "普通中专、职业高中、成人中专学生学籍信息是学生身份和学习经历的重要记录，为学生个人发展、求职升学提供重要依据，主要应用于学校管理、教育决策、学生个人发展以及社会就业等。普通中专、职业高中、成人中专学生学籍信息的准确性和完整性对于保障学生的权益、促进教育公平和提高教育质量具有重要意义。",
+      "columns": [
+        {
+          "column_name": "xjzt",
+          "data_type": "varchar",
+          "column_comment": "学籍状态",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "xjh",
+          "data_type": "varchar",
+          "column_comment": "学籍号",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "zy",
+          "data_type": "varchar",
+          "column_comment": "专业",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "rxsj",
+          "data_type": "varchar",
+          "column_comment": "入学时间",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "xz",
+          "data_type": "varchar",
+          "column_comment": "学制",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_mzj_blbzhhywscjdszjcxx",
+      "table_comment": "市民政局-办理殡葬火化业务时采集的逝者基础信息",
+      "table_description": "办理殡葬火化业务时采集的逝者基础信息是为了确保火化过程的合法性和准确性，主要应用于法律与行政程序、殡葬服务、新技术应用等。办理殡葬火化业务时采集的逝者基础信息不仅有助于确保殡葬服务的顺利进行，还能为政府制定相关政策提供数据支持，并促进新技术在殡葬领域的应用和发展。",
+      "columns": [
+        {
+          "column_name": "jcsj_szjcxx01",
+          "data_type": "varchar",
+          "column_comment": "姓名",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "jcsj_szjcxx03",
+          "data_type": "timestamp",
+          "column_comment": "火化日期",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "jcsj_szjcxx02",
+          "data_type": "varchar",
+          "column_comment": "身份证号码",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_mzj_cjrlxbtxx",
+      "table_comment": "市民政局-残疾人\"两项补贴\"信息(姓名,性别,身份证号,民族纳入人口表)",
+      "table_description": "残疾人“两项补贴”信息主要用于困难残疾人生活补贴和重度残疾人护理补贴，补贴的发放有助于保障残疾人的基本生活需求和护理需求，提高他们的生活质量，体现了国家对残疾人群体的关怀和支持。",
+      "columns": [
+        {
+          "column_name": "jcsj_cjrlxbtxx07",
+          "data_type": "numeric（10，5）",
+          "column_comment": "补贴金额",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "jcsj_cjrlxbtxx02",
+          "data_type": "varchar",
+          "column_comment": "身份证号",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_mzj_cklnrjcxx",
+      "table_comment": "北京市民政局-持卡老年人基础信息",
+      "table_description": "持卡老年人基础信息有助于相关部门和社会机构为老年人提供更加精准、个性化的服务，主要应用于公共服务与福利分配、健康管理与医疗服务、社会服务与关怀等。持卡老年人基础信息不仅有助于提升老年人的生活质量和社会福祉水平，还有助于推动养老事业的健康发展和智慧化转型。",
+      "columns": [
+        {
+          "column_name": "name",
+          "data_type": "varchar",
+          "column_comment": "姓名",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "certificates_number",
+          "data_type": "varchar",
+          "column_comment": "身份证号码",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "household_address",
+          "data_type": "varchar",
+          "column_comment": "户籍地址",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_mzj_hydjxx",
+      "table_comment": "北京市民政局_婚姻登记信息",
+      "table_description": "婚姻登记信息确认婚姻关系、保障婚姻当事人权益的重要依据，也是婚姻登记机关进行婚姻登记管理的基础数据，主要应用于法律与行政程序、社会服务与福利、数字化与智能化服务等。婚姻登记信息在现代社会治理和服务起到了重要作用。",
+      "columns": [
+        {
+          "column_name": "op_date",
+          "data_type": "timestamp",
+          "column_comment": "登记日期",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "marry_type",
+          "data_type": "varchar",
+          "column_comment": "登记类型",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "name_man",
+          "data_type": "varchar",
+          "column_comment": "男方姓名",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "name_woman",
+          "data_type": "varchar",
+          "column_comment": "女方姓名",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "dept_name",
+          "data_type": "varchar",
+          "column_comment": "登记机关",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "cert_num_woman",
+          "data_type": "varchar",
+          "column_comment": "女方证件号码",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "cert_num_man",
+          "data_type": "varchar",
+          "column_comment": "男方证件号码",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_rsdagl_ld_cdryb",
+      "table_comment": "人事档案管理_流动_存档人员表",
+      "table_description": "人事档案管理_流动_存档人员是人力资源管理的重要依据，主要应用于人事变动管理、档案查询与检索、员工发展规划等。",
+      "columns": [
+        {
+          "column_name": "dacfwz",
+          "data_type": "varchar",
+          "column_comment": "档案存放位置",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "grbh",
+          "data_type": "varchar",
+          "column_comment": "个人编号",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_rsdagl_ld_hkqcb",
+      "table_comment": "人事档案管理_流动_户口迁出表",
+      "table_description": "人事档案管理_流动_户口迁出表是人事流动管理的重要文档之一，主要应用于员工流动管理、户口迁移手续、个人发展轨迹记录、社会保障和福利管理等。",
+      "columns": [
+        {
+          "column_name": "qcrq",
+          "data_type": "varchar",
+          "column_comment": "迁出日期",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "qcyy",
+          "data_type": "varchar",
+          "column_comment": "迁出原因",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_scjdglj_glscjdglxzcfxx",
+      "table_comment": "北京市市场监督管理局-各类市场监督管理行政处罚信息",
+      "table_description": "各类市场监督管理行政处罚信息旨在营造公平有序的市场环境和安全放心的消费环境，主要应用于监管执法、信用监管、风险预警与防控等。各类市场监督管理行政处罚信息为信息化手段提供了数据支持，提高了市场监管效率，优化营商环境，确保市场秩序。",
+      "columns": [
+        {
+          "column_name": "cf_xdr_mc",
+          "data_type": "varchar",
+          "column_comment": "行政相对人名称",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "cf_xdr_shxym",
+          "data_type": "varchar",
+          "column_comment": "行政相对人代码_1(统一社会信用代码)",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "cf_nr",
+          "data_type": "varchar",
+          "column_comment": "处罚内容",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "cf_jdrq",
+          "data_type": "timestamp",
+          "column_comment": "处罚决定日期",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_scjdglj_scjdglqydjzcjbxx",
+      "table_comment": "市市场监督管理局-市场监督管理企业登记注册基本信息",
+      "table_description": "市场监督管理企业登记注册基本信息是企业合法经营和对外展示的重要凭证，主要应用于政府决策支持、优化营商环境、监管执法等。市场监督管理企业登记注册基本信息有助于提升市场监督管理的效率和质量，促进市场主体的健康有序发展。",
+      "columns": [
+        {
+          "column_name": "uni_scid",
+          "data_type": "varchar",
+          "column_comment": "统一社会信用代码",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "ent_name",
+          "data_type": "varchar",
+          "column_comment": "企业名称",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "corp_rpt",
+          "data_type": "varchar",
+          "column_comment": "法定代表人",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "dom",
+          "data_type": "varchar",
+          "column_comment": "经营场所",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_sthjj_jdcpfjccbclxx",
+      "table_comment": "市生态环境局-机动车排放检测超标车辆信息",
+      "table_description": "机动车排放检测超标车辆信息是为了对不合格车辆进行查询，主要应用于环境保护、交通管理、车辆维护。机动车排放检测超标车辆信息通过加强超标车辆信息的公示、监管和管理，可以有效减少空气污染，促进可持续发展和环境保护。",
+      "columns": [
+        {
+          "column_name": "cnumberplate",
+          "data_type": "varchar",
+          "column_comment": "车牌号码",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "dwqcheckdate",
+          "data_type": "timestamp",
+          "column_comment": "尾气检测时间",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "no2540",
+          "data_type": "float8",
+          "column_comment": "排放结果",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "smokek1",
+          "data_type": "float8",
+          "column_comment": "第一次排放结果",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "smokek2",
+          "data_type": "float8",
+          "column_comment": "第二次排放结果",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "smokek3",
+          "data_type": "float8",
+          "column_comment": "第三次排放结果",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "smokek4",
+          "data_type": "float8",
+          "column_comment": "第四次排放结果",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "smokeavg",
+          "data_type": "float8",
+          "column_comment": "排放平均值",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_sthjj_qywryfqjcsj",
+      "table_comment": "市生态环境局-企业污染源废气监测数据",
+      "table_description": "企业污染源废气监测数据是为了确保企业遵守环保法规，减少环境污染，主要应用于企业生产管理与优化、政策制定与执行、环境保护。企业污染源废气监测数据对环境可持续发展起到重要作用。",
+      "columns": [
+        {
+          "column_name": "monitortime",
+          "data_type": "timestamp",
+          "column_comment": "数据更新时间",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "so2",
+          "data_type": "varchar",
+          "column_comment": "二氧化硫",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "no3",
+          "data_type": "varchar",
+          "column_comment": "氮氧化物",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_svwj_nsrjbxx",
+      "table_comment": "市税务局-纳税人基本信息",
+      "table_description": "纳税人基本信息是税务登记的基础，税务机关通过这些信息对纳税人进行分类管理，确保税收政策的准确实施。纳税人基本信息主要用于税务登记和认证、纳税申报、发票管理、享受税收优惠、信用评级、风险评估等多个场景的应用。",
+      "columns": [
+        {
+          "column_name": "nsrztmc",
+          "data_type": "varchar",
+          "column_comment": "纳税人主体名称",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "nsrsbh",
+          "data_type": "varchar",
+          "column_comment": "纳税人识别号",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "ssny",
+          "data_type": "varchar",
+          "column_comment": "所属年月",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "nsrmc",
+          "data_type": "varchar",
+          "column_comment": "纳税人名称",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "shxydm",
+          "data_type": "varchar",
+          "column_comment": "社会信用代码",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_svwj_qsggxx",
+      "table_comment": "欠税公告信息",
+      "table_description": "",
+      "columns": [
+        {
+          "column_name": "nsrmc",
+          "data_type": "varchar",
+          "column_comment": "纳税人名称",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "fddbrxm",
+          "data_type": "varchar",
+          "column_comment": "法定代表人姓名",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "frsfzh",
+          "data_type": "varchar",
+          "column_comment": "法人身份证号",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "qssz",
+          "data_type": "varchar",
+          "column_comment": "欠税税种",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "qsje",
+          "data_type": "NUMBER(20,2)",
+          "column_comment": "欠税金额",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "shxydm",
+          "data_type": "varchar",
+          "column_comment": "社会信用代码",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "ssny",
+          "data_type": "varchar",
+          "column_comment": "所属年月",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_svwj_qszsxx",
+      "table_comment": "市税务局-契税征收信息",
+      "table_description": "契税征收信息主要应用于政府收入与财政支持、房地产市场调控、税收管理与信息统计等。契税征收信息对于维护市场秩序、促进房地产市场健康发展具有重要意义。",
+      "columns": [
+        {
+          "column_name": "nsrmc",
+          "data_type": "varchar",
+          "column_comment": "纳税人名称",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "ssny",
+          "data_type": "varchar",
+          "column_comment": "所属年月",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "nsrsbh",
+          "data_type": "varchar",
+          "column_comment": "纳税人识别号",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "shxydm",
+          "data_type": "varchar",
+          "column_comment": "社会信用代码",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "rkje",
+          "data_type": "NUMBER(20,2)",
+          "column_comment": "入库金额",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_svwj_ssxzcfxx",
+      "table_comment": "市税务局-税收行政处罚信息",
+      "table_description": "税收行政处罚信息旨在维护税收征收管理秩序，主要应用于税务监管与合规性检查、税收违法行为的打击与震慑、税务政策制定与调整等。税收行政处罚信息不仅有助于维护税收秩序和保障税收收入，还可以促进税收制度的完善和优化。",
+      "columns": [
+        {
+          "column_name": "cfsy",
+          "data_type": "varchar",
+          "column_comment": "处罚违法事实",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "nsrmc",
+          "data_type": "varchar",
+          "column_comment": "纳税人名称",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_svwj_tdzzszsxx",
+      "table_comment": "土地增值税征收信息",
+      "table_description": "土地增值税征收信息是指针对在我国境内转让国有土地使用权、地上建筑物及其附着物的单位和个人，以其转让房地产所取得的增值额为课税对象而征收的一种税，主要应用于税收征管、企业税务管理、政策制定与调整等。",
+      "columns": [
+        {
+          "column_name": "nsrmc",
+          "data_type": "varchar",
+          "column_comment": "纳税人名称",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "rkje",
+          "data_type": "number(20,2)",
+          "column_comment": "入库金额",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "nd",
+          "data_type": "varchar",
+          "column_comment": "年度",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "yf",
+          "data_type": "varchar",
+          "column_comment": "月份",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "ssny",
+          "data_type": "varchar",
+          "column_comment": "所属年月",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_svwj_zzszsxx",
+      "table_comment": "增值税征收信息",
+      "table_description": "",
+      "columns": [
+        {
+          "column_name": "nsrmc",
+          "data_type": "varchar",
+          "column_comment": "纳税人名称",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "ssny",
+          "data_type": "varchar",
+          "column_comment": "所属年月",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "shxydm",
+          "data_type": "varchar",
+          "column_comment": "社会信用代码",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "rkje",
+          "data_type": "NUMBER(20,2)",
+          "column_comment": "入库金额",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_swsjkw_csyxzm",
+      "table_comment": "市卫生健康委-出生医学证明",
+      "table_description": "出生医学证明是记录新生儿出生时的健康状况、血亲关系以及国籍的重要法律文件，是申报国籍、户籍、取得公民身份号码的法定医学证明，主要应用于户籍登记、教育入学、疫苗接种等。",
+      "columns": [
+        {
+          "column_name": "code",
+          "data_type": "varchar",
+          "column_comment": "出生证编号",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "mother",
+          "data_type": "varchar",
+          "column_comment": "母亲姓名",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "birth_date",
+          "data_type": "timestamp",
+          "column_comment": "新生儿出生时间",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "mother_card",
+          "data_type": "varchar",
+          "column_comment": "母亲有效身份证件号码",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_swsjkw_mzcfjl",
+      "table_comment": "市卫生健康委-门诊处方记录",
+      "table_description": "门诊处方记录是由注册的执业医师或执业助理医师在诊疗活动中为患者开具的。需经药学专业技术人员审核、调配、核对，确保患者用药的准确性和安全性，主要应用于患者用药指导、药品发放与核对、用药安全监控等。门诊处方记录在医疗服务和患者管理中扮演着举足轻重的角色，其重要性和价值不言而喻。",
+      "columns": [
+        {
+          "column_name": "kfysxm",
+          "data_type": "varchar",
+          "column_comment": "开方医生姓名",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "ypmc",
+          "data_type": "varchar",
+          "column_comment": "药物名称",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "ypgg",
+          "data_type": "varchar",
+          "column_comment": "药品规格",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "yplb",
+          "data_type": "varchar",
+          "column_comment": "药品类别",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "ywycsl",
+          "data_type": "numeric",
+          "column_comment": "药物使用-次剂量",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "ywycsldw",
+          "data_type": "varchar",
+          "column_comment": "药物使用-次剂量单位",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "ywsyzsldw",
+          "data_type": "varchar",
+          "column_comment": "药物使用-总剂量单位",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "zjhm",
+          "data_type": "varchar",
+          "column_comment": "证件号码",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_swsjsw_hszyzcxx",
+      "table_comment": "市卫生计生委-护士执业注册信息",
+      "table_description": "护士执业注册信息用于规范护士的执业行为，保障医疗服务质量和安全，主要应用于执业资格确认、公共卫生监管、人职业发展等。护士执业注册信息对于保障医疗服务质量、提高护士队伍素质、推动医疗领域改革发展具有重要意义。",
+      "columns": [
+        {
+          "column_name": "xm",
+          "data_type": "varchar",
+          "column_comment": "姓名",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "sfzhm",
+          "data_type": "varchar",
+          "column_comment": "身份证号码",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "fzjg",
+          "data_type": "varchar",
+          "column_comment": "发证机关",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_sypjdglj_bjsydxx",
+      "table_comment": "市药品监督管理局-北京市药店信息",
+      "table_description": "北京药店信息主要是为了方便消费者进行药物购买和咨询，主要用于消费者服务、药店运营与管理、政策制定与监管等。北京药店信息可以提升药店的服务质量和运营效率，保障公众用药安全和健康。",
+      "columns": [
+        {
+          "column_name": "ds_name",
+          "data_type": "varchar",
+          "column_comment": "药店名称",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "is_medins",
+          "data_type": "varchar",
+          "column_comment": "是否为医保药店",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_sypjdglj_ypcpxx",
+      "table_comment": "市药品监督管理局-药品产品信息",
+      "table_description": "药品产品信息对于医生开具处方、药师审核配药以及患者正确用药都具有重要指导意义，主要应用于临床决策支持、患者用药指导、药品质量监控等。",
+      "columns": [
+        {
+          "column_name": "yppzwh",
+          "data_type": "varchar",
+          "column_comment": "",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "yptymc",
+          "data_type": "varchar",
+          "column_comment": "",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "ssxkcyr",
+          "data_type": "varchar",
+          "column_comment": "",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_v_case_pub_nbaseinfo",
+      "table_comment": "北京市市场监督管理局-市场监督管理行政处罚信息",
+      "table_description": "市场监督管理行政处罚信息目的是为了强化市场主体信用监管，维护公平竞争的市场秩序，主要应用于信用监管与公示、政策制定与决策支持、具体行业监管与治理等。市场监督管理行政处罚信息不仅有助于维护市场秩序、保护消费者权益，还能推动市场监管工作的创新和发展。",
+      "columns": [
+        {
+          "column_name": "cf_xdr_mc",
+          "data_type": "varchar",
+          "column_comment": "行政相对人名称",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "cf_xdr_shxym",
+          "data_type": "varchar",
+          "column_comment": "行政相对人代码_1(统一社会信用代码)",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "cf_nr",
+          "data_type": "text",
+          "column_comment": "处罚内容",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "cf_jdrq",
+          "data_type": "timestamp",
+          "column_comment": "处罚决定日期",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_w16_basic_wycplat_cz",
+      "table_comment": "市交通委-网络预约出租汽车经营许可信息",
+      "table_description": "网络预约出租汽车经营许可信息确保网约车平台合法运营，提供安全、规范的服务，主要应用于平台合规性验证、驾驶员资格审核、乘客权益保障、行业监管与执法等。网络预约出租汽车经营许可信息促进网约车行业的健康发展、保障乘客和驾驶员的权益具有重要意义。",
+      "columns": [
+        {
+          "column_name": "license",
+          "data_type": "varchar",
+          "column_comment": "经营业户许可证号",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "credit_code",
+          "data_type": "varchar",
+          "column_comment": "经营业户证件号码",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_w16_ow_emloyee_lice",
+      "table_comment": "市交通委-道路运输从业人员从业资格证信息",
+      "table_description": "主要用于从事道路运输行业人员一个资格证明，主要包括从业人员基本信息、职业资格、证书编号、违纪记录、更新和续期等。",
+      "columns": [
+        {
+          "column_name": "evidence_no",
+          "data_type": "varchar",
+          "column_comment": "证书编号",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "employee_type_str",
+          "data_type": "varchar",
+          "column_comment": "从业类别",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_wsjkw_114mryyghsj",
+      "table_comment": "市卫生健康委-114明日预约挂号数据",
+      "table_description": "114明日预约挂号数据主要用于患者就医预约、医疗机构管理、报告查询与代查、提升医疗服务质量等多个应用场景，体现了医疗服务的人性化、高效化、信息化和创新化，这不仅有助于提升患者的就医体验，也有助于优化医疗机构的运营管理和决策，推动医疗服务的持续改进和创新。",
+      "columns": [
+        {
+          "column_name": "yysj",
+          "data_type": "varchar",
+          "column_comment": "预约时间",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "zjhm",
+          "data_type": "varchar",
+          "column_comment": "证件号码",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_wsjkw_120yqmrsj",
+      "table_comment": "市卫生健康委-120院前每日数据",
+      "table_description": "120院前每日数据反映了公众对急救服务的需求变化，主要应用于资源分配与优化、决策支持、预防与健康教育等。对120院前每日数据进行分析，可以不断提高120院前急救服务的质量和效率，更好地保障人民群众的生命安全和健康。",
+      "columns": [
+        {
+          "column_name": "sendamb",
+          "data_type": "int",
+          "column_comment": "派车数",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "date",
+          "data_type": "varchar",
+          "column_comment": "主键",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_wsjkw_bjshjsydjxx",
+      "table_comment": "市卫生健康委-北京市户籍生育登记信息",
+      "table_description": "北京市户籍生育登记信息是用于记录夫妻一方或双方为北京市户籍人口生育情况的重要信息，旨在提供生育服务便利并确保计划生育政策有效实施，医疗费用报销、新生儿上户口、新生儿参保和疫苗接种、公共服务与便捷化等。北京市户籍生育登记信息不仅提高了公共服务的便捷性和效率，也为北京市的生育管理和政策制定提供了有力的数据支持。",
+      "columns": [
+        {
+          "column_name": "nfxm",
+          "data_type": "varchar",
+          "column_comment": "男方姓名",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "nfzjhm",
+          "data_type": "varchar",
+          "column_comment": "男方证件号码",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "nvfxm",
+          "data_type": "varchar",
+          "column_comment": "女方姓名",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_wsjkw_dzblmjzfymx",
+      "table_comment": "市卫生健康委-电子病历门急诊(费用明细)",
+      "table_description": "电子病历门急诊(费用明细)便于患者和医疗机构了解和管理诊疗费用，主要应用于费用明细的实时记录与查询、费用管理的优化、提升患者满意度、医保系统的对接等。电子病历门急诊(费用明细)不仅提高了医院的工作效率和管理水平，还为患者提供了更加便捷、透明和高效的医疗服务。",
+      "columns": [
+        {
+          "column_name": "fee_name",
+          "data_type": "varchar",
+          "column_comment": "费用明细-名称",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "date_charge",
+          "data_type": "timestamp",
+          "column_comment": "费用明细-交费时间",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "num",
+          "data_type": "float(20,2)",
+          "column_comment": "费用明细-数量",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "b_sm_id",
+          "data_type": "varchar",
+          "column_comment": "B_SM_ID",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "price",
+          "data_type": "float(20,2)",
+          "column_comment": "费用明细-单价",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_wsjkw_dzblmjzjyjc",
+      "table_comment": "市卫生健康委-电子病历门急诊(检验检查)",
+      "table_description": "电子病历门急诊（检验检查）信息旨在提高诊疗效率、优化患者就医体验，并支持临床决策和医疗质量管理，主要应用场景为数据准确性提高、医疗决策支持、患者教育与沟通等。电子病历门急诊（检验检查）的合理运用不仅能够提高了医疗服务的效率和质量，也为患者带来了更加便捷和个性化的就医体验。",
+      "columns": [
+        {
+          "column_name": "b_sm_id",
+          "data_type": "varchar",
+          "column_comment": "B_SM_ID",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "item_name",
+          "data_type": "varchar",
+          "column_comment": "检验检查-项目名称",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "gather_date",
+          "data_type": "timestamp",
+          "column_comment": "检验检查-检验或检查日期",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_wsjkw_dzblmjzjzxx",
+      "table_comment": "市卫生健康委-电子病历门急诊(就诊信息)",
+      "table_description": "电子病历门急诊(就诊信息)旨在实现患者就诊信息的电子化管理和快速共享，主要应用于患者就诊信息管理、优化就诊流程、提高医疗质量等。电子病历门急诊(就诊信息)不仅提高了医院的工作效率和管理水平，还为患者提供了更加便捷、高效和安全的医疗服务。",
+      "columns": [
+        {
+          "column_name": "patient_id",
+          "data_type": "varchar(40)",
+          "column_comment": "患者编码",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "doctor_id",
+          "data_type": "varchar(40)",
+          "column_comment": "诊治医师执业证书编号",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "doctor_name",
+          "data_type": "varchar",
+          "column_comment": "诊治医师姓名",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "outpatient_type",
+          "data_type": "int",
+          "column_comment": "就诊类型",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "outpatient_date",
+          "data_type": "timestamp",
+          "column_comment": "就诊时间",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "b_sm_id",
+          "data_type": "varchar",
+          "column_comment": "B_SM_ID",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "patient_name",
+          "data_type": "varchar",
+          "column_comment": "姓名",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "total_expense",
+          "data_type": "float(20,2)",
+          "column_comment": "总费用",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "c4",
+          "data_type": "int4",
+          "column_comment": "挂号类别",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "c9",
+          "data_type": "varchar",
+          "column_comment": "是否抢救",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "hiscard",
+          "data_type": "varchar(100)",
+          "column_comment": "HIS卡号",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "department_name",
+          "data_type": "varchar",
+          "column_comment": "就诊科室名称",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "credential_number",
+          "data_type": "text",
+          "column_comment": "证件号码",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "hospital_name",
+          "data_type": "varchar",
+          "column_comment": "就诊医院名称",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "c6",
+          "data_type": "datetime",
+          "column_comment": "挂号时间",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "c11",
+          "data_type": "varchar",
+          "column_comment": "是否退号",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_wsjkw_dzblmjzqjxx",
+      "table_comment": "市卫生健康委-电子病历门急诊(抢救信息)",
+      "table_description": "电子病历门急诊（抢救信息）通过电子系统实时记录、传输和共享，为医生提供及时的病情分析和决策支持，确保抢救工作的及时性和有效性，主要应用于抢救数据的统计与分析、远程会诊与指导、医疗决策支持等。电子病历门急诊(抢救信息)的合理运用不仅能够提高了抢救工作的效率和质量，也为患者提供了更加便捷和个性化的医疗服务。",
+      "columns": [
+        {
+          "column_name": "b_sm_id",
+          "data_type": "varchar",
+          "column_comment": "B_SM_ID",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "c1",
+          "data_type": "varchar",
+          "column_comment": "抢救信息-抢救地点",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "c2",
+          "data_type": "varchar",
+          "column_comment": "抢救信息-抢救开始时间",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "c3",
+          "data_type": "varchar",
+          "column_comment": "抢救信息-抢救结束时间",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_wsjkw_dzblmjzsscz",
+      "table_comment": "市卫生健康委-电子病历门急诊(手术操作)",
+      "table_description": "电子病历门急诊(手术操作)通过电子病历系统实时记录、传输和共享，有助于提升手术操作的规范性和安全性，同时方便医生进行术后评估和患者随访，主要应用于手术数据的统计与分析、手术前后的沟通与协作、远程手术指导与协助等。电子病历门急诊(手术操作)不仅能够提高了手术操作的效率和质量，也为患者提供了更加便捷和个性化的医疗服务。",
+      "columns": [
+        {
+          "column_name": "operation_code",
+          "data_type": "varchar",
+          "column_comment": "手术操作-手术及操作编码(ICD-9-CM3)",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "operation_edate",
+          "data_type": "timestamp",
+          "column_comment": "手术操作-手术日期时间（完成）",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "operation_doctor",
+          "data_type": "varchar",
+          "column_comment": "手术操作-术者（手术操作医师姓名）",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "b_sm_id",
+          "data_type": "varchar",
+          "column_comment": "B_SM_ID",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "OPERATION_NAME",
+          "data_type": "varchar",
+          "column_comment": "手术操作-手术及操作名称",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "operation_date",
+          "data_type": "timestamp",
+          "column_comment": "手术操作-手术日期时间（开始）",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_wsjkw_dzblmjzyzmx",
+      "table_comment": "市卫生健康委-电子病历门急诊(医嘱明细)",
+      "table_description": "电子病历门急诊旨在实现患者就诊信息的电子化管理和快速共享，主要应用于患者就诊信息管理、优化就诊流程、提高医疗质量等。电子病历门急诊不仅提高了医院的工作效率和管理水平，还为患者提供了更加便捷、高效和安全的医疗服务。",
+      "columns": [
+        {
+          "column_name": "b_sm_id",
+          "data_type": "varchar",
+          "column_comment": "B_SM_ID",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_wsjkw_dzblmzxx",
+      "table_comment": "市卫生健康委-电子病历门诊信息",
+      "table_description": "电子病历门诊信息是指通过电子信息系统记录、存储和管理的门诊患者的医疗记录，旨在为医生提供决策支持，提高医疗服务质量和效率，主要应用场景为病历信息统计与分析、临床决策支持、数据共享与协同办公等。通过电子病历门诊信息，医疗机构能够实现更高效、更便捷、更安全的医疗服务，提升患者满意度和医疗质量。",
+      "columns": [
+        {
+          "column_name": "jzrq",
+          "data_type": "varchar",
+          "column_comment": "就诊日期",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "hzxm",
+          "data_type": "varchar",
+          "column_comment": "患者姓名",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "jzyymc",
+          "data_type": "varchar",
+          "column_comment": "就诊医院名称",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_wsjkw_mzghxx",
+      "table_comment": "门诊挂号信息",
+      "table_description": "门诊挂号信息是指患者为获取医疗服务而在医疗机构进行的预约或现场登记信息，主要应用于优化医疗资源分配、患者信息管理、问诊管理等。",
+      "columns": [
+        {
+          "column_name": "xm",
+          "data_type": "varchar",
+          "column_comment": "姓名",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "ghsj",
+          "data_type": "datetime",
+          "column_comment": "挂号时间",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "zlf",
+          "data_type": "decimal(10,3)",
+          "column_comment": "诊疗费",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "jmhzlf",
+          "data_type": "decimal(10,3)",
+          "column_comment": "减免后诊疗费",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_wsjkw_mzkdxx",
+      "table_comment": "市卫生健康委-门诊开单信息",
+      "table_description": "门诊开单信息是患者在医院门诊部就诊后，医生为其开具的诊断、治疗、检查或药品等项目的详细记录，主要应用于门诊收费管理、患者信息管理、数据统计与分析等。",
+      "columns": [
+        {
+          "column_name": "patno",
+          "data_type": "varchar",
+          "column_comment": "门诊患者编码",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "applydoctorname",
+          "data_type": "varchar",
+          "column_comment": "开单医师姓名",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "applydatetime",
+          "data_type": "varchar",
+          "column_comment": "开单时间",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_wsjkw_swdjxx",
+      "table_comment": "市卫生健康委-死亡登记信息",
+      "table_description": "死亡登记信息用于注销户口和缴交居民身份证，确保户籍信息的准确性，主要应用于社会保障与福利处理、公共卫生与疾病防控、家庭关系与法律事务等。死亡登记信息对于维护社会秩序、保障公民权益、促进社会发展具有重要意义。",
+      "columns": [
+        {
+          "column_name": "death_date",
+          "data_type": "varchar",
+          "column_comment": "死亡日期",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "deathplace",
+          "data_type": "varchar",
+          "column_comment": "填报单位名称",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "icd",
+          "data_type": "varchar",
+          "column_comment": "根本死因",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "ssid",
+          "data_type": "varchar",
+          "column_comment": "证件号码",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "name",
+          "data_type": "varchar",
+          "column_comment": "死者姓名",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_wsjkw_xxzgrxxjxxxgjkqk",
+      "table_comment": "市卫生健康委-献血者个人信息及献血相关健康情况",
+      "table_description": "献血者个人信息及献血相关健康情况确保血液安全并保障献血者健康，主要应用于紧急医疗用血保障、献血者管理与服务、血液安全与质量监控、献血宣传与教育等。",
+      "columns": [
+        {
+          "column_name": "zjhm",
+          "data_type": "varchar",
+          "column_comment": "证件号码",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "xm",
+          "data_type": "varchar",
+          "column_comment": "姓名",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_wsjkw_yhryxx",
+      "table_comment": "市卫生健康委-医护人员信息",
+      "table_description": "医护人员信息不仅体现了医护人员的专业素养和技能水平，也是保障医疗服务质量和患者安全的重要依据，主要应用于身份认证与权限管理、紧急响应与协调、数据统计与分析。医护人员信息在医疗行业中具有广泛的应用场景，对于提高医疗服务质量、优化人力资源配置、加强医疗决策支持等方面都具有重要意义。",
+      "columns": [
+        {
+          "column_name": "gh",
+          "data_type": "varchar（16）",
+          "column_comment": "工号",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "xm",
+          "data_type": "varchar",
+          "column_comment": "姓名",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "zgbm",
+          "data_type": "varchar（50）",
+          "column_comment": "职工编码",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "sfbshm",
+          "data_type": "varchar",
+          "column_comment": "身份标识-号码",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_wsjkw_ypjbxxak",
+      "table_comment": "市卫生健康委-药品基本信息（市属医院）",
+      "table_description": "药品基本信息（市属医院）的主要应用场景为药品管理、临床用药、费用管理、信息统计与分析等。充分利用药品基本信息（市属医院），可以帮助医院提高药品管理水平，确保患者用药安全有效，降低运营成本，提升医疗服务质量。",
+      "columns": [
+        {
+          "column_name": "universalname",
+          "data_type": "varchar",
+          "column_comment": "药品通用名称",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "form",
+          "data_type": "varchar",
+          "column_comment": "剂型",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "brandname",
+          "data_type": "varchar",
+          "column_comment": "商品名",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "dstcode",
+          "data_type": "varchar",
+          "column_comment": "医院",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "spec",
+          "data_type": "varchar",
+          "column_comment": "规格",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "packingspec",
+          "data_type": "varchar",
+          "column_comment": "包装规格",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "maxprcie",
+          "data_type": "varchar",
+          "column_comment": "最高零售单价",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "createtime",
+          "data_type": "timestamp",
+          "column_comment": "创建日期",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "manent",
+          "data_type": "varchar",
+          "column_comment": "生产企业",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_wsjkw_yszyzcxx",
+      "table_comment": "医师执业注册信息",
+      "table_description": "医师执业注册信息由医师提交相关申请材料和证明文件，经所在地县级以上人民政府卫生行政部门审核通过后，由国务院卫生行政部门统一印制并颁发的医师执业证书上载明，主要应用于医疗机构管理、医疗监管与执法、公众信息查询与监督等。",
+      "columns": [
+        {
+          "column_name": "doctor_workcode",
+          "data_type": "varchar",
+          "column_comment": "执业证书编码",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "doctor_certcode",
+          "data_type": "varchar",
+          "column_comment": "资格证书编码",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "doctor_parcticescope",
+          "data_type": "varchar",
+          "column_comment": "执业范围",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "doctor_workdate",
+          "data_type": "varchar",
+          "column_comment": "发证日期",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "doctor_idcard",
+          "data_type": "varchar",
+          "column_comment": "证件号码",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_wsjkw_yyghxxjzrqwcr",
+      "table_comment": "市卫生健康委-预约挂号信息",
+      "table_description": "预约挂号信息是为了给患者提供便利，开通网上预约、电话预约等渠道，主要应用于患者就医便利、医疗资源优化、及远程医疗服务等方面。预约挂号信息为患者提供了便利的就医途径，帮助医疗机构更好的分配医疗资源。",
+      "columns": [
+        {
+          "column_name": "jzsj",
+          "data_type": "varchar",
+          "column_comment": "就诊时间",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "yymc",
+          "data_type": "varchar",
+          "column_comment": "医院名称",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_wsjkw_zyjlxx",
+      "table_comment": "市卫生健康委-住院记录信息",
+      "table_description": "住院记录信息是指患者在医院住院期间产生的详细医疗记录，用于患者病情的追踪和医疗质量的评估，主要应用于患者诊疗与管理、医保与费用管理、医疗纠纷与法律诉讼等。住院记录信息在医疗服务的各个环节中都具有重要的应用价值，是医院管理和医疗服务不可或缺的一部分。",
+      "columns": [
+        {
+          "column_name": "sfzh",
+          "data_type": "varchar",
+          "column_comment": "身份证号",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "jgmc",
+          "data_type": "varchar",
+          "column_comment": "机构名称",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "xm",
+          "data_type": "varchar",
+          "column_comment": "姓名",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "cysjs",
+          "data_type": "varchar",
+          "column_comment": "出院时间（时）",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "rysjs",
+          "data_type": "varchar",
+          "column_comment": "入院时间（时）",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_xfb_lfrxx",
+      "table_comment": "市信访办-来访人信息",
+      "table_description": "来访人信息数据是指在各种场合下，如企业、政府机关、学校、医院、社区等，对来访人员的相关信息进行收集、记录和管理的数据。主要包括来访人基本信息、身份验证、访问目的、访问时间、访问地点等，主要用于企事业单位管理、旅游住宿场所、公共卫生领域等。",
+      "columns": [
+        {
+          "column_name": "hjdz",
+          "data_type": "varchar",
+          "column_comment": "户籍地址",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "sjhm",
+          "data_type": "varchar",
+          "column_comment": "手机号",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "zjhm",
+          "data_type": "varchar",
+          "column_comment": "证件号码",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "xfjid",
+          "data_type": "varchar(80)",
+          "column_comment": "信访件id",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_xfb_xfrxxwx",
+      "table_comment": "市信访办-信访人信息（网信）",
+      "table_description": "信访人信息（网信）有助于政府机关及时了解民意、掌握民情，并依法依规对信访事项进行调查、处理和答复，主要应用于信访事项提交与受理、个性化服务推送、优化信访流程、提升信访服务质量等。",
+      "columns": [
+        {
+          "column_name": "xfjid",
+          "data_type": "varchar(80)",
+          "column_comment": "信访件id",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "zjhm",
+          "data_type": "varchar",
+          "column_comment": "证件号码",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_ybj_syjtdyhzbpdf",
+      "table_comment": "市医保局-生育津贴待遇核准表（PDF）",
+      "table_description": "生育津贴待遇核准表保障了公民的个人利益，做到了有法可依，主要应用于女职工生育津贴的计算与核准、生育保险基金的申请与管理、女职工权益的保障等。生育津贴待遇核准表，可以确保生育津贴的准确计算和及时支付，促进女职工权益的保障和人口稳定的发展。",
+      "columns": [
+        {
+          "column_name": "register_date",
+          "data_type": "timestamp",
+          "column_comment": "申报日期",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "id_card",
+          "data_type": "varchar",
+          "column_comment": "申领人居民身份号码",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_ybj_zgylcbjfxx",
+      "table_comment": "市医保局-职工医疗参保缴费信息",
+      "table_description": "职工医疗参保缴费信息是职工享受医疗保险待遇和报销医疗费用的重要依据，主要应用于个人医保信息查询与管理、医保服务优化与便捷化、医保服务优化与便捷化等。职工医疗参保缴费信息不仅反应了医保服务的效率和便捷性，还为医保制度的稳健运行提供了数据保障。",
+      "columns": [
+        {
+          "column_name": "idcard",
+          "data_type": "varchar",
+          "column_comment": "社会保障号码",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "feemonth",
+          "data_type": "numeric",
+          "column_comment": "缴费月",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_yjglj_csaqyhtz",
+      "table_comment": "市应急管理局-城市安全隐患台账",
+      "table_description": "城市安全隐患台账主要用于应急响应与救援、公共安全教育、企业安全管理、灾害预防与减灾、风险评估与管理、城市规划和建设等重点应用场景，安全隐患台账数据可以为城市管理者、企业和市民提供重要的安全信息，提高整个城市的安全管理水平。",
+      "columns": [
+        {
+          "column_name": "jc_dz",
+          "data_type": "varchar",
+          "column_comment": "检查地址",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "yh_ms",
+          "data_type": "varchar",
+          "column_comment": "隐患名称",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_yjglj_yhbzjylsxkz",
+      "table_comment": "市应急管理局-烟花爆竹经营（零售）许可证",
+      "table_description": "烟花爆竹经营（零售）许可证是允许持证人在指定地点和时间合法零售烟花爆竹的法定授权证书，主要应用于合法经营烟花爆竹业务、烟花爆竹零售业务的合法性、安全性和规范性方面。",
+      "columns": [
+        {
+          "column_name": "shxydm",
+          "data_type": "varchar",
+          "column_comment": "统一社会信用代码",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "dwdz",
+          "data_type": "varchar",
+          "column_comment": "注册地址",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_ypjdglj_bjsydypxx",
+      "table_comment": "市药品监督管理局-北京市药店药品信息",
+      "table_description": "北京市药店药品信息主要用于药品监管、药品供应链管理、药品存库管理、药品价格监控、药品质量追溯等场景的应用。",
+      "columns": [
+        {
+          "column_name": "if_base_drug",
+          "data_type": "varchar",
+          "column_comment": "是否医保范畴",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "drug_name",
+          "data_type": "varchar",
+          "column_comment": "通用名",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_yry_ryztb",
+      "table_comment": "市人力社保局-本市城镇劳动力就业管理信息人员信息",
+      "table_description": "本市城镇劳动力就业管理信息人员信息有助于提高城镇劳动力就业管理的效率和质量，促进和谐劳动关系的构建，主要应用于劳动者个人基本信息查询、用人单位对求职人员信用信息查询、政府部门工作人员的信息需求",
+      "columns": [
+        {
+          "column_name": "grbh",
+          "data_type": "varchar",
+          "column_comment": "",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "sfzhm",
+          "data_type": "varchar",
+          "column_comment": "身份证号码",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_zfcxjsw_fdckfxmdjwj",
+      "table_comment": "市住房城乡建设委-房地产开发项目登记文件",
+      "table_description": "房地产开发项目登记文件可以对开发项目进行管理，主要应用于保障项目合法性、促进项目融资和贷款、加强项目监管和管理、辅助投资者决策、支持土地使用权交易、解决项目纠纷等。房地产开发项目登记文件不仅是项目开发和运营过程中的重要参考，也是保障项目顺利进行和各方权益的重要保障。",
+      "columns": [
+        {
+          "column_name": "xmmc",
+          "data_type": "varchar",
+          "column_comment": "项目名称",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "qymc",
+          "data_type": "varchar",
+          "column_comment": "企业名称",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_zfcxjsw_fwzlhtdjbaxx",
+      "table_comment": "市住房城乡建设委-房屋租赁合同登记备案信息",
+      "table_description": "房屋租赁合同登记备案信息旨在确保租赁交易的真实有效，保障租赁双方的合法权益，维护房屋租赁市场的正常秩序，主要应用于维护国家房地产政策、为后续房屋买卖提供法律依据、加强城市社会治安综合治理等。房屋租赁合同登记备案信息有助于加强城市社会治安综合治理，促进租赁市场健康发展。",
+      "columns": [
+        {
+          "column_name": "dz",
+          "data_type": "varchar",
+          "column_comment": "地址",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "chuzr",
+          "data_type": "varchar",
+          "column_comment": "出租人姓名",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "qysj",
+          "data_type": "varchar",
+          "column_comment": "起始时间",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_ql_zfcxjsw_zlbaxx",
+      "table_comment": "市住房城乡建设委-租赁备案信息",
+      "table_description": "租赁备案信息主要应用于保障租赁双方权益、管理房屋租赁信息、规范市场秩序等。租赁备案信息的管理不仅有助于明确租赁双方的法律行为，还能为调解房屋租赁纠纷提供法律依据，确保房屋租赁市场的健康发展。",
+      "columns": [
+        {
+          "column_name": "fwdz",
+          "data_type": "varchar",
+          "column_comment": "房屋地址",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "fzmc",
+          "data_type": "varchar",
+          "column_comment": "房主名称",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "fzzjhm",
+          "data_type": "varchar",
+          "column_comment": "房主证件号码",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "qzrq",
+          "data_type": "timestamp",
+          "column_comment": "起租日期",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "jzrq",
+          "data_type": "timestamp",
+          "column_comment": "截止日期",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_qljh_fgjjglzx_grzfgjjjcmxxx",
+      "table_comment": "住房公积金管理中心-个人住房公积金缴存明细信息",
+      "table_description": "个人住房公积金缴存明细信息主要是为了方便对的公积金缴存信息查询，主要应哟用于申请贷款、提取公积金、财务规划、办理业务等。个人住房公积金缴存明细信息在促进住房领域和金融领域发展中的起到了重要作用。",
+      "columns": [
+        {
+          "column_name": "zjhm",
+          "data_type": "varchar",
+          "column_comment": "缴存人证件号码",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "hbjny",
+          "data_type": "varchar",
+          "column_comment": "汇补缴年月",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "dwmc",
+          "data_type": "varchar",
+          "column_comment": "缴存人所在单位名称",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "grzhye",
+          "data_type": "numeric(18.2)",
+          "column_comment": "缴存人账户当前余额",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "xingming",
+          "data_type": "varchar",
+          "column_comment": "缴存人姓名",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_qljh_gaj_cjrzytxzxx",
+      "table_comment": "市公安局-残疾人专用通行证信息",
+      "table_description": "残疾人专用通行证是为残疾人驾驶的车辆提供便利的一种证件，主要用于交通限行豁免、停车便利、通行优先、辅助设备使用、车辆改装认可等多个场景的应用，保障残疾人权益、提供交通出行便利和促进社会无障碍环境建设中的重要作用。",
+      "columns": [
+        {
+          "column_name": "sfzmhm",
+          "data_type": "varchar",
+          "column_comment": "身份证明号码",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "syr",
+          "data_type": "varchar",
+          "column_comment": "所有人",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_qljh_gaj_hjrkzxbgxx",
+      "table_comment": "市公安局-户籍人口主项变更信息",
+      "table_description": "户籍人口主项变更信息针对户籍人口的主要信息项进行变更或更正的信息记录，主要应用于政府管理高效化、公共服务优化等。户籍人口主项变更信息结合相关政策和措施，可以为社会和个人带来更多便利。",
+      "columns": [
+        {
+          "column_name": "bggzhnr",
+          "data_type": "varchar",
+          "column_comment": "变更更正后内容",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "bggzxmmc",
+          "data_type": "varchar",
+          "column_comment": "变更更正数据项名称",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "bggzlb",
+          "data_type": "varchar",
+          "column_comment": "变更更正类别",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "bggzqnr",
+          "data_type": "varchar",
+          "column_comment": "变更更正前内容",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "gmsfhm",
+          "data_type": "varchar",
+          "column_comment": "公民身份号码",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_qljh_gaj_jzzxx",
+      "table_comment": "市公安局_市公安局居住证信息",
+      "table_description": "北京居住证是在北京居住的非京籍人员需要办理的一种证件，它关系到个人在京的居住、工作、学习等多方面的权益。主要用于劳动就业、社会保障、住房住房公积金、义务教育、公共卫生服务、法律援助、积分落户等多个重点应用场景。",
+      "columns": [
+        {
+          "column_name": "sfzh",
+          "data_type": "varchar",
+          "column_comment": "身份证号",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "xm",
+          "data_type": "varchar",
+          "column_comment": "姓名",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "yxqx",
+          "data_type": "varchar",
+          "column_comment": "有效期限",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "xxdz",
+          "data_type": "varchar",
+          "column_comment": "详细地址",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_qljh_gjrmfy_sxbzxrxx",
+      "table_comment": "市高级人民法院-失信被执行人信息",
+      "table_description": "失信被执行人信息揭示违约行为，警示社会，维护诚信秩序，主要应用于金融机构信贷决策、限制高消费行为、社会信用体系建设、政府监管和执法、法律诉讼和纠纷解决等。失信被执行人信息不仅有助于维护社会公平正义和市场经济秩序，也有助于推动社会诚信体系的建设和完善。",
+      "columns": [
+        {
+          "column_name": "c_zjhm",
+          "data_type": "varchar",
+          "column_comment": "证件号码",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "c_mc",
+          "data_type": "varchar",
+          "column_comment": "被执行人名称",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "c_ah",
+          "data_type": "varchar",
+          "column_comment": "案号",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_qljh_jtw_batccxx",
+      "table_comment": "市交通委-备案停车场信息",
+      "table_description": "备案停车场信息主要为了便于市民查询停车场的具体位置，主要用于停车引导、交通规划、收费管理、智能交通、停车预约服务等多个应用场景。备案停车场信息的有效管理和应用，对于提高城市停车管理效率、优化交通环境、提升居民生活质量等方面都具有重要意义。",
+      "columns": [
+        {
+          "column_name": "park_name",
+          "data_type": "varchar",
+          "column_comment": "停车场名称",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "enterprise_name",
+          "data_type": "varchar",
+          "column_comment": "经营企业",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_qljh_jtw_czcljbxx",
+      "table_comment": "市交通委-出租车辆基本信息",
+      "table_description": "出租车辆信息为群众安全出行提供了专业保障，主要应用于日常出行、旅游服务、交通监管等，出租车辆信息有助于提高交通管理效率、保障道路安全。",
+      "columns": [
+        {
+          "column_name": "net_yehu_name",
+          "data_type": "varchar",
+          "column_comment": "入网企业名称",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "model",
+          "data_type": "varchar",
+          "column_comment": "车型",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "plate_no",
+          "data_type": "varchar",
+          "column_comment": "车牌号",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_qljh_mzj_dsrryxx",
+      "table_comment": "市民政局-低收入人员信息",
+      "table_description": "低收入人员信息是制定和实施相关救助政策的重要依据，主要应用于住房保障、就业援助、慈善救助与社会力量参与等。低收入人员信息对于提供针对性的社会救助、优化资源配置、促进公平与效率具有重要意义。",
+      "columns": [
+        {
+          "column_name": "jcsj_dsrryxx07",
+          "data_type": "varchar",
+          "column_comment": "姓名",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "jcsj_dsrryxx08",
+          "data_type": "numeric",
+          "column_comment": "享受待遇年份",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "jcsj_dsrryxx06",
+          "data_type": "varchar",
+          "column_comment": "身份证号码",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "jcsj_dsrryxx09",
+          "data_type": "varchar",
+          "column_comment": "享受待遇月份",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "jcsj_dsrryxx10",
+          "data_type": "varchar",
+          "column_comment": "享受金额",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_qljh_mzj_hydjbsznxx",
+      "table_comment": "市民政局-婚姻登记办事指南信息",
+      "table_description": "用于指导公民如何进行婚姻登记的一系列信息和数据，主要是为了让大众了解婚姻登记办事流程，主要应用于个人婚姻筹备、婚姻登记机关工作指导、政策宣传与普及等。",
+      "columns": [
+        {
+          "column_name": "process",
+          "data_type": "varchar",
+          "column_comment": "办理流程",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "item",
+          "data_type": "varchar",
+          "column_comment": "服务项目",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "handle_condition",
+          "data_type": "varchar",
+          "column_comment": "办理条件",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "material",
+          "data_type": "varchar",
+          "column_comment": "所需材料",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "name",
+          "data_type": "varchar",
+          "column_comment": "中文名称",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_qljh_mzj_hydjsyjg",
+      "table_comment": "市民政局-婚姻登记机关",
+      "table_description": "婚姻登记机关是依法履行婚姻登记行政职能的机关，负责办理结婚登记、离婚登记等手续，确保婚姻登记的合法性和有效性，主要应用于婚姻登记、婚姻状况证明、婚姻咨询与指导、婚姻纠纷调解等。婚姻登记机关为人们提供了便捷、高效的婚姻服务。",
+      "columns": [
+        {
+          "column_name": "jcsj_hydjsyjg01",
+          "data_type": "varchar",
+          "column_comment": "登记机关名称",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "jcsj_hydjsyjg07",
+          "data_type": "varchar",
+          "column_comment": "地址",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "jcsj_hydjsyjg03",
+          "data_type": "varchar",
+          "column_comment": "联系电话",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_qljh_mzj_hydjxx",
+      "table_comment": "北京市民政局_婚姻登记信息",
+      "table_description": "婚姻登记信息确认婚姻关系、保障婚姻当事人权益的重要依据，也是婚姻登记机关进行婚姻登记管理的基础数据，主要应用于法律与行政程序、社会服务与福利、数字化与智能化服务等。婚姻登记信息在现代社会治理和服务起到了重要作用。",
+      "columns": [
+        {
+          "column_name": "marry_type",
+          "data_type": "varchar",
+          "column_comment": "登记类型",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "op_date",
+          "data_type": "timestamp",
+          "column_comment": "登记日期",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "cert_num_man",
+          "data_type": "varchar",
+          "column_comment": "男方证件号码",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_qljh_scjdglj_scjdglgtgshxx",
+      "table_comment": "市市场监督管理局-市场监督管理个体工商户信息",
+      "table_description": "市场监督管理个体工商户信息不仅有助于规范个体工商户的经营行为，也为其在市场中的合法运营提供了重要依据。主要应用于风险分类与精准监管、政府监管领域应用、惠民便企服务、社会服务与资源共享等。市场监督管理个体工商户信息不仅提高了市场监管的效率和效果，也促进了小微企业的健康发展和社会服务的优化。",
+      "columns": [
+        {
+          "column_name": "oper",
+          "data_type": "varchar",
+          "column_comment": "经营者姓名",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "indi_name",
+          "data_type": "varchar",
+          "column_comment": "字号名称",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "op_loc",
+          "data_type": "varchar",
+          "column_comment": "经营场所",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_qljh_scjdglj_scjdglqydjzcjbxx",
+      "table_comment": "市市场监督管理局-市场监督管理企业登记注册基本信息",
+      "table_description": "市场监督管理企业登记注册基本信息是企业合法经营和对外展示的重要凭证，主要应用于政府决策支持、优化营商环境、监管执法等。市场监督管理企业登记注册基本信息有助于提升市场监督管理的效率和质量，促进市场主体的健康有序发展。",
+      "columns": [
+        {
+          "column_name": "uni_scid",
+          "data_type": "varchar",
+          "column_comment": "统一社会信用代码",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "dom",
+          "data_type": "varchar",
+          "column_comment": "经营场所",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "business_scope",
+          "data_type": "varchar",
+          "column_comment": "经营范围",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "ent_name",
+          "data_type": "varchar",
+          "column_comment": "企业名称",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_qljh_wsjkw_csyxzm",
+      "table_comment": "市卫生健康委-出生医学证明",
+      "table_description": "出生医学证明是个人身份和权益的重要证明文件，主要应用于教育入学、医疗保健、社会福利申领等。出生医学证明",
+      "columns": [
+        {
+          "column_name": "delivery_org",
+          "data_type": "varchar",
+          "column_comment": "医疗机构名称",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "mother_card",
+          "data_type": "varchar",
+          "column_comment": "母亲有效身份证件号码",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "date_issued",
+          "data_type": "date",
+          "column_comment": "签发日期",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "baby_name",
+          "data_type": "varchar",
+          "column_comment": "新生儿姓名",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "father_card",
+          "data_type": "varchar",
+          "column_comment": "父亲有效身份证件号码",
+          "is_foreign_key": false
+        }
+      ]
+    },
+    {
+      "table_name": "o_qljh_zfgjjglzx_grzfgjjjcxx",
+      "table_comment": "住房公积金管理中心-个人住房公积金缴存总账信息",
+      "table_description": "个人住房公积金缴存总账信息是指记录个人住房公积金缴存情况的详细账目，是指记录个人住房公积金缴存情况的详细账目，主要应用于公积金贷款申请、个人信用评估、公积金提取、单位缴存管理等。个人住房公积金缴存总账信息不仅有助于提高公积金管理的效率和准确性，还有助于保障公积金缴存人的合法权益。",
+      "columns": [
+        {
+          "column_name": "xingming",
+          "data_type": "varchar",
+          "column_comment": "住房公积金缴存人姓名",
+          "is_foreign_key": true,
+          "references_table": "o_qljh_gaj_jzzxx",
+          "references_column": "xm"
+        },
+        {
+          "column_name": "zjhm",
+          "data_type": "varchar",
+          "column_comment": "缴存人证件号码",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "dwmc",
+          "data_type": "varchar",
+          "column_comment": "缴存人所在单位名称",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "grzhye",
+          "data_type": "numeric（18，2）",
+          "column_comment": "缴存人账户当前余额",
+          "is_foreign_key": false
+        },
+        {
+          "column_name": "jzny",
+          "data_type": "varchar",
+          "column_comment": "缴存人缴至年月",
+          "is_foreign_key": false
+        }
+      ]
+    }
+  ],
+  "foreign_keys": [
+    {
+      "table": "o_qljh_zfgjjglzx_grzfgjjjcxx",
+      "column": "xingming",
+      "references": {
+        "table": "o_qljh_gaj_jzzxx",
+        "column": "xm"
+      }
+    }
+  ]
+}

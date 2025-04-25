@@ -1,0 +1,26 @@
+{
+  "sql": "SELECT DISTINCT shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC, shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH FROM shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374 WHERE shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID = '12345' UNION SELECT DISTINCT shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC, shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH FROM shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374 WHERE shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID = '67890' UNION SELECT DISTINCT shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号, shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称 FROM shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076 WHERE shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址 LIKE '%上海%'",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从两个不同的表中查询特定的许可证或专柜信息，并将结果合并为一个结果集。主要关注的是许可证编号（`XKZBH`）和经营主体名称（`JYZMC`）或专柜名称（`专柜名称`）和专用标识牌号（`专用标识牌号`），且查询条件涉及特定的许可证 ID 或地址包含“上海”的记录。\n\n---\n\n### **详细描述**  \n1. **涉及的表**：\n   - `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374`（市场监督管理局餐饮服务许可证情况信息表）  \n     - 列：`JYZMC`（经营主体名称）、`XKZBH`（许可证编号）、`XKZID`（许可证 ID）  \n   - `shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076`（民族宗教委规范化清真食品专柜归属数据表）  \n     - 列：`专用标识牌号`（专用标识牌号）、`专柜名称`（专柜名称）、`地址`（地址）  \n\n2. **查询条件**：\n   - 第一部分（`UNION` 前）：  \n     - 查询 `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374` 表中 `XKZID` 为 `'12345'` 或 `'67890'` 的记录，返回 `JYZMC` 和 `XKZBH`。  \n   - 第二部分（`UNION` 后）：  \n     - 查询 `shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076` 表中 `地址` 包含“上海”的记录，返回 `专用标识牌号` 和 `专柜名称`。  \n\n3. **结果合并**：\n   - 使用 `UNION` 合并两个查询的结果，并自动去重（`DISTINCT` 确保每部分查询本身不重复）。\n\n---\n\n### **业务场景**  \n1. **许可证信息查询**：  \n   - 可能用于市场监管部门查询特定餐饮服务许可证（`XKZID = '12345'` 或 `'67890'`）的经营主体和许可证编号。  \n2. **清真食品专柜查询**：  \n   - 可能用于民族宗教事务管理部门查询上海市范围内的清真食品专柜信息（如合规检查或统计）。  \n3. **数据整合分析**：  \n   - 可能需要同时获取餐饮许可证和清真食品专柜信息，用于跨部门监管或政策制定。  \n\n---\n\n### **用户描述**  \n1. **市场监管人员**：  \n   - 需求：快速检索特定许可证（如 `XKZID = '12345'`）对应的餐饮企业名称和许可证编号，用于现场检查或合规验证。  \n   - 问题：许可证信息分散在不同系统中，需通过联合查询获取完整数据。  \n2. **民族宗教事务管理人员**：  \n   - 需求：统计上海市内所有规范化清真食品专柜的名称和标识牌号，确保其符合宗教食品管理规定。  \n   - 问题：数据分散在不同表中，需通过模糊匹配（`LIKE '%上海%'`）筛选地址。  \n3. **数据分析人员**：  \n   - 需求：合并餐饮许可证和清真专柜数据，分析两者在特定区域（如上海）的关联性。  \n   - 问题：需跨表查询并统一结果格式（如 `JYZMC` 和 `专柜名称` 对应经营主体名称）。  \n\n---\n\n### **总结**  \n该 SQL 语句是一个典型的跨表联合查询，用于满足多部门或多条件下的数据检索需求，涉及餐饮许可管理和清真食品监管两大业务场景。",
+  "natural_language_query": "市民反映，我在市场监管系统里查两个餐饮许可证的信息，编号是12345和67890的，想看看对应的商家名字和许可证号是多少。另外还想了解一下上海那边清真食品专柜的情况，主要是专柜名字和他们的标识牌号。这两个信息能不能一起查出来？因为最近要做一个跨部门的合规检查，需要把餐饮许可和清真食品专柜的数据都整理出来。对了，清真专柜只要地址里带\"上海\"的就行。现在系统里数据太分散了，每次都要分开查特别麻烦，能不能一次性查出来啊？",
+  "results": 0,
+  "sql skeleton": "select distinct _ ._ as _ ,_ ._ as _ from ( select _ as _ ,_ as _ from _ where _ = _ union select _ as _ ,_ as _ from _ where _ = _ union select _ as _ ,_ as _ from _ where _ = _ ) _",
+  "database": "餐饮美食",
+  "tables": {
+    "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374": [
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYXM",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.FZRQ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.YXQZ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.DWMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.EXCHANGETIME"
+    ],
+    "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076": [
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址"
+    ]
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "sql": "SELECT \"fengtaiqufengtaiquxingjijiudian1397.星级酒店明细\", \"shiguihuaziranziyuanweiqingzhensi1515.HNAME\" FROM \"fengtaiqufengtaiquxingjijiudian1397\" JOIN \"shiguihuaziranziyuanweiqingzhensi1515\" ON \"fengtaiqufengtaiquxingjijiudian1397.UNnamed: 6\" = \"shiguihuaziranziyuanweiqingzhensi1515.HID\";",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从两个表中联合查询数据，获取丰台区星级酒店明细表中的酒店名称（或相关字段）和自然资源规划委清镇司1515表中的酒店名称（HNAME），并通过特定的关联条件将两个表的数据连接起来。\n\n---\n\n### **详细描述**  \n1. **涉及的表**：  \n   - `fengtaiqufengtaiquxingjijiudian1397`（丰台区星级酒店明细表）：可能包含丰台区星级酒店的基本信息。  \n   - `shiguihuaziranziyuanweiqingzhensi1515`（自然资源规划委清镇司1515表）：可能包含与酒店相关的规划或管理信息，如酒店ID（HID）和酒店名称（HNAME）。  \n\n2. **查询的列**：  \n   - `fengtaiqufengtaiquxingjijiudian1397.星级酒店明细`：丰台区星级酒店明细表中的某一列，可能是酒店名称或其他标识信息。  \n   - `shiguihuaziranziyuanweiqingzhensi1515.HNAME`：自然资源规划委清镇司1515表中的酒店名称字段。  \n\n3. **关联条件**：  \n   - 通过 `fengtaiqufengtaiquxingjijiudian1397.UNnamed: 6`（丰台区星级酒店明细表中的未命名第6列）与 `shiguihuaziranziyuanweiqingzhensi1515.HID`（自然资源规划委清镇司1515表中的酒店ID）进行关联。  \n   - 这表明两个表通过酒店ID（或类似标识）建立关系，可能是为了补充或匹配酒店信息。  \n\n4. **查询逻辑**：  \n   - 该查询是一个内连接（`JOIN`），仅返回两个表中匹配成功的记录。  \n   - 查询结果将包含丰台区星级酒店明细表中的“星级酒店明细”字段和自然资源规划委清镇司1515表中的“HNAME”字段。  \n\n---\n\n### **业务场景**  \n1. **数据整合**：  \n   - 可能需要将丰台区星级酒店的数据与另一个规划或管理部门的酒店数据进行匹配，以补充或验证信息。  \n   - 例如，丰台区旅游局可能需要核对星级酒店名单是否与自然资源规划委的登记信息一致。  \n\n2. **信息核对**：  \n   - 检查两个系统中酒店的命名是否一致（如“星级酒店明细”和“HNAME”是否匹配）。  \n   - 可能用于数据清洗或标准化，确保酒店名称在不同系统中统一。  \n\n3. **业务协同**：  \n   - 如果自然资源规划委负责酒店资质审批，而丰台区旅游局负责星级评定，此查询可能用于关联审批结果与星级评定信息。  \n\n---\n\n### **用户描述**  \n1. **用户角色**：  \n   - 可能是丰台区旅游局的行政人员、数据分析师，或自然资源规划委的管理人员。  \n\n2. **实际需求或问题**：  \n   - **需求1**：核对丰台区星级酒店名单是否与上级管理部门（如自然资源规划委）的登记信息一致，确保数据准确性。  \n   - **需求2**：补充丰台区星级酒店的管理信息（如规划许可、资质状态等），以便进行综合评估或报告生成。  \n   - **问题**：两个系统的酒店标识可能不一致（如一个用名称，一个用ID），需要通过关联字段（如HID）匹配数据。  \n\n3. **可能的后续操作**：  \n   - 如果发现不一致，可能需要手动修正数据或联系相关部门确认。  \n   - 将查询结果导出为报表，用于内部审查或政策制定。  \n\n---\n\n### **总结**  \n该 SQL 语句主要用于跨部门数据关联查询，确保酒店信息的一致性，可能服务于数据整合、业务协同或行政管理等场景。用户希望通过关联两个表的酒店ID，获取更完整的酒店信息，以支持决策或数据维护工作。",
+  "natural_language_query": "市民反映，丰台区这边有一些星级酒店的信息好像和上级管理部门登记的对不上。我是旅游局的工作人员，最近在做星级酒店的年审工作，发现我们系统里记录的\"丽枫酒店\"在规划委那边查到的名字是\"丽枫酒店(丰台分店)\"，这种名字不一致的情况挺多的。我们想核对一下全区所有星级酒店在我们系统和规划委系统的登记信息是否一致，特别是酒店名称这块。因为我们系统里是用编号来标识酒店的，不知道规划委那边是不是也用了相同的编号体系。能不能帮忙查一下两边系统中酒店信息的匹配情况？主要是想看看有没有登记不一致或者遗漏的酒店，好让我们及时更新数据。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "fengtaiqufengtaiquxingjijiudian1397": [
+      "fengtaiqufengtaiquxingjijiudian1397.星级酒店明细",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 1",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 2",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 3",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 4",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 5",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 6"
+    ],
+    "shiguihuaziranziyuanweiqingzhensi1515": [
+      "shiguihuaziranziyuanweiqingzhensi1515.HID",
+      "shiguihuaziranziyuanweiqingzhensi1515.FATHERID",
+      "shiguihuaziranziyuanweiqingzhensi1515.HNAME",
+      "shiguihuaziranziyuanweiqingzhensi1515.OTHERNAME",
+      "shiguihuaziranziyuanweiqingzhensi1515.CATEGORY",
+      "shiguihuaziranziyuanweiqingzhensi1515.SUBCATEGOR",
+      "shiguihuaziranziyuanweiqingzhensi1515.COUNTYNAME",
+      "shiguihuaziranziyuanweiqingzhensi1515.STREETNAME",
+      "shiguihuaziranziyuanweiqingzhensi1515.DYNASTY",
+      "shiguihuaziranziyuanweiqingzhensi1515.SUBDYNASTY",
+      "shiguihuaziranziyuanweiqingzhensi1515.ADDRESS",
+      "shiguihuaziranziyuanweiqingzhensi1515.RANK",
+      "shiguihuaziranziyuanweiqingzhensi1515.BATCH",
+      "shiguihuaziranziyuanweiqingzhensi1515.PUBTIME",
+      "shiguihuaziranziyuanweiqingzhensi1515.USERS",
+      "shiguihuaziranziyuanweiqingzhensi1515.PURPOSE",
+      "shiguihuaziranziyuanweiqingzhensi1515.OWNERSHIP",
+      "shiguihuaziranziyuanweiqingzhensi1515.STATEEVALU",
+      "shiguihuaziranziyuanweiqingzhensi1515.SINGLERELI",
+      "shiguihuaziranziyuanweiqingzhensi1515.PROTECTION",
+      "shiguihuaziranziyuanweiqingzhensi1515.ATTACHEDRE",
+      "shiguihuaziranziyuanweiqingzhensi1515.RELATEDPEO",
+      "shiguihuaziranziyuanweiqingzhensi1515.RELATEDEVE",
+      "shiguihuaziranziyuanweiqingzhensi1515.PUBNAME",
+      "shiguihuaziranziyuanweiqingzhensi1515.SOURCE",
+      "shiguihuaziranziyuanweiqingzhensi1515.EDITOR",
+      "shiguihuaziranziyuanweiqingzhensi1515.ISREDUNDAN",
+      "shiguihuaziranziyuanweiqingzhensi1515.THEME"
+    ]
+  }
+}

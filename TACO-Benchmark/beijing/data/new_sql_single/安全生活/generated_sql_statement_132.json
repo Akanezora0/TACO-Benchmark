@@ -1,0 +1,7 @@
+{
+  "sql": "SELECT column1 AS alias1, column2 AS alias2 FROM table1 WHERE condition1 = 'value1' AND condition2 > value2;",
+  "results": 0,
+  "sql skeleton": "select _ as _ ,_ as _ from _ where _",
+  "database": "安全生活",
+  "tables": {}
+}

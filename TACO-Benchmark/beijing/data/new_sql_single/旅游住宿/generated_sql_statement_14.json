@@ -1,0 +1,18 @@
+{
+  "sql": "SELECT \n    \"tongzhouqutongzhouquxiangcunminsuxinxi2979\".\"通州区乡村民宿情况表（规范化审核52家）\",\n    \"tongzhouqutongzhouquxiangcunminsuxinxi2979\".Unnamed: 1,\n    \"tongzhouqutongzhouquxiangcunminsuxinxi2979\".Unnamed: 2,\n    \"pingguqupingguqujingpinminsu2083\".Unnamed: 1\nFROM \n    \"tongzhouqutongzhouquxiangcunminsuxinxi2979\"\nJOIN \n    \"pingguqupingguqujingpinminsu2083\"\nON \n    \"tongzhouqutongzhouquxiangcunminsuxinxi2979\".Unnamed: 1 = \"pingguqupingguqujingpinminsu2083\".Unnamed: 1\nWHERE \n    \"tongzhouqutongzhouquxiangcunminsuxinxi2979\".Unnamed: 1 >= 100;",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ ,_ from _ where _ = _ and (_ = _ or _ = _ ) and _ (_ )>=_ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "tongzhouqutongzhouquxiangcunminsuxinxi2979": [
+      "tongzhouqutongzhouquxiangcunminsuxinxi2979.通州区乡村民宿情况表（规范化审核52家）",
+      "tongzhouqutongzhouquxiangcunminsuxinxi2979.Unnamed: 1",
+      "tongzhouqutongzhouquxiangcunminsuxinxi2979.Unnamed: 2"
+    ],
+    "pingguqupingguqujingpinminsu2083": [
+      "pingguqupingguqujingpinminsu2083.平谷区2022年精品民宿",
+      "pingguqupingguqujingpinminsu2083.Unnamed: 1",
+      "pingguqupingguqujingpinminsu2083.Unnamed: 2"
+    ]
+  }
+}

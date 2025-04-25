@@ -1,0 +1,26 @@
+{
+  "sql": "SELECT \"shunyiqugongjiaoxianlujizhandianjibenxinxi2076.线路运营信息\", \"haidianqugonggongjianzhutingchechang3416.详细地址\" FROM \"shunyiqugongjiaoxianlujizhandianjibenxinxi2076\" JOIN \"haidianqugonggongjianzhutingchechang3416\" ON \"shunyiqugongjiaoxianlujizhandianjibenxinxi2076.线路运营信息\" = \"haidianqugonggongjianzhutingchechang3416.序号\";",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是通过关联两个表（`shunyiqugongjiaoxianlujizhandianjibenxinxi2076` 和 `haidianqugonggongjianzhutingchechang3416`），获取顺义区公交线路的运营信息与海淀区公共建筑停车场的详细地址之间的对应关系。\n\n### **详细描述**  \n1. **涉及的表**：\n   - `shunyiqugongjiaoxianlujizhandianjibenxinxi2076`（顺义区公交线路及站点基本信息表）：存储顺义区公交线路的运营信息。\n   - `haidianqugonggongjianzhutingchechang3416`（海淀区公共建筑停车场信息表）：存储海淀区公共建筑停车场的详细信息，包括地址等。\n\n2. **涉及的列**：\n   - `shunyiqugongjiaoxianlujizhandianjibenxinxi2076.线路运营信息`：顺义区公交线路的运营信息（如线路编号、运营时间等）。\n   - `haidianqugonggongjianzhutingchechang3416.详细地址`：海淀区公共建筑停车场的具体地址。\n   - `haidianqugonggongjianzhutingchechang3416.序号`：停车场的唯一标识编号，用于与公交线路信息关联。\n\n3. **关联条件**：\n   - 通过 `JOIN` 操作，将公交线路的 `线路运营信息` 与停车场的 `序号` 进行匹配，建立两表之间的关联。\n\n### **业务场景**  \n该查询可能用于以下业务场景：\n1. **公交与停车场联动管理**：  \n   - 查询顺义区公交线路途经或终点站附近的海淀区公共停车场，便于规划公交与停车场的接驳方案。\n2. **交通规划分析**：  \n   - 分析公交线路与停车场的分布关系，优化城市交通资源配置，例如在公交站点附近增设停车场，方便换乘。\n3. **出行导航服务**：  \n   - 为乘客提供公交线路附近的停车场信息，方便自驾用户换乘公共交通。\n\n### **用户描述**  \n在该业务场景下，用户可能遇到的实际问题或需求包括：\n1. **公交乘客的需求**：  \n   - 乘客希望知道某条公交线路附近是否有停车场，以便自驾到公交站点后换乘公交。\n2. **交通管理者的需求**：  \n   - 交通规划部门需要分析公交线路与停车场的匹配情况，优化公共交通与私人交通的衔接。\n3. **导航服务提供商的需求**：  \n   - 导航软件需要整合公交线路和停车场数据，为用户提供更全面的出行建议（如“驾车至某停车场后换乘XX路公交”）。  \n\n通过该 SQL 查询，可以获取公交线路与停车场的关联数据，从而支持上述业务需求。",
+  "natural_language_query": "市民反映，我每天要从顺义坐公交去海淀上班，但不知道把车停在哪里方便换乘。比如坐850路到终点站后，附近有没有公共停车场啊？最好能提供具体地址。另外周末带孩子去海淀玩也想找公交沿线能停车的场所，现在每次都要绕好久才能找到停车位，特别耽误时间。希望政府能公布公交线路附近的停车场信息，这样我们老百姓出行就方便多了。来电咨询公交站周边停车场位置问题。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ ;",
+  "database": "交通服务",
+  "tables": {
+    "shunyiqugongjiaoxianlujizhandianjibenxinxi2076": [
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.线路运营信息",
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 1",
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 2",
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 3",
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 4",
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 5",
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 6"
+    ],
+    "haidianqugonggongjianzhutingchechang3416": [
+      "haidianqugonggongjianzhutingchechang3416.序号",
+      "haidianqugonggongjianzhutingchechang3416.停车场名称",
+      "haidianqugonggongjianzhutingchechang3416.停车场类型",
+      "haidianqugonggongjianzhutingchechang3416.详细地址",
+      "haidianqugonggongjianzhutingchechang3416.经营单位"
+    ]
+  }
+}

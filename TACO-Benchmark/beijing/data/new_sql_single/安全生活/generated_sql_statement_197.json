@@ -1,0 +1,7 @@
+{
+  "sql": "SELECT \n    table1.\"column1\", \n    table1.\"column2\", \n    table1.\"column3\", \n    table2.\"column4\", \n    table2.\"column5\", \n    table2.\"column6\", \n    table3.\"column7\" \nFROM \n    table1 \nJOIN \n    table2 \nON \n    table1.\"key_column\" = table2.\"key_column\" \nAND \n    table1.\"another_key_column\" = 'value' \nAND \n    (table2.\"min_function_column\", table2.\"max_function_column\") >= 'min_value' \nAND \n    (table2.\"min_function_column\", table2.\"max_function_column\") <= 'max_value' \n;",
+  "results": 0,
+  "sql skeleton": "SELECT _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ FROM _ WHERE _ ._ = _ AND _ ._ = _ and _ (_ ._ ,_ ) >= _ and _ (_ ._ ,_ ) <= _ ;",
+  "database": "安全生活",
+  "tables": {}
+}

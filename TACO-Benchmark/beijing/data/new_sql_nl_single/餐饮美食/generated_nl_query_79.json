@@ -1,0 +1,26 @@
+{
+  "sql": "SELECT _ AS _ FROM \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\" WHERE \"JYZMC\" = '商品名称' AND \"XKZBH\" = '商品编号' AND \"JYCS\" = '检验类别' AND \"JYXM\" = '检验项目' AND \"FZRQ\" = '发证日期' AND \"YXQZ\" = '有效期限' AND \"XKZID\" = '许可证号' AND \"DWMC\" = '单位名称' AND \"EXCHANGETIME\" = '更新时间' AND \"专用标识牌号\" IS NOT NULL AND \"专柜名称\" IS NOT NULL AND \"地址\" IS NOT NULL",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从表 `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374` 中筛选出符合特定条件的记录，这些记录需要满足多个字段的精确匹配条件，并且部分字段（如“专用标识牌号”“专柜名称”“地址”）不能为空。\n\n---\n\n### **详细描述**  \n1. **表名**：  \n   - `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374`（可能是一个市场监管相关的餐饮服务许可证信息表，名称较长，可能是中文拼音或编码命名）。\n\n2. **查询列**：  \n   - 语句中使用了 `SELECT _ AS _`，但列名和别名未明确指定（可能是占位符或示例）。实际查询可能需要替换为具体列名（如 `JYZMC`、`XKZBH` 等）。\n\n3. **筛选条件**：  \n   - 精确匹配条件：  \n     - `\"JYZMC\" = '商品名称'`（经营者名称等于“商品名称”）  \n     - `\"XKZBH\" = '商品编号'`（许可证编号等于“商品编号”）  \n     - `\"JYCS\" = '检验类别'`（检验场所等于“检验类别”）  \n     - `\"JYXM\" = '检验项目'`（检验项目等于“检验项目”）  \n     - `\"FZRQ\" = '发证日期'`（发证日期等于“发证日期”）  \n     - `\"YXQZ\" = '有效期限'`（有效期限等于“有效期限”）  \n     - `\"XKZID\" = '许可证号'`（许可证ID等于“许可证号”）  \n     - `\"DWMC\" = '单位名称'`（单位名称等于“单位名称”）  \n     - `\"EXCHANGETIME\" = '更新时间'`（更新时间等于“更新时间”）  \n   - 非空条件：  \n     - `\"专用标识牌号\" IS NOT NULL`（专用标识牌号字段不为空）  \n     - `\"专柜名称\" IS NOT NULL`（专柜名称字段不为空）  \n     - `\"地址\" IS NOT NULL`（地址字段不为空）  \n\n4. **逻辑关系**：  \n   - 所有条件通过 `AND` 连接，表示需要同时满足所有条件才会返回记录。\n\n---\n\n### **业务场景**  \n1. **场景描述**：  \n   - 该查询可能用于市场监管部门对餐饮服务许可证信息的精细化筛选，例如：  \n     - 查找特定经营者（`JYZMC`）、许可证编号（`XKZBH`）的餐饮单位。  \n     - 确保筛选的记录具有完整的地址、专柜名称和专用标识牌号（非空字段）。  \n     - 可能用于合规性检查、许可证有效性验证或数据清理。  \n\n2. **数据用途**：  \n   - 生成报告：如统计符合特定条件的许可证分布情况。  \n   - 执法检查：定位需要重点监管的餐饮单位（如专柜或特殊标识的商户）。  \n   - 数据补全：筛选出缺失关键信息的记录以便后续补充。\n\n---\n\n### **用户描述**  \n1. **用户角色**：  \n   - 可能是市场监管部门的数据分析员、执法人员或系统管理员。  \n\n2. **实际问题或需求**：  \n   - **问题**：  \n     - 需要快速找到某类餐饮单位（如名称或编号已知）的详细信息，但数据库中存在大量不完整或无效数据。  \n     - 需确保筛选结果包含关键信息（如地址、专柜名称），避免后续联系或检查时缺失必要字段。  \n   - **需求**：  \n     - 精确匹配许可证的多个属性（如发证日期、检验项目）。  \n     - 排除关键字段为空的记录，提高数据质量。  \n     - 可能用于导出合规商户列表或生成监管台账。  \n\n3. **扩展场景**：  \n   - 若查询结果为空，可能反映数据录入错误或商户未按要求填写信息，需进一步核查。",
+  "natural_language_query": "市民反映，我在市场监管局网站上查一家叫\"商品名称\"的餐饮店，许可证编号是\"商品编号\"，但是查到的信息总是不完整。这家店应该在\"检验类别\"这个地方经营，做过\"检验项目\"的检查，发证日期是\"发证日期\"，证件有效期到\"有效期限\"。我在系统里输入了许可证号\"许可证号\"，单位名称是\"单位名称\"，最后更新时间是\"更新时间\"，但总显示信息不全。特别需要确认这家店有没有挂专用标识牌，有没有明确的专柜名称，还有具体地址在哪里。因为之前查到的好多店铺这些信息都是空的，导致我们没法开展检查工作。希望能帮忙核实一下这家店的完整信息，尤其是专用标识牌、专柜名称和地址这些关键信息不能为空。",
+  "results": 0,
+  "sql skeleton": "select _ as _ from _ where _",
+  "database": "餐饮美食",
+  "tables": {
+    "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374": [
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYXM",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.FZRQ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.YXQZ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.DWMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.EXCHANGETIME"
+    ],
+    "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076": [
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址"
+    ]
+  }
+}

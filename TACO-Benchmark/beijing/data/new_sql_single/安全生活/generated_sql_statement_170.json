@@ -1,0 +1,7 @@
+{
+  "sql": "SELECT \n    table1.column1, \n    table1.column2, \n    table1.column3, \n    table2.column4, \n    table2.column5, \n    table2.column6, \n    table3.column7, \n    table3.column8 \nFROM \n    table1 JOIN \n    table2 ON table1.common_column = table2.common_column \n    JOIN \n    table3 ON table2.common_column = table3.common_column \nWHERE \n    table1.unique_column = 'value' \n    AND table2.unique_column = 'value';",
+  "results": 0,
+  "sql skeleton": "SELECT _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ FROM _ JOIN _ ON _ ._ = _ ._ WHERE _ ._ = _ AND _ ._ = _ ;",
+  "database": "安全生活",
+  "tables": {}
+}

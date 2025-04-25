@@ -1,0 +1,7 @@
+{
+  "sql": "SELECT DISTINCT A.col1, A.col2, A.col3, B.col4 = B.col5 AS comparison FROM tableA AS A JOIN tableB AS B ON A.col6 = B.col7 WHERE A.col8 = 'value'",
+  "results": 0,
+  "sql skeleton": "SELECT DISTINCT _ ._ , _ ._ , _ ._ , _ ._ = _ ._ = _ AS _ FROM _ JOIN _ ON _ ._ = _ ._ where _ ._ = _",
+  "database": "安全生活",
+  "tables": {}
+}

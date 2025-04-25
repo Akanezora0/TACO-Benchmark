@@ -1,0 +1,23 @@
+{
+  "sql": "SELECT \"fengtaiqufengtaiqujingqujingdianteseyetai1387.景区景点（特色业态）明细\", \"huairouquhuairouqujingqumenpiaojiage1592.怀柔区政府定价景区门票价格\" FROM \"fengtaiqufengtaiqujingqujingdianteseyetai1387\" INNER JOIN \"huairouquhuairouqujingqumenpiaojiage1592\" ON \"fengtaiqufengtaiqujingqujingdianteseyetai1387.序号\" = \"huairouquhuairouqujingqumenpiaojiage1592.序号\";",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是通过内连接（INNER JOIN）关联两个表，查询丰台区景区景点（特色业态）明细和怀柔区政府定价景区门票价格的相关信息，关联条件是两表的“序号”列相同。\n\n---\n\n### **详细描述**  \n1. **涉及的表**：  \n   - `fengtaiqufengtaiqujingqujingdianteseyetai1387`（丰台区景区景点（特色业态）明细表）  \n   - `huairouquhuairouqujingqumenpiaojiage1592`（怀柔区政府定价景区门票价格表）  \n\n2. **查询的列**：  \n   - `fengtaiqufengtaiqujingqujingdianteseyetai1387.景区景点（特色业态）明细`  \n   - `huairouquhuairouqujingqumenpiaojiage1592.怀柔区政府定价景区门票价格`  \n\n3. **关联条件**：  \n   - 两表通过 `序号` 列进行关联，即 `fengtaiqufengtaiqujingqujingdianteseyetai1387.序号 = huairouquhuairouqujingqumenpiaojiage1592.序号`。  \n\n4. **查询逻辑**：  \n   - 仅返回两表中“序号”列值相同的记录，即丰台区和怀柔区在序号上匹配的景区信息。  \n\n---\n\n### **业务场景**  \n1. **数据整合**：  \n   - 可能需要对比或关联丰台区和怀柔区的景区信息，例如分析两地的景区业态与门票价格的关系。  \n\n2. **政策或价格管理**：  \n   - 政府部门或旅游管理机构可能需要了解不同区域的景区特色业态与门票定价情况，以便制定或调整相关政策。  \n\n3. **旅游规划**：  \n   - 旅行社或游客可能希望查询两地景区的特色和价格，以便规划旅游路线或比较性价比。  \n\n---\n\n### **用户描述**  \n1. **政府或旅游管理部门**：  \n   - 需要统计或分析不同区域景区的业态分布和门票价格，以评估旅游资源的配置合理性或制定区域旅游发展策略。  \n\n2. **旅行社或旅游平台**：  \n   - 希望获取丰台区和怀柔区景区的特色描述及门票价格，以便设计旅游产品或推荐给游客。  \n\n3. **游客或研究人员**：  \n   - 想了解两地景区的特色和门票价格差异，以便选择更适合的旅游目的地或进行相关研究。  \n\n---\n\n### **总结**  \n该 SQL 语句通过关联丰台区和怀柔区的景区信息表，按序号匹配记录，查询景区的特色业态和门票价格，适用于旅游管理、政策制定或旅游规划等场景。",
+  "natural_language_query": "市民反映，最近想带家人去北京周边游玩，比较关注丰台区和怀柔区的景点情况。听说丰台区有些特色景区很不错，但不知道具体有哪些好玩的，门票价格怎么样。特别是想了解怀柔区那些政府定价的景区，价格是否合理。希望能帮忙查一下这两个区的景点特色和门票价格信息，好做个对比参考。感觉现在景区信息太分散了，找起来特别麻烦，能不能给个详细的清单啊？",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "fengtaiqufengtaiqujingqujingdianteseyetai1387": [
+      "fengtaiqufengtaiqujingqujingdianteseyetai1387.景区景点（特色业态）明细",
+      "fengtaiqufengtaiqujingqujingdianteseyetai1387.Unnamed: 1",
+      "fengtaiqufengtaiqujingqujingdianteseyetai1387.Unnamed: 2",
+      "fengtaiqufengtaiqujingqujingdianteseyetai1387.Unnamed: 3"
+    ],
+    "huairouquhuairouqujingqumenpiaojiage1592": [
+      "huairouquhuairouqujingqumenpiaojiage1592.怀柔区政府定价景区门票价格",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 1",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 2",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 3",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 4"
+    ]
+  }
+}

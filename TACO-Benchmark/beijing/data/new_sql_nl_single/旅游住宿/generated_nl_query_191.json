@@ -1,0 +1,23 @@
+{
+  "sql": "SELECT xichengquxichengquxingjifandianminglu19.?星级酒店名称 FROM xichengquxichengquxingjifandianminglu19 WHERE xichengquxichengquxingjifandianminglu19.?星级 = '5' AND xichengquxichengquxingjifandianminglu19.?酒店地址 LIKE '%市中心%'",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从西城区星级酒店名录表中筛选出位于市中心且星级为5级的酒店名称。\n\n- **详细描述**：\n  - **表**：`xichengquxichengquxingjifandianminglu19`（西城区星级酒店名录表）\n  - **列**：\n    - `?星级酒店名称`（酒店名称列，具体列名可能因编码问题显示不全）\n    - `?星级`（酒店星级列，用于筛选星级）\n    - `?酒店地址`（酒店地址列，用于筛选地理位置）\n  - **条件**：\n    - `?星级 = '5'`：筛选出星级为5级的酒店。\n    - `?酒店地址 LIKE '%市中心%'`：筛选出地址中包含“市中心”关键词的酒店。\n\n- **业务场景**：\n  该查询可以用于以下业务场景：\n  1. **旅游规划**：帮助游客或旅行社快速找到西城区市中心的高端（5星级）酒店，方便安排住宿。\n  2. **商业分析**：分析西城区市中心的高端酒店分布情况，为投资或市场调研提供数据支持。\n  3. **城市管理**：政府或相关部门可以统计市中心高端酒店的数量，评估区域商业发展水平。\n\n- **用户描述**：\n  1. **游客需求**：一名计划到西城区市中心旅游的游客，希望入住高端酒店，但不知道有哪些选择，需要通过查询快速获取符合条件的酒店列表。\n  2. **旅行社需求**：旅行社为客户定制高端旅游套餐时，需要筛选市中心的高端酒店以提供住宿选项。\n  3. **商业分析师需求**：分析师需要了解西城区市中心的高端酒店数量，以评估该区域的商业活力和竞争情况。",
+  "natural_language_query": "我想问问西城区市中心有哪些特别高档的酒店啊？就是那种五星级的，最好是在市中心黄金地段的。我下个月要带家人去北京玩，想找个好点的酒店住，但网上搜了半天也搞不清楚哪些是真的在市中心位置。之前朋友说有的酒店虽然标着五星但实际位置很偏，打车去景点都要好久。能不能帮我查查西城区正市中心有哪些靠谱的五星级酒店？要确确实实是在市中心核心区域的，不要那种写着\"临近市中心\"实际上离得很远的。谢谢啦！",
+  "results": 0,
+  "sql skeleton": "select _ from _ where _ (_ ,_ ) = _",
+  "database": "旅游住宿",
+  "tables": {
+    "xichengquxichengquxingjifandianminglu19": [
+      "xichengquxichengquxingjifandianminglu19.序号",
+      "xichengquxichengquxingjifandianminglu19.?星级酒店名称",
+      "xichengquxichengquxingjifandianminglu19.?星级",
+      "xichengquxichengquxingjifandianminglu19.?联系电话",
+      "xichengquxichengquxingjifandianminglu19.?酒店地址"
+    ],
+    "fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396": [
+      "fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.旅行社分社及旅行社服务网点明细",
+      "fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.Unnamed: 1",
+      "fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.Unnamed: 2",
+      "fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.Unnamed: 3"
+    ]
+  }
+}

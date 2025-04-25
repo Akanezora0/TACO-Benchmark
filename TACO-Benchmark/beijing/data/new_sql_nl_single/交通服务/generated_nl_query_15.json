@@ -1,0 +1,21 @@
+{
+  "sql": "SELECT shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.企业名称, shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.评定等级 FROM shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672 WHERE shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.所属地区 = '北京市' AND shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.评定等级 = '优秀'",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从名为 `shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672` 的表中查询位于北京市且评定等级为“优秀”的汽车租赁企业的名称和评定等级。\n\n- **详细描述**：\n  - **表**：`shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672`（可能是一个存储汽车租赁企业信用评价结果数据的表）。\n  - **列**：\n    - `企业名称`：表示汽车租赁企业的名称。\n    - `评定等级`：表示企业的信用评价等级。\n    - `所属地区`：表示企业所在的地区。\n  - **条件**：\n    - `所属地区 = '北京市'`：筛选出位于北京市的企业。\n    - `评定等级 = '优秀'`：筛选出信用评价等级为“优秀”的企业。\n\n- **业务场景**：\n  - 该查询可以用于政府监管部门或行业协会对北京市汽车租赁企业的信用状况进行评估和监控。\n  - 也可以用于消费者在选择汽车租赁服务时，优先选择信用评价优秀的企业。\n  - 还可以用于企业自身进行信用评级展示或市场推广。\n\n- **用户描述**：\n  - **政府监管部门**：可能需要了解北京市哪些汽车租赁企业的信用状况良好，以便进行表彰或政策支持。\n  - **消费者**：在租车时，可能希望选择信用评价优秀的企业，以确保服务质量和安全性。\n  - **企业自身**：可能需要查询自己的信用评价结果，或者在市场竞争中展示自己的信用优势。",
+  "natural_language_query": "我想找一些靠谱的北京租车公司，听说政府会对这些公司做信用评级？能不能帮我查查北京这边哪些租车公司是信用最好的那种，就是评级特别高的。我之前租车遇到过乱收费的，现在想找个信誉好的公司，最好是政府评出来的优秀企业。不知道这个信息在哪里能查到？",
+  "results": 0,
+  "sql skeleton": "select _ from _ where _ = _ and _",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672": [
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.企业名称",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.评定等级",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.所属地区",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.年份",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.统一社会信用代码"
+    ],
+    "daxingqudaxingqugonggongzixingchededianweixinxi440": [
+      "daxingqudaxingqugonggongzixingchededianweixinxi440.序号",
+      "daxingqudaxingqugonggongzixingchededianweixinxi440.公共自行车点位"
+    ]
+  }
+}

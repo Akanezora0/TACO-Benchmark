@@ -1,0 +1,15 @@
+{
+  "sql": "SELECT \"huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829\".\"по\u0011Ю║╠\u001aА\", \"huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829\".\"\u0001\u0001\" FROM \"huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829\" WHERE \"zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733\".\"PK\u0003\u0004\" = '某个特定值';",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ WHERE _ = _ ;",
+  "database": "交通服务",
+  "tables": {
+    "huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829": [
+      "huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829.по\u0011Ю║╠\u001aА",
+      "huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829.\u0001\u0001"
+    ],
+    "zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733": [
+      "zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733.PK\u0003\u0004"
+    ]
+  }
+}

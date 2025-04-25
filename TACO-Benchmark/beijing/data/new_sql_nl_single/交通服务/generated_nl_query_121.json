@@ -1,0 +1,32 @@
+{
+  "sql": "SELECT \"shijiaotongweizulinyehujibenxinxi3677.经营业户名称\", \"xichengquxichengquditiezhanmingdan2482.SJXZQHMC\" FROM \"shijiaotongweizulinyehujibenxinxi3677\" - \"xichengquxichengquditiezhanmingdan2482\" WHERE \"xichengquxichengquditiezhanmingdan2482.SJXZQHMC\" = '目标值';",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从两个数据表（`shijiaotongweizulinyehujibenxinxi3677` 和 `xichengquxichengquditiezhanmingdan2482`）中查询满足特定条件的经营业户名称和行政区划名称。\n\n- **详细描述**：\n  - **涉及的表**：\n    1. `shijiaotongweizulinyehujibenxinxi3677`：该表可能存储了经营业户的基本信息，包含列 `经营业户名称`。\n    2. `xichengquxichengquditiezhanmingdan2482`：该表可能存储了行政区划或地铁站的相关信息，包含列 `SJXZQHMC`（行政区划名称）。\n  - **查询的列**：\n    1. `shijiaotongweizulinyehujibenxinxi3677.经营业户名称`：经营业户的名称。\n    2. `xichengquxichengquditiezhanmingdan2482.SJXZQHMC`：行政区划的名称。\n  - **条件**：\n    - `WHERE \"xichengquxichengquditiezhanmingdan2482.SJXZQHMC\" = '目标值'`：筛选行政区划名称为特定值（'目标值'）的记录。\n  - **操作**：\n    - 使用了减法操作符 `-`，表示从第一个表的结果中排除第二个表的结果。但这里的语法可能存在问题，因为减法操作符在 SQL 中通常不用于表之间的操作，可能是想表达某种连接或排除逻辑。\n\n- **业务场景**：\n  - 该查询可能用于分析特定行政区划（如某个区或街道）内的经营业户信息。例如，查询某个行政区划内的经营业户名称，或者排除某些行政区划后的经营业户信息。\n  - 可能的业务场景包括：\n    - 统计特定区域的经营业户分布情况。\n    - 检查某些行政区划是否缺少经营业户信息。\n    - 对比不同行政区划的经营业户数量或名称。\n\n- **用户描述**：\n  - 用户可能需要了解某个特定行政区划（如“目标值”对应的区域）内的经营业户情况，或者需要排除某些行政区划后分析剩余的经营业户信息。\n  - 用户的实际问题可能包括：\n    - “我需要列出某个区内的所有经营业户名称。”\n    - “我想知道除了某个行政区划外，其他区域的经营业户有哪些。”\n    - “是否有某个行政区划的经营业户信息缺失或需要更新？”",
+  "natural_language_query": "市民反映，我在西城区这边开小店，想了解一下我们这片区的商户情况。最近听说有些地方商户信息可能不全，特别是地铁站周边区域。能不能帮忙查查西城区这边（就是你们系统里可能叫\"目标值\"的那个区域）所有正规经营的商户名单？我主要是想看看我们这片区商户分布情况，有没有漏登记的。另外如果有些商户不在这个区域名单里，也想知道是哪些，好确认下是不是信息有出入。来电咨询西城区商户登记信息问题。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ WHERE _ = _ ;",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweizulinyehujibenxinxi3677": [
+      "shijiaotongweizulinyehujibenxinxi3677.经营业户名称"
+    ],
+    "xichengquxichengquditiezhanmingdan2482": [
+      "xichengquxichengquditiezhanmingdan2482.ID",
+      "xichengquxichengquditiezhanmingdan2482.X",
+      "xichengquxichengquditiezhanmingdan2482.Y",
+      "xichengquxichengquditiezhanmingdan2482.SJXZQHMC",
+      "xichengquxichengquditiezhanmingdan2482.QXJXZQHMC",
+      "xichengquxichengquditiezhanmingdan2482.SJXZQHDM",
+      "xichengquxichengquditiezhanmingdan2482.QXJXZQHDM",
+      "xichengquxichengquditiezhanmingdan2482.POISJLY",
+      "xichengquxichengquditiezhanmingdan2482.RHBZDZ",
+      "xichengquxichengquditiezhanmingdan2482.CODE",
+      "xichengquxichengquditiezhanmingdan2482.CODEMC",
+      "xichengquxichengquditiezhanmingdan2482.GXSJ",
+      "xichengquxichengquditiezhanmingdan2482.POIMC",
+      "xichengquxichengquditiezhanmingdan2482.POIDZ",
+      "xichengquxichengquditiezhanmingdan2482.别名",
+      "xichengquxichengquditiezhanmingdan2482.POIFLMC",
+      "xichengquxichengquditiezhanmingdan2482.TEL"
+    ]
+  }
+}

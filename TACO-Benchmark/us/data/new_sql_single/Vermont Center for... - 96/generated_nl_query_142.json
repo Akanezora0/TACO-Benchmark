@@ -1,0 +1,52 @@
+{
+  "sql": "SELECT dfirm_floodways.OBJECTID, dfirm_floodways.DFIRM_ID, dfirm_floodways.FLD_AR_ID, dfirm_floodways.FLD_ZONE, dfirm_floodways.FLOODWAY, dfirm_floodways.SFHA_TF, dfirm_floodways.AR_REVERT, dfirm_floodways.SOURCE_CIT, salt_storage_record_table.OBJECTID, salt_storage_record_table.fulcrum_id, salt_storage_record_table.fulcrum_parent_id, salt_storage_record_table.fulcrum_record_id, salt_storage_record_table.version, salt_storage_record_table.geometry, salt_storage_record_table.created_at, salt_storage_record_table.updated_at, salt_storage_record_table.created_by, salt_storage_record_table.updated_by, salt_storage_record_table.address_sub_thoroughfare, salt_storage_record_table.address_thoroughfare, salt_storage_record_table.address_suite, salt_storage_record_table.address_locality, salt_storage_record_table.address_sub_admin_area, salt_storage_record_table.address_admin_area, salt_storage_record_table.address_postal_code, salt_storage_record_table.address_country, salt_storage_record_table.address_full, salt_storage_record_table.material_type, salt_storage_record_table.material_type_other, salt_storage_record_table.storage_length_years, salt_storage_record_table.storage_length_years_range, salt_storage_record_table.material_covered, salt_storage_record_table.coverage_method, salt_storage_record_table.material_on_pad, salt_storage_record_table.pad_type, salt_storage_record_table.pad_type_other \nFROM dfirm_floodways \nJOIN salt_storage_record_table \nON dfirm_floodways.OBJECTID = salt_storage_record_table.OBJECTID \nWHERE dfirm_floodways.FLOODWAY = 'FLOODWAY_NAME' AND dfirm_floodways.SFHA_TF = 'TRUE';",
+  "problem_description": "### Query intent:\nThe SQL statement is designed to retrieve specific data from two related tables (`dfirm_floodways` and `salt_storage_record_table`) based on certain conditions.\n\n### Detailed description:\n- **Table `dfirm_floodways`**:\n    - **Columns**:\n        - `OBJECTID`: Unique identifier for each record.\n        - `DFIRM_ID`: Identifier for floodway records within a specific context (e.g., a firm's database).\n        - `FLD_AR_ID`: Identifier for the area where the floodway is located.\n        - `FLD_ZONE`: Zone classification of the floodway.\n        - `FLOODWAY`: Name of the floodway.\n        - `SFHA_TF`: Boolean flag indicating if it's part of the Special Flood Hazard Area (TRUE/FALSE).\n        - Other columns like `AR_REVERT`, `SOURCE_CIT`, etc., likely contain additional attributes about the floodway.\n\n- **Table `salt_storage_record_table`**:\n    - **Columns**:\n        - `OBJECTID`: Similar to `dfirm_floodways`, this is another unique identifier.\n        - Columns like `fulcrum_id`, `fulcrum_parent_id`, `fulcrum_record_id`, `version`, `geometry`, `created_at`, `updated_at`, `created_by`, `updated_by`, etc., likely represent details about salt storage locations or records.\n\n- **Join Condition**:\n    - The `JOIN` clause connects these two tables based on matching `OBJECTID` values, implying a relationship between floodway records and associated salt storage records.\n\n- **Where Clauses**:\n    - `dfirm_floodways.FLOODWAY = 'FLOODWAY_NAME'` filters the results to only include records with a specific floodway name.\n    - `dfirm_floodways.SFHA_TF = 'TRUE'` further narrows down the results to only those floodways that are part of the Special Flood Hazard Area.\n\n### Business scenario:\nThis SQL query might be used in environmental management or disaster preparedness contexts. For example:\n\n- **Environmental Management**:\n    - To identify specific floodways that are part of the Special Flood Hazard Area and require special attention or mitigation plans due to their proximity to salt storage facilities.\n    - Helps in assessing potential impacts of flood events on nearby salt storage operations, which could be crucial for emergency planning, insurance assessments, or regulatory compliance checks.\n\n- **Regulatory Compliance**:\n    - Ensures that all",
+  "natural_language_query": "User: I'm trying to find out more about the floodways near salt storage facilities in our region. Specifically, I'm interested in knowing which ones are classified as being in the Special Flood Hazard Area and have the name 'FLOODWAY_NAME'. Can you help me with a SQL query to pull this information?\n\nAssistant: SQL Query: \n```\nSELECT dfirm_floodways.*, salt_storage_record_table.*\nFROM dfirm_floodways\nJOIN salt_storage_record_table ON dfirm_floodways.OBJECTID = salt_storage_record_table.OBJECTID\nWHERE dfirm_floodways.FLOODWAY = 'FLOODWAY_NAME'\nAND dfirm_floodways.SFHA_TF = 'TRUE';\n```",
+  "results": 0,
+  "sql skeleton": "SELECT _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ FROM _ JOIN _ ON _ ._ = _ ._ WHERE _ ._ = _ AND _ ._ = _ and _ (_ ._ , _ ) = _ and _ ._ = _ ;",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "dfirm_floodways": [
+      "dfirm_floodways.OBJECTID",
+      "dfirm_floodways.DFIRM_ID",
+      "dfirm_floodways.FLD_AR_ID",
+      "dfirm_floodways.FLD_ZONE",
+      "dfirm_floodways.FLOODWAY",
+      "dfirm_floodways.SFHA_TF",
+      "dfirm_floodways.AR_REVERT",
+      "dfirm_floodways.SOURCE_CIT",
+      "dfirm_floodways.HYDRO_ID",
+      "dfirm_floodways.CST_MDL_ID"
+    ],
+    "salt_storage_record_table": [
+      "salt_storage_record_table.OBJECTID",
+      "salt_storage_record_table.fulcrum_id",
+      "salt_storage_record_table.fulcrum_parent_id",
+      "salt_storage_record_table.fulcrum_record_id",
+      "salt_storage_record_table.version",
+      "salt_storage_record_table.geometry",
+      "salt_storage_record_table.created_at",
+      "salt_storage_record_table.updated_at",
+      "salt_storage_record_table.created_by",
+      "salt_storage_record_table.updated_by",
+      "salt_storage_record_table.address_sub_thoroughfare",
+      "salt_storage_record_table.address_thoroughfare",
+      "salt_storage_record_table.address_suite",
+      "salt_storage_record_table.address_locality",
+      "salt_storage_record_table.address_sub_admin_area",
+      "salt_storage_record_table.address_admin_area",
+      "salt_storage_record_table.address_postal_code",
+      "salt_storage_record_table.address_country",
+      "salt_storage_record_table.address_full",
+      "salt_storage_record_table.material_type",
+      "salt_storage_record_table.material_type_other",
+      "salt_storage_record_table.storage_length_years",
+      "salt_storage_record_table.storage_length_years_range",
+      "salt_storage_record_table.material_covered",
+      "salt_storage_record_table.coverage_method",
+      "salt_storage_record_table.material_on_pad",
+      "salt_storage_record_table.pad_type",
+      "salt_storage_record_table.pad_type_other"
+    ]
+  }
+}

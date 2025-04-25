@@ -1,0 +1,25 @@
+{
+  "sql": "SELECT \"shunyiquxingjifandian1276.顺义区星级饭店\" as 列1, \"shunyiquxingjifandian1276.Unnamed: 1\" as 列2, \"shunyiquxingjifandian1276.Unnamed: 2\" as 列3, \"shunyiquxingjifandian1276.Unnamed: 3\" as 列4, \"xichengquxichengqudengjilvyoujingquminglu14.序号\" as 列5 FROM \"shunyiquxingjifandian1276\" INNER JOIN \"xichengquxichengqudengjilvyoujingquminglu14\" ON \"shunyiquxingjifandian1276.顺义区星级饭店\" = \"xichengquxichengqudengjilvyoujingquminglu14.景区名称\" WHERE \"xichengquxichengqudengjilvyoujingquminglu14.等级\" = 'AAAA'",
+  "problem_description": "### **查询意图**：\n该 SQL 语句的目的是从两个表中查询数据，并通过内连接（INNER JOIN）关联这两个表，筛选出符合特定条件的记录。具体来说，它查询的是顺义区星级饭店表中与西城区等级旅游景区名录表中景区名称匹配，并且景区等级为“AAAA”的记录。\n\n### **详细描述**：\n1. **涉及的表**：\n   - `shunyiquxingjifandian1276`：顺义区星级饭店表，可能包含顺义区的星级饭店信息。\n   - `xichengquxichengqudengjilvyoujingquminglu14`：西城区等级旅游景区名录表，可能包含西城区的旅游景区信息，包括景区名称和等级。\n\n2. **查询的列**：\n   - 从 `shunyiquxingjifandian1276` 表中选择：\n     - `顺义区星级饭店`（重命名为“列1”）\n     - `Unnamed: 1`（重命名为“列2”）\n     - `Unnamed: 2`（重命名为“列3”）\n     - `Unnamed: 3`（重命名为“列4”）\n   - 从 `xichengquxichengqudengjilvyoujingquminglu14` 表中选择：\n     - `序号`（重命名为“列5”）\n\n3. **连接条件**：\n   - 通过 `INNER JOIN` 连接两个表，条件是 `shunyiquxingjifandian1276.顺义区星级饭店 = xichengquxichengqudengjilvyoujingquminglu14.景区名称`，即顺义区星级饭店的名称与西城区旅游景区名录中的景区名称匹配。\n\n4. **筛选条件**：\n   - `WHERE \"xichengquxichengqudengjilvyoujingquminglu14.等级\" = 'AAAA'`，即只选择西城区旅游景区名录中等级为“AAAA”的景区。\n\n### **业务场景**：\n该查询可能用于以下业务场景：\n1. **旅游行业数据分析**：分析顺义区的星级饭店是否同时也是西城区的AAAA级旅游景区，可能用于旅游资源的整合或市场推广。\n2. **跨区域旅游合作**：识别同时属于顺义区（饭店）和西城区（景区）的地点，可能用于跨区域的旅游线路规划或联合营销。\n3. **数据清洗与匹配**：检查两个数据源（顺义区饭店和西城区景区）中是否存在名称相同但属性不同的记录，可能用于数据治理或标准化。\n\n### **用户描述**：\n用户可能遇到的实际问题或需求包括：\n1. **旅游规划**：用户（如旅行社或游客）想知道顺义区的哪些星级饭店同时也是西城区的AAAA级景区，以便规划包含住宿和景点的旅游路线。\n2. **数据验证**：用户（如政府或旅游管理部门）需要验证两个不同区域的旅游数据是否存在重叠或冲突，例如同一名称的地点在不同区域被归类为饭店或景区。\n3. **市场分析**：用户（如旅游企业）希望了解高等级景区（AAAA）是否与星级饭店有重叠，从而评估旅游资源的分布和竞争情况。\n\n### **补充说明**：\n- 由于 `shunyiquxingjifandian1276` 表中的列名包含 `Unnamed: 1`、`Unnamed: 2` 等，可能表明原始数据是从Excel或其他非结构化数据导入的，列名未正确映射。\n- 查询结果将显示顺义区星级饭店的名称及其关联的西城区AAAA级景区的序号，可能用于进一步分析或报表生成。",
+  "natural_language_query": "市民反映，最近在规划北京旅游路线时遇到一个困惑：顺义区有些星级酒店的名称和西城区4A级景区的名字一模一样。比如上周在顺义入住的\"XX度假酒店\"，发现西城区也有个同名的4A景区，但不确定是不是同一个地方。想咨询下政府部门能不能帮忙查查顺义区的星级酒店里，有哪些是和西城区4A景区重名的？因为带着老人孩子旅游，想确认清楚这些地方到底是酒店还是景区，免得跑错地方耽误行程。特别是想知道像\"XX温泉度假村\"这种听起来像景区又像酒店的地方，到底该怎么区分。来电希望能帮忙核实顺义区星级酒店与西城区4A景区的重名情况。",
+  "results": 0,
+  "sql skeleton": "select _ as _ ,_ as _ ,_ as _ ,_ as _ ,_ as _ from _ where _ = _",
+  "database": "旅游住宿",
+  "tables": {
+    "shunyiquxingjifandian1276": [
+      "shunyiquxingjifandian1276.顺义区星级饭店",
+      "shunyiquxingjifandian1276.Unnamed: 1",
+      "shunyiquxingjifandian1276.Unnamed: 2",
+      "shunyiquxingjifandian1276.Unnamed: 3"
+    ],
+    "xichengquxichengqudengjilvyoujingquminglu14": [
+      "xichengquxichengqudengjilvyoujingquminglu14.序号",
+      "xichengquxichengqudengjilvyoujingquminglu14.景区名称",
+      "xichengquxichengqudengjilvyoujingquminglu14.等级",
+      "xichengquxichengqudengjilvyoujingquminglu14.地址",
+      "xichengquxichengqudengjilvyoujingquminglu14.咨询电话",
+      "xichengquxichengqudengjilvyoujingquminglu14.投诉电话",
+      "xichengquxichengqudengjilvyoujingquminglu14.邮编"
+    ]
+  }
+}

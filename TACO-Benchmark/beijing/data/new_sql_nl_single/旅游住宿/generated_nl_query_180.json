@@ -1,0 +1,24 @@
+{
+  "sql": "SELECT \"changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.2021年度昌平A级景区数据开放表\", \"xichengquxichengquwenwubaohudanwei35.名称\" FROM \"changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842\" - \"xichengquxichengquwenwubaohudanwei35\" WHERE \"xichengquxichengquwenwubaohudanwei35.序号\" = 1 ;",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从两个不同的数据表中查询特定列的数据，并通过条件筛选获取结果。具体来说，它试图从昌平区2021年度A级景区数据开放表中查询某些数据，同时关联西城区文物保护单位表中的数据，并筛选出西城区文物保护单位表中序号为1的记录。\n\n---\n\n### **详细描述**  \n1. **涉及的表**：  \n   - `changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842`（昌平区2021年度A级景区数据开放表）  \n   - `xichengquxichengquwenwubaohudanwei35`（西城区文物保护单位表）  \n\n2. **查询的列**：  \n   - `\"changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.2021年度昌平A级景区数据开放表\"`（昌平区A级景区数据开放表中的某一列，可能是景区名称或其他信息）  \n   - `\"xichengquxichengquwenwubaohudanwei35.名称\"`（西城区文物保护单位表中的“名称”列）  \n\n3. **条件**：  \n   - `WHERE \"xichengquxichengquwenwubaohudanwei35.序号\" = 1`（仅选择西城区文物保护单位表中序号为1的记录）  \n\n4. **操作**：  \n   - 查询语句中使用了 `表A - 表B` 的语法，可能是某种集合差集操作（如排除某些数据），但具体语义需结合数据库类型（如PostgreSQL、MySQL等）进一步确认。  \n\n---\n\n### **业务场景**  \n1. **可能的业务需求**：  \n   - 用户可能需要对比昌平区的A级景区数据与西城区的文物保护单位数据，例如查找哪些A级景区同时也是文物保护单位，或者排除某些重叠数据。  \n   - 另一种可能是查询昌平区A级景区中不包含西城区文物保护单位（序号为1）的数据。  \n\n2. **数据用途**：  \n   - 旅游管理部门可能希望分析不同区域的旅游资源分布情况，或者统计特定类型的景点（如A级景区和文物保护单位）之间的关系。  \n   - 政府开放数据平台可能提供此类数据供公众或研究人员使用，用于区域旅游规划或文化保护研究。  \n\n---\n\n### **用户描述**  \n1. **用户需求**：  \n   - 用户可能是旅游规划师、政府数据管理员或研究人员，需要获取昌平区A级景区和西城区文物保护单位的关联数据。  \n   - 用户可能希望排除某些重复或无关数据（例如，西城区序号为1的文物保护单位可能是一个特殊案例，需要单独分析）。  \n\n2. **实际问题**：  \n   - 如果用户发现某些景区既是A级景区又是文物保护单位，可能需要进一步分析其管理政策或游客流量。  \n   - 如果用户需要清理数据（如排除某些记录），此查询可能用于验证数据一致性。  \n\n3. **潜在问题**：  \n   - 表名和列名较长且包含中文，可能导致SQL语句可读性较差，需注意字段引用的准确性。  \n   - 集合差集操作（`表A - 表B`）的具体语义需明确，不同数据库的实现可能不同。  \n\n--- \n\n### **总结**  \n该SQL语句主要用于从两个表中查询特定列的数据，并通过条件筛选（西城区文物保护单位序号为1）获取结果。其业务场景可能涉及旅游数据对比、文化资源管理或开放数据分析。用户可能是需要整合或排除特定数据的政府工作人员或研究人员。",
+  "natural_language_query": "市民反映，我在做昌平区旅游资源调研的时候遇到一个问题。去年我们整理过昌平区的A级景区名单，现在需要参考西城区那边的文物保护单位数据做个对比。特别是西城区那边有个编号排第一的文保单位，不知道和昌平区的景区有没有什么关联。我手上有2021年昌平区开放的A级景区数据，但不太清楚该怎么查才能知道这些景区里有没有同时也是文物保护单位的情况。能不能帮忙看看这两边的数据？主要是想了解昌平区的景区和西城区那个最重要的文物保护单位之间有没有什么联系或者重复的地方。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ WHERE _ = _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842": [
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.2021年度昌平A级景区数据开放表               ",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 1",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 2",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 3",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 4",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 5",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 6"
+    ],
+    "xichengquxichengquwenwubaohudanwei35": [
+      "xichengquxichengquwenwubaohudanwei35.序号",
+      "xichengquxichengquwenwubaohudanwei35.名称",
+      "xichengquxichengquwenwubaohudanwei35.地址"
+    ]
+  }
+}

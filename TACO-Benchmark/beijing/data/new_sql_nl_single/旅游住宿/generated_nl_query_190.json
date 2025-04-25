@@ -1,0 +1,49 @@
+{
+  "sql": "SELECT \"shiguihuaziranziyuanweiyinshiye1523.HID\", \"shiguihuaziranziyuanweiyinshiye1523.HNAME\", \"shiguihuaziranziyuanweiyinshiye1523.CATEGORY\", \"shiguihuaziranziyuanweiyinshiye1523.ADDRESS\", \"xichengquxichengqudengjilvyoujingquminglu14.景区名称\", \"xichengquxichengqudengjilvyoujingquminglu14.地址\" FROM \"shiguihuaziranziyuanweiyinshiye1523\" INNER JOIN \"xichengquxichengqudengjilvyoujingquminglu14\" ON \"shiguihuaziranziyuanweiyinshiye1523.HID\" = \"xichengquxichengqudengjilvyoujingquminglu14.序号\" WHERE \"shiguihuaziranziyuanweiyinshiye1523.HID\" = '1' AND \"xichengquxichengqudengjilvyoujingquminglu14.等级\" = '一级' ;",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从两个表中联合查询特定条件下的数据，获取与某个特定自然资源和文化景点相关的详细信息。\n\n- **详细描述**：\n  - **涉及的表**：\n    1. `shiguihuaziranziyuanweiyinshiye1523`：可能是一个包含自然资源或文化景点信息的表。\n    2. `xichengquxichengqudengjilvyoujingquminglu14`：可能是一个包含旅游景点名录的表。\n  - **涉及的列**：\n    1. `shiguihuaziranziyuanweiyinshiye1523` 表中的列：\n      - `HID`：可能是景点的唯一标识符。\n      - `HNAME`：可能是景点的名称。\n      - `CATEGORY`：可能是景点的类别。\n      - `ADDRESS`：可能是景点的地址。\n    2. `xichengquxichengqudengjilvyoujingquminglu14` 表中的列：\n      - `景区名称`：景点的名称。\n      - `地址`：景点的地址。\n      - `序号`：可能是景点的唯一标识符，与 `shiguihuaziranziyuanweiyinshiye1523.HID` 关联。\n      - `等级`：景点的等级（如“一级”）。\n  - **条件**：\n    1. `shiguihuaziranziyuanweiyinshiye1523.HID = '1'`：筛选 `HID` 为 '1' 的记录。\n    2. `xichengquxichengqudengjilvyoujingquminglu14.等级 = '一级'`：筛选等级为“一级”的景点记录。\n  - **关联条件**：通过 `shiguihuaziranziyuanweiyinshiye1523.HID` 和 `xichengquxichengqudengjilvyoujingquminglu14.序号` 进行内连接。\n\n- **业务场景**：\n  - 该查询可能用于旅游管理系统或文化资源管理系统中，用于获取特定景点的详细信息，尤其是那些被标记为高等级（如“一级”）的景点。\n  - 可以用于生成景点报告、旅游推荐或资源管理分析。\n\n- **用户描述**：\n  - 用户可能需要查找某个特定景点（如 `HID = '1'`）的详细信息，并确认该景点是否为高等级（“一级”）景点。\n  - 用户可能是旅游规划师、文化资源管理者或游客，希望通过查询获取景点的名称、类别、地址等信息，以便进行进一步的规划或分析。\n  - 例如，用户可能在规划一条旅游路线时，希望优先选择高等级的景点，因此需要查询这些景点的详细信息。",
+  "natural_language_query": "市民反映，想了解西城区某个重点景区的具体情况。这个景区好像是编号1的那个，听说是一级景区，但不太确定具体叫什么名字。想查询一下这个景区的正式名称、具体地址是什么类型的景点（比如是自然风光还是文化古迹），因为最近在规划旅游路线，特别想优先安排那些评级高的优质景点。之前听朋友说西城区有些一级景区特别值得去，但网上信息比较零散，希望能帮忙核实这个编号1的景区到底是不是一级景区，并告知详细情况。来电咨询西城区重点景区信息问题。",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ ,_ ,_ from _ where _ = _ and _ = _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "shiguihuaziranziyuanweiyinshiye1523": [
+      "shiguihuaziranziyuanweiyinshiye1523.HID",
+      "shiguihuaziranziyuanweiyinshiye1523.FATHERID",
+      "shiguihuaziranziyuanweiyinshiye1523.HNAME",
+      "shiguihuaziranziyuanweiyinshiye1523.OTHERNAME",
+      "shiguihuaziranziyuanweiyinshiye1523.CATEGORY",
+      "shiguihuaziranziyuanweiyinshiye1523.SUBCATEGOR",
+      "shiguihuaziranziyuanweiyinshiye1523.COUNTYNAME",
+      "shiguihuaziranziyuanweiyinshiye1523.STREETNAME",
+      "shiguihuaziranziyuanweiyinshiye1523.DYNASTY",
+      "shiguihuaziranziyuanweiyinshiye1523.SUBDYNASTY",
+      "shiguihuaziranziyuanweiyinshiye1523.ADDRESS",
+      "shiguihuaziranziyuanweiyinshiye1523.RANK",
+      "shiguihuaziranziyuanweiyinshiye1523.BATCH",
+      "shiguihuaziranziyuanweiyinshiye1523.PUBTIME",
+      "shiguihuaziranziyuanweiyinshiye1523.USERS",
+      "shiguihuaziranziyuanweiyinshiye1523.PURPOSE",
+      "shiguihuaziranziyuanweiyinshiye1523.OWNERSHIP",
+      "shiguihuaziranziyuanweiyinshiye1523.STATEEVALU",
+      "shiguihuaziranziyuanweiyinshiye1523.SINGLERELI",
+      "shiguihuaziranziyuanweiyinshiye1523.PROTECTION",
+      "shiguihuaziranziyuanweiyinshiye1523.ATTACHEDRE",
+      "shiguihuaziranziyuanweiyinshiye1523.RELATEDPEO",
+      "shiguihuaziranziyuanweiyinshiye1523.RELATEDEVE",
+      "shiguihuaziranziyuanweiyinshiye1523.PUBNAME",
+      "shiguihuaziranziyuanweiyinshiye1523.SOURCE",
+      "shiguihuaziranziyuanweiyinshiye1523.EDITOR",
+      "shiguihuaziranziyuanweiyinshiye1523.ISREDUNDAN",
+      "shiguihuaziranziyuanweiyinshiye1523.THEME"
+    ],
+    "xichengquxichengqudengjilvyoujingquminglu14": [
+      "xichengquxichengqudengjilvyoujingquminglu14.序号",
+      "xichengquxichengqudengjilvyoujingquminglu14.景区名称",
+      "xichengquxichengqudengjilvyoujingquminglu14.等级",
+      "xichengquxichengqudengjilvyoujingquminglu14.地址",
+      "xichengquxichengqudengjilvyoujingquminglu14.咨询电话",
+      "xichengquxichengqudengjilvyoujingquminglu14.投诉电话",
+      "xichengquxichengqudengjilvyoujingquminglu14.邮编"
+    ]
+  }
+}

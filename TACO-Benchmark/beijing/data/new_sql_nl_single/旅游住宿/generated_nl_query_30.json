@@ -1,0 +1,47 @@
+{
+  "sql": "SELECT pingguquzhucegongyuanxinxi780.名称, pingguquzhucegongyuanxinxi780.区, pingguquzhucegongyuanxinxi780.街道, pingguquzhucegongyuanxinxi780.地址, pingguquzhucegongyuanxinxi780.咨询电话, shiguihuaziranziyuanweitongxunshe1518.HNAME, shiguihuaziranziyuanweitongxunshe1518.COUNTYNAME, shiguihuaziranziyuanweitongxunshe1518.STREETNAME FROM pingguquzhucegongyuanxinxi780 JOIN shiguihuaziranziyuanweitongxunshe1518 ON pingguquzhucegongyuanxinxi780.序号 = shiguihuaziranziyuanweitongxunshe1518.HID WHERE pingguquzhucegongyuanxinxi780.名称 = '某公司' AND shiguihuaziranziyuanweitongxunshe1518.HNAME = '某机构'",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是查询名称为“某公司”的公园信息，并关联查询与其相关的“某机构”的信息。\n\n- **详细描述**：\n  - **涉及的表**：\n    - `pingguquzhucegongyuanxinxi780`：该表存储了平谷区注册公园的详细信息。\n    - `shiguihuaziranziyuanweitongxunshe1518`：该表存储了市规划和自然资源委员会通讯社的相关信息。\n  - **涉及的列**：\n    - `pingguquzhucegongyuanxinxi780` 表中的列：\n      - `名称`：公园的名称。\n      - `区`：公园所在的区。\n      - `街道`：公园所在的街道。\n      - `地址`：公园的具体地址。\n      - `咨询电话`：公园的咨询电话。\n      - `序号`：公园的唯一标识符。\n    - `shiguihuaziranziyuanweitongxunshe1518` 表中的列：\n      - `HNAME`：机构的名称。\n      - `COUNTYNAME`：机构所在的县或区。\n      - `STREETNAME`：机构所在的街道。\n      - `HID`：机构的唯一标识符。\n  - **条件**：\n    - `pingguquzhucegongyuanxinxi780.名称 = '某公司'`：筛选出名称为“某公司”的公园。\n    - `shiguihuaziranziyuanweitongxunshe1518.HNAME = '某机构'`：筛选出名称为“某机构”的机构。\n    - `pingguquzhucegongyuanxinxi780.序号 = shiguihuaziranziyuanweitongxunshe1518.HID`：通过序号和HID关联两个表。\n\n- **业务场景**：\n  - 该查询可以用于查找特定公园（“某公司”）及其关联机构（“某机构”）的详细信息。例如，可能需要了解某个公园的管理机构或合作机构的具体信息，以便进行联系或进一步合作。\n\n- **用户描述**：\n  - 用户可能是公园的管理人员或相关业务人员，需要查询某个公园及其关联机构的具体信息，以便进行业务对接或问题咨询。例如，用户可能需要联系公园的管理机构了解公园的运营情况，或者需要与相关机构合作举办活动。",
+  "natural_language_query": "市民反映，想了解平谷区那个叫\"某公司\"的公园的具体情况，包括它在哪个街道、具体位置和联系电话。另外还想知道跟这个公园有合作的\"某机构\"的信息，比如这个机构在哪个区、具体在什么位置。因为最近想在这个公园办活动，需要联系相关单位协调场地使用事宜，但网上查不到完整信息，希望有关部门能帮忙提供这些联系方式和工作对接渠道。来电主要咨询公园及合作机构信息问题。",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ , _ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ from _ join _ on _ ._ = _ ._ where _ ._",
+  "database": "旅游住宿",
+  "tables": {
+    "pingguquzhucegongyuanxinxi780": [
+      "pingguquzhucegongyuanxinxi780.序号",
+      "pingguquzhucegongyuanxinxi780.名称",
+      "pingguquzhucegongyuanxinxi780.区",
+      "pingguquzhucegongyuanxinxi780.街道",
+      "pingguquzhucegongyuanxinxi780.地址",
+      "pingguquzhucegongyuanxinxi780.咨询电话"
+    ],
+    "shiguihuaziranziyuanweitongxunshe1518": [
+      "shiguihuaziranziyuanweitongxunshe1518.HID",
+      "shiguihuaziranziyuanweitongxunshe1518.FATHERID",
+      "shiguihuaziranziyuanweitongxunshe1518.HNAME",
+      "shiguihuaziranziyuanweitongxunshe1518.OTHERNAME",
+      "shiguihuaziranziyuanweitongxunshe1518.CATEGORY",
+      "shiguihuaziranziyuanweitongxunshe1518.SUBCATEGOR",
+      "shiguihuaziranziyuanweitongxunshe1518.COUNTYNAME",
+      "shiguihuaziranziyuanweitongxunshe1518.STREETNAME",
+      "shiguihuaziranziyuanweitongxunshe1518.DYNASTY",
+      "shiguihuaziranziyuanweitongxunshe1518.SUBDYNASTY",
+      "shiguihuaziranziyuanweitongxunshe1518.ADDRESS",
+      "shiguihuaziranziyuanweitongxunshe1518.RANK",
+      "shiguihuaziranziyuanweitongxunshe1518.BATCH",
+      "shiguihuaziranziyuanweitongxunshe1518.PUBTIME",
+      "shiguihuaziranziyuanweitongxunshe1518.USERS",
+      "shiguihuaziranziyuanweitongxunshe1518.PURPOSE",
+      "shiguihuaziranziyuanweitongxunshe1518.OWNERSHIP",
+      "shiguihuaziranziyuanweitongxunshe1518.STATEEVALU",
+      "shiguihuaziranziyuanweitongxunshe1518.SINGLERELI",
+      "shiguihuaziranziyuanweitongxunshe1518.PROTECTION",
+      "shiguihuaziranziyuanweitongxunshe1518.ATTACHEDRE",
+      "shiguihuaziranziyuanweitongxunshe1518.RELATEDPEO",
+      "shiguihuaziranziyuanweitongxunshe1518.RELATEDEVE",
+      "shiguihuaziranziyuanweitongxunshe1518.PUBNAME",
+      "shiguihuaziranziyuanweitongxunshe1518.SOURCE",
+      "shiguihuaziranziyuanweitongxunshe1518.EDITOR",
+      "shiguihuaziranziyuanweitongxunshe1518.ISREDUNDAN"
+    ]
+  }
+}

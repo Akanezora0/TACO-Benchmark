@@ -1,0 +1,20 @@
+{
+  "sql": "SELECT \"shunyiqugongjiaoxianlujizhandianjibenxinxi2076.线路运营信息\", \"shijiaotongweizulinyehujibenxinxi3677.经营业户名称\" FROM \"shunyiqugongjiaoxianlujizhandianjibenxinxi2076\" - \"shijiaotongweizulinyehujibenxinxi3677\";",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ ;",
+  "database": "交通服务",
+  "tables": {
+    "shunyiqugongjiaoxianlujizhandianjibenxinxi2076": [
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.线路运营信息",
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 1",
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 2",
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 3",
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 4",
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 5",
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 6"
+    ],
+    "shijiaotongweizulinyehujibenxinxi3677": [
+      "shijiaotongweizulinyehujibenxinxi3677.经营业户名称"
+    ]
+  }
+}

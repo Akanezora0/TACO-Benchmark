@@ -1,0 +1,25 @@
+{
+  "sql": "SELECT \"pingguquzhucegongyuanxinxi780\".\"序号\", \"pingguquzhucegongyuanxinxi780\".\"名称\", \"pingguquzhucegongyuanxinxi780\".\"区\" FROM \"pingguquzhucegongyuanxinxi780\" WHERE \"pingguquzhucegongyuanxinxi780\".\"区\" = 'fengtaiqu'",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ from _ where _ =_",
+  "database": "旅游住宿",
+  "tables": {
+    "pingguquzhucegongyuanxinxi780": [
+      "pingguquzhucegongyuanxinxi780.序号",
+      "pingguquzhucegongyuanxinxi780.名称",
+      "pingguquzhucegongyuanxinxi780.区",
+      "pingguquzhucegongyuanxinxi780.街道",
+      "pingguquzhucegongyuanxinxi780.地址",
+      "pingguquzhucegongyuanxinxi780.咨询电话"
+    ],
+    "fengtaiqufengtaiquxingjijiudian1397": [
+      "fengtaiqufengtaiquxingjijiudian1397.星级酒店明细",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 1",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 2",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 3",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 4",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 5",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 6"
+    ]
+  }
+}

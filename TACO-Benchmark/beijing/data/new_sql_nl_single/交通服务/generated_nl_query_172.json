@@ -1,0 +1,21 @@
+{
+  "sql": "SELECT \"shijiaotongweichuzuyehujibenxinxi3664.经营业户名称\", \"shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.检查结果\" FROM \"shijiaotongweichuzuyehujibenxinxi3664\" JOIN \"shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210\" ON \"shijiaotongweichuzuyehujibenxinxi3664.经营业户编号\" = \"shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.监管对象编号\" WHERE \"shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.实施机构\" = '机构名称';",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从两个表中联合查询特定机构的经营业户名称及其对应的检查结果。\n\n- **详细描述**：\n  - **涉及的表**：\n    1. `shijiaotongweichuzuyehujibenxinxi3664`（可能为\"市交通委出租业户基本信息表\"）：存储出租业户的基本信息。\n    2. `shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210`（可能为\"市交通委公交双随机抽查结果公示表\"）：存储公交双随机抽查的结果信息。\n  - **涉及的列**：\n    1. `shijiaotongweichuzuyehujibenxinxi3664.经营业户名称`：出租业户的名称。\n    2. `shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.检查结果`：抽查的检查结果。\n    3. `shijiaotongweichuzuyehujibenxinxi3664.经营业户编号` 和 `shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.监管对象编号`：用于连接两个表的关联字段。\n    4. `shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.实施机构`：用于筛选特定机构的抽查结果。\n  - **条件**：\n    - 仅查询 `shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.实施机构` 为 '机构名称' 的记录。\n\n- **业务场景**：\n  - 该查询可以用于交通管理部门对特定机构（如某公交公司或出租车公司）的抽查结果进行汇总和分析。\n  - 通过查询特定机构的经营业户名称及其检查结果，可以快速了解该机构下属业户的合规情况，便于进行监管和整改。\n\n- **用户描述**：\n  - 用户可能是交通管理部门的工作人员，需要对某机构的抽查结果进行汇总，以便：\n    1. 评估该机构的整体合规情况。\n    2. 发现潜在的问题业户，进行重点监管。\n    3. 生成报告或公示信息，供上级部门或公众查阅。\n  - 用户的需求是快速获取特定机构下属业户的检查结果，以便进行后续的监管或整改工作。",
+  "natural_language_query": "市民反映，我是交通局的工作人员，最近在对\"机构名称\"这个单位进行例行检查时，发现他们下属的一些出租车公司好像存在违规经营的情况。想了解一下这个机构下面都有哪些运输公司在运营，以及最近对这些公司检查的结果怎么样。特别是那些检查不合格的公司，能不能帮忙查一下具体名单和问题？我们这边需要整理一个报告，看看哪些公司需要重点整改。之前听说有乘客投诉过几家公司服务不规范，但不确定是不是属于这个机构管理的。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ WHERE _ = _ ;",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweichuzuyehujibenxinxi3664": [
+      "shijiaotongweichuzuyehujibenxinxi3664.经营业户名称"
+    ],
+    "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210": [
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.监管对象",
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.实施机构",
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.检查行为编号",
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.检查时间",
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.检查人员",
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.检查结果"
+    ]
+  }
+}

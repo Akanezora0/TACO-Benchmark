@@ -1,0 +1,21 @@
+{
+  "sql": "SELECT \n    shiwenhuahelvyoujulvxingshexinxi3530.旅行社名称,\n    shiwenhuahelvyoujulvxingshexinxi3530.许可经营业务\nFROM \n    shiwenhuahelvyoujulvxingshexinxi3530\nWHERE \n    shiwenhuahelvyoujulvxingshexinxi3530.许可经营业务 IN (\n        SELECT \n            DISTINCT shiwenhuahelvyoujulvxingshexinxi3530.许可经营业务\n        FROM \n            shiwenhuahelvyoujulvxingshexinxi3530\n        WHERE \n            shiwenhuahelvyoujulvxingshexinxi3530.旅行社业务经营许可证编号 = (\n                SELECT \n                    xichengquxichengquxingjifandianminglu19.?星级酒店名称\n                FROM \n                    xichengquxichengquxingjifandianminglu19\n                WHERE \n                    xichengquxichengquxingjifandianminglu19.?星级 = '5'\n            )\n        AND \n            shiwenhuahelvyoujulvxingshexinxi3530.许可时间 < \n                (\n                    SELECT \n                        MAX(xichengquxichengquxingjifandianminglu19.许可时间)\n                    FROM \n                        xichengquxichengquxingjifandianminglu19\n                )\n    )",
+  "results": 0,
+  "sql skeleton": "select _ ,_ from _ where _ = (select distinct _ from _ where _ = _ ) and _ < _",
+  "database": "旅游住宿",
+  "tables": {
+    "shiwenhuahelvyoujulvxingshexinxi3530": [
+      "shiwenhuahelvyoujulvxingshexinxi3530.旅行社名称",
+      "shiwenhuahelvyoujulvxingshexinxi3530.旅行社业务经营许可证编号",
+      "shiwenhuahelvyoujulvxingshexinxi3530.许可经营业务",
+      "shiwenhuahelvyoujulvxingshexinxi3530.许可时间"
+    ],
+    "xichengquxichengquxingjifandianminglu19": [
+      "xichengquxichengquxingjifandianminglu19.序号",
+      "xichengquxichengquxingjifandianminglu19.?星级酒店名称",
+      "xichengquxichengquxingjifandianminglu19.?星级",
+      "xichengquxichengquxingjifandianminglu19.?联系电话",
+      "xichengquxichengquxingjifandianminglu19.?酒店地址"
+    ]
+  }
+}

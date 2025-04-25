@@ -1,0 +1,17 @@
+{
+  "sql": "select \n    shijiaotongweigongjiaoxianluxinxichuxingfuwu3666.线路代码,\n    shijiaotongweigongjiaoxianluxinxichuxingfuwu3666.路线名称,\n    shijiaotongweiweixianpinyunshuqiye3674.企业名称,\n    shijiaotongweiweixianpinyunshuqiye3674.所属地区,\n    shijiaotongweiweixianpinyunshuqiye3674.经营许可证号\nfrom \n    shijiaotongweigongjiaoxianluxinxichuxingfuwu3666\njoin \n    shijiaotongweiweixianpinyunshuqiye3674\non \n    shijiaotongweigongjiaoxianluxinxichuxingfuwu3666.线路代码 = shijiaotongweiweixianpinyunshuqiye3674.线路代码\nwhere \n    shijiaotongweigongjiaoxianluxinxichuxingfuwu3666.线路代码 = '特定线路代码' and \n    shijiaotongweiweixianpinyunshuqiye3674.所属地区 = '特定所属地区'\n```",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ from _ join _ on _ ._ = _ ._ join _ on _ ._ = _ ._ where _ ._ = _ and _ ._ = _ and _ (_ ._ ,_ ) = _",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweigongjiaoxianluxinxichuxingfuwu3666": [
+      "shijiaotongweigongjiaoxianluxinxichuxingfuwu3666.线路代码",
+      "shijiaotongweigongjiaoxianluxinxichuxingfuwu3666.路线名称"
+    ],
+    "shijiaotongweiweixianpinyunshuqiye3674": [
+      "shijiaotongweiweixianpinyunshuqiye3674.企业名称",
+      "shijiaotongweiweixianpinyunshuqiye3674.所属地区",
+      "shijiaotongweiweixianpinyunshuqiye3674.经营许可证号"
+    ]
+  }
+}

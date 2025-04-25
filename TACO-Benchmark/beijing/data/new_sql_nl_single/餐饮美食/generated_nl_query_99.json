@@ -1,0 +1,26 @@
+{
+  "sql": "SELECT s1.专用标识牌号 FROM shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076 s1 WHERE s1.专用标识牌号 = (SELECT s2.专用标识牌号 FROM shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076 s2 WHERE s2.地址 = '特定地址')\n```",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是查询具有特定地址的专用标识牌号。\n\n- **详细描述**：\n  - **涉及的表**：`shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076`（表名较长，可能是一个存储民族宗教违规规范化清真食品专管数据的表）。\n  - **涉及的列**：\n    - `专用标识牌号`：可能是用于标识清真食品专管的唯一编号。\n    - `地址`：可能是清真食品专管的地址信息。\n  - **条件**：\n    - 主查询的条件是 `s1.专用标识牌号` 必须等于子查询中返回的 `s2.专用标识牌号`。\n    - 子查询的条件是 `s2.地址 = '特定地址'`，即查询地址为“特定地址”的记录。\n\n- **业务场景**：\n  - 该查询可能用于民族宗教事务管理部门对清真食品专管数据的监管。例如，监管部门可能需要查找某个特定地址下的所有专用标识牌号，以便进行合规性检查或数据核对。\n  - 另一个可能的场景是清真食品专管单位自查，确保特定地址下的专用标识牌号符合规范。\n\n- **用户描述**：\n  - 用户可能是民族宗教事务管理部门的工作人员，需要核实某个特定地址下的清真食品专管单位是否使用了正确的专用标识牌号。\n  - 用户也可能是清真食品专管单位的管理员，需要查询自己单位在特定地址下的专用标识牌号，以便进行内部管理或上报数据。\n  - 用户可能遇到的实际问题包括：地址信息不准确、专用标识牌号与地址不匹配等，需要通过查询来验证或修正数据。",
+  "natural_language_query": "市民反映，位于朝阳区团结湖街道的清真食品专管点可能存在标识牌不规范的情况。我们单位最近在进行清真食品专项检查时，发现这个地址的商户使用的专用标识牌和登记信息不太一致。想帮忙查一下团结湖这边所有清真食品点的专用标识牌信息，看看是不是都符合规定。因为最近有群众投诉说有的商户挂牌和实际经营内容不符，我们担心存在违规使用标识牌的情况。能不能帮忙核实下这个地址下所有正规的专用标识牌号？这样我们好对照检查，避免出现假冒清真食品的问题。",
+  "results": 0,
+  "sql skeleton": "select _ from _ where _ = (select _ from _ where _ = _ )",
+  "database": "餐饮美食",
+  "tables": {
+    "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076": [
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址"
+    ],
+    "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374": [
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYXM",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.FZRQ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.YXQZ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.DWMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.EXCHANGETIME"
+    ]
+  }
+}

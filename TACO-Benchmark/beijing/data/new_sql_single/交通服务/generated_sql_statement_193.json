@@ -1,0 +1,20 @@
+{
+  "sql": "SELECT \n    xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.\"西城区路侧停车数据\",\n    xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.Unnamed: 1,\n    xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.Unnamed: 2,\n    shijiaotongweiguidaozhandianxinxichuxing3670.\"线路名称\"\nFROM \n    xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392\nJOIN \n    shijiaotongweiguidaozhandianxinxichuxing3670 ON \n        xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.\"西城区路侧停车数据\" = shijiaotongweiguidaozhandianxinxichuxing3670.\"线路名称\"\nWHERE \n    xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.\"西城区路侧停车数据\" = '特定值' AND \n    shijiaotongweiguidaozhandianxinxichuxing3670.\"站点编码\" = '特定编码'",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ from _ where _ = _ and _ = (select from _ where _ = _ and _ = _ and _ (_ ,_ ) = _ )",
+  "database": "交通服务",
+  "tables": {
+    "xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392": [
+      "xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.西城区路侧停车数据",
+      "xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.Unnamed: 1",
+      "xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.Unnamed: 2",
+      "xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.Unnamed: 3",
+      "xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.Unnamed: 4"
+    ],
+    "shijiaotongweiguidaozhandianxinxichuxing3670": [
+      "shijiaotongweiguidaozhandianxinxichuxing3670.线路名称",
+      "shijiaotongweiguidaozhandianxinxichuxing3670.站点编码",
+      "shijiaotongweiguidaozhandianxinxichuxing3670.车站名"
+    ]
+  }
+}

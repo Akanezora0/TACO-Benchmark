@@ -1,0 +1,21 @@
+{
+  "sql": "SELECT \"shijiaotongweichaoxianchaozaihuochexiezaicha\"ng.\"行政区划代码\", \"shijiaotongweichaoxianchaozaihuochexiezaicha\"ng.\"站点名称\", \"shijiaotongweichaoxianchaozaihuochexiezaicha\"ng.\"联系电话\", \"shijiaotongweichaoxianchaozaihuochexiezaicha\"ng.\"地址\", \"haidianqugonggongjianzhutingchechang3416\".\"详细地址\" FROM \"shijiaotongweichaoxianchaozaihuochexiezaicha\"ng, \"haidianqugonggongjianzhutingchechang3416\" WHERE \"shijiaotongweichaoxianchaozaihuochexiezaicha\"ng.\"行政区划代码\" = \"haidianqugonggongjianzhutingchechang3416\".\"序号\"",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ ,_ ,_ from _ where _ = _",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663": [
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.行政区划代码",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.站点名称",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.联系电话",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.地址"
+    ],
+    "haidianqugonggongjianzhutingchechang3416": [
+      "haidianqugonggongjianzhutingchechang3416.序号",
+      "haidianqugonggongjianzhutingchechang3416.停车场名称",
+      "haidianqugonggongjianzhutingchechang3416.停车场类型",
+      "haidianqugonggongjianzhutingchechang3416.详细地址",
+      "haidianqugonggongjianzhutingchechang3416.经营单位"
+    ]
+  }
+}

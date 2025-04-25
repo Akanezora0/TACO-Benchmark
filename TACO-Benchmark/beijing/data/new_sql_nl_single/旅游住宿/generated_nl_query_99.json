@@ -1,0 +1,24 @@
+{
+  "sql": "SELECT xichengquxichengqudengjilvyoujingquminglu14.景区名称 FROM xichengquxichengqudengjilvyoujingquminglu14 WHERE xichengquxichengqudengjilvyoujingquminglu14.等级 = (SELECT pingguqupingguqujingpinminsu2083.平谷区2022年精品民宿 FROM pingguqupingguqujingpinminsu2083 WHERE pingguqupingguqujingpinminsu2083.Unnamed: 1 = '某个具体值')\n```",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从 `xichengquxichengqudengjilvyoujingquminglu14` 表中查询符合条件的景区名称，条件是这些景区的等级与 `pingguqupingguqujingpinminsu2083` 表中某个特定民宿的等级相同。\n\n### **详细描述**  \n1. **主查询表**：`xichengquxichengqudengjilvyoujingquminglu14`  \n   - 查询列：`景区名称`（即该表中的景区名称字段）。  \n   - 条件：`等级` 字段的值必须等于子查询返回的结果。  \n\n2. **子查询表**：`pingguqupingguqujingpinminsu2083`  \n   - 查询列：`平谷区2022年精品民宿`（即该表中的民宿等级字段）。  \n   - 条件：`Unnamed: 1` 列的值等于 `'某个具体值'`（可能是某个民宿的名称或标识）。  \n\n3. **查询逻辑**：  \n   - 子查询先找出 `pingguqupingguqujingpinminsu2083` 表中 `Unnamed: 1` 列等于 `'某个具体值'` 的记录，并返回其对应的 `平谷区2022年精品民宿`（即民宿等级）。  \n   - 主查询再找出 `xichengquxichengqudengjilvyoujingquminglu14` 表中 `等级` 字段等于子查询返回值的所有景区名称。  \n\n### **业务场景**  \n该查询可能用于旅游行业的数据分析或推荐系统，例如：  \n- **景区推荐**：用户查询某个精品民宿的等级后，系统推荐相同等级的其他景区，供游客参考。  \n- **等级匹配分析**：旅游管理部门可能希望找出与某类精品民宿等级相同的景区，以便进行资源整合或营销推广。  \n\n### **用户描述**  \n1. **游客需求**：  \n   - 游客入住了一家高评分的精品民宿（如 `'某个具体值'`），并希望找到同等级别的旅游景点，以确保游玩体验的质量。  \n   - 例如：“我入住了‘某某民宿’，它的等级很高，附近还有哪些同等级别的景区？”  \n\n2. **旅游管理需求**：  \n   - 旅游管理部门可能希望分析不同区域的旅游资源等级分布，例如：“平谷区的某精品民宿被评为4A级，西城区有哪些4A级景区？”  \n   - 用于制定旅游线路或推广策略，如“推荐与某高端民宿同等级的景区，吸引高端游客。”  \n\n### **补充说明**  \n- 该 SQL 语句中的表名和列名较长且不规范（如 `Unnamed: 1`），可能是临时表或未优化的数据库结构。  \n- 实际应用中，可能需要优化表名和列名以提高可读性，并确保查询效率。",
+  "natural_language_query": "市民反映，自己上周入住了平谷区一家叫\"山水人家\"的精品民宿，感觉特别棒，听说是4A级标准的。想问问西城区这边有没有和这家民宿同等级别的旅游景区推荐？因为计划下周带孩子去西城区玩，希望能找到品质相当的景点。来电咨询同等级景区推荐问题。\n\n（注：这里用\"山水人家\"替代了原文中的'某个具体值'，使查询更具体化；同时保留了用户对民宿等级的关注，但避免直接使用\"等级\"等专业术语，而是用\"4A级标准\"这样更生活化的表达）",
+  "results": 0,
+  "sql skeleton": "select _ from _ where _ = (select _ from _ where _ = _ )",
+  "database": "旅游住宿",
+  "tables": {
+    "xichengquxichengqudengjilvyoujingquminglu14": [
+      "xichengquxichengqudengjilvyoujingquminglu14.序号",
+      "xichengquxichengqudengjilvyoujingquminglu14.景区名称",
+      "xichengquxichengqudengjilvyoujingquminglu14.等级",
+      "xichengquxichengqudengjilvyoujingquminglu14.地址",
+      "xichengquxichengqudengjilvyoujingquminglu14.咨询电话",
+      "xichengquxichengqudengjilvyoujingquminglu14.投诉电话",
+      "xichengquxichengqudengjilvyoujingquminglu14.邮编"
+    ],
+    "pingguqupingguqujingpinminsu2083": [
+      "pingguqupingguqujingpinminsu2083.平谷区2022年精品民宿",
+      "pingguqupingguqujingpinminsu2083.Unnamed: 1",
+      "pingguqupingguqujingpinminsu2083.Unnamed: 2"
+    ]
+  }
+}

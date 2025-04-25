@@ -1,0 +1,22 @@
+{
+  "sql": "SELECT \n    shijiaotongweikebianqingbaobanshebeixinxi3519.唯一标识, \n    shijiaotongweikebianqingbaobanshebeixinxi3519.名称, \n    shijiaotongweikebianqingbaobanshebeixinxi3519.设备编码, \n    shunyiqugongjiaoxianlujizhandianjibenxinxi2076.线路运营信息, \n    shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 1, \n    shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 2 \nFROM \n    shijiaotongweikebianqingbaobanshebeixinxi3519 \nJOIN \n    shunyiqugongjiaoxianlujizhandianjibenxinxi2076 \nON \n    shijiaotongweikebianqingbaobanshebeixinxi3519.设备编码 = shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 1 \nWHERE \n    shijiaotongweikebianqingbaobanshebeixinxi3519.名称 = '指定名称' \nAND \n    shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 2 = '指定值' \nAND \n    (shunyiqugongjiaoxianlujizhandianjibenxinxi2076.线路运营信息, shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 3) = ('指定信息', '指定值')",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ from _ join _ on _ ._ = _ ._ where _ ._ = _ and _ = _ and _ (_ ,_ ) = _",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweikebianqingbaobanshebeixinxi3519": [
+      "shijiaotongweikebianqingbaobanshebeixinxi3519.唯一标识",
+      "shijiaotongweikebianqingbaobanshebeixinxi3519.名称",
+      "shijiaotongweikebianqingbaobanshebeixinxi3519.设备编码"
+    ],
+    "shunyiqugongjiaoxianlujizhandianjibenxinxi2076": [
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.线路运营信息",
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 1",
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 2",
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 3",
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 4",
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 5",
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 6"
+    ]
+  }
+}

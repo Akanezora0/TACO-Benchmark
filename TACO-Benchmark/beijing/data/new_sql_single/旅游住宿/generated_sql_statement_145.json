@@ -1,0 +1,19 @@
+{
+  "sql": "select xichengquxichengquguojiajizhongdianwenwubaohudanwei60.名称, shiwenhuahelvyoujulvxingshexinxi3530.旅行社名称 from xichengquxichengquguojiajizhongdianwenwubaohudanwei60 left join shiwenhuahelvyoujulvxingshexinxi3530 on xichengquxichengquguojiajizhongdianwenwubaohudanwei60.序号 = shiwenhuahelvyoujulvxingshexinxi3530.许可经营业务 where xichengquxichengquguojiajizhongdianwenwubaohudanwei60.序号 in (select xichengquxichengquguojiajizhongdianwenwubaohudanwei60.序号 from xichengquxichengquguojiajizhongdianwenwubaohudanwei60 where xichengquxichengquguojiajizhongdianwenwubaohudanwei60.地址 like '北京市%')\n```",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ from _ left join _ on _ ._ = _ ._ where _ in (select _ from _ where _ )",
+  "database": "旅游住宿",
+  "tables": {
+    "xichengquxichengquguojiajizhongdianwenwubaohudanwei60": [
+      "xichengquxichengquguojiajizhongdianwenwubaohudanwei60.序号",
+      "xichengquxichengquguojiajizhongdianwenwubaohudanwei60.名称",
+      "xichengquxichengquguojiajizhongdianwenwubaohudanwei60.地址"
+    ],
+    "shiwenhuahelvyoujulvxingshexinxi3530": [
+      "shiwenhuahelvyoujulvxingshexinxi3530.旅行社名称",
+      "shiwenhuahelvyoujulvxingshexinxi3530.旅行社业务经营许可证编号",
+      "shiwenhuahelvyoujulvxingshexinxi3530.许可经营业务",
+      "shiwenhuahelvyoujulvxingshexinxi3530.许可时间"
+    ]
+  }
+}

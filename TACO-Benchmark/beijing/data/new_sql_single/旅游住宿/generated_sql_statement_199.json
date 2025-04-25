@@ -1,0 +1,20 @@
+{
+  "sql": "SELECT \"shunyiquxingjifandian1276.顺义区星级饭店\", \"shunyiquxingjifandian1276.Unnamed: 1\", \"shunyiquxingjifandian1276.Unnamed: 2\", \"shunyiquxingjifandian1276.Unnamed: 3\", \"shiwenhuahelvyoujulvxingshexinxi3530.旅行社名称\" FROM \"shunyiquxingjifandian1276\" INNER JOIN \"shiwenhuahelvyoujulvxingshexinxi3530\" ON \"shunyiquxingjifandian1276.顺义区星级饭店\" = \"shiwenhuahelvyoujulvxingshexinxi3530.旅行社名称\" WHERE \"shiwenhuahelvyoujulvxingshexinxi3530.许可经营业务\" = '旅游'",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ ,_ ,_ from _ where _ = _",
+  "database": "旅游住宿",
+  "tables": {
+    "shunyiquxingjifandian1276": [
+      "shunyiquxingjifandian1276.顺义区星级饭店",
+      "shunyiquxingjifandian1276.Unnamed: 1",
+      "shunyiquxingjifandian1276.Unnamed: 2",
+      "shunyiquxingjifandian1276.Unnamed: 3"
+    ],
+    "shiwenhuahelvyoujulvxingshexinxi3530": [
+      "shiwenhuahelvyoujulvxingshexinxi3530.旅行社名称",
+      "shiwenhuahelvyoujulvxingshexinxi3530.旅行社业务经营许可证编号",
+      "shiwenhuahelvyoujulvxingshexinxi3530.许可经营业务",
+      "shiwenhuahelvyoujulvxingshexinxi3530.许可时间"
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "sql": "SELECT waste_water_facilities.\"FacilityName\" FROM (SELECT waste_water_facilities.\"FacilityName\" FROM waste_water_facilities WHERE waste_water_facilities.\"FacilityID\" = '123' UNION SELECT landfills.\"SITENAME\" FROM landfills WHERE landfills.\"PSINUM\" = '456') AS combined_table",
+  "problem_description": "### Query intent:\nThe SQL statement is designed to retrieve specific facility names from two different types of facilities: waste water facilities and landfills. It combines the results from these two sources into a single output.\n\n### Detailed description:\n\n1. **Tables involved**: The query involves two tables - `waste_water_facilities` and `landfills`. \n\n   - `waste_water_facilities`: This table likely contains data related to facilities that treat or manage waste water. The columns include `\"FacilityID\"` and `\"FacilityName\"`.\n   \n   - `landfills`: This table is likely associated with facilities that manage solid waste, containing columns such as `\"PSINUM\"` and `\"SITENAME\"`.\n\n2. **Columns selected**: The query selects `\"FacilityName\"` from both tables. This suggests that the user is interested in the names of facilities, possibly for comparison or further analysis.\n\n3. **Conditions specified**:\n   - In `waste_water_facilities`, it filters based on `\"FacilityID\" = '123'`. This means it's looking for a specific waste water facility with the ID '123'.\n   - In `landfills`, it filters based on `\"PSINUM\" = '456'`. This indicates an interest in a particular landfill with the PSINUM '456'.\n\n4. **Union operation**: The use of `UNION` combines the results of the two queries into one output. This implies that the user wants to see the names of facilities from both categories (waste water and landfills) that meet the specified criteria.\n\n### Business scenario:\n\nThis query could be useful in environmental management or waste disposal operations where comparisons between different types of facilities (e.g., waste water treatment vs. landfills) are necessary. For instance, it might help in identifying facilities that need maintenance, are not compliant, or require operational improvements.\n\n### User description:\n\nA user working in environmental compliance or waste management might use this query to:\n- Compare operational efficiency between a specific waste water treatment facility (`FacilityID = '123'`) and a specific landfill (`PSINUM = '456'`).\n- Identify if there are any discrepancies in naming conventions between the two systems (i.e., whether a facility name exists in both tables).\n- Prepare reports for regulatory bodies by consolidating facility names across different types of facilities.\n\nThis query serves as a tool for data consolidation and comparison, aiding in decision-making processes within environmental management and waste disposal",
+  "natural_language_query": "I'm tasked with pulling out facility names from our database, specifically focusing on waste water facilities and landfills. I want to compare the names of a specific waste water facility with FacilityID '123' against a particular landfill with PSINUM '456'. The goal is to gather all the names in one list for easier review and analysis. Can you assist me with writing a SQL query that accomplishes this?",
+  "results": 0,
+  "sql skeleton": "select _ ._ from (select _ from _ where _ = _ union select _ as _ from _ where _ = _ ) _",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "waste_water_facilities": [
+      "waste_water_facilities.X",
+      "waste_water_facilities.Y",
+      "waste_water_facilities.FacilityName",
+      "waste_water_facilities.FacilityID",
+      "waste_water_facilities.WWInventoryURL"
+    ],
+    "landfills": [
+      "landfills.X",
+      "landfills.Y",
+      "landfills.OBJECTID",
+      "landfills.PSINUM",
+      "landfills.SWFACID",
+      "landfills.SITENAME",
+      "landfills.LOCCONF",
+      "landfills.DATE_FIRST",
+      "landfills.DATE_LAST",
+      "landfills.ACRES",
+      "landfills.STATUS",
+      "landfills.WQMONITORING",
+      "landfills.GASCOLLECTION",
+      "landfills.TOWNNAME",
+      "landfills.LATITUDE",
+      "landfills.LONGITUDE"
+    ]
+  }
+}

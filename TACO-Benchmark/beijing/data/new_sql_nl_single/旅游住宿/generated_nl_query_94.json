@@ -1,0 +1,46 @@
+{
+  "sql": "SELECT \"shiguihuaziranziyuanweiqingzhensi1515.HID\", \"shiguihuaziranziyuanweiqingzhensi1515.HNAME\", \"fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.旅行社分社及旅行社服务网点明细\" FROM \"shiguihuaziranziyuanweiqingzhensi1515\" INNER JOIN \"fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396\" ON \"shiguihuaziranziyuanweiqingzhensi1515.HID\" = \"fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.Unnamed: 1\";",
+  "problem_description": "### **查询意图**：\n该 SQL 语句的目的是从两个表中查询并关联数据，获取与“规划自然资源委清镇市”相关的数据，并与“丰台区丰台区旅行社分社及旅行社服务网点”表中的数据进行匹配，以获取相关信息。\n\n### **详细描述**：\n1. **涉及的表**：\n   - `shiguihuaziranziyuanweiqingzhensi1515`（规划自然资源委清镇市表）\n   - `fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396`（丰台区丰台区旅行社分社及旅行社服务网点表）\n\n2. **涉及的列**：\n   - 从 `shiguihuaziranziyuanweiqingzhensi1515` 表中选取：\n     - `HID`（可能是某种 ID 或编号）\n     - `HNAME`（可能是名称或描述字段）\n   - 从 `fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396` 表中选取：\n     - `旅行社分社及旅行社服务网点明细`（可能是旅行社分社或服务网点的详细信息）\n\n3. **关联条件**：\n   - 使用 `INNER JOIN` 进行内连接，连接条件是：\n     - `shiguihuaziranziyuanweiqingzhensi1515.HID` = `fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.Unnamed: 1`\n     - 即通过 `HID` 字段与 `Unnamed: 1` 字段进行匹配。\n\n### **业务场景**：\n1. **可能的业务背景**：\n   - 该查询可能用于政府或旅游管理部门的数据整合，例如：\n     - 清镇市的自然资源规划部门需要与丰台区的旅行社数据进行关联，以分析或管理旅游资源的分配情况。\n     - 可能是为了统计或监管旅行社在特定区域的分布情况。\n\n2. **具体用途**：\n   - 查询可以获取清镇市规划自然资源相关的数据，并关联到丰台区旅行社的分社或服务网点信息，以便进行跨区域的数据分析或管理。\n\n### **用户描述**：\n1. **用户需求**：\n   - 用户可能是政府工作人员或旅游行业管理者，需要了解清镇市的规划数据与丰台区旅行社之间的关联情况。\n   - 例如，可能需要检查清镇市的某些规划项目是否涉及丰台区的旅行社服务网点，或者需要统计相关数据以支持政策制定。\n\n2. **实际问题**：\n   - 用户可能需要回答以下问题：\n     - 清镇市的哪些规划项目与丰台区的旅行社分社有关联？\n     - 丰台区的旅行社服务网点是否覆盖了清镇市的某些区域？\n     - 是否存在跨区域的旅游合作或资源调配需求？\n   - 该查询可以帮助用户快速获取关联数据，以便进一步分析或决策。",
+  "natural_language_query": "市民反映，我是丰台区文旅局的工作人员，最近在处理一个跨区域旅游合作项目时遇到些困惑。我们这边旅行社分社的某些业务好像和贵州清镇市的自然资源规划有联系，但具体是什么关系搞不太清楚。比如说清镇那边有什么旅游开发项目可能会涉及到我们丰台区旅行社的服务网点？能不能帮忙查一下这两边到底有哪些关联信息？主要是想了解两边有没有业务对接的可能，好方便我们后续开展工作。对了，之前好像听说清镇那边在搞什么湿地公园建设，不知道和我们区的旅行社有没有合作关系？",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "shiguihuaziranziyuanweiqingzhensi1515": [
+      "shiguihuaziranziyuanweiqingzhensi1515.HID",
+      "shiguihuaziranziyuanweiqingzhensi1515.FATHERID",
+      "shiguihuaziranziyuanweiqingzhensi1515.HNAME",
+      "shiguihuaziranziyuanweiqingzhensi1515.OTHERNAME",
+      "shiguihuaziranziyuanweiqingzhensi1515.CATEGORY",
+      "shiguihuaziranziyuanweiqingzhensi1515.SUBCATEGOR",
+      "shiguihuaziranziyuanweiqingzhensi1515.COUNTYNAME",
+      "shiguihuaziranziyuanweiqingzhensi1515.STREETNAME",
+      "shiguihuaziranziyuanweiqingzhensi1515.DYNASTY",
+      "shiguihuaziranziyuanweiqingzhensi1515.SUBDYNASTY",
+      "shiguihuaziranziyuanweiqingzhensi1515.ADDRESS",
+      "shiguihuaziranziyuanweiqingzhensi1515.RANK",
+      "shiguihuaziranziyuanweiqingzhensi1515.BATCH",
+      "shiguihuaziranziyuanweiqingzhensi1515.PUBTIME",
+      "shiguihuaziranziyuanweiqingzhensi1515.USERS",
+      "shiguihuaziranziyuanweiqingzhensi1515.PURPOSE",
+      "shiguihuaziranziyuanweiqingzhensi1515.OWNERSHIP",
+      "shiguihuaziranziyuanweiqingzhensi1515.STATEEVALU",
+      "shiguihuaziranziyuanweiqingzhensi1515.SINGLERELI",
+      "shiguihuaziranziyuanweiqingzhensi1515.PROTECTION",
+      "shiguihuaziranziyuanweiqingzhensi1515.ATTACHEDRE",
+      "shiguihuaziranziyuanweiqingzhensi1515.RELATEDPEO",
+      "shiguihuaziranziyuanweiqingzhensi1515.RELATEDEVE",
+      "shiguihuaziranziyuanweiqingzhensi1515.PUBNAME",
+      "shiguihuaziranziyuanweiqingzhensi1515.SOURCE",
+      "shiguihuaziranziyuanweiqingzhensi1515.EDITOR",
+      "shiguihuaziranziyuanweiqingzhensi1515.ISREDUNDAN",
+      "shiguihuaziranziyuanweiqingzhensi1515.THEME"
+    ],
+    "fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396": [
+      "fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.旅行社分社及旅行社服务网点明细",
+      "fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.Unnamed: 1",
+      "fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.Unnamed: 2",
+      "fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.Unnamed: 3"
+    ]
+  }
+}

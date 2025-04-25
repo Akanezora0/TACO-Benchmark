@@ -1,0 +1,36 @@
+{
+  "sql": "SELECT landfills.OBJECTID, landfills.PSINUM, landfills.SWFACID, landfills.SITENAME, landfills.LOCCONF, landfills.DATE_FIRST FROM landfills JOIN wildlife_management_units ON landfills.LATITUDE = wildlife_management_units.LATITUDE AND landfills.LONGITUDE = wildlife_management_units.LONGITUDE WHERE landfills.STATUS = 'Active' AND landfills.WQMONITORING = 'Yes' AND (wildlife_management_units.AGENCY, wildlife_management_units.DEPT) = ('State', 'Fish and Wildlife')",
+  "problem_description": "### Query intent:\nThe SQL statement aims to retrieve specific details from two related tables (`landfills` and `wildlife_management_units`) based on certain criteria.\n\n### Detailed description:\n1. **Table `landfills`**:\n   - **Columns**:\n     - `OBJECTID`: A unique identifier for each record.\n     - `PSINUM`: Possibly a serial number or identification code.\n     - `SWFACID`: An identifier for the facility or site.\n     - `SITENAME`: The name of the landfill.\n     - `LOCCONF`: Likely denotes the configuration or location details.\n     - `DATE_FIRST`: The date when the landfill was first documented or established.\n   - **Conditions**:\n     - `STATUS = 'Active'`: Filters for records where the landfill is currently operational.\n     - `WQMONITORING = 'Yes'`: Selects records where water quality monitoring is confirmed to be active.\n\n2. **Table `wildlife_management_units`**:\n   - **Columns**:\n     - `AGENCY`: The agency managing the unit.\n     - `DEPT`: The department within the agency responsible for the unit.\n   - **Join condition**:\n     - `ON landfills.LATITUDE = wildlife_management_units.LATITUDE AND landfills.LONGITUDE = wildlife_management_units.LONGITUDE`: Ensures that the latitude and longitude values match between the two tables, linking records with the same geographical locations.\n\n3. **Additional filter**:\n   - `(wildlife_management_units.AGENCY, wildlife_management_units.DEPT) = ('State', 'Fish and Wildlife')`: Further narrows down the results to only those units managed by the State's Fish and Wildlife department.\n\n### Business scenario:\nThis SQL query is designed to help environmental or regulatory agencies manage and monitor landfills that are actively in use and have ongoing water quality monitoring activities. Specifically, it focuses on identifying which of these facilities are located within the jurisdiction of the State's Fish and Wildlife department, potentially for targeted oversight or inspection purposes.\n\n### User description:\nUsers, such as environmental compliance officers or landfill managers, might need this information to ensure that all active landfills under their jurisdiction are properly monitored for environmental impacts, especially concerning water quality. This could be part of regular audits, compliance checks, or strategic planning to allocate resources efficiently for environmental protection efforts.",
+  "natural_language_query": "As an environmental compliance officer, I'm looking to gather detailed information about active landfills within our state jurisdiction that are actively engaged in water quality monitoring. My interest lies in understanding the specifics of these operations, including their names, identification codes, and the dates they were first documented. I'm particularly focused on those sites managed by the State's Fish and Wildlife department. \n\nTo achieve this, I would like to run a SQL query that filters through our database. First, I want to select records from the 'landfills' table where the landfill is currently operational ('Active' status) and has confirmed water quality monitoring ('Yes'). Then, I aim to join this data with the 'wildlife_management_units' table, focusing solely on those units managed by the State's Fish and Wildlife department. This will enable me to pinpoint the exact locations where both active operations and state oversight intersect, facilitating more targeted environmental monitoring and compliance checks.",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ from _ join _ on _ ._ = _ ._ where _ ._ = _ and _ = _ and _ (_ ,_ ) = _",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "landfills": [
+      "landfills.X",
+      "landfills.Y",
+      "landfills.OBJECTID",
+      "landfills.PSINUM",
+      "landfills.SWFACID",
+      "landfills.SITENAME",
+      "landfills.LOCCONF",
+      "landfills.DATE_FIRST",
+      "landfills.DATE_LAST",
+      "landfills.ACRES",
+      "landfills.STATUS",
+      "landfills.WQMONITORING",
+      "landfills.GASCOLLECTION",
+      "landfills.TOWNNAME",
+      "landfills.LATITUDE",
+      "landfills.LONGITUDE"
+    ],
+    "wildlife_management_units": [
+      "wildlife_management_units.OBJECTID",
+      "wildlife_management_units.ABNAME",
+      "wildlife_management_units.AGENCY",
+      "wildlife_management_units.DEPT",
+      "wildlife_management_units.DIV",
+      "wildlife_management_units.BOUNDARY"
+    ]
+  }
+}

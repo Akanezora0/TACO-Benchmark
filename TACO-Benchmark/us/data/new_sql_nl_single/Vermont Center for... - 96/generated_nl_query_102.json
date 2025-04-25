@@ -1,0 +1,51 @@
+{
+  "sql": "SELECT wetland_ecologist_districts.OBJECTID, wetland_ecologist_districts.ABNAME, wetland_ecologist_districts.AGENCY FROM wetland_ecologist_districts WHERE wetland_ecologist_districts.AGENCY IN ('Agency1', 'Agency2', 'Agency3', 'Agency4', 'Agency5', 'Agency6') ORDER BY wetland_ecologist_districts.OBJECTID;",
+  "problem_description": "### Query intent:\nThe SQL statement aims to retrieve specific data from a database table named `wetland_ecologist_districts`. It selects certain attributes (columns) from this table based on predefined criteria and sorts the results by another attribute.\n\n### Detailed description:\n- **Table**: `wetland_ecologist_districts` is the main table being queried. This table likely contains records related to districts, ecologists, agencies, or similar environmental data relevant to wetlands.\n- **Columns**:\n    - `OBJECTID`: This is an identifier for each row or record within the `wetland_ecologist_districts` table.\n    - `ABNAME`: This column could contain abbreviated names, possibly referring to districts or regions within the context of wetland ecology studies.\n    - `AGENCY`: This column holds information about the agency responsible for managing or studying the wetlands in question.\n- **Conditions**:\n    - The query filters rows where the value in the `AGENCY` column is one of several specified agencies (`'Agency1', 'Agency2', 'Agency3', 'Agency4', 'Agency5', 'Agency6'`). This means the query returns only records associated with these six agencies.\n- **Sorting**:\n    - The result set is ordered by the `OBJECTID` column. This implies that the returned records will be presented in a sorted order based on their unique identifiers, potentially useful for systematic review or further processing.\n\n### Business scenario:\nThis query can be used in various environmental management or ecological research contexts, particularly when dealing with data related to wetlands. For example:\n\n- **Monitoring and Reporting**: An agency might need to compile a list of districts managed by them specifically for reporting purposes or internal audits. The query allows for filtering out only those districts that fall under their jurisdiction.\n- **Data Analysis**: Ecologists or environmental scientists might require detailed data on specific districts to conduct studies or analyses related to wetland health, biodiversity, or conservation efforts.\n- **Policy Implementation**: When implementing new policies or regulations, identifying which districts are under which agency's purview can be crucial for effective policy rollout and compliance checks.\n\n### User description:\nUsers encountering scenarios where they need to analyze, report, or manage data related to specific districts within wetland ecosystems might find this query useful. For instance, an environmental manager at an agency might use this query to quickly identify all districts they oversee for a meeting or a report. A researcher might use it to gather comprehensive data on districts managed by a particular agency for a study",
+  "natural_language_query": "I'm working on a project that requires me to analyze data related to districts managed by specific agencies in the context of wetland ecology. I need to pull out details like the district name and the managing agency from a database table called \"wetland_ecologist_districts\". My goal is to filter the data to include only districts managed by the following agencies: 'Agency1', 'Agency2', 'Agency3', 'Agency4', 'Agency5', 'Agency6'. After filtering, I want to sort the resulting data by the unique identifier of each district. Can you help me formulate the SQL query for this task?",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ from _ where _ in (_ ,_ ,_ ,_ ,_ ,_ ) order by _ ;",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "wetland_ecologist_districts": [
+      "wetland_ecologist_districts.OBJECTID",
+      "wetland_ecologist_districts.ABNAME",
+      "wetland_ecologist_districts.AGENCY",
+      "wetland_ecologist_districts.DEPT",
+      "wetland_ecologist_districts.DIV",
+      "wetland_ecologist_districts.FirstName",
+      "wetland_ecologist_districts.LastName",
+      "wetland_ecologist_districts.Email",
+      "wetland_ecologist_districts.Phone",
+      "wetland_ecologist_districts.Address",
+      "wetland_ecologist_districts.Office",
+      "wetland_ecologist_districts.Town",
+      "wetland_ecologist_districts.BOUNDARY",
+      "wetland_ecologist_districts.PROGMANAGER",
+      "wetland_ecologist_districts.PROGMANAGEREMAIL",
+      "wetland_ecologist_districts.PROGMANAGERPHONE",
+      "wetland_ecologist_districts.BACKUPCONTACT",
+      "wetland_ecologist_districts.BACKUPCONTACTEMAIL",
+      "wetland_ecologist_districts.BACKUPCONTACTPHONE",
+      "wetland_ecologist_districts.PROGRAMEMAIL",
+      "wetland_ecologist_districts.PROGRAMPHONE"
+    ],
+    "landfills": [
+      "landfills.X",
+      "landfills.Y",
+      "landfills.OBJECTID",
+      "landfills.PSINUM",
+      "landfills.SWFACID",
+      "landfills.SITENAME",
+      "landfills.LOCCONF",
+      "landfills.DATE_FIRST",
+      "landfills.DATE_LAST",
+      "landfills.ACRES",
+      "landfills.STATUS",
+      "landfills.WQMONITORING",
+      "landfills.GASCOLLECTION",
+      "landfills.TOWNNAME",
+      "landfills.LATITUDE",
+      "landfills.LONGITUDE"
+    ]
+  }
+}

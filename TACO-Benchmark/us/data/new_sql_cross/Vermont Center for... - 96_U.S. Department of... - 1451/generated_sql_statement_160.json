@@ -1,0 +1,46 @@
+{
+  "sql": "SELECT \"populationweighted_ultraviolet_irradiance_20042015.year\", \"populationweighted_ultraviolet_irradiance_20042015.i310\" FROM \"populationweighted_ultraviolet_irradiance_20042015\" WHERE \"populationweighted_ultraviolet_irradiance_20042015.year\" = 2009",
+  "results": 0,
+  "sql skeleton": "select _ ,_ from _ where _ = _",
+  "databases": [
+    "Vermont Center for... - 96",
+    "U.S. Department of... - 1451"
+  ],
+  "tables": {
+    "landfills": {
+      "landfills": [
+        "landfills.X",
+        "landfills.Y",
+        "landfills.OBJECTID",
+        "landfills.PSINUM",
+        "landfills.SWFACID",
+        "landfills.SITENAME",
+        "landfills.LOCCONF",
+        "landfills.DATE_FIRST",
+        "landfills.DATE_LAST",
+        "landfills.ACRES",
+        "landfills.STATUS",
+        "landfills.WQMONITORING",
+        "landfills.GASCOLLECTION",
+        "landfills.TOWNNAME",
+        "landfills.LATITUDE",
+        "landfills.LONGITUDE"
+      ]
+    },
+    "populationweighted_ultraviolet_irradiance_20042015": {
+      "populationweighted_ultraviolet_irradiance_20042015": [
+        "populationweighted_ultraviolet_irradiance_20042015.statefips",
+        "populationweighted_ultraviolet_irradiance_20042015.countyfips",
+        "populationweighted_ultraviolet_irradiance_20042015.year",
+        "populationweighted_ultraviolet_irradiance_20042015.month",
+        "populationweighted_ultraviolet_irradiance_20042015.day",
+        "populationweighted_ultraviolet_irradiance_20042015.edd",
+        "populationweighted_ultraviolet_irradiance_20042015.edr",
+        "populationweighted_ultraviolet_irradiance_20042015.i305",
+        "populationweighted_ultraviolet_irradiance_20042015.i310",
+        "populationweighted_ultraviolet_irradiance_20042015.i324",
+        "populationweighted_ultraviolet_irradiance_20042015.i380"
+      ]
+    }
+  }
+}

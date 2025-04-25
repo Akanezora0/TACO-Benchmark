@@ -1,0 +1,9 @@
+{
+  "sql": "SELECT column1, column2 FROM table1 - column3;",
+  "problem_description": "# SQL 语句分析\n\n## 查询意图\n这个SQL语句似乎存在语法错误，它试图从table1表中选择column1和column2列，但后面的\"- column3\"部分不符合标准SQL语法。\n\n## 详细描述\n- **表**：table1\n- **列**：column1, column2\n- **问题部分**：\"- column3\"不符合SQL语法规范\n\n可能的正确形式可能是：\n1. `SELECT column1, column2 FROM table1 WHERE column3 = some_value`（带条件查询）\n2. `SELECT column1, column2, column3 FROM table1`（选择三列）\n3. `SELECT column1, column2 FROM table1 ORDER BY column3`（按column3排序）\n\n## 业务场景\n由于语法不完整，无法准确判断业务场景。但基于可能的正确形式：\n\n1. 如果是条件查询：可能需要筛选table1中column3符合特定条件的记录，只显示column1和column2\n2. 如果是排序查询：可能需要按column3排序显示column1和column2\n\n## 用户描述\n用户可能的需求包括：\n1. 查看table1中特定条件下的column1和column2数据（如活跃用户的基本信息）\n2. 按某种标准（column3）排序查看主要数据（column1和column2）\n3. 排除column3列只查看column1和column2的数据\n\n注意：实际使用时需要修正SQL语法错误才能执行查询。",
+  "natural_language_query": "我想查一些数据但是不太会写查询语句。是这样的，我需要看某个表格里的前两个字段的信息，但是后面好像还想加第三个字段又不知道怎么加。就是先选了字段1和字段2，然后想再加个条件或者排序什么的，但是写出来老是报错。比如说我想看客户名单里的姓名和电话，但是要按注册时间排个序，或者只看最近三个月注册的客户。现在的问题是那个查询语句写到一半就不知道怎么继续了，老是提示语法错误。能不能帮我看看这种情况该怎么正确查询啊？我主要想看前两个字段的数据，但是需要根据第三个字段来筛选或者排序。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ ;",
+  "database": "安全生活",
+  "tables": {}
+}

@@ -1,0 +1,29 @@
+{
+  "sql": "SELECT \"xichengquxichengqudengjilvyoujingquminglu14.序号\" as 序号, \"xichengquxichengqudengjilvyoujingquminglu14.景区名称\" as 景区名称, \"xichengquxichengqudengjilvyoujingquminglu14.等级\" as 等级 from xichengquxichengqudengjilvyoujingquminglu14 where \"xichengquxichengqudengjilvyoujingquminglu14.等级\" = 'AAAAA' order by 序号 asc",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从表 `xichengquxichengqudengjilvyoujingquminglu14` 中查询所有等级为 `AAAAA` 的景区信息，并按序号升序排列，最终返回序号、景区名称和等级三列数据。\n\n---\n\n### **详细描述**  \n1. **涉及的表**：  \n   - `xichengquxichengqudengjilvyoujingquminglu14`  \n     该表名较长，可能表示“西城区等级旅游景区名录”或类似含义，存储了西城区的旅游景区信息。\n\n2. **涉及的列**：  \n   - `序号`：表示景区的编号或排序标识。  \n   - `景区名称`：表示景区的具体名称。  \n   - `等级`：表示景区的评级（如 `AAAAA`、`AAAA` 等）。  \n\n3. **查询条件**：  \n   - `\"xichengquxichengqudengjilvyoujingquminglu14.等级\" = 'AAAAA'`  \n     仅筛选出等级为 `AAAAA`（即 5A 级）的景区。  \n\n4. **排序方式**：  \n   - `order by 序号 asc`  \n     结果按 `序号` 升序排列，可能是按录入顺序或某种分类顺序展示。  \n\n5. **输出列**：  \n   - 查询结果包含三列：`序号`、`景区名称`、`等级`，并以中文别名显示。  \n\n---\n\n### **业务场景**  \n该查询可能用于以下业务场景：  \n1. **旅游信息管理**：  \n   - 政府或旅游管理部门需要统计西城区内所有 5A 级景区，用于宣传、规划或管理。  \n2. **游客查询服务**：  \n   - 旅游平台或导览系统提供“高等级景区推荐”功能，帮助游客快速找到优质景点。  \n3. **数据分析**：  \n   - 分析西城区的旅游景区质量分布，例如统计高等级景区的数量或占比。  \n\n---\n\n### **用户描述**  \n在该业务场景下，用户可能遇到的实际问题或需求包括：  \n1. **游客需求**：  \n   - 游客希望了解西城区有哪些 5A 级景区，以便优先游览高口碑景点。  \n   - 游客可能需要按某种顺序（如地理位置、热门程度）查看景区列表，而 `序号` 可能隐含了某种分类逻辑。  \n2. **管理需求**：  \n   - 旅游管理部门需要定期更新景区名录，并确保高等级景区的信息准确无误。  \n   - 可能需要对比不同区域的 5A 级景区数量，评估旅游资源配置是否合理。  \n3. **商业需求**：  \n   - 旅行社或在线旅游平台希望突出展示 5A 级景区，吸引更多用户预订相关服务。  \n\n---\n\n### **总结**  \n该 SQL 语句的核心是筛选并展示西城区的 5A 级景区，适用于旅游信息查询、管理和推荐等场景，满足游客、管理部门和商业机构的不同需求。",
+  "natural_language_query": "市民来电咨询，最近想带家人去西城区玩，听说5A级景区特别值得一去，但不知道西城区具体有哪些5A景点。我在网上查了半天也没找到完整名单，有的说北海公园是5A，有的又说不是，搞得特别混乱。能不能帮忙查一下西城区官方认定的5A级旅游景区都有哪些？最好能按推荐顺序或者热门程度排个序，这样我们好安排游玩路线。主要是老人和孩子一起，想找几个真正有品质保障的景点，谢谢了！",
+  "results": 0,
+  "sql skeleton": "select _ as _ ,_ as _ ,_ as _ from _ where _ = _ order by _",
+  "database": "旅游住宿",
+  "tables": {
+    "yanqingquyanqingqulvyoujingquxinxi3381": [
+      "yanqingquyanqingqulvyoujingquxinxi3381.旅游景区",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 1",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 2",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 3",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 4",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 5",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 6",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 7"
+    ],
+    "xichengquxichengqudengjilvyoujingquminglu14": [
+      "xichengquxichengqudengjilvyoujingquminglu14.序号",
+      "xichengquxichengqudengjilvyoujingquminglu14.景区名称",
+      "xichengquxichengqudengjilvyoujingquminglu14.等级",
+      "xichengquxichengqudengjilvyoujingquminglu14.地址",
+      "xichengquxichengqudengjilvyoujingquminglu14.咨询电话",
+      "xichengquxichengqudengjilvyoujingquminglu14.投诉电话",
+      "xichengquxichengqudengjilvyoujingquminglu14.邮编"
+    ]
+  }
+}

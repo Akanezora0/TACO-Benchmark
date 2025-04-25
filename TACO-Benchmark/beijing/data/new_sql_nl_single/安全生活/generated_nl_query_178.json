@@ -1,0 +1,9 @@
+{
+  "sql": "select table1.column1, table1.column2, table2.column3 from table1 join table2 on table1.common_column = table2.common_column where table1.unique_id = (select table3.unique_id from table3 where table3.condition_column = 'condition_value');",
+  "problem_description": "### 查询意图：\n该 SQL 语句的目的是从 `table1` 和 `table2` 中联合查询数据，条件是 `table1` 中的 `unique_id` 必须等于 `table3` 中满足特定条件的记录的 `unique_id`。\n\n### 详细描述：\n1. **涉及的表**：\n   - `table1`：主表之一，包含 `column1`、`column2` 和 `common_column` 列。\n   - `table2`：另一个主表，包含 `column3` 和 `common_column` 列。\n   - `table3`：子查询中使用的表，包含 `unique_id` 和 `condition_column` 列。\n\n2. **涉及的列**：\n   - `table1.column1` 和 `table1.column2`：从 `table1` 中选择的列。\n   - `table2.column3`：从 `table2` 中选择的列。\n   - `table1.common_column` 和 `table2.common_column`：用于连接 `table1` 和 `table2` 的列。\n   - `table3.unique_id` 和 `table3.condition_column`：子查询中使用的列。\n\n3. **条件**：\n   - `table1.common_column = table2.common_column`：`table1` 和 `table2` 的连接条件。\n   - `table1.unique_id = (select table3.unique_id from table3 where table3.condition_column = 'condition_value')`：`table1` 的 `unique_id` 必须等于 `table3` 中 `condition_column` 为 `'condition_value'` 的记录的 `unique_id`。\n\n### 业务场景：\n该查询可以用于以下业务场景：\n1. **数据关联查询**：需要从两个表中联合查询数据，并且其中一个表的记录必须满足另一个表中的特定条件。\n2. **条件过滤**：需要根据第三个表中的条件过滤主表中的数据。\n\n### 用户描述：\n1. **实际需求**：用户可能需要查询某个特定条件下的数据，例如查询某个特定客户（`table3` 中的 `condition_column = 'condition_value'`）的订单详情（`table1` 和 `table2` 中的数据）。\n2. **问题**：用户可能需要快速找到满足特定条件的记录，而不需要手动在多个表中查找和匹配数据。\n3. **解决方案**：通过该 SQL 语句，用户可以一次性获取所有相关的数据，而无需多次查询和手动匹配。",
+  "natural_language_query": "市民反映，我在系统里查不到某个特定客户的相关订单信息，特别着急。这个客户应该是满足某些特殊条件的，我记得之前系统里标记过这个客户的情况。现在需要查这个客户的所有订单详情，包括订单的基本信息和关联的物流信息。但是我在系统里找来找去都找不到完整的信息，只能看到零散的数据。能不能帮我查一下这个特定客户的所有完整订单记录？我记得这个客户好像是之前因为某个特殊原因被标记过的，具体是什么标记我记不太清了，可能是\"特殊处理\"或者\"重点关注\"之类的。现在领导催着要这个客户的完整资料，特别着急，能不能尽快帮忙处理一下？",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ from _ where _ = (select _ from _ where _ );",
+  "database": "安全生活",
+  "tables": {}
+}

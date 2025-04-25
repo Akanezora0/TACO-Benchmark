@@ -1,0 +1,19 @@
+{
+  "sql": "SELECT \n    shijiaotongweikebianqingbaobanshebeixinxi3519.唯一标识, \n    shijiaotongweikebianqingbaobanshebeixinxi3519.名称, \n    shijiaotongweikebianqingbaobanshebeixinxi3519.设备编码, \n    shijiaotongweichaoxianchaozaihuochexiezaicha  \n    ngangdi3663.行政区划代码, \n    shijiaotongweichaoxianchaozaihuochexiezaicha  \n    ngangdi3663.站点名称, \n    shijiaotongweichaoxianchaozaihuochexiezaicha  \n    ngangdi3663.联系电话, \n    shijiaotongweichaoxianchaozaihuochexiezaicha  \n    ngangdi3663.地址 \nFROM \n    shijiaotongweikebianqingbaobanshebeixinxi3519, \n    shijiaotongweichaoxianchaozaihuochexiezaicha  \n    ngangdi3663 \nWHERE \n    shijiaotongweikebianqingbaobanshebeixinxi3519.唯一标识 = shijiaotongweichaoxianchaozaihuochexiezaicha  \n    ngangdi3663.唯一标识",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ ,_ ,_ ,_ from _ where _ = _",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweikebianqingbaobanshebeixinxi3519": [
+      "shijiaotongweikebianqingbaobanshebeixinxi3519.唯一标识",
+      "shijiaotongweikebianqingbaobanshebeixinxi3519.名称",
+      "shijiaotongweikebianqingbaobanshebeixinxi3519.设备编码"
+    ],
+    "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663": [
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.行政区划代码",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.站点名称",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.联系电话",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.地址"
+    ]
+  }
+}

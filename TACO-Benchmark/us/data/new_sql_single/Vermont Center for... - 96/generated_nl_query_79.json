@@ -1,0 +1,50 @@
+{
+  "sql": "SELECT DISTINCT \"vermont_biophysical_regions\".\"BPR_NUM\" AS _1, \"salt_storage_record_table\".\"fulcrum_id\" AS _2 FROM \"vermont_biophysical_regions\" UNION SELECT DISTINCT \"vermont_biophysical_regions\".\"SHAPESTArea\" AS _3, \"salt_storage_record_table\".\"geometry\" AS _4 FROM \"vermont_biophysical_regions\" UNION SELECT DISTINCT \"salt_storage_record_table\".\"material_type\" AS _5, \"salt_storage_record_table\".\"created_at\" AS _6 FROM \"salt_storage_record_table\" WHERE \"salt_storage_record_table\".\"material_type\" = 'Salt' AND \"salt_storage_record_table\".\"storage_length_years\" > 10;",
+  "problem_description": "### Query intent:\nThis SQL query aims to retrieve specific pieces of information from two different tables (`vermont_biophysical_regions` and `salt_storage_record_table`) under certain conditions, and then combine these results using a UNION operation.\n\n### Detailed description:\n\n#### First part:\n- **Table**: `vermont_biophysical_regions`\n- **Columns selected**: `\"BPR_NUM\"` (alias as `_1`) and `\"fulcrum_id\"` (alias as `_2`)\n- **Selection process**: Uses a DISTINCT keyword to ensure each combination of `_1` and `_2` is unique. This suggests the user might need unique pairs of these two identifiers.\n\n#### Second part:\n- **Table**: `vermont_biophysical_regions`\n- **Columns selected**: `\"SHAPESTArea\"` (alias as `_3`) and `\"geometry\"` (alias as `_4`)\n- **Selection process**: Again, uses a DISTINCT keyword for uniqueness, but this time selecting area (`SHAPESTArea`) and possibly geometrical representation (`geometry`). This could be useful for spatial data analysis or mapping purposes.\n\n#### Third part:\n- **Table**: `salt_storage_record_table`\n- **Columns selected**: `\"material_type\"` (alias as `_5`) and `\"created_at\"` (alias as `_6`)\n- **Conditions**: Filters on `\"material_type\"` being equal to 'Salt' and `\"storage_length_years\"` being greater than 10. This indicates the user is interested in records where the stored material is salt and has been stored for more than 10 years.\n\n### Business scenario:\n- **Scenario 1**: Environmental or geographical studies in Vermont. The first two parts could be used to analyze the distribution of biophysical regions with specific identifiers and their associated fulcrum IDs, potentially for mapping or spatial analysis purposes.\n- **Scenario 2**: Inventory management for salt storage. The third part specifically addresses the need to track salt storage records, particularly those involving salt that has been stored for over 10 years, which might be relevant for inventory management, environmental impact assessments, or planning for resource depletion.\n\n### User description:\n- **User 1**: An environmental scientist or geographer might use this query to identify unique combinations of biophysical regions and associated identifiers for further mapping or spatial analysis projects.\n- **User 2**: A logistics manager or warehouse operator dealing with salt storage would find this query useful for auditing salt inventories, identifying long-term storage records to manage stock levels, and planning for future needs or potential replacements due to aging materials.",
+  "natural_language_query": "As an environmental scientist focusing on geographic and ecological studies in Vermont, I'm interested in analyzing the spatial distribution of biophysical regions and their unique identifiers. To achieve this, I plan to query the database for all distinct combinations of 'BPR_NUM' (Biophysical Region Number) and 'fulcrum_id', which might help me in mapping and understanding the geographical patterns within Vermont's diverse ecosystems.\n\nFurthermore, I am also looking into the specific areas covered by these biophysical regions. Therefore, I want to retrieve the area ('SHAPESTArea') and the geometrical representation ('geometry') for each unique pair of 'BPR_NUM' and 'fulcrum_id'. This will assist in creating detailed maps and spatial analyses for my research projects.\n\nIn addition to the environmental aspects, I'm also concerned about the inventory management of resources, particularly salt. My focus here is on identifying any records where salt has been stored for more than 10 years. By querying the 'salt_storage_record_table' for records where the material type is 'Salt' and the storage duration exceeds 10 years, I aim to assess the longevity and potential need for replacement of salt stocks. This information is crucial for strategic planning and ensuring that our resources are efficiently managed and sustainable over time.",
+  "results": 0,
+  "sql skeleton": "select distinct _ ._ as _ ,_ ._ as _ from ( select _ as _ ,_ as _ from _ where _ = _ union select _ as _ ,_ as _ from _ where _ = _ union select _ as _ ,_ as _ from _ where _ = _ ) _",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "vermont_biophysical_regions": [
+      "vermont_biophysical_regions.OBJECTID",
+      "vermont_biophysical_regions.ACRES",
+      "vermont_biophysical_regions.NAME",
+      "vermont_biophysical_regions.SUBSEC_ID",
+      "vermont_biophysical_regions.BPR_NUM",
+      "vermont_biophysical_regions.BPR_NUMID",
+      "vermont_biophysical_regions.SHAPESTArea",
+      "vermont_biophysical_regions.SHAPESTLength"
+    ],
+    "salt_storage_record_table": [
+      "salt_storage_record_table.OBJECTID",
+      "salt_storage_record_table.fulcrum_id",
+      "salt_storage_record_table.fulcrum_parent_id",
+      "salt_storage_record_table.fulcrum_record_id",
+      "salt_storage_record_table.version",
+      "salt_storage_record_table.geometry",
+      "salt_storage_record_table.created_at",
+      "salt_storage_record_table.updated_at",
+      "salt_storage_record_table.created_by",
+      "salt_storage_record_table.updated_by",
+      "salt_storage_record_table.address_sub_thoroughfare",
+      "salt_storage_record_table.address_thoroughfare",
+      "salt_storage_record_table.address_suite",
+      "salt_storage_record_table.address_locality",
+      "salt_storage_record_table.address_sub_admin_area",
+      "salt_storage_record_table.address_admin_area",
+      "salt_storage_record_table.address_postal_code",
+      "salt_storage_record_table.address_country",
+      "salt_storage_record_table.address_full",
+      "salt_storage_record_table.material_type",
+      "salt_storage_record_table.material_type_other",
+      "salt_storage_record_table.storage_length_years",
+      "salt_storage_record_table.storage_length_years_range",
+      "salt_storage_record_table.material_covered",
+      "salt_storage_record_table.coverage_method",
+      "salt_storage_record_table.material_on_pad",
+      "salt_storage_record_table.pad_type",
+      "salt_storage_record_table.pad_type_other"
+    ]
+  }
+}

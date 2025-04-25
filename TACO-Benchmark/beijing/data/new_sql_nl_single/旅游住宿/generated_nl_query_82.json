@@ -1,0 +1,45 @@
+{
+  "sql": "SELECT \"shiguihuaziranziyuanweiwangfu1520.HID\", \"shiguihuaziranziyuanweiwangfu1520.FATHERID\", \"shiguihuaziranziyuanweiwangfu1520.HNAME\", \"shiguihuaziranziyuanweiwangfu1520.OTHERNAME\", \"shiguihuaziranziyuanweiwangfu1520.CATEGORY\", \"shiguihuaziranziyuanweiwangfu1520.SUBCATEGOR\", \"shiguihuaziranziyuanweiwangfu1520.COUNTYNAME\", \"shiguihuaziranziyuanweiwangfu1520.STREETNAME\", \"shiguihuaziranziyuanweiwangfu1520.DYNASTY\", \"shiguihuaziranziyuanweiwangfu1520.SUBDYNASTY\", \"shiguihuaziranziyuanweiwangfu1520.ADDRESS\", \"shiguihuaziranziyuanweiwangfu1520.RANK\", \"shiguihuaziranziyuanweiwangfu1520.BATCH\", \"shiguihuaziranziyuanweiwangfu1520.PUBTIME\", \"shiguihuaziranziyuanweiwangfu1520.USERS\", \"shiguihuaziranziyuanweiwangfu1520.PURPOSE\", \"shiguihuaziranziyuanweiwangfu1520.OWNERSHIP\", \"shiguihuaziranziyuanweiwangfu1520.STATEEVALU\", \"shiguihuaziranziyuanweiwangfu1520.SINGLERELI\", \"shiguihuaziranziyuanweiwangfu1520.PROTECTION\", \"shiguihuaziranziyuanweiwangfu1520.ATTACHEDRE\", \"shiguihuaziranziyuanweiwangfu1520.RELATEDPEO\", \"shiguihuaziranziyuanweiwangfu1520.RELATEDEVE\", \"shiguihuaziranziyuanweiwangfu1520.PUBNAME\", \"shig",
+  "problem_description": "# SQL 查询分析\n\n## 查询意图\n这个SQL语句的目的是从\"shiguihuaziranziyuanweiwangfu1520\"表中查询文化遗产或历史遗迹相关的详细信息。\n\n## 详细描述\n- **表名**：`shiguihuaziranziyuanweiwangfu1520`（从名称看可能是一个文化遗产或历史遗迹资源表）\n  \n- **查询的列**：\n  - 基础信息：`HID`(唯一标识符), `FATHERID`(父级ID), `HNAME`(名称), `OTHERNAME`(别名)\n  - 分类信息：`CATEGORY`(类别), `SUBCATEGOR`(子类别)\n  - 地理信息：`COUNTYNAME`(县名), `STREETNAME`(街道名), `ADDRESS`(地址)\n  - 历史信息：`DYNASTY`(朝代), `SUBDYNASTY`(子朝代)\n  - 管理信息：`RANK`(等级), `BATCH`(批次), `PUBTIME`(发布时间), `USERS`(使用者)\n  - 用途信息：`PURPOSE`(用途), `OWNERSHIP`(所有权)\n  - 评估信息：`STATEEVALU`(国家评估), `SINGLERELI`(单一宗教)\n  - 保护信息：`PROTECTION`(保护状态), `ATTACHEDRE`(附属资源)\n  - 关联信息：`RELATEDPEO`(相关人物), `RELATEDEVE`(相关事件)\n  - 发布信息：`PUBNAME`(发布名称)\n\n- **条件**：SQL语句不完整，缺少WHERE条件部分，但从查询的列来看，可能是要获取表中所有记录的全部字段信息。\n\n## 业务场景\n这个查询可能用于以下业务场景：\n1. 文化遗产管理系统 - 获取所有文化遗产项目的完整信息\n2. 历史遗迹保护系统 - 查看遗迹的详细属性和保护状态\n3. 文化旅游应用 - 提供旅游景点的全面信息\n4. 学术研究数据库 - 为研究人员提供历史遗迹的完整数据\n5. 政府资源管理系统 - 管理自然和文化资源的详细信息\n\n## 用户描述\n在上述业务场景中，用户可能遇到以下实际问题或需求：\n1. 文化保护工作者需要全面了解某个文化遗产的所有属性以便制定保护计划\n2. 旅游开发者需要获取景点的详细信息来规划旅游路线\n3. 研究人员需要查询历史遗迹的相关人物和事件来进行学术研究\n4. 政府官员需要查看资源的所有权和使用情况来进行决策\n5. 公众用户想要了解某个历史遗迹的朝代、地址和保护状态等详细信息\n\n注意：由于SQL语句不完整，缺少WHERE条件和结尾部分，以上分析基于可见部分的内容。完整的分析可能需要查看完整的SQL语句。",
+  "natural_language_query": "市民反映，想了解一下咱们北京地区有哪些比较有名的历史古迹或者文化遗产，最好是能知道这些地方的具体位置、属于哪个朝代、现在是什么保护等级这些信息。我之前去故宫玩的时候看到很多文物都有详细的介绍，但是有些小一点的文化遗产就查不到太多资料，比如我家附近有个古庙，老人说是明朝的，但我在网上找不到官方信息。能不能帮忙查查这些文化遗产的详细情况？包括它们的历史背景、现在归谁管理、有没有什么历史人物和事件跟这些地方有关系之类的。特别想知道那些不太出名但是很有历史价值的地方，这样周末可以带孩子去看看，顺便给他们讲讲历史文化。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "shiguihuaziranziyuanweiwangfu1520": [
+      "shiguihuaziranziyuanweiwangfu1520.HID",
+      "shiguihuaziranziyuanweiwangfu1520.FATHERID",
+      "shiguihuaziranziyuanweiwangfu1520.HNAME",
+      "shiguihuaziranziyuanweiwangfu1520.OTHERNAME",
+      "shiguihuaziranziyuanweiwangfu1520.CATEGORY",
+      "shiguihuaziranziyuanweiwangfu1520.SUBCATEGOR",
+      "shiguihuaziranziyuanweiwangfu1520.COUNTYNAME",
+      "shiguihuaziranziyuanweiwangfu1520.STREETNAME",
+      "shiguihuaziranziyuanweiwangfu1520.DYNASTY",
+      "shiguihuaziranziyuanweiwangfu1520.SUBDYNASTY",
+      "shiguihuaziranziyuanweiwangfu1520.ADDRESS",
+      "shiguihuaziranziyuanweiwangfu1520.RANK",
+      "shiguihuaziranziyuanweiwangfu1520.BATCH",
+      "shiguihuaziranziyuanweiwangfu1520.PUBTIME",
+      "shiguihuaziranziyuanweiwangfu1520.USERS",
+      "shiguihuaziranziyuanweiwangfu1520.PURPOSE",
+      "shiguihuaziranziyuanweiwangfu1520.OWNERSHIP",
+      "shiguihuaziranziyuanweiwangfu1520.STATEEVALU",
+      "shiguihuaziranziyuanweiwangfu1520.SINGLERELI",
+      "shiguihuaziranziyuanweiwangfu1520.PROTECTION",
+      "shiguihuaziranziyuanweiwangfu1520.ATTACHEDRE",
+      "shiguihuaziranziyuanweiwangfu1520.RELATEDPEO",
+      "shiguihuaziranziyuanweiwangfu1520.RELATEDEVE",
+      "shiguihuaziranziyuanweiwangfu1520.PUBNAME",
+      "shiguihuaziranziyuanweiwangfu1520.SOURCE",
+      "shiguihuaziranziyuanweiwangfu1520.EDITOR",
+      "shiguihuaziranziyuanweiwangfu1520.ISREDUNDAN",
+      "shiguihuaziranziyuanweiwangfu1520.THEME"
+    ],
+    "xichengquxichengquguojiajizhongdianwenwubaohudanwei60": [
+      "xichengquxichengquguojiajizhongdianwenwubaohudanwei60.序号",
+      "xichengquxichengquguojiajizhongdianwenwubaohudanwei60.名称",
+      "xichengquxichengquguojiajizhongdianwenwubaohudanwei60.地址"
+    ]
+  }
+}

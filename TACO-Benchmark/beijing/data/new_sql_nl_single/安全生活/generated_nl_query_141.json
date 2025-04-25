@@ -1,0 +1,9 @@
+{
+  "sql": "SELECT column1, column2 FROM table1 - table2 WHERE condition;",
+  "problem_description": "#",
+  "natural_language_query": "市民反映，最近在朝阳区双井街道富力城小区附近发现好几家餐饮店的后厨卫生状况特别差，经常能看到老鼠乱窜，而且垃圾处理也不及时，夏天味道特别大。我们居民都很担心会引发食品安全问题或者传染病，之前向物业反映过但没什么效果。能不能帮忙查查这些餐饮店有没有被处罚过？或者派人来检查一下卫生情况？来电反映餐饮店卫生安全隐患问题。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ ;",
+  "database": "安全生活",
+  "tables": {}
+}

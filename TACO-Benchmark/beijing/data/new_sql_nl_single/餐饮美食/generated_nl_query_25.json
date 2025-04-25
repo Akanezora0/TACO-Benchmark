@@ -1,0 +1,26 @@
+{
+  "sql": "SELECT shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC FROM shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374 WHERE shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH = '指定编号'",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从表 `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374` 中查询许可证编号（`XKZBH`）为“指定编号”的餐饮服务许可证对应的经营主体名称（`JYZMC`）。\n\n- **详细描述**：\n  - **涉及的表**：`shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374`，该表名较长，可能是一个存储市场监督管理相关的餐饮服务许可证信息的表。\n  - **涉及的列**：\n    - `JYZMC`：经营主体名称，可能是企业或个体工商户的名称。\n    - `XKZBH`：许可证编号，用于唯一标识一个餐饮服务许可证。\n  - **查询条件**：`XKZBH = '指定编号'`，即查询许可证编号等于“指定编号”的记录。\n\n- **业务场景**：\n  - 该查询可能用于市场监督管理部门或相关业务系统中，用于快速查找特定许可证编号对应的经营主体名称。\n  - 例如，监管部门可能需要根据许可证编号查询对应的企业名称，以便进行后续的检查、通知或其他行政处理。\n\n- **用户描述**：\n  - 用户可能是市场监督管理部门的工作人员，需要根据许可证编号查询对应的经营主体名称。\n  - 实际需求可能是：\n    - 检查某家餐饮企业是否持有有效的许可证。\n    - 在接到投诉或举报时，快速定位到具体的经营主体。\n    - 在许可证到期前通知相关企业进行续期。\n  - 用户遇到的问题可能是：\n    - 只知道许可证编号，但需要了解具体的经营主体名称。\n    - 需要验证许可证编号是否有效或对应正确的经营主体。",
+  "natural_language_query": "市民反映，我在处理一家餐饮店的监管工作时遇到了问题。手头只有他们的餐饮服务许可证编号\"指定编号\"，但是系统里查不到对应的商家名字。这个编号是我们去年核发的，按理说应该有效才对。现在需要联系这家店进行例行检查，但找不到具体是哪家店，特别着急。能不能帮忙查一下这个许可证编号对应的餐饮店名称是什么？我这边的工作都被卡住了，希望能尽快解决这个问题。",
+  "results": 0,
+  "sql skeleton": "select _ from _ where _ = _",
+  "database": "餐饮美食",
+  "tables": {
+    "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374": [
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYXM",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.FZRQ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.YXQZ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.DWMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.EXCHANGETIME"
+    ],
+    "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076": [
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址"
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sql": "SELECT \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYXM\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.FZRQ\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.YXQZ\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.DWMC\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.EXCHANGETIME\", \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号\", \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称\", \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址\" FROM \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\" INNER JOIN \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076\" ON \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID\" = \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.编号\";",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从两个表中联合查询餐饮服务许可证信息和清真食品专柜信息，通过许可证编号（`XKZID` 和 `编号`）关联，获取餐饮企业的基本经营信息以及对应的清真食品专柜信息。\n\n---\n\n### **详细描述**  \n1. **涉及的表**：\n   - `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374`（市场监督管理局餐饮服务许可证情况信息表）  \n     - 存储餐饮服务许可证相关的监管信息，如企业名称、许可证号、经营场所等。\n   - `shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076`（民族宗教委规范化清真食品专柜归属数据表）  \n     - 存储清真食品专柜的管理信息，如专柜名称、标识牌号、地址等。\n\n2. **查询的列**：\n   - 从 `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374` 表中选取：\n     - `JYZMC`（经营者名称）  \n     - `XKZBH`（许可证编号）  \n     - `JYCS`（经营场所）  \n     - `JYXM`（经营范围）  \n     - `FZRQ`（发证日期）  \n     - `YXQZ`（有效期至）  \n     - `XKZID`（许可证ID，用于关联）  \n     - `DWMC`（单位名称）  \n     - `EXCHANGETIME`（数据更新时间）  \n   - 从 `shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076` 表中选取：\n     - `专用标识牌号`（清真食品专柜的标识牌编号）  \n     - `专柜名称`（清真食品专柜的名称）  \n     - `地址`（专柜所在地址）  \n\n3. **关联条件**：\n   - 使用 `INNER JOIN` 内连接，关联条件是 `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID = shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.编号`，即通过许可证ID与清真食品专柜的编号进行匹配。\n\n---\n\n### **业务场景**  \n该查询适用于以下业务场景：\n1. **清真食品合规性检查**：  \n   - 监管部门需要核查哪些餐饮企业持有清真食品专柜，并确保其许可证和专柜信息一致。\n2. **跨部门数据共享**：  \n   - 市场监督管理局和民族宗教委的数据需要联动，以加强清真食品的规范化管理。\n3. **企业信息综合查询**：  \n   - 政府或企业可能需要查询某餐饮企业的经营信息及其清真食品专柜的详细信息。\n\n---\n\n### **用户描述**  \n在该业务场景下，用户可能遇到的实际问题或需求包括：\n1. **监管部门**：\n   - 需要快速获取哪些餐饮企业具备清真食品经营资质，并核实其专柜信息是否合规。\n   - 在执法检查时，需关联许可证和清真专柜数据，避免信息不一致导致的监管漏洞。\n2. **餐饮企业**：\n   - 可能需要查询自己的清真食品专柜是否已正确关联许可证，确保符合政策要求。\n3. **数据分析人员**：\n   - 需要整合市场监督管理局和民族宗教委的数据，进行统计分析，例如清真食品经营企业的分布情况、许可证有效期管理等。\n\n通过该 SQL 查询，可以高效地获取关联数据，支持监管、合规检查及数据统计分析等需求。",
+  "natural_language_query": "市民反映，他在朝阳区开了一家清真餐厅，去年办理了餐饮服务许可证，最近听说还要申请清真食品专柜的标识牌。他想确认一下自己的餐厅是不是已经在政府系统里关联了清真专柜信息，因为听说有些餐馆因为信息没对上被处罚了。他的店名叫\"西域美食坊\"，地址是朝阳区团结湖街道56号，许可证号是CY2023056789。市民担心如果系统里没关联会不会影响正常经营，希望帮忙查一下清真专柜和餐饮许可证是不是已经匹配好了，来电咨询清真食品经营资质问题。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ ;",
+  "database": "餐饮美食",
+  "tables": {
+    "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374": [
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYXM",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.FZRQ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.YXQZ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.DWMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.EXCHANGETIME"
+    ],
+    "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076": [
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址"
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "sql": "SELECT \"shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239.区域\", \"shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.地址\" FROM \"shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239\" INNER JOIN \"shijiaotongweichaoxianchaozaihuochexiezaichangdi3663\" ON \"shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239.街道\" = \"shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.行政区划代码\";",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从两个表中联合查询特定列的数据，通过“街道”和“行政区划代码”字段进行关联，获取与这两个字段匹配的记录。\n\n### **详细描述**  \n1. **涉及的表**：  \n   - `shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239`（表名可能表示“石景山区道路停车电子收费道路信息”）  \n   - `shijiaotongweichaoxianchaozaihuochexiezaichangdi3663`（表名可能表示“市交通委超限超载货车卸载场地信息”）  \n\n2. **查询的列**：  \n   - 从第一个表查询 `区域` 列（`shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239.区域`）  \n   - 从第二个表查询 `地址` 列（`shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.地址`）  \n\n3. **关联条件**：  \n   - 使用 `INNER JOIN` 连接两个表，连接条件是：  \n     `shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239.街道 = shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.行政区划代码`  \n   - 即第一个表的“街道”字段与第二个表的“行政区划代码”字段匹配时，才会返回数据。  \n\n### **业务场景**  \n该查询可能用于**交通管理或城市规划**，例如：  \n- 查询石景山区内哪些道路停车收费区域与市交通委管理的货车卸载场地位于同一行政区划（或街道）。  \n- 分析停车收费道路与货车管理设施的分布关系，以便优化交通管理政策或调整设施布局。  \n\n### **用户描述**  \n1. **用户需求**：  \n   - 交通管理部门可能需要了解哪些停车收费道路附近有货车卸载场地，以便协调管理或优化执法资源分配。  \n   - 城市规划部门可能需要分析停车设施与货运设施的分布情况，以评估是否需要调整道路规划或增设管理措施。  \n\n2. **实际问题**：  \n   - 如果某些道路停车收费区域与货车卸载场地位于同一街道，可能导致交通拥堵或管理冲突，需要协调管理策略。  \n   - 用户可能需要统计这些关联数据，以制定更合理的停车政策或货运管理措施。  \n\n### **补充说明**  \n- 表名和列名较长且包含数字（如 `1239`、`3663`），可能是系统自动生成的标识符，表明数据可能来自某个政府或企业的数据库系统。  \n- 查询结果可用于生成报表或可视化分析，辅助决策。",
+  "natural_language_query": "市民反映，最近在石景山区发现有些道路停车收费的路段附近经常有大货车停靠装卸货，搞得特别堵车。我是住在古城南里的居民，每天下班经过杨庄大街那边都能看到这种情况，想问问政府能不能查一下这些停车收费的路段和货车卸货的地方是不是在同一个街道？因为感觉管理上有点混乱，有的地方明明划了停车位，结果被大货车占了，我们普通车主根本没地方停。还有就是想了解一下这些货车卸货点是不是正规的，别是随便找地方乱停乱放。来电主要反映停车收费路段和货车卸货点管理混乱的问题，希望相关部门能核实一下具体情况。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ ;",
+  "database": "交通服务",
+  "tables": {
+    "shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239": [
+      "shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239.区域",
+      "shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239.街道",
+      "shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239.道路",
+      "shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239.车位数"
+    ],
+    "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663": [
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.行政区划代码",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.站点名称",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.联系电话",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.地址"
+    ]
+  }
+}

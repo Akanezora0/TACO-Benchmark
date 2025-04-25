@@ -1,0 +1,20 @@
+{
+  "sql": "SELECT \n    xichengquxichengquwenwubaohudanwei35.序号,\n    xichengquxichengquwenwubaohudanwei35.名称,\n    xichengquxichengquwenwubaohudanwei35.地址,\n    huairouquhuairouqujingqumenpiaojiage1592.怀柔区政府定价景区门票价格\nFROM\n    xichengquxichengquwenwubaohudanwei35,\n    huairouquhuairouqujingqumenpiaojiage1592\nWHERE\n    xichengquxichengquwenwubaohudanwei35.名称 = huairouquhuairouqujingqumenpiaojiage1592.怀柔区政府定价景区名称;",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ ,_ from _ where _ =_ or _ =_ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "xichengquxichengquwenwubaohudanwei35": [
+      "xichengquxichengquwenwubaohudanwei35.序号",
+      "xichengquxichengquwenwubaohudanwei35.名称",
+      "xichengquxichengquwenwubaohudanwei35.地址"
+    ],
+    "huairouquhuairouqujingqumenpiaojiage1592": [
+      "huairouquhuairouqujingqumenpiaojiage1592.怀柔区政府定价景区门票价格",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 1",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 2",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 3",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 4"
+    ]
+  }
+}

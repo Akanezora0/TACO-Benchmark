@@ -1,0 +1,19 @@
+{
+  "sql": "SELECT \"shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239\".\"区域\", \"shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239\".\"街道\", \"shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239\".\"道路\", \"shijiaotongweiquanshiqicheweixiuqiyexinxi3673\".\"统一社会信用代码\", \"shijiaotongweiquanshiqicheweixiuqiyexinxi3673\".\"业户名称\", \"shijiaotongweiquanshiqicheweixiuqiyexinxi3673\".\"业户地址\" FROM \"shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239\" INNER JOIN \"shijiaotongweiquanshiqicheweixiuqiyexinxi3673\" ON \"shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239\".\"统一社会信用代码\" = \"shijiaotongweiquanshiqicheweixiuqiyexinxi3673\".\"统一社会信用代码\" WHERE \"shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239\".\"区域\" = '区域名称' OR \"shijiaotongweiquanshiqicheweixiuqiyexinxi3673\".\"业户名称\" = '业户名称';",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ ,_ from _ where _ =_ or _ =_ ;",
+  "database": "交通服务",
+  "tables": {
+    "shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239": [
+      "shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239.区域",
+      "shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239.街道",
+      "shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239.道路",
+      "shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239.车位数"
+    ],
+    "shijiaotongweiquanshiqicheweixiuqiyexinxi3673": [
+      "shijiaotongweiquanshiqicheweixiuqiyexinxi3673.统一社会信用代码",
+      "shijiaotongweiquanshiqicheweixiuqiyexinxi3673.业户名称",
+      "shijiaotongweiquanshiqicheweixiuqiyexinxi3673.业户地址"
+    ]
+  }
+}

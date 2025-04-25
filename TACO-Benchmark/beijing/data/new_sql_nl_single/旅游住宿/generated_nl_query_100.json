@@ -1,0 +1,25 @@
+{
+  "sql": "SELECT \"shunyiquxingjifandian1276\".\"顺义区星级饭店\", \"shunyiquxingjifandian1276.Unnamed: 1\", \"shunyiquxingjifandian1276.Unnamed: 2\" FROM \"shunyiquxingjifandian1276\" WHERE \"shunyiquxingjifandian1276.Unnamed: 3\" = (SELECT \"xichengquxichengqudengjilvyoujingquminglu14\".\"序号\" FROM \"xichengquxichengqudengjilvyoujingquminglu14\" WHERE \"xichengquxichengqudengjilvyoujingquminglu14\".\"景区名称\" = \"指定景区名称\")",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从 `shunyiquxingjifandian1276` 表中查询符合条件的记录，具体条件是 `shunyiquxingjifandian1276.Unnamed: 3` 列的值等于另一个子查询返回的结果。子查询从 `xichengquxichengqudengjilvyoujingquminglu14` 表中查找 `\"景区名称\"` 为 `\"指定景区名称\"` 的记录，并返回其 `\"序号\"` 列的值。\n\n### **详细描述**  \n1. **主查询**：\n   - **表**：`shunyiquxingjifandian1276`（可能代表“顺义区星级饭店”数据表）。\n   - **查询列**：\n     - `\"shunyiquxingjifandian1276\".\"顺义区星级饭店\"`（可能是饭店名称或标识）。\n     - `\"shunyiquxingjifandian1276.Unnamed: 1\"`（未命名的第 2 列，具体含义未知）。\n     - `\"shunyiquxingjifandian1276.Unnamed: 2\"`（未命名的第 3 列，具体含义未知）。\n   - **条件**：`\"shunyiquxingjifandian1276.Unnamed: 3\"` 的值必须等于子查询返回的结果。\n\n2. **子查询**：\n   - **表**：`xichengquxichengqudengjilvyoujingquminglu14`（可能代表“西城区等级旅游景区名录”数据表）。\n   - **查询列**：`\"xichengquxichengqudengjilvyoujingquminglu14\".\"序号\"`（序号列，可能是景区唯一标识）。\n   - **条件**：`\"xichengquxichengqudengjilvyoujingquminglu14\".\"景区名称\" = \"指定景区名称\"`（查找名称为 `\"指定景区名称\"` 的景区序号）。\n\n### **业务场景**  \n该查询可能用于以下业务场景：\n- **旅游行业数据关联**：假设 `shunyiquxingjifandian1276` 表存储顺义区的星级饭店信息，而 `xichengquxichengqudengjilvyoujingquminglu14` 表存储西城区的旅游景区名录。该查询可能用于找出与某个特定景区（如“指定景区名称”）相关联的顺义区星级饭店。\n- **跨区域旅游推荐**：例如，用户计划游览西城区的某个景区，系统推荐顺义区符合条件的星级饭店供其住宿选择。\n\n### **用户描述**  \n在该业务场景下，用户可能遇到的实际问题或需求包括：\n1. **旅游规划需求**：游客想去西城区的某个著名景区（如“故宫”），同时希望在顺义区找到合适的星级饭店住宿，但不知道哪些饭店与该景区有关联（如合作优惠、推荐名单等）。\n2. **数据分析需求**：旅游管理部门或企业可能需要分析不同区域的旅游设施（如饭店和景区）之间的关联关系，以便优化旅游线路或制定营销策略。\n3. **数据匹配问题**：由于表结构设计不清晰（如 `Unnamed: 1`、`Unnamed: 2` 等列名），用户可能需要进一步明确列的实际含义才能正确使用查询结果。",
+  "natural_language_query": "市民反映，最近计划带孩子去西城区的一个著名景点玩（好像是叫\"故宫\"还是什么来着），想顺便在顺义区找个好点的星级酒店住。但是不知道哪些酒店和这个景点有合作或者被推荐过，之前听朋友说好像有些酒店和景点是挂钩的？能不能帮忙查一下顺义区这边有哪些星级酒店是和西城区这个景点相关的？最好能提供酒店的具体信息，比如叫什么名字、有什么特色之类的。对了，我之前在某个旅游APP上看到过推荐名单，但记不清具体是哪些酒店了，感觉挺困惑的...",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ from _ where _ = (select _ from _ where _ = _ );",
+  "database": "旅游住宿",
+  "tables": {
+    "shunyiquxingjifandian1276": [
+      "shunyiquxingjifandian1276.顺义区星级饭店",
+      "shunyiquxingjifandian1276.Unnamed: 1",
+      "shunyiquxingjifandian1276.Unnamed: 2",
+      "shunyiquxingjifandian1276.Unnamed: 3"
+    ],
+    "xichengquxichengqudengjilvyoujingquminglu14": [
+      "xichengquxichengqudengjilvyoujingquminglu14.序号",
+      "xichengquxichengqudengjilvyoujingquminglu14.景区名称",
+      "xichengquxichengqudengjilvyoujingquminglu14.等级",
+      "xichengquxichengqudengjilvyoujingquminglu14.地址",
+      "xichengquxichengqudengjilvyoujingquminglu14.咨询电话",
+      "xichengquxichengqudengjilvyoujingquminglu14.投诉电话",
+      "xichengquxichengqudengjilvyoujingquminglu14.邮编"
+    ]
+  }
+}

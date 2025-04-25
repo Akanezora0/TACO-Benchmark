@@ -1,0 +1,51 @@
+{
+  "sql": "SELECT \"xichengquxichengquditiezhanmingdan2482.X\", \"xichengquxichengquditiezhanmingdan2482.Y\", \"xichengquxichengquditiezhanmingdan2482.SJXZQHMC\", \"xichengquxichengquditiezhanmingdan2482.QXJXZQHMC\", \"xichengquxichengquditiezhanmingdan2482.SJXZQHDM\", \"xichengquxichengquditiezhanmingdan2482.QXJXZQHDM\", \"xichengquxichengquditiezhanmingdan2482.POISJLY\", \"xichengquxichengquditiezhanmingdan2482.RHBZDZ\", \"xichengquxichengquditiezhanmingdan2482.CODE\", \"xichengquxichengquditiezhanmingdan2482.CODEMC\", \"xichengquxichengquditiezhanmingdan2482.GXSJ\", \"xichengquxichengquditiezhanmingdan2482.POIMC\", \"xichengquxichengquditiezhanmingdan2482.POIDZ\", \"xichengquxichengquditiezhanmingdan2482.别名\", \"xichengquxichengquditiezhanmingdan2482.POIFLMC\", \"xichengquxichengquditiezhanmingdan2482.TEL\" FROM \"xichengquxichengquditiezhanmingdan2482\" WHERE \"xichengquxichengquditiezhanmingdan2482.别名\" = '特定别名';",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从表 `xichengquxichengquditiezhanmingdan2482` 中查询特定别名的地铁站信息，包括其地理位置、行政区划、联系方式等详细信息。\n\n- **详细描述**：\n  - **涉及的表**：`xichengquxichengquditiezhanmingdan2482`，该表可能存储了西城区地铁站的详细信息。\n  - **涉及的列**：\n    - 地理位置信息：`X` 和 `Y`（可能是经纬度坐标）。\n    - 行政区划信息：`SJXZQHMC`（上级行政区划名称）、`QXJXZQHMC`（区县级行政区划名称）、`SJXZQHDM`（上级行政区划代码）、`QXJXZQHDM`（区县级行政区划代码）。\n    - 地铁站基本信息：`POIMC`（POI名称，可能是地铁站名称）、`POIDZ`（POI地址）、`别名`（地铁站的别名）、`POIFLMC`（POI分类名称，可能是地铁站的分类）。\n    - 联系方式：`TEL`（电话号码）。\n    - 其他信息：`POISJLY`（POI数据来源）、`RHBZDZ`（融合标准地址）、`CODE`（编码）、`CODEMC`（编码名称）、`GXSJ`（更新时间）。\n  - **条件**：`\"xichengquxichengquditiezhanmingdan2482.别名\" = '特定别名'`，即只查询别名为“特定别名”的地铁站记录。\n\n- **业务场景**：\n  - 该查询可以用于获取特定地铁站的详细信息，例如在地图应用中显示某个地铁站的位置、行政区划、联系方式等信息。\n  - 也可以用于数据分析，例如统计某个行政区划内的地铁站数量或分布情况。\n  - 还可能用于城市规划和交通管理，例如了解地铁站的覆盖范围和分布情况。\n\n- **用户描述**：\n  - 用户可能在地图应用中搜索某个地铁站的别名（例如“西单站”），希望获取该地铁站的详细位置、所属行政区划、联系方式等信息。\n  - 用户可能是城市规划者或交通管理者，需要了解某个地铁站的详细信息以进行规划或管理。\n  - 用户还可能是数据分析师，需要查询特定地铁站的数据以进行统计分析或报表生成。",
+  "natural_language_query": "市民反映，我在导航软件里搜索\"西单站\"这个地铁站时，显示的信息不太准确。想确认一下这个站的具体位置在哪里？属于哪个区管辖？有没有联系电话？因为最近要去那边办事，需要确认清楚位置信息。另外我发现有些地图上标注的是\"西单地铁站\"，有些写的是\"西单站\"，不知道是不是同一个地方，希望能核实清楚这个站的正式名称和别名。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ ;",
+  "database": "交通服务",
+  "tables": {
+    "xichengquxichengquditiezhanmingdan2482": [
+      "xichengquxichengquditiezhanmingdan2482.ID",
+      "xichengquxichengquditiezhanmingdan2482.X",
+      "xichengquxichengquditiezhanmingdan2482.Y",
+      "xichengquxichengquditiezhanmingdan2482.SJXZQHMC",
+      "xichengquxichengquditiezhanmingdan2482.QXJXZQHMC",
+      "xichengquxichengquditiezhanmingdan2482.SJXZQHDM",
+      "xichengquxichengquditiezhanmingdan2482.QXJXZQHDM",
+      "xichengquxichengquditiezhanmingdan2482.POISJLY",
+      "xichengquxichengquditiezhanmingdan2482.RHBZDZ",
+      "xichengquxichengquditiezhanmingdan2482.CODE",
+      "xichengquxichengquditiezhanmingdan2482.CODEMC",
+      "xichengquxichengquditiezhanmingdan2482.GXSJ",
+      "xichengquxichengquditiezhanmingdan2482.POIMC",
+      "xichengquxichengquditiezhanmingdan2482.POIDZ",
+      "xichengquxichengquditiezhanmingdan2482.别名",
+      "xichengquxichengquditiezhanmingdan2482.POIFLMC",
+      "xichengquxichengquditiezhanmingdan2482.TEL"
+    ],
+    "xichengquxichengquditieyoumingdan2496": [
+      "xichengquxichengquditieyoumingdan2496.ID",
+      "xichengquxichengquditieyoumingdan2496.X",
+      "xichengquxichengquditieyoumingdan2496.Y",
+      "xichengquxichengquditieyoumingdan2496.SJXZQHMC",
+      "xichengquxichengquditieyoumingdan2496.QXJXZQHMC",
+      "xichengquxichengquditieyoumingdan2496.SJXZQHDM",
+      "xichengquxichengquditieyoumingdan2496.QXJXZQHDM",
+      "xichengquxichengquditieyoumingdan2496.POISJLY",
+      "xichengquxichengquditieyoumingdan2496.RHBZDZ",
+      "xichengquxichengquditieyoumingdan2496.CODE",
+      "xichengquxichengquditieyoumingdan2496.CODEMC",
+      "xichengquxichengquditieyoumingdan2496.GXSJ",
+      "xichengquxichengquditieyoumingdan2496.POIMC",
+      "xichengquxichengquditieyoumingdan2496.POIDZ",
+      "xichengquxichengquditieyoumingdan2496.别名",
+      "xichengquxichengquditieyoumingdan2496.POIFLMC",
+      "xichengquxichengquditieyoumingdan2496.TEL",
+      "xichengquxichengquditieyoumingdan2496.ID原",
+      "xichengquxichengquditieyoumingdan2496.备注",
+      "xichengquxichengquditieyoumingdan2496.上图"
+    ]
+  }
+}

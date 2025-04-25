@@ -1,0 +1,23 @@
+{
+  "sql": "SELECT \"shijiaotongweichaoxianchaozaihuochexiezaicha\"ng.\"行政区划代码\", \"shijiaotongweichaoxianchaozaihuochexiezaicha\"ng.\"站点名称\", \"shijiaotongweichaoxianchaozaihuochexiezaicha\"ng.\"联系电话\", \"shijiaotongweichaoxianchaozaihuochexiezaicha\"ng.\"地址\", \"haidianqugonggongjianzhutingchechang3416\".\"详细地址\" FROM \"shijiaotongweichaoxianchaozaihuochexiezaicha\"ng, \"haidianqugonggongjianzhutingchechang3416\" WHERE \"shijiaotongweichaoxianchaozaihuochexiezaicha\"ng.\"行政区划代码\" = \"haidianqugonggongjianzhutingchechang3416\".\"序号\"",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从两个表中联合查询信息，获取特定行政区划代码下的站点名称、联系电话、地址以及对应的详细地址信息。\n\n- **详细描述**：\n  - **涉及的表**：\n    - `shijiaotongweichaoxianchaozaihuochexiezaichang`（表名较长，可能是“市交通违法超限超载货车卸载场”的拼音缩写）\n    - `haidianqugonggongjianzhutingchechang3416`（可能是“海淀区公共建筑停车场3416”的拼音缩写）\n  - **涉及的列**：\n    - `shijiaotongweichaoxianchaozaihuochexiezaichang` 表中的列：\n      - `行政区划代码`：标识行政区划的代码。\n      - `站点名称`：站点的名称。\n      - `联系电话`：站点的联系电话。\n      - `地址`：站点的地址。\n    - `haidianqugonggongjianzhutingchechang3416` 表中的列：\n      - `详细地址`：停车场的详细地址。\n      - `序号`：可能是停车场的唯一标识或序号。\n  - **查询条件**：\n    - 通过 `shijiaotongweichaoxianchaozaihuochexiezaichang.\"行政区划代码\" = \"haidianqugonggongjianzhutingchechang3416\".\"序号\"` 进行关联，即行政区划代码与停车场的序号相匹配。\n\n- **业务场景**：\n  - 该查询可能用于交通管理部门或城市规划部门，目的是将货车卸载场的信息与公共停车场的信息进行关联，以便于管理或查询。\n  - 例如，可能需要了解某个行政区划内的货车卸载场附近的公共停车场信息，以便于货车司机或管理人员快速找到附近的停车场。\n\n- **用户描述**：\n  - 用户可能是交通管理部门的工作人员，需要查询某个行政区划内的货车卸载场及其附近的公共停车场的详细信息。\n  - 用户的需求可能是为了优化货车卸载场的布局，或者为货车司机提供方便的停车信息，以减少交通拥堵或违法停车现象。\n  - 用户在实际工作中可能遇到的问题是，货车卸载场附近的停车场信息不明确，导致货车司机无法快速找到合适的停车地点，从而影响交通秩序。通过该查询，用户可以快速获取相关信息，便于管理和服务。",
+  "natural_language_query": "市民反映，我是海淀区交通管理局的工作人员，最近在处理货车违规停放的问题时遇到麻烦。很多大货车司机跟我们抱怨说，在货物卸载点附近找不到合适的停车场，经常被迫违章停车。我们想了解一下海淀区各个货物卸载点周边的公共停车场分布情况，包括这些卸载点的具体位置、联系电话，还有附近停车场的详细地址。这样我们才能更好地引导司机规范停车，减少道路拥堵。特别是最近接到多起投诉说中关村一带的卸货区附近停车特别混乱，希望能尽快核实相关设施信息，方便我们开展工作。来电咨询货车卸货点周边停车场信息问题。",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ ,_ ,_ from _ where _ = _",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663": [
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.行政区划代码",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.站点名称",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.联系电话",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.地址"
+    ],
+    "haidianqugonggongjianzhutingchechang3416": [
+      "haidianqugonggongjianzhutingchechang3416.序号",
+      "haidianqugonggongjianzhutingchechang3416.停车场名称",
+      "haidianqugonggongjianzhutingchechang3416.停车场类型",
+      "haidianqugonggongjianzhutingchechang3416.详细地址",
+      "haidianqugonggongjianzhutingchechang3416.经营单位"
+    ]
+  }
+}

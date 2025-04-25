@@ -1,0 +1,52 @@
+{
+  "sql": "SELECT dfirm_floodways.OBJECTID, salt_storage_record_table.address_full FROM dfirm_floodways JOIN salt_storage_record_table ON dfirm_floodways.FLD_ZONE = salt_storage_record_table.address_sub_thoroughfare;",
+  "problem_description": "### Query intent:\nThe SQL statement aims to retrieve specific data from two related tables: `dfirm_floodways` and `salt_storage_record_table`. The primary goal is to join these two tables based on a specific condition and then extract certain fields for further analysis or reporting.\n\n### Detailed description:\n\n1. **Table `dfirm_floodways`**:\n   - **Columns involved**: `OBJECTID`, `FLD_ZONE`.\n   - **Purpose**: This table likely contains information about floodway systems within a given geographical area, where `OBJECTID` serves as a unique identifier for each record, and `FLD_ZONE` could be a field indicating the zone or location within the floodway system.\n\n2. **Table `salt_storage_record_table`**:\n   - **Columns involved**: `address_full`, `address_sub_thoroughfare`.\n   - **Purpose**: This table probably holds records of salt storage locations, with `address_full` providing a complete address, and `address_sub_thoroughfare` potentially detailing a sub-street or a more specific part of the address.\n\n3. **Join condition**:\n   - **Condition**: `dfirm_floodways.FLD_ZONE = salt_storage_record_table.address_sub_thoroughfare`.\n   - **Purpose**: The join condition links records from `dfirm_floodways` to those in `salt_storage_record_table` based on matching `FLD_ZONE` values with `address_sub_thoroughfare` values. This indicates an attempt to correlate floodway zones with specific salt storage addresses within those zones.\n\n### Business scenario:\n\nThis query is particularly useful in environmental management or urban planning contexts. For instance, it might help in assessing the risk of salt storage facilities being located near potential flood zones, which could impact safety and environmental considerations.\n\n### User description:\n\nA user, possibly an environmental engineer or urban planner, might need this information to perform a spatial analysis. They could use the results to identify any potential risks associated with the proximity of salt storage facilities to flood-prone areas. This could inform decisions on whether existing storage locations should be relocated or if additional safety measures are needed at those sites.\n\n### Additional notes:\n\n- **Data Integrity**: Ensuring that both tables have accurate and up-to-date information is crucial for reliable results.\n- **Spatial Analysis Tools**: Depending on the environment in which this query is run, additional tools or frameworks (like GIS software) might be necessary to visualize and analyze the spatial relationships between the floodways and salt storage locations effectively.",
+  "natural_language_query": "I'm working on a project that involves understanding the spatial relationship between flood zones and salt storage locations in our city. Specifically, I need to find out if any of our salt storage facilities are situated near flood-prone areas. To do this, I plan to run a SQL query that would join two databases.\n\nFirstly, there's a table called `dfirm_floodways`. It contains details about flood zones within our city, including a unique identifier for each zone (`OBJECTID`) and the specific zone or location within the floodway system (`FLD_ZONE`).\n\nSecondly, there's another table named `salt_storage_record_table`. This one includes the full address (`address_full`) and a more detailed part of the address (`address_sub_thoroughfare`) for each salt storage facility.\n\nMy query aims to match these two tables based on the condition that the zone identifier from `dfirm_floodways` (`FLD_ZONE`) should exactly match the detailed part of the address (`address_sub_thoroughfare`) from `salt_storage_record_table`. By doing this, I hope to identify any salt storage facilities that might be located in flood zones.\n\nThis information will be crucial for assessing the safety and environmental implications of our current storage locations, helping us make informed decisions about potential relocation or additional safety measures.",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ ;",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "dfirm_floodways": [
+      "dfirm_floodways.OBJECTID",
+      "dfirm_floodways.DFIRM_ID",
+      "dfirm_floodways.FLD_AR_ID",
+      "dfirm_floodways.FLD_ZONE",
+      "dfirm_floodways.FLOODWAY",
+      "dfirm_floodways.SFHA_TF",
+      "dfirm_floodways.AR_REVERT",
+      "dfirm_floodways.SOURCE_CIT",
+      "dfirm_floodways.HYDRO_ID",
+      "dfirm_floodways.CST_MDL_ID"
+    ],
+    "salt_storage_record_table": [
+      "salt_storage_record_table.OBJECTID",
+      "salt_storage_record_table.fulcrum_id",
+      "salt_storage_record_table.fulcrum_parent_id",
+      "salt_storage_record_table.fulcrum_record_id",
+      "salt_storage_record_table.version",
+      "salt_storage_record_table.geometry",
+      "salt_storage_record_table.created_at",
+      "salt_storage_record_table.updated_at",
+      "salt_storage_record_table.created_by",
+      "salt_storage_record_table.updated_by",
+      "salt_storage_record_table.address_sub_thoroughfare",
+      "salt_storage_record_table.address_thoroughfare",
+      "salt_storage_record_table.address_suite",
+      "salt_storage_record_table.address_locality",
+      "salt_storage_record_table.address_sub_admin_area",
+      "salt_storage_record_table.address_admin_area",
+      "salt_storage_record_table.address_postal_code",
+      "salt_storage_record_table.address_country",
+      "salt_storage_record_table.address_full",
+      "salt_storage_record_table.material_type",
+      "salt_storage_record_table.material_type_other",
+      "salt_storage_record_table.storage_length_years",
+      "salt_storage_record_table.storage_length_years_range",
+      "salt_storage_record_table.material_covered",
+      "salt_storage_record_table.coverage_method",
+      "salt_storage_record_table.material_on_pad",
+      "salt_storage_record_table.pad_type",
+      "salt_storage_record_table.pad_type_other"
+    ]
+  }
+}

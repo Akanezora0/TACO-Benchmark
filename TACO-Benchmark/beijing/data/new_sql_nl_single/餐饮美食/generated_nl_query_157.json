@@ -1,0 +1,26 @@
+{
+  "sql": "SELECT shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC, shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH FROM shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374 WHERE shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID = '特定ID值'",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从表 `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374` 中查询特定许可证（`XKZID`）对应的经营主体名称（`JYZMC`）和许可证编号（`XKZBH`）。  \n\n### **详细描述**  \n1. **涉及的表**：  \n   - `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374`（表名较长，可能表示“市场监督管理局餐饮服务许可证情况信息”或类似含义）。  \n\n2. **涉及的列**：  \n   - `JYZMC`（可能表示“经营主体名称”或“经营者名称”）。  \n   - `XKZBH`（可能表示“许可证编号”）。  \n   - `XKZID`（可能表示“许可证ID”或“许可证唯一标识”）。  \n\n3. **查询条件**：  \n   - `XKZID = '特定ID值'`，即查询 `XKZID` 等于某个特定值的记录。  \n\n### **业务场景**  \n该查询可能用于以下业务场景：  \n1. **许可证信息查询**：市场监管部门或企业需要根据许可证的唯一标识（`XKZID`）查询其对应的经营主体名称和许可证编号。  \n2. **数据核对**：在行政审批、执法检查或企业资质审核时，可能需要验证某张许可证的详细信息。  \n3. **系统集成**：在政务系统、企业管理系统或数据统计平台中，可能需要根据 `XKZID` 获取相关许可证信息。  \n\n### **用户描述**  \n1. **市场监管人员**：  \n   - 在执法检查时，需要快速查询某家餐饮企业的许可证编号和经营主体名称，以核实其合法性。  \n   - 例如：输入许可证的唯一ID，获取该企业的名称和许可证号，用于现场比对。  \n\n2. **企业或商户**：  \n   - 在办理业务（如年审、变更）时，可能需要提供许可证信息，但只记得许可证ID，因此需要通过该ID查询完整信息。  \n\n3. **数据分析人员**：  \n   - 在统计餐饮行业许可证数据时，可能需要根据 `XKZID` 关联其他数据表，获取经营主体名称和许可证编号。  \n\n### **总结**  \n该 SQL 语句主要用于根据许可证的唯一ID（`XKZID`）查询其对应的经营主体名称和许可证编号，适用于市场监管、企业资质管理、数据统计等场景。",
+  "natural_language_query": "市民反映，自己在办理餐饮店年审手续时，系统要求填写许可证编号，但手头只有一张许可证的登记ID（好像是XKZ2023-0587这样的格式），现在特别着急。想问问能不能通过这个ID查到店铺的全称和正式的许可证号码？因为后天就是截止日期了，担心耽误事情。之前去窗口问过，工作人员说可以在网上查，但找了半天也不知道在哪里查，来电求助如何查询餐饮许可证的具体信息。",
+  "results": 0,
+  "sql skeleton": "select _ ,_ from _ where _ =_",
+  "database": "餐饮美食",
+  "tables": {
+    "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374": [
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYXM",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.FZRQ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.YXQZ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.DWMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.EXCHANGETIME"
+    ],
+    "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076": [
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址"
+    ]
+  }
+}

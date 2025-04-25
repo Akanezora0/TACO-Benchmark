@@ -1,0 +1,7 @@
+{
+  "sql": "select t1.c1 from table1 as t1 where t1.c2 in (select t2.c3 from table2 as t2 where t2.c4 = 'value')\n```",
+  "results": 0,
+  "sql skeleton": "select _ from _ where _ in (select _ from _ where _ )",
+  "database": "安全生活",
+  "tables": {}
+}

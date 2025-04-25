@@ -1,0 +1,48 @@
+{
+  "sql": "SELECT DISTINCT shiguihuaziranziyuanweiqingzhensi1515.HID as HID, shiguihuaziranziyuanweiqingzhensi1515.HNAME as HNAME, shiguihuaziranziyuanweiqingzhensi1515.CATEGORY as CATEGORY, shiguihuaziranziyuanweiqingzhensi1515.COUNTYNAME as COUNTYNAME FROM shiguihuaziranziyuanweiqingzhensi1515 where shiguihuaziranziyuanweiqingzhensi1515.HID = '123'",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从表 `shiguihuaziranziyuanweiqingzhensi1515` 中查询 `HID` 为 `'123'` 的记录，并返回该记录的 `HID`、`HNAME`、`CATEGORY` 和 `COUNTYNAME` 字段，同时确保结果去重（尽管 `HID` 是唯一标识，`DISTINCT` 在此可能冗余）。\n\n---\n\n### **详细描述**  \n1. **涉及的表**：  \n   - `shiguihuaziranziyuanweiqingzhensi1515`：表名较长，可能是一个存储规划或自然资源相关数据的表（根据拼音推测为“市规划和自然资源委清镇市1515”的缩写或编码）。\n\n2. **查询的列**：  \n   - `HID`：记录的唯一标识（如“规划ID”或“项目ID”）。  \n   - `HNAME`：名称字段（如“规划名称”或“项目名称”）。  \n   - `CATEGORY`：分类字段（如“规划类型”或“资源类别”）。  \n   - `COUNTYNAME`：区县名称（如“清镇市”或其他行政区划）。  \n\n3. **查询条件**：  \n   - `HID = '123'`：精确匹配 `HID` 值为 `'123'` 的记录（`HID` 可能是字符串类型）。  \n\n4. **其他特性**：  \n   - `DISTINCT`：去重关键字，但在此场景中可能冗余，因为 `HID` 通常是唯一键。  \n\n---\n\n### **业务场景**  \n1. **可能的业务用途**：  \n   - 查询某个特定规划项目（`HID='123'`）的详细信息，包括名称、分类和所属区县。  \n   - 用于政府或自然资源管理部门的数据管理系统，例如规划项目审批、资源分配跟踪或行政区划统计。  \n\n2. **数据用途**：  \n   - 展示项目基础信息（如前端页面或报表）。  \n   - 作为其他查询的关联条件（如统计某类规划在特定区县的分布）。  \n\n---\n\n### **用户描述**  \n1. **用户角色**：  \n   - 可能是政府工作人员、规划部门职员或自然资源管理者。  \n\n2. **实际需求或问题**：  \n   - 用户需要快速获取 `HID` 为 `'123'` 的规划项目的关键信息（如名称、类型和所属区县），以便进行进一步处理（如审批、归档或汇报）。  \n   - 可能的问题场景：  \n     - 在系统中输入项目ID后，需确认其基本信息是否正确。  \n     - 需要核对某规划项目的行政区划归属（如是否属于“清镇市”）。  \n     - 生成报告时需提取特定项目的分类和名称。  \n\n3. **其他可能性**：  \n   - 表名中的 `1515` 可能是版本或区域编码，用户可能需要区分不同区域或年份的数据。",
+  "natural_language_query": "市民反映，我在清镇市规划和自然资源委的系统里查一个编号为123的项目，但是系统显示的信息不太完整。这个项目应该是关于自然资源规划的，但我现在需要确认它的具体名称是什么、属于哪一类规划、以及归哪个区县管。之前同事说这个项目可能跟清镇市有关，但我不太确定。能不能帮忙查一下这个123号项目的详细信息？主要是名称、分类和所属区县这些。我这边着急写报告要用，系统里翻了好久也没找到完整信息，特别着急！",
+  "results": 0,
+  "sql skeleton": "SELECT DISTINCT _ ._ as _ ,_ ._ as _ ,_ ._ as _ ,_ ._ = _ as _ FROM _ where _ ._ = _",
+  "database": "旅游住宿",
+  "tables": {
+    "shiguihuaziranziyuanweiqingzhensi1515": [
+      "shiguihuaziranziyuanweiqingzhensi1515.HID",
+      "shiguihuaziranziyuanweiqingzhensi1515.FATHERID",
+      "shiguihuaziranziyuanweiqingzhensi1515.HNAME",
+      "shiguihuaziranziyuanweiqingzhensi1515.OTHERNAME",
+      "shiguihuaziranziyuanweiqingzhensi1515.CATEGORY",
+      "shiguihuaziranziyuanweiqingzhensi1515.SUBCATEGOR",
+      "shiguihuaziranziyuanweiqingzhensi1515.COUNTYNAME",
+      "shiguihuaziranziyuanweiqingzhensi1515.STREETNAME",
+      "shiguihuaziranziyuanweiqingzhensi1515.DYNASTY",
+      "shiguihuaziranziyuanweiqingzhensi1515.SUBDYNASTY",
+      "shiguihuaziranziyuanweiqingzhensi1515.ADDRESS",
+      "shiguihuaziranziyuanweiqingzhensi1515.RANK",
+      "shiguihuaziranziyuanweiqingzhensi1515.BATCH",
+      "shiguihuaziranziyuanweiqingzhensi1515.PUBTIME",
+      "shiguihuaziranziyuanweiqingzhensi1515.USERS",
+      "shiguihuaziranziyuanweiqingzhensi1515.PURPOSE",
+      "shiguihuaziranziyuanweiqingzhensi1515.OWNERSHIP",
+      "shiguihuaziranziyuanweiqingzhensi1515.STATEEVALU",
+      "shiguihuaziranziyuanweiqingzhensi1515.SINGLERELI",
+      "shiguihuaziranziyuanweiqingzhensi1515.PROTECTION",
+      "shiguihuaziranziyuanweiqingzhensi1515.ATTACHEDRE",
+      "shiguihuaziranziyuanweiqingzhensi1515.RELATEDPEO",
+      "shiguihuaziranziyuanweiqingzhensi1515.RELATEDEVE",
+      "shiguihuaziranziyuanweiqingzhensi1515.PUBNAME",
+      "shiguihuaziranziyuanweiqingzhensi1515.SOURCE",
+      "shiguihuaziranziyuanweiqingzhensi1515.EDITOR",
+      "shiguihuaziranziyuanweiqingzhensi1515.ISREDUNDAN",
+      "shiguihuaziranziyuanweiqingzhensi1515.THEME"
+    ],
+    "pingguquzhucegongyuanxinxi780": [
+      "pingguquzhucegongyuanxinxi780.序号",
+      "pingguquzhucegongyuanxinxi780.名称",
+      "pingguquzhucegongyuanxinxi780.区",
+      "pingguquzhucegongyuanxinxi780.街道",
+      "pingguquzhucegongyuanxinxi780.地址",
+      "pingguquzhucegongyuanxinxi780.咨询电话"
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "sql": "SELECT \"shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239\".\"区域\", \"shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239\".\"街道\", \"shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239\".\"道路\", \"shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239\".\"车位数\" FROM \"shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239\" -\"shijiaotongweigongjiaoxianluxinxichuxingfuwu3666\".线路代码 WHERE \"shijiaotongweigongjiaoxianluxinxichuxingfuwu3666\".\"线路代码\" = '1239';",
+  "problem_description": "### **查询意图**：\n该 SQL 语句的目的是从 `shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239` 表中查询特定区域的停车位信息，同时关联 `shijiaotongweigongjiaoxianluxinxichuxingfuwu3666` 表，筛选出符合特定线路代码（'1239'）的记录。\n\n### **详细描述**：\n1. **涉及的表**：\n   - `shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239`：该表可能存储了石景山区道路停车收费的相关信息，包括区域、街道、道路名称和车位数等。\n   - `shijiaotongweigongjiaoxianluxinxichuxingfuwu3666`：该表可能存储了公交线路信息，包含线路代码等字段。\n\n2. **查询的列**：\n   - 从 `shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239` 表中查询以下列：\n     - `区域`：停车位所在的区域（如石景山区）。\n     - `街道`：停车位所在的街道名称。\n     - `道路`：停车位所在的具体道路名称。\n     - `车位数`：该道路或区域的停车位数量。\n\n3. **查询条件**：\n   - 通过 `shijiaotongweigongjiaoxianluxinxichuxingfuwu3666` 表的 `线路代码` 列进行筛选，仅查询 `线路代码 = '1239'` 的记录。\n\n4. **关联关系**：\n   - 虽然 SQL 语句中使用了 `-` 符号（可能是语法错误，实际应为 `JOIN` 或子查询），但意图可能是通过 `线路代码` 关联两个表，筛选出与公交线路 '1239' 相关的停车位信息。\n\n### **业务场景**：\n该查询可能用于以下业务场景：\n1. **公交线路周边停车位分析**：查询公交线路 '1239' 沿线或附近的停车位信息，帮助规划公交站点周边的停车资源。\n2. **交通管理优化**：分析特定公交线路覆盖区域的停车位分布情况，优化停车收费或交通管理策略。\n3. **出行服务整合**：为乘客或驾驶员提供公交线路附近的停车信息，方便换乘或停车。\n\n### **用户描述**：\n在该业务场景下，用户可能遇到以下实际问题或需求：\n1. **公交乘客需求**：乘客乘坐公交线路 '1239' 到达某地后，需要知道附近有哪些停车位可供使用（如共享汽车停放点或私家车停车场）。\n2. **交通管理部门需求**：交管部门需要统计公交线路沿线的停车位数量，以评估是否满足出行需求，或是否需要增设停车设施。\n3. **数据分析需求**：城市规划者可能需要分析公交线路与停车资源的匹配情况，以优化城市交通布局。\n\n### **备注**：\n- 该 SQL 语句的语法可能存在错误（如 `-` 符号的使用），实际应为 `JOIN` 或子查询形式。\n- 表名和字段名较长且复杂，可能是从某个系统中自动生成的，建议优化命名以提高可读性。",
+  "natural_language_query": "市民反映，我每天都要乘坐1239路公交车上下班，最近发现石景山区这边停车特别不方便。特别是下班后在八角街道、古城街道这些地方想找个停车位特别难，有时候绕好几圈都找不到位置。想问问公交线路1239沿途经过的这些区域，比如鲁谷路、石景山路这些地方，到底有多少停车位啊？能不能帮忙查一下这些地方停车位的分布情况？我经常看到公交站附近停满了车，感觉停车位根本不够用，希望有关部门能重视这个问题。来电咨询1239路公交沿线停车位信息，希望能得到详细数据。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ WHERE _ = _ ;",
+  "database": "交通服务",
+  "tables": {
+    "shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239": [
+      "shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239.区域",
+      "shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239.街道",
+      "shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239.道路",
+      "shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239.车位数"
+    ],
+    "shijiaotongweigongjiaoxianluxinxichuxingfuwu3666": [
+      "shijiaotongweigongjiaoxianluxinxichuxingfuwu3666.线路代码",
+      "shijiaotongweigongjiaoxianluxinxichuxingfuwu3666.路线名称"
+    ]
+  }
+}

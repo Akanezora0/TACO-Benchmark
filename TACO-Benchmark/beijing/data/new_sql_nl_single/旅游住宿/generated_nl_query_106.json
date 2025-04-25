@@ -1,0 +1,29 @@
+{
+  "sql": "SELECT \"shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.本市市管游览参观点门票价格\", \"yanqingquyanqingqulvyoujingquxinxi3381.旅游景区\" FROM \"shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777\" - \"yanqingquyanqingqulvyoujingquxinxi3381\" WHERE \"shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.本市市管游览参观点门票价格\" = 100;",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从两个表（或视图）中查询满足特定条件的记录，具体是查找“本市市管游览参观点门票价格”为 100 元的景点信息，并与“延庆区旅游景区”信息进行对比或关联。\n\n---\n\n### **详细描述**  \n1. **涉及的表**：  \n   - `shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777`（可能是一个包含本市景点门票价格信息的表）  \n   - `yanqingquyanqingqulvyoujingquxinxi3381`（可能是一个包含延庆区旅游景区信息的表）  \n\n2. **查询的列**：  \n   - `shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.本市市管游览参观点门票价格`（本市景点的门票价格）  \n   - `yanqingquyanqingqulvyoujingquxinxi3381.旅游景区`（延庆区的旅游景区名称）  \n\n3. **查询条件**：  \n   - 仅选择“本市市管游览参观点门票价格”等于 100 元的记录。  \n\n4. **运算操作**：  \n   - 使用了 `表1 - 表2` 的语法，可能是某种集合差集操作（如排除延庆区的景点），但具体语义需结合数据库实现（部分数据库支持 `EXCEPT` 或 `MINUS` 操作）。  \n\n---\n\n### **业务场景**  \n1. **门票价格管理**：  \n   - 查询本市门票价格为 100 元的景点，可能与定价政策、价格调整或优惠活动相关。  \n2. **区域景点对比**：  \n   - 对比本市景点与延庆区景点的信息，例如分析价格差异或游客分布。  \n3. **数据清洗或筛选**：  \n   - 排除延庆区的景点，仅关注本市其他区域的景点信息。  \n\n---\n\n### **用户描述**  \n1. **用户需求**：  \n   - 旅游管理部门可能需要统计本市门票价格为 100 元的景点，用于制定统一票价政策或分析游客消费情况。  \n   - 旅行社或游客可能想查询“非延庆区”且门票价格为 100 元的景点，以便规划性价比高的旅游路线。  \n2. **实际问题**：  \n   - 用户需要快速筛选出特定价格的景点，同时排除某些区域（如延庆区）的干扰数据。  \n   - 可能涉及跨区域景点数据的整合或对比，例如评估不同行政区的门票定价策略。  \n\n--- \n\n### **补充说明**  \n- 如果 `表1 - 表2` 是集合差集操作，则查询结果可能是“本市门票 100 元的景点中，不属于延庆区的景点”。  \n- 表名和列名较长且包含数字后缀，可能是从数据仓库或数据湖中提取的原始表，表明数据来源复杂（如多系统集成或爬取数据）。",
+  "natural_language_query": "市民反映，想了解一下北京市区那些门票正好是100块钱的旅游景点，但是不要延庆区的。最近想带家人周末出去玩，发现有些景点价格乱七八糟的，就想找点价格统一、明码标价的。之前去过延庆的景点感觉太远了，这次就想在市区转转。另外听说有些景点价格虚高，就想确认下100元这个档位的正规景点都有哪些，能不能给个靠谱的名单？来电咨询市区百元景点信息。\n\n（语气补充说明：用户表达中带着对景点价格混乱的不满，同时有明确的价格筛选需求和区域排除倾向，但完全不懂数据库结构，仅从自身生活场景出发描述需求）",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ WHERE _ = _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777": [
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.本市市管游览参观点门票价格",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 1",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 2",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 3",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 4",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 5",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 6"
+    ],
+    "yanqingquyanqingqulvyoujingquxinxi3381": [
+      "yanqingquyanqingqulvyoujingquxinxi3381.旅游景区",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 1",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 2",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 3",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 4",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 5",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 6",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 7"
+    ]
+  }
+}

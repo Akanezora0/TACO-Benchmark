@@ -1,0 +1,24 @@
+{
+  "sql": "SELECT \"shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.年份\", \"shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.总量\" FROM \"shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668\" WHERE \"shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.观测站名称\" = '观测站名称';",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从表 `shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668` 中查询特定观测站的年份和交通流量总量数据。\n\n- **详细描述**：\n  - **涉及的表**：`shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668`，该表名可能表示“市交通委郊区普通公路年交通流量3668”（具体含义需结合业务背景确认）。\n  - **涉及的列**：\n    - `年份`：表示数据记录的年份。\n    - `总量`：表示交通流量的总量。\n    - `观测站名称`：用于筛选特定观测站的名称。\n  - **条件**：`\"shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.观测站名称\" = '观测站名称'`，表示只查询观测站名称为“观测站名称”的记录（这里的“观测站名称”可能是占位符，实际查询时会替换为具体的观测站名称）。\n\n- **业务场景**：\n  - 该查询可能用于交通管理部门或城市规划部门，用于分析特定观测站的年度交通流量变化趋势。\n  - 通过查询特定观测站的年份和交通流量总量，可以评估该观测站的交通负荷、拥堵情况，或用于长期交通规划。\n\n- **用户描述**：\n  - 用户可能是交通管理部门的工作人员，需要了解某个特定观测站（如“XX路口观测站”）的年度交通流量数据。\n  - 用户的需求可能是为了生成交通流量报告、评估道路使用情况，或为未来的交通基础设施规划提供数据支持。\n  - 用户可能遇到的实际问题包括：如何获取特定观测站的历史交通流量数据？如何分析某个观测站的交通流量变化趋势？",
+  "natural_language_query": "市民反映，我是交通管理部门的工作人员，最近在整理XX路口观测站的交通数据时遇到问题。我们这边需要了解这个观测站过去几年的车流量情况，就是每年大概有多少车辆经过的数据。因为领导要求我们分析一下这个路口的交通负荷变化，好为明年是否要扩建道路做规划。但是我不太清楚从哪里能查到这些历史数据，希望能帮忙提供一下XX路口观测站近几年的年度车流量统计信息。主要是想看每年的总量变化趋势，这样我们才能写分析报告。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ WHERE _ = _ ;",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668": [
+      "shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.年份",
+      "shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.总量",
+      "shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.观测站名称"
+    ],
+    "shijiaotongweiguidaoyanshixinxi3711": [
+      "shijiaotongweiguidaoyanshixinxi3711.序号",
+      "shijiaotongweiguidaoyanshixinxi3711.总车次",
+      "shijiaotongweiguidaoyanshixinxi3711.延时开始时间",
+      "shijiaotongweiguidaoyanshixinxi3711.延时结束时间",
+      "shijiaotongweiguidaoyanshixinxi3711.延时线路",
+      "shijiaotongweiguidaoyanshixinxi3711.共享时间",
+      "shijiaotongweiguidaoyanshixinxi3711.更新时间"
+    ]
+  }
+}

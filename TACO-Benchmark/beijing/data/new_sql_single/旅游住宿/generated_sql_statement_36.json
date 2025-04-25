@@ -1,0 +1,19 @@
+{
+  "sql": "SELECT \"shunyiquxingjifandian1276.顺义区星级饭店\" FROM \"shunyiquxingjifandian1276\" WHERE \"shunyiquxingjifandian1276.顺义区星级饭店\" = '指定星级饭店名称'",
+  "results": 0,
+  "sql skeleton": "SELECT _ _ FROM _ WHERE _ _",
+  "database": "旅游住宿",
+  "tables": {
+    "shunyiquxingjifandian1276": [
+      "shunyiquxingjifandian1276.顺义区星级饭店",
+      "shunyiquxingjifandian1276.Unnamed: 1",
+      "shunyiquxingjifandian1276.Unnamed: 2",
+      "shunyiquxingjifandian1276.Unnamed: 3"
+    ],
+    "pingguqupingguqushandongzhuangzhendengjiminsu3496": [
+      "pingguqupingguqushandongzhuangzhendengjiminsu3496.山东庄镇等级民宿",
+      "pingguqupingguqushandongzhuangzhendengjiminsu3496.Unnamed: 1",
+      "pingguqupingguqushandongzhuangzhendengjiminsu3496.Unnamed: 2"
+    ]
+  }
+}

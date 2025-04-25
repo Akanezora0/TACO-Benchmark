@@ -1,0 +1,18 @@
+{
+  "sql": "SELECT \"shijiaotongweichuzuyehujibenxinxi3664.经营业户名称\", \"shijiaotongweiweixianpinyunshuqiye3674.企业名称\" FROM \"shijiaotongweichuzuyehujibenxinxi3664\" JOIN \"shijiaotongweiweixianpinyunshuqiye3674\" ON \"shijiaotongweichuzuyehujibenxinxi3664.经营业户名称\" = \"shijiaotongweiweixianpinyunshuqiye3674.企业名称\";",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从两个表中查询并关联“经营业户名称”和“企业名称”相同的记录，返回匹配的经营业户名称和企业名称。  \n\n### **详细描述**  \n1. **涉及的表**：  \n   - `shijiaotongweichuzuyehujibenxinxi3664`（可能为“市交通委出租业户基本信息”表）  \n   - `shijiaotongweiweixianpinyunshuqiye3674`（可能为“市交通委危险品运输企业”表）  \n\n2. **涉及的列**：  \n   - `shijiaotongweichuzuyehujibenxinxi3664.经营业户名称`（出租业户的经营名称）  \n   - `shijiaotongweiweixianpinyunshuqiye3674.企业名称`（危险品运输企业的名称）  \n\n3. **关联条件**：  \n   - 通过 `JOIN` 操作，匹配两个表中“经营业户名称”和“企业名称”相同的记录。  \n\n### **业务场景**  \n该查询可能用于以下业务场景：  \n- **监管合规检查**：交通管理部门需要核查哪些出租业户同时涉及危险品运输业务，以确保其具备相应资质。  \n- **企业关联分析**：识别同时经营出租业务和危险品运输的企业，便于统一管理或风险评估。  \n- **数据整合**：将两个不同业务领域的企业信息进行关联，以便后续统计分析或政策制定。  \n\n### **用户描述**  \n在该业务场景下，用户（如交通管理部门或数据分析人员）可能面临以下问题或需求：  \n1. **合规性检查**：某些企业可能同时经营普通出租和危险品运输业务，但危险品运输需要特殊许可，用户需要确认这些企业是否合法合规。  \n2. **风险管控**：危险品运输涉及较高安全风险，用户希望识别出同时从事出租和危险品运输的企业，以便加强监管或重点检查。  \n3. **数据关联需求**：用户可能需要将分散在不同系统中的企业信息进行关联，以便全面了解企业的经营情况。  \n\n通过该查询，用户可以快速获取同时出现在两个业务系统中的企业名单，从而支持进一步的监管或分析工作。",
+  "natural_language_query": "市民反映，最近在整理一些运输企业的资料时发现，有些公司好像既做普通出租车业务又搞危险品运输，这种情况是不是需要特别审批啊？我这边手头有两份名单，一份是出租车公司的，一份是危险品运输企业的，想查查有没有哪些公司是两边都挂名的。主要是担心这些公司如果没办危险品运输许可就偷偷运营的话会有安全隐患，能不能帮忙核对一下两边名单里名称一致的企业？这样我们好重点检查这些公司的手续是否齐全。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ ;",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweichuzuyehujibenxinxi3664": [
+      "shijiaotongweichuzuyehujibenxinxi3664.经营业户名称"
+    ],
+    "shijiaotongweiweixianpinyunshuqiye3674": [
+      "shijiaotongweiweixianpinyunshuqiye3674.企业名称",
+      "shijiaotongweiweixianpinyunshuqiye3674.所属地区",
+      "shijiaotongweiweixianpinyunshuqiye3674.经营许可证号"
+    ]
+  }
+}

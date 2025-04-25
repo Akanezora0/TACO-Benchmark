@@ -1,0 +1,42 @@
+{
+  "sql": "SELECT xichengquxichengquditieyoumingdan2496.ID, xichengquxichengquditieyoumingdan2496.X, xichengquxichengquditieyoumingdan2496.Y, xichengquxichengquditieyoumingdan2496.SJXZQHMC, xichengquxichengquditieyoumingdan2496.QXJXZQHMC, xichengquxichengquditieyoumingdan2496.SJXZQHDM, xichengquxichengquditieyoumingdan2496.QXJXZQHDM, xichengquxichengquditieyoumingdan2496.POISJLY, xichengquxichengquditieyoumingdan2496.RHBZDZ, xichengquxichengquditieyoumingdan2496.CODE, xichengquxichengquditieyoumingdan2496.CODEMC, xichengquxichengquditieyoumingdan2496.GXSJ, xichengquxichengquditieyoumingdan2496.POIMC, xichengquxichengquditieyoumingdan2496.POIDZ, xichengquxichengquditieyoumingdan2496.别名, xichengquxichengquditieyoumingdan2496.POIFLMC, xichengquxichengquditieyoumingdan2496.TEL, xichengquxichengquditieyoumingdan2496.ID原, xichengquxichengquditieyoumingdan2496.备注, xichengquxichengquditieyoumingdan2496.上图, pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.企业名称, pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.经营许可证号, pingguqupingguqu2019",
+  "problem_description": "# SQL 语句分析\n\n## 查询意图\n这个SQL语句似乎是要查询北京市西城区地铁相关POI(兴趣点)信息，并与平谷区2019年普通货运质量信誉考核结果数据进行关联查询。不过语句不完整，后半部分被截断了。\n\n## 详细描述\n\n### 涉及的表\n1. `xichengquxichengquditieyoumingdan2496` - 西城区地铁有名单表\n   - 包含地铁站点或相关POI的详细信息\n   - 表名中的\"2496\"可能是版本或标识号\n\n2. `pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270` - 平谷区2019年普通货运质量信誉考核结果表\n   - 包含货运企业的考核信息\n   - 表名中的\"270\"可能是版本或标识号\n\n### 查询的列\n从西城区地铁表查询的列包括：\n- ID: 记录唯一标识\n- X/Y: 可能代表地理坐标\n- SJXZQHMC/QXJXZQHMC: 上级行政区划名称/区县级行政区划名称\n- SJXZQHDM/QXJXZQHDM: 对应的行政区划代码\n- POISJLY: POI数据来源\n- RHBZDZ: 融合标准地址\n- CODE/CODEMC: 代码及代码名称\n- GXSJ: 更新时间\n- POIMC: POI名称\n- POIDZ: POI地址\n- 别名: 别名信息\n- POIFLMC: POI分类名称\n- TEL: 电话号码\n- ID原: 原始ID\n- 备注: 备注信息\n- 上图: 是否上图标识\n\n从平谷区货运考核表查询的列(不完整)：\n- 企业名称\n- 经营许可证号\n\n## 业务场景\n这个查询可能用于：\n1. 城市交通管理部门需要分析地铁站点周边货运企业的分布情况\n2. 将地铁站点POI数据与货运企业考核数据进行关联，评估交通枢纽周边的货运服务质量\n3. 城市规划和交通规划中，需要了解特定区域(西城区)基础设施与货运服务的关系\n\n## 用户描述\n可能的用户需求场景：\n- 交通规划人员需要了解西城区地铁站点周边货运企业的分布和质量情况，以便优化货运路线规划\n- 监管部门希望将地铁站点数据与货运企业考核结果关联，找出地铁周边服务质量较差的企业\n- 城市研究人员分析不同行政区(西城区与平谷区)交通基础设施与货运服务的关系\n\n注意：由于SQL语句不完整，以上分析基于可见部分。完整分析需要查看完整的SQL语句，特别是连接条件和查询的完整列列表。",
+  "natural_language_query": "市民反映，我在西城区这边上班经常坐地铁，发现有些地铁站附近总有大货车进出，感觉挺不安全的。特别是最近看到平谷区那边有货运企业的考核结果，不知道这些在我们西城地铁周边活动的货车公司是不是正规的？考核情况怎么样？我住在西直门这边，经常看到有些货车在地铁站附近装卸货，有的看起来车况很差，不知道这些公司是不是通过正规考核的。能不能帮忙查一下西城区地铁站周边的货运企业情况，看看他们的运营是不是规范的？主要是担心安全问题，特别是早晚高峰人流量大的时候。",
+  "results": 0,
+  "sql skeleton": "SELECT _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ FROM _ JOIN _ ON _ ._ = _ ._ WHERE _ ._ = _ AND _ ._ = _ and _ (_ ._ ._ ,_ ) = _ ;",
+  "database": "交通服务",
+  "tables": {
+    "xichengquxichengquditieyoumingdan2496": [
+      "xichengquxichengquditieyoumingdan2496.ID",
+      "xichengquxichengquditieyoumingdan2496.X",
+      "xichengquxichengquditieyoumingdan2496.Y",
+      "xichengquxichengquditieyoumingdan2496.SJXZQHMC",
+      "xichengquxichengquditieyoumingdan2496.QXJXZQHMC",
+      "xichengquxichengquditieyoumingdan2496.SJXZQHDM",
+      "xichengquxichengquditieyoumingdan2496.QXJXZQHDM",
+      "xichengquxichengquditieyoumingdan2496.POISJLY",
+      "xichengquxichengquditieyoumingdan2496.RHBZDZ",
+      "xichengquxichengquditieyoumingdan2496.CODE",
+      "xichengquxichengquditieyoumingdan2496.CODEMC",
+      "xichengquxichengquditieyoumingdan2496.GXSJ",
+      "xichengquxichengquditieyoumingdan2496.POIMC",
+      "xichengquxichengquditieyoumingdan2496.POIDZ",
+      "xichengquxichengquditieyoumingdan2496.别名",
+      "xichengquxichengquditieyoumingdan2496.POIFLMC",
+      "xichengquxichengquditieyoumingdan2496.TEL",
+      "xichengquxichengquditieyoumingdan2496.ID原",
+      "xichengquxichengquditieyoumingdan2496.备注",
+      "xichengquxichengquditieyoumingdan2496.上图"
+    ],
+    "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270": [
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.企业名称",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.经营许可证号",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.企业类型",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.所属区县",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.考核人",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.评定时间",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.评定得分",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.评定结果"
+    ]
+  }
+}

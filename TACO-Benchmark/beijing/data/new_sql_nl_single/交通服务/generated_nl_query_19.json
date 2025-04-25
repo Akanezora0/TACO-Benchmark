@@ -1,0 +1,22 @@
+{
+  "sql": "SELECT \"xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.西城区路侧停车数据\", \"shijiaotongweiguidaozhandianxinxichuxing3670.线路名称\" FROM \"xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392\" INNER JOIN \"shijiaotongweiguidaozhandianxinxichuxing3670\" ON \"xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.西城区路侧停车数据\".\"Unnamed: 1\" = \"shijiaotongweiguidaozhandianxinxichuxing3670.站点编码\";",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从两个表中联合查询数据，通过内连接（INNER JOIN）关联两个表，并返回特定列的信息。查询主要涉及西城区路侧停车数据和轨道交通站点信息，可能是为了分析停车数据与轨道交通站点之间的关系。\n\n---\n\n### **详细描述**  \n1. **涉及的表**：  \n   - `xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392`（西城区路侧停车数据表）  \n   - `shijiaotongweiguidaozhandianxinxichuxing3670`（轨道交通站点信息出行表）  \n\n2. **查询的列**：  \n   - `xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.西城区路侧停车数据`  \n   - `shijiaotongweiguidaozhandianxinxichuxing3670.线路名称`  \n\n3. **连接条件**：  \n   - 通过 `xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.西城区路侧停车数据.Unnamed: 1`（可能是停车数据的编码或ID）  \n   - 与 `shijiaotongweiguidaozhandianxinxichuxing3670.站点编码`（轨道交通站点的编码）进行匹配。  \n\n4. **查询逻辑**：  \n   - 使用 `INNER JOIN` 确保只返回两个表中匹配的记录。  \n   - 查询结果包含停车数据的某些信息（如停车位、收费情况等）和对应的轨道交通线路名称。  \n\n---\n\n### **业务场景**  \n1. **停车与轨道交通关联分析**：  \n   - 查询可能用于分析西城区路侧停车位与附近轨道交通站点的关系，例如哪些停车位靠近地铁站，或者停车需求是否与轨道交通出行相关。  \n2. **交通规划与管理**：  \n   - 城市交通管理部门可能希望优化停车资源分配，例如在轨道交通站点附近增加或减少停车位，以缓解交通拥堵或提高停车利用率。  \n3. **出行服务优化**：  \n   - 出行服务平台（如导航、共享停车APP）可能利用此类数据，为用户提供“停车+轨道交通”的出行建议，例如推荐停车后换乘地铁的路线。  \n\n---\n\n### **用户描述**  \n1. **交通管理部门的痛点**：  \n   - 西城区路侧停车位紧张，但部分停车位利用率低，可能与轨道交通站点分布不匹配。管理部门需要数据支持，以优化停车资源配置。  \n2. **市民的实际需求**：  \n   - 开车出行的市民希望知道哪些路侧停车位靠近地铁站，方便换乘公共交通，减少拥堵和停车费用。  \n3. **数据分析师的目标**：  \n   - 通过关联停车数据和轨道交通站点数据，挖掘停车热点区域与公共交通的关联性，为城市规划或商业选址提供依据。  \n\n---\n\n### **补充说明**  \n- 列名 `Unnamed: 1` 可能是一个未命名的临时列，实际业务中应明确其含义（如停车位ID、区域编码等）。  \n- 如果查询结果用于可视化，可以生成“停车位-地铁站”分布热力图，辅助决策。",
+  "natural_language_query": "市民反映，最近开车去西城区办事特别难停车，尤其是想找那种停完车能直接换乘地铁的地方。比如在新街口、西四这些地方，明明路边有停车位，但有时候绕好几圈都找不到空位，可有些地方的停车位又总是空着没人停。想问问能不能查查哪些路边的停车位是离地铁站比较近的？这样我们开车的人也好提前规划，停完车直接坐地铁，省得堵在路上。另外感觉有些停车位收费和地铁线路也没对应上，是不是能优化一下？来电希望帮忙查查路边停车和地铁站的分布情况，看看能不能解决停车难的问题。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ ;",
+  "database": "交通服务",
+  "tables": {
+    "xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392": [
+      "xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.西城区路侧停车数据",
+      "xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.Unnamed: 1",
+      "xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.Unnamed: 2",
+      "xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.Unnamed: 3",
+      "xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.Unnamed: 4"
+    ],
+    "shijiaotongweiguidaozhandianxinxichuxing3670": [
+      "shijiaotongweiguidaozhandianxinxichuxing3670.线路名称",
+      "shijiaotongweiguidaozhandianxinxichuxing3670.站点编码",
+      "shijiaotongweiguidaozhandianxinxichuxing3670.车站名"
+    ]
+  }
+}

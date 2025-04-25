@@ -1,0 +1,19 @@
+{
+  "sql": "SELECT DISTINCT \"tongzhouqutongzhouquxiangcunminsuxinxi2979\".\"通州区乡村民宿情况表（规范化审核52家）\" AS 别名1, \"shunyiqushunyiquxingjifandian2102\".\"顺义区星级饭店\" AS 别名2 FROM \"tongzhouqutongzhouquxiangcunminsuxinxi2979\" UNION SELECT DISTINCT \"tongzhouqutongzhouquxiangcunminsuxinxi2979\".\"Unnamed: 1\" AS 别名1, \"shunyiqushunyiquxingjifandian2102\".\"Unnamed: 1\" AS 别名2 FROM \"tongzhouqutongzhouquxiangcunminsuxinxi2979\" UNION SELECT DISTINCT \"tongzhouqutongzhouquxiangcunminsuxinxi2979\".\"Unnamed: 2\" AS 别名1, \"shunyiqushunyiquxingjifandian2102\".\"Unnamed: 2\" AS 别名2 FROM \"tongzhouqutongzhouquxiangcunminsuxinxi2979\" UNION SELECT DISTINCT \"tongzhouqutongzhouquxiangcunminsuxinxi2979\".\"Unnamed: 3\" AS 别名1, \"shunyiqushunyiquxingjifandian2102\".\"Unnamed: 3\" AS 别名2 FROM \"tongzhouqutongzhouquxiangcunminsuxinxi2979\"",
+  "results": 0,
+  "sql skeleton": "select distinct _ ._ as _ ,_ ._ as _ from ( select _ as _ ,_ as _ from _ where _ = _ union select _ as _ ,_ as _ from _ where _ = _ union select _ as _ ,_ as _ from _ where _ = _ ) _",
+  "database": "旅游住宿",
+  "tables": {
+    "tongzhouqutongzhouquxiangcunminsuxinxi2979": [
+      "tongzhouqutongzhouquxiangcunminsuxinxi2979.通州区乡村民宿情况表（规范化审核52家）",
+      "tongzhouqutongzhouquxiangcunminsuxinxi2979.Unnamed: 1",
+      "tongzhouqutongzhouquxiangcunminsuxinxi2979.Unnamed: 2"
+    ],
+    "shunyiqushunyiquxingjifandian2102": [
+      "shunyiqushunyiquxingjifandian2102.顺义区星级饭店",
+      "shunyiqushunyiquxingjifandian2102.Unnamed: 1",
+      "shunyiqushunyiquxingjifandian2102.Unnamed: 2",
+      "shunyiqushunyiquxingjifandian2102.Unnamed: 3"
+    ]
+  }
+}

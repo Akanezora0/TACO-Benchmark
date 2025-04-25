@@ -1,0 +1,26 @@
+{
+  "sql": "SELECT \"shijiaotongweixianchangxunchaxinxi3675.巡查位置\", \"shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.地址\" FROM \"shijiaotongweixianchangxunchaxinxi3675\" - \"shijiaotongweichaoxianchaozaihuochexiezaichangdi3663\" WHERE \"shijiaotongweixianchangxunchaxinxi3675.巡查位置\" = '特定位置';",
+  "problem_description": "### **查询意图**：\n该 SQL 语句的目的是从表 `shijiaotongweixianchangxunchaxinxi3675` 中查询特定巡查位置的记录，并排除与表 `shijiaotongweichaoxianchaozaihuochexiezaichangdi3663` 中地址相同的记录。\n\n### **详细描述**：\n1. **涉及的表**：\n   - `shijiaotongweixianchangxunchaxinxi3675`：可能存储的是“市交通危险场巡查信息”数据，包含巡查位置等信息。\n   - `shijiaotongweichaoxianchaozaihuochexiezaichangdi3663`：可能存储的是“市交通超限超载货车卸货场地”数据，包含地址等信息。\n\n2. **涉及的列**：\n   - `shijiaotongweixianchangxunchaxinxi3675.巡查位置`：表示巡查的具体位置。\n   - `shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.地址`：表示货车卸货场地的地址。\n\n3. **查询条件**：\n   - `\"shijiaotongweixianchangxunchaxinxi3675.巡查位置\" = '特定位置'`：仅查询巡查位置为“特定位置”的记录。\n   - `\"shijiaotongweixianchangxunchaxinxi3675\" - \"shijiaotongweichaoxianchaozaihuochexiezaichangdi3663\"`：表示从 `shijiaotongweixianchangxunchaxinxi3675` 中排除与 `shijiaotongweichaoxianchaozaihuochexiezaichangdi3663` 中地址相同的记录。\n\n### **业务场景**：\n该查询可能用于交通管理部门，目的是找出在特定巡查位置中，未与货车卸货场地地址重叠的巡查记录。例如：\n- 检查是否存在危险巡查点未被纳入货车卸货场地的管理范围。\n- 确保巡查位置与卸货场地地址不冲突，避免管理漏洞。\n\n### **用户描述**：\n在交通管理业务中，用户（如交通巡查员或管理人员）可能需要：\n1. **排查安全隐患**：确认某些危险巡查点是否未被货车卸货场地覆盖，避免因管理疏忽导致事故。\n2. **优化巡查路线**：通过对比巡查位置和卸货场地地址，调整巡查重点区域，提高管理效率。\n3. **合规性检查**：确保所有危险巡查点都符合交通管理规范，避免因地址重叠或遗漏导致监管问题。",
+  "natural_language_query": "市民反映，在朝阳区东坝中路附近进行交通巡查时，发现有几处危险路段没有被纳入货车卸货场的管理范围。具体是在东坝中路和驹子房路交叉口往北200米的位置，经常有大货车违规停放，但这边明明不在正规卸货场地名单里。上周还因为这个发生过一起剐蹭事故，特别危险。想问问这种情况是不是管理上有漏洞？能不能查一下这些没被划入卸货场管理的巡查点都有哪些？主要是担心这些地方没人管会出大事。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ WHERE _ = _ ;",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweixianchangxunchaxinxi3675": [
+      "shijiaotongweixianchangxunchaxinxi3675.序号",
+      "shijiaotongweixianchangxunchaxinxi3675.工作内容",
+      "shijiaotongweixianchangxunchaxinxi3675.巡查时间",
+      "shijiaotongweixianchangxunchaxinxi3675.巡查人次",
+      "shijiaotongweixianchangxunchaxinxi3675.巡查单位",
+      "shijiaotongweixianchangxunchaxinxi3675.巡查位置",
+      "shijiaotongweixianchangxunchaxinxi3675.共享时间",
+      "shijiaotongweixianchangxunchaxinxi3675.更新时间"
+    ],
+    "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663": [
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.行政区划代码",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.站点名称",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.联系电话",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.地址"
+    ]
+  }
+}

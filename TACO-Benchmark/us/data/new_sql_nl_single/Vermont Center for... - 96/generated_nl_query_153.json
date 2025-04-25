@@ -1,0 +1,50 @@
+{
+  "sql": "SELECT invasive_species.InvasiveName, invasive_species.ObservationDate FROM invasive_species INNER JOIN lakepond_wbids_and_wbid_segments ON invasive_species.OBJECTID = lakepond_wbids_and_wbid_segments.OBJECTID WHERE invasive_species.AssessmentDate IS NOT NULL;",
+  "problem_description": "### Query intent:\nThe SQL statement aims to retrieve specific information from two related tables: `invasive_species` and `lakepond_wbids_and_wbid_segments`. The primary goal is to select the names of invasive species (`InvasiveName`) and their observation dates (`ObservationDate`) where the assessment date (`AssessmentDate`) is not null.\n\n### Detailed description:\n1. **Table `invasive_species`**:\n   - **Columns**: `OBJECTID`, `InvasiveName`, `ObservationDate`, `AssessmentDate`\n   - **Purpose**: Contains records of invasive species, including their unique identifier (`OBJECTID`), name (`InvasiveName`), observation date (`ObservationDate`), and assessment date (`AssessmentDate`).\n\n2. **Table `lakepond_wbids_and_wbid_segments`**:\n   - **Columns**: `OBJECTID`, other unspecified columns\n   - **Purpose**: This table likely contains additional information about aquatic environments (like lakes or ponds) and possibly segments within these environments. It shares an `OBJECTID` column with `invasive_species`, suggesting a common identifier for linking records between the two tables.\n\n3. **Join operation**:\n   - The `INNER JOIN` clause is used to match records in both tables based on the `OBJECTID` field, ensuring that only records with matching identifiers are included in the result set.\n\n4. **Where clause**:\n   - The condition `WHERE invasive_species.AssessmentDate IS NOT NULL` filters the results to include only those records where the `AssessmentDate` is not null. This implies that only invasive species with an assessment date have been selected for this query.\n\n### Business scenario:\nThis query might be used in environmental monitoring or conservation efforts where tracking invasive species is crucial. For example, researchers or park managers might need to identify which invasive species have been assessed recently (i.e., have a non-null `AssessmentDate`). This could help prioritize areas for intervention or further study based on the most recent data available.\n\n### User description:\nA user, perhaps an environmental scientist or a park manager, might require this information to update databases, inform policy decisions, or plan interventions against invasive species. They might need to know which invasive species have been recently assessed for various reasons such as updating species lists, allocating resources for control measures, or evaluating the effectiveness of past interventions.",
+  "natural_language_query": "An environmental scientist is conducting a review of invasive species data across different aquatic environments. They are particularly interested in identifying which invasive species have been recently evaluated, as part of ongoing conservation efforts. To achieve this, they need to query the database for specific information.\n\nThe scientist wants to retrieve the names of invasive species and their observation dates from two related tables: 'invasive_species' and 'lakepond_wbids_and_wbid_segments'. They are looking for records where an assessment has been conducted, specifically focusing on cases where the assessment date is not null.\n\nTo facilitate this, the scientist plans to perform an INNER JOIN operation on these two tables using the common 'OBJECTID' field. This ensures that only records with matching identifiers from both tables are included in the final output. By applying a WHERE clause with the condition \"AssessmentDate IS NOT NULL\", the scientist aims to filter out any records without an assessment date, leaving behind a list of invasive species that have been recently evaluated.\n\nThe purpose of this query is to provide up-to-date information on invasive species management, enabling informed decision-making and strategic planning in conservation efforts.",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ ;",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "invasive_species": [
+      "invasive_species.X",
+      "invasive_species.Y",
+      "invasive_species.SiteName",
+      "invasive_species.ObservationID",
+      "invasive_species.InvasiveName",
+      "invasive_species.ObservationDate",
+      "invasive_species.Observer",
+      "invasive_species.SurveyType",
+      "invasive_species.Latitude",
+      "invasive_species.Longitude",
+      "invasive_species.Town",
+      "invasive_species.GrossArea",
+      "invasive_species.InfestedArea",
+      "invasive_species.PlantDescription",
+      "invasive_species.DistributionName",
+      "invasive_species.AssessmentDate",
+      "invasive_species.TreatmentDate",
+      "invasive_species.TreatmentEffectiveness",
+      "invasive_species.TreatmentType",
+      "invasive_species.TreatmentPerson",
+      "invasive_species.TreatmentAssessmentDate",
+      "invasive_species.Assessor",
+      "invasive_species.TreatmentAssessmentNotes",
+      "invasive_species.TreatmentHours",
+      "invasive_species.ChemicalName",
+      "invasive_species.ChemicalConsentration",
+      "invasive_species.ChemicalOunces",
+      "invasive_species.ApplicationMethod",
+      "invasive_species.CertifiedApplicator",
+      "invasive_species.EPARegistationNumber"
+    ],
+    "lakepond_wbids_and_wbid_segments": [
+      "lakepond_wbids_and_wbid_segments.OBJECTID",
+      "lakepond_wbids_and_wbid_segments.Source",
+      "lakepond_wbids_and_wbid_segments.WBID",
+      "lakepond_wbids_and_wbid_segments.LAKEID",
+      "lakepond_wbids_and_wbid_segments.EventType",
+      "lakepond_wbids_and_wbid_segments.GISAcres"
+    ]
+  }
+}

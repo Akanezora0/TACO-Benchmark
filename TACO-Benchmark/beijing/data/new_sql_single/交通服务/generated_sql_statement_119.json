@@ -1,0 +1,34 @@
+{
+  "sql": "SELECT \n    \"shijiaotongweichuzuyehujibenxinxi3664\".\"经营业户名称\",\n    \"xichengquxichengqutingchechangmingdan2492\".\"ID\",\n    \"xichengquxichengqutingchechangmingdan2492\".\"X\",\n    \"xichengquxichengqutingchechangmingdan2492\".\"Y\",\n    \"xichengquxichengqutingchechangmingdan2492\".\"SJXZQHMC\",\n    \"xichengquxichengqutingchechangmingdan2492\".\"QXJXZQHMC\",\n    \"xichengquxichengqutingchechangmingdan2492\".\"SJXZQHDM\",\n    \"xichengquxichengqutingchechangmingdan2492\".\"QXJXZQHDM\",\n    \"xichengquxichengqutingchechangmingdan2492\".\"POISJLY\",\n    \"xichengquxichengqutingchechangmingdan24992\".\"RHBZDZ\",\n    \"xichengquxichengqutingchechangmingdan2492\".\"CODE\",\n    \"xichengquxichengqutingchechangmingdan2492\".\"CODEMC\",\n    \"xichengquxichengqutingchechangmingdan2492\".\"GXSJ\",\n    \"xichengquxichengqutingchechangmingdan2492\".\"POIMC\",\n    \"xichengquxichengqutingchechangmingdan2492\".\"POIDZ\",\n    \"xichengquxichengqutingchechangmingdan2492\".\"别名\",\n    \"xichengquxichengqutingchechangmingdan2492\".\"POIFLMC\",\n    \"xichengquxichengqutingchechangmingdan2492\".\"TEL\",\n    \"xichengquxichengqutingchechangmingdan2492\".\"ID原\",\n    \"xichengquxichengqutingchechangmingdan2492\".\"MC\",\n    \"xichengquxichengqutingchechangmingdan2492\".\"DZ",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ from _ left join _ on _ ._ =_ ._ where _ ._ = _",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweichuzuyehujibenxinxi3664": [
+      "shijiaotongweichuzuyehujibenxinxi3664.经营业户名称"
+    ],
+    "xichengquxichengqutingchechangmingdan2492": [
+      "xichengquxichengqutingchechangmingdan2492.ID",
+      "xichengquxichengqutingchechangmingdan2492.X",
+      "xichengquxichengqutingchechangmingdan2492.Y",
+      "xichengquxichengqutingchechangmingdan2492.SJXZQHMC",
+      "xichengquxichengqutingchechangmingdan2492.QXJXZQHMC",
+      "xichengquxichengqutingchechangmingdan2492.SJXZQHDM",
+      "xichengquxichengqutingchechangmingdan2492.QXJXZQHDM",
+      "xichengquxichengqutingchechangmingdan2492.POISJLY",
+      "xichengquxichengqutingchechangmingdan2492.RHBZDZ",
+      "xichengquxichengqutingchechangmingdan2492.CODE",
+      "xichengquxichengqutingchechangmingdan2492.CODEMC",
+      "xichengquxichengqutingchechangmingdan2492.GXSJ",
+      "xichengquxichengqutingchechangmingdan2492.POIMC",
+      "xichengquxichengqutingchechangmingdan2492.POIDZ",
+      "xichengquxichengqutingchechangmingdan2492.别名",
+      "xichengquxichengqutingchechangmingdan2492.POIFLMC",
+      "xichengquxichengqutingchechangmingdan2492.TEL",
+      "xichengquxichengqutingchechangmingdan2492.ID原",
+      "xichengquxichengqutingchechangmingdan2492.MC",
+      "xichengquxichengqutingchechangmingdan2492.DZ",
+      "xichengquxichengqutingchechangmingdan2492.DZMS"
+    ]
+  }
+}

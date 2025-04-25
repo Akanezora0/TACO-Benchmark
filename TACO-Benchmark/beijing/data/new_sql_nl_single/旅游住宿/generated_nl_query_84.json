@@ -1,0 +1,21 @@
+{
+  "sql": "SELECT DISTINCT \"tongzhouqutongzhouquxiangcunminsuxinxi2979\".\"通州区乡村民宿情况表（规范化审核52家）\" AS 别名1, \"shunyiqushunyiquxingjifandian2102\".\"顺义区星级饭店\" AS 别名2 FROM \"tongzhouqutongzhouquxiangcunminsuxinxi2979\" UNION SELECT DISTINCT \"tongzhouqutongzhouquxiangcunminsuxinxi2979\".\"Unnamed: 1\" AS 别名1, \"shunyiqushunyiquxingjifandian2102\".\"Unnamed: 1\" AS 别名2 FROM \"tongzhouqutongzhouquxiangcunminsuxinxi2979\" UNION SELECT DISTINCT \"tongzhouqutongzhouquxiangcunminsuxinxi2979\".\"Unnamed: 2\" AS 别名1, \"shunyiqushunyiquxingjifandian2102\".\"Unnamed: 2\" AS 别名2 FROM \"tongzhouqutongzhouquxiangcunminsuxinxi2979\" UNION SELECT DISTINCT \"tongzhouqutongzhouquxiangcunminsuxinxi2979\".\"Unnamed: 3\" AS 别名1, \"shunyiqushunyiquxingjifandian2102\".\"Unnamed: 3\" AS 别名2 FROM \"tongzhouqutongzhouquxiangcunminsuxinxi2979\"",
+  "problem_description": "### **查询意图**：\n该 SQL 语句的目的是从两个不同的表中提取数据，并将这些数据合并成一个结果集。具体来说，它从 `tongzhouqutongzhouquxiangcunminsuxinxi2979`（通州区乡村民宿信息表）和 `shunyiqushunyiquxingjifandian2102`（顺义区星级饭店表）中选择特定的列，并通过 `UNION` 操作合并这些数据。\n\n### **详细描述**：\n1. **涉及的表**：\n   - `tongzhouqutongzhouquxiangcunminsuxinxi2979`（通州区乡村民宿情况表）：包含通州区的乡村民宿信息。\n   - `shunyiqushunyiquxingjifandian2102`（顺义区星级饭店表）：包含顺义区的星级饭店信息。\n\n2. **涉及的列**：\n   - 从 `tongzhouqutongzhouquxiangcunminsuxinxi2979` 表中选择了以下列：\n     - `通州区乡村民宿情况表（规范化审核52家）`（别名：别名1）\n     - `Unnamed: 1`（别名：别名1）\n     - `Unnamed: 2`（别名：别名1）\n     - `Unnamed: 3`（别名：别名1）\n   - 从 `shunyiqushunyiquxingjifandian2102` 表中选择了以下列：\n     - `顺义区星级饭店`（别名：别名2）\n     - `Unnamed: 1`（别名：别名2）\n     - `Unnamed: 2`（别名：别名2）\n     - `Unnamed: 3`（别名：别名2）\n\n3. **查询逻辑**：\n   - 该 SQL 语句由 4 个 `SELECT DISTINCT` 查询组成，每个查询从两个表中各选一列，并通过 `UNION` 合并结果。\n   - 每个查询的列名被重命名为 `别名1` 和 `别名2`，可能是为了统一输出格式。\n   - 由于使用了 `UNION`，结果集会去重，确保没有重复的行。\n\n4. **可能的条件**：\n   - 该 SQL 语句没有显式的 `WHERE` 条件，因此会提取所有匹配的行。\n   - 由于列名中包含 `Unnamed`，可能表明原始数据是从 Excel 或其他非结构化数据导入的，列名未被正确命名。\n\n### **业务场景**：\n1. **数据整合**：\n   - 该查询可能是为了将通州区的乡村民宿信息和顺义区的星级饭店信息整合到一个结果集中，便于后续分析或展示。\n   - 例如，可能需要比较两个区域的住宿设施情况，或者生成一个统一的报告。\n\n2. **数据清洗或转换**：\n   - 由于列名中包含 `Unnamed`，可能是数据导入后的临时处理，用于提取特定列的数据并重新命名。\n\n3. **跨区域分析**：\n   - 可能用于旅游行业分析，比如对比通州区的民宿和顺义区的星级饭店的数量、分布或其他属性。\n\n### **用户描述**：\n1. **用户需求**：\n   - 用户可能需要将两个不同区域的住宿数据（通州区的民宿和顺义区的星级饭店）合并，以便进行统一分析或生成报告。\n   - 用户可能希望了解两个区域的住宿设施的整体情况，或者比较两者的差异。\n\n2. **实际问题**：\n   - 数据来源可能不规范（如列名未正确命名），导致查询时需要处理未命名的列（`Unnamed`）。\n   - 用户可能需要将不同格式的数据（民宿信息和饭店信息）整合到一个视图中，以便后续处理或可视化。\n\n3. **可能的扩展需求**：\n   - 用户可能希望进一步筛选数据（如只选择特定类型的民宿或饭店）。\n   - 可能需要更清晰的列名或额外的计算字段（如统计数量、计算平均值等）。",
+  "natural_language_query": "市民反映，最近在做一个关于北京郊区住宿设施的调研报告，需要同时了解通州区的乡村民宿和顺义区星级酒店的情况。但是发现这两个地方的数据格式好像不太一样，有些列连名字都没有，显示的是\"Unnamed\"什么的。 \n\n我手头有通州区52家规范民宿的名单，还有顺义区星级酒店的清单，想把这些信息整合在一起做个对比。主要是想看这两个区住宿业的整体情况，比如数量啊、分布啊这些。但是数据乱七八糟的，有些信息对不上号，特别头疼。\n\n能不能帮忙查一下这两个地方的住宿机构信息？最好能把民宿和酒店的数据合并成一个表格，方便我后续做分析。对了，有些信息可能重复了，希望能自动去重。现在这个情况搞得我报告都没法往下写，真的很着急！",
+  "results": 0,
+  "sql skeleton": "select distinct _ ._ as _ ,_ ._ as _ from ( select _ as _ ,_ as _ from _ where _ = _ union select _ as _ ,_ as _ from _ where _ = _ union select _ as _ ,_ as _ from _ where _ = _ ) _",
+  "database": "旅游住宿",
+  "tables": {
+    "tongzhouqutongzhouquxiangcunminsuxinxi2979": [
+      "tongzhouqutongzhouquxiangcunminsuxinxi2979.通州区乡村民宿情况表（规范化审核52家）",
+      "tongzhouqutongzhouquxiangcunminsuxinxi2979.Unnamed: 1",
+      "tongzhouqutongzhouquxiangcunminsuxinxi2979.Unnamed: 2"
+    ],
+    "shunyiqushunyiquxingjifandian2102": [
+      "shunyiqushunyiquxingjifandian2102.顺义区星级饭店",
+      "shunyiqushunyiquxingjifandian2102.Unnamed: 1",
+      "shunyiqushunyiquxingjifandian2102.Unnamed: 2",
+      "shunyiqushunyiquxingjifandian2102.Unnamed: 3"
+    ]
+  }
+}

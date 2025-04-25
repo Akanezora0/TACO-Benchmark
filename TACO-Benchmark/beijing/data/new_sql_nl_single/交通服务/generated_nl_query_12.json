@@ -1,0 +1,26 @@
+{
+  "sql": "SELECT \n    shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.\"监管对象\",\n    shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.\"实施机构\",\n    shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.\"检查行为编号\",\n    shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.\"检查时间\",\n    shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.\"检查人员\",\n    shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.\"检查结果\"\nFROM \n    shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210\nWHERE \n    (shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.\"实施机构\", shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.\"检查人员\") = ('交通委', '张三') \n    OR \n    (shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.\"实施机构\", shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.\"检查人员\") = ('交通委', '李四')",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从表 `shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210` 中查询由“交通委”实施机构下，检查人员为“张三”或“李四”所执行的所有检查记录，并返回这些记录的监管对象、实施机构、检查行为编号、检查时间、检查人员以及检查结果等信息。\n\n---\n\n### **详细描述**  \n1. **表名**：  \n   - `shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210`（可能是一个存储交通委相关检查结果的表，表名较长，可能涉及“双随机抽查”或类似监管机制的数据）。  \n\n2. **查询列**：  \n   - `监管对象`：被检查的单位或个体。  \n   - `实施机构`：执行检查的机构（如“交通委”）。  \n   - `检查行为编号`：检查任务的唯一标识。  \n   - `检查时间`：检查发生的日期或时间。  \n   - `检查人员`：执行检查的工作人员姓名（如“张三”“李四”）。  \n   - `检查结果`：检查的结论或状态（如“合格”“不合格”等）。  \n\n3. **查询条件**：  \n   - 使用 `WHERE` 子句筛选数据，条件为：  \n     - `实施机构 = '交通委'` 且 `检查人员 = '张三'`  \n     - **或**  \n     - `实施机构 = '交通委'` 且 `检查人员 = '李四'`  \n   - 即只查询“交通委”机构下，由“张三”或“李四”执行的检查记录。  \n\n4. **查询方式**：  \n   - 使用组合条件 `(实施机构, 检查人员) = (值1, 值2)`，这是一种简洁的多列匹配语法，等价于 `实施机构 = 值1 AND 检查人员 = 值2`。  \n\n---\n\n### **业务场景**  \n1. **监管检查记录查询**：  \n   - 该查询可能用于交通委内部的监管系统，用于统计或查看特定检查人员（如“张三”“李四”）的执行情况。  \n   - 例如，上级部门可能需要汇总某几位检查人员的工作记录，评估其任务完成情况或检查覆盖率。  \n\n2. **问题追溯与责任划分**：  \n   - 如果某次检查结果引发争议（如监管对象投诉），可以通过此查询快速定位相关检查人员的历史记录，核实检查过程的合规性。  \n\n3. **绩效考核**：  \n   - 机构可能需要对检查人员的工作量（检查次数）或检查结果（合格率）进行考核，此查询可提取指定人员的数据用于分析。  \n\n---\n\n### **用户描述**  \n1. **用户角色**：  \n   - 可能是交通委的管理人员、监督检查部门的负责人或数据分析人员。  \n\n2. **实际需求或问题**：  \n   - **需求1**：领导需要了解“张三”和“李四”两位检查员近期的工作情况，包括他们检查了哪些对象、检查时间及结果。  \n   - **需求2**：某企业投诉称“交通委的检查结果不公正”，需核实“张三”和“李四”参与的检查记录，确认是否存在问题。  \n   - **需求3**：年终考核时，需要统计特定检查人员的任务完成量，作为绩效评定的依据。  \n\n3. **其他可能性**：  \n   - 如果表名中的“双随机抽查”是关键词，可能涉及随机抽检机制，此查询用于验证抽检任务的分配和执行是否符合随机原则（如检查人员是否均匀分配任务）。  \n\n---\n\n### **总结**  \n该 SQL 是一个典型的**定向查询**，用于从监管检查记录中提取特定机构和人员的检查数据，支持监管透明化、责任追溯或绩效管理等工作场景。",
+  "natural_language_query": "市民反映，最近听说交通委的检查人员张三和李四在负责一些抽查工作，想了解一下他们具体检查了哪些单位，是什么时候检查的，检查结果怎么样。因为有人反映说检查可能不太规范，想核实一下他们俩的检查记录，看看有没有问题。另外单位年底考核也需要统计他们的工作量，希望能帮忙查一下这些信息。来电主要想查询交通委张三和李四的检查情况。",
+  "results": 0,
+  "sql skeleton": "select _ from _ where _ (_ ,_ ) = _ or _ (_ ,_ ) = _",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210": [
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.监管对象",
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.实施机构",
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.检查行为编号",
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.检查时间",
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.检查人员",
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.检查结果"
+    ],
+    "shijiaotongweishoufeigonglushoufeibiaozhun543": [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 2",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 3",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 4",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 5"
+    ]
+  }
+}

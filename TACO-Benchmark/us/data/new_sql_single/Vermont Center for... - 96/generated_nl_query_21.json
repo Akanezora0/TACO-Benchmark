@@ -1,0 +1,40 @@
+{
+  "sql": "SELECT wetland_ecologist_districts.ABNAME, wetland_ecologist_districts.AGENCY FROM wetland_ecologist_districts WHERE wetland_ecologist_districts.AGENCY = '环境保护局';",
+  "problem_description": "### Query intent:\nThe SQL statement aims to retrieve specific information from a database table named `wetland_ecologist_districts`. The intention is to select the column `ABNAME` (likely an abbreviation or name of a district) and the column `AGENCY` (indicating the agency associated with the district) where the `AGENCY` is specifically set to '环境保护局' (translated as 'Environmental Protection Bureau' in English).\n\n### Detailed description:\n- **Table**: `wetland_ecologist_districts` - This table is assumed to contain data related to districts (possibly geographic areas) managed or supervised by ecologists or environmental agencies. It likely includes various fields such as `ABNAME`, `AGENCY`, and possibly more.\n- **Columns**:\n    - `ABNAME`: This column represents the name or abbreviation of the district being managed.\n    - `AGENCY`: This column specifies the agency responsible for managing the district, in this case, '环境保护局'.\n- **Condition**:\n    - `wetland_ecologist_districts.AGENCY = '环境保护局'` - This condition filters the rows in the table `wetland_ecologist_districts` to only include those where the `AGENCY` field contains the value '环境保护局'. This means the query is interested in districts managed by the Environmental Protection Bureau.\n\n### Business scenario:\nThis SQL query could be used in various environmental management or planning contexts, such as:\n- **Monitoring and Reporting**: To identify all districts managed by the Environmental Protection Bureau for reporting purposes, compliance checks, or audits.\n- **Resource Allocation**: To allocate resources or personnel to districts under the management of the Environmental Protection Bureau for specific tasks like conservation efforts, pollution control, or ecological restoration.\n- **Policy Implementation**: To track which districts are subject to policies or regulations enforced by the Environmental Protection Bureau.\n\n### User description:\nA user might need this information when they are tasked with:\n- **Preparation of reports** that need to highlight activities or initiatives carried out in districts managed by a specific environmental agency.\n- **Resource planning** for environmental projects that require coordination with districts under the jurisdiction of the Environmental Protection Bureau.\n- **Legal compliance checks** ensuring that all actions within these districts adhere to environmental laws and regulations enforced by the bureau.",
+  "natural_language_query": "I'm looking to gather information on districts managed by the Environmental Protection Bureau. Specifically, I want to see the names of these districts, which can be found in the abbreviation or district name column labeled 'ABNAME', and the agency responsible for them, identified in the 'AGENCY' column. Could you please provide me with a list of districts where the agency listed is exactly '环境保护局'?",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ WHERE _ = _ ;",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "wetland_ecologist_districts": [
+      "wetland_ecologist_districts.OBJECTID",
+      "wetland_ecologist_districts.ABNAME",
+      "wetland_ecologist_districts.AGENCY",
+      "wetland_ecologist_districts.DEPT",
+      "wetland_ecologist_districts.DIV",
+      "wetland_ecologist_districts.FirstName",
+      "wetland_ecologist_districts.LastName",
+      "wetland_ecologist_districts.Email",
+      "wetland_ecologist_districts.Phone",
+      "wetland_ecologist_districts.Address",
+      "wetland_ecologist_districts.Office",
+      "wetland_ecologist_districts.Town",
+      "wetland_ecologist_districts.BOUNDARY",
+      "wetland_ecologist_districts.PROGMANAGER",
+      "wetland_ecologist_districts.PROGMANAGEREMAIL",
+      "wetland_ecologist_districts.PROGMANAGERPHONE",
+      "wetland_ecologist_districts.BACKUPCONTACT",
+      "wetland_ecologist_districts.BACKUPCONTACTEMAIL",
+      "wetland_ecologist_districts.BACKUPCONTACTPHONE",
+      "wetland_ecologist_districts.PROGRAMEMAIL",
+      "wetland_ecologist_districts.PROGRAMPHONE"
+    ],
+    "sand_and_gravel_deposits": [
+      "sand_and_gravel_deposits.OBJECTID",
+      "sand_and_gravel_deposits.AG_TYPE",
+      "sand_and_gravel_deposits.GlobalID",
+      "sand_and_gravel_deposits.SHAPEarea",
+      "sand_and_gravel_deposits.SHAPElen"
+    ]
+  }
+}

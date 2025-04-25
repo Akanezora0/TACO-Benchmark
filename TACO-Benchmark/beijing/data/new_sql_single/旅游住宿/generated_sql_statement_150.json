@@ -1,0 +1,21 @@
+{
+  "sql": "SELECT \"shunyiquxingjifandian1276\".\"顺义区星级饭店\", \"xichengquxichengquxingjifandianminglu19.?星级酒店名称\", \"xichengquxichengquxingjifandianminglu19.?联系电话\" FROM \"shunyiquxingjifandian1276\" INNER JOIN \"xichengquxichengquxingjifandianminglu19\" ON \"shunyiquxingjifandian1276\".\"顺义区星级饭店\" = \"xichengquxichengquxingjifandianminglu19.?星级酒店名称\" WHERE \"xichengquxichengquxingjifandianminglu19.?星级\" IN ('1', '2', '3', '4', '5') ORDER BY \"xichengquxichengquxingjifandianminglu19.?星级\" DESC;",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ from _ where _ in (_ ,_ ,_ ,_ ,_ ,_ ) order by _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "shunyiquxingjifandian1276": [
+      "shunyiquxingjifandian1276.顺义区星级饭店",
+      "shunyiquxingjifandian1276.Unnamed: 1",
+      "shunyiquxingjifandian1276.Unnamed: 2",
+      "shunyiquxingjifandian1276.Unnamed: 3"
+    ],
+    "xichengquxichengquxingjifandianminglu19": [
+      "xichengquxichengquxingjifandianminglu19.序号",
+      "xichengquxichengquxingjifandianminglu19.?星级酒店名称",
+      "xichengquxichengquxingjifandianminglu19.?星级",
+      "xichengquxichengquxingjifandianminglu19.?联系电话",
+      "xichengquxichengquxingjifandianminglu19.?酒店地址"
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "sql": "SELECT wildlife_management_units.OBJECTID, salt_storage_record_table.fulcrum_id FROM wildlife_management_units INNER JOIN salt_storage_record_table ON wildlife_management_units.OBJECTID = salt_storage_record_table.fulcrum_id WHERE salt_storage_record_table.material_type = 'Salt';",
+  "problem_description": "### Query intent:\nThe SQL statement aims to retrieve specific pieces of data by joining two tables, `wildlife_management_units` and `salt_storage_record_table`, based on a common attribute (`OBJECTID` from `wildlife_management_units` and `fulcrum_id` from `salt_storage_record_table`). The primary goal is to filter this joined dataset further by a specific condition (`material_type = 'Salt'`) on the `salt_storage_record_table`.\n\n### Detailed description:\n- **Tables Involved**: Two tables, `wildlife_management_units` and `salt_storage_record_table`, are involved in the query.\n  - `wildlife_management_units`: This table likely contains information about units of wildlife management, possibly including unique identifiers (`OBJECTID`).\n  - `salt_storage_record_table`: This table might contain records related to storage, possibly including a unique identifier (`fulcrum_id`) and details about the material stored (`material_type`).\n\n- **Columns Selected**: The query selects two columns from these tables:\n  - `wildlife_management_units.OBJECTID`: A column from the `wildlife_management_units` table, which could represent a unique identifier for each wildlife management unit.\n  - `salt_storage_record_table.fulcrum_id`: A column from the `salt_storage_record_table`, which likely represents a unique identifier for storage records.\n\n- **Join Condition**: The tables are joined using the condition `wildlife_management_units.OBJECTID = salt_storage_record_table.fulcrum_id`. This implies that there's a relationship between the `OBJECTID` in the `wildlife_management_units` table and the `fulcrum_id` in the `salt_storage_record_table` where each `OBJECTID` corresponds to one or more `fulcrum_id`s.\n\n- **Filtering Condition**: The query further filters the joined dataset by the condition `salt_storage_record_table.material_type = 'Salt'`. This means it only selects records where the material type stored is specifically salt.\n\n### Business Scenario:\nThis query can be used in various business scenarios, particularly in environmental management or logistics, where tracking specific materials (like salt) stored within certain management units is crucial. For example:\n\n- **Inventory Management**: To ensure that salt storage is properly accounted for within specific wildlife management areas, allowing for timely replenishment or auditing purposes.\n- **Resource Allocation**: To efficiently allocate resources (like personnel or vehicles) to manage or transport salt in specific areas based on need or availability.\n\n### User Description:\nA user, perhaps an environmental manager",
+  "natural_language_query": "An environmental manager needs to track the storage of salt within designated wildlife management units. They want to identify all instances where salt is being stored, specifically focusing on records associated with particular wildlife management units. The manager is interested in retrieving the unique identifier for each wildlife management unit and the corresponding unique identifier for the salt storage records, ensuring that the salt stored is accurately recorded and managed.\n\nTo achieve this, the manager plans to run a SQL query that combines data from two databases: one containing information about wildlife management units (labeled as \"wildlife_management_units\") and another detailing the storage records (referred to as \"salt_storage_record_table\"). The query will join these two tables based on a shared attribute - the unique identifier for the wildlife management units (`OBJECTID`) and the unique identifier for the storage records (`fulcrum_id`). \n\nFollowing the join, the manager intends to filter the resulting dataset to include only those records where the material stored is explicitly identified as 'Salt'. This filtering ensures that the manager focuses solely on the salt storage records, making it easier to manage inventory, monitor usage, and plan future resource allocations effectively.\n\nThe SQL query would look something like this:\n\n```\nSELECT \n    wildlife_management_units.OBJECTID,\n    salt_storage_record_table.fulcrum_id\nFROM \n    wildlife_management_units\nJOIN \n    salt_storage_record_table ON wildlife_management_units.OBJECTID = salt_storage_record_table.fulcrum_id\nWHERE \n    salt_storage_record_table.material_type = 'Salt';\n```\n\nThis query enables the manager to efficiently access and analyze the necessary data, facilitating better decision-making and operational management in their role.",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ WHERE _ = _ ;",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "wildlife_management_units": [
+      "wildlife_management_units.OBJECTID",
+      "wildlife_management_units.ABNAME",
+      "wildlife_management_units.AGENCY",
+      "wildlife_management_units.DEPT",
+      "wildlife_management_units.DIV",
+      "wildlife_management_units.BOUNDARY"
+    ],
+    "salt_storage_record_table": [
+      "salt_storage_record_table.OBJECTID",
+      "salt_storage_record_table.fulcrum_id",
+      "salt_storage_record_table.fulcrum_parent_id",
+      "salt_storage_record_table.fulcrum_record_id",
+      "salt_storage_record_table.version",
+      "salt_storage_record_table.geometry",
+      "salt_storage_record_table.created_at",
+      "salt_storage_record_table.updated_at",
+      "salt_storage_record_table.created_by",
+      "salt_storage_record_table.updated_by",
+      "salt_storage_record_table.address_sub_thoroughfare",
+      "salt_storage_record_table.address_thoroughfare",
+      "salt_storage_record_table.address_suite",
+      "salt_storage_record_table.address_locality",
+      "salt_storage_record_table.address_sub_admin_area",
+      "salt_storage_record_table.address_admin_area",
+      "salt_storage_record_table.address_postal_code",
+      "salt_storage_record_table.address_country",
+      "salt_storage_record_table.address_full",
+      "salt_storage_record_table.material_type",
+      "salt_storage_record_table.material_type_other",
+      "salt_storage_record_table.storage_length_years",
+      "salt_storage_record_table.storage_length_years_range",
+      "salt_storage_record_table.material_covered",
+      "salt_storage_record_table.coverage_method",
+      "salt_storage_record_table.material_on_pad",
+      "salt_storage_record_table.pad_type",
+      "salt_storage_record_table.pad_type_other"
+    ]
+  }
+}

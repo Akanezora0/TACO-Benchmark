@@ -1,0 +1,46 @@
+{
+  "sql": "SELECT shiguihuaziranziyuanweixuetangshuyuan1521.HID, shiguihuaziranziyuanweixuetangshuyuan1521.FATHERID, shiguihuaziranziyuanweixuetangshuyuan1521.HNAME, shiguihuaziranziyuanweixuetangshuyuan1521.OTHERNAME, shiguihuaziranziyuanweixuetangshuyuan1521.CATEGORY, shiguihuaziranziyuanweixuetangshuyuan1521.SUBCATEGOR, shiguihuaziranziyuanweixuetangshuyuan1521.COUNTYNAME, shiguihuaziranziyuanweixuetangshuyuan1521.STREETNAME, shiguihuaziranziyuanweixuetangshuyuan1521.DYNASTY, shiguihuaziranziyuanweixuetangshuyuan1521.SUBDYNASTY, shiguihuaziranziyuanweixuetangshuyuan1521.ADDRESS, shiguihuaziranziyuanweixuetangshuyuan1521.RANK, shiguihuaziranziyuanweixuetangshuyuan1521.BATCH, shiguihuaziranziyuanweixuetangshuyuan1521.PUBTIME, shiguihuaziranziyuanweixuetangshuyuan1521.USERS, shiguihuaziranziyuanweixuetangshuyuan1521.PURPOSE, shiguihuaziranziyuanweixuetangshuyuan1521.OWNERSHIP, shiguihuaziranziyuanweixuetangshuyuan1521.STATEEVALU, shiguihuaziranziyuanweixuetangshuyuan1521.SINGLERELI, shiguihuaziranziyuanweixuetangshuyuan1521.PROTECTION, shiguihuaziranziyuanweixuetangshuyuan1521.ATTACHEDRE, shiguihuaz",
+  "results": 0,
+  "sql skeleton": "select _ from _ where _ (_ ,_ ) = _ or _ (_ ,_ ) = _",
+  "database": "旅游住宿",
+  "tables": {
+    "shiguihuaziranziyuanweixuetangshuyuan1521": [
+      "shiguihuaziranziyuanweixuetangshuyuan1521.HID",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.FATHERID",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.HNAME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.OTHERNAME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.CATEGORY",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.SUBCATEGOR",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.COUNTYNAME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.STREETNAME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.DYNASTY",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.SUBDYNASTY",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.ADDRESS",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.RANK",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.BATCH",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.PUBTIME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.USERS",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.PURPOSE",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.OWNERSHIP",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.STATEEVALU",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.SINGLERELI",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.PROTECTION",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.ATTACHEDRE",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.RELATEDPEO",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.RELATEDEVE",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.PUBNAME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.SOURCE",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.EDITOR",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.ISREDUNDAN"
+    ],
+    "xichengquxichengqulvxingsheminglu20": [
+      "xichengquxichengqulvxingsheminglu20.序号",
+      "xichengquxichengqulvxingsheminglu20.许可证号",
+      "xichengquxichengqulvxingsheminglu20.旅行社名称",
+      "xichengquxichengqulvxingsheminglu20.经营业务",
+      "xichengquxichengqulvxingsheminglu20.发证日期",
+      "xichengquxichengqulvxingsheminglu20.经营场所",
+      "xichengquxichengqulvxingsheminglu20.有效期"
+    ]
+  }
+}

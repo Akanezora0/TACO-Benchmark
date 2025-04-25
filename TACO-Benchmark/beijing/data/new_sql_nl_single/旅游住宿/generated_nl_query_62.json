@@ -1,0 +1,45 @@
+{
+  "sql": "SELECT xichengquxichengquguojiajizhongdianwenwubaohudanwei60.名称, xichengquxichengquguojiajizhongdianwenwubaohudanwei60.地址 FROM xichengquxichengquguojiajizhongdianwenwubaohudanwei60 WHERE xichengquxichengquguojiajizhongdianwenwubaohudanwei60.序号 = '特定序号';",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从表 `xichengquxichengquguojiajizhongdianwenwubaohudanwei60` 中查询特定序号对应的名称和地址信息。\n\n- **详细描述**：\n  - **涉及的表**：`xichengquxichengquguojiajizhongdianwenwubaohudanwei60`（表名可能为“西城区国家集中重点文物保护单位60”或类似含义）。\n  - **涉及的列**：\n    - `名称`：表示文物保护单位的名称。\n    - `地址`：表示文物保护单位的地址。\n    - `序号`：用于唯一标识文物保护单位的编号。\n  - **条件**：`序号 = '特定序号'`，即查询序号等于“特定序号”的记录。\n\n- **业务场景**：\n  - 该查询可能用于文物保护单位的管理系统，用户可以通过输入特定的序号来快速获取该文物保护单位的名称和地址信息。\n  - 例如，在文物保护单位的档案管理、信息检索或导航系统中，用户可能需要根据序号查找具体的文物保护单位信息。\n\n- **用户描述**：\n  - 用户可能是一名文物保护工作者、研究人员或游客，他们需要快速了解某个特定序号对应的文物保护单位的名称和地址。\n  - 例如，用户可能在查阅一份文物保护单位清单时，对某个序号对应的单位感兴趣，希望通过输入该序号获取详细信息。\n  - 或者，用户在实地考察时，可能需要根据序号快速定位到某个文物保护单位的具体位置和名称。",
+  "natural_language_query": "市民来电咨询，我在西城区文物保护单位名录上看到编号为\"特定序号\"的单位，但名录上只有编号没有具体信息。想了解一下这个编号对应的文物保护单位叫什么名字，具体在什么位置？我最近在研究西城区的文物分布情况，这个编号的单位资料一直查不到，很着急。能不能帮忙查一下这个编号的文保单位全称和详细地址？来电反映查询文物保护单位信息问题。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ WHERE _ = _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "xichengquxichengquguojiajizhongdianwenwubaohudanwei60": [
+      "xichengquxichengquguojiajizhongdianwenwubaohudanwei60.序号",
+      "xichengquxichengquguojiajizhongdianwenwubaohudanwei60.名称",
+      "xichengquxichengquguojiajizhongdianwenwubaohudanwei60.地址"
+    ],
+    "shiguihuaziranziyuanweiwangfu1520": [
+      "shiguihuaziranziyuanweiwangfu1520.HID",
+      "shiguihuaziranziyuanweiwangfu1520.FATHERID",
+      "shiguihuaziranziyuanweiwangfu1520.HNAME",
+      "shiguihuaziranziyuanweiwangfu1520.OTHERNAME",
+      "shiguihuaziranziyuanweiwangfu1520.CATEGORY",
+      "shiguihuaziranziyuanweiwangfu1520.SUBCATEGOR",
+      "shiguihuaziranziyuanweiwangfu1520.COUNTYNAME",
+      "shiguihuaziranziyuanweiwangfu1520.STREETNAME",
+      "shiguihuaziranziyuanweiwangfu1520.DYNASTY",
+      "shiguihuaziranziyuanweiwangfu1520.SUBDYNASTY",
+      "shiguihuaziranziyuanweiwangfu1520.ADDRESS",
+      "shiguihuaziranziyuanweiwangfu1520.RANK",
+      "shiguihuaziranziyuanweiwangfu1520.BATCH",
+      "shiguihuaziranziyuanweiwangfu1520.PUBTIME",
+      "shiguihuaziranziyuanweiwangfu1520.USERS",
+      "shiguihuaziranziyuanweiwangfu1520.PURPOSE",
+      "shiguihuaziranziyuanweiwangfu1520.OWNERSHIP",
+      "shiguihuaziranziyuanweiwangfu1520.STATEEVALU",
+      "shiguihuaziranziyuanweiwangfu1520.SINGLERELI",
+      "shiguihuaziranziyuanweiwangfu1520.PROTECTION",
+      "shiguihuaziranziyuanweiwangfu1520.ATTACHEDRE",
+      "shiguihuaziranziyuanweiwangfu1520.RELATEDPEO",
+      "shiguihuaziranziyuanweiwangfu1520.RELATEDEVE",
+      "shiguihuaziranziyuanweiwangfu1520.PUBNAME",
+      "shiguihuaziranziyuanweiwangfu1520.SOURCE",
+      "shiguihuaziranziyuanweiwangfu1520.EDITOR",
+      "shiguihuaziranziyuanweiwangfu1520.ISREDUNDAN",
+      "shiguihuaziranziyuanweiwangfu1520.THEME"
+    ]
+  }
+}

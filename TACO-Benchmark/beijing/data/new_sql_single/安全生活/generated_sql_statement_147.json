@@ -1,0 +1,7 @@
+{
+  "sql": "SELECT column1, column2 FROM table1 WHERE condition1 = value1 AND (column3 + column4 * column5) > value2",
+  "results": 0,
+  "sql skeleton": "select _ ,_ from _ where _ = _ and _ (_ ,_ ,_ )::_ +_ ::_ = _",
+  "database": "安全生活",
+  "tables": {}
+}

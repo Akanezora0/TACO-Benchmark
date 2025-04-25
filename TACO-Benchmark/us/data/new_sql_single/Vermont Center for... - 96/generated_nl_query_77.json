@@ -1,0 +1,50 @@
+{
+  "sql": "SELECT invasive_species.\"InvasiveName\", invasive_species.\"ObservationDate\", invasive_species.\"Observer\", invasive_species.\"SurveyType\", invasive_species.\"Latitude\", invasive_species.\"Longitude\", wildlife_management_units.\"ABNAME\", wildlife_management_units.\"OBJECTID\" FROM invasive_species INNER JOIN wildlife_management_units ON invasive_species.\"SiteName\" = wildlife_management_units.\"ABNAME\" WHERE invasive_species.\"DistributionName\" = 'Urban' AND invasive_species.\"TreatmentEffectiveness\" = 'High';",
+  "problem_description": "### Query intent:\nThe SQL statement is designed to extract specific data from two related tables, `invasive_species` and `wildlife_management_units`, aiming to provide details about invasive species that have been observed with high treatment effectiveness in urban environments.\n\n### Detailed description:\n- **Table `invasive_species`**:\n  - `\"InvasiveName\"`: The name of the invasive species.\n  - `\"ObservationDate\"`: The date when the species was observed.\n  - `\"Observer\"`: The individual who made the observation.\n  - `\"SurveyType\"`: The type of survey conducted for observation.\n  - `\"Latitude\"` & `\"Longitude\"`: Geographic coordinates where the observation took place.\n  - `\"DistributionName\"`: The location where the species is distributed, which filters the result to only include urban areas.\n  - `\"TreatmentEffectiveness\"`: The level of effectiveness of any treatment applied to control or manage the species.\n\n- **Table `wildlife_management_units`**:\n  - `\"ABNAME\"`: A unique abbreviation or name for each management unit.\n  - `\"OBJECTID\"`: A unique identifier for each record in the table.\n\n- **Conditions**:\n  - The query filters for records where the `\"DistributionName\"` is set to `'Urban'`.\n  - It also filters for records where `\"TreatmentEffectiveness\"` is set to `'High'`.\n\n### Business scenario:\nThis query is typically used by environmental management or conservation organizations to identify specific invasive species that have been successfully managed within urban areas. This could help in prioritizing resources for further treatment, understanding successful strategies, or planning future interventions based on past successes.\n\n### User description:\nA user working for a city's environmental protection department might need this information to:\n- Evaluate the effectiveness of implemented control measures against invasive species in urban parks or green spaces.\n- Plan new treatments or interventions based on what has worked well in similar situations.\n- Report progress to stakeholders or funders by showcasing successful case studies of invasive species management.\n- Analyze trends over time regarding the distribution and management of invasive species within urban environments.",
+  "natural_language_query": "As an environmental officer at the city's Department of Environmental Protection, I'm tasked with assessing the efficacy of our invasive species management efforts in urban areas. To better inform our strategies and allocate resources effectively, I need to compile a list of invasive species that have shown high treatment effectiveness specifically in urban settings.\n\nTo achieve this, I would run a SQL query that combines data from two tables: `invasive_species` and `wildlife_management_units`. Here's how the query should look:\n\n```sql\nSELECT \n    is.InvasiveName,\n    is.ObservationDate,\n    is.Observer,\n    is.SurveyType,\n    is.Latitude,\n    is.Longitude,\n    wm.ABNAME,\n    is.TreatmentEffectiveness,\n    is.DistributionName\nFROM \n    invasive_species as is\nJOIN \n    wildlife_management_units as wm ON is.WildlifeManagementUnitID = wm.ObjectID\nWHERE \n    is.DistributionName = 'Urban'\nAND \n    is.TreatmentEffectiveness = 'High';\n```\n\nThis query will retrieve detailed information on invasive species that have been observed with high treatment effectiveness in urban areas, including their names, dates of observation, the individuals who observed them, the type of survey conducted, their geographical coordinates, the specific wildlife management units involved, and the level of treatment effectiveness. This data will be invaluable for our ongoing efforts to manage and mitigate the impact of invasive species in urban environments.",
+  "results": 0,
+  "sql skeleton": "SELECT _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ FROM _ WHERE _ ._ = _ AND _ ._ = _ ;",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "invasive_species": [
+      "invasive_species.X",
+      "invasive_species.Y",
+      "invasive_species.SiteName",
+      "invasive_species.ObservationID",
+      "invasive_species.InvasiveName",
+      "invasive_species.ObservationDate",
+      "invasive_species.Observer",
+      "invasive_species.SurveyType",
+      "invasive_species.Latitude",
+      "invasive_species.Longitude",
+      "invasive_species.Town",
+      "invasive_species.GrossArea",
+      "invasive_species.InfestedArea",
+      "invasive_species.PlantDescription",
+      "invasive_species.DistributionName",
+      "invasive_species.AssessmentDate",
+      "invasive_species.TreatmentDate",
+      "invasive_species.TreatmentEffectiveness",
+      "invasive_species.TreatmentType",
+      "invasive_species.TreatmentPerson",
+      "invasive_species.TreatmentAssessmentDate",
+      "invasive_species.Assessor",
+      "invasive_species.TreatmentAssessmentNotes",
+      "invasive_species.TreatmentHours",
+      "invasive_species.ChemicalName",
+      "invasive_species.ChemicalConsentration",
+      "invasive_species.ChemicalOunces",
+      "invasive_species.ApplicationMethod",
+      "invasive_species.CertifiedApplicator",
+      "invasive_species.EPARegistationNumber"
+    ],
+    "wildlife_management_units": [
+      "wildlife_management_units.OBJECTID",
+      "wildlife_management_units.ABNAME",
+      "wildlife_management_units.AGENCY",
+      "wildlife_management_units.DEPT",
+      "wildlife_management_units.DIV",
+      "wildlife_management_units.BOUNDARY"
+    ]
+  }
+}

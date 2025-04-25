@@ -1,0 +1,25 @@
+{
+  "sql": "SELECT xichengquxichengqulvxingsheminglu20.经营场所, xichengquxichengqulvxingsheminglu20.许可证号 FROM xichengquxichengqulvxingsheminglu20 WHERE xichengquxichengqulvxingsheminglu20.许可证号 = '特定许可证号' ORDER BY xichengquxichengqulvxingsheminglu20.序号 ASC",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从表 `xichengquxichengqulvxingsheminglu20` 中查询特定许可证号对应的经营场所和许可证号信息，并按序号升序排列结果。\n\n### **详细描述**  \n1. **涉及的表**：  \n   - `xichengquxichengqulvxingsheminglu20`：表名表明这可能是一个与旅行或旅行社相关的登记表，可能是某地区（如“西城区”）的旅行社名录或经营许可记录。  \n\n2. **涉及的列**：  \n   - `经营场所`：表示旅行社或相关企业的经营地址或场所名称。  \n   - `许可证号`：旅行社或相关企业持有的经营许可证编号，用于唯一标识其合法性。  \n   - `序号`：可能是表中的自增编号或排序字段，用于控制结果的显示顺序。  \n\n3. **查询条件**：  \n   - `WHERE xichengquxichengqulvxingsheminglu20.许可证号 = '特定许可证号'`：只查询许可证号等于指定值的记录（`'特定许可证号'` 是一个占位符，实际查询时会替换为具体的许可证号）。  \n\n4. **排序方式**：  \n   - `ORDER BY xichengquxichengqulvxingsheminglu20.序号 ASC`：按序号升序排列结果，确保输出有序。  \n\n### **业务场景**  \n该查询可能用于以下业务场景：  \n1. **旅行社资质核查**：监管部门或企业需要验证某旅行社的许可证是否有效，并查看其经营场所信息。  \n2. **许可证关联查询**：在办理业务（如签订合同、申请合作）时，需根据许可证号快速查找对应的旅行社及其经营地址。  \n3. **数据管理或报表生成**：整理或导出特定旅行社的信息，用于内部备案或统计分析。  \n\n### **用户描述**  \n用户在实际操作中可能遇到以下需求或问题：  \n1. **问题**：某客户提供了一家旅行社的许可证号，但不确定其经营场所是否准确，需要核实。  \n   - **需求**：通过输入许可证号，快速查询到该旅行社的注册经营场所，确保信息一致。  \n\n2. **问题**：政府工作人员在检查旅行社合规性时，需根据许可证号调取详细信息。  \n   - **需求**：直接通过许可证号检索，避免手动翻阅大量记录，提高效率。  \n\n3. **问题**：企业合作前需确认旅行社的合法性，但只有许可证号，缺乏其他信息。  \n   - **需求**：通过许可证号查询到经营场所，进一步联系或实地考察。  \n\n### **总结**  \n该 SQL 是一个典型的精准查询，适用于需要根据唯一标识（如许可证号）快速定位并验证相关信息的场景，常见于行政管理、合规检查或商业合作中。",
+  "natural_language_query": "市民反映，最近想和一家旅行社合作，对方提供的许可证号是\"L-BJ-CJ12345\"，但网上查不到具体信息，心里有点不踏实。想问问能不能帮忙查一下这个许可证号对应的旅行社经营地址是不是在北京市西城区？因为合同里写的地址是西单北大街180号，但对方一直没提供营业执照复印件，担心遇到皮包公司。之前朋友就遇到过类似情况，结果交了定金后人去楼空。希望能核实一下这个许可证号登记的营业场所到底在哪里，是不是正规的旅行社。来电主要想确认旅行社经营场所的真实性问题。",
+  "results": 0,
+  "sql skeleton": "select _ ,_ from _ where _ = _ order by _",
+  "database": "旅游住宿",
+  "tables": {
+    "xichengquxichengqulvxingsheminglu20": [
+      "xichengquxichengqulvxingsheminglu20.序号",
+      "xichengquxichengqulvxingsheminglu20.许可证号",
+      "xichengquxichengqulvxingsheminglu20.旅行社名称",
+      "xichengquxichengqulvxingsheminglu20.经营业务",
+      "xichengquxichengqulvxingsheminglu20.发证日期",
+      "xichengquxichengqulvxingsheminglu20.经营场所",
+      "xichengquxichengqulvxingsheminglu20.有效期"
+    ],
+    "shunyiquxingjifandian1276": [
+      "shunyiquxingjifandian1276.顺义区星级饭店",
+      "shunyiquxingjifandian1276.Unnamed: 1",
+      "shunyiquxingjifandian1276.Unnamed: 2",
+      "shunyiquxingjifandian1276.Unnamed: 3"
+    ]
+  }
+}

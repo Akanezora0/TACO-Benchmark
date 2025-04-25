@@ -1,0 +1,23 @@
+{
+  "sql": "SELECT xichengquxichengqulvxingsheminglu20.经营场所, xichengquxichengqulvxingsheminglu20.许可证号 FROM xichengquxichengqulvxingsheminglu20 WHERE xichengquxichengqulvxingsheminglu20.许可证号 = '特定许可证号' ORDER BY xichengquxichengqulvxingsheminglu20.序号 ASC",
+  "results": 0,
+  "sql skeleton": "select _ ,_ from _ where _ = _ order by _",
+  "database": "旅游住宿",
+  "tables": {
+    "xichengquxichengqulvxingsheminglu20": [
+      "xichengquxichengqulvxingsheminglu20.序号",
+      "xichengquxichengqulvxingsheminglu20.许可证号",
+      "xichengquxichengqulvxingsheminglu20.旅行社名称",
+      "xichengquxichengqulvxingsheminglu20.经营业务",
+      "xichengquxichengqulvxingsheminglu20.发证日期",
+      "xichengquxichengqulvxingsheminglu20.经营场所",
+      "xichengquxichengqulvxingsheminglu20.有效期"
+    ],
+    "shunyiquxingjifandian1276": [
+      "shunyiquxingjifandian1276.顺义区星级饭店",
+      "shunyiquxingjifandian1276.Unnamed: 1",
+      "shunyiquxingjifandian1276.Unnamed: 2",
+      "shunyiquxingjifandian1276.Unnamed: 3"
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "sql": "SELECT \"shijiaotongweiguidaozhandianxinxichuxing3670.线路名称\", \"shijiaotongweiguidaozhandianxinxichuxing3670.站点编码\", \"shijiaotongweiguidaozhandianxinxichuxing3670.车站名\", \"shijiaotongweichengkeyindaojichuxinxi3710.更新时间\" FROM \"shijiaotongweiguidaozhandianxinxichuxing3670\" INNER JOIN \"shijiaotongweichengkeyindaojichuxinxi3710\" ON \"shijiaotongweiguidaozhandianxinxichuxing3670.站点编码\" = \"shijiaotongweichengkeyindaojichuxinxi3710.序号\" WHERE \"shijiaotongweichengkeyindaojichuxinxi3710.周边交通指南\" = '地铁入口' AND \"shijiaotongweichengkeyindaojichuxinxi3710.公交线路信息\" IS NOT NULL ORDER BY \"shijiaotongweichengkeyindaojichuxinxi3710.更新时间\" DESC ;",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是查询轨道交通站点信息与乘客引导基础信息的关联数据，筛选出周边交通指南为\"地铁入口\"且公交线路信息不为空的记录，并按更新时间降序排列。\n\n- **详细描述**：\n  - **涉及的表**：\n    - `shijiaotongweiguidaozhandianxinxichuxing3670`（轨道交通站点信息出行表）：包含线路名称、站点编码、车站名等信息。\n    - `shijiaotongweichengkeyindaojichuxinxi3710`（轨道交通乘客引导基础信息表）：包含序号、更新时间、周边交通指南、公交线路信息等信息。\n  - **关联条件**：通过`shijiaotongweiguidaozhandianxinxichuxing3670.站点编码`与`shijiaotongweichengkeyindaojichuxinxi3710.序号`进行内连接。\n  - **筛选条件**：\n    - `shijiaotongweichengkeyindaojichuxinxi3710.周边交通指南` = '地铁入口'：只选择周边交通指南明确标注为地铁入口的记录。\n    - `shijiaotongweichengkeyindaojichuxinxi3710.公交线路信息` IS NOT NULL：排除公交线路信息为空的记录。\n  - **排序条件**：按`shijiaotongweichengkeyindaojichuxinxi3710.更新时间`降序排列，确保最新更新的信息显示在最前面。\n  - **查询列**：\n    - 线路名称、站点编码、车站名（来自轨道交通站点信息出行表）\n    - 更新时间（来自轨道交通乘客引导基础信息表）\n\n- **业务场景**：\n  该查询可用于城市交通信息系统，帮助乘客或交通管理部门快速获取以下信息：\n  1. 哪些轨道交通站点有明确的地铁入口标识\n  2. 这些站点同时具备公交接驳信息（公交线路信息不为空）\n  3. 按最新更新的信息优先显示，确保信息的时效性\n\n- **用户描述**：\n  在实际应用中，用户可能面临以下需求或问题：\n  1. 乘客需要查找可以方便换乘公交的地铁站点（有明确地铁入口且公交信息齐全）\n  2. 交通规划人员需要监控哪些地铁站点已经完善了公交接驳信息\n  3. 信息系统维护人员需要定期检查最新更新的站点引导信息\n  4. 游客或新市民需要获取最新的地铁与公交接驳信息以便规划出行路线\n  5. 应用开发者需要获取这些数据来开发导航或交通查询APP的相关功能",
+  "natural_language_query": "市民反映，最近在使用地铁换乘公交时遇到很多不便，想咨询一下哪些地铁站有明确的入口标识并且能查到公交接驳信息。我上周在朝阳门站转车时找了半天都没看到公交站牌指引，后来发现那个站的公交信息好像没更新。能不能帮忙查查最新更新的、有地铁入口标识并且提供公交线路信息的地铁站点？最好能按最新更新的顺序显示，这样信息比较准确。我经常需要地铁转公交，希望这些信息能更清楚一些。",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ ,_ ,_ from _ where _ = _ and _ = _ order by _ ;",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweiguidaozhandianxinxichuxing3670": [
+      "shijiaotongweiguidaozhandianxinxichuxing3670.线路名称",
+      "shijiaotongweiguidaozhandianxinxichuxing3670.站点编码",
+      "shijiaotongweiguidaozhandianxinxichuxing3670.车站名"
+    ],
+    "shijiaotongweichengkeyindaojichuxinxi3710": [
+      "shijiaotongweichengkeyindaojichuxinxi3710.序号",
+      "shijiaotongweichengkeyindaojichuxinxi3710.枢纽站信息",
+      "shijiaotongweichengkeyindaojichuxinxi3710.周边交通指南",
+      "shijiaotongweichengkeyindaojichuxinxi3710.公交线路信息",
+      "shijiaotongweichengkeyindaojichuxinxi3710.轨道线路信息",
+      "shijiaotongweichengkeyindaojichuxinxi3710.更新时间",
+      "shijiaotongweichengkeyindaojichuxinxi3710.共享时间 "
+    ]
+  }
+}

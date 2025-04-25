@@ -1,0 +1,44 @@
+{
+  "sql": "SELECT HID, FATHERID FROM shiguihuaziranziyuanweixuetangshuyuan1521 WHERE HID = '1';",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从表 `shiguihuaziranziyuanweixuetangshuyuan1521` 中查询 `HID` 等于 '1' 的记录，并返回这些记录的 `HID` 和 `FATHERID` 列的值。\n\n- **详细描述**：\n  - **涉及的表**：`shiguihuaziranziyuanweixuetangshuyuan1521`。从表名来看，可能是一个与自然资源或学术机构相关的表，具体含义需要结合业务背景进一步确认。\n  - **涉及的列**：\n    - `HID`：可能是表中的某个唯一标识符或层级ID。\n    - `FATHERID`：可能是表示父级ID的列，用于表示层级关系。\n  - **查询条件**：`HID = '1'`，表示只查询 `HID` 列的值等于 '1' 的记录。\n\n- **业务场景**：\n  - 该查询可能用于获取某个特定层级（`HID` 为 '1'）的记录及其对应的父级ID（`FATHERID`）。例如，在一个层级结构的数据库中，`HID` 可能表示某个节点，而 `FATHERID` 表示该节点的父节点。\n  - 可能的业务场景包括：\n    - 查询某个特定分类或层级的父级信息。\n    - 在树形结构或层级数据中导航，获取某个节点的父节点信息。\n    - 用于数据验证或数据修复，检查某个节点的父节点是否正确。\n\n- **用户描述**：\n  - 用户可能需要了解 `HID` 为 '1' 的记录在层级结构中的位置，或者需要确认其父节点是谁。\n  - 例如，用户可能在管理一个分类系统（如商品分类、学术资源分类等），需要知道某个特定分类的上级分类是什么。\n  - 用户还可能在进行数据导入或数据迁移时，需要验证层级关系是否正确，确保 `HID` 和 `FATHERID` 的对应关系符合预期。",
+  "natural_language_query": "市民反映，我在使用一个自然资源管理系统时遇到问题，系统里有个编号为1的分类项目，但我不确定它的上级分类是什么。这个1号项目可能是某个学术资源库的顶层分类，也可能是子分类，系统里显示不太清楚。我担心如果搞错了层级关系会影响后续的数据整理工作，能不能帮忙查一下这个1号项目对应的上级分类是什么？现在很着急要用这个信息来完成资源归档。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "shiguihuaziranziyuanweixuetangshuyuan1521": [
+      "shiguihuaziranziyuanweixuetangshuyuan1521.HID",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.FATHERID",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.HNAME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.OTHERNAME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.CATEGORY",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.SUBCATEGOR",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.COUNTYNAME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.STREETNAME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.DYNASTY",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.SUBDYNASTY",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.ADDRESS",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.RANK",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.BATCH",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.PUBTIME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.USERS",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.PURPOSE",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.OWNERSHIP",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.STATEEVALU",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.SINGLERELI",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.PROTECTION",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.ATTACHEDRE",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.RELATEDPEO",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.RELATEDEVE",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.PUBNAME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.SOURCE",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.EDITOR",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.ISREDUNDAN"
+    ],
+    "tongzhouqutongzhouquxiangcunminsuxinxi2979": [
+      "tongzhouqutongzhouquxiangcunminsuxinxi2979.通州区乡村民宿情况表（规范化审核52家）",
+      "tongzhouqutongzhouquxiangcunminsuxinxi2979.Unnamed: 1",
+      "tongzhouqutongzhouquxiangcunminsuxinxi2979.Unnamed: 2"
+    ]
+  }
+}

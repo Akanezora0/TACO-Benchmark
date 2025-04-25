@@ -1,0 +1,25 @@
+{
+  "sql": "SELECT lakepond_wbids_and_wbid_segments.OBJECTID, lakepond_wbids_and_wbid_segments.WBID, sand_and_gravel_deposits.SHAPEarea FROM lakepond_wbids_and_wbid_segments INNER JOIN sand_and_gravel_deposits ON lakepond_wbids_and_wbids_and_wbid_segments.OBJECTID = sand_and_gravel_deposits.OBJECTID WHERE lakepond_wbids_and_wbids_and_wbid_segments.Event_Type = 'FILL' AND sand_and_gravel_deposits.AG_TYPE = 'GRAVEL'",
+  "problem_description": "### Query intent:\nThe SQL statement is designed to extract specific data from two related tables, `lakepond_wbids_and_wbid_segments` and `sand_and_gravel_deposits`, with the intention of retrieving information about areas (SHAPEarea) where certain types of events (Event_Type) have occurred, specifically those labeled as 'FILL', within the context of gravel deposits classified as 'GRAVEL'.\n\n### Detailed description:\n1. **Table `lakepond_wbids_and_wbid_segments`**:\n   - **OBJECTID**: A unique identifier for each segment or location within this table.\n   - **WBID**: An identifier possibly related to water bodies or segments associated with these locations.\n   \n2. **Table `sand_and_gravel_deposits`**:\n   - **SHAPEarea**: Represents the area covered by the deposit, typically measured in square units.\n   - **OBJECTID**: Identifies each deposit uniquely.\n   - **AG_TYPE**: Specifies the type of deposit, here focusing on 'GRAVEL'.\n\n3. **Join condition**:\n   The query uses an **INNER JOIN** clause to combine rows from both tables based on matching `OBJECTID` values, ensuring only records where there's a common object ID between the two tables are included in the result.\n\n4. **Where clause**:\n   - **Event_Type = 'FILL'**: Filters the records to only include those where an event has been recorded as 'FILL'. This could refer to filling activities, such as filling in a water body or depositing material.\n   - **AG_TYPE = 'GRAVEL'**: Further narrows down the selection to only those records where the type of deposit is specifically identified as 'GRAVEL'.\n\n### Business scenario:\nThis query can be utilized in environmental management, construction planning, or resource extraction industries. For example, it might help in identifying specific areas that have undergone gravel extraction ('FILL' events) within water bodies or deposits, which is crucial for regulatory compliance, environmental impact assessments, or strategic planning.\n\n### User description:\nA user might need this information to:\n- Ensure that activities like gravel extraction are conducted in compliance with environmental regulations.\n- Assess the impact of past activities on the landscape or ecosystems.\n- Plan future extraction sites based on historical usage patterns.\n- Evaluate the economic viability of new extraction sites by analyzing past activity levels and patterns.",
+  "natural_language_query": "To address the business scenario outlined, I would formulate a natural language query that captures the essence of the SQL statement while maintaining clarity and relevance to the context provided:\n\n---\n\n**User Description:**\n\nIn our ongoing effort to manage and plan for sustainable resource extraction, we're particularly interested in understanding the history of gravel extraction activities. Our focus is on areas where gravel has been deposited, especially those classified as 'GRAVEL'. We aim to gather insights into any filling activities ('FILL') that might have taken place within these deposits. This information is crucial for us to ensure compliance with environmental regulations, assess the ecological impacts, and inform future planning decisions regarding resource extraction sites.\n\n**Natural Language Query:**\n\nWe're seeking detailed records of gravel extraction activities that have led to the formation of deposits, specifically those classified as 'GRAVEL'. Our interest lies in identifying instances where filling activities ('FILL') have occurred within these deposits. This includes gathering information on the specific areas affected, the volume of gravel involved, and any relevant dates or identifiers associated with these events. This data will enable us to conduct thorough environmental assessments, ensure adherence to legal requirements, and make informed decisions about future operations in the field of resource extraction.\n\n---",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ from _ where _",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "lakepond_wbids_and_wbid_segments": [
+      "lakepond_wbids_and_wbid_segments.OBJECTID",
+      "lakepond_wbids_and_wbid_segments.Source",
+      "lakepond_wbids_and_wbid_segments.WBID",
+      "lakepond_wbids_and_wbid_segments.LAKEID",
+      "lakepond_wbids_and_wbid_segments.EventType",
+      "lakepond_wbids_and_wbid_segments.GISAcres"
+    ],
+    "sand_and_gravel_deposits": [
+      "sand_and_gravel_deposits.OBJECTID",
+      "sand_and_gravel_deposits.AG_TYPE",
+      "sand_and_gravel_deposits.GlobalID",
+      "sand_and_gravel_deposits.SHAPEarea",
+      "sand_and_gravel_deposits.SHAPElen"
+    ]
+  }
+}

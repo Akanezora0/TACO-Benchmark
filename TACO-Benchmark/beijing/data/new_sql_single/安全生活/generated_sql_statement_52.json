@@ -1,0 +1,7 @@
+{
+  "sql": "SELECT \n    DISTINCT A._ AS _A, \n    B._ AS _B, \n    C._ AS _C, \n    D._ AS _D, \n    E._ AS _E, \n    F._ AS _F \nFROM \n    TableA AS A, \n    TableB AS B, \n    TableC AS C, \n    TableD AS D, \n    TableE AS E, \n    TableF AS F \nWHERE \n    A._ = B._ AND \n    B._ = C._ AND \n    C._ = D._ AND \n    D._ = E._ AND \n    E._ = F._ \nORDER BY \n    A._ \n```",
+  "results": 0,
+  "sql skeleton": "select distinct _ as _ ,_ as _ ,_ (_ in _ ._ ) = _ (_ in _ ._ ) = _ (_ in _ ._ ) = _ (_ in _ ._ ) = _ as _ ,_ ._ as _ from _ ,_ where _ ._ = _ ._ and _ = (select _ from _ where _ = _ ) order by _ ._",
+  "database": "安全生活",
+  "tables": {}
+}

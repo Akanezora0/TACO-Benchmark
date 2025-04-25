@@ -1,0 +1,46 @@
+{
+  "sql": "SELECT shiguihuaziranziyuanweixuetangshuyuan1521.HID, chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337.酒仙桥街道社区地址及联系电话 FROM shiguihuaziranziyuanweixuetangshuyuan1521 JOIN chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337 ON shiguihuaziranziyuanweixuetangshuyuan1521.HID = chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337.Unnamed: 1 WHERE chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337.酒仙桥街道社区地址及联系电话 = '具体地址'",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从两个表中联合查询特定条件下的数据，获取符合特定地址条件的记录中的某些字段信息。\n\n- **详细描述**：\n  - **涉及的表**：\n    1. `shiguihuaziranziyuanweixuetangshuyuan1521`：该表可能存储了与“规划自然资源委学堂书院”相关的信息，具体字段未完全显示，但包含一个名为 `HID` 的字段。\n    2. `chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337`：该表可能存储了“朝阳区酒仙桥街道辖区宾馆酒店信息”，包含一个名为 `酒仙桥街道社区地址及联系电话` 的字段和一个名为 `Unnamed: 1` 的字段。\n  - **涉及的列**：\n    - `shiguihuaziranziyuanweixuetangshuyuan1521.HID`：可能是规划自然资源委学堂书院表中的唯一标识符。\n    - `chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337.酒仙桥街道社区地址及联系电话`：可能是宾馆酒店信息表中的地址和联系电话字段。\n  - **条件**：\n    - 通过 `JOIN` 操作将两个表关联起来，关联条件是 `shiguihuaziranziyuanweixuetangshuyuan1521.HID = chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337.Unnamed: 1`。\n    - `WHERE` 子句筛选出 `酒仙桥街道社区地址及联系电话` 等于“具体地址”的记录。\n\n- **业务场景**：\n  - 该查询可能用于查找位于“具体地址”的宾馆酒店信息，并与规划自然资源委学堂书院的某些信息进行关联。例如，可能需要查找某个特定地址的宾馆酒店及其相关的规划自然资源委学堂书院信息。\n  - 可能的业务场景包括：\n    - 城市规划或资源管理部门需要了解特定地址的宾馆酒店与规划自然资源委学堂书院之间的关系。\n    - 社区管理部门需要核实特定地址的宾馆酒店信息是否与规划自然资源委学堂书院的某些信息匹配。\n\n- **用户描述**：\n  - 用户可能是城市规划或社区管理部门的工作人员，他们需要查询特定地址的宾馆酒店信息，并了解这些宾馆酒店是否与规划自然资源委学堂书院有某种关联。\n  - 用户可能遇到的实际问题或需求包括：\n    - 需要核实某个地址的宾馆酒店是否在规划自然资源委学堂书院的管辖范围内。\n    - 需要获取特定地址的宾馆酒店的联系电话，以便进行进一步的联系或核实。\n    - 需要将宾馆酒店信息与规划自然资源委学堂书院的信息进行匹配，以便进行数据整合或分析。",
+  "natural_language_query": "市民反映，在朝阳区酒仙桥街道这边有个具体地址（具体地址没记住全称）的宾馆，想查一下这个宾馆是不是跟附近的规划自然资源委学堂书院有什么关系。因为最近在整理辖区内的住宿场所信息，发现有些宾馆的登记资料不太完整，特别是跟一些政府单位挂钩的情况搞不清楚。之前有居民投诉说这家宾馆可能存在违规经营，但我们系统里查不到它跟相关管理单位的关联信息。能不能帮忙看看这个地址的宾馆有没有在学堂书院的管辖范围内？最好能提供一下联系电话，我们好直接联系核实。主要是现在工作推进遇到困难，资料对不上号很头疼。",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ from _ join _ on _ ._ = _ ._ where _ ._ = _",
+  "database": "旅游住宿",
+  "tables": {
+    "shiguihuaziranziyuanweixuetangshuyuan1521": [
+      "shiguihuaziranziyuanweixuetangshuyuan1521.HID",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.FATHERID",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.HNAME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.OTHERNAME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.CATEGORY",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.SUBCATEGOR",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.COUNTYNAME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.STREETNAME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.DYNASTY",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.SUBDYNASTY",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.ADDRESS",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.RANK",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.BATCH",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.PUBTIME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.USERS",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.PURPOSE",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.OWNERSHIP",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.STATEEVALU",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.SINGLERELI",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.PROTECTION",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.ATTACHEDRE",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.RELATEDPEO",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.RELATEDEVE",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.PUBNAME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.SOURCE",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.EDITOR",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.ISREDUNDAN"
+    ],
+    "chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337": [
+      "chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337.酒仙桥街道社区地址及联系电话",
+      "chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337.Unnamed: 1",
+      "chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337.Unnamed: 2",
+      "chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337.Unnamed: 3",
+      "chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337.Unnamed: 4"
+    ]
+  }
+}

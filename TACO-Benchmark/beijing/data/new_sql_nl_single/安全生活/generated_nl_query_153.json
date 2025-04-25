@@ -1,0 +1,9 @@
+{
+  "sql": "SELECT column1, column2 FROM table1 - table2 WHERE condition;",
+  "problem_description": "# SQL 语句分析\n\n## 查询意图\n这个 SQL 语句的目的是从 `table1` 和 `table2` 的差集（即存在于 `table1` 但不存在于 `table2` 的记录）中选择满足特定条件的记录，并返回这些记录的 `column1` 和 `column2` 列。\n\n## 详细描述\n- **表操作**：使用了 `table1 - table2` 语法，这表示获取 `table1` 中不存在于 `table2` 的记录（差集运算）\n- **选择列**：从结果集中选择了 `column1` 和 `column2` 两列\n- **条件过滤**：通过 `WHERE condition` 对差集结果进一步筛选\n\n需要注意的是，标准 SQL 中并没有直接使用减号 `-` 表示差集的语法。在实际数据库中，差集通常使用 `EXCEPT`（SQL标准）或 `MINUS`（Oracle）关键字实现，或者通过 `LEFT JOIN ... WHERE ... IS NULL` 模式实现。\n\n## 业务场景\n这种查询适用于需要找出两个表中差异记录的场景，例如：\n1. 找出已注册但未下单的用户\n2. 识别库存中有但从未被购买的商品\n3. 发现已发布但未被查看的通知\n\n## 用户描述\n用户可能有以下需求：\n- \"我想找出所有注册了账号但从未下过单的客户，以便发送促销邮件\"\n- \"需要列出仓库中有库存但过去三个月没人购买的商品，考虑是否要下架\"\n- \"找出系统已发送但用户未读的重要通知，以便通过其他渠道提醒\"\n\n如果这是一个真实的 SQL 查询，可能需要根据具体数据库系统调整语法，例如：\n```sql\n-- 使用 EXCEPT (SQL标准)\nSELECT column1, column2 FROM table1\nEXCEPT\nSELECT column1, column2 FROM table2\nWHERE condition;\n\n-- 或使用 LEFT JOIN 实现\nSELECT t1.column1, t1.column2 \nFROM table1 t1\nLEFT JOIN table2 t2 ON t1.key = t2.key\nWHERE t2.key IS NULL AND condition;\n```",
+  "natural_language_query": "市民反映，我在管理一个电商平台，发现有些用户注册后从来没下过单，想找出这些用户给他们发点优惠券刺激消费。系统里应该能查到这些注册了但没买过东西的人吧？我记得上个月市场部做过一次促销，但不知道效果怎么样，现在想针对那些一直没转化的用户再做一次精准营销。能不能帮忙查一下这些\"僵尸用户\"？主要是想看他们的注册时间和联系方式，好安排客服跟进。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ ;",
+  "database": "安全生活",
+  "tables": {}
+}

@@ -1,0 +1,28 @@
+{
+  "sql": "SELECT \"pingguqupingguqugongjiaozhandianmingxi269.区内公交线路站点明细\" as \"线路站点\", \"shigonganjujiaotongweifachulijigou1949.交通违法处理机构\" as \"处理机构\" FROM \"pingguqupingguqugongjiaozhandianmingxi269\" INNER JOIN \"shigonganjujiaotongweifachulijigou1949\" ON \"pingguqupingguqugongjiaozhandianmingxi269.区内公交线路站点明细\" = \"shigonganjujiaotongweifachulijigou1949.交通违法处理机构\" WHERE \"shigonganjujiaotongweifachulijigou1949.交通违法处理机构\" IS NOT NULL",
+  "results": 0,
+  "sql skeleton": "select _ as _ ,_ as _ from _ where _",
+  "database": "交通服务",
+  "tables": {
+    "pingguqupingguqugongjiaozhandianmingxi269": [
+      "pingguqupingguqugongjiaozhandianmingxi269.区内公交线路站点明细",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 1",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 2",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 3",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 4",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 5",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 6",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 7",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 8"
+    ],
+    "shigonganjujiaotongweifachulijigou1949": [
+      "shigonganjujiaotongweifachulijigou1949.交通违法处理机构",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 1",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 2",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 3",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 4",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 5",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 6"
+    ]
+  }
+}

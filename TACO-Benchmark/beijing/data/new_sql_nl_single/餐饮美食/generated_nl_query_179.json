@@ -1,0 +1,26 @@
+{
+  "sql": "SELECT \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYXM\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.FZRQ\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.YXQZ\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.DWMC\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.EXCHANGETIME\" FROM \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\" WHERE \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID\" = '123';",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从表 `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374` 中查询特定许可证 ID 为 '123' 的餐饮服务许可证相关信息。\n\n- **详细描述**：\n  - **涉及的表**：`shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374`（名称较长，可能是“市场监管餐饮服务许可证情况信息”的拼音缩写）。\n  - **涉及的列**：\n    - `JYZMC`（经营者名称）\n    - `XKZBH`（许可证编号）\n    - `JYCS`（经营场所）\n    - `JYXM`（经营项目）\n    - `FZRQ`（发证日期）\n    - `YXQZ`（有效期至）\n    - `XKZID`（许可证 ID）\n    - `DWMC`（单位名称）\n    - `EXCHANGETIME`（交换时间，可能是数据同步或更新时间）\n  - **查询条件**：`XKZID`（许可证 ID）等于 '123'，即查询许可证 ID 为 '123' 的记录。\n\n- **业务场景**：\n  - 该查询可能用于市场监管部门或餐饮服务相关机构，用于获取特定餐饮服务许可证的详细信息。\n  - 可以用于许可证的核验、监管、数据同步或统计分析等场景。\n  - 例如，监管部门可能需要根据许可证 ID 快速查询某家餐饮单位的许可证状态、有效期等信息。\n\n- **用户描述**：\n  - 用户可能是市场监管部门的工作人员或餐饮服务企业的管理人员。\n  - 用户可能需要核实某家餐饮单位的许可证是否有效，或者查看许可证的具体信息（如经营项目、经营场所等）。\n  - 用户还可能需要在数据同步或系统对接时，通过许可证 ID 获取相关记录的更新时间（`EXCHANGETIME`）。\n  - 例如，某家餐饮单位在办理业务时，监管部门需要输入其许可证 ID '123' 来调取详细信息以完成核验。",
+  "natural_language_query": "\"您好，我这边是市场监管局的，有个事情想咨询一下。我们这边在处理一家餐饮单位的业务时，他们提供的许可证ID是'123'，但我们系统里查不到完整信息。想帮忙看看这个许可证的具体情况，包括经营者是谁、在哪里经营、允许经营什么项目，还有发证日期和有效期这些信息。之前好像听说这个许可证可能有问题，我们得核实下是不是在有效期内。对了，如果能查到最近这条信息是什么时候更新的就更好了，因为我们系统有时候数据同步会延迟。麻烦尽快帮忙查一下这个ID为123的餐饮服务许可证的所有相关信息，我们这边等着处理呢。\"",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ WHERE _ = _ ;",
+  "database": "餐饮美食",
+  "tables": {
+    "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374": [
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYXM",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.FZRQ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.YXQZ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.DWMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.EXCHANGETIME"
+    ],
+    "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076": [
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址"
+    ]
+  }
+}

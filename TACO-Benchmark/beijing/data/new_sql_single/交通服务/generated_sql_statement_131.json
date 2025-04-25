@@ -1,0 +1,19 @@
+{
+  "sql": "SELECT \"shijiaotongweiguidaozhandianxinxichuxing3670.线路名称\", \"shijiaotongweiguidaozhandianxinxichuxing3670.车站名\", \"shijiaotongweichaoxianchaozaihuochexiezaicha\"ngdi3663.地址 FROM \"shijiaotongweiguidaozhandianxinxichuxing3670\" INNER JOIN \"shijiaotongweichaoxianchaozaihuochexiezaichangdi3663\" ON \"shijiaotongweiguidaozhandianxinxichuxing3670.站点编码\" = \"shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.行政区划代码\" WHERE \"shijiaotongweiguidaozhandianxinxichuxing3670.线路名称\" = '指定线路名称';",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ from _ where _ =_ ;",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweiguidaozhandianxinxichuxing3670": [
+      "shijiaotongweiguidaozhandianxinxichuxing3670.线路名称",
+      "shijiaotongweiguidaozhandianxinxichuxing3670.站点编码",
+      "shijiaotongweiguidaozhandianxinxichuxing3670.车站名"
+    ],
+    "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663": [
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.行政区划代码",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.站点名称",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.联系电话",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.地址"
+    ]
+  }
+}

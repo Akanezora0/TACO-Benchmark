@@ -1,0 +1,24 @@
+{
+  "sql": "SELECT sand_and_gravel_deposits.OBJECTID, sand_and_gravel_deposits.AG_TYPE, sand_and_gravel_deposits.GlobalID, sand_and_gravel_deposits.SHAPEarea, sand_and_gravel_deposits.SHAPElen FROM sand_and_gravel_deposits WHERE sand_and_gravel_deposits.AG_TYPE = '严格要求'",
+  "problem_description": "### Query intent:\nThe SQL statement is designed to extract specific data from a database table named `sand_and_gravel_deposits`. The primary goal is to retrieve records where the `AG_TYPE` field matches the string '严格要求'. \n\n### Detailed description:\n1. **Table**: `sand_and_gravel_deposits` - This table is presumably related to deposits of sand and gravel, containing various attributes about these deposits.\n2. **Columns**:\n   - `OBJECTID`: A unique identifier for each record.\n   - `AG_TYPE`: A categorical attribute indicating the type of requirement or classification associated with the deposit, possibly including a category labeled as '严格要求'.\n   - `GlobalID`: An identifier possibly unique across the entire dataset or database.\n   - `SHAPEarea`: The area covered by the deposit, likely measured in square units.\n   - `SHAPElen`: The length of the deposit, potentially referring to its linear dimension.\n3. **Conditions**:\n   - `sand_and_gravel_deposits.AG_TYPE = '严格要求'` - The condition filters the rows to only those where the `AG_TYPE` column value is exactly '严格要求'.\n\n### Business scenario:\nThis query could be utilized in a scenario where environmental or geological studies are being conducted. For example, when analyzing sand and gravel deposits within a specific region, it might be necessary to focus on those deposits that are subject to stringent requirements, possibly due to their environmental impact, legal regulations, or strategic importance.\n\n### User description:\nA user, such as an environmental scientist, geologist, or regulatory compliance officer, might need this information to:\n- Understand the scope and characteristics of deposits that are under strict management or have high environmental significance.\n- Plan conservation efforts, remediation actions, or resource extraction activities based on the criteria of '严格要求'.\n- Conduct comparative analysis between deposits that meet different levels of requirements to identify areas needing special attention or improvement.",
+  "natural_language_query": "As an environmental scientist working on a project to assess the impact of sand and gravel deposits in our region, I'm interested in identifying those that are subject to strict requirements. Specifically, I'd like to retrieve details on all deposits classified under the category '严格要求'. This will help us understand the specific conditions, areas, and sizes of these deposits, which are crucial for planning conservation measures and ensuring compliance with environmental standards. Could you please provide me with the data that includes the unique identifiers, the type of requirement, the global ID, the area, and the length for all deposits categorized as '严格要求'?",
+  "results": 0,
+  "sql skeleton": "select _ as _ ,_ as _ ,_ as _ ,_ as _ ,_ as _ from _ where _ = _",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "sand_and_gravel_deposits": [
+      "sand_and_gravel_deposits.OBJECTID",
+      "sand_and_gravel_deposits.AG_TYPE",
+      "sand_and_gravel_deposits.GlobalID",
+      "sand_and_gravel_deposits.SHAPEarea",
+      "sand_and_gravel_deposits.SHAPElen"
+    ],
+    "waste_water_facilities": [
+      "waste_water_facilities.X",
+      "waste_water_facilities.Y",
+      "waste_water_facilities.FacilityName",
+      "waste_water_facilities.FacilityID",
+      "waste_water_facilities.WWInventoryURL"
+    ]
+  }
+}

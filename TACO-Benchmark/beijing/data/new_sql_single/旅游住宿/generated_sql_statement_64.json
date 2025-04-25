@@ -1,0 +1,17 @@
+{
+  "sql": "SELECT \"pingguqupingguqujingpinminsu2083\".\"平谷区2022年精品民宿\", \"pingguqupingguqujingpinminsu2083\".\"Unnamed: 1\", \"pingguqupingguqujingpinminsu2083\".\"Unnamed: 2\", \"shiwenhuahelvyoujuxingjifandianxinxi2036\".\"��\u0011ࡱ\u001a�\", \"shiwenhuahelvyoujuxingjifandianxinxi2036\".\"\u0001\u0001\" FROM \"pingguqupingguqujingpinminsu2083\" LEFT JOIN \"shiwenhuahelvyoujuxingjifandianxinxi2036\" ON \"pingguqupingguqujingpinminsu2083\".\"平谷区2022年精品民宿\" = \"shiwenhuahelvyoujuxingjifandianxinxi2036\".\"��\u0011ࡱ\u001a�\" LEFT JOIN \"shiwenhuahelvyoujuxingjifandianxinxi2036\" ON \"pingguqupingguqujingpinminsu2083\".\"Unnamed: 1\" = \"shiwenhuahelvyoujuxingjifandianxinxi2036\".\"\u0001\u0001\" WHERE \"pingguqupingguqujingpinminsu2083\".\"Unnamed: 2\" = '条件' AND \"shiwenhuahelvyoujuxingjifandianxinxi2036\".\"条件\" = '值'",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ from _ left join _ on _ ._ = _ ._ left join _ on _ ._ = _ ._ where _ ._ and _ ._ = _ and _ ._ = _",
+  "database": "旅游住宿",
+  "tables": {
+    "pingguqupingguqujingpinminsu2083": [
+      "pingguqupingguqujingpinminsu2083.平谷区2022年精品民宿",
+      "pingguqupingguqujingpinminsu2083.Unnamed: 1",
+      "pingguqupingguqujingpinminsu2083.Unnamed: 2"
+    ],
+    "shiwenhuahelvyoujuxingjifandianxinxi2036": [
+      "shiwenhuahelvyoujuxingjifandianxinxi2036.��\u0011ࡱ\u001a�",
+      "shiwenhuahelvyoujuxingjifandianxinxi2036.\u0001\u0001"
+    ]
+  }
+}

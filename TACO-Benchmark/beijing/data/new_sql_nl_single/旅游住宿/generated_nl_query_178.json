@@ -1,0 +1,25 @@
+{
+  "sql": "SELECT \n    pingguqupingguqushandongzhuangzhendengjiminsu3496.\"山东庄镇等级民宿\",\n    pingguqupingguqushandongzhuangzhendengjiminsu3496.Unnamed_1,\n    pingguqupingguqushandongzhuangzhendengjiminsu3496.Unnamed_2 \nFROM \n    pingguqupingguqushandongzhuangzhendengjiminsu3496 \nWHERE \n    pingguqupingguqushandongzhuangzhendengjiminsu3496.\"山东庄镇等级民宿\" = (SELECT \n        yanqingquyanqingqulvyoujingquxinxi3381.\"旅游景区\" \n    FROM \n        yanqingquyanqingqulvyoujingquxinxi3381);",
+  "problem_description": "### **查询意图**：\n该 SQL 语句的目的是从 `pingguqupingguqushandongzhuangzhendengjiminsu3496` 表中查询符合条件的记录，条件是 `\"山东庄镇等级民宿\"` 列的值等于从 `yanqingquyanqingqulvyoujingquxinxi3381` 表中查询到的 `\"旅游景区\"` 列的值。\n\n### **详细描述**：\n1. **主查询部分**：\n   - **表**：`pingguqupingguqushandongzhuangzhendengjiminsu3496`（可能表示“平谷区山东庄镇等级民宿”数据表）。\n   - **查询列**：\n     - `\"山东庄镇等级民宿\"`（可能表示民宿的名称或标识）。\n     - `Unnamed_1` 和 `Unnamed_2`（未命名的列，可能是表中的其他字段，具体含义需结合业务场景）。\n   - **条件**：`\"山东庄镇等级民宿\"` 列的值必须等于子查询返回的结果。\n\n2. **子查询部分**：\n   - **表**：`yanqingquyanqingqulvyoujingquxinxi3381`（可能表示“延庆区旅游景区信息”数据表）。\n   - **查询列**：`\"旅游景区\"`（可能表示景区的名称或标识）。\n   - **子查询作用**：从 `yanqingquyanqingqulvyoujingquxinxi3381` 表中获取 `\"旅游景区\"` 列的值，并将其作为主查询的条件值。\n\n### **业务场景**：\n该查询可能用于以下业务场景：\n- **跨区域旅游信息关联**：比如需要查询平谷区山东庄镇的等级民宿信息，但条件是这些民宿必须与延庆区的某个旅游景区相关联（例如，民宿位于景区附近或属于景区的配套服务设施）。\n- **数据匹配与筛选**：通过子查询动态获取某个景区的名称，然后筛选出与该景区相关的民宿信息。\n\n### **用户描述**：\n用户可能遇到的实际问题或需求：\n1. **旅游规划需求**：用户（如旅行社或游客）希望了解平谷区山东庄镇有哪些等级民宿与延庆区的某个旅游景区相关，以便安排住宿和游玩路线。\n2. **数据分析需求**：政府部门或旅游管理机构可能需要统计哪些民宿与特定景区有业务关联，以便优化旅游资源配置或制定相关政策。\n3. **数据验证需求**：检查民宿数据是否与景区信息匹配，确保数据的准确性和一致性。\n\n### **补充说明**：\n- 由于列名 `Unnamed_1` 和 `Unnamed_2` 未明确含义，实际业务中可能需要进一步确认其具体内容（如民宿地址、评级、联系方式等）。\n- 表名和列名较长且包含数字后缀（如 `3496`、`3381`），可能是从某个数据系统中导出的临时表或编号表，实际应用中可能需要更清晰的命名规范。",
+  "natural_language_query": "市民反映，最近在规划从延庆区到平谷区山东庄镇的旅游路线，想找一些正规的等级民宿。听说有些民宿是和延庆那边的旅游景区有合作的，比如景区官方推荐的或者距离特别近的那种。但我在网上查了半天也没找到明确信息，能不能帮忙查一下山东庄镇这边有没有和延庆旅游景区直接相关的等级民宿？最好是能提供民宿的具体信息和关联景区的名称。因为带着老人孩子出行，想提前确认好住宿是否靠谱，谢谢！",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ from _ where _ = (select _ from _ where _ );",
+  "database": "旅游住宿",
+  "tables": {
+    "pingguqupingguqushandongzhuangzhendengjiminsu3496": [
+      "pingguqupingguqushandongzhuangzhendengjiminsu3496.山东庄镇等级民宿",
+      "pingguqupingguqushandongzhuangzhendengjiminsu3496.Unnamed: 1",
+      "pingguqupingguqushandongzhuangzhendengjiminsu3496.Unnamed: 2"
+    ],
+    "yanqingquyanqingqulvyoujingquxinxi3381": [
+      "yanqingquyanqingqulvyoujingquxinxi3381.旅游景区",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 1",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 2",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 3",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 4",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 5",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 6",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 7"
+    ]
+  }
+}

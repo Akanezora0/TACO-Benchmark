@@ -1,0 +1,7 @@
+{
+  "sql": "select _ from (select _ from \"Table1\".\"Column1\" where \"Table1\".\"Column1\"._ = _ union select _ as _ from \"Table2\".\"Column2\" where \"Table2\".\"Column2\"._ = _) _\n```",
+  "results": 0,
+  "sql skeleton": "select _ ._ from (select _ from _ where _ = _ union select _ as _ from _ where _ = _ ) _",
+  "database": "安全生活",
+  "tables": {}
+}

@@ -1,0 +1,23 @@
+{
+  "sql": "SELECT waste_water_facilities.X, waste_water_facilities.FacilityName FROM waste_water_facilities INNER JOIN river_main_stem_waterbodies_wbid ON waste_water_facilities.WWInventoryURL = river_main_stem_waterbodies_wbid.WBID WHERE waste_water_facilities.FacilityID = '12345';",
+  "problem_description": "### Query intent:\nThe SQL statement is designed to extract specific information from two related databases (tables): `waste_water_facilities` and `river_main_stem_waterbodies_wbid`. The main goal is to retrieve the X-coordinate (presumably an identifier or location data) and the name of a facility with a specific ID ('12345').\n\n### Detailed description:\n- **Table `waste_water_facilities`**:\n    - **Columns involved**: `X`, `FacilityName`, `FacilityID`, `WWInventoryURL`\n    - **Purpose**: This table likely contains details about various waste water facilities, including their geographical coordinates (`X`), names (`FacilityName`), unique identifiers (`FacilityID`), and URLs associated with their inventory.\n    \n- **Table `river_main_stem_waterbodies_wbid`**:\n    - **Column involved**: `WBID`\n    - **Purpose**: This table seems to contain identifiers (`WBID`) related to main stem river water bodies, which might be connected to the waste water facilities based on some criteria such as proximity or shared resources.\n\n- **Join condition**:\n    - `waste_water_facilities.WWInventoryURL = river_main_stem_waterbodies_wbid.WBID`: This condition links the two tables based on the URL of the waste water facility inventory and the identifier of the river main stem water body. This suggests that there might be a relationship between certain facilities and river systems they interact with.\n\n- **Where clause**:\n    - `waste_water_facilities.FacilityID = '12345'`: This condition filters the results to only include records where the FacilityID matches '12345'. This means the query aims to provide detailed information about a specific waste water facility with this ID.\n\n### Business scenario:\nThis SQL query could be part of a larger system monitoring environmental impacts or compliance of waste water facilities. For instance, it might be used by environmental agencies to track the location and name of facilities that discharge into specific river systems, ensuring that these facilities adhere to regulations regarding pollution levels and discharge practices.\n\n### User description:\nA user might need this information to:\n- Verify the compliance status of a particular waste water treatment plant with respect to environmental regulations.\n- Plan inspection routes for environmental compliance officers, focusing on facilities that have direct impact on river ecosystems.\n- Update databases with new facility information or changes in existing facilities' operations.\n- Conduct research or analysis on how different facilities",
+  "natural_language_query": "I'm trying to find out the exact location and name of a specific waste water facility. I know its ID is '12345', and I suspect it might be discharging into a river. I want to ensure that this facility is complying with all environmental standards. Could you help me retrieve the X-coordinate, which should be a unique identifier for the location, along with the name of the facility? Also, I'd like to know if this facility has any connection to a main river system based on a certain criterion, possibly related to how their operations might affect the river's water quality.",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ ;",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "waste_water_facilities": [
+      "waste_water_facilities.X",
+      "waste_water_facilities.Y",
+      "waste_water_facilities.FacilityName",
+      "waste_water_facilities.FacilityID",
+      "waste_water_facilities.WWInventoryURL"
+    ],
+    "river_main_stem_waterbodies_wbid": [
+      "river_main_stem_waterbodies_wbid.OBJECTID",
+      "river_main_stem_waterbodies_wbid.WBID",
+      "river_main_stem_waterbodies_wbid.WBNAME",
+      "river_main_stem_waterbodies_wbid.WBDESC"
+    ]
+  }
+}

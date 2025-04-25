@@ -1,0 +1,19 @@
+{
+  "sql": "SELECT \"pingguqupingguqujingpinminsu2083\".\"平谷区2022年精品民宿\" FROM \"pingguqupingguqujingpinminsu2083\" WHERE \"pingguqupingguqujingpinminsu2083\".\"Unnamed: 1\" = '条件' AND \"pingguqupingguqujingpinminsu2083\".\"Unnamed: 2\" = '条件'",
+  "results": 0,
+  "sql skeleton": "select _ from _ where _ = _ and _",
+  "database": "旅游住宿",
+  "tables": {
+    "pingguqupingguqujingpinminsu2083": [
+      "pingguqupingguqujingpinminsu2083.平谷区2022年精品民宿",
+      "pingguqupingguqujingpinminsu2083.Unnamed: 1",
+      "pingguqupingguqujingpinminsu2083.Unnamed: 2"
+    ],
+    "shunyiqushunyiquxingjifandian2102": [
+      "shunyiqushunyiquxingjifandian2102.顺义区星级饭店",
+      "shunyiqushunyiquxingjifandian2102.Unnamed: 1",
+      "shunyiqushunyiquxingjifandian2102.Unnamed: 2",
+      "shunyiqushunyiquxingjifandian2102.Unnamed: 3"
+    ]
+  }
+}

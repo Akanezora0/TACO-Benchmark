@@ -1,0 +1,31 @@
+{
+  "sql": "SELECT DISTINCT shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC, shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH FROM shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374 WHERE shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS = '已完成' UNION SELECT shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号, shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称 FROM shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076 WHERE shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址 LIKE '%商业街%'",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从两个不同的表中查询并合并符合条件的记录，最终返回两个字段：**经营主体名称（或专柜名称）** 和 **许可证编号（或专用标识牌号）**。  \n\n---\n\n### **详细描述**  \n该 SQL 语句由两个 `SELECT` 查询通过 `UNION` 合并而成，具体分析如下：  \n\n#### **第一部分查询（表 `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374`）**  \n- **查询字段**：  \n  - `JYZMC`（经营主体名称）  \n  - `XKZBH`（许可证编号）  \n- **条件**：  \n  - `JYCS = '已完成'`（经营状态为“已完成”）  \n- **去重**：  \n  - 使用 `DISTINCT` 确保结果不重复。  \n\n#### **第二部分查询（表 `shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076`）**  \n- **查询字段**：  \n  - `专用标识牌号`（类似许可证编号）  \n  - `专柜名称`（类似经营主体名称）  \n- **条件**：  \n  - `地址 LIKE '%商业街%'`（地址包含“商业街”关键词）  \n\n#### **合并方式**  \n- 使用 `UNION` 合并两个查询的结果，自动去重（如果两部分的记录完全相同，则只保留一条）。  \n\n---\n\n### **业务场景**  \n1. **市场监管部门**：  \n   - 查询已完成经营许可审批的餐饮服务单位（`shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374`）。  \n   - 查询位于商业街的宗教食品专柜（`shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076`）。  \n   - 可能用于统计合规经营单位或检查特定区域的商户情况。  \n\n2. **商业管理或执法检查**：  \n   - 需要同时获取两类数据（餐饮许可单位和宗教食品专柜）进行综合监管。  \n   - 例如，检查商业街的餐饮单位和宗教食品专柜是否合规。  \n\n---\n\n### **用户描述**  \n- **用户身份**：可能是市场监管人员、商业管理部门或执法检查人员。  \n- **实际需求**：  \n  - 需要获取已完成审批的餐饮单位名单，以便进行后续监管或统计。  \n  - 需要查找商业街上的宗教食品专柜，可能涉及食品安全或合规检查。  \n  - 希望在一个查询中同时获取两类数据，避免多次查询。  \n- **可能的问题**：  \n  - 商业街的宗教食品专柜可能存在无证经营或违规情况，需要排查。  \n  - 已完成审批的餐饮单位可能需要进一步检查实际经营情况。  \n\n该 SQL 语句帮助用户快速获取两类关键数据，便于后续分析或执法行动。",
+  "natural_language_query": "市民反映，最近在商业街附近发现一些卖清真食品的摊位，但不确定他们是不是正规经营的。我这边是市场监管局的，想查一下这条街上所有正规的餐饮店和清真食品专柜的情况。特别是那些已经拿到许可证的餐饮店，还有商业街上挂有专用标识牌的那些清真食品摊位。我们最近在搞食品安全检查，需要把这些信息都汇总一下。对了，那些已经显示\"已完成\"审批的餐饮店要特别注意，我们得去现场核实实际经营情况。能不能帮忙把这些信息都整理出来？主要是要店铺或者摊位的名字，还有他们的许可证号或者专用标识牌号。",
+  "results": [
+    [
+      1480,
+      "北京市秀福全清真鲜肉店"
+    ]
+  ],
+  "sql skeleton": "select distinct _ ._ as _ ,_ ._ as _ from ( select _ as _ ,_ as _ from _ where _ union select _ as _ ,_ as _ from _ where _ ) _",
+  "database": "餐饮美食",
+  "tables": {
+    "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374": [
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYXM",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.FZRQ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.YXQZ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.DWMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.EXCHANGETIME"
+    ],
+    "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076": [
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址"
+    ]
+  }
+}

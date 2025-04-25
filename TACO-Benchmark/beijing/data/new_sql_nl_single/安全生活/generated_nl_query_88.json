@@ -1,0 +1,9 @@
+{
+  "sql": "select distinct table1.column1, table1.column2, table2.column3 \nfrom table1 \njoin table2 on table1.common_column = table2.common_column \nwhere table1.condition_column = 'condition_value'",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从两个关联表中查询满足特定条件的唯一数据组合。\n\n- **详细描述**：\n  - **涉及的表**：\n    - `table1`：主表之一，包含`column1`、`column2`和`common_column`等列。\n    - `table2`：被关联的表，包含`column3`和`common_column`等列。\n  - **关联条件**：通过`common_column`列将`table1`和`table2`关联起来，确保两表中该列的值相等。\n  - **查询列**：\n    - `table1.column1`：来自`table1`的第一列。\n    - `table1.column2`：来自`table1`的第二列。\n    - `table2.column3`：来自`table2`的第三列。\n  - **筛选条件**：`table1.condition_column = 'condition_value'`，即只选择`table1`中`condition_column`列等于`'condition_value'`的记录。\n  - **去重处理**：使用`distinct`关键字确保查询结果中的每一行都是唯一的。\n\n- **业务场景**：\n  - 该查询可以用于需要从两个关联表中提取特定信息的场景，例如：\n    - 查询某个特定条件下的客户信息及其关联的订单详情。\n    - 获取满足特定条件的商品及其对应的供应商信息。\n    - 在数据分析中，提取特定条件下的数据组合以生成报表。\n\n- **用户描述**：\n  - 用户可能需要查找所有满足特定条件的记录，并且这些记录需要包含来自两个不同表的信息。例如：\n    - 一个电商平台的管理员可能需要查看所有购买了特定类别商品的客户及其订单详情。\n    - 一个供应链经理可能需要获取所有库存量低于阈值的商品及其供应商的联系方式。\n    - 数据分析师可能需要生成一个报表，显示特定时间段内活跃用户及其活动详情。",
+  "natural_language_query": "市民反映，我在系统里查数据时遇到个问题。是这样的，我们公司最近在做一个客户分析，需要找那些买了特定类型产品的客户信息，包括客户的基本资料和他们具体的购买记录。但是系统里数据太多了，我试了几次都查出很多重复的内容，搞得表格特别乱。\n\n具体来说，我想找的是那些在\"促销活动期间\"（就是上个月双十一那会儿）下单的客户，要能看到客户姓名、联系方式这些基本信息，同时还要能看到他们具体买了什么东西。但是每次查出来同一个客户会重复出现好几次，因为他们可能买了好几样东西。\n\n能不能帮我查一下这些客户的信息啊？要确保每个人只出现一次，但又能看到他们买了什么。我上周也查过类似的数据，结果导出的Excel有几千条重复记录，整理起来特别麻烦。现在领导急着要这个分析报告，我都快急死了！",
+  "results": 0,
+  "sql skeleton": "select distinct _ ,_ ,_ from _ where _ =_",
+  "database": "安全生活",
+  "tables": {}
+}

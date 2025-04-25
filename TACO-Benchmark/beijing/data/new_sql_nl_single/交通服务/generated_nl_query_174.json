@@ -1,0 +1,26 @@
+{
+  "sql": "SELECT \n    \"shijiaotongweichengkeyindaojichuxinxi3710.序号\", \n    \"shijiaotongweichengkeyindaojichuxinxi3710.枢纽站信息\", \n    \"shijiaotongweichengkeyindaojichuxinxi3710.周边交通指南\", \n    \"shijiaotongweichengkeyindaojichuxinxi3710.公交线路信息\", \n    \"shijiaotongweichengkeyindaojichuxinxi3710.轨道线路信息\", \n    \"shijiaotongweichengkeyindaojichuxinxi3710.更新时间\", \n    \"shijiaotongweichengkeyindaojichuxinxi3710.共享时间 \", \n    \"shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.业户名称\", \n    \"shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.评定等级\", \n    \"shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.所属地区\", \n    \"shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.年份\", \n    \"shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.统一社会信用代码\" \nFROM \n    \"shijiaotongweichengkeyindaojichuxinxi3710\" \nLEFT JOIN \n    \"shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669\" \nON \n    \"shijiaotongweichengkeyindaojichuxinxi3710.序号\" = \"shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.统一社会信用代码\" \nWHERE \n    \"shijiaotongweichengkeyindaojichuxinxi",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从两个表中联合查询交通枢纽站的基础信息以及相关旅游客运企业的信用评级数据，通过左连接（LEFT JOIN）确保即使没有匹配的信用评级数据，也能返回所有交通枢纽站的信息。\n\n---\n\n### **详细描述**  \n1. **涉及的表**：\n   - **`shijiaotongweichengkeyindaojichuxinxi3710`**（交通委城轨引导基础信息表）：存储交通枢纽站的基础信息，如枢纽站名称、周边交通指南、公交和轨道线路信息等。\n   - **`shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669`**（交通委旅游客运企业信用评价结果数据表）：存储旅游客运企业的信用评级信息，如企业名称、信用等级、所属地区等。\n\n2. **查询的列**：\n   - 从 **`shijiaotongweichengkeyindaojichuxinxi3710`** 表中选取：\n     - `序号`（可能是枢纽站的唯一标识）\n     - `枢纽站信息`（枢纽站的名称或描述）\n     - `周边交通指南`（枢纽站周边的交通指引）\n     - `公交线路信息`（途经该枢纽站的公交线路）\n     - `轨道线路信息`（途经该枢纽站的轨道交通线路）\n     - `更新时间`（枢纽站信息的最后更新时间）\n     - `共享时间`（数据共享的时间）\n   - 从 **`shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669`** 表中选取：\n     - `业户名称`（企业名称）\n     - `评定等级`（信用评级等级）\n     - `所属地区`（企业所在的地区）\n     - `年份`（信用评级的年份）\n     - `统一社会信用代码`（企业的唯一社会信用代码）\n\n3. **连接条件**：\n   - 使用 **LEFT JOIN** 连接两个表，连接条件是：\n     - `shijiaotongweichengkeyindaojichuxinxi3710.序号` = `shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.统一社会信用代码`\n     - 这意味着 SQL 假设 **枢纽站的序号** 可能与 **企业的统一社会信用代码** 相关联，可能是为了查找枢纽站关联的运营企业信用情况。\n\n4. **WHERE 条件**：\n   - SQL 语句未完整，但可能用于进一步筛选枢纽站或企业数据（如按地区、信用等级或更新时间过滤）。\n\n---\n\n### **业务场景**  \n该查询可能用于以下业务场景：\n1. **交通枢纽站综合管理**：政府或交通管理部门需要查看各个枢纽站的基本信息，并结合运营企业的信用评级，评估枢纽站的服务质量。\n2. **企业信用监管**：监管部门可能希望了解哪些枢纽站由信用评级较高的企业运营，以便进行政策支持或监管。\n3. **公众信息服务**：交通信息平台可能希望向公众提供枢纽站的详细信息，并附带运营企业的信用情况，增强信息透明度。\n\n---\n\n### **用户描述**  \n在该业务场景下，用户可能遇到的实际问题或需求包括：\n1. **政府监管需求**：\n   - *问题*：某市交通委需要评估主要交通枢纽的运营质量，但缺乏关联企业的信用数据。  \n   - *需求*：通过关联枢纽站信息和企业的信用评级，快速识别哪些枢纽站由高信用企业运营，哪些可能存在风险。\n\n2. **企业查询需求**：\n   - *问题*：某旅游客运企业想了解自己在哪些枢纽站提供服务，并对比同行业其他企业的信用情况。  \n   - *需求*：通过枢纽站序号（假设与企业信用代码关联）查询自己的信用评级及服务站点。\n\n3. **公众出行需求**：\n   - *问题*：乘客想选择信用良好的企业运营的枢纽站，以确保出行安全和服务质量。  \n   - *需求*：通过交通信息平台查看枢纽站的详细信息和关联企业的信用等级，辅助出行决策。\n\n---\n\n### **补充说明**  \n- 该 SQL 的关联逻辑（枢纽站序号 = 企业信用代码）可能需要进一步验证，因为通常枢纽站序号和企业信用代码是两种不同的标识体系。  \n- 如果 WHERE 条件补充完整，可能能更精确地定位查询目标（如筛选特定年份或地区的信用评级）。",
+  "natural_language_query": "市民反映，最近在查询一些交通枢纽站的信息时，发现有些站点的运营情况不太透明。比如上周去北京西站坐车，看到站内有很多旅游大巴，但不知道这些大巴公司靠不靠谱。想了解一下这些交通枢纽站的具体信息，包括公交地铁线路什么的，最好还能看到运营这些站点的旅游公司信用评级怎么样。因为之前新闻里报道过有些旅游公司信用不好，乱收费还出过安全事故，所以特别担心。能不能帮忙查一下各个枢纽站的基本情况，还有关联的旅游公司信用等级？尤其是那些信用评级比较低的公司运营的站点，想避开这些地方。对了，最好能看看这些信息最近有没有更新过，怕查到的是过时的数据。",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ from _ left join _ on _ ._ = _ ._ where _ ._ = _ and _ ._ = _ and _ (_ ,_ ) = _",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweichengkeyindaojichuxinxi3710": [
+      "shijiaotongweichengkeyindaojichuxinxi3710.序号",
+      "shijiaotongweichengkeyindaojichuxinxi3710.枢纽站信息",
+      "shijiaotongweichengkeyindaojichuxinxi3710.周边交通指南",
+      "shijiaotongweichengkeyindaojichuxinxi3710.公交线路信息",
+      "shijiaotongweichengkeyindaojichuxinxi3710.轨道线路信息",
+      "shijiaotongweichengkeyindaojichuxinxi3710.更新时间",
+      "shijiaotongweichengkeyindaojichuxinxi3710.共享时间 "
+    ],
+    "shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669": [
+      "shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.业户名称",
+      "shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.评定等级",
+      "shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.所属地区",
+      "shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.年份",
+      "shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.统一社会信用代码"
+    ]
+  }
+}

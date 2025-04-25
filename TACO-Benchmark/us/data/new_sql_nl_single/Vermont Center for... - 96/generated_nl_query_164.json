@@ -1,0 +1,29 @@
+{
+  "sql": "SELECT dfirm_floodways.OBJECTID, sand_and_gravel_deposits.GlobalID FROM dfirm_floodways INNER JOIN sand_and_gravel_deposits ON dfirm_floodways.HYDRO_ID = sand_and_gravel_deposits.AG_TYPE;",
+  "problem_description": "### Query intent:\nThe SQL statement aims to find a specific relationship between two datasets: `dfirm_floodways` and `sand_and_gravel_deposits`. It seeks to identify which floodway records (`OBJECTID` from `dfirm_floodways`) are associated with sand and gravel deposits (`GlobalID` from `sand_and_gravel_deposits`). This could be useful for environmental studies or urban planning where the interaction between floodways and geological features is relevant.\n\n### Detailed description:\n- **Table `dfirm_floodways`**:\n    - **Column `OBJECTID`**: A unique identifier for each record in this table, likely representing a specific location or feature within a floodway system.\n    - **Column `HYDRO_ID`**: A reference field that might link this floodway record to other related data, such as hydrological models or geographical identifiers.\n\n- **Table `sand_and_gravel_deposits`**:\n    - **Column `GlobalID`**: A unique identifier for each record in this table, potentially representing a specific location or deposit of sand and gravel.\n    - **Column `AG_TYPE`**: An attribute that categorizes or identifies the type of geological feature, possibly used here to match with the `HYDRO_ID` from `dfirm_floodways`.\n\n- **Join condition** (`dfirm_floodways.HYDRO_ID = sand_and_gravel_deposits.AG_TYPE`): This condition links records from both tables based on a matching identifier between the floodway system's hydrological ID and the geological feature's type. The equality comparison ensures that only those floodways directly associated with sand and gravel deposits are selected.\n\n### Business scenario:\nThis query could be used in several business contexts, such as:\n\n1. **Environmental Impact Assessment**: To identify floodways that cross over or are near sand and gravel deposits, which might influence flood management strategies or require special considerations during construction or maintenance.\n2. **Urban Planning**: For zoning decisions or infrastructure planning around areas prone to flooding but also rich in natural resources like sand and gravel, which are crucial for construction materials.\n3. **Geological Survey**: To analyze the distribution of sand and gravel deposits in relation to existing or planned floodway systems, aiding in understanding potential environmental impacts or resource utilization.\n\n### User description:\nA user might need this information to make informed decisions about land use, environmental protection measures, or infrastructure development plans. For example, an urban planner could use this data to determine if new developments should",
+  "natural_language_query": "User: I'm working on a project that involves understanding the spatial relationship between flood zones and natural resources in my area. Specifically, I'm interested in identifying any instances where floodways overlap with areas containing sand and gravel deposits. These details could help in planning future developments while considering environmental impact and resource availability. How can I go about querying this information?\n\nAssistant: Assistant: To address your inquiry, you'd want to create a SQL query that identifies floodway records that intersect with areas having sand and gravel deposits. Here's how you might phrase it:\n\n\"Find all records in the 'dfirm_floodways' dataset that have a corresponding entry in the 'sand_and_gravel_deposits' dataset, specifically looking for matches where the floodway's hydrological identifier (HYDRO_ID) aligns with the geological feature's category (AG_TYPE). This alignment would indicate locations where floodways cross paths with sand and gravel deposits, potentially impacting environmental management and resource allocation.\"",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ ;",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "dfirm_floodways": [
+      "dfirm_floodways.OBJECTID",
+      "dfirm_floodways.DFIRM_ID",
+      "dfirm_floodways.FLD_AR_ID",
+      "dfirm_floodways.FLD_ZONE",
+      "dfirm_floodways.FLOODWAY",
+      "dfirm_floodways.SFHA_TF",
+      "dfirm_floodways.AR_REVERT",
+      "dfirm_floodways.SOURCE_CIT",
+      "dfirm_floodways.HYDRO_ID",
+      "dfirm_floodways.CST_MDL_ID"
+    ],
+    "sand_and_gravel_deposits": [
+      "sand_and_gravel_deposits.OBJECTID",
+      "sand_and_gravel_deposits.AG_TYPE",
+      "sand_and_gravel_deposits.GlobalID",
+      "sand_and_gravel_deposits.SHAPEarea",
+      "sand_and_gravel_deposits.SHAPElen"
+    ]
+  }
+}

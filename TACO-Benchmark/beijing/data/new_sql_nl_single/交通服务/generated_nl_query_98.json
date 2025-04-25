@@ -1,0 +1,25 @@
+{
+  "sql": "SELECT \"shijiaotongweichaoxianchaozaihuochexiezaicha\"ng.\"行政区划代码\" AS 列1, \"shijiaotongweichaoxianchaozaihuochexiezaicha\"ng.\"站点名称\" AS 列2, \"shijiaotongweichaoxianchaozaihuochexiezaicha\"ng.\"联系电话\" AS 列3 FROM \"shijiaotongweichaoxianchaozaihuochexiezaicha\"ng WHERE \"shijiaotongweichaoxianchaozaihuochexiezaicha\"ng.\"行政区划代码\" = '3663' AND \"shijiaotongweichaoxianchaozaihuochexiezaicha\"ng.\"站点名称\" = '站点名称值'",
+  "problem_description": "### **查询意图**：  \n该 SQL 语句的目的是从表 `shijiaotongweichaoxianchaozaihuochexiezaichang` 中查询符合特定行政区划代码和站点名称的记录，并返回行政区划代码、站点名称和联系电话三列数据。\n\n### **详细描述**：  \n1. **表**：  \n   - 表名：`shijiaotongweichaoxianchaozaihuochexiezaichang`（名称较长，可能是拼音或特定编码，可能表示“市交通违章超限超载货车卸载场”或类似含义）。  \n   - 该表可能存储与交通管理、货车违章或卸载场相关的信息。\n\n2. **列**：  \n   - `行政区划代码`：表示行政区域的唯一编码（例如城市、区县等），此处筛选值为 `'3663'`。  \n   - `站点名称`：表示卸载场或检查站的具体名称，此处筛选值为 `'站点名称值'`。  \n   - `联系电话`：可能是该站点的联系方式。  \n\n3. **查询条件**：  \n   - `行政区划代码 = '3663'`：限定查询行政区划代码为 `3663` 的记录。  \n   - `站点名称 = '站点名称值'`：进一步限定站点名称为 `'站点名称值'` 的记录。  \n\n4. **输出列**：  \n   - `列1`：行政区划代码。  \n   - `列2`：站点名称。  \n   - `列3`：联系电话。  \n\n### **业务场景**：  \n该查询可能用于以下业务场景：  \n1. **交通管理**：查询特定行政区（代码 `3663`）的某个货车卸载场（`站点名称值`）的联系方式，可能是为了协调工作或通知违规车辆。  \n2. **数据核对**：验证某个卸载场的信息是否准确录入系统。  \n3. **统计分析**：结合其他查询，分析某一行政区的卸载场分布或运营情况。  \n\n### **用户描述**：  \n用户可能是交通管理部门的工作人员或系统管理员，实际需求可能包括：  \n1. **联系卸载场**：需要获取某个卸载场的联系电话，以便沟通货车卸载或违章处理事宜。  \n2. **信息验证**：检查系统中录入的卸载场信息（如名称、行政区划）是否正确。  \n3. **紧急调度**：在发生交通违规或超载事件时，快速定位并联系相关站点。  \n\n该 SQL 语句帮助用户精准定位到特定行政区的特定站点，并提取关键信息（如联系方式），以支持日常管理或应急处理。",
+  "natural_language_query": "市民反映，在办理货车违章处理时遇到问题，系统显示3663地区的某个卸载场信息可能有误。具体是那个叫\"站点名称值\"的检查站，想确认一下它的联系方式是否正确。之前打过系统里留的电话但一直没人接，怀疑是不是登记错了。希望能帮忙核实一下这个卸载场的行政区划、站点名称和联系电话信息，方便后续协调车辆违章处理事宜。来电反映卸载场联系信息可能有误的问题。",
+  "results": 0,
+  "sql skeleton": "select _ as _ ,_ as _ ,_ as _ from _ where _ = _ and _ = _",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663": [
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.行政区划代码",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.站点名称",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.联系电话",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.地址"
+    ],
+    "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053": [
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.序号",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.行政相对人名称",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.统一社会信用代码",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.行政许可决定文书号",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.许可内容",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.许可决定日期",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.许可机关"
+    ]
+  }
+}

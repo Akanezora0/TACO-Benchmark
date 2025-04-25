@@ -1,0 +1,29 @@
+{
+  "sql": "SELECT shijiaotongweiguidaozhandianxinxichuxing3670.线路名称, shijiaotongweiguidaozhandianxinxichuxing3670.车站名 FROM shijiaotongweiguidaozhandianxinxichuxing3670 WHERE shijiaotongweiguidaozhandianxinxichuxing3670.车站名 = '北京西站';",
+  "results": [
+    [
+      "7号线",
+      "北京西站"
+    ],
+    [
+      "9号线",
+      "北京西站"
+    ],
+    [
+      "城市副中心线",
+      "北京西站"
+    ]
+  ],
+  "sql skeleton": "SELECT _ , _ FROM _ ;",
+  "database": "交通服务",
+  "tables": {
+    "zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733": [
+      "zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733.PK\u0003\u0004"
+    ],
+    "shijiaotongweiguidaozhandianxinxichuxing3670": [
+      "shijiaotongweiguidaozhandianxinxichuxing3670.线路名称",
+      "shijiaotongweiguidaozhandianxinxichuxing3670.站点编码",
+      "shijiaotongweiguidaozhandianxinxichuxing3670.车站名"
+    ]
+  }
+}

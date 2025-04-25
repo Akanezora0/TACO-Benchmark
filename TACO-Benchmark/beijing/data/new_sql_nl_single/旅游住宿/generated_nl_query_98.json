@@ -1,0 +1,22 @@
+{
+  "sql": "select \"shiwenhuahelvyoujulvxingshexinxi3530.旅行社名称\" as 列1, \"shiwenhuahelvyoujulvxingshexinxi3530.许可经营业务\" as 列2, \"shiwenhuahelvyoujulvxingshexinxi3530.许可时间\" as 列3 from \"shiwenhuahelvyoujulvxingshexinxi3530\" where \"shiwenhuahelvyoujulvxingshexinxi3530.许可经营业务\" = '旅游' and \"shiwenhuahelvyoujulvxingshexinxi3530.许可时间\" like '2022%'",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从表 `shiwenhuahelvyoujulvxingshexinxi3530` 中筛选出 **许可经营业务为“旅游”** 且 **许可时间在 2022 年** 的旅行社信息，并返回旅行社名称、许可经营业务和许可时间三列数据。\n\n---\n\n### **详细描述**  \n1. **涉及的表**：  \n   - `shiwenhuahelvyoujulvxingshexinxi3530`（表名可能为“文化和旅游旅行社信息3530”或类似含义）  \n\n2. **涉及的列**：  \n   - `旅行社名称`：存储旅行社的名称。  \n   - `许可经营业务`：存储旅行社被许可经营的业务类型（如“旅游”）。  \n   - `许可时间`：存储旅行社获得许可的时间（格式可能为 `YYYY-MM-DD` 或类似）。  \n\n3. **查询条件**：  \n   - `许可经营业务 = '旅游'`：仅选择业务类型为“旅游”的记录。  \n   - `许可时间 LIKE '2022%'`：筛选许可时间以“2022”开头的记录（即 2022 年获得许可的旅行社）。  \n\n4. **输出列**：  \n   - `列1`：旅行社名称（`旅行社名称` 列的别名）。  \n   - `列2`：许可经营业务（`许可经营业务` 列的别名）。  \n   - `列3`：许可时间（`许可时间` 列的别名）。  \n\n---\n\n### **业务场景**  \n该查询可用于以下业务场景：  \n1. **旅游行业监管**：监管部门可能需要统计 **2022 年新获得旅游业务许可的旅行社**，以分析市场增长情况或进行合规检查。  \n2. **旅行社资质审核**：平台或合作方可能需要验证哪些旅行社是 **2022 年新获批的**，以确保合作对象的资质有效性。  \n3. **数据分析**：旅游行业协会或研究机构可能需要 **按年份统计新增旅行社数量**，以评估行业发展动态。  \n\n---\n\n### **用户描述**  \n在上述业务场景中，用户可能遇到以下实际问题或需求：  \n1. **监管需求**：  \n   - 问题：旅游管理部门需要掌握 **2022 年新进入市场的旅行社名单**，以便进行抽查或政策效果评估。  \n   - 需求：快速获取符合条件的旅行社名称及其许可信息，避免手动筛选大量数据。  \n\n2. **合作方筛选**：  \n   - 问题：某在线旅游平台希望与 **新成立的旅行社** 合作，但需要确认其资质是否在有效期内（如 2022 年获批）。  \n   - 需求：通过 SQL 直接提取符合条件的旅行社，提高合作筛选效率。  \n\n3. **市场分析**：  \n   - 问题：旅游行业分析师想了解 **2022 年旅游市场的准入情况**（如新增旅行社数量）。  \n   - 需求：通过许可时间快速统计年度数据，支持行业报告撰写。  \n\n---\n\n### **总结**  \n该 SQL 语句的核心是 **按业务类型和时间范围筛选旅行社信息**，适用于监管、合作筛选、市场分析等场景，帮助用户高效获取特定条件下的结构化数据。",
+  "natural_language_query": "市民反映，最近想报团旅游，但担心遇到不正规的旅行社。听说2022年新批准了一批正规旅行社，想查一下去年都有哪些旅行社拿到了旅游业务许可。主要是想了解这些旅行社的名字、具体经营范围和批准时间，好做个参考。因为自己去年就看到新闻说要加强旅游市场监管，所以特别想找新批准的靠谱旅行社。能不能帮忙查一下2022年新批准的这些旅行社的详细情况？",
+  "results": 0,
+  "sql skeleton": "select _ as _ ,_ as _ ,_ as _ from _ where _ = _ and _ = _",
+  "database": "旅游住宿",
+  "tables": {
+    "shiwenhuahelvyoujulvxingshexinxi3530": [
+      "shiwenhuahelvyoujulvxingshexinxi3530.旅行社名称",
+      "shiwenhuahelvyoujulvxingshexinxi3530.旅行社业务经营许可证编号",
+      "shiwenhuahelvyoujulvxingshexinxi3530.许可经营业务",
+      "shiwenhuahelvyoujulvxingshexinxi3530.许可时间"
+    ],
+    "shunyiqushunyiquxingjifandian2102": [
+      "shunyiqushunyiquxingjifandian2102.顺义区星级饭店",
+      "shunyiqushunyiquxingjifandian2102.Unnamed: 1",
+      "shunyiqushunyiquxingjifandian2102.Unnamed: 2",
+      "shunyiqushunyiquxingjifandian2102.Unnamed: 3"
+    ]
+  }
+}

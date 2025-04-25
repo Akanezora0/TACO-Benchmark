@@ -1,0 +1,23 @@
+{
+  "sql": "SELECT river_main_stem_waterbodies_wbid.OBJECTID, river_main_stem_waterbodies_wbid.WBID, river_main_stem_waterbodies_wbid.WBNAME, river_main_stem_waterbodies_wbid.WBDESC, waste_water_facilities.X, waste_water_facilities.Y, waste_water_facilities.FacilityName, waste_water_facilities.FacilityID, waste_water_facilities.WWInventoryURL \nFROM river_main_stem_waterbodies_wbid \nJOIN waste_water_facilities ON river_main_stem_waterbodies_wbid.OBJECTID = waste_water_facilities.FacilityID \nWHERE river_main_stem_waterbodies_wbid.WBID = 'WBID' AND river_main_stem_waterbodies_wbid.WBNAME = 'WBNAME' AND river_main_stem_waterbodies_wbid.WBDESC = 'WBDESC';\n```",
+  "problem_description": "### Query intent:\nThe SQL statement aims to retrieve specific data from two related tables (`river_main_stem_waterbodies_wbid` and `waste_water_facilities`) based on matching criteria.\n\n### Detailed description:\n- **Table `river_main_stem_waterbodies_wbid`**:\n  - **Columns**: `OBJECTID`, `WBID`, `WBNAME`, `WBDESC`. These columns likely contain unique identifiers (`OBJECTID`), a waterbody identifier (`WBID`), the name of the waterbody (`WBNAME`), and a description of the waterbody (`WBDESC`).\n- **Table `waste_water_facilities`**:\n  - **Columns**: `X`, `Y`, `FacilityName`, `FacilityID`, `WWInventoryURL`. These columns might include coordinates (`X`, `Y`), the name of the facility (`FacilityName`), a unique facility identifier (`FacilityID`), and the URL for inventory details (`WWInventoryURL`).\n\n- **Join Condition**:\n  The SQL statement joins these two tables using the `OBJECTID` column from `river_main_stem_waterbodies_wbid` and the `FacilityID` column from `waste_water_facilities`. This join is intended to link records where the `OBJECTID` matches the `FacilityID`, suggesting that facilities are associated with specific waterbodies.\n\n- **Where Conditions**:\n  The conditions `WBID = 'WBID'`, `WBNAME = 'WBNAME'`, and `WBDESC = 'WBDESC'` specify that only records where the waterbody has a particular `WBID`, name, and description should be returned. This indicates a search for a specific waterbody.\n\n### Business scenario:\nThis query could be used in environmental management or water quality monitoring systems. For instance, it might help identify all waste water treatment facilities (`waste_water_facilities`) associated with a specific waterbody (`river_main_stem_waterbodies_wbid`). This could be useful for regulatory compliance checks, assessing pollution sources, or planning remediation efforts.\n\n### User description:\nA user working in an environmental protection agency or a water management department might need this information to track the facilities responsible for treating waste water in a designated water body. They might want to ensure that all facilities within a specific water body comply with environmental regulations, monitor their operations, or coordinate maintenance and upgrades across multiple facilities associated with one body of water.",
+  "natural_language_query": "As a member of the environmental protection team, I'm looking into the facilities that handle waste water for a specific water body. I need to find out which facilities are linked to a particular water body identified by its ID, named specifically, and described in a certain way. Could you help me construct a SQL query to fetch all the waste water facilities (`waste_water_facilities`) that are connected to a water body with a given ID, name, and description (`river_main_stem_waterbodies_wbid`)?\n\nSpecifically, I'm interested in retrieving the facilities' names, their unique IDs, and the URLs to their inventory details (`WWInventoryURL`). The goal is to have a comprehensive list of facilities so we can conduct detailed audits, ensure compliance with environmental standards, and plan necessary improvements or interventions more effectively.",
+  "results": 0,
+  "sql skeleton": "select _ ._ ._ , _ ._ , _ ._ ._ , _ ._ from _ join _ on _ ._ = _ ._ where _ ._ = _ and _ ._ = _ and _ ._ = _ ;",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "river_main_stem_waterbodies_wbid": [
+      "river_main_stem_waterbodies_wbid.OBJECTID",
+      "river_main_stem_waterbodies_wbid.WBID",
+      "river_main_stem_waterbodies_wbid.WBNAME",
+      "river_main_stem_waterbodies_wbid.WBDESC"
+    ],
+    "waste_water_facilities": [
+      "waste_water_facilities.X",
+      "waste_water_facilities.Y",
+      "waste_water_facilities.FacilityName",
+      "waste_water_facilities.FacilityID",
+      "waste_water_facilities.WWInventoryURL"
+    ]
+  }
+}

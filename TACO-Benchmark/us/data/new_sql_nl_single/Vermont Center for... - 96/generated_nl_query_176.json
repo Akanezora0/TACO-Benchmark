@@ -1,0 +1,49 @@
+{
+  "sql": "SELECT sand_and_gravel_deposits.OBJECTID, sand_and_gravel_deposits.AG_TYPE, sand_and_gravel_deposits.GlobalID, sand_and_gravel_deposits.SHAPEarea, sand_and_gravel_deposits.SHAPElen, invasive_species.X, invasive_species.Y, invasive_species.SiteName, invasive_species.ObservationID, invasive_species.InvasiveName FROM sand_and_gravel_deposits JOIN invasive_species ON sand_and_gravel_deposits.OBJECTID = invasive_species.ObservationID WHERE invasive_species.ObservationDate = '2023-01-01' AND invasive_species.Observer = 'John Doe' AND invasive_species.SurveyType = 'Annual Survey'",
+  "problem_description": "### Query intent:\nThe SQL statement aims to extract specific data related to sand and gravel deposits and invasive species from two different tables (`sand_and_gravel_deposits` and `invasive_species`). The goal is to find information about sand and gravel deposits where invasive species were observed on January 1, 2023, by a person named John Doe during an annual survey.\n\n### Detailed description:\n1. **Table `sand_and_gravel_deposits`**:\n   - **Columns**:\n     - `OBJECTID`: A unique identifier for each sand and gravel deposit.\n     - `AG_TYPE`: Type of sand and gravel deposit.\n     - `GlobalID`: A globally unique identifier for the deposit.\n     - `SHAPEarea`: Area covered by the deposit.\n     - `SHAPElen`: Length of the deposit (if applicable).\n   - **Join condition**: `sand_and_gravel_deposits.OBJECTID = invasive_species.ObservationID`. This condition links records from the `sand_and_gravel_deposits` table with corresponding records in the `invasive_species` table based on the `OBJECTID`.\n\n2. **Table `invasive_species`**:\n   - **Columns**:\n     - `X`: X-coordinate of the location where the invasive species was observed.\n     - `Y`: Y-coordinate of the location where the invasive species was observed.\n     - `SiteName`: Name of the site where the observation was made.\n     - `ObservationID`: A unique identifier for each observation.\n     - `InvasiveName`: Name of the invasive species observed.\n   - **Join condition**: `sand_and_gravel_deposits.OBJECTID = invasive_species.ObservationID`.\n   - **Conditions**:\n     - `invasive_species.ObservationDate = '2023-01-01'`: Only observations made on January 1, 2023, are considered.\n     - `invasive_species.Observer = 'John Doe'`: Observations made by John Doe are included.\n     - `invasive_species.SurveyType = 'Annual Survey'`: Observations from an annual survey are selected.\n\n### Business scenario:\nThis query is useful in environmental monitoring and management, particularly for tracking the spread of invasive species in areas with sand and gravel deposits. It helps in identifying specific sites (sand and gravel deposits) where invasive species were observed, along with the coordinates and names of the species. This information can be crucial for developing targeted",
+  "natural_language_query": "User: Hi there! I'm trying to look into some environmental data for my research project. Specifically, I'm interested in finding out if there were any instances of invasive species being spotted at sand and gravel deposits on January 1, 2023. The observer's name was John Doe, and the type of survey was an annual one. Could you help me with this?\n\nAssistant: Sure, I can help with that. You're looking for information on sand and gravel deposits where invasive species were observed on January 1, 2023, right? The observations should have been made by someone named John Doe during an annual survey. To find this data, we'll need to join two tables together. One table has details about the sand and gravel deposits, including their unique identifiers and geographical dimensions. The other table contains information on invasive species sightings, including the exact location, date, observer, and the name of the invasive species. \n\nWe'll match the records from both tables using the unique identifier for each deposit (which also serves as the ObservationID for the sighting). Then, we'll filter our results to only include observations made on January 1, 2023, by John Doe, and specifically from an annual survey. This way, we can gather the necessary data for your research project efficiently.",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ from _ join _ on _ ._ = _ ._ where _ ._ = _ and _ ._ = _ and _ = _",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "sand_and_gravel_deposits": [
+      "sand_and_gravel_deposits.OBJECTID",
+      "sand_and_gravel_deposits.AG_TYPE",
+      "sand_and_gravel_deposits.GlobalID",
+      "sand_and_gravel_deposits.SHAPEarea",
+      "sand_and_gravel_deposits.SHAPElen"
+    ],
+    "invasive_species": [
+      "invasive_species.X",
+      "invasive_species.Y",
+      "invasive_species.SiteName",
+      "invasive_species.ObservationID",
+      "invasive_species.InvasiveName",
+      "invasive_species.ObservationDate",
+      "invasive_species.Observer",
+      "invasive_species.SurveyType",
+      "invasive_species.Latitude",
+      "invasive_species.Longitude",
+      "invasive_species.Town",
+      "invasive_species.GrossArea",
+      "invasive_species.InfestedArea",
+      "invasive_species.PlantDescription",
+      "invasive_species.DistributionName",
+      "invasive_species.AssessmentDate",
+      "invasive_species.TreatmentDate",
+      "invasive_species.TreatmentEffectiveness",
+      "invasive_species.TreatmentType",
+      "invasive_species.TreatmentPerson",
+      "invasive_species.TreatmentAssessmentDate",
+      "invasive_species.Assessor",
+      "invasive_species.TreatmentAssessmentNotes",
+      "invasive_species.TreatmentHours",
+      "invasive_species.ChemicalName",
+      "invasive_species.ChemicalConsentration",
+      "invasive_species.ChemicalOunces",
+      "invasive_species.ApplicationMethod",
+      "invasive_species.CertifiedApplicator",
+      "invasive_species.EPARegistationNumber"
+    ]
+  }
+}

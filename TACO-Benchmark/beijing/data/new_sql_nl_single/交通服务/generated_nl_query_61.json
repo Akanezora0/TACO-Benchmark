@@ -1,0 +1,28 @@
+{
+  "sql": "SELECT \"shijiaotongweichengkeyindaojichuxinxi3710.公交线路信息\" FROM \"shijiaotongweichengkeyindaojichuxinxi3710\" WHERE \"shijiaotongweichengkeyindaojichuxinxi3710.序号\" = 1",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从指定表中查询序号为1的公交线路信息。\n\n- **详细描述**：\n  - **表**：`shijiaotongweichengkeyindaojichuxinxi3710`，该表可能存储了公交线路的基础信息。\n  - **列**：\n    - `shijiaotongweichengkeyindaojichuxinxi3710.公交线路信息`：该列存储了公交线路的具体信息，可能是线路名称、站点信息、运营时间等。\n    - `shijiaotongweichengkeyindaojichuxinxi3710.序号`：该列可能是每条公交线路的唯一标识或排序编号。\n  - **条件**：`WHERE \"shijiaotongweichengkeyindaojichuxinxi3710.序号\" = 1`，表示只查询序号为1的公交线路信息。\n\n- **业务场景**：\n  - 该查询可以用于公交信息管理系统，帮助用户或管理员快速获取特定公交线路的详细信息。\n  - 可能用于公交线路的查询、展示或编辑功能，尤其是在需要根据序号快速定位某条线路时。\n\n- **用户描述**：\n  - 用户可能需要查询序号为1的公交线路的具体信息，例如线路名称、途经站点、首末班车时间等，以便了解该线路的运营情况。\n  - 例如，用户可能在公交查询APP或网站上输入序号1，系统返回该线路的详细信息，帮助用户规划出行路线。",
+  "natural_language_query": "市民反映，在公交站台看到线路查询系统里有个编号为1的公交车，但是站牌信息有点模糊看不清具体路线。想了解一下这条1号公交车的详细情况，比如都经过哪些站点啊、早上几点发车晚上几点收车啊这些信息。因为明天早上要去医院看病，听说坐1路车能到，但是不确定是不是这个编号1的线路，希望能帮忙查清楚这条线路的具体运营信息。",
+  "results": 0,
+  "sql skeleton": "SELECT _ _ FROM  WHERE ",
+  "database": "交通服务",
+  "tables": {
+    "shigonganjujiaotongweifachulijigou1949": [
+      "shigonganjujiaotongweifachulijigou1949.交通违法处理机构",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 1",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 2",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 3",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 4",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 5",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 6"
+    ],
+    "shijiaotongweichengkeyindaojichuxinxi3710": [
+      "shijiaotongweichengkeyindaojichuxinxi3710.序号",
+      "shijiaotongweichengkeyindaojichuxinxi3710.枢纽站信息",
+      "shijiaotongweichengkeyindaojichuxinxi3710.周边交通指南",
+      "shijiaotongweichengkeyindaojichuxinxi3710.公交线路信息",
+      "shijiaotongweichengkeyindaojichuxinxi3710.轨道线路信息",
+      "shijiaotongweichengkeyindaojichuxinxi3710.更新时间",
+      "shijiaotongweichengkeyindaojichuxinxi3710.共享时间 "
+    ]
+  }
+}

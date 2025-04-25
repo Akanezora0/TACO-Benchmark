@@ -1,0 +1,24 @@
+{
+  "sql": "SELECT \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYXM\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.FZRQ\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.YXQZ\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.DWMC\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.EXCHANGETIME\" FROM \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\" WHERE \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH\" = '指定查询条件的XKZBH'",
+  "results": 0,
+  "sql skeleton": "SELECT _ _ FROM ",
+  "databases": [
+    "安全生活",
+    "餐饮美食"
+  ],
+  "tables": {
+    "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374": {
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374": [
+        "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC",
+        "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH",
+        "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS",
+        "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYXM",
+        "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.FZRQ",
+        "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.YXQZ",
+        "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID",
+        "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.DWMC",
+        "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.EXCHANGETIME"
+      ]
+    }
+  }
+}

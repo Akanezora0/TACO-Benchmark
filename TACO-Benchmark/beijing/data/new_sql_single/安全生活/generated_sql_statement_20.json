@@ -1,0 +1,7 @@
+{
+  "sql": "SELECT column_name FROM table_name WHERE condition;",
+  "results": 0,
+  "sql skeleton": "select _ from _ where _",
+  "database": "安全生活",
+  "tables": {}
+}

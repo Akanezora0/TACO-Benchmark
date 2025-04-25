@@ -1,0 +1,50 @@
+{
+  "sql": "SELECT \"shiguihuaziranziyuanweiyinshiye1523.HID\", \"shiguihuaziranziyuanweiyinshiye1523.HNAME\" FROM \"shiguihuaziranziyuanweiyinshiye1523\" WHERE \"shiguihuaziranziyuanweiyinshiye1523.HNAME\" = '旅游景区';",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从表 `shiguihuaziranziyuanweiyinshiye1523` 中查询所有 `HNAME` 列值为“旅游景区”的记录，并返回这些记录的 `HID` 和 `HNAME` 列的值。\n\n- **详细描述**：\n  - **涉及的表**：`shiguihuaziranziyuanweiyinshiye1523`。\n  - **涉及的列**：\n    - `HID`：可能是表中表示唯一标识的列，例如景区ID。\n    - `HNAME`：可能是表中表示名称的列，例如景区名称。\n  - **条件**：`\"shiguihuaziranziyuanweiyinshiye1523.HNAME\" = '旅游景区'`，即筛选出景区名称为“旅游景区”的记录。\n\n- **业务场景**：\n  - 该查询可能用于旅游管理系统或自然资源规划系统中，目的是筛选出所有被标记为“旅游景区”的地点或资源。\n  - 例如，系统可能需要统计或展示所有旅游景区的信息，或者为其他业务逻辑（如景区推荐、资源分配等）提供数据支持。\n\n- **用户描述**：\n  - 用户可能是旅游规划师或景区管理人员，他们需要快速获取所有被归类为“旅游景区”的地点信息。\n  - 用户可能遇到的实际问题包括：\n    - 需要了解哪些地点是旅游景区，以便进行旅游路线规划或资源管理。\n    - 需要验证或确认某些地点是否被正确标记为旅游景区。\n    - 需要为游客提供旅游景区的列表或详细信息。",
+  "natural_language_query": "市民反映，最近在规划旅游线路时发现系统里有些景点分类不太清楚。想咨询一下哪些地方是正规的旅游景区？因为带团的时候需要确保去的都是政府认证的景点，之前有游客投诉说去的所谓\"景区\"其实没有资质。特别是想知道那些明确标注为\"旅游景区\"的地方都有哪些，能不能给个完整名单？这样我们旅行社安排行程也能更规范些。来电希望核实并获取正规旅游景区的具体信息。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "shiguihuaziranziyuanweiyinshiye1523": [
+      "shiguihuaziranziyuanweiyinshiye1523.HID",
+      "shiguihuaziranziyuanweiyinshiye1523.FATHERID",
+      "shiguihuaziranziyuanweiyinshiye1523.HNAME",
+      "shiguihuaziranziyuanweiyinshiye1523.OTHERNAME",
+      "shiguihuaziranziyuanweiyinshiye1523.CATEGORY",
+      "shiguihuaziranziyuanweiyinshiye1523.SUBCATEGOR",
+      "shiguihuaziranziyuanweiyinshiye1523.COUNTYNAME",
+      "shiguihuaziranziyuanweiyinshiye1523.STREETNAME",
+      "shiguihuaziranziyuanweiyinshiye1523.DYNASTY",
+      "shiguihuaziranziyuanweiyinshiye1523.SUBDYNASTY",
+      "shiguihuaziranziyuanweiyinshiye1523.ADDRESS",
+      "shiguihuaziranziyuanweiyinshiye1523.RANK",
+      "shiguihuaziranziyuanweiyinshiye1523.BATCH",
+      "shiguihuaziranziyuanweiyinshiye1523.PUBTIME",
+      "shiguihuaziranziyuanweiyinshiye1523.USERS",
+      "shiguihuaziranziyuanweiyinshiye1523.PURPOSE",
+      "shiguihuaziranziyuanweiyinshiye1523.OWNERSHIP",
+      "shiguihuaziranziyuanweiyinshiye1523.STATEEVALU",
+      "shiguihuaziranziyuanweiyinshiye1523.SINGLERELI",
+      "shiguihuaziranziyuanweiyinshiye1523.PROTECTION",
+      "shiguihuaziranziyuanweiyinshiye1523.ATTACHEDRE",
+      "shiguihuaziranziyuanweiyinshiye1523.RELATEDPEO",
+      "shiguihuaziranziyuanweiyinshiye1523.RELATEDEVE",
+      "shiguihuaziranziyuanweiyinshiye1523.PUBNAME",
+      "shiguihuaziranziyuanweiyinshiye1523.SOURCE",
+      "shiguihuaziranziyuanweiyinshiye1523.EDITOR",
+      "shiguihuaziranziyuanweiyinshiye1523.ISREDUNDAN",
+      "shiguihuaziranziyuanweiyinshiye1523.THEME"
+    ],
+    "yanqingquyanqingqulvyoujingquxinxi3381": [
+      "yanqingquyanqingqulvyoujingquxinxi3381.旅游景区",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 1",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 2",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 3",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 4",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 5",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 6",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 7"
+    ]
+  }
+}

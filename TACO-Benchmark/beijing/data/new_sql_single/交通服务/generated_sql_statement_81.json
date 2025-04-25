@@ -1,0 +1,27 @@
+{
+  "sql": "SELECT \"huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.序号\", \"huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.行政相对人名称\", \"huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.统一社会信用代码\", \"huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.行政许可决定文书号\", \"huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.许可内容\", \"huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.许可决定日期\", \"huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.许可机关\", \"shijiaotongweixianchangxunchaxinxi3675.序号\", \"shijiaotongweixianchangxunchaxinxi3675.工作内容\", \"shijiaotongweixianchangxunchaxinxi3675.巡查时间\", \"shijiaotongweixianchangxunchaxinxi3675.巡查人次\", \"shijiaotongweixianchangxunchaxinxi3675.巡查单位\", \"shijiaotongweixianchangxunchaxinxi3675.巡查位置\", \"shijiaotongweixianchangxunchaxinxi3675.共享时间\", \"shijiaotongweixianchangxunchaxinxi3675.更新时间\" FROM \"huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053\" UNION SELECT * FROM \"shijiaotongweixianchangxunchaxinxi3675\";",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ ;",
+  "database": "交通服务",
+  "tables": {
+    "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053": [
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.序号",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.行政相对人名称",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.统一社会信用代码",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.行政许可决定文书号",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.许可内容",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.许可决定日期",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.许可机关"
+    ],
+    "shijiaotongweixianchangxunchaxinxi3675": [
+      "shijiaotongweixianchangxunchaxinxi3675.序号",
+      "shijiaotongweixianchangxunchaxinxi3675.工作内容",
+      "shijiaotongweixianchangxunchaxinxi3675.巡查时间",
+      "shijiaotongweixianchangxunchaxinxi3675.巡查人次",
+      "shijiaotongweixianchangxunchaxinxi3675.巡查单位",
+      "shijiaotongweixianchangxunchaxinxi3675.巡查位置",
+      "shijiaotongweixianchangxunchaxinxi3675.共享时间",
+      "shijiaotongweixianchangxunchaxinxi3675.更新时间"
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "sql": "SELECT \"pingguqupingguqushandongzhuangzhendengjiminsu3496\".\"山东庄镇等级民宿\", \"shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640\".\"名称\", \"shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640\".\"级别\" FROM \"pingguqupingguqushandongzhuangzhendengjiminsu3496\" INNER JOIN \"shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640\" ON \"pingguqupingguqushandongzhuangzhendengjiminsu3496\".\"Unnamed: 1\" = \"shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640\".\"序号\" WHERE \"shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640\".\"级别\" = '高级' ;",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是查询平谷区山东庄镇的等级民宿与顺义区非物质文化遗产名录项目信息中级别为“高级”的相关数据，并将两者通过某种关联条件进行匹配。\n\n- **详细描述**：\n  - **涉及的表**：\n    1. `pingguqupingguqushandongzhuangzhendengjiminsu3496`：平谷区山东庄镇的等级民宿表。\n    2. `shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640`：顺义区非物质文化遗产名录项目信息表。\n  - **涉及的列**：\n    1. `pingguqupingguqushandongzhuangzhendengjiminsu3496` 表中的 `山东庄镇等级民宿` 列。\n    2. `shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640` 表中的 `名称` 和 `级别` 列。\n  - **关联条件**：通过 `pingguqupingguqushandongzhuangzhendengjiminsu3496` 表中的 `Unnamed: 1` 列与 `shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640` 表中的 `序号` 列进行内连接（INNER JOIN）。\n  - **筛选条件**：仅选择 `shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640` 表中 `级别` 为“高级”的记录。\n\n- **业务场景**：\n  - 该查询可能用于旅游管理部门或文化保护机构，目的是找出平谷区山东庄镇的高等级民宿与顺义区高级非物质文化遗产项目之间的关联信息。例如，可能是为了推广高等级民宿与高级非物质文化遗产的结合旅游项目，或者分析两者之间的地理或文化关联。\n\n- **用户描述**：\n  - 用户可能是旅游规划师或文化保护工作者，他们需要了解哪些高等级民宿与高级非物质文化遗产项目有关联，以便设计特色旅游线路或推广文化体验活动。例如，用户可能希望找到那些既提供高等级住宿体验，又靠近高级非物质文化遗产项目的民宿，从而为游客提供更丰富的文化体验。",
+  "natural_language_query": "市民反映，最近在规划平谷区山东庄镇的文化旅游线路时遇到困惑。想咨询一下，当地那些评级比较高的民宿（就是那种等级评定比较好的）和顺义区那些特别重要的非物质文化遗产项目（听说有些是\"高级\"级别的）之间有没有什么联系？因为想设计一条既能住得好又能体验高级非遗的旅游路线。之前听同行说好像有些民宿和这些非遗项目是有关联的，但具体怎么关联的搞不清楚。现在游客都特别喜欢这种有文化内涵的深度游，所以特别想知道这两者之间能不能结合起来推广。能不能帮忙查查这方面的情况？主要是想了解山东庄镇的好民宿和顺义区那些高级非遗项目之间有没有什么匹配的信息。",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ from _ where _ =_ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "pingguqupingguqushandongzhuangzhendengjiminsu3496": [
+      "pingguqupingguqushandongzhuangzhendengjiminsu3496.山东庄镇等级民宿",
+      "pingguqupingguqushandongzhuangzhendengjiminsu3496.Unnamed: 1",
+      "pingguqupingguqushandongzhuangzhendengjiminsu3496.Unnamed: 2"
+    ],
+    "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640": [
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.序号",
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.名称",
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.类别",
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.公布时间",
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.级别"
+    ]
+  }
+}

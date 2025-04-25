@@ -1,0 +1,108 @@
+{
+  "sql": "SELECT HID, HNAME FROM shiguihuaziranziyuanweishiguan1516;",
+  "results": [
+    [
+      33836,
+      "东交民巷使馆建筑群奥地利使馆旧址"
+    ],
+    [
+      33773,
+      "东交民巷使馆建筑群国际俱乐部旧址"
+    ],
+    [
+      33853,
+      "荷兰使馆旧址"
+    ],
+    [
+      33830,
+      "美国使馆旧址"
+    ],
+    [
+      33854,
+      "原俄国使馆武官处"
+    ],
+    [
+      33654,
+      "原丹麦使馆"
+    ],
+    [
+      33634,
+      "东交民巷使馆建筑群意大利使馆旧址"
+    ],
+    [
+      33638,
+      "东交民巷使馆建筑群日本公使馆旧址"
+    ],
+    [
+      33788,
+      "东交民巷使馆建筑群法国使馆旧址"
+    ],
+    [
+      33859,
+      "意大利使馆旧址建筑群"
+    ],
+    [
+      33746,
+      "东交民巷使馆建筑群英国使馆旧址"
+    ],
+    [
+      33752,
+      "东交民巷使馆建筑群日本使馆旧址"
+    ],
+    [
+      33722,
+      "东交民巷使馆建筑群比利时使馆旧址"
+    ],
+    [
+      52431,
+      "俄罗斯大使馆"
+    ],
+    [
+      52072,
+      "原俄国使馆官员住宅"
+    ]
+  ],
+  "sql skeleton": "SELECT _ , _ FROM _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "shiguihuaziranziyuanweishiguan1516": [
+      "shiguihuaziranziyuanweishiguan1516.HID",
+      "shiguihuaziranziyuanweishiguan1516.FATHERID",
+      "shiguihuaziranziyuanweishiguan1516.HNAME",
+      "shiguihuaziranziyuanweishiguan1516.OTHERNAME",
+      "shiguihuaziranziyuanweishiguan1516.CATEGORY",
+      "shiguihuaziranziyuanweishiguan1516.SUBCATEGOR",
+      "shiguihuaziranziyuanweishiguan1516.COUNTYNAME",
+      "shiguihuaziranziyuanweishiguan1516.STREETNAME",
+      "shiguihuaziranziyuanweishiguan1516.DYNASTY",
+      "shiguihuaziranziyuanweishiguan1516.SUBDYNASTY",
+      "shiguihuaziranziyuanweishiguan1516.ADDRESS",
+      "shiguihuaziranziyuanweishiguan1516.RANK",
+      "shiguihuaziranziyuanweishiguan1516.BATCH",
+      "shiguihuaziranziyuanweishiguan1516.PUBTIME",
+      "shiguihuaziranziyuanweishiguan1516.USERS",
+      "shiguihuaziranziyuanweishiguan1516.PURPOSE",
+      "shiguihuaziranziyuanweishiguan1516.OWNERSHIP",
+      "shiguihuaziranziyuanweishiguan1516.STATEEVALU",
+      "shiguihuaziranziyuanweishiguan1516.SINGLERELI",
+      "shiguihuaziranziyuanweishiguan1516.PROTECTION",
+      "shiguihuaziranziyuanweishiguan1516.ATTACHEDRE",
+      "shiguihuaziranziyuanweishiguan1516.RELATEDPEO",
+      "shiguihuaziranziyuanweishiguan1516.RELATEDEVE",
+      "shiguihuaziranziyuanweishiguan1516.PUBNAME",
+      "shiguihuaziranziyuanweishiguan1516.SOURCE",
+      "shiguihuaziranziyuanweishiguan1516.EDITOR",
+      "shiguihuaziranziyuanweishiguan1516.ISREDUNDAN",
+      "shiguihuaziranziyuanweishiguan1516.THEME"
+    ],
+    "fengtaiqufengtaiquxingjijiudian1397": [
+      "fengtaiqufengtaiquxingjijiudian1397.星级酒店明细",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 1",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 2",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 3",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 4",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 5",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 6"
+    ]
+  }
+}

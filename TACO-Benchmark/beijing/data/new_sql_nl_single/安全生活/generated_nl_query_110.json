@@ -1,0 +1,9 @@
+{
+  "sql": "SELECT T1.column1, T1.column2, T2.column3, T3.column4 \nFROM table1 AS T1 \nJOIN table2 AS T2 ON T1.common_column = T2.common_column \nJOIN table3 AS T3 ON T1.common_column = T3.common_column \nWHERE T1.unique_column = value1 AND T2.unique_column = value2 AND T3.unique_column = value3;",
+  "problem_description": "### 查询意图：\n该 SQL 语句的目的是从三个关联的表（`table1`、`table2` 和 `table3`）中检索特定条件下的数据，返回这些表中指定的列。\n\n### 详细描述：\n1. **涉及的表**：\n   - `table1`（别名为 `T1`）\n   - `table2`（别名为 `T2`）\n   - `table3`（别名为 `T3`）\n\n2. **涉及的列**：\n   - 从 `T1` 中选取 `column1` 和 `column2`。\n   - 从 `T2` 中选取 `column3`。\n   - 从 `T3` 中选取 `column4`。\n\n3. **关联条件**：\n   - `T1` 和 `T2` 通过 `common_column` 进行关联。\n   - `T1` 和 `T3` 也通过 `common_column` 进行关联。\n\n4. **筛选条件**：\n   - `T1.unique_column = value1`：筛选 `T1` 中 `unique_column` 等于 `value1` 的记录。\n   - `T2.unique_column = value2`：筛选 `T2` 中 `unique_column` 等于 `value2` 的记录。\n   - `T3.unique_column = value3`：筛选 `T3` 中 `unique_column` 等于 `value3` 的记录。\n\n### 业务场景：\n该查询可能用于以下业务场景：\n1. **数据整合**：需要从多个表中提取与某个实体相关的信息。例如，`T1` 可能是客户表，`T2` 可能是订单表，`T3` 可能是支付表，通过 `common_column`（如客户 ID）关联这些表，获取客户的订单和支付信息。\n2. **条件筛选**：需要根据多个条件（`value1`、`value2`、`value3`）筛选出符合特定条件的记录。例如，筛选出某个特定客户（`value1`）的某个特定订单（`value2`）的某个特定支付记录（`value3`）。\n\n### 用户描述：\n在上述业务场景中，用户可能遇到的实际问题或需求包括：\n1. **客户订单查询**：用户可能需要查看某个客户的特定订单及其支付详情，以便核实订单状态或支付信息。\n2. **数据验证**：用户可能需要验证多个表中与某个实体相关的数据是否一致或符合预期条件。\n3. **报表生成**：用户可能需要生成包含多个表数据的报表，例如客户订单支付明细报表，以便进行财务或业务分析。\n\n通过该 SQL 查询，用户可以快速获取跨多个表的关联数据，并根据特定条件筛选出所需信息，从而满足上述业务需求。",
+  "natural_language_query": "市民反映，我在你们系统里查不到我的订单和付款的完整信息，特别着急。我是老客户了，客户编号应该是12345，之前下过一个订单号是67890的，付款单号我记得是54321。但是每次查询都只能看到部分信息，要么看到订单看不到付款，要么反过来。现在财务那边催着要这些完整记录对账，能不能帮我查一下这个客户的所有相关订单和付款的详细信息啊？包括订单内容、付款状态这些都要。我记得当时付款是成功的，但是系统显示不一致，特别困惑。",
+  "results": 0,
+  "sql skeleton": "select _ ._ ._ , _ ._ , _ ._ ._ , _ ._ from _ join _ on _ ._ = _ ._ where _ ._ = _ and _ ._ = _ and _ ._ = _ ;",
+  "database": "安全生活",
+  "tables": {}
+}

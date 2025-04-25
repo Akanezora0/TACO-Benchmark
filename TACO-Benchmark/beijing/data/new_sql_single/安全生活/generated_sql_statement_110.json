@@ -1,0 +1,7 @@
+{
+  "sql": "SELECT T1.column1, T1.column2, T2.column3, T3.column4 \nFROM table1 AS T1 \nJOIN table2 AS T2 ON T1.common_column = T2.common_column \nJOIN table3 AS T3 ON T1.common_column = T3.common_column \nWHERE T1.unique_column = value1 AND T2.unique_column = value2 AND T3.unique_column = value3;",
+  "results": 0,
+  "sql skeleton": "select _ ._ ._ , _ ._ , _ ._ ._ , _ ._ from _ join _ on _ ._ = _ ._ where _ ._ = _ and _ ._ = _ and _ ._ = _ ;",
+  "database": "安全生活",
+  "tables": {}
+}

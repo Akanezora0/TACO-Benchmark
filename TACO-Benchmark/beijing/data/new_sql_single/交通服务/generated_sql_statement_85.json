@@ -1,0 +1,23 @@
+{
+  "sql": "SELECT haidianqugonggongjianzhutingchechang3416.序号, haidianqugonggongjianzhutingchechang3416.停车场名称, haidianqugonggongjianzhutingchechang3416.停车场类型, haidianqugonggongjianzhutingchechang3416.详细地址, haidianqugonggongjianzhutingchechang3416.经营单位, shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1, shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 2, shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 3, shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 4, shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 5 FROM haidianqugonggongjianzhutingchechang3416 JOIN shijiaotongweishoufeigonglushoufeibiaozhun543 ON haidianqugonggongjianzhutingchechang3416.经营单位 = shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表 WHERE haidianqugonggongjianzhutingchechang3416.序号 = '1' and haidianqugonggongjianzhutingchechang3416.停车场名称 = '某停车场' and (shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1 + shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 2) / 2 = '标准费用';",
+  "results": 0,
+  "sql skeleton": "SELECT _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ FROM _ JOIN _ ON _ ._ = _ ._ WHERE _ ._ = _ and _ = _ and _ (_ ._ ,_ ) = _ ;",
+  "database": "交通服务",
+  "tables": {
+    "haidianqugonggongjianzhutingchechang3416": [
+      "haidianqugonggongjianzhutingchechang3416.序号",
+      "haidianqugonggongjianzhutingchechang3416.停车场名称",
+      "haidianqugonggongjianzhutingchechang3416.停车场类型",
+      "haidianqugonggongjianzhutingchechang3416.详细地址",
+      "haidianqugonggongjianzhutingchechang3416.经营单位"
+    ],
+    "shijiaotongweishoufeigonglushoufeibiaozhun543": [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 2",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 3",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 4",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 5"
+    ]
+  }
+}

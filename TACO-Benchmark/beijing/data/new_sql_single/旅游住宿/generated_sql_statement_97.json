@@ -1,0 +1,21 @@
+{
+  "sql": "SELECT \"fengtaiqufengtaiqujingqujingdianteseyetai1387.景区景点（特色业态）明细\", \"huairouquhuairouqujingqumenpiaojiage1592.怀柔区政府定价景区门票价格\" FROM \"fengtaiqufengtaiqujingqujingdianteseyetai1387\" INNER JOIN \"huairouquhuairouqujingqumenpiaojiage1592\" ON \"fengtaiqufengtaiqujingqujingdianteseyetai1387.序号\" = \"huairouquhuairouqujingqumenpiaojiage1592.序号\";",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "fengtaiqufengtaiqujingqujingdianteseyetai1387": [
+      "fengtaiqufengtaiqujingqujingdianteseyetai1387.景区景点（特色业态）明细",
+      "fengtaiqufengtaiqujingqujingdianteseyetai1387.Unnamed: 1",
+      "fengtaiqufengtaiqujingqujingdianteseyetai1387.Unnamed: 2",
+      "fengtaiqufengtaiqujingqujingdianteseyetai1387.Unnamed: 3"
+    ],
+    "huairouquhuairouqujingqumenpiaojiage1592": [
+      "huairouquhuairouqujingqumenpiaojiage1592.怀柔区政府定价景区门票价格",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 1",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 2",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 3",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 4"
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "sql": "SELECT A._, B._, C._, D._, E._, F._, G._ FROM A JOIN B ON A._ = B._ WHERE A._ = ? AND B._ = ? AND (C._, D._) = (?)",
+  "results": 0,
+  "sql skeleton": "SELECT _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ FROM _ JOIN _ ON _ ._ = _ ._ WHERE _ ._ = _ and _ = _ and _ (_ ._ ,_ ) = _ ;",
+  "database": "安全生活",
+  "tables": {}
+}

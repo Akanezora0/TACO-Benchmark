@@ -1,0 +1,45 @@
+{
+  "sql": "SELECT \"fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.旅行社分社及旅行社服务网点明细\", \"shiguihuaziranziyuanweitongxunshe1518.HNAME\" FROM \"fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396\" INNER JOIN \"shiguihuaziranziyuanweitongxunshe1518\" ON \"fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.HID\" = \"shiguihuaziranziyuanweitongxunshe1518.HID\";",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是通过关联两个表，获取丰台区旅行社分社及服务网点的明细信息以及对应的规划自然资源委通讯社的名称。\n\n- **详细描述**：\n  - **涉及的表**：\n    1. `fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396`：该表存储丰台区旅行社分社及旅行社服务网点的明细信息。\n    2. `shiguihuaziranziyuanweitongxunshe1518`：该表存储规划自然资源委通讯社的相关信息。\n  - **涉及的列**：\n    1. `fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.旅行社分社及旅行社服务网点明细`：该列存储旅行社分社及服务网点的具体明细信息。\n    2. `shiguihuaziranziyuanweitongxunshe1518.HNAME`：该列存储规划自然资源委通讯社的名称。\n  - **关联条件**：两个表通过 `HID` 列进行关联，即 `fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.HID` = `shiguihuaziranziyuanweitongxunshe1518.HID`。\n\n- **业务场景**：\n  - 该查询可以用于获取丰台区旅行社分社及服务网点的详细信息，并结合规划自然资源委通讯社的名称，可能用于旅行社与政府相关部门之间的数据对接或信息共享。\n  - 例如，政府可能需要了解辖区内旅行社分社及服务网点的分布情况，并与规划自然资源委的数据进行核对，以确保信息的准确性和一致性。\n\n- **用户描述**：\n  - 用户可能是政府相关部门的工作人员，需要查询丰台区旅行社分社及服务网点的明细信息，并与规划自然资源委的数据进行关联，以便进行数据核对或统计分析。\n  - 用户可能遇到的实际问题包括：旅行社分社及服务网点的信息不完整或与规划自然资源委的数据不一致，需要通过查询来验证和补充信息。",
+  "natural_language_query": "市民反映，最近在丰台区办理旅行社业务时发现，有些旅行社分社和服务网点的信息好像和政府部门记录的对不上。我是区文旅局的工作人员，现在需要核对辖区内所有旅行社分社和服务网点的具体信息，特别是要看看这些网点跟规划自然资源委那边的通讯社信息能不能对应上。有些网点明明在营业，但系统里查不到记录，或者地址对不上号，这给我们管理工作带来很大困扰。希望能帮忙查一下丰台区所有旅行社分社和服务网点的完整明细，最好能同时看到对应的规划自然资源委那边的通讯社名称，这样我们好做比对核实。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396": [
+      "fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.旅行社分社及旅行社服务网点明细",
+      "fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.Unnamed: 1",
+      "fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.Unnamed: 2",
+      "fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.Unnamed: 3"
+    ],
+    "shiguihuaziranziyuanweitongxunshe1518": [
+      "shiguihuaziranziyuanweitongxunshe1518.HID",
+      "shiguihuaziranziyuanweitongxunshe1518.FATHERID",
+      "shiguihuaziranziyuanweitongxunshe1518.HNAME",
+      "shiguihuaziranziyuanweitongxunshe1518.OTHERNAME",
+      "shiguihuaziranziyuanweitongxunshe1518.CATEGORY",
+      "shiguihuaziranziyuanweitongxunshe1518.SUBCATEGOR",
+      "shiguihuaziranziyuanweitongxunshe1518.COUNTYNAME",
+      "shiguihuaziranziyuanweitongxunshe1518.STREETNAME",
+      "shiguihuaziranziyuanweitongxunshe1518.DYNASTY",
+      "shiguihuaziranziyuanweitongxunshe1518.SUBDYNASTY",
+      "shiguihuaziranziyuanweitongxunshe1518.ADDRESS",
+      "shiguihuaziranziyuanweitongxunshe1518.RANK",
+      "shiguihuaziranziyuanweitongxunshe1518.BATCH",
+      "shiguihuaziranziyuanweitongxunshe1518.PUBTIME",
+      "shiguihuaziranziyuanweitongxunshe1518.USERS",
+      "shiguihuaziranziyuanweitongxunshe1518.PURPOSE",
+      "shiguihuaziranziyuanweitongxunshe1518.OWNERSHIP",
+      "shiguihuaziranziyuanweitongxunshe1518.STATEEVALU",
+      "shiguihuaziranziyuanweitongxunshe1518.SINGLERELI",
+      "shiguihuaziranziyuanweitongxunshe1518.PROTECTION",
+      "shiguihuaziranziyuanweitongxunshe1518.ATTACHEDRE",
+      "shiguihuaziranziyuanweitongxunshe1518.RELATEDPEO",
+      "shiguihuaziranziyuanweitongxunshe1518.RELATEDEVE",
+      "shiguihuaziranziyuanweitongxunshe1518.PUBNAME",
+      "shiguihuaziranziyuanweitongxunshe1518.SOURCE",
+      "shiguihuaziranziyuanweitongxunshe1518.EDITOR",
+      "shiguihuaziranziyuanweitongxunshe1518.ISREDUNDAN"
+    ]
+  }
+}

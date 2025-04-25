@@ -1,0 +1,23 @@
+{
+  "sql": "SELECT \"changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.2021年度昌平A级景区数据开放表\", \"shiwenhuahelvyoujuxingjifandianxinxi2036.��\u0011ࡱ\u001a�\" FROM \"changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842\" INNER JOIN \"shiwenhuahelvyoujuxingjifandianxinxi2036\" ON \"changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 1\" = \"shiwenhuahelvyoujuxingjifandianxinxi2036.\u0001\u0001\" ;",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从两个表中查询特定列的数据，并通过内连接（`INNER JOIN`）关联这两个表，以获取昌平区 2021 年度 A 级景区数据与文化和旅游局星级饭店信息的匹配记录。\n\n---\n\n### **详细描述**  \n1. **涉及的表**：\n   - `changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842`（表名可能为“昌平区2021年度昌平星级饭店数据开放表”）\n   - `shiwenhuahelvyoujuxingjifandianxinxi2036`（表名可能为“市文化和旅游局星级饭店信息”）\n\n2. **查询的列**：\n   - 从第一个表中选择列 `\"changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.2021年度昌平A级景区数据开放表\"`（可能是景区名称或相关数据）。\n   - 从第二个表中选择列 `\"shiwenhuahelvyoujuxingjifandianxinxi2036.��\u0011ࡱ\u001a�\"`（列名乱码，可能是饭店名称或星级信息）。\n\n3. **连接条件**：\n   - 使用 `INNER JOIN` 连接两个表，连接条件是：\n     - `changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 1`（第一个表的未命名列，可能是景区ID或名称）\n     - `shiwenhuahelvyoujuxingjifandianxinxi2036.\u0001\u0001`（第二个表的乱码列，可能是饭店ID或匹配字段）。\n\n4. **可能的查询逻辑**：\n   - 该查询试图将昌平区的 A 级景区数据与文化和旅游局的星级饭店信息进行关联，可能是为了匹配景区与周边饭店的关系，或统计景区附近的住宿资源。\n\n---\n\n### **业务场景**  \n1. **旅游数据分析**：\n   - 政府或旅游管理部门可能需要分析昌平区 A 级景区周边的星级饭店分布情况，以便优化旅游资源配置或制定推广策略。\n2. **数据整合**：\n   - 将不同来源的景区数据和饭店信息整合，形成完整的旅游服务数据集，用于进一步分析或可视化。\n3. **公共服务**：\n   - 为游客提供景区附近的住宿推荐，或为旅游平台提供数据支持。\n\n---\n\n### **用户描述**  \n1. **用户需求**：\n   - 旅游规划者或政府部门希望了解昌平区 A 级景区附近有哪些星级饭店，以便评估旅游配套设施的完善程度。\n2. **实际问题**：\n   - 数据分散在两个不同的表中，且列名不规范（如乱码或“Unnamed”），需要通过关联字段（如景区名称或ID）匹配数据。\n3. **可能的扩展需求**：\n   - 进一步筛选特定星级的饭店，或计算景区与饭店的距离，以提供更精准的推荐。\n\n---\n\n### **总结**  \n该 SQL 语句的核心是通过内连接整合两个来源的旅游数据（景区和饭店），但由于列名不规范或乱码，可能影响查询的准确性和可读性。实际业务中，可能需要先清理数据或明确字段含义，以确保查询结果的有效性。",
+  "natural_language_query": "市民反映，最近在昌平区旅游时发现A级景区周边的住宿信息不太清楚，想了解一下2021年昌平区那些评上A级的景区附近都有哪些星级酒店。听说文化和旅游局那边有饭店的星级评定数据，能不能帮忙查一下这些景区和周边星级饭店的对应关系？主要是想规划旅游路线时参考用，但不知道这两个系统的数据能不能匹配上。之前听说有些数据字段可能对不上，希望能帮忙核实一下，看看能不能查到准确的信息。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842": [
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.2021年度昌平A级景区数据开放表               ",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 1",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 2",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 3",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 4",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 5",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 6"
+    ],
+    "shiwenhuahelvyoujuxingjifandianxinxi2036": [
+      "shiwenhuahelvyoujuxingjifandianxinxi2036.��\u0011ࡱ\u001a�",
+      "shiwenhuahelvyoujuxingjifandianxinxi2036.\u0001\u0001"
+    ]
+  }
+}

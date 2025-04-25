@@ -1,0 +1,7 @@
+{
+  "sql": "select count(*) as total_records, sum(amount) as total_amount, min(date) as earliest_transaction, max(date) as latest_transaction, avg(amount) as average_amount from transactions where status = 'completed'",
+  "results": 0,
+  "sql skeleton": "select _ as _ ,_ as _ ,_ as _ ,_ as _ ,_ as _ from _ where _ = _",
+  "database": "安全生活",
+  "tables": {}
+}

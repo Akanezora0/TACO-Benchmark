@@ -1,0 +1,21 @@
+{
+  "sql": "SELECT \"shijiaotongweichuzuyehujibenxinxi3664.经营业户名称\", \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.评定结果\" FROM \"shijiaotongweichuzuyehujibenxinxi3664\" INNER JOIN \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270\" ON \"shijiaotongweichuzuyehujibenxinxi3664.经营业户名称\" = \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.企业名称\" WHERE \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.评定结果\" = '合格' ;",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ WHERE _ = _ ;",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweichuzuyehujibenxinxi3664": [
+      "shijiaotongweichuzuyehujibenxinxi3664.经营业户名称"
+    ],
+    "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270": [
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.企业名称",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.经营许可证号",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.企业类型",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.所属区县",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.考核人",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.评定时间",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.评定得分",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.评定结果"
+    ]
+  }
+}

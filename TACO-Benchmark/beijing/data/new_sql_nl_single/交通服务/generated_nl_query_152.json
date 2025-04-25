@@ -1,0 +1,29 @@
+{
+  "sql": "SELECT \"shijiaotongweixianchangxunchaxinxi3675.工作内容\", \"shijiaotongweixianchangxunchaxinxi3675.巡查时间\", \"shijiaotongweixianchangxunchaxinxi3675.巡查位置\" FROM \"shijiaotongweixianchangxunchaxinxi3675\" WHERE \"shijiaotongweixianchangxunchaxinxi3675.巡查时间\" = '2022-01-01'",
+  "problem_description": "- **查询意图**：  \n  该 SQL 语句的目的是从表 `shijiaotongweixianchangxunchaxinxi3675` 中查询特定日期（2022年1月1日）的巡查记录，包括工作内容、巡查时间和巡查位置。\n\n- **详细描述**：  \n  - **涉及的表**：`shijiaotongweixianchangxunchaxinxi3675`，表名可能表示“施工现场危险巡查信息”或类似含义。  \n  - **涉及的列**：  \n    - `工作内容`：可能记录巡查时发现的问题或执行的任务。  \n    - `巡查时间`：记录巡查的具体时间，此处筛选条件为 `2022-01-01`。  \n    - `巡查位置`：可能表示巡查的具体地点或区域。  \n  - **查询条件**：仅返回 `巡查时间` 等于 `2022-01-01` 的记录。  \n\n- **业务场景**：  \n  该查询可能用于施工现场的安全管理，例如：  \n  - 追踪某一天的巡查记录，检查是否有安全隐患或未完成的任务。  \n  - 生成特定日期的巡查报告，供管理人员审核或存档。  \n  - 分析某一天的巡查覆盖范围或工作重点。  \n\n- **用户描述**：  \n  用户可能是施工现场的安全管理员或项目经理，需要：  \n  - 回顾某一天（如 `2022-01-01`）的巡查情况，确保所有区域均被检查。  \n  - 查询特定日期的巡查记录，以应对审计或合规检查。  \n  - 快速定位某一天的工作内容或问题，用于后续整改或任务分配。",
+  "natural_language_query": "市民反映，自己是某建筑工地的安全负责人，需要核查2022年元旦那天的现场安全巡查情况。当时应该有工作人员对工地各区域进行了例行检查，但现在找不到当天的具体检查记录了。想了解一下那天都检查了哪些区域，发现了什么问题，以及检查的具体时间。因为最近上级要来检查安全工作，急需补全1月1日当天的巡查资料。来电咨询如何查询元旦当天的工地安全检查记录。",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ from _ where _ =_",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweixianchangxunchaxinxi3675": [
+      "shijiaotongweixianchangxunchaxinxi3675.序号",
+      "shijiaotongweixianchangxunchaxinxi3675.工作内容",
+      "shijiaotongweixianchangxunchaxinxi3675.巡查时间",
+      "shijiaotongweixianchangxunchaxinxi3675.巡查人次",
+      "shijiaotongweixianchangxunchaxinxi3675.巡查单位",
+      "shijiaotongweixianchangxunchaxinxi3675.巡查位置",
+      "shijiaotongweixianchangxunchaxinxi3675.共享时间",
+      "shijiaotongweixianchangxunchaxinxi3675.更新时间"
+    ],
+    "shunyiqugongjiaoxianlujizhandianjibenxinxi2076": [
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.线路运营信息",
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 1",
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 2",
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 3",
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 4",
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 5",
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 6"
+    ]
+  }
+}

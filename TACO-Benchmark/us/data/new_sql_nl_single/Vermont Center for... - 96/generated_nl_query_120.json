@@ -1,0 +1,9751 @@
+{
+  "sql": "SELECT OBJECTID, Source, WBID, LAKEID, EventType, GISAcres FROM lakepond_wbids_and_wbid_segments WHERE OBJECTID > 0 OR Source LIKE '%floodway%' UNION SELECT OBJECTID, FLOODWAY, NULL, NULL, NULL, NULL FROM dfirm_floodways WHERE OBJECTID > 0 AND FLOODWAY IS NOT NULL",
+  "problem_description": "### Query intent:\nThe SQL statement aims to combine (union) data from two different tables (`lakepond_wbids_and_wbid_segments` and `dfirm_floodways`) based on specific conditions, focusing on certain attributes.\n\n### Detailed description:\n1. **Table `lakepond_wbids_and_wbid_segments`**:\n   - **Columns involved**: `OBJECTID`, `Source`, `WBID`, `LAKEID`, `EventType`, `GISAcres`\n   - **Condition**: `OBJECTID > 0 OR Source LIKE '%floodway%'` means the query selects records where the `OBJECTID` is greater than 0 or the `Source` column contains the term 'floodway'. This condition could be used to filter out records that are related to flood-related activities or locations.\n\n2. **Table `dfirm_floodways`**:\n   - **Columns involved**: `OBJECTID`, `FLOODWAY`\n   - **Condition**: `OBJECTID > 0 AND FLOODWAY IS NOT NULL` indicates that the query selects records where `OBJECTID` is greater than 0 and `FLOODWAY` is not null. This condition is likely used to ensure that only valid floodway records are selected.\n\n### Business scenario:\nThis query could be part of an environmental management system, particularly for flood risk assessment and planning. It combines data from different sources related to water bodies (lakes, ponds) and floodways to provide a comprehensive view of potential flood risks and management areas.\n\n### User description:\nA user in an environmental agency might need this information to:\n- Identify areas prone to flooding based on historical data (`Source LIKE '%floodway%'`) and current conditions (`OBJECTID > 0`).\n- Analyze the geographical extent of floodways (`FLOODWAY` column) to plan infrastructure improvements or emergency response strategies.\n- Combine data from multiple sources (water bodies and floodways) to create a unified dataset for detailed analysis and reporting on flood risk management.\n\nThis query helps in integrating disparate datasets into a single view, facilitating more informed decision-making processes related to flood risk management and planning.",
+  "natural_language_query": "A user working in an environmental agency might ask: \n\n\"Can you help me retrieve information on flood-prone areas and floodways? Specifically, I'm looking for data from two databases. The first one contains details about lakes and ponds, such as their unique identifier, source of data, water body ID, type of event, and acres covered. I want to focus on records where either the object ID is greater than zero or the source mentions 'floodway'. The second database includes information on floodways, specifically their unique object ID and the name of the floodway. I need to find records where the object ID is also greater than zero and the floodway name isn't missing. This information will assist us in assessing flood risks and planning our response strategies.\"",
+  "results": [
+    [
+      497,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      498,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      499,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      500,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      501,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      502,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      503,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      504,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      505,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      506,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      507,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      508,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      509,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      510,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      511,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      512,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      513,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      514,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      515,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      516,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      517,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      518,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      519,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      520,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      521,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      522,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      523,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      524,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      525,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      526,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      527,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      528,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      529,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      530,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      531,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      532,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      533,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      534,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      535,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      536,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      537,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      538,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      539,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      540,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      541,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      542,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      543,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      544,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      545,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      546,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      547,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      548,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      549,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      550,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      551,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      552,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      553,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      554,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      555,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      556,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      557,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      558,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      559,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      560,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      561,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      562,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      563,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      564,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      565,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      566,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      567,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      568,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      569,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      570,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      571,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      572,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      573,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      574,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      575,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      576,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      577,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      578,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      579,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      580,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      581,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      582,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      583,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      584,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      585,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      586,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      587,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      588,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      589,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      590,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      591,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      592,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      593,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      594,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      595,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      596,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      597,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      598,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      599,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      600,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      601,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      602,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      603,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      604,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      605,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      606,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      607,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      608,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      609,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      610,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      611,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      612,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      613,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      614,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      615,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      616,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      617,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      618,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      619,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      620,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      621,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      622,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      623,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      624,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      625,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      626,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      627,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      628,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      629,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      630,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      631,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      632,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      633,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      634,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      635,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      636,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      637,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      638,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      639,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      640,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      641,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      642,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      643,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      644,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      645,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      646,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      647,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      648,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      649,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      650,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      651,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      652,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      653,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      654,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      655,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      656,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      657,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      658,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      659,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      660,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      661,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      662,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      663,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      664,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      665,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      666,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      667,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      668,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      669,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      670,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      671,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      672,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      673,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      674,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      675,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      676,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      677,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      678,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      679,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      680,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      681,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      682,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      683,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      684,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      685,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      686,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      687,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      688,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      689,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      690,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      691,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      692,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      693,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      694,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      695,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      696,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      697,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      698,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      699,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      700,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      701,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      702,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      703,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      704,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      705,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      706,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      707,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      708,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      709,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      710,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      711,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      712,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      713,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      714,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      715,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      716,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      717,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      718,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      719,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      720,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      721,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      722,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      723,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      724,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      725,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      726,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      727,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      728,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      729,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      730,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      731,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      732,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      733,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      734,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      735,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      736,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      737,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      738,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      739,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      740,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      741,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      742,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      743,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      744,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      745,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      746,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      747,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      748,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      749,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      750,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      751,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      752,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      753,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      754,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      755,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      756,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      757,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      758,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      759,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      760,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      761,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      762,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      763,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      764,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      765,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      766,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      767,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      768,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      769,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      770,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      771,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      772,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      773,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      774,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      775,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      776,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      777,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      778,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      779,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      780,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      781,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      782,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      783,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      784,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      785,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      786,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      787,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      788,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      789,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      790,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      791,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      792,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      793,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      794,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      795,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      796,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      797,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      798,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      799,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      800,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      801,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      802,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      803,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      804,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      805,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      806,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      807,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      808,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      809,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      810,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      811,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      812,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      813,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      814,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      815,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      816,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      817,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      818,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      819,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      820,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      821,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      822,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      823,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      824,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      825,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      826,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      827,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      828,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      829,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      830,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      831,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      832,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      833,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      834,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      835,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      836,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      837,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      838,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      839,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      840,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      841,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      842,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      843,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      844,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      845,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      846,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      847,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      848,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      849,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      850,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      851,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      852,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      853,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      854,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      855,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      856,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      857,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      858,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      859,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      860,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      861,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      862,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      863,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      864,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      865,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      866,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      867,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      868,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      869,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      870,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      871,
+      "FLOODWAY",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      1207,
+      "VT DEC WQD",
+      "VT05-10L01_04",
+      "",
+      "WBID Segments",
+      4.64845372
+    ],
+    [
+      1209,
+      "VT DEC WQD",
+      "VT05-10L01_03",
+      "",
+      "WBID Segments",
+      8.95311845
+    ],
+    [
+      1210,
+      "VT DEC WQD",
+      "VT11-10L02",
+      "TOWNSHEND",
+      "Inventory Lake",
+      71.50243992
+    ],
+    [
+      1607,
+      "VT DEC WQD",
+      "VT14-03L03",
+      "ABENAKI",
+      "Inventory Lake",
+      42.95656151
+    ],
+    [
+      1608,
+      "VT DEC WQD",
+      "VT11-13L02",
+      "ADAM",
+      "Inventory Lake",
+      10.38651654
+    ],
+    [
+      1610,
+      "VT DEC WQD",
+      "VT12-04L01",
+      "ADAMS (WOODFD)",
+      "Inventory Lake",
+      33.60746154
+    ],
+    [
+      1611,
+      "VT DEC WQD",
+      "VT10-15L02",
+      "AMHERST",
+      "Inventory Lake",
+      82.44299442
+    ],
+    [
+      1612,
+      "VT DEC WQD",
+      "VT09-03L05",
+      "ANSEL",
+      "Inventory Lake",
+      2.50872694
+    ],
+    [
+      1613,
+      "VT DEC WQD",
+      "VT11-05L01",
+      "ATHENS",
+      "Inventory Lake",
+      20.60087474
+    ],
+    [
+      1614,
+      "VT DEC WQD",
+      "VT02-03L03",
+      "AUSTIN",
+      "Inventory Lake",
+      33.38546322
+    ],
+    [
+      1615,
+      "VT DEC WQD",
+      "VT08-08L04",
+      "BAILEY",
+      "Inventory Lake",
+      17.13962657
+    ],
+    [
+      1616,
+      "VT DEC WQD",
+      "VT11-04L01",
+      "BAILEYS MILLS;",
+      "Inventory Lake",
+      5.26316822
+    ],
+    [
+      1617,
+      "VT DEC WQD",
+      "VT08-17L02",
+      "BAKER (BRKFLD)",
+      "Inventory Lake",
+      37.72053236
+    ],
+    [
+      1618,
+      "VT DEC WQD",
+      "VT15-08L01",
+      "BALD HILL",
+      "Inventory Lake",
+      108.61958331
+    ],
+    [
+      1619,
+      "VT DEC WQD",
+      "VT03-08L03",
+      "BALDWIN",
+      "Inventory Lake",
+      4.6811078
+    ],
+    [
+      1621,
+      "VT DEC WQD",
+      "VT01-03L07",
+      "BARBER",
+      "Inventory Lake",
+      20.94317252
+    ],
+    [
+      1622,
+      "VT DEC WQD",
+      "VT01-05L04",
+      "BARBOS",
+      "Inventory Lake",
+      5.74055082
+    ],
+    [
+      1623,
+      "VT DEC WQD",
+      "VT15-05L02",
+      "BEAN (LYNDON)",
+      "Inventory Lake",
+      26.09191274
+    ],
+    [
+      1625,
+      "VT DEC WQD",
+      "VT17-02L01",
+      "BEAVER (HOLLND)",
+      "Inventory Lake",
+      38.89405495
+    ],
+    [
+      1626,
+      "VT DEC WQD",
+      "VT03-14L06",
+      "BEAVER (MENDON)",
+      "Inventory Lake",
+      5.3058233
+    ],
+    [
+      1627,
+      "VT DEC WQD",
+      "VT03-06L01",
+      "BEAVER (PROCTR)",
+      "Inventory Lake",
+      11.09524243
+    ],
+    [
+      1628,
+      "VT DEC WQD",
+      "VT08-17L01",
+      "BEAVER (ROXBRY)",
+      "Inventory Lake",
+      5.91262162
+    ],
+    [
+      1629,
+      "VT DEC WQD",
+      "VT13-09L01",
+      "BEAVER (WEAFLD);",
+      "Inventory Lake",
+      19.85044491
+    ],
+    [
+      1630,
+      "VT DEC WQD",
+      "VT09-07L06",
+      "BEAVER MEADOWS",
+      "Inventory Lake",
+      4.71468502
+    ],
+    [
+      1631,
+      "VT DEC WQD",
+      "VT15-08L06",
+      "BECK",
+      "Inventory Lake",
+      6.67369576
+    ],
+    [
+      1632,
+      "VT DEC WQD",
+      "VT02-03L02",
+      "BEEBE (HUBDTN)",
+      "Inventory Lake",
+      112.40813676
+    ],
+    [
+      1633,
+      "VT DEC WQD",
+      "VT01-06L02",
+      "BEEBE (SUNDLD)",
+      "Inventory Lake",
+      10.28552947
+    ],
+    [
+      1634,
+      "VT DEC WQD",
+      "VT07-06L01",
+      "BELDING",
+      "Inventory Lake",
+      5.17347711
+    ],
+    [
+      1635,
+      "VT DEC WQD",
+      "VT07-14L01",
+      "BELVIDERE-NE;",
+      "Inventory Lake",
+      0.62047706
+    ],
+    [
+      1636,
+      "VT DEC WQD",
+      "VT08-16L02",
+      "BERLIN",
+      "Inventory Lake",
+      289.63857124
+    ],
+    [
+      1637,
+      "VT DEC WQD",
+      "VT01-03L01",
+      "BIG",
+      "Inventory Lake",
+      33.73157441
+    ],
+    [
+      1638,
+      "VT DEC WQD",
+      "VT03-18L03",
+      "BIG MUD",
+      "Inventory Lake",
+      18.27706673
+    ],
+    [
+      1639,
+      "VT DEC WQD",
+      "VT07-15L04",
+      "BIG MUDDY",
+      "Inventory Lake",
+      18.87196057
+    ],
+    [
+      1640,
+      "VT DEC WQD",
+      "VT02-01L02",
+      "BILLINGS MARSH",
+      "Inventory Lake",
+      50.90503739
+    ],
+    [
+      1641,
+      "VT DEC WQD",
+      "VT02-02L06",
+      "BLACK (HUBDTN)",
+      "Inventory Lake",
+      24.56145288
+    ],
+    [
+      1642,
+      "VT DEC WQD",
+      "VT10-15L01",
+      "BLACK (PLYMTH)",
+      "Inventory Lake",
+      20.30518148
+    ],
+    [
+      1643,
+      "VT DEC WQD",
+      "VT15-06L02",
+      "BLAKE (SHEFLD)",
+      "Inventory Lake",
+      2.36663887
+    ],
+    [
+      1644,
+      "VT DEC WQD",
+      "VT08-14L09",
+      "BLISS",
+      "Inventory Lake",
+      31.58861333
+    ],
+    [
+      1645,
+      "VT DEC WQD",
+      "VT16-09L01",
+      "BLODGETT;",
+      "Inventory Lake",
+      14.8074627
+    ],
+    [
+      1648,
+      "VT DEC WQD",
+      "VT08-20L01",
+      "BLUEBERRY",
+      "Inventory Lake",
+      46.30623081
+    ],
+    [
+      1650,
+      "VT DEC WQD",
+      "VT08-16L04",
+      "BOLSTER",
+      "Inventory Lake",
+      4.72002684
+    ],
+    [
+      1651,
+      "VT DEC WQD",
+      "VT01-05L01",
+      "BOURN",
+      "Inventory Lake",
+      56.71400683
+    ],
+    [
+      1652,
+      "VT DEC WQD",
+      "VT01-06L01",
+      "BRANCH",
+      "Inventory Lake",
+      44.06728758
+    ],
+    [
+      1653,
+      "VT DEC WQD",
+      "VT02-02L09",
+      "BREESE",
+      "Inventory Lake",
+      21.54665472
+    ],
+    [
+      1654,
+      "VT DEC WQD",
+      "VT14-02L02",
+      "BROCKLEBANK;",
+      "Inventory Lake",
+      4.83765515
+    ],
+    [
+      1655,
+      "VT DEC WQD",
+      "VT15-08L04",
+      "BROWN",
+      "Inventory Lake",
+      15.76778629
+    ],
+    [
+      1656,
+      "VT DEC WQD",
+      "VT15-06L01",
+      "BRUCE",
+      "Inventory Lake",
+      27.14770254
+    ],
+    [
+      1657,
+      "VT DEC WQD",
+      "VT08-14L02",
+      "BUCK",
+      "Inventory Lake",
+      47.26831298
+    ],
+    [
+      1658,
+      "VT DEC WQD",
+      "VT04-04L02",
+      "BULLHEAD (BENSON)",
+      "Inventory Lake",
+      9.51224522
+    ],
+    [
+      1659,
+      "VT DEC WQD",
+      "VT01-05L06",
+      "BULLHEAD (MANCHR)",
+      "Inventory Lake",
+      8.06174367
+    ],
+    [
+      1660,
+      "VT DEC WQD",
+      "VT11-13L01",
+      "BURBEE",
+      "Inventory Lake",
+      32.20656201
+    ],
+    [
+      1663,
+      "VT DEC WQD",
+      "VT13-07L04",
+      "BURNHAM MTN;",
+      "Inventory Lake",
+      8.01432896
+    ],
+    [
+      1664,
+      "VT DEC WQD",
+      "VT03-14L04",
+      "BURR (PITTFD)",
+      "Inventory Lake",
+      19.80316459
+    ],
+    [
+      1665,
+      "VT DEC WQD",
+      "VT02-02L04",
+      "BURR (SUDBRY)",
+      "Inventory Lake",
+      85.10366371
+    ],
+    [
+      1666,
+      "VT DEC WQD",
+      "VT02-03L10",
+      "BUTLER",
+      "Inventory Lake",
+      3.15014644
+    ],
+    [
+      1667,
+      "VT DEC WQD",
+      "VT07-11L01",
+      "CAP HILL;",
+      "Inventory Lake",
+      8.34786431
+    ],
+    [
+      1668,
+      "VT DEC WQD",
+      "VT10-04L01",
+      "CARLTON",
+      "Inventory Lake",
+      2.09102675
+    ],
+    [
+      1669,
+      "VT DEC WQD",
+      "VT07-22L04",
+      "CASPIAN",
+      "Inventory Lake",
+      789.80687368
+    ],
+    [
+      1670,
+      "VT DEC WQD",
+      "VT03-08L02",
+      "CEDAR",
+      "Inventory Lake",
+      127.79019583
+    ],
+    [
+      1671,
+      "VT DEC WQD",
+      "VT15-08L03",
+      "CENTER",
+      "Inventory Lake",
+      81.28640319
+    ],
+    [
+      1672,
+      "VT DEC WQD",
+      "VT09-06L02",
+      "CHAMPAGNE",
+      "Inventory Lake",
+      2.74376488
+    ],
+    [
+      1673,
+      "VT DEC WQD",
+      "VT15-05L01",
+      "CHANDLER",
+      "Inventory Lake",
+      66.80035947
+    ],
+    [
+      1675,
+      "VT DEC WQD",
+      "VT11-03L01",
+      "CHESTER",
+      "Inventory Lake",
+      5.19426966
+    ],
+    [
+      1676,
+      "VT DEC WQD",
+      "VT03-15L01",
+      "CHIPMAN",
+      "Inventory Lake",
+      79.64557315
+    ],
+    [
+      1677,
+      "VT DEC WQD",
+      "VT03-14L03",
+      "CHITTENDEN",
+      "Inventory Lake",
+      748.01498142
+    ],
+    [
+      1678,
+      "VT DEC WQD",
+      "VT02-02L10",
+      "CHOATE",
+      "Inventory Lake",
+      11.8796981
+    ],
+    [
+      1679,
+      "VT DEC WQD",
+      "VT12-01L05",
+      "CLARA",
+      "Inventory Lake",
+      6.26963018
+    ],
+    [
+      1680,
+      "VT DEC WQD",
+      "VT07-18L06",
+      "CLEAR",
+      "Inventory Lake",
+      7.17121405
+    ],
+    [
+      1681,
+      "VT DEC WQD",
+      "VT16-18L05",
+      "COBURN",
+      "Inventory Lake",
+      17.43236762
+    ],
+    [
+      1682,
+      "VT DEC WQD",
+      "VT02-01L01",
+      "COGGMAN",
+      "Inventory Lake",
+      26.91342795
+    ],
+    [
+      1683,
+      "VT DEC WQD",
+      "VT08-09L01",
+      "COITS",
+      "Inventory Lake",
+      39.69244117
+    ],
+    [
+      1684,
+      "VT DEC WQD",
+      "VT10-13L01",
+      "COLBY",
+      "Inventory Lake",
+      21.02243654
+    ],
+    [
+      1685,
+      "VT DEC WQD",
+      "VT05-09L03",
+      "COLCHESTER",
+      "Inventory Lake",
+      191.4273527
+    ],
+    [
+      1686,
+      "VT DEC WQD",
+      "VT11-12L01",
+      "COLE",
+      "Inventory Lake",
+      41.42016566
+    ],
+    [
+      1687,
+      "VT DEC WQD",
+      "VT15-02L01",
+      "COLES",
+      "Inventory Lake",
+      106.80993567
+    ],
+    [
+      1688,
+      "VT DEC WQD",
+      "VT07-19L01",
+      "COLLINS",
+      "Inventory Lake",
+      19.96026877
+    ],
+    [
+      1689,
+      "VT DEC WQD",
+      "VT09-07L03",
+      "COLTON",
+      "Inventory Lake",
+      26.10918342
+    ],
+    [
+      1690,
+      "VT DEC WQD",
+      "VT16-05L01",
+      "COMERFORD",
+      "Inventory Lake",
+      330.66797493
+    ],
+    [
+      1691,
+      "VT DEC WQD",
+      "VT10-14L03",
+      "COOK",
+      "Inventory Lake",
+      2.87214224
+    ],
+    [
+      1692,
+      "VT DEC WQD",
+      "VT03-16L01",
+      "COOKS (SHRWBY)",
+      "Inventory Lake",
+      21.34622509
+    ],
+    [
+      1695,
+      "VT DEC WQD",
+      "VT10-04L02",
+      "COX",
+      "Inventory Lake",
+      1.39401635
+    ],
+    [
+      1696,
+      "VT DEC WQD",
+      "VT08-14L04",
+      "CRANBERRY MEADOW",
+      "Inventory Lake",
+      23.40065793
+    ],
+    [
+      1697,
+      "VT DEC WQD",
+      "VT09-03L03",
+      "CRESCENT",
+      "Inventory Lake",
+      17.84300077
+    ],
+    [
+      1698,
+      "VT DEC WQD",
+      "VT10-02L02",
+      "CRYSTAL (HARTLD)",
+      "Inventory Lake",
+      2.39395171
+    ],
+    [
+      1699,
+      "VT DEC WQD",
+      "VT12-05L03",
+      "CRYSTAL (WILMTN)",
+      "Inventory Lake",
+      2.14647676
+    ],
+    [
+      1700,
+      "VT DEC WQD",
+      "VT08-14L08",
+      "CURTIS",
+      "Inventory Lake",
+      76.21988782
+    ],
+    [
+      1701,
+      "VT DEC WQD",
+      "VT05-01L02",
+      "CUTLER",
+      "Inventory Lake",
+      23.64752916
+    ],
+    [
+      1702,
+      "VT DEC WQD",
+      "VT08-05L01",
+      "CUTTER",
+      "Inventory Lake",
+      15.87720226
+    ],
+    [
+      1703,
+      "VT DEC WQD",
+      "VT03-18L05",
+      "DANBY",
+      "Inventory Lake",
+      65.12362256
+    ],
+    [
+      1704,
+      "VT DEC WQD",
+      "VT03-02L01",
+      "DANYOW",
+      "Inventory Lake",
+      27.95268073
+    ],
+    [
+      1705,
+      "VT DEC WQD",
+      "VT12-06L02",
+      "DEER PARK",
+      "Inventory Lake",
+      18.69944857
+    ],
+    [
+      1706,
+      "VT DEC WQD",
+      "VT12-06L01",
+      "DEER PARK-WEST;",
+      "Inventory Lake",
+      8.77215288
+    ],
+    [
+      1707,
+      "VT DEC WQD",
+      "VT16-12L03",
+      "DENNIS",
+      "Inventory Lake",
+      41.42672107
+    ],
+    [
+      1708,
+      "VT DEC WQD",
+      "VT10-01L01",
+      "DEWEYS MILL",
+      "Inventory Lake",
+      54.34908248
+    ],
+    [
+      1709,
+      "VT DEC WQD",
+      "VT08-14L12",
+      "DOBSON",
+      "Inventory Lake",
+      9.53567841
+    ],
+    [
+      1710,
+      "VT DEC WQD",
+      "VT02-02L13",
+      "DOUGHTY",
+      "Inventory Lake",
+      12.81391738
+    ],
+    [
+      1711,
+      "VT DEC WQD",
+      "VT03-04L10",
+      "DOW",
+      "Inventory Lake",
+      10.61823666
+    ],
+    [
+      1712,
+      "VT DEC WQD",
+      "VT08-16L05",
+      "DRY",
+      "Inventory Lake",
+      1.72096146
+    ],
+    [
+      1713,
+      "VT DEC WQD",
+      "VT17-02L06",
+      "DUCK (HOLLND)",
+      "Inventory Lake",
+      5.75213449
+    ],
+    [
+      1714,
+      "VT DEC WQD",
+      "VT05-12L01",
+      "DUCK (SHELBN)",
+      "Inventory Lake",
+      4.2860702
+    ],
+    [
+      1715,
+      "VT DEC WQD",
+      "VT15-09L06",
+      "DUCK (WATRFD)",
+      "Inventory Lake",
+      20.08610319
+    ],
+    [
+      1716,
+      "VT DEC WQD",
+      "VT03-06L02",
+      "DUNKLEE",
+      "Inventory Lake",
+      1.4381116
+    ],
+    [
+      1717,
+      "VT DEC WQD",
+      "VT03-04L05",
+      "DUNMORE",
+      "Inventory Lake",
+      1039.59474131
+    ],
+    [
+      1718,
+      "VT DEC WQD",
+      "VT16-14L01",
+      "DUTTON",
+      "Inventory Lake",
+      13.13818304
+    ],
+    [
+      1719,
+      "VT DEC WQD",
+      "VT07-21L01",
+      "EAST LONG",
+      "Inventory Lake",
+      185.34463676
+    ],
+    [
+      1720,
+      "VT DEC WQD",
+      "VT11-05L02",
+      "EAST TWIN",
+      "Inventory Lake",
+      0.86848237
+    ],
+    [
+      1722,
+      "VT DEC WQD",
+      "VT02-03L01",
+      "ECHO (HUBDTN)",
+      "Inventory Lake",
+      54.9775388
+    ],
+    [
+      1723,
+      "VT DEC WQD",
+      "VT10-15L03",
+      "ECHO (PLYMTH)",
+      "Inventory Lake",
+      100.14819046
+    ],
+    [
+      1724,
+      "VT DEC WQD",
+      "VT07-15L01",
+      "EDEN",
+      "Inventory Lake",
+      198.01624969
+    ],
+    [
+      1725,
+      "VT DEC WQD",
+      "VT03-14L07",
+      "ELBOW;",
+      "Inventory Lake",
+      0.97905403
+    ],
+    [
+      1726,
+      "VT DEC WQD",
+      "VT03-18L04",
+      "ELFIN",
+      "Inventory Lake",
+      20.40652638
+    ],
+    [
+      1727,
+      "VT DEC WQD",
+      "VT17-10L01",
+      "ELLIGO",
+      "Inventory Lake",
+      182.06925089
+    ],
+    [
+      1728,
+      "VT DEC WQD",
+      "VT07-08L02",
+      "ELMORE",
+      "Inventory Lake",
+      222.31474919
+    ],
+    [
+      1730,
+      "VT DEC WQD",
+      "VT01-05L07",
+      "EQUINOX",
+      "Inventory Lake",
+      8.85950491
+    ],
+    [
+      1731,
+      "VT DEC WQD",
+      "VT14-09L01",
+      "EWELL",
+      "Inventory Lake",
+      50.11580739
+    ],
+    [
+      1732,
+      "VT DEC WQD",
+      "VT06-05L03",
+      "FAIRFIELD",
+      "Inventory Lake",
+      463.25841168
+    ],
+    [
+      1733,
+      "VT DEC WQD",
+      "VT14-03L01",
+      "FAIRLEE",
+      "Inventory Lake",
+      461.7532706
+    ],
+    [
+      1734,
+      "VT DEC WQD",
+      "VT02-05L05",
+      "FAN;",
+      "Inventory Lake",
+      9.9157433
+    ],
+    [
+      1735,
+      "VT DEC WQD",
+      "VT08-17L03",
+      "FELCHNER;",
+      "Inventory Lake",
+      6.72528249
+    ],
+    [
+      1736,
+      "VT DEC WQD",
+      "VT03-04L04",
+      "FERN",
+      "Inventory Lake",
+      67.26423287
+    ],
+    [
+      1737,
+      "VT DEC WQD",
+      "VT03-17L02",
+      "FIFIELD",
+      "Inventory Lake",
+      13.85397214
+    ],
+    [
+      1738,
+      "VT DEC WQD",
+      "VT11-18L07",
+      "FLOOD;",
+      "Inventory Lake",
+      8.34310763
+    ],
+    [
+      1739,
+      "VT DEC WQD",
+      "VT16-08L01",
+      "FOREST (AVERLL)",
+      "Inventory Lake",
+      61.54892876
+    ],
+    [
+      1740,
+      "VT DEC WQD",
+      "VT08-14L06",
+      "FOREST (CALAIS)",
+      "Inventory Lake",
+      135.44365823
+    ],
+    [
+      1741,
+      "VT DEC WQD",
+      "VT11-15L01",
+      "FORESTER",
+      "Inventory Lake",
+      13.52968279
+    ],
+    [
+      1743,
+      "VT DEC WQD",
+      "VT14-09L02",
+      "FOSTERS",
+      "Inventory Lake",
+      58.84999626
+    ],
+    [
+      1744,
+      "VT DEC WQD",
+      "VT11-16L02",
+      "GALE MEADOWS",
+      "Inventory Lake",
+      195.36594282
+    ],
+    [
+      1745,
+      "VT DEC WQD",
+      "VT14-07L04",
+      "GALUSHA;",
+      "Inventory Lake",
+      11.25707313
+    ],
+    [
+      1746,
+      "VT DEC WQD",
+      "VT12-07L02",
+      "GATES",
+      "Inventory Lake",
+      30.1643735
+    ],
+    [
+      1747,
+      "VT DEC WQD",
+      "VT08-10L01",
+      "GILLETT",
+      "Inventory Lake",
+      31.03766202
+    ],
+    [
+      1748,
+      "VT DEC WQD",
+      "VT03-11L02",
+      "GILMORE",
+      "Inventory Lake",
+      15.43531023
+    ],
+    [
+      1749,
+      "VT DEC WQD",
+      "VT02-03L06",
+      "GLEN",
+      "Inventory Lake",
+      204.81128938
+    ],
+    [
+      1751,
+      "VT DEC WQD",
+      "VT08-04L02",
+      "GOOSE",
+      "Inventory Lake",
+      2.54034124
+    ],
+    [
+      1753,
+      "VT DEC WQD",
+      "VT10-14L04",
+      "GRAHAMVILLE;",
+      "Inventory Lake",
+      4.41428626
+    ],
+    [
+      1756,
+      "VT DEC WQD",
+      "VT17-03L02",
+      "GREAT AVERILL",
+      "Inventory Lake",
+      834.96217523
+    ],
+    [
+      1757,
+      "VT DEC WQD",
+      "VT07-18L03",
+      "GREEN RIVER",
+      "Inventory Lake",
+      593.17511691
+    ],
+    [
+      1758,
+      "VT DEC WQD",
+      "VT08-14L01",
+      "GREENWOOD",
+      "Inventory Lake",
+      91.48621879
+    ],
+    [
+      1759,
+      "VT DEC WQD",
+      "VT03-18L02",
+      "GRIFFITH",
+      "Inventory Lake",
+      15.63282219
+    ],
+    [
+      1760,
+      "VT DEC WQD",
+      "VT14-08L03",
+      "GROTON",
+      "Inventory Lake",
+      435.36818645
+    ],
+    [
+      1761,
+      "VT DEC WQD",
+      "VT12-03L01",
+      "GROUT",
+      "Inventory Lake",
+      86.11468418
+    ],
+    [
+      1763,
+      "VT DEC WQD",
+      "VT07-15L02",
+      "GUT",
+      "Inventory Lake",
+      13.56815326
+    ],
+    [
+      1764,
+      "VT DEC WQD",
+      "VT02-03L04",
+      "HALF MOON",
+      "Inventory Lake",
+      26.0512066
+    ],
+    [
+      1765,
+      "VT DEC WQD",
+      "VT07-03L01",
+      "HALFMOON",
+      "Inventory Lake",
+      22.5471136
+    ],
+    [
+      1766,
+      "VT DEC WQD",
+      "VT17-03L03",
+      "HALFWAY",
+      "Inventory Lake",
+      21.76495228
+    ],
+    [
+      1767,
+      "VT DEC WQD",
+      "VT03-11L04",
+      "HALLOCK;",
+      "Inventory Lake",
+      10.10954108
+    ],
+    [
+      1768,
+      "VT DEC WQD",
+      "VT16-19L03",
+      "HALLS",
+      "Inventory Lake",
+      85.19309048
+    ],
+    [
+      1769,
+      "VT DEC WQD",
+      "VT01-03L02",
+      "HANCOCK (STAMFD)",
+      "Inventory Lake",
+      55.92870699
+    ],
+    [
+      1770,
+      "VT DEC WQD",
+      "VT09-07L07",
+      "HANCOCK MT;",
+      "Inventory Lake",
+      7.09426208
+    ],
+    [
+      1771,
+      "VT DEC WQD",
+      "VT11-18L01",
+      "HAPGOOD",
+      "Inventory Lake",
+      9.1772462
+    ],
+    [
+      1772,
+      "VT DEC WQD",
+      "VT07-21L05",
+      "HARDWICK",
+      "Inventory Lake",
+      100.64374807
+    ],
+    [
+      1773,
+      "VT DEC WQD",
+      "VT08-13L01",
+      "HARDWOOD",
+      "Inventory Lake",
+      49.68274266
+    ],
+    [
+      1774,
+      "VT DEC WQD",
+      "VT16-19L02",
+      "HARRIMAN (NEWBRY)",
+      "Inventory Lake",
+      24.82720045
+    ],
+    [
+      1775,
+      "VT DEC WQD",
+      "VT14-09L05",
+      "HARVEYS",
+      "Inventory Lake",
+      357.21527732
+    ],
+    [
+      1777,
+      "VT DEC WQD",
+      "VT12-05L01",
+      "HAYSTACK",
+      "Inventory Lake",
+      28.08452655
+    ],
+    [
+      1779,
+      "VT DEC WQD",
+      "VT13-12L02",
+      "HICKORY;",
+      "Inventory Lake",
+      3.71463365
+    ],
+    [
+      1780,
+      "VT DEC WQD",
+      "VT13-14L01",
+      "HIDDEN",
+      "Inventory Lake",
+      19.56560591
+    ],
+    [
+      1781,
+      "VT DEC WQD",
+      "VT02-03L11",
+      "HIGH (HUBDTN)",
+      "Inventory Lake",
+      2.01736407
+    ],
+    [
+      1782,
+      "VT DEC WQD",
+      "VT03-04L06",
+      "HIGH (SUDBRY)",
+      "Inventory Lake",
+      17.50822003
+    ],
+    [
+      1783,
+      "VT DEC WQD",
+      "VT02-02L08",
+      "HINKUM",
+      "Inventory Lake",
+      59.00412034
+    ],
+    [
+      1784,
+      "VT DEC WQD",
+      "VT09-05L07",
+      "HOLDENS",
+      "Inventory Lake",
+      6.8162639
+    ],
+    [
+      1785,
+      "VT DEC WQD",
+      "VT17-02L04",
+      "HOLLAND",
+      "Inventory Lake",
+      329.09895497
+    ],
+    [
+      1786,
+      "VT DEC WQD",
+      "VT01-05L03",
+      "HOPPER",
+      "Inventory Lake",
+      1.64029954
+    ],
+    [
+      1788,
+      "VT DEC WQD",
+      "VT07-22L02",
+      "HORSE",
+      "Inventory Lake",
+      33.97278717
+    ],
+    [
+      1789,
+      "VT DEC WQD",
+      "VT02-02L05",
+      "HORTONIA",
+      "Inventory Lake",
+      500.85464105
+    ],
+    [
+      1790,
+      "VT DEC WQD",
+      "VT02-02L12",
+      "HOUGH",
+      "Inventory Lake",
+      38.4252554
+    ],
+    [
+      1791,
+      "VT DEC WQD",
+      "VT12-02L02",
+      "HOWE",
+      "Inventory Lake",
+      53.27762872
+    ],
+    [
+      1792,
+      "VT DEC WQD",
+      "VT05-09L02",
+      "INDIAN BROOK (ESSEX)",
+      "Inventory Lake",
+      57.54103719
+    ],
+    [
+      1793,
+      "VT DEC WQD",
+      "VT05-09L04",
+      "INDIAN BROOK;",
+      "Inventory Lake",
+      0.50771904
+    ],
+    [
+      1794,
+      "VT DEC WQD",
+      "VT02-01L03",
+      "INMAN",
+      "Inventory Lake",
+      84.45187632
+    ],
+    [
+      1795,
+      "VT DEC WQD",
+      "VT12-07L03",
+      "JACKSONVILLE",
+      "Inventory Lake",
+      16.29908396
+    ],
+    [
+      1796,
+      "VT DEC WQD",
+      "VT10-14L01",
+      "JEWELL BK #1;",
+      "Inventory Lake",
+      4.50582283
+    ],
+    [
+      1797,
+      "VT DEC WQD",
+      "VT10-14L05",
+      "JEWELL BK #2;",
+      "Inventory Lake",
+      2.51330038
+    ],
+    [
+      1798,
+      "VT DEC WQD",
+      "VT10-14L02",
+      "JEWELL BK #3;",
+      "Inventory Lake",
+      10.74744319
+    ],
+    [
+      1799,
+      "VT DEC WQD",
+      "VT15-02L03",
+      "JOES (DANVLL)",
+      "Inventory Lake",
+      405.0342846
+    ],
+    [
+      1801,
+      "VT DEC WQD",
+      "VT15-09L03",
+      "JOHNSON (KIRBY)",
+      "Inventory Lake",
+      7.40172349
+    ],
+    [
+      1802,
+      "VT DEC WQD",
+      "VT03-10L02",
+      "JOHNSON (ORWELL)",
+      "Inventory Lake",
+      35.58075152
+    ],
+    [
+      1803,
+      "VT DEC WQD",
+      "VT03-16L02",
+      "JOHNSON (SHRWBY)",
+      "Inventory Lake",
+      34.48637335
+    ],
+    [
+      1806,
+      "VT DEC WQD",
+      "VT07-21L08",
+      "KEELER",
+      "Inventory Lake",
+      4.9684822
+    ],
+    [
+      1807,
+      "VT DEC WQD",
+      "VT11-09L01",
+      "KENNY",
+      "Inventory Lake",
+      20.16419858
+    ],
+    [
+      1808,
+      "VT DEC WQD",
+      "VT10-06L02",
+      "KENT",
+      "Inventory Lake",
+      101.85677677
+    ],
+    [
+      1809,
+      "VT DEC WQD",
+      "VT14-08L01",
+      "KETTLE",
+      "Inventory Lake",
+      111.38300126
+    ],
+    [
+      1810,
+      "VT DEC WQD",
+      "VT09-04L01",
+      "KEYSER;",
+      "Inventory Lake",
+      5.75993073
+    ],
+    [
+      1811,
+      "VT DEC WQD",
+      "VT09-07L05",
+      "KINGS",
+      "Inventory Lake",
+      4.82781768
+    ],
+    [
+      1812,
+      "VT DEC WQD",
+      "VT06-06L01",
+      "KINGS HILL",
+      "Inventory Lake",
+      8.05089171
+    ],
+    [
+      1813,
+      "VT DEC WQD",
+      "VT15-09L05",
+      "KIRBY",
+      "Inventory Lake",
+      10.68212393
+    ],
+    [
+      1814,
+      "VT DEC WQD",
+      "VT10-16L01",
+      "KNAPP BROOK #1",
+      "Inventory Lake",
+      27.19810581
+    ],
+    [
+      1815,
+      "VT DEC WQD",
+      "VT10-16L02",
+      "KNAPP BROOK #2",
+      "Inventory Lake",
+      31.96103298
+    ],
+    [
+      1818,
+      "VT DEC WQD",
+      "VT08-08L05",
+      "LAIRD",
+      "Inventory Lake",
+      4.77497989
+    ],
+    [
+      1819,
+      "VT DEC WQD",
+      "VT10-10L01",
+      "LAKOTA",
+      "Inventory Lake",
+      18.42219648
+    ],
+    [
+      1820,
+      "VT DEC WQD",
+      "VT07-07L01",
+      "LAMOILLE",
+      "Inventory Lake",
+      134.31750961
+    ],
+    [
+      1821,
+      "VT DEC WQD",
+      "VT09-05L02",
+      "LAMSON",
+      "Inventory Lake",
+      26.46232917
+    ],
+    [
+      1822,
+      "VT DEC WQD",
+      "VT12-07L04",
+      "LAUREL",
+      "Inventory Lake",
+      16.67077598
+    ],
+    [
+      1824,
+      "VT DEC WQD",
+      "VT14-07L01",
+      "LEVI",
+      "Inventory Lake",
+      21.84806431
+    ],
+    [
+      1825,
+      "VT DEC WQD",
+      "VT16-01L01",
+      "LEWIN",
+      "Inventory Lake",
+      3.84250762
+    ],
+    [
+      1826,
+      "VT DEC WQD",
+      "VT16-11L02",
+      "LEWIS",
+      "Inventory Lake",
+      69.48114185
+    ],
+    [
+      1827,
+      "VT DEC WQD",
+      "VT08-19L01",
+      "LIGHT TROUT CLUB",
+      "Inventory Lake",
+      0.13600099
+    ],
+    [
+      1828,
+      "VT DEC WQD",
+      "VT11-11L01",
+      "LILY (ATHENS)",
+      "Inventory Lake",
+      12.46158211
+    ],
+    [
+      1829,
+      "VT DEC WQD",
+      "VT02-03L12",
+      "LILY (CASLTN)",
+      "Inventory Lake",
+      9.97990462
+    ],
+    [
+      1830,
+      "VT DEC WQD",
+      "VT11-18L03",
+      "LILY (LONDRY)",
+      "Inventory Lake",
+      26.69479922
+    ],
+    [
+      1831,
+      "VT DEC WQD",
+      "VT15-05L03",
+      "LILY (LYNDON)",
+      "Inventory Lake",
+      3.67315321
+    ],
+    [
+      1832,
+      "VT DEC WQD",
+      "VT16-21L01",
+      "LILY (NORWCH)",
+      "Inventory Lake",
+      6.67773384
+    ],
+    [
+      1833,
+      "VT DEC WQD",
+      "VT14-01L02",
+      "LILY (THETFD);",
+      "Inventory Lake",
+      24.91996494
+    ],
+    [
+      1834,
+      "VT DEC WQD",
+      "VT13-16L01",
+      "LILY (VERNON)",
+      "Inventory Lake",
+      40.34682077
+    ],
+    [
+      1835,
+      "VT DEC WQD",
+      "VT08-01L02",
+      "LILY PAD",
+      "Inventory Lake",
+      2.82375341
+    ],
+    [
+      1836,
+      "VT DEC WQD",
+      "VT08-05L02",
+      "LIMEHURST",
+      "Inventory Lake",
+      10.93437474
+    ],
+    [
+      1838,
+      "VT DEC WQD",
+      "VT17-02L05",
+      "LINE (HOLLND)",
+      "Inventory Lake",
+      5.96199904
+    ],
+    [
+      1840,
+      "VT DEC WQD",
+      "VT08-13L02",
+      "LITTLE (ELMORE)",
+      "Inventory Lake",
+      12.2829908
+    ],
+    [
+      1841,
+      "VT DEC WQD",
+      "VT11-15L02",
+      "LITTLE (WINHLL)",
+      "Inventory Lake",
+      17.1027399
+    ],
+    [
+      1842,
+      "VT DEC WQD",
+      "VT12-04L04",
+      "LITTLE (WOODFD)",
+      "Inventory Lake",
+      21.98247726
+    ],
+    [
+      1843,
+      "VT DEC WQD",
+      "VT07-21L06",
+      "LITTLE ELIGO",
+      "Inventory Lake",
+      14.21924267
+    ],
+    [
+      1845,
+      "VT DEC WQD",
+      "VT03-18L07",
+      "LITTLE MUD (MTTABR)",
+      "Inventory Lake",
+      7.39180804
+    ],
+    [
+      1846,
+      "VT DEC WQD",
+      "VT01-05L10",
+      "LITTLE MUD (WINHLL)",
+      "Inventory Lake",
+      19.20906162
+    ],
+    [
+      1848,
+      "VT DEC WQD",
+      "VT03-18L08",
+      "LITTLE ROCK",
+      "Inventory Lake",
+      19.61069829
+    ],
+    [
+      1849,
+      "VT DEC WQD",
+      "VT16-12L07",
+      "LITTLE WHEELER",
+      "Inventory Lake",
+      8.04799048
+    ],
+    [
+      1850,
+      "VT DEC WQD",
+      "VT07-22L03",
+      "LONG (GRNSBO)",
+      "Inventory Lake",
+      99.4062922
+    ],
+    [
+      1852,
+      "VT DEC WQD",
+      "VT07-14L02",
+      "LOST (BELVDR)",
+      "Inventory Lake",
+      3.9458966
+    ],
+    [
+      1853,
+      "VT DEC WQD",
+      "VT05-07L04",
+      "LOST (GEORGA)",
+      "Inventory Lake",
+      8.23770148
+    ],
+    [
+      1854,
+      "VT DEC WQD",
+      "VT12-04L02",
+      "LOST (GLASBY)",
+      "Inventory Lake",
+      2.46367143
+    ],
+    [
+      1856,
+      "VT DEC WQD",
+      "VT01-06L04",
+      "LOST (SUNDLD)",
+      "Inventory Lake",
+      1.33407383
+    ],
+    [
+      1857,
+      "VT DEC WQD",
+      "VT02-03L07",
+      "LOVES MARSH",
+      "Inventory Lake",
+      68.75695304
+    ],
+    [
+      1858,
+      "VT DEC WQD",
+      "VT11-18L04",
+      "LOWELL",
+      "Inventory Lake",
+      93.43012023
+    ],
+    [
+      1859,
+      "VT DEC WQD",
+      "VT05-11L03",
+      "LOWER",
+      "Inventory Lake",
+      44.94013668
+    ],
+    [
+      1860,
+      "VT DEC WQD",
+      "VT13-06L03",
+      "LOWER HURRICANE",
+      "Inventory Lake",
+      4.73685165
+    ],
+    [
+      1861,
+      "VT DEC WQD",
+      "VT10-08L02",
+      "LOWER MOORE",
+      "Inventory Lake",
+      4.32965381
+    ],
+    [
+      1862,
+      "VT DEC WQD",
+      "VT08-15L03",
+      "LOWER ORANGE",
+      "Inventory Lake",
+      8.78976421
+    ],
+    [
+      1863,
+      "VT DEC WQD",
+      "VT08-01L01",
+      "LOWER WINOOSKI;",
+      "Inventory Lake",
+      1.48526076
+    ],
+    [
+      1864,
+      "VT DEC WQD",
+      "VT08-13L04",
+      "LOWER WORCESTER",
+      "Inventory Lake",
+      30.89973832
+    ],
+    [
+      1865,
+      "VT DEC WQD",
+      "VT15-02L02",
+      "LYFORD",
+      "Inventory Lake",
+      36.19412534
+    ],
+    [
+      1866,
+      "VT DEC WQD",
+      "VT01-05L02",
+      "MADELEINE",
+      "Inventory Lake",
+      26.6768265
+    ],
+    [
+      1867,
+      "VT DEC WQD",
+      "VT16-13L02",
+      "MAIDSTONE",
+      "Inventory Lake",
+      755.82782441
+    ],
+    [
+      1868,
+      "VT DEC WQD",
+      "VT14-02L03",
+      "MANCHESTERS;",
+      "Inventory Lake",
+      4.95863971
+    ],
+    [
+      1869,
+      "VT DEC WQD",
+      "VT08-11L01",
+      "MANSFIELD",
+      "Inventory Lake",
+      39.46879447
+    ],
+    [
+      1870,
+      "VT DEC WQD",
+      "VT15-07L02",
+      "MARL",
+      "Inventory Lake",
+      10.21023862
+    ],
+    [
+      1871,
+      "VT DEC WQD",
+      "VT13-14L03",
+      "MARLBORO-431;",
+      "Inventory Lake",
+      11.40299138
+    ],
+    [
+      1872,
+      "VT DEC WQD",
+      "VT08-16L01",
+      "MARTIN;",
+      "Inventory Lake",
+      20.66878033
+    ],
+    [
+      1873,
+      "VT DEC WQD",
+      "VT14-09L03",
+      "MARTINS",
+      "Inventory Lake",
+      80.39317027
+    ],
+    [
+      1874,
+      "VT DEC WQD",
+      "VT06-08L01",
+      "MCALLISTER",
+      "Inventory Lake",
+      25.60633386
+    ],
+    [
+      1875,
+      "VT DEC WQD",
+      "VT16-11L03",
+      "MCCONNELL",
+      "Inventory Lake",
+      86.51676696
+    ],
+    [
+      1876,
+      "VT DEC WQD",
+      "VT10-08L04",
+      "MECAWEE",
+      "Inventory Lake",
+      12.95900453
+    ],
+    [
+      1877,
+      "VT DEC WQD",
+      "VT06-05L01",
+      "METCALF",
+      "Inventory Lake",
+      84.48928233
+    ],
+    [
+      1878,
+      "VT DEC WQD",
+      "VT16-11L05",
+      "MILE",
+      "Inventory Lake",
+      22.23178247
+    ],
+    [
+      1879,
+      "VT DEC WQD",
+      "VT16-16L01",
+      "MILES",
+      "Inventory Lake",
+      221.0567606
+    ],
+    [
+      1880,
+      "VT DEC WQD",
+      "VT13-08L01",
+      "MILL (WINDSR)",
+      "Inventory Lake",
+      56.26566349
+    ],
+    [
+      1881,
+      "VT DEC WQD",
+      "VT14-02L01",
+      "MILLER",
+      "Inventory Lake",
+      64.20515316
+    ],
+    [
+      1882,
+      "VT DEC WQD",
+      "VT01-06L03",
+      "MILLER;",
+      "Inventory Lake",
+      18.51377839
+    ],
+    [
+      1883,
+      "VT DEC WQD",
+      "VT05-09L05",
+      "MILTON",
+      "Inventory Lake",
+      29.79132111
+    ],
+    [
+      1884,
+      "VT DEC WQD",
+      "VT13-12L01",
+      "MINARDS",
+      "Inventory Lake",
+      46.72397533
+    ],
+    [
+      1885,
+      "VT DEC WQD",
+      "VT08-14L07",
+      "MIRROR",
+      "Inventory Lake",
+      87.79017547
+    ],
+    [
+      1886,
+      "VT DEC WQD",
+      "VT09-03L02",
+      "MITCHELL",
+      "Inventory Lake",
+      27.57591207
+    ],
+    [
+      1887,
+      "VT DEC WQD",
+      "VT08-09L04",
+      "MOLLYS",
+      "Inventory Lake",
+      45.99872186
+    ],
+    [
+      1888,
+      "VT DEC WQD",
+      "VT16-04L01",
+      "MOORE",
+      "Inventory Lake",
+      1321.41180753
+    ],
+    [
+      1889,
+      "VT DEC WQD",
+      "VT16-20L01",
+      "MOREY",
+      "Inventory Lake",
+      549.84053265
+    ],
+    [
+      1891,
+      "VT DEC WQD",
+      "VT11-18L06",
+      "MOSES",
+      "Inventory Lake",
+      9.71158757
+    ],
+    [
+      1892,
+      "VT DEC WQD",
+      "VT04-04L03",
+      "MUD (BENSON)",
+      "Inventory Lake",
+      9.18203051
+    ],
+    [
+      1893,
+      "VT DEC WQD",
+      "VT09-06L05",
+      "MUD (BRAINT)",
+      "Inventory Lake",
+      4.6782906
+    ],
+    [
+      1899,
+      "VT DEC WQD",
+      "VT03-04L07",
+      "MUD (LEICTR)",
+      "Inventory Lake",
+      25.19735379
+    ],
+    [
+      1900,
+      "VT DEC WQD",
+      "VT06-08L03",
+      "MUD (LOWELL)",
+      "Inventory Lake",
+      2.67872713
+    ],
+    [
+      1901,
+      "VT DEC WQD",
+      "VT02-02L11",
+      "MUD (ORWELL)",
+      "Inventory Lake",
+      6.40502502
+    ],
+    [
+      1902,
+      "VT DEC WQD",
+      "VT14-09L04",
+      "MUD (PEACHM)",
+      "Inventory Lake",
+      22.05698943
+    ],
+    [
+      1903,
+      "VT DEC WQD",
+      "VT11-16L04",
+      "MUD (PERU)",
+      "Inventory Lake",
+      13.15695484
+    ],
+    [
+      1904,
+      "VT DEC WQD",
+      "VT14-03L02",
+      "MUD (THETFD)",
+      "Inventory Lake",
+      15.54713457
+    ],
+    [
+      1906,
+      "VT DEC WQD",
+      "VT08-14L11",
+      "MUD (WOODBY)-SE",
+      "Inventory Lake",
+      18.16995756
+    ],
+    [
+      1908,
+      "VT DEC WQD",
+      "VT12-02L01",
+      "MUD (WOODFD)",
+      "Inventory Lake",
+      6.49152558
+    ],
+    [
+      1909,
+      "VT DEC WQD",
+      "VT05-03L01",
+      "MUD CREEK",
+      "Inventory Lake",
+      30.78634162
+    ],
+    [
+      1910,
+      "VT DEC WQD",
+      "VT03-04L03",
+      "MUDD",
+      "Inventory Lake",
+      19.31195172
+    ],
+    [
+      1912,
+      "VT DEC WQD",
+      "VT03-06L04",
+      "MUDDY (RUTLDC)",
+      "Inventory Lake",
+      26.83003163
+    ],
+    [
+      1913,
+      "VT DEC WQD",
+      "VT02-05L04",
+      "N.E. DEVELOPERS",
+      "Inventory Lake",
+      24.1262635
+    ],
+    [
+      1914,
+      "VT DEC WQD",
+      "VT16-15L01",
+      "NEAL",
+      "Inventory Lake",
+      188.11386377
+    ],
+    [
+      1916,
+      "VT DEC WQD",
+      "VT15-07L01",
+      "NEWARK",
+      "Inventory Lake",
+      158.24968152
+    ],
+    [
+      1917,
+      "VT DEC WQD",
+      "VT07-21L02",
+      "NICHOLS",
+      "Inventory Lake",
+      167.49399973
+    ],
+    [
+      1918,
+      "VT DEC WQD",
+      "VT10-15L05",
+      "NINEVAH",
+      "Inventory Lake",
+      175.61137806
+    ],
+    [
+      1919,
+      "VT DEC WQD",
+      "VT14-01L01",
+      "NORFORD",
+      "Inventory Lake",
+      20.28044317
+    ],
+    [
+      1920,
+      "VT DEC WQD",
+      "VT03-11L01",
+      "NORTH (BRISTL)",
+      "Inventory Lake",
+      3.59950113
+    ],
+    [
+      1921,
+      "VT DEC WQD",
+      "VT09-05L04",
+      "NORTH (BRKFLD)",
+      "Inventory Lake",
+      27.5940403
+    ],
+    [
+      1922,
+      "VT DEC WQD",
+      "VT09-07L02",
+      "NORTH (CHITDN)",
+      "Inventory Lake",
+      4.79743576
+    ],
+    [
+      1923,
+      "VT DEC WQD",
+      "VT12-01L03",
+      "NORTH (WHITHM)",
+      "Inventory Lake",
+      26.00156323
+    ],
+    [
+      1925,
+      "VT DEC WQD",
+      "VT08-14L10",
+      "NORTH MONTPELIER",
+      "Inventory Lake",
+      41.60942567
+    ],
+    [
+      1926,
+      "VT DEC WQD",
+      "VT10-13L02",
+      "NORTH SPRINGFIELD",
+      "Inventory Lake",
+      96.37818569
+    ],
+    [
+      1927,
+      "VT DEC WQD",
+      "VT05-07L02",
+      "NORTH ST. ALBANS",
+      "Inventory Lake",
+      37.2254014
+    ],
+    [
+      1928,
+      "VT DEC WQD",
+      "VT16-12L01",
+      "NOTCH",
+      "Inventory Lake",
+      21.1566542
+    ],
+    [
+      1929,
+      "VT DEC WQD",
+      "VT14-08L05",
+      "NOYES",
+      "Inventory Lake",
+      37.97726656
+    ],
+    [
+      1930,
+      "VT DEC WQD",
+      "VT16-11L04",
+      "NULHEGAN",
+      "Inventory Lake",
+      39.843014
+    ],
+    [
+      1931,
+      "VT DEC WQD",
+      "VT02-01L04",
+      "OLD MARSH",
+      "Inventory Lake",
+      116.45767684
+    ],
+    [
+      1932,
+      "VT DEC WQD",
+      "VT14-08L02",
+      "OSMORE",
+      "Inventory Lake",
+      49.22425652
+    ],
+    [
+      1933,
+      "VT DEC WQD",
+      "VT01-03L05",
+      "PARAN",
+      "Inventory Lake",
+      35.0847964
+    ],
+    [
+      1934,
+      "VT DEC WQD",
+      "VT03-14L05",
+      "PATCH",
+      "Inventory Lake",
+      9.90918402
+    ],
+    [
+      1935,
+      "VT DEC WQD",
+      "VT16-13L03",
+      "PAUL STREAM",
+      "Inventory Lake",
+      20.81186335
+    ],
+    [
+      1937,
+      "VT DEC WQD",
+      "VT08-09L03",
+      "PEACHAM",
+      "Inventory Lake",
+      347.42231189
+    ],
+    [
+      1938,
+      "VT DEC WQD",
+      "VT08-16L03",
+      "PECKS",
+      "Inventory Lake",
+      7.94887775
+    ],
+    [
+      1939,
+      "VT DEC WQD",
+      "VT04-04L01",
+      "PERCH (BENSON)",
+      "Inventory Lake",
+      25.1289568
+    ],
+    [
+      1940,
+      "VT DEC WQD",
+      "VT07-19L02",
+      "PERCH (WOLCTT)",
+      "Inventory Lake",
+      8.76483114
+    ],
+    [
+      1941,
+      "VT DEC WQD",
+      "VT06-08L04",
+      "PHILLIPS",
+      "Inventory Lake",
+      2.19249356
+    ],
+    [
+      1942,
+      "VT DEC WQD",
+      "VT01-05L08",
+      "PICKEREL",
+      "Inventory Lake",
+      8.12883368
+    ],
+    [
+      1944,
+      "VT DEC WQD",
+      "VT09-06L03",
+      "PICKLES",
+      "Inventory Lake",
+      15.04556526
+    ],
+    [
+      1945,
+      "VT DEC WQD",
+      "VT10-06L01",
+      "PICO",
+      "Inventory Lake",
+      11.43351637
+    ],
+    [
+      1947,
+      "VT DEC WQD",
+      "VT08-08L01",
+      "PIGEON",
+      "Inventory Lake",
+      69.88946632
+    ],
+    [
+      1948,
+      "VT DEC WQD",
+      "VT02-03L09",
+      "PINE",
+      "Inventory Lake",
+      49.86498944
+    ],
+    [
+      1949,
+      "VT DEC WQD",
+      "VT02-05L06",
+      "PINNACLE;",
+      "Inventory Lake",
+      10.27327936
+    ],
+    [
+      1950,
+      "VT DEC WQD",
+      "VT10-02L03",
+      "PINNEO",
+      "Inventory Lake",
+      45.79839493
+    ],
+    [
+      1951,
+      "VT DEC WQD",
+      "VT13-14L02",
+      "PLEASANT VALLEY",
+      "Inventory Lake",
+      21.78277355
+    ],
+    [
+      1952,
+      "VT DEC WQD",
+      "VT03-12L01",
+      "PLEIAD",
+      "Inventory Lake",
+      5.86746349
+    ],
+    [
+      1953,
+      "VT DEC WQD",
+      "VT03-02L02",
+      "PORTER",
+      "Inventory Lake",
+      21.19470459
+    ],
+    [
+      1954,
+      "VT DEC WQD",
+      "VT02-05L07",
+      "PRENTISS",
+      "Inventory Lake",
+      2.34541373
+    ],
+    [
+      1956,
+      "VT DEC WQD",
+      "VT13-07L03",
+      "PRISON;",
+      "Inventory Lake",
+      0.92958498
+    ],
+    [
+      1958,
+      "VT DEC WQD",
+      "VT02-03L13",
+      "QUARRY;",
+      "Inventory Lake",
+      13.03384603
+    ],
+    [
+      1959,
+      "VT DEC WQD",
+      "VT09-06L04",
+      "RANDOLPH-N;",
+      "Inventory Lake",
+      7.65142622
+    ],
+    [
+      1960,
+      "VT DEC WQD",
+      "VT12-05L02",
+      "RAPONDA",
+      "Inventory Lake",
+      123.81020712
+    ],
+    [
+      1961,
+      "VT DEC WQD",
+      "VT10-15L04",
+      "READING",
+      "Inventory Lake",
+      24.06492113
+    ],
+    [
+      1962,
+      "VT DEC WQD",
+      "VT12-04L03",
+      "RED MILL",
+      "Inventory Lake",
+      4.80832142
+    ],
+    [
+      1963,
+      "VT DEC WQD",
+      "VT10-15L08",
+      "RESCUE",
+      "Inventory Lake",
+      189.19856585
+    ],
+    [
+      1964,
+      "VT DEC WQD",
+      "VT03-06L06",
+      "REYNOLDS",
+      "Inventory Lake",
+      2.79713981
+    ],
+    [
+      1966,
+      "VT DEC WQD",
+      "VT08-04L01",
+      "RICHMOND",
+      "Inventory Lake",
+      17.84901138
+    ],
+    [
+      1967,
+      "VT DEC WQD",
+      "VT14-08L04",
+      "RICKER",
+      "Inventory Lake",
+      92.17758766
+    ],
+    [
+      1968,
+      "VT DEC WQD",
+      "VT14-05L01",
+      "RIDDEL",
+      "Inventory Lake",
+      4.94500629
+    ],
+    [
+      1969,
+      "VT DEC WQD",
+      "VT07-15L07",
+      "RITTERBUSH MEADOW;",
+      "Inventory Lake",
+      10.10551148
+    ],
+    [
+      1970,
+      "VT DEC WQD",
+      "VT02-03L08",
+      "ROACH",
+      "Inventory Lake",
+      21.74939281
+    ],
+    [
+      1971,
+      "VT DEC WQD",
+      "VT08-16L06",
+      "ROBINSON;",
+      "Inventory Lake",
+      1.13269585
+    ],
+    [
+      1972,
+      "VT DEC WQD",
+      "VT03-06L07",
+      "ROCKY",
+      "Inventory Lake",
+      8.39351223
+    ],
+    [
+      1973,
+      "VT DEC WQD",
+      "VT09-05L01",
+      "ROOD",
+      "Inventory Lake",
+      23.60005251
+    ],
+    [
+      1974,
+      "VT DEC WQD",
+      "VT02-01L05",
+      "ROOT",
+      "Inventory Lake",
+      21.39246198
+    ],
+    [
+      1975,
+      "VT DEC WQD",
+      "VT08-16L07",
+      "ROULEAU",
+      "Inventory Lake",
+      1.7398148
+    ],
+    [
+      1977,
+      "VT DEC WQD",
+      "VT17-02L03",
+      "ROUND (HOLLND)",
+      "Inventory Lake",
+      15.05264149
+    ],
+    [
+      1978,
+      "VT DEC WQD",
+      "VT16-19L01",
+      "ROUND (NEWBRY)",
+      "Inventory Lake",
+      30.05362951
+    ],
+    [
+      1979,
+      "VT DEC WQD",
+      "VT09-06L01",
+      "ROXBURY FLAT;",
+      "Inventory Lake",
+      2.6148654
+    ],
+    [
+      1980,
+      "VT DEC WQD",
+      "VT08-13L03",
+      "RUSS",
+      "Inventory Lake",
+      5.91448731
+    ],
+    [
+      1981,
+      "VT DEC WQD",
+      "VT03-06L08",
+      "RUTLAND CITY",
+      "Inventory Lake",
+      12.9635404
+    ],
+    [
+      1982,
+      "VT DEC WQD",
+      "VT12-01L06",
+      "RYDER",
+      "Inventory Lake",
+      13.76429482
+    ],
+    [
+      1983,
+      "VT DEC WQD",
+      "VT14-07L03",
+      "RYEGATE CENTER;",
+      "Inventory Lake",
+      6.9019061
+    ],
+    [
+      1984,
+      "VT DEC WQD",
+      "VT08-14L05",
+      "SABIN",
+      "Inventory Lake",
+      147.49194591
+    ],
+    [
+      1985,
+      "VT DEC WQD",
+      "VT12-01L02",
+      "SADAWGA",
+      "Inventory Lake",
+      191.270312
+    ],
+    [
+      1986,
+      "VT DEC WQD",
+      "VT13-13L01",
+      "SALMON;",
+      "Inventory Lake",
+      0.41590689
+    ],
+    [
+      1987,
+      "VT DEC WQD",
+      "VT16-18L04",
+      "SARAH MOORES",
+      "Inventory Lake",
+      8.93916683
+    ],
+    [
+      1988,
+      "VT DEC WQD",
+      "VT15-08L02",
+      "SAWDUST",
+      "Inventory Lake",
+      14.65708125
+    ],
+    [
+      1989,
+      "VT DEC WQD",
+      "VT12-04L05",
+      "SEARSBURG",
+      "Inventory Lake",
+      15.53336151
+    ],
+    [
+      1990,
+      "VT DEC WQD",
+      "VT16-16L02",
+      "SHADOW (CONCRD)",
+      "Inventory Lake",
+      131.63984847
+    ],
+    [
+      1992,
+      "VT DEC WQD",
+      "VT01-03L04",
+      "SHAFTSBURY",
+      "Inventory Lake",
+      23.67213809
+    ],
+    [
+      1993,
+      "VT DEC WQD",
+      "VT08-02L01",
+      "SHELBURNE",
+      "Inventory Lake",
+      479.26979592
+    ],
+    [
+      1995,
+      "VT DEC WQD",
+      "VT12-01L04",
+      "SHERMAN",
+      "Inventory Lake",
+      88.23443136
+    ],
+    [
+      1996,
+      "VT DEC WQD",
+      "VT12-07L05",
+      "SHIPPEE",
+      "Inventory Lake",
+      23.94501705
+    ],
+    [
+      1997,
+      "VT DEC WQD",
+      "VT09-07L04",
+      "SILVER (BARNRD)",
+      "Inventory Lake",
+      80.98512969
+    ],
+    [
+      1998,
+      "VT DEC WQD",
+      "VT07-03L02",
+      "SILVER (GEORGA)",
+      "Inventory Lake",
+      26.70872185
+    ],
+    [
+      1999,
+      "VT DEC WQD",
+      "VT03-04L02",
+      "SILVER (LEICTR)",
+      "Inventory Lake",
+      104.42642851
+    ],
+    [
+      2000,
+      "VT DEC WQD",
+      "VT13-06L04",
+      "SIMONDS",
+      "Inventory Lake",
+      0.26368121
+    ],
+    [
+      2001,
+      "VT DEC WQD",
+      "VT11-12L02",
+      "SIMPSONVILLE;",
+      "Inventory Lake",
+      8.8086679
+    ],
+    [
+      2002,
+      "VT DEC WQD",
+      "VT09-07L01",
+      "SKYLIGHT",
+      "Inventory Lake",
+      1.84897223
+    ],
+    [
+      2003,
+      "VT DEC WQD",
+      "VT07-20L01",
+      "SLAYTON (WOODBY)",
+      "Inventory Lake",
+      6.63097546
+    ],
+    [
+      2004,
+      "VT DEC WQD",
+      "VT03-04L08",
+      "SMITH (PITTFD)",
+      "Inventory Lake",
+      5.18051169
+    ],
+    [
+      2005,
+      "VT DEC WQD",
+      "VT08-08L03",
+      "SODOM",
+      "Inventory Lake",
+      27.08709027
+    ],
+    [
+      2008,
+      "VT DEC WQD",
+      "VT09-05L06",
+      "SOUTH (BRKFLD)",
+      "Inventory Lake",
+      17.06807551
+    ],
+    [
+      2009,
+      "VT DEC WQD",
+      "VT03-14L01",
+      "SOUTH (CHITDN)",
+      "Inventory Lake",
+      8.01684699
+    ],
+    [
+      2010,
+      "VT DEC WQD",
+      "VT07-15L05",
+      "SOUTH (EDEN)",
+      "Inventory Lake",
+      112.53388436
+    ],
+    [
+      2011,
+      "VT DEC WQD",
+      "VT12-07L01",
+      "SOUTH (MARLBR)",
+      "Inventory Lake",
+      68.51740608
+    ],
+    [
+      2012,
+      "VT DEC WQD",
+      "VT16-13L01",
+      "SOUTH AMERICA",
+      "Inventory Lake",
+      30.77671884
+    ],
+    [
+      2013,
+      "VT DEC WQD",
+      "VT15-07L03",
+      "SOUTH DOLLOFF",
+      "Inventory Lake",
+      3.72812079
+    ],
+    [
+      2015,
+      "VT DEC WQD",
+      "VT05-07L03",
+      "SOUTH ST. ALBANS",
+      "Inventory Lake",
+      24.80408302
+    ],
+    [
+      2016,
+      "VT DEC WQD",
+      "VT01-03L03",
+      "SOUTH STREAM",
+      "Inventory Lake",
+      25.19968935
+    ],
+    [
+      2017,
+      "VT DEC WQD",
+      "VT01-05L09",
+      "SOUTH VILLAGE",
+      "Inventory Lake",
+      6.64727894
+    ],
+    [
+      2018,
+      "VT DEC WQD",
+      "VT10-12L01",
+      "SPOONERVILLE;",
+      "Inventory Lake",
+      5.99141684
+    ],
+    [
+      2020,
+      "VT DEC WQD",
+      "VT03-17L04",
+      "SPRING (SHRWBY)",
+      "Inventory Lake",
+      63.66726851
+    ],
+    [
+      2021,
+      "VT DEC WQD",
+      "VT10-13L03",
+      "SPRINGFIELD",
+      "Inventory Lake",
+      8.60146907
+    ],
+    [
+      2022,
+      "VT DEC WQD",
+      "VT02-02L01",
+      "SPRUCE (ORWELL)",
+      "Inventory Lake",
+      15.08654988
+    ],
+    [
+      2023,
+      "VT DEC WQD",
+      "VT12-05L04",
+      "SPRUCE (WILMTN)",
+      "Inventory Lake",
+      14.00416748
+    ],
+    [
+      2024,
+      "VT DEC WQD",
+      "VT02-05L03",
+      "ST. CATHERINE",
+      "Inventory Lake",
+      885.39582365
+    ],
+    [
+      2025,
+      "VT DEC WQD",
+      "VT12-02L03",
+      "STAMFORD",
+      "Inventory Lake",
+      10.56867359
+    ],
+    [
+      2027,
+      "VT DEC WQD",
+      "VT15-02L05",
+      "STANNARD",
+      "Inventory Lake",
+      23.78910022
+    ],
+    [
+      2028,
+      "VT DEC WQD",
+      "VT09-05L05",
+      "STAPLES",
+      "Inventory Lake",
+      11.83171634
+    ],
+    [
+      2029,
+      "VT DEC WQD",
+      "VT03-17L01",
+      "STAR",
+      "Inventory Lake",
+      62.20812119
+    ],
+    [
+      2030,
+      "VT DEC WQD",
+      "VT07-13L03",
+      "STERLING",
+      "Inventory Lake",
+      6.86177916
+    ],
+    [
+      2031,
+      "VT DEC WQD",
+      "VT16-12L06",
+      "STEVENS",
+      "Inventory Lake",
+      24.03528025
+    ],
+    [
+      2032,
+      "VT DEC WQD",
+      "VT15-09L04",
+      "STILES",
+      "Inventory Lake",
+      154.77750505
+    ],
+    [
+      2033,
+      "VT DEC WQD",
+      "VT10-16L03",
+      "STOUGHTON",
+      "Inventory Lake",
+      50.10052659
+    ],
+    [
+      2034,
+      "VT DEC WQD",
+      "VT11-16L01",
+      "STRATTON",
+      "Inventory Lake",
+      47.95708271
+    ],
+    [
+      2036,
+      "VT DEC WQD",
+      "VT03-04L01",
+      "SUGAR HILL",
+      "Inventory Lake",
+      47.20954031
+    ],
+    [
+      2037,
+      "VT DEC WQD",
+      "VT03-13L01",
+      "SUGAR HOLLOW",
+      "Inventory Lake",
+      24.99842335
+    ],
+    [
+      2038,
+      "VT DEC WQD",
+      "VT02-02L02",
+      "SUNRISE",
+      "Inventory Lake",
+      61.28394363
+    ],
+    [
+      2039,
+      "VT DEC WQD",
+      "VT02-02L03",
+      "SUNSET (BENSON)",
+      "Inventory Lake",
+      205.09032946
+    ],
+    [
+      2040,
+      "VT DEC WQD",
+      "VT09-05L03",
+      "SUNSET (BRKFLD)",
+      "Inventory Lake",
+      24.62350097
+    ],
+    [
+      2041,
+      "VT DEC WQD",
+      "VT11-08L01",
+      "SUNSET (MARLBR)",
+      "Inventory Lake",
+      97.6271918
+    ],
+    [
+      2043,
+      "VT DEC WQD",
+      "VT13-17L01",
+      "SWEET",
+      "Inventory Lake",
+      16.03515062
+    ],
+    [
+      2045,
+      "VT DEC WQD",
+      "VT11-02L01",
+      "TELEPHONE;",
+      "Inventory Lake",
+      19.21675108
+    ],
+    [
+      2048,
+      "VT DEC WQD",
+      "VT10-10L02",
+      "THE POGUE",
+      "Inventory Lake",
+      14.30068041
+    ],
+    [
+      2049,
+      "VT DEC WQD",
+      "VT01-03L06",
+      "THOMPSONS",
+      "Inventory Lake",
+      32.05670319
+    ],
+    [
+      2050,
+      "VT DEC WQD",
+      "VT08-15L01",
+      "THURMAN W. DIX",
+      "Inventory Lake",
+      125.27262646
+    ],
+    [
+      2051,
+      "VT DEC WQD",
+      "VT14-07L02",
+      "TICKLENAKED",
+      "Inventory Lake",
+      54.96858649
+    ],
+    [
+      2052,
+      "VT DEC WQD",
+      "VT10-15L06",
+      "TINY",
+      "Inventory Lake",
+      34.66487337
+    ],
+    [
+      2055,
+      "VT DEC WQD",
+      "VT17-02L02",
+      "TURTLE",
+      "Inventory Lake",
+      25.52137164
+    ],
+    [
+      2056,
+      "VT DEC WQD",
+      "VT08-08L02",
+      "TURTLEHEAD",
+      "Inventory Lake",
+      69.72365978
+    ],
+    [
+      2057,
+      "VT DEC WQD",
+      "VT16-12L05",
+      "TUTTLE (BRUNWK)",
+      "Inventory Lake",
+      16.62562711
+    ],
+    [
+      2058,
+      "VT DEC WQD",
+      "VT07-21L03",
+      "TUTTLE (HARDWK)",
+      "Inventory Lake",
+      20.64559454
+    ],
+    [
+      2060,
+      "VT DEC WQD",
+      "VT16-11L01",
+      "UNKNOWN (AVYGOR)",
+      "Inventory Lake",
+      17.28606299
+    ],
+    [
+      2061,
+      "VT DEC WQD",
+      "VT16-13L04",
+      "UNKNOWN (FERDND)",
+      "Inventory Lake",
+      11.48576887
+    ],
+    [
+      2062,
+      "VT DEC WQD",
+      "VT13-06L02",
+      "UPPER HURRICANE",
+      "Inventory Lake",
+      2.48638531
+    ],
+    [
+      2063,
+      "VT DEC WQD",
+      "VT10-08L03",
+      "UPPER MOORE",
+      "Inventory Lake",
+      2.86213772
+    ],
+    [
+      2064,
+      "VT DEC WQD",
+      "VT16-18L03",
+      "LOWER SYMES",
+      "Inventory Lake",
+      53.45025758
+    ],
+    [
+      2065,
+      "VT DEC WQD",
+      "VT08-02L02",
+      "UPPER WINOOSKI;",
+      "Inventory Lake",
+      0.64171419
+    ],
+    [
+      2066,
+      "VT DEC WQD",
+      "VT08-13L06",
+      "UPPER WORCESTER",
+      "Inventory Lake",
+      10.31163439
+    ],
+    [
+      2067,
+      "VT DEC WQD",
+      "VT08-14L03",
+      "VALLEY",
+      "Inventory Lake",
+      92.31059254
+    ],
+    [
+      2068,
+      "VT DEC WQD",
+      "VT13-16L02",
+      "VERNON HATCHERY;",
+      "Inventory Lake",
+      4.71866666
+    ],
+    [
+      2069,
+      "VT DEC WQD",
+      "VT14-03L07",
+      "VERSHIRE-E;",
+      "Inventory Lake",
+      10.75138253
+    ],
+    [
+      2070,
+      "VT DEC WQD",
+      "VT10-07L01",
+      "VIEW",
+      "Inventory Lake",
+      2.27199362
+    ],
+    [
+      2071,
+      "VT DEC WQD",
+      "VT10-10L03",
+      "VONDELL",
+      "Inventory Lake",
+      8.20854584
+    ],
+    [
+      2073,
+      "VT DEC WQD",
+      "VT03-04L09",
+      "WALKER (HUBDTN)",
+      "Inventory Lake",
+      14.76712982
+    ],
+    [
+      2074,
+      "VT DEC WQD",
+      "VT15-08L05",
+      "WALKER (NEWARK)",
+      "Inventory Lake",
+      3.6278562
+    ],
+    [
+      2075,
+      "VT DEC WQD",
+      "VT16-08L02",
+      "WALLACE",
+      "Inventory Lake",
+      112.00839213
+    ],
+    [
+      2076,
+      "VT DEC WQD",
+      "VT03-17L03",
+      "WALLINGFORD",
+      "Inventory Lake",
+      88.21453147
+    ],
+    [
+      2078,
+      "VT DEC WQD",
+      "VT11-18L02",
+      "WANTASTIQUET",
+      "Inventory Lake",
+      45.6417909
+    ],
+    [
+      2079,
+      "VT DEC WQD",
+      "VT07-21L04",
+      "WAPANACKI",
+      "Inventory Lake",
+      21.94169423
+    ],
+    [
+      2080,
+      "VT DEC WQD",
+      "VT16-18L01",
+      "WARDEN",
+      "Inventory Lake",
+      45.10660847
+    ],
+    [
+      2082,
+      "VT DEC WQD",
+      "VT13-17L02",
+      "WEATHERHEAD HOLLOW",
+      "Inventory Lake",
+      30.82510422
+    ],
+    [
+      2083,
+      "VT DEC WQD",
+      "VT14-03L05",
+      "WEST FAIRLEE;",
+      "Inventory Lake",
+      16.99345651
+    ],
+    [
+      2084,
+      "VT DEC WQD",
+      "VT08-09L02",
+      "WEST HILL",
+      "Inventory Lake",
+      47.90632862
+    ],
+    [
+      2085,
+      "VT DEC WQD",
+      "VT16-12L02",
+      "WEST MOUNTAIN",
+      "Inventory Lake",
+      60.23577996
+    ],
+    [
+      2086,
+      "VT DEC WQD",
+      "VT11-05L03",
+      "WEST TWIN",
+      "Inventory Lake",
+      0.45681927
+    ],
+    [
+      2087,
+      "VT DEC WQD",
+      "VT16-12L04",
+      "WHEELER (BRUNWK)",
+      "Inventory Lake",
+      73.3510276
+    ],
+    [
+      2090,
+      "VT DEC WQD",
+      "VT08-16L08",
+      "WHITCOMB",
+      "Inventory Lake",
+      0.82719105
+    ],
+    [
+      2091,
+      "VT DEC WQD",
+      "VT11-16L03",
+      "WINHALL;",
+      "Inventory Lake",
+      0.65792531
+    ],
+    [
+      2092,
+      "VT DEC WQD",
+      "VT07-08L03",
+      "WOLCOTT",
+      "Inventory Lake",
+      72.62886792
+    ],
+    [
+      2093,
+      "VT DEC WQD",
+      "VT10-06L03",
+      "WOODWARD",
+      "Inventory Lake",
+      109.83562334
+    ],
+    [
+      2094,
+      "VT DEC WQD",
+      "VT13-06L01",
+      "WRIGHT",
+      "Inventory Lake",
+      2.92169935
+    ],
+    [
+      2095,
+      "VT DEC WQD",
+      "VT08-13L05",
+      "WRIGHTSVILLE",
+      "Inventory Lake",
+      180.4892092
+    ],
+    [
+      2096,
+      "VT DEC WQD",
+      "VT12-02L04",
+      "YAW",
+      "Inventory Lake",
+      6.53395272
+    ],
+    [
+      2097,
+      "VT DEC WQD",
+      "VT07-18L02",
+      "ZACK WOODS",
+      "Inventory Lake",
+      25.12557752
+    ],
+    [
+      2099,
+      "VT DEC WQD",
+      "VT17-05L14",
+      "BACK",
+      "Inventory Lake",
+      12.22580736
+    ],
+    [
+      2100,
+      "VT DEC WQD",
+      "VT17-08L07",
+      "BAKER (BARTON)",
+      "Inventory Lake",
+      56.12686312
+    ],
+    [
+      2101,
+      "VT DEC WQD",
+      "VT17-08L04",
+      "BEAN (SUTTON)",
+      "Inventory Lake",
+      36.44695953
+    ],
+    [
+      2102,
+      "VT DEC WQD",
+      "VT07-18L05",
+      "BEAVER (HYDEPK);",
+      "Inventory Lake",
+      15.18077348
+    ],
+    [
+      2104,
+      "VT DEC WQD",
+      "VT17-08L14",
+      "BLAKE (SUTTON)",
+      "Inventory Lake",
+      8.45064259
+    ],
+    [
+      2105,
+      "VT DEC WQD",
+      "VT17-07L01",
+      "BROWNINGTON",
+      "Inventory Lake",
+      137.46626488
+    ],
+    [
+      2107,
+      "VT DEC WQD",
+      "VT05-01L03",
+      "BULLIS;",
+      "Inventory Lake",
+      12.82031689
+    ],
+    [
+      2109,
+      "VT DEC WQD",
+      "VT14-03L08",
+      "C.C.C.",
+      "Inventory Lake",
+      8.54643691
+    ],
+    [
+      2110,
+      "VT DEC WQD",
+      "VT05-02L01",
+      "CARMI",
+      "Inventory Lake",
+      1415.19631827
+    ],
+    [
+      2111,
+      "VT DEC WQD",
+      "VT17-04L03",
+      "CHARLESTON",
+      "Inventory Lake",
+      44.11613659
+    ],
+    [
+      2112,
+      "VT DEC WQD",
+      "VT16-20L02",
+      "CHILDS",
+      "Inventory Lake",
+      9.64649498
+    ],
+    [
+      2113,
+      "VT DEC WQD",
+      "VT17-04L06",
+      "CLYDE",
+      "Inventory Lake",
+      186.0107231
+    ],
+    [
+      2114,
+      "VT DEC WQD",
+      "VT17-07L02",
+      "COBB",
+      "Inventory Lake",
+      18.66869493
+    ],
+    [
+      2115,
+      "VT DEC WQD",
+      "VT15-09L02",
+      "COW MOUNTAIN",
+      "Inventory Lake",
+      9.36732397
+    ],
+    [
+      2116,
+      "VT DEC WQD",
+      "VT17-08L08",
+      "CRYSTAL (BARTON)",
+      "Inventory Lake",
+      771.60367844
+    ],
+    [
+      2117,
+      "VT DEC WQD",
+      "VT17-08L02",
+      "DANIELS",
+      "Inventory Lake",
+      65.44384959
+    ],
+    [
+      2118,
+      "VT DEC WQD",
+      "VT17-10L08",
+      "DANIELS-W;",
+      "Inventory Lake",
+      19.31222806
+    ],
+    [
+      2120,
+      "VT DEC WQD",
+      "VT17-04L05",
+      "DERBY",
+      "Inventory Lake",
+      211.62855329
+    ],
+    [
+      2121,
+      "VT DEC WQD",
+      "VT17-05L13",
+      "DOLLIF;",
+      "Inventory Lake",
+      4.47595239
+    ],
+    [
+      2122,
+      "VT DEC WQD",
+      "VT15-08L07",
+      "DUCK (BURKE)",
+      "Inventory Lake",
+      5.36362041
+    ],
+    [
+      2123,
+      "VT DEC WQD",
+      "VT17-10L06",
+      "DUCK (CRAFBY)",
+      "Inventory Lake",
+      9.38208881
+    ],
+    [
+      2124,
+      "VT DEC WQD",
+      "VT17-08L13",
+      "DUCK (SHEFLD)",
+      "Inventory Lake",
+      9.11751829
+    ],
+    [
+      2125,
+      "VT DEC WQD",
+      "VT17-08L15",
+      "DUCK (SUTTON)",
+      "Inventory Lake",
+      7.69168023
+    ],
+    [
+      2127,
+      "VT DEC WQD",
+      "VT17-05L06",
+      "ECHO (CHARTN)",
+      "Inventory Lake",
+      546.46179885
+    ],
+    [
+      2129,
+      "VT DEC WQD",
+      "VT07-22L01",
+      "FLAGG",
+      "Inventory Lake",
+      110.6589954
+    ],
+    [
+      2130,
+      "VT DEC WQD",
+      "VT17-10L04",
+      "GREAT HOSMER",
+      "Inventory Lake",
+      146.53192824
+    ],
+    [
+      2133,
+      "VT DEC WQD",
+      "VT17-05L09",
+      "HANCOCK (BRIGTN)",
+      "Inventory Lake",
+      7.14462449
+    ],
+    [
+      2134,
+      "VT DEC WQD",
+      "VT17-10L05",
+      "HARTWELL",
+      "Inventory Lake",
+      17.41619868
+    ],
+    [
+      2136,
+      "VT DEC WQD",
+      "VT05-11L02",
+      "IROQUOIS",
+      "Inventory Lake",
+      246.97397363
+    ],
+    [
+      2137,
+      "VT DEC WQD",
+      "VT17-05L02",
+      "ISLAND",
+      "Inventory Lake",
+      614.23346128
+    ],
+    [
+      2138,
+      "VT DEC WQD",
+      "VT17-05L03",
+      "JOBS",
+      "Inventory Lake",
+      40.52908601
+    ],
+    [
+      2139,
+      "VT DEC WQD",
+      "VT17-09L02",
+      "KIDDER",
+      "Inventory Lake",
+      19.94554452
+    ],
+    [
+      2140,
+      "VT DEC WQD",
+      "VT05-02L02",
+      "LITTLE (FRANLN)",
+      "Inventory Lake",
+      22.19165391
+    ],
+    [
+      2141,
+      "VT DEC WQD",
+      "VT17-03L01",
+      "LITTLE AVERILL",
+      "Inventory Lake",
+      470.18281874
+    ],
+    [
+      2142,
+      "VT DEC WQD",
+      "VT07-08L01",
+      "LITTLE ELMORE",
+      "Inventory Lake",
+      25.55801868
+    ],
+    [
+      2143,
+      "VT DEC WQD",
+      "VT17-10L03",
+      "LITTLE HOSMER",
+      "Inventory Lake",
+      178.75944561
+    ],
+    [
+      2144,
+      "VT DEC WQD",
+      "VT06-08L02",
+      "LOCKWOOD",
+      "Inventory Lake",
+      1.53877944
+    ],
+    [
+      2145,
+      "VT DEC WQD",
+      "VT07-15L03",
+      "LONG (EDEN)",
+      "Inventory Lake",
+      100.85549293
+    ],
+    [
+      2146,
+      "VT DEC WQD",
+      "VT05-08L01",
+      "LONG (MILTON)",
+      "Inventory Lake",
+      81.15795496
+    ],
+    [
+      2147,
+      "VT DEC WQD",
+      "VT17-08L09",
+      "LONG (SHEFLD)",
+      "Inventory Lake",
+      37.6166823
+    ],
+    [
+      2149,
+      "VT DEC WQD",
+      "VT17-08L05",
+      "MAY",
+      "Inventory Lake",
+      90.01526163
+    ],
+    [
+      2150,
+      "VT DEC WQD",
+      "VT17-05L08",
+      "MOOSE;",
+      "Inventory Lake",
+      9.74354199
+    ],
+    [
+      2153,
+      "VT DEC WQD",
+      "VT17-10L02",
+      "MUD (CRAFBY)",
+      "Inventory Lake",
+      27.25165975
+    ],
+    [
+      2154,
+      "VT DEC WQD",
+      "VT15-09L07",
+      "MUD (EHAVEN)",
+      "Inventory Lake",
+      3.71576487
+    ],
+    [
+      2155,
+      "VT DEC WQD",
+      "VT15-09L01",
+      "MUD (GRANBY)",
+      "Inventory Lake",
+      23.42204981
+    ],
+    [
+      2157,
+      "VT DEC WQD",
+      "VT07-18L04",
+      "MUD (HYDEPK)",
+      "Inventory Lake",
+      12.85593897
+    ],
+    [
+      2158,
+      "VT DEC WQD",
+      "VT17-08L17",
+      "MUD (IRASBG)",
+      "Inventory Lake",
+      15.3445246
+    ],
+    [
+      2159,
+      "VT DEC WQD",
+      "VT17-05L04",
+      "MUD (MORGAN)-N",
+      "Inventory Lake",
+      37.96248785
+    ],
+    [
+      2160,
+      "VT DEC WQD",
+      "VT17-04L07",
+      "MUD (MORGAN)-W",
+      "Inventory Lake",
+      14.33868497
+    ],
+    [
+      2161,
+      "VT DEC WQD",
+      "VT17-08L16",
+      "MUD (SHEFLD)",
+      "Inventory Lake",
+      4.72591113
+    ],
+    [
+      2164,
+      "VT DEC WQD",
+      "VT17-03L04",
+      "NORTON",
+      "Inventory Lake",
+      658.56070633
+    ],
+    [
+      2166,
+      "VT DEC WQD",
+      "VT17-08L06",
+      "PARKER",
+      "Inventory Lake",
+      253.14140887
+    ],
+    [
+      2167,
+      "VT DEC WQD",
+      "VT17-04L02",
+      "PENSIONER",
+      "Inventory Lake",
+      169.63587191
+    ],
+    [
+      2169,
+      "VT DEC WQD",
+      "VT05-01L04",
+      "PROPER",
+      "Inventory Lake",
+      19.51233275
+    ],
+    [
+      2170,
+      "VT DEC WQD",
+      "VT07-15L06",
+      "RITTERBUSH",
+      "Inventory Lake",
+      16.74892379
+    ],
+    [
+      2171,
+      "VT DEC WQD",
+      "VT07-01L01",
+      "ROUND (MILTON)",
+      "Inventory Lake",
+      29.05706195
+    ],
+    [
+      2172,
+      "VT DEC WQD",
+      "VT17-08L10",
+      "ROUND (SHEFLD)",
+      "Inventory Lake",
+      13.92254472
+    ],
+    [
+      2173,
+      "VT DEC WQD",
+      "VT09-03L04",
+      "ROYALTON HILL;",
+      "Inventory Lake",
+      8.69397651
+    ],
+    [
+      2174,
+      "VT DEC WQD",
+      "VT07-15L08",
+      "RUSH",
+      "Inventory Lake",
+      11.05392809
+    ],
+    [
+      2175,
+      "VT DEC WQD",
+      "VT17-04L04",
+      "SALEM",
+      "Inventory Lake",
+      776.41602983
+    ],
+    [
+      2176,
+      "VT DEC WQD",
+      "VT17-09L03",
+      "SARGENT",
+      "Inventory Lake",
+      6.11544363
+    ],
+    [
+      2177,
+      "VT DEC WQD",
+      "VT07-18L01",
+      "SCHOFIELD",
+      "Inventory Lake",
+      12.59596057
+    ],
+    [
+      2178,
+      "VT DEC WQD",
+      "VT17-05L05",
+      "SEYMOUR",
+      "Inventory Lake",
+      1777.19190459
+    ],
+    [
+      2179,
+      "VT DEC WQD",
+      "VT17-08L03",
+      "SHADOW (GLOVER)",
+      "Inventory Lake",
+      217.28105627
+    ],
+    [
+      2180,
+      "VT DEC WQD",
+      "VT17-09L04",
+      "SMITH (COVNTY)",
+      "Inventory Lake",
+      9.44074947
+    ],
+    [
+      2181,
+      "VT DEC WQD",
+      "VT17-05L01",
+      "SPECTACLE",
+      "Inventory Lake",
+      101.53132457
+    ],
+    [
+      2183,
+      "VT DEC WQD",
+      "VT17-05L10",
+      "SUKES",
+      "Inventory Lake",
+      11.3768311
+    ],
+    [
+      2184,
+      "VT DEC WQD",
+      "VT17-10L07",
+      "SWEENEY",
+      "Inventory Lake",
+      8.57886446
+    ],
+    [
+      2185,
+      "VT DEC WQD",
+      "VT17-08L01",
+      "TILDYS",
+      "Inventory Lake",
+      31.54645314
+    ],
+    [
+      2186,
+      "VT DEC WQD",
+      "VT17-04L01",
+      "TOAD (CHARTN)",
+      "Inventory Lake",
+      25.8717023
+    ],
+    [
+      2187,
+      "VT DEC WQD",
+      "VT17-05L07",
+      "TOAD (MORGAN)",
+      "Inventory Lake",
+      7.71314186
+    ],
+    [
+      2188,
+      "VT DEC WQD",
+      "VT17-05L11",
+      "UNDERPASS",
+      "Inventory Lake",
+      3.51456508
+    ],
+    [
+      2189,
+      "VT DEC WQD",
+      "VT17-08L12",
+      "VAIL",
+      "Inventory Lake",
+      18.55724299
+    ],
+    [
+      2190,
+      "VT DEC WQD",
+      "VT03-07L01",
+      "VERGENNES WATERSHED",
+      "Inventory Lake",
+      11.16975284
+    ],
+    [
+      2191,
+      "VT DEC WQD",
+      "VT17-09L01",
+      "WALKER (COVNTY)",
+      "Inventory Lake",
+      20.01977581
+    ],
+    [
+      2193,
+      "VT DEC WQD",
+      "VT17-08L11",
+      "WHEELER (BARTON)",
+      "Inventory Lake",
+      14.76566749
+    ],
+    [
+      2194,
+      "VT DEC WQD",
+      "VT14-03L06",
+      "WHITEHOUSE",
+      "Inventory Lake",
+      3.35784657
+    ],
+    [
+      2196,
+      "VT DEC WQD",
+      "VT03-08L01",
+      "WINONA",
+      "Inventory Lake",
+      273.58961137
+    ],
+    [
+      2197,
+      "VT DEC WQD",
+      "VT05-10L01",
+      "CHAMP-BURLINGTON BAY",
+      "Inventory Lake",
+      3296.91583546
+    ],
+    [
+      2198,
+      "VT DEC WQD",
+      "VT05-04L02",
+      "CHAMP-ISLE LA MOTTE",
+      "Inventory Lake",
+      20882.235847
+    ],
+    [
+      2199,
+      "VT DEC WQD",
+      "VT05-10L02",
+      "CHAMP-MAIN LAKE",
+      "Inventory Lake",
+      40368.24898308
+    ],
+    [
+      2200,
+      "VT DEC WQD",
+      "VT05-09L01",
+      "CHAMP-MALLETTS BAY",
+      "Inventory Lake",
+      13591.26907989
+    ],
+    [
+      2201,
+      "VT DEC WQD",
+      "VT05-01L01",
+      "CHAMP-MISSISQUOI BAY",
+      "Inventory Lake",
+      8482.19651632
+    ],
+    [
+      2202,
+      "VT DEC WQD",
+      "VT05-04L01",
+      "CHAMP-NORTHEAST ARM",
+      "Inventory Lake",
+      57635.05575478
+    ],
+    [
+      2203,
+      "VT DEC WQD",
+      "VT04-01L01",
+      "CHAMP-OTTER CREEK",
+      "Inventory Lake",
+      5179.70585383
+    ],
+    [
+      2204,
+      "VT DEC WQD",
+      "VT04-01L02",
+      "CHAMP-PORT HENRY",
+      "Inventory Lake",
+      9761.13856794
+    ],
+    [
+      2205,
+      "VT DEC WQD",
+      "VT05-11L01",
+      "CHAMP-SHELBURNE BAY",
+      "Inventory Lake",
+      2327.00540971
+    ],
+    [
+      2206,
+      "VT DEC WQD",
+      "VT04-02L01",
+      "CHAMP-SOUTH LAKE A",
+      "Inventory Lake",
+      5166.98325608
+    ],
+    [
+      2207,
+      "VT DEC WQD",
+      "VT05-07L01",
+      "CHAMP-ST. ALBANS BAY",
+      "Inventory Lake",
+      4260.57926509
+    ],
+    [
+      2208,
+      "VT DEC WQD",
+      "VT17-01L01",
+      "MEMPHREMAGOG",
+      "Inventory Lake",
+      5929.3183204
+    ],
+    [
+      2209,
+      "VT DEC WQD",
+      "VT17-01L02",
+      "SOUTH BAY",
+      "Inventory Lake",
+      709.74135813
+    ],
+    [
+      2210,
+      "VT DEC WQD",
+      "VT03-14L02",
+      "LEFFERTS",
+      "Inventory Lake",
+      66.04145672
+    ],
+    [
+      2211,
+      "VT DEC WQD",
+      "VT07-03L03",
+      "ARROWHEAD MOUNTAIN",
+      "Inventory Lake",
+      719.79081437
+    ],
+    [
+      2212,
+      "VT DEC WQD",
+      "VT11-10L01",
+      "BALL MOUNTAIN",
+      "Inventory Lake",
+      20.2901941
+    ],
+    [
+      2214,
+      "VT DEC WQD",
+      "VT02-03L05",
+      "BOMOSEEN",
+      "Inventory Lake",
+      2415.09735239
+    ],
+    [
+      2215,
+      "VT DEC WQD",
+      "VT01-05L05",
+      "DUFRESNE",
+      "Inventory Lake",
+      8.86858531
+    ],
+    [
+      2216,
+      "VT DEC WQD",
+      "VT03-18L01",
+      "EMERALD",
+      "Inventory Lake",
+      31.36876983
+    ],
+    [
+      2217,
+      "VT DEC WQD",
+      "VT06-05L02",
+      "FAIRFIELD SWAMP",
+      "Inventory Lake",
+      132.21000272
+    ],
+    [
+      2218,
+      "VT DEC WQD",
+      "VT08-02L03",
+      "HALFMOON COVE",
+      "Inventory Lake",
+      22.06581849
+    ],
+    [
+      2219,
+      "VT DEC WQD",
+      "VT12-01L01",
+      "HARRIMAN (WHITHM)",
+      "Inventory Lake",
+      1949.36692102
+    ],
+    [
+      2220,
+      "VT DEC WQD",
+      "VT15-02L04",
+      "KEISER",
+      "Inventory Lake",
+      34.64529784
+    ],
+    [
+      2221,
+      "VT DEC WQD",
+      "VT11-18L05",
+      "LANDGROVE;",
+      "Inventory Lake",
+      15.24488858
+    ],
+    [
+      2222,
+      "VT DEC WQD",
+      "VT16-07L01",
+      "LEIGHTON HILL;",
+      "Inventory Lake",
+      4.29663649
+    ],
+    [
+      2223,
+      "VT DEC WQD",
+      "VT16-18L02",
+      "UPPER SYMES",
+      "Inventory Lake",
+      20.51433375
+    ],
+    [
+      2224,
+      "VT DEC WQD",
+      "VT01-05L12",
+      "LYE BROOK-S;",
+      "Inventory Lake",
+      99.27629202
+    ],
+    [
+      2225,
+      "VT DEC WQD",
+      "VT01-05L11",
+      "LYE BROOK-N;",
+      "Inventory Lake",
+      31.36741522
+    ],
+    [
+      2226,
+      "VT DEC WQD",
+      "VT02-02L07",
+      "MILL (BENSON)",
+      "Inventory Lake",
+      43.60791919
+    ],
+    [
+      2227,
+      "VT DEC WQD",
+      "VT08-09L05",
+      "MOLLYS FALLS",
+      "Inventory Lake",
+      402.432784
+    ],
+    [
+      2228,
+      "VT DEC WQD",
+      "VT10-02L01",
+      "NORTH HARTLAND",
+      "Inventory Lake",
+      167.63073889
+    ],
+    [
+      2229,
+      "VT DEC WQD",
+      "VT07-05L01",
+      "NORTH UNDERHILL;",
+      "Inventory Lake",
+      59.8972188
+    ],
+    [
+      2230,
+      "VT DEC WQD",
+      "VT06-03L01",
+      "OXBOW;",
+      "Inventory Lake",
+      17.19255451
+    ],
+    [
+      2231,
+      "VT DEC WQD",
+      "VT03-10L01",
+      "RICHVILLE",
+      "Inventory Lake",
+      112.8832825
+    ],
+    [
+      2232,
+      "VT DEC WQD",
+      "VT13-07L01",
+      "RUNNEMEDE",
+      "Inventory Lake",
+      62.80360606
+    ],
+    [
+      2234,
+      "VT DEC WQD",
+      "VT12-03L02",
+      "SOMERSET",
+      "Inventory Lake",
+      1525.30156025
+    ],
+    [
+      2235,
+      "VT DEC WQD",
+      "VT10-08L01",
+      "SOUTH MECAWEE;",
+      "Inventory Lake",
+      0.15747267
+    ],
+    [
+      2236,
+      "VT DEC WQD",
+      "VT17-05L12",
+      "STILLWATER",
+      "Inventory Lake",
+      3.15585861
+    ],
+    [
+      2237,
+      "VT DEC WQD",
+      "VT08-11L02",
+      "WATERBURY",
+      "Inventory Lake",
+      869.17241596
+    ],
+    [
+      2238,
+      "VT DEC WQD",
+      "VT03-11L03",
+      "ABBEY",
+      "Inventory Lake",
+      7.29588058
+    ],
+    [
+      2239,
+      "VT DEC WQD",
+      "VT14-03L04",
+      "ELY;",
+      "Inventory Lake",
+      4.16865139
+    ],
+    [
+      2240,
+      "VT DEC WQD",
+      "VT13-11L01",
+      "WESTMINSTER-E;",
+      "Inventory Lake",
+      6.36368421
+    ],
+    [
+      2241,
+      "VT DEC WQD",
+      "VT10-15L07",
+      "RESERVOIR",
+      "Inventory Lake",
+      34.80841835
+    ],
+    [
+      2242,
+      "VT DEC WQD",
+      "VT08-15L02",
+      "WILLIAMSTOWN-NE;",
+      "Inventory Lake",
+      5.10314574
+    ],
+    [
+      2243,
+      "VT DEC WQD",
+      "VT07-17L01",
+      "MORRISVILLE;",
+      "Inventory Lake",
+      5.0772657
+    ],
+    [
+      2244,
+      "VT DEC WQD",
+      "VT07-15L09",
+      "LANDFILL;",
+      "Inventory Lake",
+      6.16661622
+    ],
+    [
+      2245,
+      "VT DEC WQD",
+      "VT07-13L02",
+      "LAKE-OF-THE-CLOUDS",
+      "Inventory Lake",
+      0.29908179
+    ],
+    [
+      2246,
+      "VT DEC WQD",
+      "VT07-13L01",
+      "BEAR",
+      "Inventory Lake",
+      0.21913463
+    ],
+    [
+      2247,
+      "VT DEC WQD",
+      "VT04-04L04",
+      "BROOKSIDE",
+      "Inventory Lake",
+      13.71090591
+    ],
+    [
+      2248,
+      "VT DEC WQD",
+      "VT03-18L06",
+      "LONG HOLE",
+      "Inventory Lake",
+      1.40074285
+    ],
+    [
+      2249,
+      "VT DEC WQD",
+      "VT03-06L05",
+      "OLYMPUS POOL",
+      "Inventory Lake",
+      2.10334447
+    ],
+    [
+      2250,
+      "VT DEC WQD",
+      "VT02-05L02",
+      "LITTLE (WELLS)",
+      "Inventory Lake",
+      179.00538214
+    ],
+    [
+      2251,
+      "VT DEC WQD",
+      "VT02-05L01",
+      "LILY (POULTY)",
+      "Inventory Lake",
+      20.44726449
+    ],
+    [
+      2277,
+      "VT DEC WQD",
+      "VT13-07L02",
+      "BEAVER (HARTLD)",
+      "Inventory Lake",
+      0.19285116
+    ],
+    [
+      2326,
+      "VT DEC WQD",
+      "VT15-02L06",
+      "GOSLANTS MILL;",
+      "Inventory Lake",
+      1.36555341
+    ],
+    [
+      2387,
+      "VT DEC WQD",
+      "VT06-07L01",
+      "SOUTH RICHFORD;",
+      "Inventory Lake",
+      11.93406204
+    ],
+    [
+      2411,
+      "VT DEC WQD",
+      "VT01-07L01",
+      "KENT HOLLOW;",
+      "Inventory Lake",
+      2.02435871
+    ],
+    [
+      2412,
+      "VT DEC WQD",
+      "VT07-21L07",
+      "MACKVILLE",
+      "Inventory Lake",
+      11.77902287
+    ],
+    [
+      2413,
+      "VT DEC WQD",
+      "VT09-03L01",
+      "MCINTOSH",
+      "Inventory Lake",
+      20.47069206
+    ],
+    [
+      2414,
+      "VT DEC WQD",
+      "VT11-18L08",
+      "ANDOVER;",
+      "Inventory Lake",
+      7.2810456
+    ],
+    [
+      2423,
+      "VT DEC WQD",
+      "VT07-22L04_01",
+      "",
+      "WBID Segments",
+      635.56120176
+    ],
+    [
+      2424,
+      "VT DEC WQD",
+      "VT17-08L06_02",
+      "",
+      "WBID Segments",
+      173.56106817
+    ],
+    [
+      2425,
+      "VT DEC WQD",
+      "VT17-08L06_01",
+      "",
+      "WBID Segments",
+      79.58034071
+    ],
+    [
+      2426,
+      "VT DEC WQD",
+      "VT07-22L04_02",
+      "",
+      "WBID Segments",
+      154.2456718
+    ],
+    [
+      2427,
+      "VT DEC WQD",
+      "VT01-03L01_03",
+      "",
+      "WBID Segments",
+      5.80881223
+    ],
+    [
+      2428,
+      "VT DEC WQD",
+      "VT01-03L01_02",
+      "",
+      "WBID Segments",
+      5.13957945
+    ],
+    [
+      2429,
+      "VT DEC WQD",
+      "VT01-03L01_01",
+      "",
+      "WBID Segments",
+      22.78318277
+    ],
+    [
+      2430,
+      "VT DEC WQD",
+      "VT01-03L02_01",
+      "",
+      "WBID Segments",
+      45.70499774
+    ],
+    [
+      2431,
+      "VT DEC WQD",
+      "VT01-03L02_02",
+      "",
+      "WBID Segments",
+      10.22370907
+    ],
+    [
+      2432,
+      "VT DEC WQD",
+      "VT02-01L03_02",
+      "",
+      "WBID Segments",
+      16.75895785
+    ],
+    [
+      2433,
+      "VT DEC WQD",
+      "VT02-01L03_01",
+      "",
+      "WBID Segments",
+      67.69291842
+    ],
+    [
+      2434,
+      "VT DEC WQD",
+      "VT02-01L04_02",
+      "",
+      "WBID Segments",
+      25.44833135
+    ],
+    [
+      2435,
+      "VT DEC WQD",
+      "VT02-01L04_01",
+      "",
+      "WBID Segments",
+      91.00934538
+    ],
+    [
+      2436,
+      "VT DEC WQD",
+      "VT02-01L05_02",
+      "",
+      "WBID Segments",
+      4.80699674
+    ],
+    [
+      2437,
+      "VT DEC WQD",
+      "VT02-01L05_01",
+      "",
+      "WBID Segments",
+      16.58546524
+    ],
+    [
+      2438,
+      "VT DEC WQD",
+      "VT02-02L02_02",
+      "",
+      "WBID Segments",
+      26.86611945
+    ],
+    [
+      2439,
+      "VT DEC WQD",
+      "VT02-02L02_01",
+      "",
+      "WBID Segments",
+      34.41782419
+    ],
+    [
+      2440,
+      "VT DEC WQD",
+      "VT02-02L03_01",
+      "",
+      "WBID Segments",
+      163.57790708
+    ],
+    [
+      2441,
+      "VT DEC WQD",
+      "VT02-02L03_02",
+      "",
+      "WBID Segments",
+      41.51242238
+    ],
+    [
+      2442,
+      "VT DEC WQD",
+      "VT02-02L04_02",
+      "",
+      "WBID Segments",
+      40.92604384
+    ],
+    [
+      2443,
+      "VT DEC WQD",
+      "VT02-02L04_01",
+      "",
+      "WBID Segments",
+      44.17761987
+    ],
+    [
+      2444,
+      "VT DEC WQD",
+      "VT02-02L05_02",
+      "",
+      "WBID Segments",
+      154.98547437
+    ],
+    [
+      2445,
+      "VT DEC WQD",
+      "VT02-02L05_01",
+      "",
+      "WBID Segments",
+      345.86916669
+    ],
+    [
+      2446,
+      "VT DEC WQD",
+      "VT02-02L06_02",
+      "",
+      "WBID Segments",
+      2.25697159
+    ],
+    [
+      2447,
+      "VT DEC WQD",
+      "VT02-02L06_01",
+      "",
+      "WBID Segments",
+      19.37816188
+    ],
+    [
+      2448,
+      "VT DEC WQD",
+      "VT02-02L06_04",
+      "",
+      "WBID Segments",
+      2.08066236
+    ],
+    [
+      2449,
+      "VT DEC WQD",
+      "VT02-02L08_02",
+      "",
+      "WBID Segments",
+      10.68234265
+    ],
+    [
+      2450,
+      "VT DEC WQD",
+      "VT02-02L08_01",
+      "",
+      "WBID Segments",
+      48.3217777
+    ],
+    [
+      2451,
+      "VT DEC WQD",
+      "VT02-02L09_01",
+      "",
+      "WBID Segments",
+      19.21777133
+    ],
+    [
+      2452,
+      "VT DEC WQD",
+      "VT02-02L09_02",
+      "",
+      "WBID Segments",
+      2.32888342
+    ],
+    [
+      2453,
+      "VT DEC WQD",
+      "VT02-03L01_02",
+      "",
+      "WBID Segments",
+      14.64838134
+    ],
+    [
+      2454,
+      "VT DEC WQD",
+      "VT02-03L01_01",
+      "",
+      "WBID Segments",
+      40.32915746
+    ],
+    [
+      2455,
+      "VT DEC WQD",
+      "VT02-03L02_02",
+      "",
+      "WBID Segments",
+      21.26924115
+    ],
+    [
+      2456,
+      "VT DEC WQD",
+      "VT02-03L02_01",
+      "",
+      "WBID Segments",
+      91.13889559
+    ],
+    [
+      2457,
+      "VT DEC WQD",
+      "VT02-02L06_03",
+      "",
+      "WBID Segments",
+      0.84565696
+    ],
+    [
+      2458,
+      "VT DEC WQD",
+      "VT02-05L03_02",
+      "",
+      "WBID Segments",
+      172.1368086
+    ],
+    [
+      2459,
+      "VT DEC WQD",
+      "VT02-05L03_01",
+      "",
+      "WBID Segments",
+      912.71166158
+    ],
+    [
+      2460,
+      "VT DEC WQD",
+      "VT03-02L01_02",
+      "",
+      "WBID Segments",
+      7.74390688
+    ],
+    [
+      2461,
+      "VT DEC WQD",
+      "VT03-02L01_01",
+      "",
+      "WBID Segments",
+      20.20877385
+    ],
+    [
+      2462,
+      "VT DEC WQD",
+      "VT03-04L02_02",
+      "",
+      "WBID Segments",
+      21.90866314
+    ],
+    [
+      2463,
+      "VT DEC WQD",
+      "VT03-04L02_01",
+      "",
+      "WBID Segments",
+      82.51776537
+    ],
+    [
+      2464,
+      "VT DEC WQD",
+      "VT03-04L04_01",
+      "",
+      "WBID Segments",
+      31.07436216
+    ],
+    [
+      2465,
+      "VT DEC WQD",
+      "VT03-04L04_02",
+      "",
+      "WBID Segments",
+      13.44670092
+    ],
+    [
+      2466,
+      "VT DEC WQD",
+      "VT03-04L04_03",
+      "",
+      "WBID Segments",
+      22.7431698
+    ],
+    [
+      2467,
+      "VT DEC WQD",
+      "VT03-04L05_01",
+      "",
+      "WBID Segments",
+      833.21928272
+    ],
+    [
+      2468,
+      "VT DEC WQD",
+      "VT03-04L05_02",
+      "",
+      "WBID Segments",
+      206.37545859
+    ],
+    [
+      2469,
+      "VT DEC WQD",
+      "VT03-04L09_01",
+      "",
+      "WBID Segments",
+      8.91224094
+    ],
+    [
+      2470,
+      "VT DEC WQD",
+      "VT03-04L09_02",
+      "",
+      "WBID Segments",
+      5.85488888
+    ],
+    [
+      2471,
+      "VT DEC WQD",
+      "VT03-08L01_02",
+      "",
+      "WBID Segments",
+      59.93938064
+    ],
+    [
+      2472,
+      "VT DEC WQD",
+      "VT03-08L01_01",
+      "",
+      "WBID Segments",
+      213.65023073
+    ],
+    [
+      2473,
+      "VT DEC WQD",
+      "VT03-17L04_01",
+      "",
+      "WBID Segments",
+      40.28439015
+    ],
+    [
+      2474,
+      "VT DEC WQD",
+      "VT03-17L04_02",
+      "",
+      "WBID Segments",
+      23.38287836
+    ],
+    [
+      2475,
+      "VT DEC WQD",
+      "VT04-04L01_02",
+      "",
+      "WBID Segments",
+      6.01260135
+    ],
+    [
+      2476,
+      "VT DEC WQD",
+      "VT04-04L01_01",
+      "",
+      "WBID Segments",
+      19.11635545
+    ],
+    [
+      2477,
+      "VT DEC WQD",
+      "VT05-02L01_01",
+      "",
+      "WBID Segments",
+      570.97587595
+    ],
+    [
+      2478,
+      "VT DEC WQD",
+      "VT05-02L01_03",
+      "",
+      "WBID Segments",
+      133.08292442
+    ],
+    [
+      2479,
+      "VT DEC WQD",
+      "VT05-02L01_02",
+      "",
+      "WBID Segments",
+      701.56906684
+    ],
+    [
+      2480,
+      "VT DEC WQD",
+      "VT05-02L01_04",
+      "",
+      "WBID Segments",
+      9.5684511
+    ],
+    [
+      2481,
+      "VT DEC WQD",
+      "VT05-07L02_02",
+      "",
+      "WBID Segments",
+      6.99208763
+    ],
+    [
+      2482,
+      "VT DEC WQD",
+      "VT05-07L02_01",
+      "",
+      "WBID Segments",
+      30.23331376
+    ],
+    [
+      2483,
+      "VT DEC WQD",
+      "VT05-07L03_02",
+      "",
+      "WBID Segments",
+      4.30452699
+    ],
+    [
+      2484,
+      "VT DEC WQD",
+      "VT05-07L03_01",
+      "",
+      "WBID Segments",
+      20.49955602
+    ],
+    [
+      2485,
+      "VT DEC WQD",
+      "VT05-08L01_02",
+      "",
+      "WBID Segments",
+      13.73624712
+    ],
+    [
+      2486,
+      "VT DEC WQD",
+      "VT05-08L01_01",
+      "",
+      "WBID Segments",
+      67.4217081
+    ],
+    [
+      2487,
+      "VT DEC WQD",
+      "VT02-02L07_01",
+      "",
+      "WBID Segments",
+      41.49596885
+    ],
+    [
+      2488,
+      "VT DEC WQD",
+      "VT02-02L07_02",
+      "",
+      "WBID Segments",
+      2.11195034
+    ],
+    [
+      2489,
+      "VT DEC WQD",
+      "VT02-02L01_01",
+      "",
+      "WBID Segments",
+      14.10847925
+    ],
+    [
+      2490,
+      "VT DEC WQD",
+      "VT02-02L01_02",
+      "",
+      "WBID Segments",
+      0.97807062
+    ],
+    [
+      2491,
+      "VT DEC WQD",
+      "VT05-09L02_01",
+      "",
+      "WBID Segments",
+      31.08678889
+    ],
+    [
+      2492,
+      "VT DEC WQD",
+      "VT05-09L02_02",
+      "",
+      "WBID Segments",
+      26.4542483
+    ],
+    [
+      2493,
+      "VT DEC WQD",
+      "VT05-09L03_01",
+      "",
+      "WBID Segments",
+      157.69009542
+    ],
+    [
+      2494,
+      "VT DEC WQD",
+      "VT05-09L03_02",
+      "",
+      "WBID Segments",
+      33.73725729
+    ],
+    [
+      2495,
+      "VT DEC WQD",
+      "VT05-11L02_01",
+      "",
+      "WBID Segments",
+      202.03332751
+    ],
+    [
+      2496,
+      "VT DEC WQD",
+      "VT05-11L02_02",
+      "",
+      "WBID Segments",
+      44.94064612
+    ],
+    [
+      2497,
+      "VT DEC WQD",
+      "VT06-05L03_02",
+      "",
+      "WBID Segments",
+      369.22856981
+    ],
+    [
+      2498,
+      "VT DEC WQD",
+      "VT06-05L03_01",
+      "",
+      "WBID Segments",
+      94.02984178
+    ],
+    [
+      2499,
+      "VT DEC WQD",
+      "VT07-03L03_01",
+      "",
+      "WBID Segments",
+      601.62856486
+    ],
+    [
+      2500,
+      "VT DEC WQD",
+      "VT07-03L03_02",
+      "",
+      "WBID Segments",
+      118.16224942
+    ],
+    [
+      2501,
+      "VT DEC WQD",
+      "VT07-08L02_02",
+      "",
+      "WBID Segments",
+      19.18583827
+    ],
+    [
+      2502,
+      "VT DEC WQD",
+      "VT07-08L02_03",
+      "",
+      "WBID Segments",
+      4.93198355
+    ],
+    [
+      2503,
+      "VT DEC WQD",
+      "VT07-08L02_01",
+      "",
+      "WBID Segments",
+      198.19692739
+    ],
+    [
+      2504,
+      "VT DEC WQD",
+      "VT07-15L01_01",
+      "",
+      "WBID Segments",
+      56.18894017
+    ],
+    [
+      2505,
+      "VT DEC WQD",
+      "VT07-15L01_03",
+      "",
+      "WBID Segments",
+      35.74953503
+    ],
+    [
+      2506,
+      "VT DEC WQD",
+      "VT07-15L01_02",
+      "",
+      "WBID Segments",
+      106.07777457
+    ],
+    [
+      2507,
+      "VT DEC WQD",
+      "VT07-18L01_02",
+      "",
+      "WBID Segments",
+      2.84156165
+    ],
+    [
+      2508,
+      "VT DEC WQD",
+      "VT07-18L01_01",
+      "",
+      "WBID Segments",
+      9.75439874
+    ],
+    [
+      2509,
+      "VT DEC WQD",
+      "VT07-21L01_01",
+      "",
+      "WBID Segments",
+      150.80397897
+    ],
+    [
+      2510,
+      "VT DEC WQD",
+      "VT07-21L01_02",
+      "",
+      "WBID Segments",
+      34.54065779
+    ],
+    [
+      2511,
+      "VT DEC WQD",
+      "VT07-21L02_01",
+      "",
+      "WBID Segments",
+      134.65466298
+    ],
+    [
+      2512,
+      "VT DEC WQD",
+      "VT07-21L02_02",
+      "",
+      "WBID Segments",
+      32.83933687
+    ],
+    [
+      2513,
+      "VT DEC WQD",
+      "VT08-08L02_01",
+      "",
+      "WBID Segments",
+      57.46425205
+    ],
+    [
+      2514,
+      "VT DEC WQD",
+      "VT08-08L02_02",
+      "",
+      "WBID Segments",
+      12.25940767
+    ],
+    [
+      2515,
+      "VT DEC WQD",
+      "VT08-09L03_01",
+      "",
+      "WBID Segments",
+      279.22400458
+    ],
+    [
+      2516,
+      "VT DEC WQD",
+      "VT08-09L03_02",
+      "",
+      "WBID Segments",
+      68.19830731
+    ],
+    [
+      2517,
+      "VT DEC WQD",
+      "VT08-09L05_01",
+      "",
+      "WBID Segments",
+      323.02110604
+    ],
+    [
+      2518,
+      "VT DEC WQD",
+      "VT08-09L05_02",
+      "",
+      "WBID Segments",
+      79.41167796
+    ],
+    [
+      2519,
+      "VT DEC WQD",
+      "VT08-11L02_01",
+      "",
+      "WBID Segments",
+      758.85315359
+    ],
+    [
+      2520,
+      "VT DEC WQD",
+      "VT08-11L02_02",
+      "",
+      "WBID Segments",
+      110.31926235
+    ],
+    [
+      2521,
+      "VT DEC WQD",
+      "VT08-13L05_01",
+      "",
+      "WBID Segments",
+      168.15323008
+    ],
+    [
+      2522,
+      "VT DEC WQD",
+      "VT08-13L05_02",
+      "",
+      "WBID Segments",
+      12.33597911
+    ],
+    [
+      2523,
+      "VT DEC WQD",
+      "VT08-14L01_01",
+      "",
+      "WBID Segments",
+      67.93721869
+    ],
+    [
+      2524,
+      "VT DEC WQD",
+      "VT08-14L01_02",
+      "",
+      "WBID Segments",
+      23.5490001
+    ],
+    [
+      2525,
+      "VT DEC WQD",
+      "VT08-14L02_01",
+      "",
+      "WBID Segments",
+      37.63437316
+    ],
+    [
+      2526,
+      "VT DEC WQD",
+      "VT08-14L02_02",
+      "",
+      "WBID Segments",
+      9.63393972
+    ],
+    [
+      2527,
+      "VT DEC WQD",
+      "VT08-14L03_03",
+      "",
+      "WBID Segments",
+      17.42455229
+    ],
+    [
+      2528,
+      "VT DEC WQD",
+      "VT08-14L03_02",
+      "",
+      "WBID Segments",
+      46.84797412
+    ],
+    [
+      2529,
+      "VT DEC WQD",
+      "VT08-14L03_04",
+      "",
+      "WBID Segments",
+      4.20485668
+    ],
+    [
+      2530,
+      "VT DEC WQD",
+      "VT08-14L03_01",
+      "",
+      "WBID Segments",
+      23.8332094
+    ],
+    [
+      2531,
+      "VT DEC WQD",
+      "VT08-14L04_01",
+      "",
+      "WBID Segments",
+      10.09733509
+    ],
+    [
+      2532,
+      "VT DEC WQD",
+      "VT08-14L04_02",
+      "",
+      "WBID Segments",
+      13.3033224
+    ],
+    [
+      2533,
+      "VT DEC WQD",
+      "VT08-14L06_01",
+      "",
+      "WBID Segments",
+      108.08685513
+    ],
+    [
+      2534,
+      "VT DEC WQD",
+      "VT08-14L06_02",
+      "",
+      "WBID Segments",
+      27.3568031
+    ],
+    [
+      2535,
+      "VT DEC WQD",
+      "VT08-14L07_01",
+      "",
+      "WBID Segments",
+      71.06203924
+    ],
+    [
+      2536,
+      "VT DEC WQD",
+      "VT08-14L07_02",
+      "",
+      "WBID Segments",
+      16.72813623
+    ],
+    [
+      2537,
+      "VT DEC WQD",
+      "VT08-14L08_01",
+      "",
+      "WBID Segments",
+      58.00094354
+    ],
+    [
+      2538,
+      "VT DEC WQD",
+      "VT08-14L08_02",
+      "",
+      "WBID Segments",
+      18.21894428
+    ],
+    [
+      2539,
+      "VT DEC WQD",
+      "VT08-14L10_01",
+      "",
+      "WBID Segments",
+      19.50318529
+    ],
+    [
+      2540,
+      "VT DEC WQD",
+      "VT08-14L10_02",
+      "",
+      "WBID Segments",
+      22.10624037
+    ],
+    [
+      2541,
+      "VT DEC WQD",
+      "VT08-15L01_01",
+      "",
+      "WBID Segments",
+      99.85330839
+    ],
+    [
+      2542,
+      "VT DEC WQD",
+      "VT08-15L01_02",
+      "",
+      "WBID Segments",
+      25.41931807
+    ],
+    [
+      2543,
+      "VT DEC WQD",
+      "VT08-16L02_01",
+      "",
+      "WBID Segments",
+      228.76517646
+    ],
+    [
+      2544,
+      "VT DEC WQD",
+      "VT08-16L02_02",
+      "",
+      "WBID Segments",
+      60.87339478
+    ],
+    [
+      2545,
+      "VT DEC WQD",
+      "VT09-05L01_01",
+      "",
+      "WBID Segments",
+      13.93959246
+    ],
+    [
+      2546,
+      "VT DEC WQD",
+      "VT09-05L01_02",
+      "",
+      "WBID Segments",
+      9.66046003
+    ],
+    [
+      2547,
+      "VT DEC WQD",
+      "VT09-05L03_02",
+      "",
+      "WBID Segments",
+      13.53090893
+    ],
+    [
+      2548,
+      "VT DEC WQD",
+      "VT09-05L03_01",
+      "",
+      "WBID Segments",
+      11.09259203
+    ],
+    [
+      2549,
+      "VT DEC WQD",
+      "VT10-02L01_01",
+      "",
+      "WBID Segments",
+      131.25947092
+    ],
+    [
+      2550,
+      "VT DEC WQD",
+      "VT10-02L01_02",
+      "",
+      "WBID Segments",
+      36.37126789
+    ],
+    [
+      2551,
+      "VT DEC WQD",
+      "VT10-06L02_01",
+      "",
+      "WBID Segments",
+      97.50816237
+    ],
+    [
+      2552,
+      "VT DEC WQD",
+      "VT10-06L02_02",
+      "",
+      "WBID Segments",
+      4.34861433
+    ],
+    [
+      2553,
+      "VT DEC WQD",
+      "VT10-06L03_01",
+      "",
+      "WBID Segments",
+      108.62489471
+    ],
+    [
+      2554,
+      "VT DEC WQD",
+      "VT10-06L03_02",
+      "",
+      "WBID Segments",
+      1.21072868
+    ],
+    [
+      2555,
+      "VT DEC WQD",
+      "VT10-13L02_01",
+      "",
+      "WBID Segments",
+      79.06856018
+    ],
+    [
+      2556,
+      "VT DEC WQD",
+      "VT10-13L02_02",
+      "",
+      "WBID Segments",
+      17.30962551
+    ],
+    [
+      2557,
+      "VT DEC WQD",
+      "VT10-15L02_01",
+      "",
+      "WBID Segments",
+      77.75590761
+    ],
+    [
+      2558,
+      "VT DEC WQD",
+      "VT10-15L02_02",
+      "",
+      "WBID Segments",
+      4.68708683
+    ],
+    [
+      2559,
+      "VT DEC WQD",
+      "VT10-16L03_01",
+      "",
+      "WBID Segments",
+      38.67059359
+    ],
+    [
+      2560,
+      "VT DEC WQD",
+      "VT10-16L03_02",
+      "",
+      "WBID Segments",
+      11.429933
+    ],
+    [
+      2561,
+      "VT DEC WQD",
+      "VT14-02L01_01",
+      "",
+      "WBID Segments",
+      52.84057528
+    ],
+    [
+      2562,
+      "VT DEC WQD",
+      "VT14-02L01_02",
+      "",
+      "WBID Segments",
+      11.36457788
+    ],
+    [
+      2563,
+      "VT DEC WQD",
+      "VT14-03L01_01",
+      "",
+      "WBID Segments",
+      371.12732439
+    ],
+    [
+      2564,
+      "VT DEC WQD",
+      "VT14-03L01_02",
+      "",
+      "WBID Segments",
+      90.6259462
+    ],
+    [
+      2565,
+      "VT DEC WQD",
+      "VT13-08L01_01",
+      "",
+      "WBID Segments",
+      56.26566349
+    ],
+    [
+      2566,
+      "VT DEC WQD",
+      "VT13-08L01_02",
+      "",
+      "WBID Segments",
+      13.00317181
+    ],
+    [
+      2567,
+      "VT DEC WQD",
+      "VT14-03L03_01",
+      "",
+      "WBID Segments",
+      36.23305795
+    ],
+    [
+      2568,
+      "VT DEC WQD",
+      "VT14-03L03_02",
+      "",
+      "WBID Segments",
+      6.72350344
+    ],
+    [
+      2569,
+      "VT DEC WQD",
+      "VT14-08L01_01",
+      "",
+      "WBID Segments",
+      89.97604314
+    ],
+    [
+      2570,
+      "VT DEC WQD",
+      "VT14-08L01_02",
+      "",
+      "WBID Segments",
+      21.40695812
+    ],
+    [
+      2571,
+      "VT DEC WQD",
+      "VT14-08L02_01",
+      "",
+      "WBID Segments",
+      36.29359349
+    ],
+    [
+      2572,
+      "VT DEC WQD",
+      "VT14-08L02_02",
+      "",
+      "WBID Segments",
+      12.93066303
+    ],
+    [
+      2573,
+      "VT DEC WQD",
+      "VT14-08L03_02",
+      "",
+      "WBID Segments",
+      347.56211549
+    ],
+    [
+      2574,
+      "VT DEC WQD",
+      "VT14-08L03_01",
+      "",
+      "WBID Segments",
+      87.80607094
+    ],
+    [
+      2575,
+      "VT DEC WQD",
+      "VT14-08L04_01",
+      "",
+      "WBID Segments",
+      73.67532359
+    ],
+    [
+      2576,
+      "VT DEC WQD",
+      "VT14-08L04_02",
+      "",
+      "WBID Segments",
+      18.50226407
+    ],
+    [
+      2577,
+      "VT DEC WQD",
+      "VT14-08L05_02",
+      "",
+      "WBID Segments",
+      5.8410049
+    ],
+    [
+      2578,
+      "VT DEC WQD",
+      "VT14-08L05_01",
+      "",
+      "WBID Segments",
+      30.19749052
+    ],
+    [
+      2579,
+      "VT DEC WQD",
+      "VT14-08L05_03",
+      "",
+      "WBID Segments",
+      1.93877115
+    ],
+    [
+      2580,
+      "VT DEC WQD",
+      "VT14-09L01_01",
+      "",
+      "WBID Segments",
+      24.96434276
+    ],
+    [
+      2581,
+      "VT DEC WQD",
+      "VT14-09L01_02",
+      "",
+      "WBID Segments",
+      25.15146463
+    ],
+    [
+      2582,
+      "VT DEC WQD",
+      "VT14-09L03_01",
+      "",
+      "WBID Segments",
+      72.79146455
+    ],
+    [
+      2583,
+      "VT DEC WQD",
+      "VT14-09L03_02",
+      "",
+      "WBID Segments",
+      7.60170587
+    ],
+    [
+      2584,
+      "VT DEC WQD",
+      "VT15-02L01_01",
+      "",
+      "WBID Segments",
+      101.86698775
+    ],
+    [
+      2585,
+      "VT DEC WQD",
+      "VT15-02L01_02",
+      "",
+      "WBID Segments",
+      4.94294794
+    ],
+    [
+      2586,
+      "VT DEC WQD",
+      "VT15-02L03_01",
+      "",
+      "WBID Segments",
+      301.92492919
+    ],
+    [
+      2587,
+      "VT DEC WQD",
+      "VT15-02L03_02",
+      "",
+      "WBID Segments",
+      103.10935539
+    ],
+    [
+      2588,
+      "VT DEC WQD",
+      "VT15-08L03_01",
+      "",
+      "WBID Segments",
+      71.73791557
+    ],
+    [
+      2589,
+      "VT DEC WQD",
+      "VT15-08L03_02",
+      "",
+      "WBID Segments",
+      9.54848765
+    ],
+    [
+      2590,
+      "VT DEC WQD",
+      "VT15-08L05_01",
+      "",
+      "WBID Segments",
+      2.55364963
+    ],
+    [
+      2591,
+      "VT DEC WQD",
+      "VT15-08L05_02",
+      "",
+      "WBID Segments",
+      1.07420659
+    ],
+    [
+      2592,
+      "VT DEC WQD",
+      "VT15-09L04_02",
+      "",
+      "WBID Segments",
+      25.02623672
+    ],
+    [
+      2593,
+      "VT DEC WQD",
+      "VT15-09L04_01",
+      "",
+      "WBID Segments",
+      129.75126833
+    ],
+    [
+      2594,
+      "VT DEC WQD",
+      "VT15-09L05_01",
+      "",
+      "WBID Segments",
+      2.67325196
+    ],
+    [
+      2595,
+      "VT DEC WQD",
+      "VT15-09L05_02",
+      "",
+      "WBID Segments",
+      8.00887198
+    ],
+    [
+      2596,
+      "VT DEC WQD",
+      "VT16-08L02_01",
+      "",
+      "WBID Segments",
+      103.67448637
+    ],
+    [
+      2597,
+      "VT DEC WQD",
+      "VT16-08L02_02",
+      "",
+      "WBID Segments",
+      8.33391072
+    ],
+    [
+      2598,
+      "VT DEC WQD",
+      "VT16-12L02_01",
+      "",
+      "WBID Segments",
+      39.25458538
+    ],
+    [
+      2599,
+      "VT DEC WQD",
+      "VT16-12L02_02",
+      "",
+      "WBID Segments",
+      20.98119461
+    ],
+    [
+      2600,
+      "VT DEC WQD",
+      "VT16-18L01_01",
+      "",
+      "WBID Segments",
+      20.40248196
+    ],
+    [
+      2601,
+      "VT DEC WQD",
+      "VT16-18L01_02",
+      "",
+      "WBID Segments",
+      20.07849784
+    ],
+    [
+      2602,
+      "VT DEC WQD",
+      "VT16-18L01_03",
+      "",
+      "WBID Segments",
+      4.62562871
+    ],
+    [
+      2603,
+      "VT DEC WQD",
+      "VT16-19L02_01",
+      "",
+      "WBID Segments",
+      19.39170947
+    ],
+    [
+      2604,
+      "VT DEC WQD",
+      "VT16-19L02_02",
+      "",
+      "WBID Segments",
+      5.43549091
+    ],
+    [
+      2605,
+      "VT DEC WQD",
+      "VT16-20L01_01",
+      "",
+      "WBID Segments",
+      437.6164753
+    ],
+    [
+      2606,
+      "VT DEC WQD",
+      "VT16-20L01_02",
+      "",
+      "WBID Segments",
+      112.22405735
+    ],
+    [
+      2607,
+      "VT DEC WQD",
+      "VT17-01L01_02",
+      "",
+      "WBID Segments",
+      236.47331291
+    ],
+    [
+      2608,
+      "VT DEC WQD",
+      "VT1701L01_01",
+      "",
+      "WBID Segments",
+      5692.84857919
+    ],
+    [
+      2609,
+      "VT DEC WQD",
+      "VT17-01L02_01",
+      "",
+      "WBID Segments",
+      709.73777932
+    ],
+    [
+      2610,
+      "VT DEC WQD",
+      "VT17-04L02_01",
+      "",
+      "WBID Segments",
+      30.7564091
+    ],
+    [
+      2611,
+      "VT DEC WQD",
+      "VT17-04L02_02",
+      "",
+      "WBID Segments",
+      134.0103292
+    ],
+    [
+      2612,
+      "VT DEC WQD",
+      "VT17-04L02_03",
+      "",
+      "WBID Segments",
+      4.86913333
+    ],
+    [
+      2613,
+      "VT DEC WQD",
+      "VT17-04L06_01",
+      "",
+      "WBID Segments",
+      144.57393812
+    ],
+    [
+      2614,
+      "VT DEC WQD",
+      "VT17-04L06_02",
+      "",
+      "WBID Segments",
+      41.43678498
+    ],
+    [
+      2615,
+      "VT DEC WQD",
+      "VT17-05L02_01",
+      "",
+      "WBID Segments",
+      508.52769341
+    ],
+    [
+      2616,
+      "VT DEC WQD",
+      "VT17-05L02_02",
+      "",
+      "WBID Segments",
+      105.70576787
+    ],
+    [
+      2617,
+      "VT DEC WQD",
+      "VT17-05L05_01",
+      "",
+      "WBID Segments",
+      1673.67106463
+    ],
+    [
+      2618,
+      "VT DEC WQD",
+      "VT17-05L05_02",
+      "",
+      "WBID Segments",
+      103.52083997
+    ],
+    [
+      2619,
+      "VT DEC WQD",
+      "VT17-05L06_03",
+      "",
+      "WBID Segments",
+      81.23625213
+    ],
+    [
+      2620,
+      "VT DEC WQD",
+      "VT17-05L06_01",
+      "",
+      "WBID Segments",
+      442.54483982
+    ],
+    [
+      2625,
+      "VT DEC WQD",
+      "VT17-07L01_03",
+      "",
+      "WBID Segments",
+      32.88537429
+    ],
+    [
+      2626,
+      "VT DEC WQD",
+      "VT17-07L01_04",
+      "",
+      "WBID Segments",
+      6.40939822
+    ],
+    [
+      2627,
+      "VT DEC WQD",
+      "VT17-07L01_02",
+      "",
+      "WBID Segments",
+      4.48357882
+    ],
+    [
+      2628,
+      "VT DEC WQD",
+      "VT17-07L01_01",
+      "",
+      "WBID Segments",
+      93.68791352
+    ],
+    [
+      2629,
+      "VT DEC WQD",
+      "VT17-08L01_01",
+      "",
+      "WBID Segments",
+      23.65394346
+    ],
+    [
+      2630,
+      "VT DEC WQD",
+      "VT17-08L01_02",
+      "",
+      "WBID Segments",
+      7.89250986
+    ],
+    [
+      2631,
+      "VT DEC WQD",
+      "VT17-08L02_01",
+      "",
+      "WBID Segments",
+      33.50838161
+    ],
+    [
+      2632,
+      "VT DEC WQD",
+      "VT17-08L02_02",
+      "",
+      "WBID Segments",
+      31.93546791
+    ],
+    [
+      2633,
+      "VT DEC WQD",
+      "VT17-08L03_01",
+      "",
+      "WBID Segments",
+      196.94027788
+    ],
+    [
+      2634,
+      "VT DEC WQD",
+      "VT17-08L03_02",
+      "",
+      "WBID Segments",
+      20.3407784
+    ],
+    [
+      2635,
+      "VT DEC WQD",
+      "VT17-08L05_01",
+      "",
+      "WBID Segments",
+      71.0636018
+    ],
+    [
+      2636,
+      "VT DEC WQD",
+      "VT17-08L05_02",
+      "",
+      "WBID Segments",
+      18.95165982
+    ],
+    [
+      2637,
+      "VT DEC WQD",
+      "VT17-08L07_01",
+      "",
+      "WBID Segments",
+      45.79738414
+    ],
+    [
+      2638,
+      "VT DEC WQD",
+      "VT17-08L07_02",
+      "",
+      "WBID Segments",
+      10.32947898
+    ],
+    [
+      2639,
+      "VT DEC WQD",
+      "VT17-08L08_02",
+      "",
+      "WBID Segments",
+      147.77908716
+    ],
+    [
+      2640,
+      "VT DEC WQD",
+      "VT17-08L08_01",
+      "",
+      "WBID Segments",
+      618.75426621
+    ],
+    [
+      2641,
+      "VT DEC WQD",
+      "VT17-08L08_03",
+      "",
+      "WBID Segments",
+      5.07032493
+    ],
+    [
+      2642,
+      "VT DEC WQD",
+      "VT17-10L01_03",
+      "",
+      "WBID Segments",
+      16.10277714
+    ],
+    [
+      2643,
+      "VT DEC WQD",
+      "VT17-10L01_01",
+      "",
+      "WBID Segments",
+      153.69261216
+    ],
+    [
+      2644,
+      "VT DEC WQD",
+      "VT17-10L01_02",
+      "",
+      "WBID Segments",
+      12.27386164
+    ],
+    [
+      2645,
+      "VT DEC WQD",
+      "VT17-10L03_02",
+      "",
+      "WBID Segments",
+      170.80462157
+    ],
+    [
+      2646,
+      "VT DEC WQD",
+      "VT17-10L03_01",
+      "",
+      "WBID Segments",
+      7.95482397
+    ],
+    [
+      2647,
+      "VT DEC WQD",
+      "VT17-10L04_03",
+      "",
+      "WBID Segments",
+      20.67118382
+    ],
+    [
+      2648,
+      "VT DEC WQD",
+      "VT17-10L04_01",
+      "",
+      "WBID Segments",
+      24.83999109
+    ],
+    [
+      2649,
+      "VT DEC WQD",
+      "VT17-10L04_02",
+      "",
+      "WBID Segments",
+      101.02075333
+    ],
+    [
+      2650,
+      "VT DEC WQD",
+      "VT04-01L01_02",
+      "",
+      "WBID Segments",
+      469.11320437
+    ],
+    [
+      2651,
+      "VT DEC WQD",
+      "VT04-01L01_01",
+      "",
+      "WBID Segments",
+      4684.5439083
+    ],
+    [
+      2652,
+      "VT DEC WQD",
+      "VT04-01L01_04",
+      "",
+      "WBID Segments",
+      5.0422748
+    ],
+    [
+      2653,
+      "VT DEC WQD",
+      "VT04-01L01_03",
+      "",
+      "WBID Segments",
+      21.01359208
+    ],
+    [
+      2655,
+      "VT DEC WQD",
+      "VT04-01L02_03",
+      "",
+      "WBID Segments",
+      5.31564876
+    ],
+    [
+      2656,
+      "VT DEC WQD",
+      "VT04-02L01_02",
+      "",
+      "WBID Segments",
+      616.1053283
+    ],
+    [
+      2658,
+      "VT DEC WQD",
+      "VT05-01L01_02",
+      "",
+      "WBID Segments",
+      1501.41261447
+    ],
+    [
+      2659,
+      "VT DEC WQD",
+      "VT05-01L01_01",
+      "",
+      "WBID Segments",
+      6957.61889609
+    ],
+    [
+      2660,
+      "VT DEC WQD",
+      "VT04-01L02_02",
+      "",
+      "WBID Segments",
+      927.95985793
+    ],
+    [
+      2661,
+      "VT DEC WQD",
+      "VT05-04L01_02",
+      "",
+      "WBID Segments",
+      1528.82467899
+    ],
+    [
+      2662,
+      "VT DEC WQD",
+      "VT05-04L01_01",
+      "",
+      "WBID Segments",
+      56101.55222284
+    ],
+    [
+      2663,
+      "VT DEC WQD",
+      "VT05-04L01_03",
+      "",
+      "WBID Segments",
+      5.75667368
+    ],
+    [
+      2664,
+      "VT DEC WQD",
+      "VT05-07L01_02",
+      "",
+      "WBID Segments",
+      539.69742238
+    ],
+    [
+      2665,
+      "VT DEC WQD",
+      "VT05-07L01_01",
+      "",
+      "WBID Segments",
+      3719.85992891
+    ],
+    [
+      2666,
+      "VT DEC WQD",
+      "VT05-09L01_02",
+      "",
+      "WBID Segments",
+      1336.59158574
+    ],
+    [
+      2667,
+      "VT DEC WQD",
+      "VT05-09L01_01",
+      "",
+      "WBID Segments",
+      12243.84020832
+    ],
+    [
+      2668,
+      "VT DEC WQD",
+      "VT05-09L01_03",
+      "",
+      "WBID Segments",
+      10.69309649
+    ],
+    [
+      2669,
+      "VT DEC WQD",
+      "VT05-10L01_02",
+      "",
+      "WBID Segments",
+      300.11285765
+    ],
+    [
+      2670,
+      "VT DEC WQD",
+      "VT05-10L01_01",
+      "",
+      "WBID Segments",
+      2987.41302554
+    ],
+    [
+      2672,
+      "VT DEC WQD",
+      "VT05-11L01_02",
+      "",
+      "WBID Segments",
+      477.3999452
+    ],
+    [
+      2673,
+      "VT DEC WQD",
+      "VT05-11L01_01",
+      "",
+      "WBID Segments",
+      1843.15099811
+    ],
+    [
+      2674,
+      "VT DEC WQD",
+      "VT05-11L01_03",
+      "",
+      "WBID Segments",
+      6.45790686
+    ],
+    [
+      2675,
+      "VT DEC WQD",
+      "VT05-10L02_02",
+      "",
+      "WBID Segments",
+      4353.48222455
+    ],
+    [
+      2676,
+      "VT DEC WQD",
+      "VT05-10L02_01",
+      "",
+      "WBID Segments",
+      36015.51304981
+    ],
+    [
+      2677,
+      "VT DEC WQD",
+      "VT05-04L02_02",
+      "",
+      "WBID Segments",
+      4597.63139938
+    ],
+    [
+      2678,
+      "VT DEC WQD",
+      "VT05-04L02_01",
+      "",
+      "WBID Segments",
+      16279.97649087
+    ],
+    [
+      2679,
+      "VT DEC WQD",
+      "VT02-03L05_02",
+      "",
+      "WBID Segments",
+      489.94765059
+    ],
+    [
+      2680,
+      "VT DEC WQD",
+      "VT02-03L05_01",
+      "",
+      "WBID Segments",
+      1920.0414155
+    ],
+    [
+      2681,
+      "VT DEC WQD",
+      "VT02-03L05_03",
+      "",
+      "WBID Segments",
+      5.1038145
+    ],
+    [
+      2682,
+      "VT DEC WQD",
+      "VT02-03L06_01",
+      "",
+      "WBID Segments",
+      187.28398803
+    ],
+    [
+      2683,
+      "VT DEC WQD",
+      "VT02-03L06_02",
+      "",
+      "WBID Segments",
+      17.52730135
+    ],
+    [
+      2684,
+      "VT DEC WQD",
+      "VT08-14L05_03",
+      "",
+      "WBID Segments",
+      26.98466405
+    ],
+    [
+      2685,
+      "VT DEC WQD",
+      "VT08-14L05_02",
+      "",
+      "WBID Segments",
+      48.87325077
+    ],
+    [
+      2686,
+      "VT DEC WQD",
+      "VT08-14L05_01",
+      "",
+      "WBID Segments",
+      71.6340311
+    ],
+    [
+      2687,
+      "VT DEC WQD",
+      "VT10-15L08_03",
+      "",
+      "WBID Segments",
+      19.99236841
+    ],
+    [
+      2688,
+      "VT DEC WQD",
+      "VT10-15L08_01",
+      "",
+      "WBID Segments",
+      152.72949531
+    ],
+    [
+      2689,
+      "VT DEC WQD",
+      "VT10-15L08_02",
+      "",
+      "WBID Segments",
+      16.47670221
+    ],
+    [
+      2690,
+      "VT DEC WQD",
+      "VT16-19L03_02",
+      "",
+      "WBID Segments",
+      17.32382016
+    ],
+    [
+      2691,
+      "VT DEC WQD",
+      "VT16-19L03_01",
+      "",
+      "WBID Segments",
+      67.86927022
+    ],
+    [
+      2692,
+      "VT DEC WQD",
+      "VT17-04L04_02",
+      "",
+      "WBID Segments",
+      120.35120274
+    ],
+    [
+      2693,
+      "VT DEC WQD",
+      "VT17-04L04_01",
+      "",
+      "WBID Segments",
+      629.70455775
+    ],
+    [
+      2694,
+      "VT DEC WQD",
+      "VT17-04L04_03",
+      "",
+      "WBID Segments",
+      26.3602696
+    ],
+    [
+      2695,
+      "VT DEC WQD",
+      "VT17-05L06_02",
+      "",
+      "WBID Segments",
+      22.68070705
+    ],
+    [
+      2697,
+      "VT DEC WQD",
+      "VT16-05L02",
+      "CHANDLER;",
+      "Inventory Lake",
+      7.1399002
+    ],
+    [
+      2700,
+      "VT DEC WQD",
+      "VT03-06L03\r\n",
+      "EDDY",
+      "Inventory Lake",
+      7.21352181
+    ],
+    [
+      2704,
+      "VT DEC WQD",
+      "VT04-01L02_01",
+      "",
+      "WBID Segments",
+      8827.86841487
+    ],
+    [
+      3104,
+      "VT DEC WQD",
+      "VT04-04L05",
+      "CHAMP-SOUTH LAKE B",
+      "Inventory Lake",
+      1016.39369609
+    ],
+    [
+      3105,
+      "VT DEC WQD",
+      "VT04-04L05_02",
+      "",
+      "WBID Segments",
+      402.44275348
+    ],
+    [
+      3106,
+      "VT DEC WQD",
+      "VT04-04L05_01",
+      "",
+      "WBID Segments",
+      111.74316096
+    ],
+    [
+      3107,
+      "VT DEC WQD",
+      "VT09-06L06",
+      "UNKNOWN (BRAINT)",
+      "Inventory Lake",
+      4.70655701
+    ],
+    [
+      17104,
+      "VT DEC WQD",
+      "VT04-02L01_01",
+      "",
+      "WBID Segments",
+      4939.78544589
+    ],
+    [
+      17505,
+      "VT DEC WQD",
+      "VT17-06L01",
+      "LONG (WESTMR)",
+      "Inventory Lake",
+      86.90930916
+    ],
+    [
+      17507,
+      "VT DEC WQD",
+      "VT17-06L01_01",
+      "",
+      "WBID Segments",
+      73.66148487
+    ],
+    [
+      17508,
+      "VT DEC WQD",
+      "VT17-06L01_02",
+      "",
+      "WBID Segments",
+      14.50825853
+    ],
+    [
+      18304,
+      "VT DEC WQD",
+      "VT17-06L02_02",
+      "",
+      "WBID Segments",
+      89.11709078
+    ],
+    [
+      18305,
+      "VT DEC WQD",
+      "VT17-06L02_01",
+      "",
+      "WBID Segments",
+      1644.47246348
+    ],
+    [
+      18306,
+      "VT DEC WQD",
+      "VT17-06L02",
+      "WILLOUGHBY\r\n",
+      "Inventory Lake",
+      1733.58955426
+    ]
+  ],
+  "sql skeleton": "select _ from _ where _ or _ '%_ %",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "lakepond_wbids_and_wbid_segments": [
+      "lakepond_wbids_and_wbid_segments.OBJECTID",
+      "lakepond_wbids_and_wbid_segments.Source",
+      "lakepond_wbids_and_wbid_segments.WBID",
+      "lakepond_wbids_and_wbid_segments.LAKEID",
+      "lakepond_wbids_and_wbid_segments.EventType",
+      "lakepond_wbids_and_wbid_segments.GISAcres"
+    ],
+    "dfirm_floodways": [
+      "dfirm_floodways.OBJECTID",
+      "dfirm_floodways.DFIRM_ID",
+      "dfirm_floodways.FLD_AR_ID",
+      "dfirm_floodways.FLD_ZONE",
+      "dfirm_floodways.FLOODWAY",
+      "dfirm_floodways.SFHA_TF",
+      "dfirm_floodways.AR_REVERT",
+      "dfirm_floodways.SOURCE_CIT",
+      "dfirm_floodways.HYDRO_ID",
+      "dfirm_floodways.CST_MDL_ID"
+    ]
+  }
+}

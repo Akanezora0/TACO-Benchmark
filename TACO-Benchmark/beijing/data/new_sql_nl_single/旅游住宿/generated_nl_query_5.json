@@ -1,0 +1,45 @@
+{
+  "sql": "SELECT HID, FATHERID FROM shiguihuaziranziyuanweixuetangshuyuan1521 WHERE DYNASTY = '明朝';",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从表 `shiguihuaziranziyuanweixuetangshuyuan1521` 中查询出所有朝代（DYNASTY）为“明朝”的记录，并返回这些记录的 HID（可能是某种标识符或编号）和 FATHERID（可能是父级标识符或编号）。\n\n- **详细描述**：\n  - **涉及的表**：`shiguihuaziranziyuanweixuetangshuyuan1521`。从表名来看，可能是一个与历史、文化或自然资源相关的表，具体内容需要结合表结构进一步分析。\n  - **涉及的列**：\n    - `HID`：可能是表中每条记录的唯一标识符或编号。\n    - `FATHERID`：可能是与 `HID` 关联的父级标识符或编号，用于表示层级关系。\n    - `DYNASTY`：朝代字段，用于标识记录所属的历史朝代。\n  - **条件**：`DYNASTY = '明朝'`，即只查询朝代字段值为“明朝”的记录。\n\n- **业务场景**：\n  - 该查询可能用于历史研究、文化资源管理或家谱分析等场景。例如：\n    - 在历史研究中，可能需要筛选出明朝时期的人物、事件或资源记录。\n    - 在家谱分析中，可能需要查询明朝时期的家族成员及其父子关系（通过 `HID` 和 `FATHERID` 字段）。\n    - 在文化资源管理中，可能需要统计或分析明朝时期的特定数据。\n\n- **用户描述**：\n  - 用户可能是历史学者、文化资源管理员或家谱研究者，他们需要：\n    - 获取明朝时期的特定记录（如人物、事件或资源）。\n    - 分析明朝时期的父子关系或层级结构（通过 `HID` 和 `FATHERID` 字段）。\n    - 统计或筛选与明朝相关的数据，以便进一步研究或管理。\n  - 用户的实际需求可能是：“我需要找出所有明朝时期的记录，并了解它们之间的父子关系。”",
+  "natural_language_query": "市民反映，在研究家族历史时发现祖上可能是明朝时期的官员，但家谱记载不全。想查询明朝时期相关的历史人物记录，特别是那些有明确父子关系的信息。听说有些资料库会记录这些历史人物的编号和他们的父辈编号，但不知道具体怎么查。希望能帮忙核实一下明朝时期的历史人物及其家族关系，方便补充家谱信息。来电咨询明朝历史人物查询问题。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ WHERE _ = _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "shiguihuaziranziyuanweixuetangshuyuan1521": [
+      "shiguihuaziranziyuanweixuetangshuyuan1521.HID",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.FATHERID",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.HNAME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.OTHERNAME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.CATEGORY",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.SUBCATEGOR",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.COUNTYNAME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.STREETNAME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.DYNASTY",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.SUBDYNASTY",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.ADDRESS",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.RANK",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.BATCH",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.PUBTIME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.USERS",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.PURPOSE",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.OWNERSHIP",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.STATEEVALU",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.SINGLERELI",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.PROTECTION",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.ATTACHEDRE",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.RELATEDPEO",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.RELATEDEVE",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.PUBNAME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.SOURCE",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.EDITOR",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.ISREDUNDAN"
+    ],
+    "fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396": [
+      "fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.旅行社分社及旅行社服务网点明细",
+      "fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.Unnamed: 1",
+      "fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.Unnamed: 2",
+      "fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.Unnamed: 3"
+    ]
+  }
+}

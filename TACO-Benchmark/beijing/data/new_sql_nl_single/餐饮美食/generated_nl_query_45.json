@@ -1,0 +1,26 @@
+{
+  "sql": "SELECT \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076\".\"专用标识牌号\" AS 列1, \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\".\"JYZMC\" AS 列2 FROM \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076\" INNER JOIN \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\" ON \"shiminzuzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076\".\"地址\" = \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\".\"DWMC\" WHERE \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\".\"EXCHANGETIME\" = '2022-01-01'",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是查询在2022年1月1日，清真食品转换数据与餐饮服务许可证情况信息之间的关联数据，具体获取专用标识牌号和对应的经营主体名称。\n\n- **详细描述**：\n  - **涉及的表**：\n    - `shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076`（清真食品转换数据表）\n    - `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374`（餐饮服务许可证情况信息表）\n  - **涉及的列**：\n    - 从`shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076`表中选取`专用标识牌号`作为`列1`\n    - 从`shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374`表中选取`JYZMC`（经营主体名称）作为`列2`\n  - **连接条件**：通过`shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076`表的`地址`字段与`shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374`表的`DWMC`（单位名称）字段进行内连接。\n  - **筛选条件**：仅查询`shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374`表中`EXCHANGETIME`（交换时间）等于'2022-01-01'的记录。\n\n- **业务场景**：\n  - 该查询可能用于监管机构或民族宗教事务管理部门，用于检查清真食品转换数据与餐饮服务许可证信息之间的关联情况。\n  - 具体场景可能是为了验证清真食品专用标识牌号是否与持有有效餐饮服务许可证的经营主体匹配，确保清真食品的合规性。\n  - 时间条件（2022年1月1日）可能用于特定时间点的合规检查或数据同步验证。\n\n- **用户描述**：\n  - 监管人员可能需要核实某一时间点（如2022年1月1日）所有使用清真食品专用标识的经营主体是否都持有有效的餐饮服务许可证。\n  - 民族宗教事务管理部门可能需要检查清真食品标识的发放是否与合法的餐饮经营主体对应，防止未授权或不合规使用清真标识的情况。\n  - 用户可能遇到的问题是：某些餐饮单位可能违规使用清真标识，或者清真食品转换数据与许可证信息不同步，需要通过此类查询进行数据核对和监管。",
+  "natural_language_query": "市民反映，去年年初（2022年1月左右）发现有些挂着清真牌子的餐馆不太正规，想咨询一下政府部门当时那些挂着清真专用标识的餐饮店是不是都有合法的经营许可证。特别是看到有些小店虽然挂着清真牌子，但卫生条件很差，怀疑他们可能没有正规的餐饮服务许可，希望能帮忙查查那时候所有使用清真标识的餐饮商家是否都具备合法资质。主要想确认这些店铺的清真标识和经营许可信息能不能对得上，感觉有些商家可能在违规使用清真标识。",
+  "results": 0,
+  "sql skeleton": "select _ as _ ,_ as _ from _ where _ = _",
+  "database": "餐饮美食",
+  "tables": {
+    "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076": [
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址"
+    ],
+    "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374": [
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYXM",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.FZRQ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.YXQZ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.DWMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.EXCHANGETIME"
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "sql": "SELECT \"shijiaotongweichengkeyindaojichuxinxi3710.序号\", \"shijiaotongweichengkeyindaojichuxinxi3710.枢纽站信息\", \"shijiaotongweichengkeyindaojichuxinxi3710.周边交通指南\" FROM \"shijiaotongweichengkeyindaojichuxinxi3710\" WHERE \"shijiaotongweichengkeyindaojichuxinxi3710.更新时间\" = '2022-10-01' AND \"shijiaotongweichengkeyindaojichuxinxi3710.共享时间 \" = '08:00';",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ from _ where _ = _ and _ = _ ;",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweichengkeyindaojichuxinxi3710": [
+      "shijiaotongweichengkeyindaojichuxinxi3710.序号",
+      "shijiaotongweichengkeyindaojichuxinxi3710.枢纽站信息",
+      "shijiaotongweichengkeyindaojichuxinxi3710.周边交通指南",
+      "shijiaotongweichengkeyindaojichuxinxi3710.公交线路信息",
+      "shijiaotongweichengkeyindaojichuxinxi3710.轨道线路信息",
+      "shijiaotongweichengkeyindaojichuxinxi3710.更新时间",
+      "shijiaotongweichengkeyindaojichuxinxi3710.共享时间 "
+    ],
+    "shijiaotongweiguidaozhandianxinxichuxing3670": [
+      "shijiaotongweiguidaozhandianxinxichuxing3670.线路名称",
+      "shijiaotongweiguidaozhandianxinxichuxing3670.站点编码",
+      "shijiaotongweiguidaozhandianxinxichuxing3670.车站名"
+    ]
+  }
+}

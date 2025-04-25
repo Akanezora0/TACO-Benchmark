@@ -1,0 +1,7 @@
+{
+  "sql": "select T1.col1, T1.col2, T1.col3, T2.col4, T2.col5 from Table1 T1 left join Table2 T2 on T1.id = T2.id where T1.condition = 'value'",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ from _ left join _ on _ ._ = _ ._ where _ ._ = _",
+  "database": "安全生活",
+  "tables": {}
+}

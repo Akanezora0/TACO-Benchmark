@@ -1,0 +1,35 @@
+{
+  "sql": "SELECT sand_and_gravel_deposits.OBJECTID FROM sand_and_gravel_deposits WHERE sand_and_gravel_deposits.AG_TYPE = '严格条件';",
+  "problem_description": "### Query intent:\nThe SQL statement aims to select the unique identifier (`OBJECTID`) associated with sand and gravel deposits from the `sand_and_gravel_deposits` table, specifically for those entries where the `AG_TYPE` attribute is set to '严格条件' (a strict condition).\n\n### Detailed description:\n- **Table**: `sand_and_gravel_deposits` - This table likely contains data about sand and gravel deposits, possibly including various attributes such as location, type, size, or any other relevant characteristics.\n- **Column**: `OBJECTID` - This column serves as a unique identifier for each record within the `sand_and_gravel_deposits` table, allowing for easy reference and retrieval of specific deposit information.\n- **Condition**: `sand_and_gravel_deposits.AG_TYPE = '严格条件'` - The query filters the records based on the `AG_TYPE` attribute, looking only for those deposits whose type is specifically labeled as '严格条件'. This condition narrows down the dataset to a subset of sand and gravel deposits that meet this particular criterion.\n\n### Business scenario:\nThis SQL query could be part of a larger data analysis process aimed at identifying sand and gravel deposits that adhere to certain stringent conditions, which might include environmental regulations, safety standards, or resource management policies. For example, an environmental compliance department might use this query to ensure that all operational sites meet high safety and environmental standards.\n\n### User description:\nA user, possibly an environmental compliance officer or a project manager overseeing resource extraction activities, might need to verify that certain sand and gravel deposits are compliant with strict operational guidelines. By running this query, they can quickly identify which deposits fall under the category of '严格条件', facilitating further review and potential action if necessary. This could involve checking for compliance with local laws, assessing environmental impact, or ensuring that the extraction methods meet high safety standards.",
+  "natural_language_query": "As an environmental compliance officer, I'm tasked with ensuring that our operations adhere to strict standards for sand and gravel deposits. Specifically, I need to verify that all deposits meeting the criteria labeled as '严格条件' (which translates to 'strict condition') in our database are being managed according to these high standards. To do this, I would run the following SQL query:\n\n```sql\nSELECT OBJECTID FROM sand_and_gravel_deposits WHERE AG_TYPE = '严格条件';\n```\n\nThis query will help me identify the unique identifiers (OBJECTID) associated with sand and gravel deposits that have been flagged with the '严格条件' label. This information is crucial for conducting detailed reviews, ensuring compliance, and making informed decisions regarding our operations.",
+  "results": 0,
+  "sql skeleton": "select _ from _ where _ = _ and _",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "landfills": [
+      "landfills.X",
+      "landfills.Y",
+      "landfills.OBJECTID",
+      "landfills.PSINUM",
+      "landfills.SWFACID",
+      "landfills.SITENAME",
+      "landfills.LOCCONF",
+      "landfills.DATE_FIRST",
+      "landfills.DATE_LAST",
+      "landfills.ACRES",
+      "landfills.STATUS",
+      "landfills.WQMONITORING",
+      "landfills.GASCOLLECTION",
+      "landfills.TOWNNAME",
+      "landfills.LATITUDE",
+      "landfills.LONGITUDE"
+    ],
+    "sand_and_gravel_deposits": [
+      "sand_and_gravel_deposits.OBJECTID",
+      "sand_and_gravel_deposits.AG_TYPE",
+      "sand_and_gravel_deposits.GlobalID",
+      "sand_and_gravel_deposits.SHAPEarea",
+      "sand_and_gravel_deposits.SHAPElen"
+    ]
+  }
+}

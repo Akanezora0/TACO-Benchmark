@@ -1,0 +1,40 @@
+{
+  "sql": "SELECT wetland_ecologist_districts.\"FirstName\", wetland_ecologist_districts.\"LastName\", wetland_ecologist_districts.\"Email\", wetland_ecologist_districts.\"Phone\", waste_water_facilities.\"FacilityName\", waste_water_facilities.\"WWInventoryURL\" FROM wetland_ecologist_districts JOIN waste_water_facilities ON wetland_ecologist_districts.\"OBJECTID\" = waste_water_facilities.\"FacilityID\" WHERE wetland_ecologist_districts.\"PROGMANAGER\" = 'John Doe' AND wetland_ecologist_districts.\"DIV\" = 'Admin' AND (waste_water_facilities.\"X\", waste_water_facilities.\"Y\") = (12345, 67890)",
+  "problem_description": "### Query intent:\nThe SQL statement aims to retrieve specific data from two related tables: `wetland_ecologist_districts` and `waste_water_facilities`. The goal is to find records where the `PROGMANAGER` column in the `wetland_ecologist_districts` table matches 'John Doe', the `DIV` column also matches 'Admin', and the geographical coordinates `(X, Y)` for a facility in the `waste_water_facilities` table match the tuple `(12345, 67890)`. Additionally, the query seeks to join these tables on the common `OBJECTID` and `FacilityID` fields.\n\n### Detailed description:\n- **Tables Involved**:\n    - `wetland_ecologist_districts`: This table likely contains information about ecologists managing wetland districts, including their first name, last name, email, phone number, and possibly an ID (`OBJECTID`) that could be used for joining with other tables.\n    - `waste_water_facilities`: This table holds details about waste water facilities, including their names (`FacilityName`), URLs (`WWInventoryURL`), and geographical coordinates (`X`, `Y`). It also likely includes a unique ID (`FacilityID`) for joining purposes.\n\n- **Columns Selected**:\n    - From `wetland_ecologist_districts`, the query selects `FirstName`, `LastName`, `Email`, and `Phone`.\n    - From `waste_water_facilities`, it selects `FacilityName` and `WWInventoryURL`.\n\n- **Conditions Used**:\n    - `wetland_ecologist_districts.\"PROGMANAGER\" = 'John Doe'`: Filters records where the program manager's name is 'John Doe'.\n    - `wetland_ecologist_districts.\"DIV\" = 'Admin'`: Further filters by ensuring the division is 'Admin'.\n    - `(waste_water_facilities.\"X\", waste_water_facilities.\"Y\") = (12345, 67890)`: Specifies that the geographical coordinates must exactly match the given tuple.\n\n- **Join Condition**:\n    - `wetland_ecologist_districts.\"OBJECTID\" = waste_water_facilities.\"FacilityID\"`: Joins the two tables based on their respective IDs, ensuring that each record from `wetland_ecologist_districts` is matched with the corresponding record from `waste_water_facilities`.\n\n### Business Scenario:\nThis",
+  "natural_language_query": "User: Hi, I'm trying to look into some environmental management data. Specifically, I'm interested in records where the person managing a certain wetland district is John Doe, they're part of the administration division, and there's a waste water facility located at the exact coordinates of 12345 longitude and 67890 latitude. Could you help me find this information?\n\nAssistant: Assistant: Sure, I can assist with that. You're looking for records in the database where the program manager's name in the \"wetland_ecologist_districts\" table is John Doe, they belong to the 'Admin' division, and there's a waste water facility at the precise coordinates of 12345 longitude and 67890 latitude. To get this information, we'll need to join the \"wetland_ecologist_districts\" table with the \"waste_water_facilities\" table using the common identifiers: the OBJECTID from the \"wetland_ecologist_districts\" table and the FacilityID from the \"waste_water_facilities\" table. We're particularly interested in fetching the first name, last name, email, and phone number from the ecologists' table, along with the facility name and its URL from the waste water facilities table. Let me run this query for you.",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ from _ join _ on _ ._ = _ ._ where _ ._ = _ and _ ._ = _ and _ (_ ._ ,_ ) = _",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "wetland_ecologist_districts": [
+      "wetland_ecologist_districts.OBJECTID",
+      "wetland_ecologist_districts.ABNAME",
+      "wetland_ecologist_districts.AGENCY",
+      "wetland_ecologist_districts.DEPT",
+      "wetland_ecologist_districts.DIV",
+      "wetland_ecologist_districts.FirstName",
+      "wetland_ecologist_districts.LastName",
+      "wetland_ecologist_districts.Email",
+      "wetland_ecologist_districts.Phone",
+      "wetland_ecologist_districts.Address",
+      "wetland_ecologist_districts.Office",
+      "wetland_ecologist_districts.Town",
+      "wetland_ecologist_districts.BOUNDARY",
+      "wetland_ecologist_districts.PROGMANAGER",
+      "wetland_ecologist_districts.PROGMANAGEREMAIL",
+      "wetland_ecologist_districts.PROGMANAGERPHONE",
+      "wetland_ecologist_districts.BACKUPCONTACT",
+      "wetland_ecologist_districts.BACKUPCONTACTEMAIL",
+      "wetland_ecologist_districts.BACKUPCONTACTPHONE",
+      "wetland_ecologist_districts.PROGRAMEMAIL",
+      "wetland_ecologist_districts.PROGRAMPHONE"
+    ],
+    "waste_water_facilities": [
+      "waste_water_facilities.X",
+      "waste_water_facilities.Y",
+      "waste_water_facilities.FacilityName",
+      "waste_water_facilities.FacilityID",
+      "waste_water_facilities.WWInventoryURL"
+    ]
+  }
+}

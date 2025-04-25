@@ -1,0 +1,26 @@
+{
+  "sql": "SELECT \"shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.企业名称\", \"shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.评定等级\" FROM \"shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672\" WHERE \"shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.所属地区\" = '北京';",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从指定表中查询北京市的汽车租赁企业的名称及其信用评价等级。\n\n- **详细描述**：\n  - **表**：`shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672`（可能是一个存储汽车租赁企业信用评价结果的数据表）。\n  - **列**：\n    - `shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.企业名称`：表示汽车租赁企业的名称。\n    - `shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.评定等级`：表示该企业的信用评价等级。\n    - `shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.所属地区`：表示企业所在的地区。\n  - **条件**：`\"shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.所属地区\" = '北京'`，即只查询位于北京市的企业。\n\n- **业务场景**：\n  - 该查询可以用于政府监管部门或行业协会对北京市汽车租赁企业的信用状况进行监控和分析。\n  - 也可以用于消费者在选择汽车租赁服务时，参考企业的信用评价等级，选择信用较好的企业。\n  - 还可以用于企业内部或第三方评估机构对汽车租赁行业的信用状况进行区域性分析。\n\n- **用户描述**：\n  - **政府监管部门**：可能需要了解北京市汽车租赁企业的信用状况，以便制定相关政策或进行行业整顿。\n  - **消费者**：在选择汽车租赁服务时，希望了解哪些企业信用较好，从而避免选择信用不良的企业。\n  - **行业协会**：可能需要统计北京市汽车租赁企业的信用等级分布，以便进行行业报告或提出改进建议。\n  - **企业自身**：可能需要了解同行业其他企业的信用状况，以便进行市场竞争分析或自我改进。",
+  "natural_language_query": "市民反映，最近在北京租车时遇到很多不靠谱的公司，有的乱收费，有的车况很差。想了解一下北京这边正规的汽车租赁公司都有哪些？最好能知道这些公司的信用评级怎么样，这样租车的时候能有个参考。听说有些公司被评为AAA级，有些可能信用不太好，希望能查一下这方面的信息，看看哪些公司比较靠谱。主要是担心租到那些信用不好的公司，到时候出问题很麻烦。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ ;",
+  "database": "交通服务",
+  "tables": {
+    "shigonganjujiaotongweifachulijigou1949": [
+      "shigonganjujiaotongweifachulijigou1949.交通违法处理机构",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 1",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 2",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 3",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 4",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 5",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 6"
+    ],
+    "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672": [
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.企业名称",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.评定等级",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.所属地区",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.年份",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.统一社会信用代码"
+    ]
+  }
+}

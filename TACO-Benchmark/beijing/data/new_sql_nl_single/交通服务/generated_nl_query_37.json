@@ -1,0 +1,30 @@
+{
+  "sql": "SELECT \"huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.行政相对人名称\", \"huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.许可内容\" FROM \"huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053\" WHERE \"huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.序号\" = '特定序号'",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从表 `huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053` 中查询特定序号的行政相对人名称及其对应的许可内容。  \n\n### **详细描述**  \n1. **涉及的表**：  \n   - `huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053`  \n     该表名称较长，可能是一个存储北京市怀柔区交通局（或类似机构）的运输行业行政许可信息的表。  \n\n2. **涉及的列**：  \n   - `行政相对人名称`：表示申请或获得行政许可的企业、个人或组织的名称。  \n   - `许可内容`：描述该行政许可的具体内容，如经营范围、资质等。  \n   - `序号`：可能是该表中的唯一标识字段，用于精确查询某一条记录。  \n\n3. **查询条件**：  \n   - `WHERE \"序号\" = '特定序号'`：表示只查询序号等于 `特定序号` 的记录，确保结果唯一。  \n\n### **业务场景**  \n该查询可能用于以下业务场景：  \n1. **行政许可信息查询**：  \n   - 政府工作人员或公众需要查询某一家企业（或个人）在怀柔区交通局获得的某项行政许可的具体内容。  \n   - 例如，某运输公司申请了道路运输经营许可证，相关部门或公众可以通过该查询获取该公司的许可信息。  \n\n2. **数据核对与监管**：  \n   - 监管部门可能需要根据序号调取某条行政许可记录，以核实其合规性，或进行后续监管工作。  \n\n3. **企业资质验证**：  \n   - 合作方或客户可能需要验证某家企业是否具备某项运输资质，可通过该查询获取相关信息。  \n\n### **用户描述**  \n在该业务场景下，用户可能遇到的实际问题或需求包括：  \n1. **企业查询自身许可信息**：  \n   - 某运输公司需要确认自己是否已成功办理某项许可，或者需要查看许可的具体内容（如允许运营的车辆类型、路线等）。  \n\n2. **监管部门核查违规行为**：  \n   - 交通局工作人员接到举报，称某运输公司可能存在超范围经营，需要调取其许可记录进行核实。  \n\n3. **公众查询企业资质**：  \n   - 个人或企业想与某运输公司合作，但需要确认该公司是否具备合法运营资质，因此查询其许可信息。  \n\n4. **数据统计与分析**：  \n   - 政府机构可能需要按序号调取特定记录，用于统计或分析某一类行政许可的发放情况。  \n\n### **总结**  \n该 SQL 语句主要用于精确查询某一条行政许可记录，适用于政府监管、企业自查、公众查询等场景，确保信息的准确性和可追溯性。",
+  "natural_language_query": "市民反映，之前通过怀柔区交通局办理过一个运输相关的许可证，现在想查一下具体的许可内容，但是不记得公司全称了，只记得当时办理时给的序号是HY-2023-0582。听说有些运输公司会超范围经营，担心自己的许可内容会不会也有问题，想确认一下当时审批通过的经营范围到底是什么。来电希望能帮忙查一下这个序号对应的公司名称和许可内容，看看是不是和现在实际经营的业务一致。",
+  "results": 0,
+  "sql skeleton": "select _ ,_ from _ where _ = _",
+  "database": "交通服务",
+  "tables": {
+    "pingguqupingguqugongjiaozhandianmingxi269": [
+      "pingguqupingguqugongjiaozhandianmingxi269.区内公交线路站点明细",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 1",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 2",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 3",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 4",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 5",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 6",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 7",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 8"
+    ],
+    "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053": [
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.序号",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.行政相对人名称",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.统一社会信用代码",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.行政许可决定文书号",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.许可内容",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.许可决定日期",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.许可机关"
+    ]
+  }
+}

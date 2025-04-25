@@ -1,0 +1,20 @@
+{
+  "sql": "SELECT shijiaotongweikebianqingbaobanshebeixinxi3519.名称, shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.总量 FROM shijiaotongweikebianqingbaobanshebeixinxi3519 INNER JOIN shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668 ON shijiaotongweikebianqingbaobanshebeixinxi3519.唯一标识 = shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.设备编码 WHERE shijiaotongweikebianqingbaobanshebeixinxi3519.名称 IS NOT NULL AND shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.总量 > 0",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是查询并返回交通违章可变情报板设备信息表中名称不为空的设备，以及与之关联的交通流量表中总量大于零的交通流量数据。\n\n- **详细描述**：\n  - **涉及的表**：\n    - `shijiaotongweikebianqingbaobanshebeixinxi3519`：交通违章可变情报板设备信息表，存储设备的名称、唯一标识等信息。\n    - `shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668`：交通违章交区普通公路年交通流量表，存储交通流量的总量、设备编码等信息。\n  - **涉及的列**：\n    - `shijiaotongweikebianqingbaobanshebeixinxi3519.名称`：设备的名称。\n    - `shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.总量`：交通流量的总量。\n    - `shijiaotongweikebianqingbaobanshebeixinxi3519.唯一标识`：设备的唯一标识。\n    - `shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.设备编码`：交通流量表中关联设备的编码。\n  - **条件**：\n    - `shijiaotongweikebianqingbaobanshebeixinxi3519.名称 IS NOT NULL`：确保查询的设备名称不为空。\n    - `shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.总量 > 0`：确保查询的交通流量总量大于零。\n    - `INNER JOIN`：通过设备的唯一标识和设备编码关联两个表，确保只返回两个表中都存在的记录。\n\n- **业务场景**：\n  - 该查询可以用于交通管理部门分析哪些可变情报板设备（名称不为空）所在位置的交通流量较大（总量大于零）。\n  - 通过关联设备信息和交通流量数据，可以识别出哪些设备位于交通繁忙的路段，从而帮助管理部门优化设备部署或调整交通管理策略。\n\n- **用户描述**：\n  - 交通管理部门可能需要了解哪些可变情报板设备位于交通流量较大的路段，以便更好地利用这些设备发布交通信息或警告。\n  - 用户可能遇到的实际问题包括：如何识别高流量路段的设备？哪些设备的信息发布对交通流量的影响最大？通过此查询，用户可以快速获取这些信息，从而做出更有效的决策。",
+  "natural_language_query": "市民反映，最近开车经过一些路段时发现那些显示交通信息的电子屏幕（就是能变内容的那种大牌子），有些路段车流量特别大但屏幕却不显示任何信息。想咨询一下交管部门，能不能查查那些有名称的电子屏幕设备所在的位置，特别是那些车流量大的路段？因为感觉这些地方更应该好好利用屏幕来疏导交通。最近在朝阳区大望路那边就遇到这种情况，早晚高峰堵得要命但情报板什么都不显示，希望能核实处理这些重要路段的设备使用情况。",
+  "results": 0,
+  "sql skeleton": "SELECT _ _ FROM _ WHERE ",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweikebianqingbaobanshebeixinxi3519": [
+      "shijiaotongweikebianqingbaobanshebeixinxi3519.唯一标识",
+      "shijiaotongweikebianqingbaobanshebeixinxi3519.名称",
+      "shijiaotongweikebianqingbaobanshebeixinxi3519.设备编码"
+    ],
+    "shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668": [
+      "shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.年份",
+      "shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.总量",
+      "shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.观测站名称"
+    ]
+  }
+}

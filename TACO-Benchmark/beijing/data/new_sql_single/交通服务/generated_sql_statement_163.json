@@ -1,0 +1,17 @@
+{
+  "sql": "select shijiaotongweizulinyehujibenxinxi3677.经营业户名称, shijiaotongweijiapeijigouxinxi3667.驾培机构名称, shijiaotongweijiapeijigouxinxi3667.训练地址, shijiaotongweijiapeijigouxinxi3667.统一社会信用代码, shijiaotongweijiapeijigouxinxi3667.法定代表人 from shijiaotongweizulinyehujibenxinxi3677 join shijiaotongweijiapeijigouxinxi3667 on shijiaotongweizulinyehujibenxinxi3677.经营业户名称 = shijiaotongweijiapeijigouxinxi3667.驾培机构名称 where shijiaotongweijiapeijigouxinxi3667.驾培机构名称 = '特定值'\n```",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ from _ join _ on _ ._ = _ ._ where _ ._ = _",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweizulinyehujibenxinxi3677": [
+      "shijiaotongweizulinyehujibenxinxi3677.经营业户名称"
+    ],
+    "shijiaotongweijiapeijigouxinxi3667": [
+      "shijiaotongweijiapeijigouxinxi3667.驾培机构名称",
+      "shijiaotongweijiapeijigouxinxi3667.训练地址",
+      "shijiaotongweijiapeijigouxinxi3667.统一社会信用代码",
+      "shijiaotongweijiapeijigouxinxi3667.法定代表人"
+    ]
+  }
+}

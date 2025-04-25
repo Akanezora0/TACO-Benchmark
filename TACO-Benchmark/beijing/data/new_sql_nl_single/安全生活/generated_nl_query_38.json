@@ -1,0 +1,9 @@
+{
+  "sql": "SELECT column1, column2 FROM table1 - table2 WHERE condition = value ;",
+  "problem_description": "# SQL 语句分析\n\n## 查询意图\n这个SQL语句的目的是从`table1`和`table2`的差集结果中筛选出满足特定条件(`condition = value`)的记录，并返回这些记录的`column1`和`column2`列。\n\n## 详细描述\n- **表操作**：使用了`table1 - table2`语法，这表示从`table1`中减去`table2`中存在的记录，得到两个表的差集\n- **列选择**：从差集结果中选择`column1`和`column2`两列\n- **条件筛选**：使用`WHERE`子句筛选满足`condition = value`条件的记录\n\n需要注意的是，标准SQL中并没有`table1 - table2`这样的语法。这可能是某种特定数据库的扩展语法，或者可能是想表达`EXCEPT`/`MINUS`操作(在某些数据库中使用)。标准SQL中实现表差集通常使用`EXCEPT`(SQL标准)或`MINUS`(Oracle)或`LEFT JOIN ... WHERE ... IS NULL`模式。\n\n## 业务场景\n这种查询可能用于以下业务场景：\n1. 找出在table1中存在但在table2中不存在的特定记录\n2. 比较两个表的数据差异\n3. 获取某个主表中存在而从表中不存在的记录\n\n## 用户描述\n用户可能遇到的实际问题或需求包括：\n- \"我需要找出所有已注册但从未下过订单的客户\"\n- \"我想查看产品目录中有但从未被购买过的商品\"\n- \"需要识别系统中已创建但从未被分配的任务\"\n\n这种查询在数据比对、异常检测和数据清理等场景中非常有用。",
+  "natural_language_query": "市民反映，我在系统里看到有一批客户资料，但是想找出那些注册了却从来没在我们这下过单的客户，这个要怎么查啊？我们市场部想做精准营销，但系统好像没有直接提供这个功能。之前试过导出两个表格自己比对，太麻烦了还容易出错。能不能帮忙看看怎么快速找出这些\"僵尸客户\"？就是那种光注册不消费的。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ WHERE _ = _ ;",
+  "database": "安全生活",
+  "tables": {}
+}

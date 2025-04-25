@@ -1,0 +1,20 @@
+{
+  "sql": "SELECT \"shijiaotongweichaoxianchaozaihuochexiezaicha\"ng\"站名称\", \"shijiaotongweichaoxianchaozaihuochexiezaicha\"ng\"联系电话\" FROM \"shijiaotongweichaoxianchaozaihuochexiezaicha\"nddi3663 WHERE \"shijiaotongweichaoxianchaozaihuochexiezaicha\"ng\"行政区划代码\" = '110113' AND \"huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829\".\"по\u0011Ю║╠\u001aА\" + \"huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829\".\"\u0001\u0001\" = '1'",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从表 `shijiaotongweichaoxianchaozaihuochexiezaichanddi3663` 中查询特定行政区划代码下的站点名称和联系电话，同时关联另一个表 `huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829` 进行条件筛选。\n\n- **详细描述**：\n  - **涉及的表**：\n    1. `shijiaotongweichaoxianchaozaihuochexiezaichanddi3663`：主表，包含站点名称、联系电话和行政区划代码等信息。\n    2. `huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829`：关联表，用于条件筛选。\n  - **涉及的列**：\n    1. `shijiaotongweichaoxianchaozaihuochexiezaichanddi3663` 表中的 `站名称` 和 `联系电话`：查询的目标字段。\n    2. `shijiaotongweichaoxianchaozaihuochexiezaichanddi3663` 表中的 `行政区划代码`：筛选条件字段，值为 `'110113'`。\n    3. `huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829` 表中的 `по\u0011Ю║╠\u001aА` 和 `\u0001\u0001`：用于条件筛选，组合后的值需等于 `'1'`。\n  - **条件**：\n    1. `行政区划代码 = '110113'`：筛选行政区划代码为 `110113` 的记录。\n    2. `huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829\".\"по\u0011Ю║╠\u001aА\" + \"huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829\".\"\u0001\u0001\" = '1'`：关联表的两个字段组合后的值需等于 `'1'`。\n\n- **业务场景**：\n  - 该查询可能用于交通管理或站点信息管理系统中，目的是获取特定行政区划（代码 `110113`）下的站点名称和联系电话，同时结合另一个表中的许可或汇总信息进行筛选。例如，可能需要查询某个区域内所有符合条件的交通站点，以便进行后续的联系或管理。\n\n- **用户描述**：\n  - 用户可能是交通管理部门的工作人员，需要获取某个行政区划（如北京市顺义区，代码 `110113`）内所有符合特定许可条件的交通站点的联系信息。例如，用户可能需要联系这些站点以通知某项政策变更或进行安全检查。关联表的条件可能是用于筛选那些已经通过某种许可或审核的站点。",
+  "natural_language_query": "市民反映，我是顺义区交通局的工作人员，现在需要联系辖区内所有符合要求的运输站点。我们这边系统显示顺义区的行政区划代码是110113，但是不知道具体哪些站点是已经通过2021年双公示审核的。能不能帮忙查一下这些站点的名称和联系电话？我们主要是要通知这些站点来参加安全培训，但是系统里信息太乱了，有些站点可能不符合条件。特别是有个叫\"双公示\"的审核，好像要满足什么条件才能算通过。麻烦帮忙查一下符合要求的站点信息，我们好尽快安排通知工作。",
+  "results": 0,
+  "sql skeleton": "select _ ,_ from _ where _ = _ and _ (_ ,_ ,_ )::_ +_ ::_ = _",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663": [
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.行政区划代码",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.站点名称",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.联系电话",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.地址"
+    ],
+    "huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829": [
+      "huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829.по\u0011Ю║╠\u001aА",
+      "huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829.\u0001\u0001"
+    ]
+  }
+}

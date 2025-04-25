@@ -1,0 +1,45 @@
+{
+  "sql": "SELECT \"tongzhouqutongzhouquxiangcunminsuxinxi2979\".\"通州区乡村民宿情况表（规范化审核52家）\", \"shiguihuaziranziyuanweiqingzhensi1515\".\"HNAME\", \"shiguihuaziranziyuanweiqingzhensi1515\".\"COUNTYNAME\" FROM \"tongzhouqutongzhouquxiangcunminsuxinxi2979\" INNER JOIN \"shiguihuaziranziyuanweiqingzhensi1515\" ON \"shiguihuaziranziyuanweiqingzhensi1515\".\"HID\" = \"tongzhouqutongzhouquxiangcunminsuxinxi2979\".\"Unnamed: 1\" WHERE \"shiguihuaziranziyuanweiqingzhensi1515\".\"HNAME\" = '具体名称' ORDER BY \"shiguihuaziranziyuanweiqingzhensi1515\".\"RANK\" DESC;",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从两个表中联合查询特定名称的乡村民宿信息，并按照排名降序排列结果。\n\n- **详细描述**：\n  - **涉及的表**：\n    1. `tongzhouqutongzhouquxiangcunminsuxinxi2979`（通州区乡村民宿情况表）：包含通州区乡村民宿的基本信息。\n    2. `shiguihuaziranziyuanweiqingzhensi1515`（规划和自然资源委员会表）：包含民宿的名称、县区名称等信息。\n  - **涉及的列**：\n    1. `tongzhouqutongzhouquxiangcunminsuxinxi2979` 表中的 `通州区乡村民宿情况表（规范化审核52家）`：可能是民宿的名称或其他标识信息。\n    2. `shiguihuaziranziyuanweiqingzhensi1515` 表中的 `HNAME`：民宿的具体名称。\n    3. `shiguihuaziranziyuanweiqingzhensi1515` 表中的 `COUNTYNAME`：民宿所在的县区名称。\n    4. `shiguihuaziranziyuanweiqingzhensi1515` 表中的 `HID` 和 `tongzhouqutongzhouquxiangcunminsuxinxi2979` 表中的 `Unnamed: 1`：用于两个表之间的关联字段。\n    5. `shiguihuaziranziyuanweiqingzhensi1515` 表中的 `RANK`：用于排序的排名字段。\n  - **条件**：\n    - `shiguihuaziranziyuanweiqingzhensi1515` 表中的 `HNAME` 必须等于 `'具体名称'`。\n  - **排序**：\n    - 结果按照 `shiguihuaziranziyuanweiqingzhensi1515` 表中的 `RANK` 降序排列。\n\n- **业务场景**：\n  - 该查询可能用于通州区乡村民宿的管理或审核，例如：\n    - 查找特定名称的民宿在通州区的分布情况。\n    - 审核民宿的规范化情况，并结合规划和自然资源委员会的数据进行验证。\n    - 生成报告或展示民宿的排名情况，以便进行进一步的管理或推广。\n\n- **用户描述**：\n  - 用户可能是通州区乡村民宿的管理人员或规划和自然资源委员会的工作人员。\n  - 用户可能需要查找某个具体名称的民宿在通州区的详细信息，包括其所在的县区名称和规范化审核情况。\n  - 用户还可能希望了解该民宿在排名中的位置，以便评估其重要性或优先级。\n  - 例如，用户可能需要查找名为“具体名称”的民宿是否通过了规范化审核，并了解其在通州区的排名情况，以便决定是否给予政策支持或推广资源。",
+  "natural_language_query": "市民反映，想了解通州区一家叫\"具体名称\"的乡村民宿的情况。这家民宿据说在规划和自然资源委员会那边有登记，但不知道具体在哪个县区，也不清楚它有没有通过规范化审核。听说有个什么排名，想知道这家民宿排第几？因为最近区里在搞民宿扶持政策，排名靠前的好像能优先获得支持。之前打电话问过其他部门，说法都不太一致，希望能帮忙查清楚这家民宿的详细情况和排名位置。",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ from _ where _ = _ order by _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "tongzhouqutongzhouquxiangcunminsuxinxi2979": [
+      "tongzhouqutongzhouquxiangcunminsuxinxi2979.通州区乡村民宿情况表（规范化审核52家）",
+      "tongzhouqutongzhouquxiangcunminsuxinxi2979.Unnamed: 1",
+      "tongzhouqutongzhouquxiangcunminsuxinxi2979.Unnamed: 2"
+    ],
+    "shiguihuaziranziyuanweiqingzhensi1515": [
+      "shiguihuaziranziyuanweiqingzhensi1515.HID",
+      "shiguihuaziranziyuanweiqingzhensi1515.FATHERID",
+      "shiguihuaziranziyuanweiqingzhensi1515.HNAME",
+      "shiguihuaziranziyuanweiqingzhensi1515.OTHERNAME",
+      "shiguihuaziranziyuanweiqingzhensi1515.CATEGORY",
+      "shiguihuaziranziyuanweiqingzhensi1515.SUBCATEGOR",
+      "shiguihuaziranziyuanweiqingzhensi1515.COUNTYNAME",
+      "shiguihuaziranziyuanweiqingzhensi1515.STREETNAME",
+      "shiguihuaziranziyuanweiqingzhensi1515.DYNASTY",
+      "shiguihuaziranziyuanweiqingzhensi1515.SUBDYNASTY",
+      "shiguihuaziranziyuanweiqingzhensi1515.ADDRESS",
+      "shiguihuaziranziyuanweiqingzhensi1515.RANK",
+      "shiguihuaziranziyuanweiqingzhensi1515.BATCH",
+      "shiguihuaziranziyuanweiqingzhensi1515.PUBTIME",
+      "shiguihuaziranziyuanweiqingzhensi1515.USERS",
+      "shiguihuaziranziyuanweiqingzhensi1515.PURPOSE",
+      "shiguihuaziranziyuanweiqingzhensi1515.OWNERSHIP",
+      "shiguihuaziranziyuanweiqingzhensi1515.STATEEVALU",
+      "shiguihuaziranziyuanweiqingzhensi1515.SINGLERELI",
+      "shiguihuaziranziyuanweiqingzhensi1515.PROTECTION",
+      "shiguihuaziranziyuanweiqingzhensi1515.ATTACHEDRE",
+      "shiguihuaziranziyuanweiqingzhensi1515.RELATEDPEO",
+      "shiguihuaziranziyuanweiqingzhensi1515.RELATEDEVE",
+      "shiguihuaziranziyuanweiqingzhensi1515.PUBNAME",
+      "shiguihuaziranziyuanweiqingzhensi1515.SOURCE",
+      "shiguihuaziranziyuanweiqingzhensi1515.EDITOR",
+      "shiguihuaziranziyuanweiqingzhensi1515.ISREDUNDAN",
+      "shiguihuaziranziyuanweiqingzhensi1515.THEME"
+    ]
+  }
+}

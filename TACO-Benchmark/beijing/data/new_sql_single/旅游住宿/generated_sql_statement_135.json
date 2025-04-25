@@ -1,0 +1,21 @@
+{
+  "sql": "SELECT \n    shiwenhuahelvyoujulvxingshexinxi3530.\"旅行社名称\",\n    shiwenhuahelvyoujulvxingshexinxi3530.\"旅行社业务经营许可证编号\",\n    shiwenhuahelvyoujulvxingshexinxi3530.\"许可经营业务\",\n    shiwenhuahelvyoujulvxingshexinxi3530.\"许可时间\",\n    huairouquhuairouqujingqumenpiaojiage1592.\"怀柔区政府定价景区门票价格\",\n    huairouquhuairouqujingqumenpiaojiage1592.\"Unnamed: 1\",\n    huairouquhuairouqujingqumenpiaojiage1592.\"Unnamed: 2\",\n    huairouquhuairouqujingqumenpiaojiage1592.\"Unnamed: 3\",\n    huairouquhuairouqujingqumenpiaojiage1592.\"Unnamed: 4\"\nFROM \n    shiwenhuahelvyoujulvxingshexinxi3530 \nJOIN \n    huairouquhuairouqujingqumenpiaojiage1592 \nON \n    shiwenhuahelvyoujulvxingshexinxi3530.\"旅行社业务经营许可证编号\" = huairouquhuairouqujingqumenpiaojiage1592.\"Unnamed: 1\" \nWHERE \n    shiwenhuahelvyoujulvxingshexinxi3530.\"许可时间\" = '2022-01-01' \nAND \n    huairouquhuairouqujingqumenpiaojiage1592.\"Unnamed: 1\" = '指定编号';",
+  "results": 0,
+  "sql skeleton": "SELECT _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ FROM _ JOIN _ ON _ ._ = _ ._ WHERE _ ._ = _ and _ ._ = _ AND _ ._ = _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "shiwenhuahelvyoujulvxingshexinxi3530": [
+      "shiwenhuahelvyoujulvxingshexinxi3530.旅行社名称",
+      "shiwenhuahelvyoujulvxingshexinxi3530.旅行社业务经营许可证编号",
+      "shiwenhuahelvyoujulvxingshexinxi3530.许可经营业务",
+      "shiwenhuahelvyoujulvxingshexinxi3530.许可时间"
+    ],
+    "huairouquhuairouqujingqumenpiaojiage1592": [
+      "huairouquhuairouqujingqumenpiaojiage1592.怀柔区政府定价景区门票价格",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 1",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 2",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 3",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 4"
+    ]
+  }
+}

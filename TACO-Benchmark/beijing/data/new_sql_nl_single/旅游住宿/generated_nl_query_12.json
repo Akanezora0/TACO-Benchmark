@@ -1,0 +1,48 @@
+{
+  "sql": "SELECT shiguihuaziranziyuanweixuetangshuyuan1521.HID, shiguihuaziranziyuanweixuetangshuyuan1521.FATHERID, shiguihuaziranziyuanweixuetangshuyuan1521.HNAME, shiguihuaziranziyuanweixuetangshuyuan1521.OTHERNAME, shiguihuaziranziyuanweixuetangshuyuan1521.CATEGORY, shiguihuaziranziyuanweixuetangshuyuan1521.SUBCATEGOR, shiguihuaziranziyuanweixuetangshuyuan1521.COUNTYNAME, shiguihuaziranziyuanweixuetangshuyuan1521.STREETNAME, shiguihuaziranziyuanweixuetangshuyuan1521.DYNASTY, shiguihuaziranziyuanweixuetangshuyuan1521.SUBDYNASTY, shiguihuaziranziyuanweixuetangshuyuan1521.ADDRESS, shiguihuaziranziyuanweixuetangshuyuan1521.RANK, shiguihuaziranziyuanweixuetangshuyuan1521.BATCH, shiguihuaziranziyuanweixuetangshuyuan1521.PUBTIME, shiguihuaziranziyuanweixuetangshuyuan1521.USERS, shiguihuaziranziyuanweixuetangshuyuan1521.PURPOSE, shiguihuaziranziyuanweixuetangshuyuan1521.OWNERSHIP, shiguihuaziranziyuanweixuetangshuyuan1521.STATEEVALU, shiguihuaziranziyuanweixuetangshuyuan1521.SINGLERELI, shiguihuaziranziyuanweixuetangshuyuan1521.PROTECTION, shiguihuaziranziyuanweixuetangshuyuan1521.ATTACHEDRE, shiguihuaz",
+  "problem_description": "### 查询意图：\n该 SQL 语句的目的是从名为 `shiguihuaziranziyuanweixuetangshuyuan1521` 的表中查询多个列的数据，包括 `HID`、`FATHERID`、`HNAME`、`OTHERNAME` 等字段。查询似乎没有包含任何条件（WHERE 子句），因此可能是为了获取该表中的所有记录或部分列的数据。\n\n### 详细描述：\n1. **表名**：`shiguihuaziranziyuanweixuetangshuyuan1521`  \n   - 表名较长且似乎包含中文拼音，可能是一个特定业务或项目的表，例如“市规划自然资源委学堂书院1521”或类似名称。\n\n2. **查询的列**：  \n   - `HID`：可能是主键或唯一标识符（如“ID”或“House ID”）。  \n   - `FATHERID`：可能表示父级ID，用于层级关系（如树形结构或分类关系）。  \n   - `HNAME`：名称字段（如“名称”或“House Name”）。  \n   - `OTHERNAME`：其他名称或别名。  \n   - `CATEGORY` 和 `SUBCATEGOR`：分类和子分类字段。  \n   - `COUNTYNAME` 和 `STREETNAME`：县（区）名和街道名，表示地理位置。  \n   - `DYNASTY` 和 `SUBDYNASTY`：朝代和子朝代，可能与历史或文化遗产相关。  \n   - `ADDRESS`：详细地址。  \n   - `RANK`：等级或排名。  \n   - `BATCH`：批次（如保护批次或项目批次）。  \n   - `PUBTIME`：发布时间。  \n   - `USERS`：用户或使用者。  \n   - `PURPOSE`：用途。  \n   - `OWNERSHIP`：所有权。  \n   - `STATEEVALU`：状态评估（如“State Evaluation”）。  \n   - `SINGLERELI`：可能与宗教或文化单一性相关（如“Single Religion”）。  \n   - `PROTECTION`：保护状态或措施。  \n   - `ATTACHEDRE`：可能是附属关系（如“Attached Relation”）。  \n\n3. **条件**：  \n   - 查询中没有 WHERE 子句，因此是直接提取表中所有记录的部分列数据。\n\n### 业务场景：\n该查询可能用于以下业务场景：\n1. **文化遗产或历史建筑管理**：  \n   - 表名和字段（如 `DYNASTY`、`PROTECTION`）表明可能与历史建筑、文物保护或文化遗产相关。  \n   - 查询可能是为了获取所有文化遗产点的基本信息，用于展示、统计或分析。\n\n2. **城市规划或自然资源管理**：  \n   - 表名中的“规划自然资源”可能指向城市规划或自然资源管理领域。  \n   - 查询可能是为了导出或查看规划范围内的建筑或资源数据。\n\n3. **数据导出或报表生成**：  \n   - 查询可能是为生成报表或导出数据到其他系统（如GIS系统、保护单位名录等）。\n\n### 用户描述：\n用户可能是以下角色之一：\n1. **文化遗产管理员**：  \n   - 需要查看所有文化遗产点的基本信息，以便进行保护状态评估或分类统计。  \n   - 可能遇到的问题：需要快速获取所有文化遗产点的名称、地址、保护等级等信息。\n\n2. **城市规划师**：  \n   - 需要提取规划区域内的建筑或资源数据，用于制定规划方案或分析空间分布。  \n   - 可能遇到的问题：需要整合历史建筑数据与城市规划数据。\n\n3. **数据分析师**：  \n   - 需要导出原始数据以进行进一步分析（如保护批次分布、朝代统计等）。  \n   - 可能遇到的问题：数据字段名复杂，需明确字段含义。\n\n### 补充说明：\n- 表名和字段名均为拼音或缩写，可能来自特定系统或项目，实际含义需结合业务背景确认。  \n- 查询未限制条件，可能数据量较大，实际应用中可能需要分页或筛选。",
+  "natural_language_query": "市民反映，我在研究咱们市的一些历史建筑和文化保护单位时，遇到了一些困惑。想了解一下咱们市里那些挂牌保护的老建筑、书院之类的场所的详细情况。比如这些建筑叫什么名字，在哪个区哪个街道，是什么朝代的，现在归谁管，保护状态怎么样这些信息。我之前在文化局网站上看到过一些零散的信息，但不太全，有些建筑还有别名也查不到。特别是想看看那些评级比较高的保护单位，不知道能不能帮忙查一下完整的清单？最好能包括它们的用途、所有权这些信息，因为我正在做一个关于传统文化保护的研究课题，需要这些基础数据。对了，如果有些建筑是分批次列入保护名录的，也希望能看到是哪一批的，这样方便我按时间线整理。",
+  "results": 0,
+  "sql skeleton": "select _ from _ where _ (_ ,_ ) = _ or _ (_ ,_ ) = _",
+  "database": "旅游住宿",
+  "tables": {
+    "shiguihuaziranziyuanweixuetangshuyuan1521": [
+      "shiguihuaziranziyuanweixuetangshuyuan1521.HID",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.FATHERID",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.HNAME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.OTHERNAME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.CATEGORY",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.SUBCATEGOR",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.COUNTYNAME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.STREETNAME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.DYNASTY",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.SUBDYNASTY",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.ADDRESS",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.RANK",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.BATCH",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.PUBTIME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.USERS",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.PURPOSE",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.OWNERSHIP",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.STATEEVALU",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.SINGLERELI",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.PROTECTION",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.ATTACHEDRE",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.RELATEDPEO",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.RELATEDEVE",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.PUBNAME",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.SOURCE",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.EDITOR",
+      "shiguihuaziranziyuanweixuetangshuyuan1521.ISREDUNDAN"
+    ],
+    "xichengquxichengqulvxingsheminglu20": [
+      "xichengquxichengqulvxingsheminglu20.序号",
+      "xichengquxichengqulvxingsheminglu20.许可证号",
+      "xichengquxichengqulvxingsheminglu20.旅行社名称",
+      "xichengquxichengqulvxingsheminglu20.经营业务",
+      "xichengquxichengqulvxingsheminglu20.发证日期",
+      "xichengquxichengqulvxingsheminglu20.经营场所",
+      "xichengquxichengqulvxingsheminglu20.有效期"
+    ]
+  }
+}

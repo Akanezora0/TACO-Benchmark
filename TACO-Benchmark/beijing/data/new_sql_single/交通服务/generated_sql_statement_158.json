@@ -1,0 +1,18 @@
+{
+  "sql": "SELECT DISTINCT daxingqudaxingqugonggongzixingchededianweixinxi440.序号, daxingqudaxingqugonggongzixingchededianweixinxi440.公共自行车点位, shijiaotongweigongjiaozhandianxinxichuxingfuwu3665.站点名称, shijiaotongweigongjiaozhandianxinxichuxingfuwu3665.方向 = daxingqudaxingqugonggongzixingchededianweixinxi440.公共自行车点位 AS 公共自行车匹配方向 FROM daxingqudaxingqugonggongzixingchededianweixinxi440 JOIN shijiaotongweigongjiaozhandianxinxichuxingfuwu3665 ON daxingqudaxingqugonggongzixingchededianweixinxi440.公共自行车点位 = shijiaotongweigongjiaozhandianxinxichuxingfuwu3665.站点名称 where shijiaotongweigongjiaozhandianxinxichuxingfuwu3665.线路名称 = '1号线'",
+  "results": 0,
+  "sql skeleton": "SELECT DISTINCT _ ._ , _ ._ , _ ._ , _ ._ = _ ._ = _ AS _ FROM _ JOIN _ ON _ ._ = _ ._ where _ ._ = _",
+  "database": "交通服务",
+  "tables": {
+    "daxingqudaxingqugonggongzixingchededianweixinxi440": [
+      "daxingqudaxingqugonggongzixingchededianweixinxi440.序号",
+      "daxingqudaxingqugonggongzixingchededianweixinxi440.公共自行车点位"
+    ],
+    "shijiaotongweigongjiaozhandianxinxichuxingfuwu3665": [
+      "shijiaotongweigongjiaozhandianxinxichuxingfuwu3665.线路名称",
+      "shijiaotongweigongjiaozhandianxinxichuxingfuwu3665.站点名称",
+      "shijiaotongweigongjiaozhandianxinxichuxingfuwu3665.方向",
+      "shijiaotongweigongjiaozhandianxinxichuxingfuwu3665.站点序号"
+    ]
+  }
+}

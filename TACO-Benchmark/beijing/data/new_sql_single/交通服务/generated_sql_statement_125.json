@@ -1,0 +1,20 @@
+{
+  "sql": "SELECT \n    shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.服务机构名称, \n    shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.评定等级\nFROM \n    shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678\nJOIN \n    shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669 ON shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.服务机构名称 = shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.业户名称",
+  "results": 0,
+  "sql skeleton": "SELECT _ _ FROM _ WHERE _",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678": [
+      "shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.序号",
+      "shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.服务机构名称",
+      "shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.地址"
+    ],
+    "shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669": [
+      "shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.业户名称",
+      "shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.评定等级",
+      "shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.所属地区",
+      "shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.年份",
+      "shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.统一社会信用代码"
+    ]
+  }
+}

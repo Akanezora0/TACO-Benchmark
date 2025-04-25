@@ -1,0 +1,30 @@
+{
+  "sql": "SELECT wildlife_management_units.OBJECTID, dfirm_floodways.FLOODWAY FROM wildlife_management_units INNER JOIN dfirm_floodways ON wildlife_management_units.OBJECTID = dfirm_floodways.OBJECTID WHERE dfirm_floodways.FLOODWAY = 'YES';",
+  "problem_description": "### Query intent:\nThe SQL statement aims to find specific details about wildlife management units that intersect with floodways marked as 'YES' in a database.\n\n### Detailed description:\n- **Tables Involved**: The query involves two tables, `wildlife_management_units` and `dfirm_floodways`.\n    - `wildlife_management_units`: This table likely contains information related to wildlife management units, such as their unique identifier (`OBJECTID`) and possibly other attributes like location, size, or type.\n    - `dfirm_floodways`: This table seems to contain information about floodways, including a unique identifier (`OBJECTID`) and a flag (`FLOODWAY`) indicating whether a particular floodway is present or not.\n- **Columns Involved**:\n    - From `wildlife_management_units`, the `OBJECTID` column is selected, which uniquely identifies each wildlife management unit.\n    - From `dfirm_floodways`, the `FLOODWAY` column is selected. This column indicates if there is a floodway at the location of the wildlife management unit. It includes a value 'YES', suggesting the presence of a floodway.\n- **Join Condition**: An `INNER JOIN` clause is used with the condition `wildlife_management_units.OBJECTID = dfirm_floodways.OBJECTID`. This ensures that only those wildlife management units with matching identifiers in both tables are included in the result set.\n- **Where Clause**: The `WHERE` clause filters the result set further by specifying that only rows where `dfirm_floodways.FLOODWAY` equals 'YES' should be returned. This means the query focuses on wildlife management units that intersect with floodways that are confirmed to exist ('YES').\n\n### Business Scenario:\nThis query could be used in environmental management or conservation efforts where it's necessary to identify wildlife management units (e.g., protected areas) that are located near or intersect with floodways. Knowing these intersections is crucial for planning mitigation measures, conducting risk assessments, or ensuring that conservation efforts do not inadvertently impact flood control systems.\n\n### User Description:\nA user might need this information to:\n- Plan the construction of new wildlife corridors or refuges while avoiding areas prone to flooding.\n- Assess the potential impacts of flood control projects on local wildlife habitats.\n- Develop emergency response plans for wildlife in flood-prone areas.\n- Evaluate the effectiveness of existing conservation strategies in flood-prone regions.",
+  "natural_language_query": "I'm looking to find out which wildlife management areas overlap with flood zones that are officially marked as 'YES'. Specifically, I want to know the unique identifiers for these wildlife areas that share land with these confirmed flood zones. This information would be crucial for our environmental planning, particularly when considering the safety of wildlife during flood events and for designing effective conservation strategies.",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ WHERE _ = _ ;",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "wildlife_management_units": [
+      "wildlife_management_units.OBJECTID",
+      "wildlife_management_units.ABNAME",
+      "wildlife_management_units.AGENCY",
+      "wildlife_management_units.DEPT",
+      "wildlife_management_units.DIV",
+      "wildlife_management_units.BOUNDARY"
+    ],
+    "dfirm_floodways": [
+      "dfirm_floodways.OBJECTID",
+      "dfirm_floodways.DFIRM_ID",
+      "dfirm_floodways.FLD_AR_ID",
+      "dfirm_floodways.FLD_ZONE",
+      "dfirm_floodways.FLOODWAY",
+      "dfirm_floodways.SFHA_TF",
+      "dfirm_floodways.AR_REVERT",
+      "dfirm_floodways.SOURCE_CIT",
+      "dfirm_floodways.HYDRO_ID",
+      "dfirm_floodways.CST_MDL_ID"
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "sql": "SELECT \n    sga_phase_2_assessed_reaches.\"RID\",\n    sga_phase_2_assessed_reaches.\"SID\",\n    sga_phase_2_assessed_reaches.\"OBJECTID\",\n    sga_phase_2_assessed_reaches.\"RchID\",\n    sga_phase_2_assessed_reaches.\"SegID\",\n    sga_phase_2_assessed_reaches.\"ProjectID\",\n    lakepond_wbids_and_wbid_segments.\"OBJECTID\",\n    lakepond_wbids_and_wbid_segments.\"Source\",\n    lakepond_wbids_and_wbid_segments.\"WBID\",\n    lakepond_wbids_and_wbid_segments.\"LAKEID\",\n    lakepond_wbids_and_wbid_segments.\"EventType\",\n    lakepond_wbids_and_wbid_segments.\"GISAcres\"\nFROM \n    sga_phase_2_assessed_reaches,\n    lakepond_wbids_and_wbid_segments\nWHERE \n    sga_phase_2_assessed_reaches.\"RID\" = lakepond_wbids_and_wbid_segments.\"RID\" AND\n    sga_phase_2_assessed_reaches.\"SID\" = lakepond_wbids_and_wbid_segments.\"SID\" AND\n    sga_phase_2_assessed_reaches.\"OBJECTID\" = 1 AND\n    lakepond_wbids_and_wbid_segments.\"Source\" = 'Waterbody' AND\n    lakepond_wbids_and_wbid_segments.\"EventType\" = 'Aquatic Life';",
+  "problem_description": "### Query intent:\nThe SQL statement aims to join two tables (`sga_phase_2_assessed_reaches` and `lakepond_wbids_and_wbid_segments`) based on matching RID and SID, and then filter out specific records where the OBJECTID is 1, the Source is 'Waterbody', and the EventType is 'Aquatic Life'. The result will include various attributes from both tables.\n\n### Detailed description:\n- **Tables**: `sga_phase_2_assessed_reaches` and `lakepond_wbids_and_wbid_segments`.\n  - `sga_phase_2_assessed_reaches`: This table likely contains data related to phase 2 assessments of reaches (possibly waterways or segments of bodies of water).\n    - Columns included: `RID`, `SID`, `OBJECTID`, `RchID`, `SegID`, `ProjectID`.\n  - `lakepond_wbids_and_wbid_segments`: This table seems to contain information about waterbodies and their segments.\n    - Columns included: `OBJECTID`, `Source`, `WBID`, `LAKEID`, `EventType`, `GISAcres`.\n\n- **Joins**: The query uses INNER JOINs to match rows in both tables based on `RID` and `SID` columns.\n\n- **Conditions**:\n  - `sga_phase_2_assessed_reaches.OBJECTID = 1`: Filters for rows in the first table with an OBJECTID of 1.\n  - `lakepond_wbids_and_wbid_segments.Source = 'Waterbody'`: Filters for rows in the second table where the source is specifically 'Waterbody'.\n  - `lakepond_wbids_and_wbid_segments.EventType = 'Aquatic Life'`: Further filters the second table to only include rows where the event type is 'Aquatic Life'.\n\n### Business scenario:\nThis query could be part of a larger system aimed at environmental monitoring or management, particularly in water resources. It might be used to analyze specific segments of lakes or ponds (identified by `OBJECTID`) that have been assessed as part of a phase 2 study (`RID` and `SID`). The focus on 'Waterbody' sources and 'Aquatic Life' events suggests an interest in aquatic ecosystems within these waterbodies.\n\n### User description:\nA user, possibly an environmental scientist or water resource manager, might need this information to:\n- Identify specific reaches of waterways that were part of a detailed assessment in phase 2.\n- Focus on areas where aquatic",
+  "natural_language_query": "User: I'm working on a project that involves analyzing water resources, particularly focusing on the aquatic life in certain segments of lakes and ponds. We're using a database that contains two main tables: one for the assessments done during phase 2 of our study, and another for details about the lakes and ponds themselves. \n\nWe're interested in querying this database to find specific information. Specifically, we want to look at segments of lakes or ponds where the source of the data is identified as 'Waterbody', and the event type associated with these segments pertains to aquatic life. Our goal is to gather insights on how aquatic life is impacted in these particular segments.\n\nCould you help me write a SQL query that would allow us to retrieve the relevant data? We're particularly interested in matching records between the two tables based on their unique identifiers, and filtering these results down to the segments we're focusing on. \n\nAssistant: To address your request, we'll construct a SQL query that joins the two specified tables (`sga_phase_2_assessed_reaches` and `lakepond_wbids_and_wbid_segments`) based on their unique identifiers (`RID` and `SID`), and then applies specific conditions to filter the data. Here's how the query should look:\n\n```sql\nSELECT \n    sga_phase_2_assessed_reaches.*,\n    lakepond_wbids_and_wbid_segments.*\nFROM \n    sga_phase_2_assessed_reaches\nINNER JOIN \n    lakepond_wbids_and_wbid_segments ON sga_phase_2_assessed_reaches.RID = lakepond_wbids_and_wbid_segments.SID\nWHERE \n    sga_phase_2_assessed_reaches.OBJECTID = 1 AND\n    lakepond_wbids_and_wbid_segments.Source = 'Waterbody' AND\n    lakepond_wbids_and_wbid_segments.EventType = 'Aquatic Life';\n```\n\nThis query performs the following actions:\n- **Joins**: It matches records from `sga_phase_2_assessed_reaches` with corresponding records in `lakepond_wbids_and_wbid_segments` based on the `RID` and `SID` fields, ensuring that each segment of interest is accurately linked with its assessment details.\n- **Filtering**: It selects only those records where the `OBJECTID` in the first table is set to 1, indicating the specific segments of interest. Additionally, it filters further to include only those rows from the second table where the `Source` is '",
+  "results": 0,
+  "sql skeleton": "SELECT _ ._ , _ ._ , _ ._ , _ ._ FROM _ WHERE _ ._ = _ AND _ ._ = _ and _ (_ ._ , _ ) = _ ;",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "sga_phase_2_assessed_reaches": [
+      "sga_phase_2_assessed_reaches.SGAT_ID",
+      "sga_phase_2_assessed_reaches.ProjectName",
+      "sga_phase_2_assessed_reaches.URLPage1",
+      "sga_phase_2_assessed_reaches.URLPage2",
+      "sga_phase_2_assessed_reaches.ReportList",
+      "sga_phase_2_assessed_reaches.FinalA",
+      "sga_phase_2_assessed_reaches.FinalB",
+      "sga_phase_2_assessed_reaches.FinalC",
+      "sga_phase_2_assessed_reaches.CorridorPlanA",
+      "sga_phase_2_assessed_reaches.CorridorPlanB",
+      "sga_phase_2_assessed_reaches.CorridorPlanC",
+      "sga_phase_2_assessed_reaches.RID",
+      "sga_phase_2_assessed_reaches.SID",
+      "sga_phase_2_assessed_reaches.OBJECTID",
+      "sga_phase_2_assessed_reaches.RchID",
+      "sga_phase_2_assessed_reaches.SegID",
+      "sga_phase_2_assessed_reaches.ProjectID"
+    ],
+    "lakepond_wbids_and_wbid_segments": [
+      "lakepond_wbids_and_wbid_segments.OBJECTID",
+      "lakepond_wbids_and_wbid_segments.Source",
+      "lakepond_wbids_and_wbid_segments.WBID",
+      "lakepond_wbids_and_wbid_segments.LAKEID",
+      "lakepond_wbids_and_wbid_segments.EventType",
+      "lakepond_wbids_and_wbid_segments.GISAcres"
+    ]
+  }
+}

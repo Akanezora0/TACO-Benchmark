@@ -1,0 +1,48 @@
+{
+  "sql": "SELECT \"yanqingquyanqingqulvyoujingquxinxi3381.旅游景区\", \"shiguihuaziranziyuanweiyuanlin1526.HNAME\" FROM \"yanqingquyanqingqulvyoujingquxinxi3381\" INNER JOIN \"shiguihuaziranziyuanweiyuanlin1526\" ON \"yanqingquyanqingqulvyoujingquxinxi3381.旅游景区\" = \"shiguihuaziranziyuanweiyuanlin1526.HNAME\";",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "yanqingquyanqingqulvyoujingquxinxi3381": [
+      "yanqingquyanqingqulvyoujingquxinxi3381.旅游景区",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 1",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 2",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 3",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 4",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 5",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 6",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 7"
+    ],
+    "shiguihuaziranziyuanweiyuanlin1526": [
+      "shiguihuaziranziyuanweiyuanlin1526.HID",
+      "shiguihuaziranziyuanweiyuanlin1526.FATHERID",
+      "shiguihuaziranziyuanweiyuanlin1526.HNAME",
+      "shiguihuaziranziyuanweiyuanlin1526.OTHERNAME",
+      "shiguihuaziranziyuanweiyuanlin1526.CATEGORY",
+      "shiguihuaziranziyuanweiyuanlin1526.SUBCATEGOR",
+      "shiguihuaziranziyuanweiyuanlin1526.COUNTYNAME",
+      "shiguihuaziranziyuanweiyuanlin1526.STREETNAME",
+      "shiguihuaziranziyuanweiyuanlin1526.DYNASTY",
+      "shiguihuaziranziyuanweiyuanlin1526.SUBDYNASTY",
+      "shiguihuaziranziyuanweiyuanlin1526.ADDRESS",
+      "shiguihuaziranziyuanweiyuanlin1526.RANK",
+      "shiguihuaziranziyuanweiyuanlin1526.BATCH",
+      "shiguihuaziranziyuanweiyuanlin1526.PUBTIME",
+      "shiguihuaziranziyuanweiyuanlin1526.USERS",
+      "shiguihuaziranziyuanweiyuanlin1526.PURPOSE",
+      "shiguihuaziranziyuanweiyuanlin1526.OWNERSHIP",
+      "shiguihuaziranziyuanweiyuanlin1526.STATEEVALU",
+      "shiguihuaziranziyuanweiyuanlin1526.SINGLERELI",
+      "shiguihuaziranziyuanweiyuanlin1526.PROTECTION",
+      "shiguihuaziranziyuanweiyuanlin1526.ATTACHEDRE",
+      "shiguihuaziranziyuanweiyuanlin1526.RELATEDPEO",
+      "shiguihuaziranziyuanweiyuanlin1526.RELATEDEVE",
+      "shiguihuaziranziyuanweiyuanlin1526.PUBNAME",
+      "shiguihuaziranziyuanweiyuanlin1526.SOURCE",
+      "shiguihuaziranziyuanweiyuanlin1526.EDITOR",
+      "shiguihuaziranziyuanweiyuanlin1526.ISREDUNDAN",
+      "shiguihuaziranziyuanweiyuanlin1526.THEME"
+    ]
+  }
+}

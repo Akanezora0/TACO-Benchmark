@@ -1,0 +1,26 @@
+{
+  "sql": "SELECT \"huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.行政相对人名称\", \"huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.统一社会信用代码\" FROM \"huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053\" WHERE \"huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.许可机关\" = '北京市怀柔区交通局' AND \"huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.许可决定日期\" > '2022-01-01';",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从怀柔区交通局运输行政许可信息表中查询由北京市怀柔区交通局许可的、且在2022年1月1日之后获得许可的行政相对人名称及其统一社会信用代码。\n\n- **详细描述**：\n  - **表**：`\"huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053\"`，该表名称较长，可能是怀柔区交通局运输行政许可信息的数据库表。\n  - **列**：\n    - `\"huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.行政相对人名称\"`：表示获得行政许可的企业或个人的名称。\n    - `\"huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.统一社会信用代码\"`：表示行政相对人的统一社会信用代码，用于唯一标识企业或组织。\n    - `\"huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.许可机关\"`：表示颁发行政许可的机关名称。\n    - `\"huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.许可决定日期\"`：表示行政许可的决定日期。\n  - **条件**：\n    - `\"huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.许可机关\" = '北京市怀柔区交通局'`：筛选出由北京市怀柔区交通局颁发的行政许可记录。\n    - `\"huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.许可决定日期\" > '2022-01-01'`：筛选出2022年1月1日之后颁发的行政许可记录。\n\n- **业务场景**：\n  - 该查询可以用于统计或分析北京市怀柔区交通局在2022年1月1日之后颁发的运输行政许可信息。\n  - 可能用于监管机构对近期获得许可的企业或个人进行合规性检查或审计。\n  - 也可以用于企业或个人查询最新的行政许可信息，以确认其许可状态或进行相关业务操作。\n\n- **用户描述**：\n  - **监管机构**：可能需要了解怀柔区交通局在2022年1月1日之后批准的运输行政许可情况，以便进行合规性检查或政策评估。\n  - **企业或个人**：可能需要查询自己或竞争对手是否在近期获得了相关运输行政许可，以便进行业务规划或市场分析。\n  - **数据分析师**：可能需要这些数据来生成报告或分析怀柔区交通局的行政许可趋势。",
+  "natural_language_query": "市民反映，想了解一下怀柔区交通局最近两年发放的运输经营许可证的情况。我是去年2022年3月份在怀柔注册了一家货运公司，当时办理了相关手续，但现在想确认一下我们公司的许可信息是否在系统里能查到。另外也想看看同期还有哪些公司获得了类似的运输许可，主要是想了解一下市场竞争情况。特别关注2022年之后新批准的运输企业信息，包括公司名称和信用代码这些基本信息。因为最近准备拓展业务，需要这些信息做市场调研。来电咨询怀柔区交通局近两年运输许可发放情况。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ WHERE _ = _ ;",
+  "database": "交通服务",
+  "tables": {
+    "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053": [
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.序号",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.行政相对人名称",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.统一社会信用代码",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.行政许可决定文书号",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.许可内容",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.许可决定日期",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.许可机关"
+    ],
+    "shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669": [
+      "shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.业户名称",
+      "shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.评定等级",
+      "shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.所属地区",
+      "shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.年份",
+      "shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.统一社会信用代码"
+    ]
+  }
+}

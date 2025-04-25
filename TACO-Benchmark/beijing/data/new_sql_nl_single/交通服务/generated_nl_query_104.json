@@ -1,0 +1,41 @@
+{
+  "sql": "SELECT OBJNAME, \"xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392\".\"西城区路侧停车数据\" FROM xichengquxichengquguojietianqiaomingdan2490 WHERE DEPTNAME1 = '部门名称1';",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从表 `xichengquxichengquguojietianqiaomingdan2490` 中查询满足条件 `DEPTNAME1 = '部门名称1'` 的记录，并返回这些记录的 `OBJNAME` 和 `xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392` 表中的 `西城区路侧停车数据` 列的值。  \n\n### **详细描述**  \n1. **涉及的表**：  \n   - 主表：`xichengquxichengquguojietianqiaomingdan2490`（可能是西城区某个街道或区域的名单表）。  \n   - 引用表：`xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392`（可能是西城区路侧停车收费相关的信息表）。  \n\n2. **涉及的列**：  \n   - `OBJNAME`：可能是主表中的某个对象名称（如停车点、街道名称等）。  \n   - `xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.\"西城区路侧停车数据\"`：引用表中的停车数据列（如停车位数量、收费信息等）。  \n   - `DEPTNAME1`：主表中的部门名称列，用于筛选符合条件的记录。  \n\n3. **查询条件**：  \n   - `DEPTNAME1 = '部门名称1'`：仅查询属于“部门名称1”的记录。  \n\n4. **可能的关联关系**：  \n   - 该查询可能涉及表之间的关联（如通过 `OBJNAME` 或其他隐含字段关联），但 SQL 中未明确显示 JOIN 语句，可能是视图或子查询的一部分。  \n\n### **业务场景**  \n该查询可能用于以下业务场景：  \n- **停车管理分析**：查询某个部门（如“部门名称1”）所管辖的路侧停车点的停车数据，用于统计、计费或资源调配。  \n- **部门绩效考核**：分析特定部门管理的停车位使用情况，评估其管理效率。  \n- **数据报表生成**：为上级部门或市政管理提供指定区域的停车数据报告。  \n\n### **用户描述**  \n在该业务场景下，用户可能遇到的实际问题或需求包括：  \n1. **停车资源分配不均**：某些部门管理的停车位使用率过高或过低，需要调整管理策略。  \n2. **收费数据核对**：需要核实“部门名称1”所管理的停车点是否准确计费，避免漏收或多收。  \n3. **决策支持**：市政或交通管理部门需要依据停车数据制定政策，如增设停车位、调整收费标准等。  \n4. **数据整合需求**：用户可能需要将不同部门的数据汇总，但当前查询仅针对特定部门，后续可能扩展为多部门联合分析。  \n\n### **补充说明**  \n- 该 SQL 中的表名和列名较长且包含中文，可能是某个具体业务系统的数据库设计，涉及区域停车管理。  \n- 如果 `xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392` 是另一个表，但没有显式 JOIN，可能需要检查 SQL 的上下文或数据库视图定义。",
+  "natural_language_query": "市民反映，西城区\"部门名称1\"管理的那些路侧停车点好像有点问题。我经常在那一带停车，发现有的停车位收费特别混乱，有时候明明停了车却显示没记录，有时候又重复收费。能不能帮忙查查这些停车点的具体停车数据？特别是那些归\"部门名称1\"管的停车点，想知道它们的实际使用情况和收费情况到底怎么样。最近这边停车特别难，感觉管理很混乱，希望能核实下数据看看是不是系统出了问题。来电反映路侧停车管理混乱问题。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ WHERE _ = _ ;",
+  "database": "交通服务",
+  "tables": {
+    "xichengquxichengquguojietianqiaomingdan2490": [
+      "xichengquxichengquguojietianqiaomingdan2490.OBJCODE",
+      "xichengquxichengquguojietianqiaomingdan2490.OBJNAME",
+      "xichengquxichengquguojietianqiaomingdan2490.DEPTCODE1",
+      "xichengquxichengquguojietianqiaomingdan2490.DEPTNAME1",
+      "xichengquxichengquguojietianqiaomingdan2490.DEPTCODE2",
+      "xichengquxichengquguojietianqiaomingdan2490.DEPTNAME2",
+      "xichengquxichengquguojietianqiaomingdan2490.DEPTCODE3",
+      "xichengquxichengquguojietianqiaomingdan2490.DEPTNAME3",
+      "xichengquxichengquguojietianqiaomingdan2490.BGCODE",
+      "xichengquxichengquguojietianqiaomingdan2490.OBJSTATE",
+      "xichengquxichengquguojietianqiaomingdan2490.ORDATE",
+      "xichengquxichengquguojietianqiaomingdan2490.CHDATE",
+      "xichengquxichengquguojietianqiaomingdan2490.DATASOURCE",
+      "xichengquxichengquguojietianqiaomingdan2490.OBJPOS",
+      "xichengquxichengquguojietianqiaomingdan2490.NOTE",
+      "xichengquxichengquguojietianqiaomingdan2490.ljdl",
+      "xichengquxichengquguojietianqiaomingdan2490.cd",
+      "xichengquxichengquguojietianqiaomingdan2490.kydw",
+      "xichengquxichengquguojietianqiaomingdan2490.kd",
+      "xichengquxichengquguojietianqiaomingdan2490.gd",
+      "xichengquxichengquguojietianqiaomingdan2490.mc",
+      "xichengquxichengquguojietianqiaomingdan2490.ghspxmh"
+    ],
+    "xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392": [
+      "xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.西城区路侧停车数据",
+      "xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.Unnamed: 1",
+      "xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.Unnamed: 2",
+      "xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.Unnamed: 3",
+      "xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.Unnamed: 4"
+    ]
+  }
+}

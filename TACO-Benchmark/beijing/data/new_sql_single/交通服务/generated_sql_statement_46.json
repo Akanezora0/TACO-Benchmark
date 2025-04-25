@@ -1,0 +1,20 @@
+{
+  "sql": "SELECT \n    zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733.PK,\n    shijiaotongweichengkeyindaojichuxinxi3710.序号,\n    shijiaotongweichengkeyindaojichuxinxi3710.枢纽站信息,\n    shijiaotongweichengkeyindaojichuxinxi3710.周边交通指南,\n    shijiaotongweichengkeyindaojichuxinxi3710.公交线路信息,\n    shijiaotongweichengkeyindaojichuxinxi3710.轨道线路信息,\n    shijiaotongweichengkeyindaojichuxinxi3710.更新时间,\n    shijiaotongweichengkeyindaojichuxinxi3710.共享时间\nFROM \n    zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733\nJOIN \n    shijiaotongweichengkeyindaojichuxinxi3710 ON zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733.PK = shijiaotongweichengkeyindaojichuxinxi3710.枢纽站信息\nWHERE \n    shijiaotongweichengkeyindaojichuxinxi3710.共享时间为 '最新' AND shijiaotongweichengkeyindaojichuxinxi3710.更新时间 = '最新';",
+  "results": 0,
+  "sql skeleton": "SELECT _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ FROM _ JOIN _ ON _ ._ = _ ._ WHERE _ ._ = _ AND _ ._ = _ and _ (_ ._ , _ ) = _ ;",
+  "database": "交通服务",
+  "tables": {
+    "zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733": [
+      "zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733.PK\u0003\u0004"
+    ],
+    "shijiaotongweichengkeyindaojichuxinxi3710": [
+      "shijiaotongweichengkeyindaojichuxinxi3710.序号",
+      "shijiaotongweichengkeyindaojichuxinxi3710.枢纽站信息",
+      "shijiaotongweichengkeyindaojichuxinxi3710.周边交通指南",
+      "shijiaotongweichengkeyindaojichuxinxi3710.公交线路信息",
+      "shijiaotongweichengkeyindaojichuxinxi3710.轨道线路信息",
+      "shijiaotongweichengkeyindaojichuxinxi3710.更新时间",
+      "shijiaotongweichengkeyindaojichuxinxi3710.共享时间 "
+    ]
+  }
+}

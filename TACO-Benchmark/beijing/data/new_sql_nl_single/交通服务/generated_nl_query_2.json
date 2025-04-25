@@ -1,0 +1,21 @@
+{
+  "sql": "SELECT DISTINCT huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829.по\u0011Ю║╠\u001aА, haidianqugonggongjianzhutingchechang3416.序号, haidianqugonggongjianzhutingchechang3416.停车场名称, haidianqugonggongjianzhutingchechang3416.经营单位 = '停车场类型' FROM huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829 INNER JOIN haidianqugonggongjianzhutingchechang3416 ON huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829.某列 = haidianqugonggongjianzhutingchechang3416.停车场名称 WHERE haidianqugonggongjianzhutingchechang3416.详细地址 IS NOT NULL",
+  "problem_description": "### **查询意图**：\n该 SQL 语句的目的是从两个表中查询并关联数据，获取符合特定条件的停车场信息，包括停车场的名称、经营单位类型，并确保停车场的详细地址不为空。\n\n---\n\n### **详细描述**：\n1. **涉及的表**：\n   - `huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829`（可能为怀柔区交通局2021年汇总数据表）\n   - `haidianqugonggongjianzhutingchechang3416`（可能为海淀区公共建筑停车场数据表）\n\n2. **查询的列**：\n   - `huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829.по\u0011Ю║╠\u001aА`（该列名可能因编码问题显示异常，推测可能是某种ID或名称）\n   - `haidianqugonggongjianzhutingchechang3416.序号`（停车场的序号）\n   - `haidianqugonggongjianzhutingchechang3416.停车场名称`（停车场的名称）\n   - `haidianqugonggongjianzhutingchechang3416.经营单位 = '停车场类型'`（筛选经营单位类型为“停车场类型”的记录）\n\n3. **关联条件**：\n   - 通过 `huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829.某列` 和 `haidianqugonggongjianzhutingchechang3416.停车场名称` 进行 `INNER JOIN` 关联。\n\n4. **筛选条件**：\n   - `haidianqugonggongjianzhutingchechang3416.详细地址 IS NOT NULL`（确保停车场的详细地址不为空）。\n\n5. **去重**：\n   - 使用 `DISTINCT` 确保查询结果不重复。\n\n---\n\n### **业务场景**：\n该查询可能用于以下业务场景：\n1. **跨区域停车场数据整合**：  \n   - 需要将怀柔区的交通局数据与海淀区的公共建筑停车场数据进行关联，以获取更全面的停车场信息。\n2. **停车场合规性检查**：  \n   - 筛选出经营单位类型为“停车场类型”且地址信息完整的停车场，可能用于监管或统计用途。\n3. **数据清洗与验证**：  \n   - 确保查询的停车场数据具有有效的地址信息，避免后续分析或使用时出现数据缺失问题。\n\n---\n\n### **用户描述**：\n在该业务场景下，用户可能遇到以下实际问题或需求：\n1. **数据关联需求**：  \n   - 用户需要将两个不同区域或来源的停车场数据进行匹配，例如怀柔区的行政许可数据与海淀区的实际停车场数据，以验证数据一致性。\n2. **数据质量要求**：  \n   - 用户希望筛选出地址信息完整的停车场，避免在后续使用（如地图标注、导航服务）时因数据缺失导致问题。\n3. **分类查询需求**：  \n   - 用户可能希望查询特定类型的停车场（如“经营单位 = '停车场类型'”），以便进行行业分析或政策制定。\n4. **去重需求**：  \n   - 由于数据可能来自多个来源，用户需要确保查询结果没有重复记录，以保证统计或报表的准确性。\n\n---\n\n### **补充说明**：\n- 该 SQL 语句中的 `huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829.по\u0011Ю║╠\u001aА` 列名可能因字符编码问题显示异常，实际应为某个有意义的字段（如ID或名称）。\n- 如果 `经营单位 = '停车场类型'` 是条件而非列名，则 SQL 可能需要修正为 `WHERE haidianqugonggongjianzhutingchechang3416.经营单位 = '停车场类型'`。",
+  "natural_language_query": "市民反映，最近在整理停车场数据时遇到一些问题。我是负责交通数据分析的工作人员，需要把怀柔区和海淀区的停车场信息做个整合比对。具体来说，就是想找那些在海淀区登记过的公共建筑停车场，要求这些停车场必须是正规经营的那种（就是经营单位类型得是停车场类型的），而且一定要有详细的地址信息，不能是空着的。因为之前遇到过有些停车场数据地址缺失，导致后续在地图上标注的时候特别麻烦。另外，怀柔区交通局那边好像有2021年的许可数据，不知道能不能和海淀这边的停车场名称匹配上？希望能帮忙查一下两边都能对上的、地址完整的正规停车场名单，最好别重复。最近领导催这个报告催得紧，数据老是对不上真的很头疼...",
+  "results": 0,
+  "sql skeleton": "SELECT DISTINCT _ ._ as _ ,_ ._ as _ ,_ ._ as _ ,_ ._ = _ as _ FROM _ where _ ._ = _",
+  "database": "交通服务",
+  "tables": {
+    "huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829": [
+      "huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829.по\u0011Ю║╠\u001aА",
+      "huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829.\u0001\u0001"
+    ],
+    "haidianqugonggongjianzhutingchechang3416": [
+      "haidianqugonggongjianzhutingchechang3416.序号",
+      "haidianqugonggongjianzhutingchechang3416.停车场名称",
+      "haidianqugonggongjianzhutingchechang3416.停车场类型",
+      "haidianqugonggongjianzhutingchechang3416.详细地址",
+      "haidianqugonggongjianzhutingchechang3416.经营单位"
+    ]
+  }
+}

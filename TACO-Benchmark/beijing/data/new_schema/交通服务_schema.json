@@ -1,0 +1,2194 @@
+{
+  "tables": [
+    {
+      "table_name": "shijiaotongweigongluqixiangshuju233",
+      "table_comment": "shijiaotongweigongluqixiangshuju233",
+      "table_description": "No description available.",
+      "columns": [
+        {
+          "column_name": "��\u0011ࡱ\u001a�",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "\u0001\u0001",
+          "data_type": "TEXT"
+        }
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    },
+    {
+      "table_name": "shijiaotongweiweixianpinyunshuqiye3674",
+      "table_comment": "shijiaotongweiweixianpinyunshuqiye3674",
+      "table_description": "No description available.",
+      "columns": [
+        {
+          "column_name": "企业名称",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "所属地区",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "经营许可证号",
+          "data_type": "TEXT"
+        }
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    },
+    {
+      "table_name": "shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668",
+      "table_comment": "shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668",
+      "table_description": "No description available.",
+      "columns": [
+        {
+          "column_name": "年份",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "总量",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "观测站名称",
+          "data_type": "TEXT"
+        }
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    },
+    {
+      "table_name": "shijiaotongweixianchangxunchaxinxi3675",
+      "table_comment": "shijiaotongweixianchangxunchaxinxi3675",
+      "table_description": "No description available.",
+      "columns": [
+        {
+          "column_name": "序号",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "工作内容",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "巡查时间",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "巡查人次",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "巡查单位",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "巡查位置",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "共享时间",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "更新时间",
+          "data_type": "TEXT"
+        }
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    },
+    {
+      "table_name": "xichengquxichengqutingchechangmingdan2492",
+      "table_comment": "xichengquxichengqutingchechangmingdan2492",
+      "table_description": "No description available.",
+      "columns": [
+        {
+          "column_name": "ID",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "X",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Y",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "SJXZQHMC",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "QXJXZQHMC",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "SJXZQHDM",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "QXJXZQHDM",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "POISJLY",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "RHBZDZ",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "CODE",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "CODEMC",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "GXSJ",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "POIMC",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "POIDZ",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "别名",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "POIFLMC",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "TEL",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "ID原",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "MC",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "DZ",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "DZMS",
+          "data_type": "TEXT"
+        }
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    },
+    {
+      "table_name": "huairouquhuairouqugongjiaoxianluxinxi370",
+      "table_comment": "huairouquhuairouqugongjiaoxianluxinxi370",
+      "table_description": "No description available.",
+      "columns": [
+        {
+          "column_name": "怀柔区公交线路情况",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Unnamed: 1",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Unnamed: 2",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Unnamed: 3",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Unnamed: 4",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Unnamed: 5",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 6",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 7",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 8",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 9",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 10",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 11",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 12",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 13",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 14",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 15",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 16",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 17",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 18",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 19",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 20",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 21",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 22",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 23",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 24",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 25",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 26",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 27",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 28",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 29",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 30",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 31",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 32",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 33",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 34",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 35",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 36",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 37",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 38",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 39",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 40",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 41",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 42",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 43",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 44",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 45",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 46",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 47",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 48",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 49",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 50",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 51",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 52",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 53",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 54",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 55",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 56",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 57",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 58",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 59",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 60",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 61",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 62",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 63",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 64",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 65",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 66",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 67",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 68",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 69",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 70",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 71",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 72",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 73",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 74",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 75",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 76",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 77",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 78",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 79",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 80",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 81",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 82",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 83",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 84",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 85",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 86",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 87",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 88",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 89",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 90",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 91",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 92",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 93",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 94",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 95",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 96",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 97",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 98",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 99",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 100",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 101",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 102",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 103",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 104",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 105",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 106",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 107",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 108",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 109",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 110",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 111",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 112",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 113",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 114",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 115",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 116",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 117",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 118",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 119",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 120",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 121",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 122",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 123",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 124",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 125",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 126",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 127",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 128",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 129",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 130",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 131",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 132",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 133",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 134",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 135",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 136",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 137",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 138",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 139",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 140",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 141",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 142",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 143",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 144",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 145",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 146",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 147",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 148",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 149",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 150",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 151",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 152",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 153",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 154",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 155",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 156",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 157",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 158",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 159",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 160",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 161",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 162",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 163",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 164",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 165",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 166",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 167",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 168",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 169",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 170",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 171",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 172",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 173",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 174",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 175",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 176",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 177",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 178",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 179",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 180",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 181",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 182",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 183",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 184",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 185",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 186",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 187",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 188",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 189",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 190",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 191",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 192",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 193",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 194",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 195",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 196",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 197",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 198",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 199",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 200",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 201",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 202",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 203",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 204",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 205",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 206",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 207",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 208",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 209",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 210",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 211",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 212",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 213",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 214",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 215",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 216",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 217",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 218",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 219",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 220",
+          "data_type": "REAL"
+        }
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    },
+    {
+      "table_name": "shijiaotongweigongjiaoxianluxinxichuxingfuwu3666",
+      "table_comment": "shijiaotongweigongjiaoxianluxinxichuxingfuwu3666",
+      "table_description": "No description available.",
+      "columns": [
+        {
+          "column_name": "线路代码",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "路线名称",
+          "data_type": "TEXT"
+        }
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    },
+    {
+      "table_name": "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053",
+      "table_comment": "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053",
+      "table_description": "No description available.",
+      "columns": [
+        {
+          "column_name": "序号",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "行政相对人名称",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "统一社会信用代码",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "行政许可决定文书号",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "许可内容",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "许可决定日期",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "许可机关",
+          "data_type": "TEXT"
+        }
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    },
+    {
+      "table_name": "shijiaotongweizulinyehujibenxinxi3677",
+      "table_comment": "shijiaotongweizulinyehujibenxinxi3677",
+      "table_description": "No description available.",
+      "columns": [
+        {
+          "column_name": "经营业户名称",
+          "data_type": "TEXT"
+        }
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    },
+    {
+      "table_name": "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270",
+      "table_comment": "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270",
+      "table_description": "No description available.",
+      "columns": [
+        {
+          "column_name": "企业名称",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "经营许可证号",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "企业类型",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "所属区县",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "考核人",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "评定时间",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "评定得分",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "评定结果",
+          "data_type": "TEXT"
+        }
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    },
+    {
+      "table_name": "shijiaotongweikebianqingbaobanshebeixinxi3519",
+      "table_comment": "shijiaotongweikebianqingbaobanshebeixinxi3519",
+      "table_description": "No description available.",
+      "columns": [
+        {
+          "column_name": "唯一标识",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "名称",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "设备编码",
+          "data_type": "TEXT"
+        }
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    },
+    {
+      "table_name": "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210",
+      "table_comment": "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210",
+      "table_description": "No description available.",
+      "columns": [
+        {
+          "column_name": "监管对象",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "实施机构",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "检查行为编号",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "检查时间",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "检查人员",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "检查结果",
+          "data_type": "TEXT"
+        }
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    },
+    {
+      "table_name": "shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669",
+      "table_comment": "shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669",
+      "table_description": "No description available.",
+      "columns": [
+        {
+          "column_name": "业户名称",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "评定等级",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "所属地区",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "年份",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "统一社会信用代码",
+          "data_type": "TEXT"
+        }
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    },
+    {
+      "table_name": "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672",
+      "table_comment": "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672",
+      "table_description": "No description available.",
+      "columns": [
+        {
+          "column_name": "企业名称",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "评定等级",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "所属地区",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "年份",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "统一社会信用代码",
+          "data_type": "TEXT"
+        }
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    },
+    {
+      "table_name": "zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733",
+      "table_comment": "zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733",
+      "table_description": "No description available.",
+      "columns": [
+        {
+          "column_name": "PK\u0003\u0004",
+          "data_type": "TEXT"
+        }
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    },
+    {
+      "table_name": "shijiaotongweijiapeijigouxinxi3667",
+      "table_comment": "shijiaotongweijiapeijigouxinxi3667",
+      "table_description": "No description available.",
+      "columns": [
+        {
+          "column_name": "驾培机构名称",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "训练地址",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "统一社会信用代码",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "法定代表人",
+          "data_type": "TEXT"
+        }
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    },
+    {
+      "table_name": "xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392",
+      "table_comment": "xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392",
+      "table_description": "No description available.",
+      "columns": [
+        {
+          "column_name": "西城区路侧停车数据",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Unnamed: 1",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Unnamed: 2",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Unnamed: 3",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Unnamed: 4",
+          "data_type": "TEXT"
+        }
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    },
+    {
+      "table_name": "pingguqupingguqugongjiaozhandianmingxi269",
+      "table_comment": "pingguqupingguqugongjiaozhandianmingxi269",
+      "table_description": "No description available.",
+      "columns": [
+        {
+          "column_name": "区内公交线路站点明细",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Unnamed: 1",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Unnamed: 2",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Unnamed: 3",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Unnamed: 4",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Unnamed: 5",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 6",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Unnamed: 7",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 8",
+          "data_type": "TEXT"
+        }
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    },
+    {
+      "table_name": "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663",
+      "table_comment": "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663",
+      "table_description": "No description available.",
+      "columns": [
+        {
+          "column_name": "行政区划代码",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "站点名称",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "联系电话",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "地址",
+          "data_type": "TEXT"
+        }
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    },
+    {
+      "table_name": "shijiaotongweiquanshiqicheweixiuqiyexinxi3673",
+      "table_comment": "shijiaotongweiquanshiqicheweixiuqiyexinxi3673",
+      "table_description": "No description available.",
+      "columns": [
+        {
+          "column_name": "统一社会信用代码",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "业户名称",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "业户地址",
+          "data_type": "TEXT"
+        }
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    },
+    {
+      "table_name": "shigonganjujiaotongweifachulijigou1949",
+      "table_comment": "shigonganjujiaotongweifachulijigou1949",
+      "table_description": "No description available.",
+      "columns": [
+        {
+          "column_name": "交通违法处理机构",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Unnamed: 1",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Unnamed: 2",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Unnamed: 3",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Unnamed: 4",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Unnamed: 5",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Unnamed: 6",
+          "data_type": "REAL"
+        }
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    },
+    {
+      "table_name": "shijiaotongweigongjiaozhandianxinxichuxingfuwu3665",
+      "table_comment": "shijiaotongweigongjiaozhandianxinxichuxingfuwu3665",
+      "table_description": "No description available.",
+      "columns": [
+        {
+          "column_name": "线路名称",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "站点名称",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "方向",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "站点序号",
+          "data_type": "INTEGER"
+        }
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    },
+    {
+      "table_name": "shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678",
+      "table_comment": "shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678",
+      "table_description": "No description available.",
+      "columns": [
+        {
+          "column_name": "序号",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "服务机构名称",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "地址",
+          "data_type": "TEXT"
+        }
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    },
+    {
+      "table_name": "shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239",
+      "table_comment": "shijingshanqushijingshanqudaolutingchedianzishoufeidaoluxinxi1239",
+      "table_description": "No description available.",
+      "columns": [
+        {
+          "column_name": "区域",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "街道",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "道路",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "车位数",
+          "data_type": "INTEGER"
+        }
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    },
+    {
+      "table_name": "daxingqudaxingqugonggongzixingchededianweixinxi440",
+      "table_comment": "daxingqudaxingqugonggongzixingchededianweixinxi440",
+      "table_description": "No description available.",
+      "columns": [
+        {
+          "column_name": "序号",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "公共自行车点位",
+          "data_type": "TEXT"
+        }
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    },
+    {
+      "table_name": "xichengquxichengqugongjiaochezhanmingdan2478",
+      "table_comment": "xichengquxichengqugongjiaochezhanmingdan2478",
+      "table_description": "No description available.",
+      "columns": [
+        {
+          "column_name": "ID",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "X",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Y",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "SJXZQHMC",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "QXJXZQHMC",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "SJXZQHDM",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "QXJXZQHDM",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "POISJLY",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "RHBZDZ",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "CODE",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "CODEMC",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "GXSJ",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "POIMC",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "POIDZ",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "别名",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "POIFLMC",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "TEL",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "MC",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "DZ",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "DZMS",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "XL",
+          "data_type": "TEXT"
+        }
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    },
+    {
+      "table_name": "shijiaotongweichuzuyehujibenxinxi3664",
+      "table_comment": "shijiaotongweichuzuyehujibenxinxi3664",
+      "table_description": "No description available.",
+      "columns": [
+        {
+          "column_name": "经营业户名称",
+          "data_type": "TEXT"
+        }
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    },
+    {
+      "table_name": "xichengquxichengquditiezhanmingdan2482",
+      "table_comment": "xichengquxichengquditiezhanmingdan2482",
+      "table_description": "No description available.",
+      "columns": [
+        {
+          "column_name": "ID",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "X",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Y",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "SJXZQHMC",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "QXJXZQHMC",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "SJXZQHDM",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "QXJXZQHDM",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "POISJLY",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "RHBZDZ",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "CODE",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "CODEMC",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "GXSJ",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "POIMC",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "POIDZ",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "别名",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "POIFLMC",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "TEL",
+          "data_type": "TEXT"
+        }
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    },
+    {
+      "table_name": "huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829",
+      "table_comment": "huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829",
+      "table_description": "No description available.",
+      "columns": [
+        {
+          "column_name": "по\u0011Ю║╠\u001aА",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "\u0001\u0001",
+          "data_type": "TEXT"
+        }
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    },
+    {
+      "table_name": "haidianqugonggongjianzhutingchechang3416",
+      "table_comment": "haidianqugonggongjianzhutingchechang3416",
+      "table_description": "No description available.",
+      "columns": [
+        {
+          "column_name": "序号",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "停车场名称",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "停车场类型",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "详细地址",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "经营单位",
+          "data_type": "TEXT"
+        }
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    },
+    {
+      "table_name": "xichengquxichengquditieyoumingdan2496",
+      "table_comment": "xichengquxichengquditieyoumingdan2496",
+      "table_description": "No description available.",
+      "columns": [
+        {
+          "column_name": "ID",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "X",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Y",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "SJXZQHMC",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "QXJXZQHMC",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "SJXZQHDM",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "QXJXZQHDM",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "POISJLY",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "RHBZDZ",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "CODE",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "CODEMC",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "GXSJ",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "POIMC",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "POIDZ",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "别名",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "POIFLMC",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "TEL",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "ID原",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "备注",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "上图",
+          "data_type": "TEXT"
+        }
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    },
+    {
+      "table_name": "xichengquxichengquguojietianqiaomingdan2490",
+      "table_comment": "xichengquxichengquguojietianqiaomingdan2490",
+      "table_description": "No description available.",
+      "columns": [
+        {
+          "column_name": "OBJCODE",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "OBJNAME",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "DEPTCODE1",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "DEPTNAME1",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "DEPTCODE2",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "DEPTNAME2",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "DEPTCODE3",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "DEPTNAME3",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "BGCODE",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "OBJSTATE",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "ORDATE",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "CHDATE",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "DATASOURCE",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "OBJPOS",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "NOTE",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "ljdl",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "cd",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "kydw",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "kd",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "gd",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "mc",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "ghspxmh",
+          "data_type": "TEXT"
+        }
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    },
+    {
+      "table_name": "shijiaotongweiguidaozhandianxinxichuxing3670",
+      "table_comment": "shijiaotongweiguidaozhandianxinxichuxing3670",
+      "table_description": "No description available.",
+      "columns": [
+        {
+          "column_name": "线路名称",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "站点编码",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "车站名",
+          "data_type": "TEXT"
+        }
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    },
+    {
+      "table_name": "shijiaotongweiguidaoyanshixinxi3711",
+      "table_comment": "shijiaotongweiguidaoyanshixinxi3711",
+      "table_description": "No description available.",
+      "columns": [
+        {
+          "column_name": "序号",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "总车次",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "延时开始时间",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "延时结束时间",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "延时线路",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "共享时间",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "更新时间",
+          "data_type": "TEXT"
+        }
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    },
+    {
+      "table_name": "shijiaotongweishoufeigonglushoufeibiaozhun543",
+      "table_comment": "shijiaotongweishoufeigonglushoufeibiaozhun543",
+      "table_description": "No description available.",
+      "columns": [
+        {
+          "column_name": "北京市收费公路收费标准表",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Unnamed: 1",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Unnamed: 2",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Unnamed: 3",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Unnamed: 4",
+          "data_type": "REAL"
+        },
+        {
+          "column_name": "Unnamed: 5",
+          "data_type": "REAL"
+        }
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    },
+    {
+      "table_name": "shunyiqugongjiaoxianlujizhandianjibenxinxi2076",
+      "table_comment": "shunyiqugongjiaoxianlujizhandianjibenxinxi2076",
+      "table_description": "No description available.",
+      "columns": [
+        {
+          "column_name": "线路运营信息",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Unnamed: 1",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Unnamed: 2",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Unnamed: 3",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Unnamed: 4",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Unnamed: 5",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "Unnamed: 6",
+          "data_type": "TEXT"
+        }
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    },
+    {
+      "table_name": "shijiaotongweiguidaoxianluxinxichuxing3671",
+      "table_comment": "shijiaotongweiguidaoxianluxinxichuxing3671",
+      "table_description": "No description available.",
+      "columns": [
+        {
+          "column_name": "线路编码",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "线路名称",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "站点数",
+          "data_type": "INTEGER"
+        }
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    },
+    {
+      "table_name": "shijiaotongweichengkeyindaojichuxinxi3710",
+      "table_comment": "shijiaotongweichengkeyindaojichuxinxi3710",
+      "table_description": "No description available.",
+      "columns": [
+        {
+          "column_name": "序号",
+          "data_type": "INTEGER"
+        },
+        {
+          "column_name": "枢纽站信息",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "周边交通指南",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "公交线路信息",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "轨道线路信息",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "更新时间",
+          "data_type": "TEXT"
+        },
+        {
+          "column_name": "共享时间 ",
+          "data_type": "TEXT"
+        }
+      ],
+      "primary_keys": [],
+      "foreign_keys": []
+    }
+  ]
+}

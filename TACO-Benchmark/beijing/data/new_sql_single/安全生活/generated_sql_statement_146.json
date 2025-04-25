@@ -1,0 +1,7 @@
+{
+  "sql": "SELECT column1, column2, column3, column4 FROM table1 WHERE condition = value",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ ,_ from _ where _ =_",
+  "database": "安全生活",
+  "tables": {}
+}

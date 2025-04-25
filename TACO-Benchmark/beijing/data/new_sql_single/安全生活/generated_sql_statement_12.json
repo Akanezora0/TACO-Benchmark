@@ -1,0 +1,7 @@
+{
+  "sql": "SELECT column1 FROM table1 WHERE (column2, column3) = (value1, value2) OR (column4, column5) = (value3, value4)",
+  "results": 0,
+  "sql skeleton": "select _ from _ where _ (_ ,_ ) = _ or _ (_ ,_ ) = _",
+  "database": "安全生活",
+  "tables": {}
+}

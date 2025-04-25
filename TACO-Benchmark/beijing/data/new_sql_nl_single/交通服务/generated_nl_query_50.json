@@ -1,0 +1,26 @@
+{
+  "sql": "SELECT \n    \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270\".\"企业名称\",\n    \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270\".\"经营许可证号\",\n    \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270\".\"企业类型\",\n    \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270\".\"所属区县\",\n    \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270\".\"考核人\",\n    \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270\".\"评定时间\",\n    \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270\".\"评定得分\",\n    \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270\".\"评定结果\"\nFROM \n    \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270\"\nJOIN \n    \"shijiaotongweichaoxianchaozaihuochexiezaichangdi3663\" \nON \n    \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270\".\"所属区县\" = \"shijiaotongweichaoxianchaozaihuochexiezaichangdi3663\".\"行政区划代码\"\nWHERE \n    \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270\".\"评定结果\" = '合格'\nORDER BY \n    \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyuk",
+  "problem_description": "- **查询意图**：  \n  该 SQL 语句的目的是查询2019年平谷区普通货运企业质量信誉考核结果为“合格”的企业信息，并与行政区划代码相关联，最终按评定得分排序。\n\n- **详细描述**：  \n  - **涉及的表**：  \n    1. `pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270`（平谷区2019年普通货运质量信誉考核结果表）：包含企业名称、经营许可证号、企业类型、所属区县、考核人、评定时间、评定得分、评定结果等信息。  \n    2. `shijiaotongweichaoxianchaozaihuochexiezaichangdi3663`（可能是交通委或相关部门的行政区划代码表）：包含行政区划代码等信息。  \n\n  - **查询的列**：  \n    从考核结果表中查询以下列：  \n    - 企业名称  \n    - 经营许可证号  \n    - 企业类型  \n    - 所属区县  \n    - 考核人  \n    - 评定时间  \n    - 评定得分  \n    - 评定结果  \n\n  - **连接条件**：  \n    通过`所属区县`（考核结果表）与`行政区划代码`（行政区划代码表）进行关联，确保查询的企业属于特定行政区划。  \n\n  - **过滤条件**：  \n    仅查询`评定结果 = '合格'`的企业，即筛选出通过质量信誉考核的企业。  \n\n  - **排序**：  \n    按`评定得分`排序（虽然 SQL 语句未完整，但根据上下文推测是按得分排序）。  \n\n- **业务场景**：  \n  该查询可用于以下业务场景：  \n  1. **政府监管**：交通管理部门或区县监管部门需要统计2019年平谷区普通货运企业中质量信誉考核合格的企业名单，以便进行后续政策支持或监督检查。  \n  2. **企业评估**：行业协会或第三方机构可能需要分析合格企业的分布情况，评估区域货运行业的整体质量水平。  \n  3. **数据整合**：将考核结果与行政区划信息关联，便于按区县分类统计或生成报告。  \n\n- **用户描述**：  \n  用户可能是政府交通管理部门的工作人员或行业分析师，他们需要：  \n  1. 了解平谷区2019年普通货运企业的质量信誉考核情况，筛选出合格企业。  \n  2. 按行政区划分类统计合格企业，分析区域差异或制定针对性管理措施。  \n  3. 根据评定得分排序，找出表现优异的企业（如高分企业）或进行排名分析。  \n  用户的需求可能是生成报告、制定奖惩政策，或为下一步监管工作提供数据支持。",
+  "natural_language_query": "市民反映，想了解一下2019年平谷区那些跑普通货运的公司，就是通过质量信誉考核的那些企业的情况。听说有些公司考核结果是\"合格\"，想知道具体是哪些公司合格了，最好能按考核分数高低排个序。另外还想看看这些公司都是属于哪个街道或乡镇的，因为要按区域来统计一下。之前听说有的货运公司管理不规范，希望能重点了解那些考核合格的企业信息，包括公司名字、许可证号这些基本信息，还有当时是谁去考核的、什么时候评定的这些细节。主要是想看看平谷区货运行业的整体质量水平怎么样，好做后续的管理工作。",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ from _ join _ on _ ._ = _ ._ where _ ._ = _ order by _ ._ ;",
+  "database": "交通服务",
+  "tables": {
+    "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270": [
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.企业名称",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.经营许可证号",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.企业类型",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.所属区县",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.考核人",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.评定时间",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.评定得分",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.评定结果"
+    ],
+    "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663": [
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.行政区划代码",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.站点名称",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.联系电话",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.地址"
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "sql": "SELECT \"chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337\".\"酒仙桥街道社区地址及联系电话\", \"chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337\".Unnamed: 1, \"chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337\".Unnamed: 2, \"chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337\".Unnamed: 3, \"chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337\".Unnamed: 4, \"xichengquxichengquxingjifandianminglu19\".\"序号\", \"xichengquxichengquxingjifandianminglu19\".\"?星级酒店名称\", \"xichengquxichengquxingjifandianminglu19\".\"?星级\", \"xichengquxichengquxingjifandianminglu19\".\"?联系电话\", \"xichengquxichengquxingjifandianminglu19\".\"?酒店地址\" FROM \"chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337\" JOIN \"xichengquxichengquxingjifandianminglu19\" ON \"chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337\".Unnamed: 4 = \"xichengquxichengquxingjifandianminglu19\".\"?星级酒店名称\" WHERE \"xichengquxichengquxingjifandianminglu19\".\"?星级\" = '5' AND \"xichengquxichengquxingjifandianminglu19\".\"?星级\" = '5' AND (\"xichengquxichengquxingjifandianminglu19\".\"?星级酒店名称\" IS NOT NULL OR \"xichengquxichengquxingjifandianminglu19\".\"?星级酒店名称\" <> '') AND \"xichengquxichengquxingjifandianminglu",
+  "results": 0,
+  "sql skeleton": "SELECT _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ FROM _ JOIN _ ON _ ._ = _ ._ WHERE _ ._ = _ and _ = _ and _ (_ ._ ,_ ) = _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337": [
+      "chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337.酒仙桥街道社区地址及联系电话",
+      "chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337.Unnamed: 1",
+      "chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337.Unnamed: 2",
+      "chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337.Unnamed: 3",
+      "chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337.Unnamed: 4"
+    ],
+    "xichengquxichengquxingjifandianminglu19": [
+      "xichengquxichengquxingjifandianminglu19.序号",
+      "xichengquxichengquxingjifandianminglu19.?星级酒店名称",
+      "xichengquxichengquxingjifandianminglu19.?星级",
+      "xichengquxichengquxingjifandianminglu19.?联系电话",
+      "xichengquxichengquxingjifandianminglu19.?酒店地址"
+    ]
+  }
+}

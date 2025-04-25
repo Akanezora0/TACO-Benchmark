@@ -1,0 +1,21 @@
+{
+  "sql": "select xichengquxichengquguojiajizhongdianwenwubaohudanwei60.名称, shiwenhuahelvyoujulvxingshexinxi3530.旅行社名称 from xichengquxichengquguojiajizhongdianwenwubaohudanwei60 left join shiwenhuahelvyoujulvxingshexinxi3530 on xichengquxichengquguojiajizhongdianwenwubaohudanwei60.序号 = shiwenhuahelvyoujulvxingshexinxi3530.许可经营业务 where xichengquxichengquguojiajizhongdianwenwubaohudanwei60.序号 in (select xichengquxichengquguojiajizhongdianwenwubaohudanwei60.序号 from xichengquxichengquguojiajizhongdianwenwubaohudanwei60 where xichengquxichengquguojiajizhongdianwenwubaohudanwei60.地址 like '北京市%')\n```",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是查询位于北京市的国家重点文物保护单位的名称，以及与之关联的旅行社名称（如果有的话）。\n\n- **详细描述**：\n  - **涉及的表**：\n    1. `xichengquxichengquguojiajizhongdianwenwubaohudanwei60`：该表存储了西城区国家重点文物保护单位的信息。\n    2. `shiwenhuahelvyoujulvxingshexinxi3530`：该表存储了文化和旅游局的旅行社信息。\n  - **涉及的列**：\n    1. `xichengquxichengquguojiajizhongdianwenwubaohudanwei60.名称`：国家重点文物保护单位的名称。\n    2. `shiwenhuahelvyoujulvxingshexinxi3530.旅行社名称`：旅行社的名称。\n    3. `xichengquxichengquguojiajizhongdianwenwubaohudanwei60.序号`：国家重点文物保护单位的唯一标识。\n    4. `shiwenhuahelvyoujulvxingshexinxi3530.许可经营业务`：旅行社的许可经营业务，可能与文物保护单位的序号关联。\n  - **条件**：\n    1. `xichengquxichengquguojiajizhongdianwenwubaohudanwei60.地址 like '北京市%'`：筛选出地址以“北京市”开头的文物保护单位。\n    2. `left join ... on xichengquxichengquguojiajizhongdianwenwubaohudanwei60.序号 = shiwenhuahelvyoujulvxingshexinxi3530.许可经营业务`：通过序号和许可经营业务字段关联两个表，使用左连接确保即使没有关联的旅行社，文物保护单位的信息也会被显示。\n\n- **业务场景**：该查询可以用于文化和旅游管理部门或旅行社，了解北京市西城区的国家重点文物保护单位及其关联的旅行社信息。例如，管理部门可能需要监控哪些文物保护单位有旅行社提供服务，或者旅行社可能需要了解哪些文物保护单位可以合作开展旅游业务。\n\n- **用户描述**：用户可能是北京市西城区的文化和旅游管理部门的工作人员，或者是旅行社的经营者。他们可能需要：\n  1. 了解哪些国家重点文物保护单位位于北京市西城区，以便进行资源管理或旅游线路规划。\n  2. 查找哪些旅行社与这些文物保护单位有业务关联，以便进行合作或监管。\n  3. 确保所有文物保护单位的信息都被完整展示，即使没有关联的旅行社，以便全面掌握资源分布情况。",
+  "natural_language_query": "市民咨询，想了解北京市西城区那些特别重要的历史文物保护景点都有哪些，最好能知道这些景点有没有合作的旅行社。我最近在规划一条文化旅游线路，听说西城区有很多国家级重点文保单位，比如故宫周边那些，但不知道具体有哪些景点，也不知道哪些旅行社能提供相关服务。能不能帮忙查一下这些景点的名单，顺便看看有没有旅行社跟这些景点有合作关系的？要是没有合作的旅行社也请把景点信息列出来，这样我好知道哪些地方可能需要自己联系安排。主要是想做个完整的旅游方案，谢谢！",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ from _ left join _ on _ ._ = _ ._ where _ in (select _ from _ where _ )",
+  "database": "旅游住宿",
+  "tables": {
+    "xichengquxichengquguojiajizhongdianwenwubaohudanwei60": [
+      "xichengquxichengquguojiajizhongdianwenwubaohudanwei60.序号",
+      "xichengquxichengquguojiajizhongdianwenwubaohudanwei60.名称",
+      "xichengquxichengquguojiajizhongdianwenwubaohudanwei60.地址"
+    ],
+    "shiwenhuahelvyoujulvxingshexinxi3530": [
+      "shiwenhuahelvyoujulvxingshexinxi3530.旅行社名称",
+      "shiwenhuahelvyoujulvxingshexinxi3530.旅行社业务经营许可证编号",
+      "shiwenhuahelvyoujulvxingshexinxi3530.许可经营业务",
+      "shiwenhuahelvyoujulvxingshexinxi3530.许可时间"
+    ]
+  }
+}

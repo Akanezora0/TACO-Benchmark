@@ -1,0 +1,39 @@
+{
+  "sql": "SELECT sand_and_gravel_deposits.OBJECTID, sand_and_gravel_deposits.AG_TYPE, sand_and_gravel_deposits.GlobalID, sand_and_gravel_deposits.SHAPEarea, sand_and_gravel_deposits.SHAPElen, public_water_sources.X, public_water_sources.Y FROM sand_and_gravel_deposits INNER JOIN public_water_sources ON sand_and_gravel_deposits.GlobalID = public_water_sources.GlobalID WHERE public_water_sources.SystemStatus = 'Active' AND public_water_sources.Availability = 'Yes';",
+  "problem_description": "### Query intent:\nThe SQL statement aims to retrieve specific attributes from two related tables, `sand_and_gravel_deposits` and `public_water_sources`, based on certain criteria.\n\n### Detailed description:\n1. **Tables Involved**: \n   - `sand_and_gravel_deposits`: This table contains information about sand and gravel deposits, including their unique identifier (`OBJECTID`), type (`AG_TYPE`), global identifier (`GlobalID`), area (`SHAPEarea`), and length (`SHAPElen`).\n   - `public_water_sources`: This table provides details about public water sources, including their unique identifier (`GlobalID`), location coordinates (`X`, `Y`), system status (`SystemStatus`), and availability (`Availability`).\n\n2. **Columns Selected**:\n   - `sand_and_gravel_deposits.OBJECTID`: Unique identifier for each sand and gravel deposit.\n   - `sand_and_gravel_deposits.AG_TYPE`: Type of the sand and gravel deposit.\n   - `sand_and_gravel_deposits.GlobalID`: Common identifier shared between both tables for joining purposes.\n   - `sand_and_gravel_deposits.SHAPEarea`: Area of the sand and gravel deposit.\n   - `sand_and_gravel_deposits.SHAPElen`: Length of the sand and gravel deposit (if applicable, not typically measured for deposits).\n   - `public_water_sources.X`: X-coordinate of the public water source location.\n   - `public_water_sources.Y`: Y-coordinate of the public water source location.\n\n3. **Join Condition**:\n   The query uses an `INNER JOIN` clause to combine rows from `sand_and_gravel_deposits` and `public_water_sources` where the `GlobalID` column matches in both tables. This ensures that only records with matching identifiers are included in the result set.\n\n4. **Where Clause Conditions**:\n   - `public_water_sources.SystemStatus = 'Active'`: Filters out any public water sources that are not currently active.\n   - `public_water_sources.Availability = 'Yes'`: Ensures that only water sources that are available for use are included in the result.\n\n### Business Scenario:\nThis SQL query is particularly useful in environmental management or urban planning contexts. For instance, when assessing the potential for integrating sand and gravel deposits with existing public water sources. The query might be used to identify areas where there is both an active and available public water source nearby a sand and gravel deposit. This could inform decisions on",
+  "natural_language_query": "I'm trying to find information on sand and gravel deposits that are near active and accessible public water sources. Specifically, I'm interested in knowing the unique identifier for each deposit, the type of deposit, the size, and the exact location coordinates of these deposits relative to the water sources. Also, it would be helpful if you could check the system status and availability of the public water sources. I believe this data could assist in making informed decisions regarding environmental management or urban planning projects.",
+  "results": 0,
+  "sql skeleton": "SELECT _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ FROM _ WHERE _ ._ = _ AND _ ._ ;",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "sand_and_gravel_deposits": [
+      "sand_and_gravel_deposits.OBJECTID",
+      "sand_and_gravel_deposits.AG_TYPE",
+      "sand_and_gravel_deposits.GlobalID",
+      "sand_and_gravel_deposits.SHAPEarea",
+      "sand_and_gravel_deposits.SHAPElen"
+    ],
+    "public_water_sources": [
+      "public_water_sources.X",
+      "public_water_sources.Y",
+      "public_water_sources.TINWSF_IS_NUMBER",
+      "public_water_sources.WSID",
+      "public_water_sources.SystemName",
+      "public_water_sources.SystemType",
+      "public_water_sources.SystemStatus",
+      "public_water_sources.SystemPopulation",
+      "public_water_sources.FacilityName",
+      "public_water_sources.FacilityID",
+      "public_water_sources.FacilityStatus",
+      "public_water_sources.Availability",
+      "public_water_sources.WaterType",
+      "public_water_sources.ConstructedDate",
+      "public_water_sources.PermittedYield",
+      "public_water_sources.WellType",
+      "public_water_sources.Diameter_in",
+      "public_water_sources.WellDepth",
+      "public_water_sources.CasingDepth",
+      "public_water_sources.StaticWaterLevel"
+    ]
+  }
+}

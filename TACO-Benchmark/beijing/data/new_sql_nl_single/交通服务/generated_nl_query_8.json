@@ -1,0 +1,26 @@
+{
+  "sql": "SELECT \"shijiaotongweixianchangxunchaxinxi3675.巡查时间\", \"shijiaotongweixianchangxunchaxinxi3675.巡查位置\" FROM \"shijiaotongweixianchangxunchaxinxi3675\" WHERE \"shijiaotongweijiapeijigouxinxi3667.驾培机构名称\" = '某机构名称';",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从表 `shijiaotongweixianchangxunchaxinxi3675` 中查询特定驾培机构（名称为“某机构名称”）的巡查时间和巡查位置信息。\n\n- **详细描述**：\n  - **涉及的表**：\n    - 主表：`shijiaotongweixianchangxunchaxinxi3675`（可能存储了交通危险场所的巡查信息）。\n    - 关联表：`shijiaotongweijiapeijigouxinxi3667`（可能存储了驾培机构的相关信息）。\n  - **涉及的列**：\n    - `shijiaotongweixianchangxunchaxinxi3675.巡查时间`：巡查的具体时间。\n    - `shijiaotongweixianchangxunchaxinxi3675.巡查位置`：巡查的具体位置。\n    - `shijiaotongweijiapeijigouxinxi3667.驾培机构名称`：用于筛选特定驾培机构的名称。\n  - **条件**：\n    - 筛选条件为 `shijiaotongweijiapeijigouxinxi3667.驾培机构名称 = '某机构名称'`，即只查询名称为“某机构名称”的驾培机构相关的巡查信息。\n\n- **业务场景**：\n  - 该查询可能用于交通管理部门或驾培机构内部管理，目的是获取特定驾培机构在交通危险场所的巡查记录（包括时间和位置）。\n  - 通过查询这些信息，可以监控驾培机构是否按时按规进行了巡查，确保交通危险场所的安全。\n\n- **用户描述**：\n  - 用户可能是交通管理部门的工作人员或驾培机构的管理人员。\n  - 用户可能需要检查某驾培机构是否按照要求在特定交通危险场所进行了巡查，或者需要统计该机构的巡查记录以进行评估或报告。\n  - 用户通过输入驾培机构名称（“某机构名称”）来快速获取相关的巡查信息，从而验证其合规性或分析其巡查行为。",
+  "natural_language_query": "市民反映，想了解一下\"某驾培机构\"在交通危险地段的巡查情况。我是交通管理部门的工作人员，最近接到群众投诉说这个驾培机构可能存在巡查不到位的问题。想查查他们具体是什么时候去巡查的，都去了哪些地方巡查。特别是上个月有没有按照规定对几个重点路段进行巡查。我们这边需要核实他们的巡查记录是否完整，能不能帮忙查一下这个机构的具体巡查时间和地点？",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ ;",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweixianchangxunchaxinxi3675": [
+      "shijiaotongweixianchangxunchaxinxi3675.序号",
+      "shijiaotongweixianchangxunchaxinxi3675.工作内容",
+      "shijiaotongweixianchangxunchaxinxi3675.巡查时间",
+      "shijiaotongweixianchangxunchaxinxi3675.巡查人次",
+      "shijiaotongweixianchangxunchaxinxi3675.巡查单位",
+      "shijiaotongweixianchangxunchaxinxi3675.巡查位置",
+      "shijiaotongweixianchangxunchaxinxi3675.共享时间",
+      "shijiaotongweixianchangxunchaxinxi3675.更新时间"
+    ],
+    "shijiaotongweijiapeijigouxinxi3667": [
+      "shijiaotongweijiapeijigouxinxi3667.驾培机构名称",
+      "shijiaotongweijiapeijigouxinxi3667.训练地址",
+      "shijiaotongweijiapeijigouxinxi3667.统一社会信用代码",
+      "shijiaotongweijiapeijigouxinxi3667.法定代表人"
+    ]
+  }
+}

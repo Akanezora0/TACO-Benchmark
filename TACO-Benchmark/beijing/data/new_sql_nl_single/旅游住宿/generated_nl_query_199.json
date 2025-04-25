@@ -1,0 +1,22 @@
+{
+  "sql": "SELECT \"shunyiquxingjifandian1276.顺义区星级饭店\", \"shunyiquxingjifandian1276.Unnamed: 1\", \"shunyiquxingjifandian1276.Unnamed: 2\", \"shunyiquxingjifandian1276.Unnamed: 3\", \"shiwenhuahelvyoujulvxingshexinxi3530.旅行社名称\" FROM \"shunyiquxingjifandian1276\" INNER JOIN \"shiwenhuahelvyoujulvxingshexinxi3530\" ON \"shunyiquxingjifandian1276.顺义区星级饭店\" = \"shiwenhuahelvyoujulvxingshexinxi3530.旅行社名称\" WHERE \"shiwenhuahelvyoujulvxingshexinxi3530.许可经营业务\" = '旅游'",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是查询顺义区星级饭店与文化和旅游局的旅行社信息中，名称相同且经营业务为旅游的旅行社的相关信息。\n\n- **详细描述**：\n  - **涉及的表**：\n    - `shunyiquxingjifandian1276`：顺义区星级饭店表，包含顺义区星级饭店的相关信息。\n    - `shiwenhuahelvyoujulvxingshexinxi3530`：文化和旅游局旅行社信息表，包含旅行社的相关信息。\n  - **涉及的列**：\n    - `shunyiquxingjifandian1276.顺义区星级饭店`：顺义区星级饭店的名称。\n    - `shunyiquxingjifandian1276.Unnamed: 1`、`shunyiquxingjifandian1276.Unnamed: 2`、`shunyiquxingjifandian1276.Unnamed: 3`：顺义区星级饭店表中的其他未命名列。\n    - `shiwenhuahelvyoujulvxingshexinxi3530.旅行社名称`：文化和旅游局旅行社信息表中的旅行社名称。\n    - `shiwenhuahelvyoujulvxingshexinxi3530.许可经营业务`：文化和旅游局旅行社信息表中的许可经营业务类型。\n  - **条件**：\n    - 通过 `INNER JOIN` 连接两个表，连接条件是顺义区星级饭店的名称与文化和旅游局旅行社信息表中的旅行社名称相同。\n    - `WHERE` 子句筛选出许可经营业务为“旅游”的旅行社。\n\n- **业务场景**：\n  - 该查询可以用于识别顺义区星级饭店中哪些同时也是文化和旅游局注册的旅行社，并且这些旅行社的经营业务是旅游。\n  - 这种查询可能用于旅游行业的管理或分析，例如识别哪些星级饭店同时提供旅行社服务，从而进行业务合作或市场分析。\n\n- **用户描述**：\n  - 用户可能是旅游行业的管理者或分析师，需要了解顺义区星级饭店中哪些同时具备旅行社资质，并且专注于旅游业务。\n  - 用户可能希望通过这种查询找到潜在的合作伙伴，或者分析星级饭店与旅行社业务的重合情况，以便制定市场策略或优化资源配置。\n  - 用户还可能希望通过这种查询验证某些星级饭店是否合法经营旅游业务，确保其符合相关法规要求。",
+  "natural_language_query": "市民反映，最近在顺义区发现好几家星级酒店好像也在做旅行社的业务，但是不太确定是不是正规的。比如某某大酒店，门口挂着旅行社的招牌，但是不知道有没有旅游局发的许可证。想咨询一下顺义区这些星级酒店里，哪些是同时有正规旅行社资质的？主要是想找能做旅游业务的，因为想报团出游，又怕遇到不正规的。之前朋友在别的地方就遇到过酒店自己组织的旅游团，结果没有资质，玩到一半出问题了。所以想确认下顺义区这边的情况，看看哪些星级酒店是可以放心报他们旅行社的。最好能帮忙查查这些酒店是不是真的在旅游局有备案，而且确实是做旅游业务的。",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ ,_ ,_ from _ where _ = _",
+  "database": "旅游住宿",
+  "tables": {
+    "shunyiquxingjifandian1276": [
+      "shunyiquxingjifandian1276.顺义区星级饭店",
+      "shunyiquxingjifandian1276.Unnamed: 1",
+      "shunyiquxingjifandian1276.Unnamed: 2",
+      "shunyiquxingjifandian1276.Unnamed: 3"
+    ],
+    "shiwenhuahelvyoujulvxingshexinxi3530": [
+      "shiwenhuahelvyoujulvxingshexinxi3530.旅行社名称",
+      "shiwenhuahelvyoujulvxingshexinxi3530.旅行社业务经营许可证编号",
+      "shiwenhuahelvyoujulvxingshexinxi3530.许可经营业务",
+      "shiwenhuahelvyoujulvxingshexinxi3530.许可时间"
+    ]
+  }
+}

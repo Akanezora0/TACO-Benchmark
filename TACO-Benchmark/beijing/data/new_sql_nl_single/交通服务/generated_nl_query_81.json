@@ -1,0 +1,29 @@
+{
+  "sql": "SELECT \"huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.序号\", \"huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.行政相对人名称\", \"huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.统一社会信用代码\", \"huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.行政许可决定文书号\", \"huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.许可内容\", \"huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.许可决定日期\", \"huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.许可机关\", \"shijiaotongweixianchangxunchaxinxi3675.序号\", \"shijiaotongweixianchangxunchaxinxi3675.工作内容\", \"shijiaotongweixianchangxunchaxinxi3675.巡查时间\", \"shijiaotongweixianchangxunchaxinxi3675.巡查人次\", \"shijiaotongweixianchangxunchaxinxi3675.巡查单位\", \"shijiaotongweixianchangxunchaxinxi3675.巡查位置\", \"shijiaotongweixianchangxunchaxinxi3675.共享时间\", \"shijiaotongweixianchangxunchaxinxi3675.更新时间\" FROM \"huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053\" UNION SELECT * FROM \"shijiaotongweixianchangxunchaxinxi3675\";",
+  "problem_description": "### **查询意图**：\n该 SQL 语句的目的是将两个不同表的数据合并成一个结果集，展示两个表中的关键信息。具体来说，它从 `huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053` 表中选择部分列，然后与 `shijiaotongweixianchangxunchaxinxi3675` 表的所有数据进行合并（UNION）。\n\n### **详细描述**：\n1. **涉及的表**：\n   - `huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053`（可能为“怀柔区交通局运政行政许可公示信息”表）\n   - `shijiaotongweixianchangxunchaxinxi3675`（可能为“市交通委危险场巡查信息”表）\n\n2. **选择的列**：\n   - 从 `huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053` 表中选择的列：\n     - 序号\n     - 行政相对人名称（可能是企业或个体户名称）\n     - 统一社会信用代码（企业唯一标识）\n     - 行政许可决定文书号（审批文件编号）\n     - 许可内容（审批的具体内容）\n     - 许可决定日期（审批时间）\n     - 许可机关（审批单位）\n   - 从 `shijiaotongweixianchangxunchaxinxi3675` 表中选择所有列（`SELECT *`）：\n     - 序号\n     - 工作内容（巡查的具体任务）\n     - 巡查时间（检查时间）\n     - 巡查人次（参与检查的人数）\n     - 巡查单位（执行检查的机构）\n     - 巡查位置（检查地点）\n     - 共享时间（数据共享时间）\n     - 更新时间（数据最新修改时间）\n\n3. **查询方式**：\n   - 使用 `UNION` 合并两个查询结果，要求两个查询的列数相同（这里第一个查询选了 7 列，第二个查询选了 8 列，因此该 SQL 语句可能存在问题，除非 `huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053` 表实际有 8 列但只选了 7 列）。\n\n### **业务场景**：\n1. **数据整合**：\n   - 该查询可能用于整合交通局行政许可信息和危险场所巡查信息，便于统一查看或分析。\n2. **监管与合规检查**：\n   - 交通管理部门可能需要对比企业的行政许可情况和实际巡查情况，确保企业合规运营。\n3. **数据共享与报告**：\n   - 上级单位（如市交通委）可能需要汇总区级交通局的审批数据和巡查数据，用于监管或报告。\n\n### **用户描述**：\n1. **用户需求**：\n   - 交通管理部门的工作人员可能需要在一个界面中同时查看企业的行政许可记录和危险场所的巡查记录，以便快速发现未审批但被巡查到的企业，或者已审批但未接受巡查的企业。\n2. **实际问题**：\n   - 如果两个表的数据分散在不同的系统中，用户需要手动查询和比对，效率较低。该 SQL 语句可能用于自动化整合数据，提高监管效率。\n3. **潜在问题**：\n   - 如果两个查询的列数不一致，`UNION` 操作会失败，可能需要调整查询语句以确保列数匹配。",
+  "natural_language_query": "市民反映，我是怀柔区交通局的工作人员，最近在整理工作数据时遇到一个麻烦。我们这边有企业的审批许可信息，还有市里发来的危险场所巡查记录，现在需要把这些信息整合到一起查看。具体来说就是想看看哪些企业有许可证但没被巡查过，或者哪些地方被查到了但没有许可证信息。\n\n现在的问题是这些数据分散在不同的系统里，每次都要两边来回查特别麻烦。能不能帮忙把这些信息合并显示？一边是企业名称、信用代码、许可编号、审批日期这些审批信息，另一边是巡查的工作内容、检查时间、检查地点这些巡查记录。最好能放在一个列表里方便对比。\n\n另外有个疑问，这两个表格的字段数量好像不一样，这样合并会不会有问题？我们之前尝试自己操作时总提示错误，可能是这个原因。希望能帮忙解决这个数据整合的问题，方便我们日常监管工作。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ ;",
+  "database": "交通服务",
+  "tables": {
+    "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053": [
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.序号",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.行政相对人名称",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.统一社会信用代码",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.行政许可决定文书号",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.许可内容",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.许可决定日期",
+      "huairouquhuairouqujiaotongjuyunzhengxingzhengxukegongshixinxi3053.许可机关"
+    ],
+    "shijiaotongweixianchangxunchaxinxi3675": [
+      "shijiaotongweixianchangxunchaxinxi3675.序号",
+      "shijiaotongweixianchangxunchaxinxi3675.工作内容",
+      "shijiaotongweixianchangxunchaxinxi3675.巡查时间",
+      "shijiaotongweixianchangxunchaxinxi3675.巡查人次",
+      "shijiaotongweixianchangxunchaxinxi3675.巡查单位",
+      "shijiaotongweixianchangxunchaxinxi3675.巡查位置",
+      "shijiaotongweixianchangxunchaxinxi3675.共享时间",
+      "shijiaotongweixianchangxunchaxinxi3675.更新时间"
+    ]
+  }
+}

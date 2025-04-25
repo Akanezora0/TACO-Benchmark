@@ -1,0 +1,22 @@
+{
+  "sql": "SELECT \n    shijiaotongweiguidaozhandianxinxichuxing3670.线路名称, \n    shijiaotongweiguidaozhandianxinxichuxing3670.站点编码, \n    shijiaotongweiguidaozhandianxinxichuxing3670.车站名, \n    shijiaotongweiguidaoyanshixinxi3711.序号, \n    shijiaotongweiguidaoyanshixinxi3711.总车次, \n    shijiaotongweiguidaoyanshixinxi3711.延时开始时间, \n    shijiaotongweiguidaoyanshixinxi3711.延时结束时间, \n    shijiaotongweiguidaoyanshixinxi3711.延时线路, \n    shijiaotongweiguidaoyanshixinxi3711.共享时间 \nFROM \n    shijiaotongweiguidaozhandianxinxichuxing3670 \nJOIN \n    shijiaotongweiguidaoyanshixinxi3711 \nON \n    shijiaotongweiguidaozhandianxinxichuxing3670.站点编码 = shijiaotongweiguidaoyanshixinxi3711.共享时间 \nWHERE \n    shijiaotongweiguidaoyanshixinxi3711.更新时间 = '2022-12-31' \nORDER BY \n    shijiaotongweiguidaoyanshixinxi3711.延时开始时间 ;",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ from _ join _ on _ ._ = _ ._ join _ on _ ._ = _ ._ where _ ._ = _ order by _ ._ ;",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweiguidaozhandianxinxichuxing3670": [
+      "shijiaotongweiguidaozhandianxinxichuxing3670.线路名称",
+      "shijiaotongweiguidaozhandianxinxichuxing3670.站点编码",
+      "shijiaotongweiguidaozhandianxinxichuxing3670.车站名"
+    ],
+    "shijiaotongweiguidaoyanshixinxi3711": [
+      "shijiaotongweiguidaoyanshixinxi3711.序号",
+      "shijiaotongweiguidaoyanshixinxi3711.总车次",
+      "shijiaotongweiguidaoyanshixinxi3711.延时开始时间",
+      "shijiaotongweiguidaoyanshixinxi3711.延时结束时间",
+      "shijiaotongweiguidaoyanshixinxi3711.延时线路",
+      "shijiaotongweiguidaoyanshixinxi3711.共享时间",
+      "shijiaotongweiguidaoyanshixinxi3711.更新时间"
+    ]
+  }
+}

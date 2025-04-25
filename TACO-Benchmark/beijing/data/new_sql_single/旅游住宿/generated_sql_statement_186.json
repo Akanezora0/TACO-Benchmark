@@ -1,0 +1,18 @@
+{
+  "sql": "SELECT \"shiwenhuahelvyoujuxingjifandianxinxi2036.��\u0011DOB�\", \"shunyiquxingjifandian1276.顺义区星级饭店\" FROM \"shiwenhuahelvyoujuxingjifandianxinxi2036\" - \"shunyiquxingjifandian1276\" WHERE \"shiwenhuahelvyoujuxingjifandianxinxi2036.��\u0011DOB�\" = '2023-04-01';",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ WHERE _ = _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "shiwenhuahelvyoujuxingjifandianxinxi2036": [
+      "shiwenhuahelvyoujuxingjifandianxinxi2036.��\u0011ࡱ\u001a�",
+      "shiwenhuahelvyoujuxingjifandianxinxi2036.\u0001\u0001"
+    ],
+    "shunyiquxingjifandian1276": [
+      "shunyiquxingjifandian1276.顺义区星级饭店",
+      "shunyiquxingjifandian1276.Unnamed: 1",
+      "shunyiquxingjifandian1276.Unnamed: 2",
+      "shunyiquxingjifandian1276.Unnamed: 3"
+    ]
+  }
+}

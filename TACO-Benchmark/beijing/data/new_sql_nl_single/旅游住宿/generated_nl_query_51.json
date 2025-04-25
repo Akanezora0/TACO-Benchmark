@@ -1,0 +1,44 @@
+{
+  "sql": "SELECT \"shiguihuaziranziyuanweiyinhangpiaohao1522.HID\", \"shiguihuaziranziyuanweiyinhangpiaohao1522.HNAME\", \"shiguihuaziranziyuanweiyinhangpiaohao1522.CATEGORY\", \"pingguqupingguqujingpinminsu2083.平谷区2022年精品民宿\" FROM \"shiguihuaziranziyuanweiyinhangpiaohao1522\" - \"pingguqupingguqujingpinminsu2083\" WHERE \"shiguihuaziranziyuanweiyinhangpiaohao1522.HNAME\" = '精品民宿';",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从表 `shiguihuaziranziyuanweiyinhangpiaohao1522` 中查询符合条件的记录，并排除与表 `pingguqupingguqujingpinminsu2083` 中相同的数据，最终返回指定的列信息。  \n\n### **详细描述**  \n1. **涉及的表**：  \n   - `shiguihuaziranziyuanweiyinhangpiaohao1522`（可能是一个包含酒店或民宿信息的表）  \n   - `pingguqupingguqujingpinminsu2083`（可能是一个存储平谷区2022年精品民宿信息的表）  \n\n2. **查询的列**：  \n   - `shiguihuaziranziyuanweiyinhangpiaohao1522.HID`（可能是酒店或民宿的唯一标识符）  \n   - `shiguihuaziranziyuanweiyinhangpiaohao1522.HNAME`（酒店或民宿的名称）  \n   - `shiguihuaziranziyuanweiyinhangpiaohao1522.CATEGORY`（分类信息）  \n   - `pingguqupingguqujingpinminsu2083.平谷区2022年精品民宿`（平谷区2022年的精品民宿信息）  \n\n3. **查询条件**：  \n   - `WHERE \"shiguihuaziranziyuanweiyinhangpiaohao1522.HNAME\" = '精品民宿'`：仅筛选名称为“精品民宿”的记录。  \n   - `\"shiguihuaziranziyuanweiyinhangpiaohao1522\" - \"pingguqupingguqujingpinminsu2083\"`：表示从第一个表中排除第二个表中存在的数据（可能是某种集合差集操作）。  \n\n### **业务场景**  \n该查询可能用于以下业务场景：  \n1. **民宿管理或旅游数据分析**：查询某个地区（如平谷区）的精品民宿信息，并排除已经登记在特定列表（如2022年精品民宿名录）中的记录。  \n2. **数据对比或更新**：找出不在官方精品民宿列表中的“精品民宿”，可能用于检查数据一致性或补充登记。  \n3. **市场调研**：分析哪些民宿自称为“精品民宿”，但未被官方认证。  \n\n### **用户描述**  \n在该业务场景下，用户可能遇到以下问题或需求：  \n1. **数据核对需求**：用户（如旅游局或市场监管部门）需要核实哪些民宿自称“精品民宿”，但未被列入官方名单，以确保信息准确性。  \n2. **业务扩展需求**：民宿平台或旅游公司希望找出未被官方收录的精品民宿，以便进行合作推广或市场分析。  \n3. **数据清理需求**：数据库管理员需要清理重复或不符合标准的数据，确保系统中的民宿信息与官方数据一致。  \n\n该查询帮助用户识别“自称为精品民宿但未在官方名单中”的记录，可能用于合规检查、市场分析或数据治理。",
+  "natural_language_query": "市民反映，最近在平谷区旅游时发现很多民宿都挂着\"精品民宿\"的招牌，但听说政府去年公布过一份正式的精品民宿名单。我想了解一下，现在市面上那些自称是精品民宿的店家，有哪些是没有被政府认证的？因为担心有些可能是虚假宣传，想带家人去住又怕上当。特别是看到有些民宿条件一般也敢挂精品招牌，感觉挺不规范的。能不能帮忙查查这些没在政府名单上的所谓精品民宿都有哪些？主要是想避开那些名不副实的。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ WHERE _ = _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "shiguihuaziranziyuanweiyinhangpiaohao1522": [
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.HID",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.FATHERID",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.HNAME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.OTHERNAME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.CATEGORY",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.SUBCATEGOR",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.COUNTYNAME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.STREETNAME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.DYNASTY",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.SUBDYNASTY",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.ADDRESS",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.RANK",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.BATCH",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.PUBTIME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.USERS",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.PURPOSE",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.OWNERSHIP",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.STATEEVALU",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.SINGLERELI",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.PROTECTION",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.ATTACHEDRE",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.RELATEDPEO",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.RELATEDEVE",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.PUBNAME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.SOURCE",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.EDITOR",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.ISREDUNDAN"
+    ],
+    "pingguqupingguqujingpinminsu2083": [
+      "pingguqupingguqujingpinminsu2083.平谷区2022年精品民宿",
+      "pingguqupingguqujingpinminsu2083.Unnamed: 1",
+      "pingguqupingguqujingpinminsu2083.Unnamed: 2"
+    ]
+  }
+}

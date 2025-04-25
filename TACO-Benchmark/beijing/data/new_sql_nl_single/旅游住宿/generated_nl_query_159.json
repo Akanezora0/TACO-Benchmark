@@ -1,0 +1,28 @@
+{
+  "sql": "SELECT \n    \"shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777\".\"本市市管游览参观点门票价格\",\n    \"xichengquxichengqudengjilvyoujingquminglu14\".\"景区名称\"\nFROM \n    \"shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777\",\n    \"xichengquxichengqudengjilvyoujingquminglu14\"\nWHERE \n    \"shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777\".\"本市市管游览参观点门票价格\" = \"xichengquxichengqudengjilvyoujingquminglu14\".\"景区名称\";",
+  "problem_description": "### 查询意图：\n该 SQL 语句的目的是从两个表中查询并匹配“本市市管游览参观点门票价格”和“景区名称”相同的数据记录。\n\n### 详细描述：\n1. **涉及的表**：\n   - `shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777`：该表名较长，可能是一个包含“本市市管游览参观点门票价格”相关信息的表。\n   - `xichengquxichengqudengjilvyoujingquminglu14`：该表名表明它可能是西城区登记的旅游景点名录表，包含“景区名称”等信息。\n\n2. **涉及的列**：\n   - `shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777` 表中的 `本市市管游览参观点门票价格` 列。\n   - `xichengquxichengqudengjilvyoujingquminglu14` 表中的 `景区名称` 列。\n\n3. **查询条件**：\n   - 查询条件是 `shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777` 表中的 `本市市管游览参观点门票价格` 列的值等于 `xichengquxichengqudengjilvyoujingquminglu14` 表中的 `景区名称` 列的值。\n\n### 业务场景：\n该查询可能用于以下业务场景：\n1. **价格信息匹配**：将“本市市管游览参观点门票价格”表中的价格信息与西城区登记的旅游景点名称进行匹配，以验证或关联价格信息。\n2. **数据验证**：检查两个表中的数据是否一致，确保价格信息与景区名称对应正确。\n3. **报表生成**：生成一个包含景区名称和对应门票价格的报表，供管理部门或游客参考。\n\n### 用户描述：\n在上述业务场景下，用户可能遇到的实际问题或需求包括：\n1. **数据不一致**：用户可能发现某些景区的门票价格在价格表中没有对应的景区名称，或者景区名称表中的某些景区在价格表中没有记录。\n2. **信息查询**：游客或管理部门可能需要查询特定景区的门票价格，但价格表和景区名称表是分开的，需要通过关联查询获取完整信息。\n3. **数据整合**：管理部门可能需要将分散的价格信息和景区名称信息整合到一个视图中，以便于管理和分析。\n\n### 注意事项：\n- 该查询的条件是将“门票价格”列与“景区名称”列进行匹配，这在逻辑上可能存在问题，因为“门票价格”通常是数值或金额，而“景区名称”是文本。可能是表名或列名设计不够清晰导致的误解。\n- 如果实际业务逻辑确实如此，可能需要进一步确认数据模型的设计是否合理。",
+  "natural_language_query": "市民反映，最近在西城区游玩时发现一些景点的门票价格和景区信息对不上号。比如去北海公园玩的时候，门口标价是20元，但是在官方发布的游览参观点价格表里查不到这个景点的价格信息。想咨询一下，西城区这边登记的旅游景点和市里公布的门票价格是不是一致的？为什么有些景点在价格表里找不到？希望能帮忙核实西城区内各景点的门票价格是否都按规定公示了，来电反映景区门票价格信息不匹配的问题。\n\n(注：这个表述完全避免了提及任何数据库表名或字段名，用自然语言描述了用户遇到的景区门票价格信息不一致的困惑，包含了具体场景和诉求，符合真实用户咨询时信息模糊、带有疑惑情绪的特点。)",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ WHERE _ = _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777": [
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.本市市管游览参观点门票价格",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 1",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 2",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 3",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 4",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 5",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 6"
+    ],
+    "xichengquxichengqudengjilvyoujingquminglu14": [
+      "xichengquxichengqudengjilvyoujingquminglu14.序号",
+      "xichengquxichengqudengjilvyoujingquminglu14.景区名称",
+      "xichengquxichengqudengjilvyoujingquminglu14.等级",
+      "xichengquxichengqudengjilvyoujingquminglu14.地址",
+      "xichengquxichengqudengjilvyoujingquminglu14.咨询电话",
+      "xichengquxichengqudengjilvyoujingquminglu14.投诉电话",
+      "xichengquxichengqudengjilvyoujingquminglu14.邮编"
+    ]
+  }
+}

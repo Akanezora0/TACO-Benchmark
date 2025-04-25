@@ -1,0 +1,7 @@
+{
+  "sql": "select distinct 列名1 from 表名1 where 列名2 = 值) as 子查询别名,\n列名3\nfrom 表名3\nwhere 列名4 < 子查询别名.列名1",
+  "results": 0,
+  "sql skeleton": "select _ ,_ from _ where _ = (select distinct _ from _ where _ = _ ) and _ < _",
+  "database": "安全生活",
+  "tables": {}
+}

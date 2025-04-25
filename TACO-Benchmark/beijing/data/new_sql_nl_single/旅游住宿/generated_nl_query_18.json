@@ -1,0 +1,46 @@
+{
+  "sql": "SELECT fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.旅行社分社及旅行社服务网点明细, fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.Unnamed: 1, fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.Unnamed: 2, fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.Unnamed: 3, shiguihuaziranziyuanweiyuanlin1526.HID FROM fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396 INNER JOIN shiguihuaziranziyuanweiyuanlin1526 ON fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.旅行社分社及旅行社服务网点明细 = shiguihuaziranziyuanweiyuanlin1526.HNAME WHERE fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.Unnamed: 1 = '条件1' AND fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.Unnamed: 2 = '条件2' AND fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.Unnamed: 3 = '条件3' AND shiguihuaziranziyuanweiyuanlin1526.HID = '特定值' AND shiguihuaziranziyuanweiyuanlin1526.CATEGORY = '分类' AND shiguihuaziranziyuanweiyuanlin1526.SUBCATEGOR = '子分类' AND shiguihuaziranziyuanweiyuanlin152",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从两个表中联合查询数据，筛选出符合特定条件的旅行社分社及服务网点信息，并结合规划自然资源委员会的相关数据进行匹配，最终返回符合条件的记录。\n\n---\n\n### **详细描述**  \n1. **涉及的表**：\n   - **`fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396`**（可能为“丰台区旅行社分社及旅行社服务网点明细”表）：\n     - 包含列：`旅行社分社及旅行社服务网点明细`、`Unnamed: 1`、`Unnamed: 2`、`Unnamed: 3`（可能是未命名的列，代表某些属性，如地址、负责人、状态等）。\n   - **`shiguihuaziranziyuanweiyuanlin1526`**（可能为“市规划和自然资源委员会”表）：\n     - 包含列：`HID`（唯一标识符）、`HNAME`（名称）、`CATEGORY`（分类）、`SUBCATEGOR`（子分类）等。\n\n2. **查询逻辑**：\n   - 使用 **`INNER JOIN`** 连接两个表，连接条件是 `fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.旅行社分社及旅行社服务网点明细 = shiguihuaziranziyuanweiyuanlin1526.HNAME`，即旅行社名称与规划自然资源委员会中的名称匹配。\n   - **筛选条件**：\n     - 对 `fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396` 表：\n       - `Unnamed: 1 = '条件1'`（可能是某种状态或属性，如“营业中”）。\n       - `Unnamed: 2 = '条件2'`（可能是地区或类型，如“丰台区”）。\n       - `Unnamed: 3 = '条件3'`（可能是其他属性，如“已备案”）。\n     - 对 `shiguihuaziranziyuanweiyuanlin1526` 表：\n       - `HID = '特定值'`（匹配特定ID的记录）。\n       - `CATEGORY = '分类'`（如“旅行社”或“旅游服务”）。\n       - `SUBCATEGOR = '子分类'`（如“分社”或“服务网点”）。\n\n3. **返回的列**：\n   - `fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396` 表的 `旅行社分社及旅行社服务网点明细`、`Unnamed: 1`、`Unnamed: 2`、`Unnamed: 3`。\n   - `shiguihuaziranziyuanweiyuanlin1526` 表的 `HID`（可能是用于关联其他数据的唯一标识）。\n\n---\n\n### **业务场景**  \n该查询可能用于以下业务场景：\n1. **旅行社合规性检查**：  \n   - 政府或监管部门需要核实丰台区的旅行社分社及服务网点是否符合特定条件（如备案状态、营业状态），并与规划自然资源委员会的登记信息匹配，确保其合法经营。\n2. **数据关联分析**：  \n   - 将旅行社的明细数据与政府部门的分类数据关联，分析特定分类（如“分社”或“服务网点”）下的旅行社分布情况。\n3. **信息验证**：  \n   - 验证旅行社是否在政府系统中正确注册，并符合特定的分类和子分类要求（如“旅游服务/分社”）。\n\n---\n\n### **用户描述**  \n在该业务场景下，用户可能遇到的实际问题或需求包括：\n1. **监管需求**：  \n   - 政府工作人员需要快速查询丰台区所有符合“营业中、已备案”条件的旅行社分社，并核对其在规划自然资源委员会的登记信息，以确保无违规经营。\n2. **数据整合**：  \n   - 旅游管理部门可能需要将分散的旅行社数据（如分社名称、地址）与政府数据库（如HID、分类）关联，以便生成统计报表或进行政策分析。\n3. **合规性排查**：  \n   - 企业或第三方机构可能需要检查某旅行社是否在政府系统中正确注册，并属于合法的“分类/子分类”（如避免假冒旅行社）。",
+  "natural_language_query": "市民反映，丰台区有几家旅行社的分社和服务网点，想确认一下它们是不是正规备案的，现在还在正常营业的。我之前在政府网站上看到过一些规划自然资源的相关信息，但不知道这些旅行社在系统里登记的对不对。能不能帮忙查一下这些旅行社是不是都符合要求？特别是那些标着\"营业中\"、\"已备案\"的，还有地址在丰台区的。我听说有些网点可能没在政府系统里登记，或者分类不对，比如明明是分社却登记成别的类型。希望你们能核实一下，给个明确的答复。",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ ,_ ,_ from _ where _ = _ and _ = _ and _ = _ and _ (_ ,_ ) = _",
+  "database": "旅游住宿",
+  "tables": {
+    "fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396": [
+      "fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.旅行社分社及旅行社服务网点明细",
+      "fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.Unnamed: 1",
+      "fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.Unnamed: 2",
+      "fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.Unnamed: 3"
+    ],
+    "shiguihuaziranziyuanweiyuanlin1526": [
+      "shiguihuaziranziyuanweiyuanlin1526.HID",
+      "shiguihuaziranziyuanweiyuanlin1526.FATHERID",
+      "shiguihuaziranziyuanweiyuanlin1526.HNAME",
+      "shiguihuaziranziyuanweiyuanlin1526.OTHERNAME",
+      "shiguihuaziranziyuanweiyuanlin1526.CATEGORY",
+      "shiguihuaziranziyuanweiyuanlin1526.SUBCATEGOR",
+      "shiguihuaziranziyuanweiyuanlin1526.COUNTYNAME",
+      "shiguihuaziranziyuanweiyuanlin1526.STREETNAME",
+      "shiguihuaziranziyuanweiyuanlin1526.DYNASTY",
+      "shiguihuaziranziyuanweiyuanlin1526.SUBDYNASTY",
+      "shiguihuaziranziyuanweiyuanlin1526.ADDRESS",
+      "shiguihuaziranziyuanweiyuanlin1526.RANK",
+      "shiguihuaziranziyuanweiyuanlin1526.BATCH",
+      "shiguihuaziranziyuanweiyuanlin1526.PUBTIME",
+      "shiguihuaziranziyuanweiyuanlin1526.USERS",
+      "shiguihuaziranziyuanweiyuanlin1526.PURPOSE",
+      "shiguihuaziranziyuanweiyuanlin1526.OWNERSHIP",
+      "shiguihuaziranziyuanweiyuanlin1526.STATEEVALU",
+      "shiguihuaziranziyuanweiyuanlin1526.SINGLERELI",
+      "shiguihuaziranziyuanweiyuanlin1526.PROTECTION",
+      "shiguihuaziranziyuanweiyuanlin1526.ATTACHEDRE",
+      "shiguihuaziranziyuanweiyuanlin1526.RELATEDPEO",
+      "shiguihuaziranziyuanweiyuanlin1526.RELATEDEVE",
+      "shiguihuaziranziyuanweiyuanlin1526.PUBNAME",
+      "shiguihuaziranziyuanweiyuanlin1526.SOURCE",
+      "shiguihuaziranziyuanweiyuanlin1526.EDITOR",
+      "shiguihuaziranziyuanweiyuanlin1526.ISREDUNDAN",
+      "shiguihuaziranziyuanweiyuanlin1526.THEME"
+    ]
+  }
+}

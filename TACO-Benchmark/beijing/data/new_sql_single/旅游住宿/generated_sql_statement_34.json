@@ -1,0 +1,28 @@
+{
+  "sql": "SELECT fengtaiqufengtaiquxingjijiudian1397.\"星级酒店明细\" FROM fengtaiqufengtaiquxingjijiudian1397 WHERE fengtaiqufengtaiquxingjijiudian1397.\"Unnamed: 1\" = '条件' AND fengtaiqufengtaiquxingjijiudian1397.\"Unnamed: 2\" = '条件' AND fengtaiqufengtaiquxingjijiudian1397.\"Unnamed: 3\" = '条件' AND fengtaiqufengtaiquxingjijiudian1397.\"Unnamed: 4\" = '条件' AND fengtaiqufengtaiquxingjijiudian1397.\"Unnamed: 5\" = '条件' AND fengtaiqufengtaiquxingjijiudian1397.\"Unnamed: 6\" = '条件'",
+  "results": 0,
+  "sql skeleton": "select _ from _ where _ (_ ,_ ,_ ) = _",
+  "database": "旅游住宿",
+  "tables": {
+    "fengtaiqufengtaiquxingjijiudian1397": [
+      "fengtaiqufengtaiquxingjijiudian1397.星级酒店明细",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 1",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 2",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 3",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 4",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 5",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 6"
+    ],
+    "miyunqubeijingshimiyunquwenhuahelvyoujudisanjiduxingzhengzhifajianchajieguo952": [
+      "miyunqubeijingshimiyunquwenhuahelvyoujudisanjiduxingzhengzhifajianchajieguo952.附件",
+      "miyunqubeijingshimiyunquwenhuahelvyoujudisanjiduxingzhengzhifajianchajieguo952./",
+      "miyunqubeijingshimiyunquwenhuahelvyoujudisanjiduxingzhengzhifajianchajieguo952./.1",
+      "miyunqubeijingshimiyunquwenhuahelvyoujudisanjiduxingzhengzhifajianchajieguo952./.2",
+      "miyunqubeijingshimiyunquwenhuahelvyoujudisanjiduxingzhengzhifajianchajieguo952./.3",
+      "miyunqubeijingshimiyunquwenhuahelvyoujudisanjiduxingzhengzhifajianchajieguo952./.4",
+      "miyunqubeijingshimiyunquwenhuahelvyoujudisanjiduxingzhengzhifajianchajieguo952./.5",
+      "miyunqubeijingshimiyunquwenhuahelvyoujudisanjiduxingzhengzhifajianchajieguo952./.6",
+      "miyunqubeijingshimiyunquwenhuahelvyoujudisanjiduxingzhengzhifajianchajieguo952./.7"
+    ]
+  }
+}

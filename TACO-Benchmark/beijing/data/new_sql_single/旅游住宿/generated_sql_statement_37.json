@@ -1,0 +1,20 @@
+{
+  "sql": "SELECT shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.名称, shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.级别 FROM shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640 WHERE shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.级别 = '高级'",
+  "results": 0,
+  "sql skeleton": "select _ ,_ from _ where _ = _",
+  "database": "旅游住宿",
+  "tables": {
+    "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640": [
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.序号",
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.名称",
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.类别",
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.公布时间",
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.级别"
+    ],
+    "xichengqubeijingshiwenwubaohudanwei31": [
+      "xichengqubeijingshiwenwubaohudanwei31.序号",
+      "xichengqubeijingshiwenwubaohudanwei31.名称",
+      "xichengqubeijingshiwenwubaohudanwei31.地址"
+    ]
+  }
+}

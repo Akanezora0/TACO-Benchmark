@@ -1,0 +1,24 @@
+{
+  "sql": "SELECT \"chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337\".\"酒仙桥街道社区地址及联系电话\", \"chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337\".Unnamed: 1, \"chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337\".Unnamed: 2, \"chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337\".Unnamed: 3, \"chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337\".Unnamed: 4, \"xichengquxichengquxingjifandianminglu19\".\"序号\", \"xichengquxichengquxingjifandianminglu19\".\"?星级酒店名称\", \"xichengquxichengquxingjifandianminglu19\".\"?星级\", \"xichengquxichengquxingjifandianminglu19\".\"?联系电话\", \"xichengquxichengquxingjifandianminglu19\".\"?酒店地址\" FROM \"chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337\" JOIN \"xichengquxichengquxingjifandianminglu19\" ON \"chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337\".Unnamed: 4 = \"xichengquxichengquxingjifandianminglu19\".\"?星级酒店名称\" WHERE \"xichengquxichengquxingjifandianminglu19\".\"?星级\" = '5' AND \"xichengquxichengquxingjifandianminglu19\".\"?星级\" = '5' AND (\"xichengquxichengquxingjifandianminglu19\".\"?星级酒店名称\" IS NOT NULL OR \"xichengquxichengquxingjifandianminglu19\".\"?星级酒店名称\" <> '') AND \"xichengquxichengquxingjifandianminglu",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是查询朝阳区酒仙桥街道社区地址及联系电话与西城区五星级酒店信息的关联数据。\n\n- **详细描述**：\n  - **涉及的表**：\n    1. `chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337`：包含酒仙桥街道社区地址及联系电话等信息。\n    2. `xichengquxichengquxingjifandianminglu19`：包含西城区星级酒店名称、星级、联系电话和酒店地址等信息。\n  - **涉及的列**：\n    - `chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337` 表的列：\n      - `酒仙桥街道社区地址及联系电话`\n      - `Unnamed: 1`（未命名列1）\n      - `Unnamed: 2`（未命名列2）\n      - `Unnamed: 3`（未命名列3）\n      - `Unnamed: 4`（未命名列4）\n    - `xichengquxichengquxingjifandianminglu19` 表的列：\n      - `序号`\n      - `?星级酒店名称`\n      - `?星级`\n      - `?联系电话`\n      - `?酒店地址`\n  - **条件**：\n    - 连接条件：`chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337` 表的 `Unnamed: 4` 列与 `xichengquxichengquxingjifandianminglu19` 表的 `?星级酒店名称` 列相等。\n    - 筛选条件：\n      - `xichengquxichengquxingjifandianminglu19` 表的 `?星级` 列等于 '5'（五星级）。\n      - `xichengquxichengquxingjifandianminglu19` 表的 `?星级酒店名称` 列不为空或不为空字符串。\n\n- **业务场景**：\n  - 该查询可能用于关联朝阳区酒仙桥街道社区的信息与西城区五星级酒店的信息，以便于分析或展示两个区域之间的关联数据。\n  - 例如，可能需要查找酒仙桥街道社区附近的五星级酒店信息，或者比较两个区域的服务设施。\n\n- **用户描述**：\n  - 用户可能需要了解酒仙桥街道社区与西城区五星级酒店之间的关系，例如社区附近是否有五星级酒店，或者社区的联系电话是否与酒店有某种关联。\n  - 用户可能在进行区域规划、商业分析或旅游推广时，需要整合不同区域的服务设施信息，以便做出更合理的决策。",
+  "natural_language_query": "市民反映，最近在朝阳区酒仙桥街道这边工作，想了解一下我们社区周边有没有西城区那边的五星级酒店信息。因为家里有亲戚要来北京旅游，想找些高档酒店安排住宿，最好能知道这些酒店的联系方式和具体位置。我在网上查资料的时候发现，好像我们社区的一些信息跟西城区的酒店信息有点关联，但具体怎么回事也搞不清楚。能不能帮忙查一下酒仙桥街道这边跟西城区五星级酒店之间有没有什么联系啊？主要是想看看附近有没有合适的五星级酒店可以推荐给亲戚，要是有联系电话就更好了。",
+  "results": 0,
+  "sql skeleton": "SELECT _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ FROM _ JOIN _ ON _ ._ = _ ._ WHERE _ ._ = _ and _ = _ and _ (_ ._ ,_ ) = _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337": [
+      "chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337.酒仙桥街道社区地址及联系电话",
+      "chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337.Unnamed: 1",
+      "chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337.Unnamed: 2",
+      "chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337.Unnamed: 3",
+      "chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337.Unnamed: 4"
+    ],
+    "xichengquxichengquxingjifandianminglu19": [
+      "xichengquxichengquxingjifandianminglu19.序号",
+      "xichengquxichengquxingjifandianminglu19.?星级酒店名称",
+      "xichengquxichengquxingjifandianminglu19.?星级",
+      "xichengquxichengquxingjifandianminglu19.?联系电话",
+      "xichengquxichengquxingjifandianminglu19.?酒店地址"
+    ]
+  }
+}

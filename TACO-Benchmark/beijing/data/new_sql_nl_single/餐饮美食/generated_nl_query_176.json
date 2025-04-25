@@ -1,0 +1,26 @@
+{
+  "sql": "select \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\".\"JYZMC\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\".\"XKZBH\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\".\"JYCS\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\".\"JYXM\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\".\"FZRQ\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\".\"YXQZ\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\".\"XKZID\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\".\"DWMC\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\".\"EXCHANGETIME\", \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076\".\"专用标识牌号\", \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076\".\"专柜名称\", \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076\".\"地址\" from \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\" join \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076\" on \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\".\"XKZID\" = \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076\".\"专用标识牌号\" where \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi33",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是查询餐饮服务许可证信息与清真食品专柜信息的关联数据，获取相关许可证和专柜的详细信息。\n\n- **详细描述**：\n  - **涉及的表**：\n    1. `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374`（市场监督管理局餐饮服务许可证情况信息表）\n    2. `shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076`（民族宗教委规范化清真食品专柜归属数据表）\n  \n  - **涉及的列**：\n    - 从`shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374`表中选取的列：\n      - `JYZMC`（经营者名称）\n      - `XKZBH`（许可证编号）\n      - `JYCS`（经营场所）\n      - `JYXM`（经营项目）\n      - `FZRQ`（发证日期）\n      - `YXQZ`（有效期至）\n      - `XKZID`（许可证ID）\n      - `DWMC`（单位名称）\n      - `EXCHANGETIME`（交换时间）\n    - 从`shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076`表中选取的列：\n      - `专用标识牌号`（专用标识牌号）\n      - `专柜名称`（专柜名称）\n      - `地址`（地址）\n  \n  - **关联条件**：\n    - 通过`shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374`表的`XKZID`（许可证ID）与`shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076`表的`专用标识牌号`（专用标识牌号）进行关联。\n  \n  - **筛选条件**：\n    - 查询语句未完整显示，但根据上下文推测可能包含对许可证或专柜的某些特定条件的筛选。\n\n- **业务场景**：\n  - 该查询可用于监管机构或相关部门对持有餐饮服务许可证且经营清真食品专柜的企业或个体进行联合检查或信息核对。\n  - 可以用于统计或分析清真食品专柜的合规性，例如检查许可证是否有效、专柜信息是否与许可证匹配等。\n  - 也可能用于消费者或第三方平台查询清真食品专柜的合法性和详细信息。\n\n- **用户描述**：\n  - **监管机构**：可能需要核实某清真食品专柜是否持有有效的餐饮服务许可证，或者检查许可证信息是否与专柜信息一致。\n  - **企业或个体经营者**：可能需要查询自己的许可证和专柜信息是否在系统中正确关联，以便及时更新或修正。\n  - **消费者**：可能希望通过查询确认某清真食品专柜是否合法合规，以确保购买到符合要求的食品。\n  - **数据分析人员**：可能需要这些数据来生成报告或分析清真食品市场的合规情况。",
+  "natural_language_query": "市民反映，在朝阳区某清真牛羊肉专卖店购买食品时，发现店内悬挂的清真标识牌和餐饮许可证信息不太一致。我记得清真食品专柜应该有专门的标识牌号，但这家店的许可证上好像没有明确标注。想咨询一下，这种情况是否合规？能不能帮忙查查这家店的清真食品专柜和餐饮许可证是不是匹配的？店铺名字大概叫\"西北人家\"，地址在朝阳区惠新西街附近。最近要请穆斯林朋友吃饭，特别担心买到不合规的清真食品，希望相关部门能核实清楚。",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ from _ join _ on _ ._ = _ ._ where _ ._ = _ and _ ._ = _ and _ (_ ,_ ) in (_ ,_ ,_ )",
+  "database": "餐饮美食",
+  "tables": {
+    "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374": [
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYXM",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.FZRQ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.YXQZ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.DWMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.EXCHANGETIME"
+    ],
+    "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076": [
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址"
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "sql": "SELECT \"yanqingquyanqingqulvyoujingquxinxi3381.旅游景区\", \"shiguihuaziranziyuanweiyuanlin1526.HNAME\", \"shiguihuaziranziyuanweiyuanlin1526.ADDRESS\" FROM \"yanqingquyanqingqulvyoujingquxinxi3381\" JOIN \"shiguihuaziranziyuanweiyuanlin1526\" ON \"yanqingquyanqingqulvyoujingquxinxi3381.旅游景区\" = \"shiguihuaziranziyuanweiyuanlin1526.HNAME\" WHERE \"shiguihuaziranziyuanweiyuanlin1526.ADDRESS\" IS NOT NULL;",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从两个表中联合查询旅游景区的名称、规划自然资源委员会中的名称以及地址信息，筛选出地址不为空的记录。  \n\n### **详细描述**  \n1. **涉及的表**：  \n   - `yanqingquyanqingqulvyoujingquxinxi3381`（延庆区旅游景区信息表）  \n   - `shiguihuaziranziyuanweiyuanlin1526`（市规划自然资源委员会表）  \n\n2. **涉及的列**：  \n   - `yanqingquyanqingqulvyoujingquxinxi3381.旅游景区`：存储延庆区旅游景区的名称。  \n   - `shiguihuaziranziyuanweiyuanlin1526.HNAME`：存储规划自然资源委员会中的名称（可能与旅游景区名称对应）。  \n   - `shiguihuaziranziyuanweiyuanlin1526.ADDRESS`：存储规划自然资源委员会中的地址信息。  \n\n3. **查询逻辑**：  \n   - 通过 `JOIN` 操作，将两个表按照 `旅游景区 = HNAME` 进行关联，即匹配旅游景区名称和规划自然资源委员会中的名称。  \n   - 使用 `WHERE` 条件筛选出 `ADDRESS` 不为空的记录，确保查询结果包含有效的地址信息。  \n\n### **业务场景**  \n该查询可用于以下业务场景：  \n1. **旅游信息整合**：将延庆区的旅游景区信息与规划自然资源委员会的登记信息进行关联，确保数据一致性。  \n2. **地址验证**：检查哪些旅游景区在规划自然资源委员会中有正式登记，并且有明确的地址信息。  \n3. **数据清洗**：找出旅游景区信息表中哪些记录在规划自然资源委员会中有对应记录，并排除地址缺失的数据。  \n\n### **用户描述**  \n1. **旅游管理部门**：  \n   - 需要核实延庆区旅游景区的官方登记信息，确保所有景区在规划自然资源委员会中有备案，并且地址信息完整。  \n   - 可能遇到的问题是部分景区未在官方登记，或者登记信息不完整（如地址缺失），需要补充或修正数据。  \n\n2. **数据分析人员**：  \n   - 需要将两个数据源（旅游景区信息表和规划自然资源委员会表）进行匹配，以便进行更深入的分析，如景区分布、地址标准化等。  \n   - 可能遇到的问题是数据不一致（如名称不匹配）或数据缺失（如无地址），需要筛选出有效数据。  \n\n3. **游客或旅行社**：  \n   - 可能需要查询官方认证的旅游景区及其准确地址，以确保游览的景区是正规登记的。  \n   - 可能遇到的问题是某些景区信息不准确或地址缺失，影响行程规划。  \n\n综上，该 SQL 查询主要用于数据关联、验证和筛选，确保旅游景区信息的准确性和完整性，适用于旅游管理、数据分析和游客服务等场景。",
+  "natural_language_query": "市民反映，最近计划去延庆旅游，想查一下那边正规的旅游景区信息。但是在网上看到有些景区的名字和地址对不上，比如\"龙庆峡\"有些地方写成\"龙庆峡风景区\"，不知道哪个是官方登记的。能不能帮忙核实一下延庆区有哪些旅游景区是在政府正式备案的？特别需要那些有详细地址的景区，因为要规划自驾路线。之前去过一个叫\"古崖居\"的地方，导航地址和景区门口牌子写的地址不一致，差点迷路，希望这次能查到准确的官方登记信息。来电咨询延庆区正规旅游景区名称及地址确认问题。",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ from _ where _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "yanqingquyanqingqulvyoujingquxinxi3381": [
+      "yanqingquyanqingqulvyoujingquxinxi3381.旅游景区",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 1",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 2",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 3",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 4",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 5",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 6",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 7"
+    ],
+    "shiguihuaziranziyuanweiyuanlin1526": [
+      "shiguihuaziranziyuanweiyuanlin1526.HID",
+      "shiguihuaziranziyuanweiyuanlin1526.FATHERID",
+      "shiguihuaziranziyuanweiyuanlin1526.HNAME",
+      "shiguihuaziranziyuanweiyuanlin1526.OTHERNAME",
+      "shiguihuaziranziyuanweiyuanlin1526.CATEGORY",
+      "shiguihuaziranziyuanweiyuanlin1526.SUBCATEGOR",
+      "shiguihuaziranziyuanweiyuanlin1526.COUNTYNAME",
+      "shiguihuaziranziyuanweiyuanlin1526.STREETNAME",
+      "shiguihuaziranziyuanweiyuanlin1526.DYNASTY",
+      "shiguihuaziranziyuanweiyuanlin1526.SUBDYNASTY",
+      "shiguihuaziranziyuanweiyuanlin1526.ADDRESS",
+      "shiguihuaziranziyuanweiyuanlin1526.RANK",
+      "shiguihuaziranziyuanweiyuanlin1526.BATCH",
+      "shiguihuaziranziyuanweiyuanlin1526.PUBTIME",
+      "shiguihuaziranziyuanweiyuanlin1526.USERS",
+      "shiguihuaziranziyuanweiyuanlin1526.PURPOSE",
+      "shiguihuaziranziyuanweiyuanlin1526.OWNERSHIP",
+      "shiguihuaziranziyuanweiyuanlin1526.STATEEVALU",
+      "shiguihuaziranziyuanweiyuanlin1526.SINGLERELI",
+      "shiguihuaziranziyuanweiyuanlin1526.PROTECTION",
+      "shiguihuaziranziyuanweiyuanlin1526.ATTACHEDRE",
+      "shiguihuaziranziyuanweiyuanlin1526.RELATEDPEO",
+      "shiguihuaziranziyuanweiyuanlin1526.RELATEDEVE",
+      "shiguihuaziranziyuanweiyuanlin1526.PUBNAME",
+      "shiguihuaziranziyuanweiyuanlin1526.SOURCE",
+      "shiguihuaziranziyuanweiyuanlin1526.EDITOR",
+      "shiguihuaziranziyuanweiyuanlin1526.ISREDUNDAN",
+      "shiguihuaziranziyuanweiyuanlin1526.THEME"
+    ]
+  }
+}

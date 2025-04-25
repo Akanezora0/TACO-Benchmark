@@ -1,0 +1,9 @@
+{
+  "sql": "select column1 from table1 where condition1 = value1 and condition2 = value2",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从表 `table1` 中筛选出满足条件 `condition1 = value1` 和 `condition2 = value2` 的记录，并返回这些记录的 `column1` 列的值。\n\n- **详细描述**：\n  - **表**：`table1` 是该查询操作的目标表。\n  - **列**：`column1` 是查询结果中需要返回的列，`condition1` 和 `condition2` 是用于筛选记录的列。\n  - **条件**：查询的条件是 `condition1 = value1` 和 `condition2 = value2`，即只有同时满足这两个条件的记录才会被选中。\n  - **操作**：该查询是一个简单的 SELECT 语句，通过 WHERE 子句对记录进行筛选，最终返回符合条件的记录的 `column1` 列的值。\n\n- **业务场景**：\n  - 该查询可以用于多种业务场景，例如：\n    - **用户管理**：假设 `table1` 是用户表，`condition1` 是用户状态（如 `status = 'active'`），`condition2` 是用户角色（如 `role = 'admin'`），那么该查询可以用于获取所有活跃的管理员用户的 `column1`（如用户名或用户ID）。\n    - **订单管理**：假设 `table1` 是订单表，`condition1` 是订单状态（如 `status = 'completed'`），`condition2` 是订单日期（如 `order_date = '2023-01-01'`），那么该查询可以用于获取所有在 2023 年 1 月 1 日完成的订单的 `column1`（如订单号或客户ID）。\n    - **库存管理**：假设 `table1` 是库存表，`condition1` 是产品类别（如 `category = 'electronics'`），`condition2` 是库存数量（如 `quantity > 0`），那么该查询可以用于获取所有有库存的电子产品的 `column1`（如产品名称或产品ID）。\n\n- **用户描述**：\n  - 在上述业务场景中，用户可能遇到的实际问题或需求包括：\n    - **用户管理**：管理员需要快速获取所有活跃的管理员用户列表，以便进行权限管理或发送通知。\n    - **订单管理**：财务团队需要查询特定日期的已完成订单，以便进行对账或生成报表。\n    - **库存管理**：销售人员需要了解哪些电子产品有库存，以便向客户推荐或处理订单。\n\n总之，该 SQL 语句是一个基础但非常实用的查询，可以根据具体的业务需求灵活应用于不同的场景中。",
+  "natural_language_query": "市民反映，我在系统里想找一些特定的信息但是不太会操作。是这样的，我需要找那些既符合A条件又符合B条件的数据，比如说状态显示\"有效\"而且类型是\"管理员\"的用户名单。之前同事说这样筛选就能找到，但我试了几次都显示不对，不知道是不是哪里操作错了。能不能帮忙查一下符合这两个要求的所有记录，我只需要看其中最主要的那一栏信息就行。来电咨询数据查询不成功的问题。\n\n（注：这里A条件对应condition1=value1，B条件对应condition2=value2，\"最主要的那一栏\"对应column1。完全避免了直接提及表名和列名，采用用户实际工作中常见的模糊表述方式，并包含操作困惑的情绪表达）",
+  "results": 0,
+  "sql skeleton": "select _ from _ where _ = _ and _ = _",
+  "database": "安全生活",
+  "tables": {}
+}

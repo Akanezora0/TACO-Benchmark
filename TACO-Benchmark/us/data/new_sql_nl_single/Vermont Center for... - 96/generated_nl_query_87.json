@@ -1,0 +1,40 @@
+{
+  "sql": "SELECT \n    public_water_sources.SystemName,\n    public_water_sources.WaterType,\n    public_water_sources.ConstructedDate \nFROM \n    public_water_sources \nWHERE \n    public_water_sources.WaterType = 'drinking';",
+  "problem_description": "### Query intent:\nThe SQL statement aims to select specific details from the `public_water_sources` table based on a predefined condition.\n\n### Detailed description:\n1. **Table**: The query targets the `public_water_sources` table, which presumably contains records about various water sources.\n2. **Columns**:\n   - `SystemName`: The name of the system associated with the water source.\n   - `WaterType`: The type of water (in this case, it's filtered to only include 'drinking').\n   - `ConstructedDate`: The date when the water source was constructed or became operational.\n3. **Condition**:\n   The `WHERE` clause filters the results so that only rows where `WaterType` is set to 'drinking' are included in the output.\n\n### Business scenario:\nThis SQL query could be used in a scenario where an organization needs to manage or audit its drinking water sources. For instance, an environmental agency might use this query to:\n\n- **Monitor compliance**: Ensure all drinking water systems comply with certain standards by checking their construction dates and types.\n- **Update records**: If there's a need to update the details of drinking water systems, this query helps identify which systems meet the criteria for modification.\n- **Planning**: When planning infrastructure improvements or new installations, knowing the details of existing drinking water sources can inform decisions on where to allocate resources.\n\n### User description:\nA user, possibly an environmental regulator or a facilities manager, might require this information to:\n- **Conduct regular inspections**: To verify that all drinking water systems are up-to-date and meet safety standards.\n- **Plan maintenance schedules**: By identifying drinking water sources constructed at certain times, maintenance teams can plan more efficiently, focusing on older systems that may need more attention.\n- **Emergency response**: In the event of a contamination alert, having a list of all drinking water systems (filtered by type) can help quickly identify which areas need immediate attention.",
+  "natural_language_query": "As a facilities manager responsible for ensuring the quality and safety of our public water supply, I often need to review and manage our drinking water sources. Specifically, I am interested in obtaining a list of all drinking water systems that have been operational since we started our current water management protocol, which began in 2015. I believe these systems are critical for maintaining the health and well-being of our community. Could you please provide me with the details of each such system, including their names and the exact dates they were put into operation? This information will help me in planning maintenance schedules and conducting regular inspections to ensure everything is running smoothly and safely.",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ from _ where _ =_ ;",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "lakepond_wbids_and_wbid_segments": [
+      "lakepond_wbids_and_wbid_segments.OBJECTID",
+      "lakepond_wbids_and_wbid_segments.Source",
+      "lakepond_wbids_and_wbid_segments.WBID",
+      "lakepond_wbids_and_wbid_segments.LAKEID",
+      "lakepond_wbids_and_wbid_segments.EventType",
+      "lakepond_wbids_and_wbid_segments.GISAcres"
+    ],
+    "public_water_sources": [
+      "public_water_sources.X",
+      "public_water_sources.Y",
+      "public_water_sources.TINWSF_IS_NUMBER",
+      "public_water_sources.WSID",
+      "public_water_sources.SystemName",
+      "public_water_sources.SystemType",
+      "public_water_sources.SystemStatus",
+      "public_water_sources.SystemPopulation",
+      "public_water_sources.FacilityName",
+      "public_water_sources.FacilityID",
+      "public_water_sources.FacilityStatus",
+      "public_water_sources.Availability",
+      "public_water_sources.WaterType",
+      "public_water_sources.ConstructedDate",
+      "public_water_sources.PermittedYield",
+      "public_water_sources.WellType",
+      "public_water_sources.Diameter_in",
+      "public_water_sources.WellDepth",
+      "public_water_sources.CasingDepth",
+      "public_water_sources.StaticWaterLevel"
+    ]
+  }
+}

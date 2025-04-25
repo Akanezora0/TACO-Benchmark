@@ -1,0 +1,26 @@
+{
+  "sql": "SELECT shijiaotongweiguidaoyanshixinxi3711.延时开始时间, shijiaotongweiguidaoyanshixinxi3711.延时结束时间 FROM shijiaotongweiguidaoyanshixinxi3711 WHERE shijiaotongweiguidaoyanshixinxi3711.延时线路 = '线路名称';",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从表 `shijiaotongweiguidaoyanshixinxi3711` 中查询特定线路的延时开始时间和延时结束时间。\n\n- **详细描述**：\n  - **涉及的表**：`shijiaotongweiguidaoyanshixinxi3711`（可能是一个存储轨道交通或类似交通系统延时信息的表）。\n  - **涉及的列**：\n    - `延时开始时间`：表示交通线路延时的开始时间。\n    - `延时结束时间`：表示交通线路延时的结束时间。\n    - `延时线路`：表示发生延时的线路名称。\n  - **条件**：`shijiaotongweiguidaoyanshixinxi3711.延时线路 = '线路名称'`，即只查询线路名称为“线路名称”的记录。\n\n- **业务场景**：\n  - 该查询可以用于交通管理系统或乘客信息服务系统中，帮助用户或管理员获取特定线路的延时时间信息。\n  - 例如，乘客可以通过查询了解某条线路的延时情况，以便调整出行计划；交通管理部门可以通过查询监控特定线路的延时情况，进行调度或通知。\n\n- **用户描述**：\n  - 乘客可能遇到的实际问题或需求：乘客在出行前或出行中，希望了解某条线路是否有延时，以及延时的具体时间段，以便决定是否改乘其他交通工具或调整出行时间。\n  - 交通管理部门的需求：交通管理部门需要实时监控各线路的运行状态，及时发现并处理延时问题，同时向公众发布准确的延时信息，以减少乘客的不便。",
+  "natural_language_query": "市民反映，今天早上准备乘坐地铁\"线路名称\"去上班，但是在站台等了很久都没车来，听其他乘客说好像线路出问题了。我想确认一下这条线路今天是不是真的延误了？如果延误的话具体是从几点开始到几点结束？因为要赶着去公司开会，需要根据延误时间决定要不要改乘出租车。来电咨询地铁线路延误的具体时间段。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ WHERE _ = _ ;",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweiguidaoyanshixinxi3711": [
+      "shijiaotongweiguidaoyanshixinxi3711.序号",
+      "shijiaotongweiguidaoyanshixinxi3711.总车次",
+      "shijiaotongweiguidaoyanshixinxi3711.延时开始时间",
+      "shijiaotongweiguidaoyanshixinxi3711.延时结束时间",
+      "shijiaotongweiguidaoyanshixinxi3711.延时线路",
+      "shijiaotongweiguidaoyanshixinxi3711.共享时间",
+      "shijiaotongweiguidaoyanshixinxi3711.更新时间"
+    ],
+    "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672": [
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.企业名称",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.评定等级",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.所属地区",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.年份",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.统一社会信用代码"
+    ]
+  }
+}

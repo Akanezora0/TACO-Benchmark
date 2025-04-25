@@ -1,0 +1,19 @@
+{
+  "sql": "SELECT DISTINCT huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829.по\u0011Ю║╠\u001aА, haidianqugonggongjianzhutingchechang3416.序号, haidianqugonggongjianzhutingchechang3416.停车场名称, haidianqugonggongjianzhutingchechang3416.经营单位 = '停车场类型' FROM huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829 INNER JOIN haidianqugonggongjianzhutingchechang3416 ON huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829.某列 = haidianqugonggongjianzhutingchechang3416.停车场名称 WHERE haidianqugonggongjianzhutingchechang3416.详细地址 IS NOT NULL",
+  "results": 0,
+  "sql skeleton": "SELECT DISTINCT _ ._ as _ ,_ ._ as _ ,_ ._ as _ ,_ ._ = _ as _ FROM _ where _ ._ = _",
+  "database": "交通服务",
+  "tables": {
+    "huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829": [
+      "huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829.по\u0011Ю║╠\u001aА",
+      "huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829.\u0001\u0001"
+    ],
+    "haidianqugonggongjianzhutingchechang3416": [
+      "haidianqugonggongjianzhutingchechang3416.序号",
+      "haidianqugonggongjianzhutingchechang3416.停车场名称",
+      "haidianqugonggongjianzhutingchechang3416.停车场类型",
+      "haidianqugonggongjianzhutingchechang3416.详细地址",
+      "haidianqugonggongjianzhutingchechang3416.经营单位"
+    ]
+  }
+}

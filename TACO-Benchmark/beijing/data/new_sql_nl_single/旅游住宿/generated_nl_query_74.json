@@ -1,0 +1,46 @@
+{
+  "sql": "SELECT \"shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.名称\", \"shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.级别\" FROM \"shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640\" WHERE \"shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.级别\" = '高级';",
+  "problem_description": "### **查询意图**：  \n该 SQL 语句的目的是从表 `shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640` 中查询所有“级别”为“高级”的项目的“名称”和“级别”信息。\n\n### **详细描述**：  \n1. **表名**：  \n   - `shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640`（可能是一个存储非物质文化遗产名录项目信息的表，表名较长，可能涉及“顺义区”或类似行政区域的非遗文化项目数据）。  \n\n2. **查询列**：  \n   - `名称`：表示非物质文化遗产项目的名称。  \n   - `级别`：表示该项目的级别（如“高级”“中级”“初级”等）。  \n\n3. **查询条件**：  \n   - `级别 = '高级'`：筛选出所有“级别”字段值为“高级”的记录。  \n\n### **业务场景**：  \n该查询可能用于以下业务场景：  \n1. **文化管理部门统计**：  \n   - 查询某个地区（如顺义区）所有高级别的非物质文化遗产项目，用于统计、展示或重点保护。  \n2. **项目筛选与评估**：  \n   - 筛选出高价值的非遗项目，以便优先进行资金支持、宣传推广或申报更高层级的保护名录。  \n3. **数据报告生成**：  \n   - 生成高级别非遗项目的清单，供政府、研究机构或公众查阅。  \n\n### **用户描述**：  \n1. **用户需求**：  \n   - 用户可能是文化部门的管理人员或研究人员，需要快速获取该地区所有高级别的非遗项目信息，以便进行后续管理或分析。  \n2. **实际问题**：  \n   - 非遗项目数量较多，但资源有限，需要优先关注和保护高价值的项目。  \n   - 用户可能需要制作报告或向上级汇报高级别非遗项目的现状。  \n3. **查询价值**：  \n   - 该 SQL 能帮助用户快速筛选出关键数据，避免手动查找，提高工作效率。",
+  "natural_language_query": "\"您好，我是顺义区文化局的工作人员，最近在整理咱们区里的非物质文化遗产项目。领导要求我们重点梳理那些特别重要的、级别比较高的非遗项目，说是要优先保护和支持。但是我这边资料太多了，一个个看特别费时间。想问问能不能帮忙查一下，咱们顺义区现在有哪些被认定为高级别的非遗项目？就是那些特别有价值、需要重点保护的传统文化项目。比如像什么老手艺、传统表演之类的，只要是'高级'的都算。我们这边急着要这个名单，好安排后续的保护工作和资金支持。对了，最好能把项目名称和具体级别都列出来，这样我们做报告的时候比较清楚。麻烦您了！\" \n\n（注：这段话体现了用户的工作场景和实际需求，包含了模糊的查询意图\"高级别的非遗项目\"，提到了工作用途但未涉及具体数据库结构，并带有工作紧急性的情感表达。）",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ WHERE _ = _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640": [
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.序号",
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.名称",
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.类别",
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.公布时间",
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.级别"
+    ],
+    "shiguihuaziranziyuanweitongxunshe1518": [
+      "shiguihuaziranziyuanweitongxunshe1518.HID",
+      "shiguihuaziranziyuanweitongxunshe1518.FATHERID",
+      "shiguihuaziranziyuanweitongxunshe1518.HNAME",
+      "shiguihuaziranziyuanweitongxunshe1518.OTHERNAME",
+      "shiguihuaziranziyuanweitongxunshe1518.CATEGORY",
+      "shiguihuaziranziyuanweitongxunshe1518.SUBCATEGOR",
+      "shiguihuaziranziyuanweitongxunshe1518.COUNTYNAME",
+      "shiguihuaziranziyuanweitongxunshe1518.STREETNAME",
+      "shiguihuaziranziyuanweitongxunshe1518.DYNASTY",
+      "shiguihuaziranziyuanweitongxunshe1518.SUBDYNASTY",
+      "shiguihuaziranziyuanweitongxunshe1518.ADDRESS",
+      "shiguihuaziranziyuanweitongxunshe1518.RANK",
+      "shiguihuaziranziyuanweitongxunshe1518.BATCH",
+      "shiguihuaziranziyuanweitongxunshe1518.PUBTIME",
+      "shiguihuaziranziyuanweitongxunshe1518.USERS",
+      "shiguihuaziranziyuanweitongxunshe1518.PURPOSE",
+      "shiguihuaziranziyuanweitongxunshe1518.OWNERSHIP",
+      "shiguihuaziranziyuanweitongxunshe1518.STATEEVALU",
+      "shiguihuaziranziyuanweitongxunshe1518.SINGLERELI",
+      "shiguihuaziranziyuanweitongxunshe1518.PROTECTION",
+      "shiguihuaziranziyuanweitongxunshe1518.ATTACHEDRE",
+      "shiguihuaziranziyuanweitongxunshe1518.RELATEDPEO",
+      "shiguihuaziranziyuanweitongxunshe1518.RELATEDEVE",
+      "shiguihuaziranziyuanweitongxunshe1518.PUBNAME",
+      "shiguihuaziranziyuanweitongxunshe1518.SOURCE",
+      "shiguihuaziranziyuanweitongxunshe1518.EDITOR",
+      "shiguihuaziranziyuanweitongxunshe1518.ISREDUNDAN"
+    ]
+  }
+}

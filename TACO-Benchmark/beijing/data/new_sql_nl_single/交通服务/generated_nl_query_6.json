@@ -1,0 +1,38 @@
+{
+  "sql": "SELECT xichengquxichengqugongjiaochezhanmingdan2478.X, xichengquxichengqugongjiaochezhanmingdan2478.Y, shijiaotongweiquanshiqicheweixiuqiyexinxi3673.统一社会信用代码, shijiaotongweiquanshiqicheweixiuqiyexinxi3673.业户名称 FROM xichengquxichengqugongjiaochezhanmingdan2478 INNER JOIN shijiaotongweiquanshiqicheweixiuqiyexinxi3673 ON xichengquxichengqugongjiaochezhanmingdan2478.ID = shijiaotongweiquanshiqicheweixiuqiyexinxi3673.ID WHERE xichengquxichengqugongjiaochezhanmingdan2478.别名 = '公交站名';",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是查询西城区公交车站点与汽车维修企业的关联信息，具体包括公交车站点的坐标（X, Y）以及对应维修企业的统一社会信用代码和业户名称。\n\n- **详细描述**：\n  - **涉及的表**：\n    - `xichengquxichengqugongjiaochezhanmingdan2478`：西城区公交车站点名单表，包含公交车站点的基本信息。\n    - `shijiaotongweiquanshiqicheweixiuqiyexinxi3673`：市交通委全市汽车维修企业信息表，包含维修企业的详细信息。\n  - **涉及的列**：\n    - `xichengquxichengqugongjiaochezhanmingdan2478.X` 和 `xichengquxichengqugongjiaochezhanmingdan2478.Y`：公交车站点的坐标信息。\n    - `shijiaotongweiquanshiqicheweixiuqiyexinxi3673.统一社会信用代码` 和 `shijiaotongweiquanshiqicheweixiuqiyexinxi3673.业户名称`：维修企业的统一社会信用代码和名称。\n  - **条件**：\n    - `xichengquxichengqugongjiaochezhanmingdan2478.别名 = '公交站名'`：筛选出别名为“公交站名”的公交车站点。\n    - `INNER JOIN` 连接条件：`xichengquxichengqugongjiaochezhanmingdan2478.ID = shijiaotongweiquanshiqicheweixiuqiyexinxi3673.ID`，通过 ID 字段关联公交车站点和维修企业。\n\n- **业务场景**：\n  - 该查询可以用于分析西城区公交车站点附近的汽车维修企业分布情况，帮助交通管理部门或市民快速找到附近的维修服务资源。\n  - 可能的业务场景包括：\n    - 交通管理部门规划维修服务网点，确保公交车站点附近有足够的维修资源。\n    - 市民或公交公司查找附近的维修企业，以便在公交车出现故障时快速获得维修服务。\n\n- **用户描述**：\n  - 用户可能是交通管理部门的工作人员，需要了解公交车站点与维修企业的关联情况，以便优化维修服务网点的布局。\n  - 用户也可能是公交公司或市民，希望在公交车出现故障时，能够快速找到附近的维修企业，确保公交车能够及时修复并恢复运营。",
+  "natural_language_query": "市民反映，最近在西城区乘坐公交车时发现车辆故障频发，想了解下公交站点附近有没有正规的汽车维修点。我经常在金融街、西单这些地方坐车，有时候等车时看到站牌上写着\"公交站名\"的站点，就想知道这些站点附近有没有靠谱的修车厂？最好能提供具体位置和维修企业的资质信息。因为之前遇到过公交车抛锚，司机说附近没有维修点，耽误了好长时间。希望有关部门能提供这方面的信息，方便我们乘客了解情况，也便于公交公司做好应急维修准备。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ ;",
+  "database": "交通服务",
+  "tables": {
+    "xichengquxichengqugongjiaochezhanmingdan2478": [
+      "xichengquxichengqugongjiaochezhanmingdan2478.ID",
+      "xichengquxichengqugongjiaochezhanmingdan2478.X",
+      "xichengquxichengqugongjiaochezhanmingdan2478.Y",
+      "xichengquxichengqugongjiaochezhanmingdan2478.SJXZQHMC",
+      "xichengquxichengqugongjiaochezhanmingdan2478.QXJXZQHMC",
+      "xichengquxichengqugongjiaochezhanmingdan2478.SJXZQHDM",
+      "xichengquxichengqugongjiaochezhanmingdan2478.QXJXZQHDM",
+      "xichengquxichengqugongjiaochezhanmingdan2478.POISJLY",
+      "xichengquxichengqugongjiaochezhanmingdan2478.RHBZDZ",
+      "xichengquxichengqugongjiaochezhanmingdan2478.CODE",
+      "xichengquxichengqugongjiaochezhanmingdan2478.CODEMC",
+      "xichengquxichengqugongjiaochezhanmingdan2478.GXSJ",
+      "xichengquxichengqugongjiaochezhanmingdan2478.POIMC",
+      "xichengquxichengqugongjiaochezhanmingdan2478.POIDZ",
+      "xichengquxichengqugongjiaochezhanmingdan2478.别名",
+      "xichengquxichengqugongjiaochezhanmingdan2478.POIFLMC",
+      "xichengquxichengqugongjiaochezhanmingdan2478.TEL",
+      "xichengquxichengqugongjiaochezhanmingdan2478.MC",
+      "xichengquxichengqugongjiaochezhanmingdan2478.DZ",
+      "xichengquxichengqugongjiaochezhanmingdan2478.DZMS",
+      "xichengquxichengqugongjiaochezhanmingdan2478.XL"
+    ],
+    "shijiaotongweiquanshiqicheweixiuqiyexinxi3673": [
+      "shijiaotongweiquanshiqicheweixiuqiyexinxi3673.统一社会信用代码",
+      "shijiaotongweiquanshiqicheweixiuqiyexinxi3673.业户名称",
+      "shijiaotongweiquanshiqicheweixiuqiyexinxi3673.业户地址"
+    ]
+  }
+}

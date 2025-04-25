@@ -1,0 +1,29 @@
+{
+  "sql": "SELECT \"pingguqupingguqugongjiaozhandianmingxi269.区内公交线路站点明细\", \"shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表\" FROM \"pingguqupingguqugongjiaozhandianmingxi269\" INNER JOIN \"shijiaotongweishoufeigonglushoufeibiaozhun543\" ON \"pingguqupingguqugongjiaozhandianmingxi269.区内公交线路站点明细\" = \"shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表\" WHERE \"pingguqupingguqugongjiaozhandianmingxi269.区内公交线路站点明细\" = '具体值' AND \"shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表\" = '具体值'",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从两个表中查询满足特定条件的记录，具体是查询平谷区公交线路站点明细和北京市收费公路收费标准表中匹配的记录。\n\n- **详细描述**：\n  - **涉及的表**：\n    - `pingguqupingguqugongjiaozhandianmingxi269`（平谷区公交线路站点明细表）\n    - `shijiaotongweishoufeigonglushoufeibiaozhun543`（北京市收费公路收费标准表）\n  - **涉及的列**：\n    - `pingguqupingguqugongjiaozhandianmingxi269.区内公交线路站点明细`（平谷区公交线路站点明细表中的站点明细列）\n    - `shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表`（北京市收费公路收费标准表中的收费标准列）\n  - **条件**：\n    - 两个表通过 `区内公交线路站点明细` 和 `北京市收费公路收费标准表` 列进行内连接（INNER JOIN）。\n    - 查询条件为 `区内公交线路站点明细` 列的值等于 `'具体值'`，并且 `北京市收费公路收费标准表` 列的值也等于 `'具体值'`。\n\n- **业务场景**：\n  - 该查询可能用于分析平谷区公交线路站点与北京市收费公路收费标准之间的关联关系。例如，可能需要了解某个公交站点附近的收费公路收费标准，或者检查公交线路是否与收费公路有重叠或关联。\n  - 另一个可能的业务场景是验证公交线路站点与收费公路收费标准的一致性，确保公交线路的规划与收费公路的管理标准相符。\n\n- **用户描述**：\n  - 用户可能是交通规划部门的工作人员，他们需要了解平谷区公交线路站点与北京市收费公路收费标准之间的关系，以便优化公交线路规划或调整收费标准。\n  - 用户也可能是公交公司的运营人员，他们需要确保公交线路的站点设置不会与收费公路的管理标准冲突，从而避免运营中的法律或管理问题。\n  - 用户还可能遇到的具体问题是：某个公交站点是否位于收费公路附近，或者该站点的乘客是否需要支付额外的费用才能使用附近的收费公路。",
+  "natural_language_query": "市民反映，平谷区这边新开通的公交线路站点设置好像有点问题。我经常坐的852路公交车，在平谷城区到马坊这段路上，有几个站点离京平高速的收费站特别近。想咨询一下这些公交站点和高速收费路段之间有没有什么关联规定？比如会不会影响公交车的通行费用，或者乘客在这些站点上下车是否需要额外支付高速费？最近有乘客投诉说公交票价突然涨了，我们怀疑是不是和高速收费调整有关，能不能帮忙查查这些公交站点和收费公路标准之间具体是怎么规定的？",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ ,_ from _ where _ =_ and _ =_",
+  "database": "交通服务",
+  "tables": {
+    "pingguqupingguqugongjiaozhandianmingxi269": [
+      "pingguqupingguqugongjiaozhandianmingxi269.区内公交线路站点明细",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 1",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 2",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 3",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 4",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 5",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 6",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 7",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 8"
+    ],
+    "shijiaotongweishoufeigonglushoufeibiaozhun543": [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 2",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 3",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 4",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 5"
+    ]
+  }
+}

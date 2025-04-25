@@ -1,0 +1,26 @@
+{
+  "sql": "SELECT \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号\", \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称\", \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址\" FROM \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076\" - \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\" WHERE \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC\" = '具体名称';",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从表 `shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076` 中查询特定专柜的信息，同时排除那些在表 `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374` 中具有特定名称的记录。\n\n- **详细描述**：\n  - **涉及的表**：\n    - `shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076`：该表可能存储了清真食品专柜的相关信息，包括专柜的标识牌号、名称和地址等。\n    - `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374`：该表可能存储了餐饮服务许可证的相关信息，包括经营者的名称（`JYZMC`）等。\n  - **涉及的列**：\n    - `shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号`：专柜的唯一标识牌号。\n    - `shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称`：专柜的名称。\n    - `shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址`：专柜的地址。\n    - `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC`：餐饮服务许可证的经营者的具体名称。\n  - **条件**：\n    - 查询结果排除了在 `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374` 表中 `JYZMC` 列值为 `'具体名称'` 的记录。\n\n- **业务场景**：\n  - 该查询可能用于监管或统计清真食品专柜的分布情况，同时排除那些已经获得餐饮服务许可证的经营者。例如，政府部门可能需要了解哪些清真食品专柜尚未办理相关许可证，以便进行后续的监管或指导工作。\n\n- **用户描述**：\n  - 用户可能是政府监管部门的工作人员，他们需要统计清真食品专柜的基本信息，并识别出那些尚未办理餐饮服务许可证的专柜。这样可以帮助他们有针对性地进行监管，确保清真食品专柜的合规经营。用户的需求可能是为了确保清真食品的规范化和合法化，避免未经许可的经营者进入市场。",
+  "natural_language_query": "市民反映，最近在检查清真食品专柜时发现有些摊位可能存在不合规经营的情况。想了解一下目前市场上清真食品专柜的基本情况，包括专柜名称和具体位置。特别关注那些还没有办理餐饮服务许可证的专柜，因为之前查到\"具体名称\"这家是有许可证的，要排除掉。希望能帮忙统计一下其他专柜的信息，方便我们后续开展监管工作。来电咨询清真食品专柜的合规经营情况。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ WHERE _ = _ ;",
+  "database": "餐饮美食",
+  "tables": {
+    "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076": [
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址"
+    ],
+    "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374": [
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYXM",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.FZRQ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.YXQZ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.DWMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.EXCHANGETIME"
+    ]
+  }
+}

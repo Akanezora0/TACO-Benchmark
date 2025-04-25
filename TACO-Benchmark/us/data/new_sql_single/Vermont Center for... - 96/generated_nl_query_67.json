@@ -1,0 +1,40 @@
+{
+  "sql": "SELECT wildlife_management_units.OBJECTID, public_water_sources.WellType FROM wildlife_management_units INNER JOIN public_water_sources ON wildlife_management_units.BOUNDARY = public_water_sources.WellType WHERE public_water_sources.WellType = 'Aquifer' ;",
+  "problem_description": "### Query intent:\nThe SQL statement is designed to retrieve specific data from two related tables (`wildlife_management_units` and `public_water_sources`) with the goal of identifying which `OBJECTID` (a unique identifier for each entry) in the `wildlife_management_units` table corresponds to a `WellType` of 'Aquifer' in the `public_water_sources` table.\n\n### Detailed description:\n1. **Table and Columns Involved:**\n   - **`wildlife_management_units`** contains at least an `OBJECTID` column, which serves as a primary key for uniquely identifying each record in this table.\n   - **`public_water_sources`** has a `WellType` column, which categorizes different types of water sources, including but not limited to 'Aquifer'.\n   - The `BOUNDARY` column in `wildlife_management_units` likely corresponds to a condition or feature in `public_water_sources` that links these two tables.\n\n2. **Join Operation:**\n   - An **INNER JOIN** is performed between `wildlife_management_units` and `public_water_sources` based on the matching values in the `BOUNDARY` column of `wildlife_management_units` and the `WellType` column of `public_water_sources`. This ensures that only records where these two columns match are included in the result set.\n\n3. **Where Clause:**\n   - The **WHERE** clause filters the results to only include those rows where the `WellType` in the `public_water_sources` table is specifically 'Aquifer'. This narrows down the focus to a particular type of water source.\n\n### Business Scenario:\nThis SQL query might be useful in environmental management or conservation efforts. For instance, it could help identify specific areas within wildlife management units that have access to aquifer resources. This information could be crucial for planning water extraction limits, assessing the impact of water usage on wildlife habitats, or determining areas for potential water conservation initiatives.\n\n### User Description:\nA wildlife conservation officer or an environmental scientist might need this information to understand the distribution and accessibility of groundwater resources within protected areas. This could inform decisions on sustainable resource management, habitat protection, or ecological restoration projects. By knowing which parts of their management units have aquifer water sources, they can make more informed choices about how to allocate resources and plan interventions that are both effective and environmentally responsible.",
+  "natural_language_query": "A wildlife conservation officer is seeking data to support their ongoing efforts in environmental management. Specifically, they require a list of unique identifiers (OBJECTID) for areas within their wildlife management units where the water source is identified as an aquifer. These areas are of particular interest due to the potential impact on local ecosystems and the need for sustainable resource allocation.\n\nTo achieve this, the officer plans to execute a SQL query. This query involves joining two databases: one containing details of the wildlife management units and another with information on public water sources. The join operation will link these databases based on a shared attribute—likely the geographical boundary (BOUNDARY) in the wildlife management units database that corresponds to features or conditions in the water sources database.\n\nThe criteria for this query are stringent. It requires an exact match for the 'WellType' category, specifically 'Aquifer', within the public water sources database. By doing so, the query aims to filter out all other types of water sources, focusing solely on aquifers.\n\nThe outcome of this query will provide the conservation officer with a clear list of OBJECTIDs for areas within their wildlife management units that have direct access to aquifer resources. This information is invaluable for strategic planning, such as setting limits on water extraction, conducting environmental impact assessments, and designing conservation initiatives that protect wildlife habitats while ensuring sustainable water use.\n\nIn essence, the natural language query would encapsulate the officer's request as follows:\n\n\"Retrieve a comprehensive list of unique identifiers (OBJECTID) for areas within our wildlife management units where the water source is specifically identified as an aquifer. This information is critical for our ongoing efforts in environmental conservation and sustainable resource management.\"",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ WHERE _ = _ ;",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "wildlife_management_units": [
+      "wildlife_management_units.OBJECTID",
+      "wildlife_management_units.ABNAME",
+      "wildlife_management_units.AGENCY",
+      "wildlife_management_units.DEPT",
+      "wildlife_management_units.DIV",
+      "wildlife_management_units.BOUNDARY"
+    ],
+    "public_water_sources": [
+      "public_water_sources.X",
+      "public_water_sources.Y",
+      "public_water_sources.TINWSF_IS_NUMBER",
+      "public_water_sources.WSID",
+      "public_water_sources.SystemName",
+      "public_water_sources.SystemType",
+      "public_water_sources.SystemStatus",
+      "public_water_sources.SystemPopulation",
+      "public_water_sources.FacilityName",
+      "public_water_sources.FacilityID",
+      "public_water_sources.FacilityStatus",
+      "public_water_sources.Availability",
+      "public_water_sources.WaterType",
+      "public_water_sources.ConstructedDate",
+      "public_water_sources.PermittedYield",
+      "public_water_sources.WellType",
+      "public_water_sources.Diameter_in",
+      "public_water_sources.WellDepth",
+      "public_water_sources.CasingDepth",
+      "public_water_sources.StaticWaterLevel"
+    ]
+  }
+}

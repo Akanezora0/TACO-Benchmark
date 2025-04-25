@@ -1,0 +1,4109 @@
+{
+  "sql": "SELECT sga_phase_2_assessed_reaches.RID, outdoor_recreation_sites_inventory.CO_ADDRESS FROM sga_phase_2_assessed_reaches INNER JOIN outdoor_recreation_sites_inventory ON sga_phase_2_assessed_reaches.OBJECTID = outdoor_recreation_sites_inventory.OBJECTID WHERE outdoor_recreation_sites_inventory.CO_ADDRESS IS NOT NULL",
+  "problem_description": "### Query intent:\nThe SQL statement aims to retrieve specific information from two related databases, `sga_phase_2_assessed_reaches` and `outdoor_recreation_sites_inventory`. The primary goal is to fetch unique RIDs (Record Identification) from the `sga_phase_2_assessed_reaches` table and corresponding CO_ADDRESSES (Street Addresses) from the `outdoor_recreation_sites_inventory` table.\n\n### Detailed description:\n- **Tables Involved**: \n    - `sga_phase_2_assessed_reaches`: This table likely contains data about assessed reaches (possibly river segments or trails) within a phase 2 project. It includes a column `RID` for Record Identification.\n    - `outdoor_recreation_sites_inventory`: This table contains inventory data about outdoor recreation sites, possibly including their addresses. It includes an `OBJECTID` column for identification and a `CO_ADDRESS` column for street addresses.\n\n- **Columns Selected**:\n    - `RID`: A unique identifier for each record in the `sga_phase_2_assessed_reaches` table.\n    - `CO_ADDRESS`: The street address associated with each outdoor recreation site in the `outdoor_recreation_sites_inventory` table.\n\n- **Join Condition**:\n    - The `INNER JOIN` clause connects these two tables based on matching `OBJECTID` values in both tables. This ensures that only records where there is a direct correspondence between the two datasets are included in the result set.\n\n- **Filtering Condition**:\n    - The `WHERE` clause filters out any rows from `outdoor_recreation_sites_inventory` where the `CO_ADDRESS` is `NULL`. This means only records with valid street addresses will be returned.\n\n### Business Scenario:\nThis query might be used by environmental or recreation management agencies to gather detailed information about specific assessed reaches that are near or directly connected to outdoor recreation sites. For instance, it could help in planning maintenance routes, identifying potential access points for visitors, or assessing ecological impacts on recreational areas.\n\n### User Description:\nUsers might need this information to:\n- Plan maintenance schedules for river segments that are close to popular hiking trails or picnic areas.\n- Ensure accessibility and safety at recreational sites by knowing the exact locations of infrastructure like bridges or campgrounds.\n- Conduct environmental impact assessments for new developments near natural resources, ensuring compliance with regulations and minimizing negative effects on wildlife habitats and public access routes.\n\nBy executing this SQL query, users can efficiently retrieve the necessary information to make informed decisions regarding resource management, planning, and compliance",
+  "natural_language_query": "Hello,\n\nI'm trying to gather some information about outdoor recreational sites and their nearby assessed reaches for a project I'm working on. Specifically, I need to pull out unique Record IDs (RID) from the 'sga_phase_2_assessed_reaches' database table and match them with the corresponding street addresses (CO_ADDRESS) found in the 'outdoor_recreation_sites_inventory' table. \n\nTo achieve this, I plan to use an INNER JOIN operation to connect these two tables based on the matching OBJECTIDs, ensuring that I get accurate and relevant data. Additionally, I want to exclude any entries in the 'outdoor_recreation_sites_inventory' that do not have a valid street address, which is indicated by the 'CO_ADDRESS' field being NULL.\n\nThis query would be incredibly useful for my project as it allows me to identify key points of interest, such as access routes or potential environmental impacts, around recreational areas. For instance, it could help in planning maintenance routes, understanding visitor access points, or conducting ecological impact assessments.\n\nCould you please guide me on how to formulate this SQL query? Any assistance you can provide would be greatly appreciated.\n\nThank you,\n[Your Name]",
+  "results": [
+    [
+      6,
+      "184 PORTLAND ST."
+    ],
+    [
+      7,
+      "BOX 730"
+    ],
+    [
+      9,
+      "P.O. BOX 358"
+    ],
+    [
+      4,
+      "P.O. BOX 514"
+    ],
+    [
+      10,
+      "RR 1 BOX 119"
+    ],
+    [
+      28,
+      "CORLISS HEIGHTS"
+    ],
+    [
+      28,
+      " "
+    ],
+    [
+      29,
+      "P.O. BOX 207"
+    ],
+    [
+      29,
+      "RR 1 BOX 1365"
+    ],
+    [
+      30,
+      " "
+    ],
+    [
+      30,
+      "RR 1 BOX 1290"
+    ],
+    [
+      30,
+      "180 PORTLAND STREET"
+    ],
+    [
+      3,
+      "180 PORTLAND STREET"
+    ],
+    [
+      3,
+      "324 MAIN STREET"
+    ],
+    [
+      19,
+      " "
+    ],
+    [
+      19,
+      " "
+    ],
+    [
+      5,
+      "180 PORTLAND STREET"
+    ],
+    [
+      5,
+      "180 PORTLAND STREET"
+    ],
+    [
+      11,
+      "SHADOW LAKE ROAD"
+    ],
+    [
+      11,
+      "180 PORTLAND STREET"
+    ],
+    [
+      17,
+      "180 PORTLAND STREET"
+    ],
+    [
+      17,
+      "180 PORTLAND STREET"
+    ],
+    [
+      17,
+      " "
+    ],
+    [
+      17,
+      "RR 2 BOX 170"
+    ],
+    [
+      18,
+      "SCHOOL STREET"
+    ],
+    [
+      18,
+      "180 PORTLAND STREET"
+    ],
+    [
+      18,
+      "103 SOUTH MAIN STREET"
+    ],
+    [
+      1,
+      "MAIN STREET"
+    ],
+    [
+      3,
+      "RR 1 BOX 775"
+    ],
+    [
+      4,
+      "MAIN STREET"
+    ],
+    [
+      5,
+      "RR 1 BOX 775"
+    ],
+    [
+      6,
+      "P.O. BOX 73"
+    ],
+    [
+      2,
+      "P.O. BOX 31"
+    ],
+    [
+      2,
+      "27 STATE STREET"
+    ],
+    [
+      14,
+      "P.O. BOX 137"
+    ],
+    [
+      1,
+      "RR 1 BOX 617"
+    ],
+    [
+      1,
+      "P.O. BOX 25"
+    ],
+    [
+      7,
+      "BOX 54"
+    ],
+    [
+      7,
+      "P.O. BOX 137"
+    ],
+    [
+      7,
+      "P.O. BOX 25"
+    ],
+    [
+      8,
+      "47 RIDGE ROAD"
+    ],
+    [
+      8,
+      "180  PORTLAND STREET"
+    ],
+    [
+      8,
+      "180 PORTLAND STREET"
+    ],
+    [
+      12,
+      "180 PORTLAND STREET"
+    ],
+    [
+      12,
+      "HEERMAN SMITH FARM ROAD"
+    ],
+    [
+      12,
+      "P.O. BOX 725"
+    ],
+    [
+      17,
+      "P.O. BOX 405"
+    ],
+    [
+      17,
+      "VETERANS AVENUE"
+    ],
+    [
+      21,
+      "RR 1 BOX 76"
+    ],
+    [
+      3,
+      "103 SOUTH MAIN STREET"
+    ],
+    [
+      9,
+      "P.O. BOX 222"
+    ],
+    [
+      28,
+      "180 PORTLAND STREET"
+    ],
+    [
+      30,
+      "P.O. BOX R"
+    ],
+    [
+      34,
+      "184 PORTLAND STREET"
+    ],
+    [
+      1,
+      "180 PORTLAND STREET"
+    ],
+    [
+      1,
+      "RFD"
+    ],
+    [
+      1,
+      "P.O. BOX 405"
+    ],
+    [
+      1,
+      "RD 2, BOX 316"
+    ],
+    [
+      1,
+      "180 PORTLAND STREET"
+    ],
+    [
+      2,
+      "184 PORTLAND STREET"
+    ],
+    [
+      2,
+      "RR 1 BOX 38"
+    ],
+    [
+      29,
+      "184 PORTLAND STREET"
+    ],
+    [
+      29,
+      "180 PORTLAND STREET"
+    ],
+    [
+      32,
+      "184 PORTLAND STREET"
+    ],
+    [
+      32,
+      "180 PORTLAND STREET"
+    ],
+    [
+      33,
+      "180 PORTLAND STREET"
+    ],
+    [
+      33,
+      " "
+    ],
+    [
+      6,
+      "RFD 1 BOX 50C"
+    ],
+    [
+      6,
+      "P.O. BOX 57"
+    ],
+    [
+      7,
+      "P.O. BOX 45"
+    ],
+    [
+      7,
+      "180 PORTLAND STREET"
+    ],
+    [
+      8,
+      "180 PORTLAND STREET"
+    ],
+    [
+      8,
+      "HCR 70 BOX 57"
+    ],
+    [
+      8,
+      "P.O. BOX 45"
+    ],
+    [
+      10,
+      "180 PORTLAND STREET"
+    ],
+    [
+      10,
+      "180 PORTLAND STREET"
+    ],
+    [
+      10,
+      "RR 1 BOX 358"
+    ],
+    [
+      10,
+      "180 PORTLAND STREET"
+    ],
+    [
+      5,
+      "HCR 61 BOX 26"
+    ],
+    [
+      5,
+      "184 PORTLAND ST."
+    ],
+    [
+      19,
+      "184 PORTLAND ST."
+    ],
+    [
+      19,
+      "180 PORTLAND STREET"
+    ],
+    [
+      24,
+      "RR 2 BOX 854"
+    ],
+    [
+      24,
+      "RR 1 BOX 854"
+    ],
+    [
+      25,
+      "RD 2 BOX 626"
+    ],
+    [
+      25,
+      "180 PORTLAND STREET"
+    ],
+    [
+      22,
+      "180 PORTLAND STREET"
+    ],
+    [
+      22,
+      "180 PORTLAND STREET"
+    ],
+    [
+      13,
+      "RR 1 BOX 194A"
+    ],
+    [
+      13,
+      "P.O. BOX 377"
+    ],
+    [
+      36,
+      "103 SOUTH MAIN STREET"
+    ],
+    [
+      36,
+      "103 SOUTH MAIN STREET"
+    ],
+    [
+      26,
+      " "
+    ],
+    [
+      28,
+      "184 PORTLAND STREET"
+    ],
+    [
+      3,
+      "RR 1 BOX 17"
+    ],
+    [
+      3,
+      "180 PORTLAND STREET"
+    ],
+    [
+      6,
+      "TOWN CLERK"
+    ],
+    [
+      6,
+      "BOX 129C"
+    ],
+    [
+      29,
+      "ROUTE 1 BOX 10C"
+    ],
+    [
+      29,
+      "180 PORTLAND STREET"
+    ],
+    [
+      37,
+      "180 PORTLAND STREET"
+    ],
+    [
+      37,
+      "P.O. BOX 127"
+    ],
+    [
+      37,
+      "HCR 30 BOX 2A"
+    ],
+    [
+      37,
+      "RFD 1 BOX 198"
+    ],
+    [
+      36,
+      "RR 1 BOX 26E"
+    ],
+    [
+      36,
+      "P.O. BOX 15"
+    ],
+    [
+      1,
+      " "
+    ],
+    [
+      2,
+      "P.O. BOX 316"
+    ],
+    [
+      4,
+      "ROUTE 2"
+    ],
+    [
+      5,
+      "P.O. BOX 680"
+    ],
+    [
+      6,
+      "HCR 11 BOX 856"
+    ],
+    [
+      7,
+      "180 PORTLAND STREET"
+    ],
+    [
+      10,
+      " "
+    ],
+    [
+      11,
+      "180 PORTLAND STREET"
+    ],
+    [
+      13,
+      "RR1 BOX 64"
+    ],
+    [
+      17,
+      " "
+    ],
+    [
+      3,
+      "P.O. BOX 244"
+    ],
+    [
+      3,
+      "P.O. BOX 244"
+    ],
+    [
+      8,
+      "180 PORTLAND STREET"
+    ],
+    [
+      8,
+      "180 PORTLAND STREET"
+    ],
+    [
+      8,
+      "180 PORTLAND STREET"
+    ],
+    [
+      9,
+      "180 PORTLAND STREET"
+    ],
+    [
+      9,
+      "180 PORTLAND STREET"
+    ],
+    [
+      9,
+      "P.O. BOX 193"
+    ],
+    [
+      14,
+      "RR2 BOX 3"
+    ],
+    [
+      14,
+      "P.O. BOX 193"
+    ],
+    [
+      15,
+      "RR2 BOX 3"
+    ],
+    [
+      15,
+      "184 PORTLAND STREET"
+    ],
+    [
+      7,
+      " "
+    ],
+    [
+      8,
+      " "
+    ],
+    [
+      9,
+      " "
+    ],
+    [
+      10,
+      "103 SOUTH MAIN STREET"
+    ],
+    [
+      11,
+      "184 PORTLAND STREET"
+    ],
+    [
+      31,
+      "184 PORTLAND ST."
+    ],
+    [
+      35,
+      "184 PORTLAND ST."
+    ],
+    [
+      68,
+      "26 WESTERN AVENUE"
+    ],
+    [
+      88,
+      " "
+    ],
+    [
+      89,
+      "C/O CATHERINE BEATTIE TOLL"
+    ],
+    [
+      94,
+      "180 PORTLAND STREET"
+    ],
+    [
+      95,
+      "P.O. BOX 176"
+    ],
+    [
+      13,
+      "BOX 355"
+    ],
+    [
+      14,
+      "BOX 730"
+    ],
+    [
+      21,
+      "P.O. BOX 369"
+    ],
+    [
+      22,
+      "P.O. BOX 1458"
+    ],
+    [
+      24,
+      "413 BARROWS ROAD"
+    ],
+    [
+      50,
+      "RR 1 BOX 6820"
+    ],
+    [
+      6,
+      "P.O. BOX 332"
+    ],
+    [
+      6,
+      "JOHNSON TOWN CLERK"
+    ],
+    [
+      12,
+      "P.O. BOX 29"
+    ],
+    [
+      12,
+      "323 LAKE STREET"
+    ],
+    [
+      32,
+      "P.O. BOX 11"
+    ],
+    [
+      32,
+      "P.O. BOX 557, RTE. 2"
+    ],
+    [
+      32,
+      "324 NORTH MAIN STREET"
+    ],
+    [
+      32,
+      "P.O. BOX 93"
+    ],
+    [
+      33,
+      "ROUTE 108"
+    ],
+    [
+      33,
+      "RR 2 BOX 5278"
+    ],
+    [
+      33,
+      "RR 2 BOX 4970"
+    ],
+    [
+      34,
+      "JCT. HILL RD., BOX 5780"
+    ],
+    [
+      34,
+      "P.O. BOX 23"
+    ],
+    [
+      34,
+      "BOX 160"
+    ],
+    [
+      36,
+      " "
+    ],
+    [
+      36,
+      "RD 1 BOX 1830"
+    ],
+    [
+      36,
+      "RR 1 BOX 1550"
+    ],
+    [
+      67,
+      "RR 1 BOX 1057"
+    ],
+    [
+      67,
+      "RR 1  BOX 1062"
+    ],
+    [
+      69,
+      "P.O. BOX 201"
+    ],
+    [
+      69,
+      "BOX 17"
+    ],
+    [
+      90,
+      "BOX 17"
+    ],
+    [
+      90,
+      "RD 1 BOX 212"
+    ],
+    [
+      15,
+      "P.O. BOX 612"
+    ],
+    [
+      15,
+      "ENOSBURG TOWN OFFICES"
+    ],
+    [
+      15,
+      "P.O. BOX 737"
+    ],
+    [
+      15,
+      " "
+    ],
+    [
+      23,
+      "RD 2 BOX 3300"
+    ],
+    [
+      23,
+      "SCHOOL STREET"
+    ],
+    [
+      37,
+      "TOWN OFFICES"
+    ],
+    [
+      37,
+      "P.O. BOX 20"
+    ],
+    [
+      38,
+      "TOWN OFFICES, P.O. BOX 67"
+    ],
+    [
+      38,
+      " "
+    ],
+    [
+      1,
+      "BOX 720"
+    ],
+    [
+      2,
+      "RR 1"
+    ],
+    [
+      3,
+      "103 SOUTH MAIN STREET"
+    ],
+    [
+      5,
+      "RD 1"
+    ],
+    [
+      6,
+      "27 STATE STREET"
+    ],
+    [
+      10,
+      " "
+    ],
+    [
+      12,
+      "BOX 4225, RD 1"
+    ],
+    [
+      13,
+      "71 SOUTH MAIN ST."
+    ],
+    [
+      19,
+      "LOWER WELDON ST."
+    ],
+    [
+      67,
+      "RTE. 2, BOX 144A"
+    ],
+    [
+      68,
+      " "
+    ],
+    [
+      46,
+      "RR 1, BOX 88"
+    ],
+    [
+      47,
+      "P.O. BOX 202"
+    ],
+    [
+      52,
+      "103 SOUTH MAIN STREET"
+    ],
+    [
+      53,
+      "266 COLLEGE ST."
+    ],
+    [
+      54,
+      "103 S. MAIN ST."
+    ],
+    [
+      56,
+      "P.O. BOX 183"
+    ],
+    [
+      11,
+      "P.O. BOX 49"
+    ],
+    [
+      11,
+      " "
+    ],
+    [
+      14,
+      "WEST SHORE ROAD"
+    ],
+    [
+      14,
+      "SCHOOL STREET"
+    ],
+    [
+      15,
+      "565 ST. GEORGE ST."
+    ],
+    [
+      15,
+      " "
+    ],
+    [
+      17,
+      "OLD QUARRY RD. BOX 32"
+    ],
+    [
+      17,
+      " "
+    ],
+    [
+      17,
+      "103 SOUTH MAIN STREET"
+    ],
+    [
+      18,
+      " "
+    ],
+    [
+      18,
+      " "
+    ],
+    [
+      48,
+      " "
+    ],
+    [
+      48,
+      " "
+    ],
+    [
+      82,
+      " "
+    ],
+    [
+      82,
+      " "
+    ],
+    [
+      49,
+      " "
+    ],
+    [
+      49,
+      " "
+    ],
+    [
+      49,
+      " "
+    ],
+    [
+      50,
+      " "
+    ],
+    [
+      50,
+      " "
+    ],
+    [
+      51,
+      " "
+    ],
+    [
+      51,
+      " "
+    ],
+    [
+      66,
+      " "
+    ],
+    [
+      66,
+      " "
+    ],
+    [
+      66,
+      " "
+    ],
+    [
+      69,
+      " "
+    ],
+    [
+      69,
+      " "
+    ],
+    [
+      55,
+      " "
+    ],
+    [
+      55,
+      " "
+    ],
+    [
+      2,
+      " "
+    ],
+    [
+      4,
+      " "
+    ],
+    [
+      5,
+      " "
+    ],
+    [
+      6,
+      " "
+    ],
+    [
+      9,
+      " "
+    ],
+    [
+      15,
+      " "
+    ],
+    [
+      16,
+      " "
+    ],
+    [
+      19,
+      " "
+    ],
+    [
+      20,
+      " "
+    ],
+    [
+      21,
+      " "
+    ],
+    [
+      22,
+      " "
+    ],
+    [
+      26,
+      " "
+    ],
+    [
+      27,
+      " "
+    ],
+    [
+      28,
+      " "
+    ],
+    [
+      29,
+      " "
+    ],
+    [
+      30,
+      " "
+    ],
+    [
+      31,
+      " "
+    ],
+    [
+      50,
+      " "
+    ],
+    [
+      39,
+      " "
+    ],
+    [
+      41,
+      " "
+    ],
+    [
+      1,
+      " "
+    ],
+    [
+      1,
+      " "
+    ],
+    [
+      3,
+      " "
+    ],
+    [
+      3,
+      "RR2 BOX 283"
+    ],
+    [
+      32,
+      " "
+    ],
+    [
+      32,
+      " "
+    ],
+    [
+      47,
+      " "
+    ],
+    [
+      47,
+      " "
+    ],
+    [
+      51,
+      " "
+    ],
+    [
+      51,
+      " "
+    ],
+    [
+      51,
+      " "
+    ],
+    [
+      38,
+      " "
+    ],
+    [
+      38,
+      " "
+    ],
+    [
+      43,
+      " "
+    ],
+    [
+      43,
+      " "
+    ],
+    [
+      40,
+      " "
+    ],
+    [
+      40,
+      " "
+    ],
+    [
+      42,
+      " "
+    ],
+    [
+      42,
+      " "
+    ],
+    [
+      1,
+      " "
+    ],
+    [
+      2,
+      " "
+    ],
+    [
+      1,
+      "RIDGE ROAD"
+    ],
+    [
+      2,
+      " "
+    ],
+    [
+      3,
+      " "
+    ],
+    [
+      4,
+      " "
+    ],
+    [
+      5,
+      "103 SOUTH MAIN STREET"
+    ],
+    [
+      6,
+      "103 SOUTH MAIN STREET"
+    ],
+    [
+      7,
+      "PO BOX 66"
+    ],
+    [
+      11,
+      " "
+    ],
+    [
+      13,
+      "RR2 BOX 3050"
+    ],
+    [
+      14,
+      "PO BOX 100"
+    ],
+    [
+      8,
+      " "
+    ],
+    [
+      8,
+      " "
+    ],
+    [
+      8,
+      "RT 100 BOX 100"
+    ],
+    [
+      9,
+      "RT 100"
+    ],
+    [
+      9,
+      " "
+    ],
+    [
+      15,
+      " "
+    ],
+    [
+      15,
+      "PO BOX 7"
+    ],
+    [
+      2,
+      "P.O. BOX 463"
+    ],
+    [
+      3,
+      " "
+    ],
+    [
+      4,
+      " "
+    ],
+    [
+      5,
+      " "
+    ],
+    [
+      6,
+      "ROUTE 1 BOX 302"
+    ],
+    [
+      8,
+      " "
+    ],
+    [
+      9,
+      " "
+    ],
+    [
+      1,
+      "RD #2"
+    ],
+    [
+      1,
+      " "
+    ],
+    [
+      7,
+      " "
+    ],
+    [
+      7,
+      "19 BUCK ROAD"
+    ],
+    [
+      17,
+      " "
+    ],
+    [
+      17,
+      " "
+    ],
+    [
+      2,
+      "PO BOX 75, RT12"
+    ],
+    [
+      4,
+      " "
+    ],
+    [
+      14,
+      "11 MEADOW LANE"
+    ],
+    [
+      1,
+      "54 RIVER STREET"
+    ],
+    [
+      1,
+      "14 THE GREEN"
+    ],
+    [
+      1,
+      " "
+    ],
+    [
+      1,
+      "15 SOUTH STREET"
+    ],
+    [
+      3,
+      "54 RIVER STREET"
+    ],
+    [
+      3,
+      "14 THE GREEN"
+    ],
+    [
+      3,
+      " "
+    ],
+    [
+      5,
+      "SOUTH ROAD"
+    ],
+    [
+      5,
+      "BRIDGEWATER CORNERS"
+    ],
+    [
+      6,
+      " "
+    ],
+    [
+      6,
+      " "
+    ],
+    [
+      6,
+      "KILLINGTON ROAD"
+    ],
+    [
+      15,
+      "15 BRIDGE STREET"
+    ],
+    [
+      15,
+      "HOJO COMPLEX"
+    ],
+    [
+      16,
+      "15 BRIDGE STREET"
+    ],
+    [
+      16,
+      " "
+    ],
+    [
+      17,
+      "15 BRIDGE STREET"
+    ],
+    [
+      17,
+      "15 BRIDGE STREET"
+    ],
+    [
+      18,
+      "HIGHLAND AVE"
+    ],
+    [
+      18,
+      "HIGHLAND AVE"
+    ],
+    [
+      18,
+      "15 BRIDGE STREET"
+    ],
+    [
+      18,
+      "15 BRIDGE STREET"
+    ],
+    [
+      18,
+      "15 BRIDGE STREET"
+    ],
+    [
+      19,
+      "15 BRIDGE STREET"
+    ],
+    [
+      19,
+      "2 TAFT AVE."
+    ],
+    [
+      19,
+      "15 BRIDGE STREET"
+    ],
+    [
+      19,
+      "400 WOODSTOCK RD"
+    ],
+    [
+      20,
+      " "
+    ],
+    [
+      20,
+      "14 THE GREEN"
+    ],
+    [
+      20,
+      "PO BOX 488"
+    ],
+    [
+      20,
+      "RIVER RD.,RR1 BOX542"
+    ],
+    [
+      21,
+      "PO BOX 130"
+    ],
+    [
+      21,
+      "14 THE GREEN"
+    ],
+    [
+      21,
+      " "
+    ],
+    [
+      22,
+      " "
+    ],
+    [
+      22,
+      " "
+    ],
+    [
+      8,
+      "103 SOUTH MAIN STREET"
+    ],
+    [
+      8,
+      " "
+    ],
+    [
+      9,
+      " "
+    ],
+    [
+      9,
+      " "
+    ],
+    [
+      9,
+      " "
+    ],
+    [
+      9,
+      "RFD 2 BOX 200"
+    ],
+    [
+      9,
+      " "
+    ],
+    [
+      9,
+      " "
+    ],
+    [
+      18,
+      " "
+    ],
+    [
+      19,
+      " "
+    ],
+    [
+      20,
+      " "
+    ],
+    [
+      21,
+      " "
+    ],
+    [
+      1,
+      " "
+    ],
+    [
+      2,
+      "PO BOX 28"
+    ],
+    [
+      3,
+      "103 SOUTH MAIN STREET"
+    ],
+    [
+      24,
+      "PO BOX 143"
+    ],
+    [
+      24,
+      " "
+    ],
+    [
+      1,
+      " "
+    ],
+    [
+      3,
+      " "
+    ],
+    [
+      2,
+      " "
+    ],
+    [
+      2,
+      " "
+    ],
+    [
+      4,
+      " "
+    ],
+    [
+      4,
+      "PO BOX 72"
+    ],
+    [
+      5,
+      " "
+    ],
+    [
+      5,
+      "PO BOX 126"
+    ],
+    [
+      5,
+      "PO BOX 126"
+    ],
+    [
+      4,
+      " "
+    ],
+    [
+      7,
+      "PO BOX 126"
+    ],
+    [
+      9,
+      "48 PLEASANT STREET"
+    ],
+    [
+      1,
+      " "
+    ],
+    [
+      1,
+      "45 MAIN STREET"
+    ],
+    [
+      1,
+      " "
+    ],
+    [
+      2,
+      "PO BOX B, MUNICIPAL BLDG"
+    ],
+    [
+      2,
+      " "
+    ],
+    [
+      2,
+      " "
+    ],
+    [
+      3,
+      "77 OKEMO MOUNTAIN ROAD"
+    ],
+    [
+      3,
+      " "
+    ],
+    [
+      5,
+      " "
+    ],
+    [
+      5,
+      " "
+    ],
+    [
+      5,
+      " "
+    ],
+    [
+      5,
+      " "
+    ],
+    [
+      2,
+      " "
+    ],
+    [
+      3,
+      " "
+    ],
+    [
+      4,
+      " "
+    ],
+    [
+      5,
+      " "
+    ],
+    [
+      12,
+      " "
+    ],
+    [
+      14,
+      " "
+    ],
+    [
+      1,
+      " "
+    ],
+    [
+      1,
+      "103 SOUTH MAIN STREET"
+    ],
+    [
+      6,
+      " "
+    ],
+    [
+      6,
+      "PO BOX 257"
+    ],
+    [
+      6,
+      " "
+    ],
+    [
+      13,
+      "HCR 70 BOX 42"
+    ],
+    [
+      13,
+      "RT 100"
+    ],
+    [
+      13,
+      " "
+    ],
+    [
+      13,
+      " "
+    ],
+    [
+      13,
+      " "
+    ],
+    [
+      57,
+      " "
+    ],
+    [
+      12,
+      "PO BOX 1229"
+    ],
+    [
+      14,
+      "SCHOOL STREET"
+    ],
+    [
+      18,
+      "P.O. BOX 129"
+    ],
+    [
+      10,
+      "PO BOX 226"
+    ],
+    [
+      10,
+      "PO BOX 189"
+    ],
+    [
+      11,
+      "TOWNSHEND ROAD"
+    ],
+    [
+      11,
+      "PO BOX 180"
+    ],
+    [
+      35,
+      " "
+    ],
+    [
+      1,
+      "43 UNION STREET"
+    ],
+    [
+      2,
+      "60 PARK ST"
+    ],
+    [
+      3,
+      "10 HOOVER ST"
+    ],
+    [
+      4,
+      "139 MAIN STREET"
+    ],
+    [
+      5,
+      "139 MAIN ST"
+    ],
+    [
+      6,
+      " "
+    ],
+    [
+      7,
+      "139 MAIN ST"
+    ],
+    [
+      19,
+      "139 MAIN ST"
+    ],
+    [
+      20,
+      " "
+    ],
+    [
+      22,
+      "RR 3 BOX 72A"
+    ],
+    [
+      24,
+      "BOX 151"
+    ],
+    [
+      27,
+      "MAIN ST"
+    ],
+    [
+      29,
+      "PO BOX 370"
+    ],
+    [
+      21,
+      " "
+    ],
+    [
+      21,
+      " "
+    ],
+    [
+      21,
+      " "
+    ],
+    [
+      23,
+      "SOUTH ROAD"
+    ],
+    [
+      23,
+      "PO BOX 295"
+    ],
+    [
+      25,
+      "231 NORTH MAIN STREET"
+    ],
+    [
+      25,
+      "231 NORTH MAIN STREET"
+    ],
+    [
+      25,
+      "RFD PO BOX 1500"
+    ],
+    [
+      26,
+      "PO BOX 84"
+    ],
+    [
+      26,
+      " "
+    ],
+    [
+      26,
+      "231 NORTH MAIN STREET"
+    ],
+    [
+      28,
+      "PO BOX 166"
+    ],
+    [
+      28,
+      "RR 1, BOX 145"
+    ],
+    [
+      30,
+      " "
+    ],
+    [
+      30,
+      " "
+    ],
+    [
+      1,
+      "DEPOT ST"
+    ],
+    [
+      2,
+      " "
+    ],
+    [
+      3,
+      "BOX 185"
+    ],
+    [
+      4,
+      " "
+    ],
+    [
+      5,
+      "PO BOX 623"
+    ],
+    [
+      6,
+      " "
+    ],
+    [
+      7,
+      " "
+    ],
+    [
+      8,
+      "PO BOX 527"
+    ],
+    [
+      9,
+      "PO BOX 1714"
+    ],
+    [
+      10,
+      "PO BOX 527"
+    ],
+    [
+      12,
+      "HCR 63 BOX 300"
+    ],
+    [
+      13,
+      " "
+    ],
+    [
+      14,
+      " "
+    ],
+    [
+      15,
+      "ROUTE 30"
+    ],
+    [
+      18,
+      "RD 2 BOX 560"
+    ],
+    [
+      20,
+      "RR2 BOX 440"
+    ],
+    [
+      21,
+      "RR 2 BOX 680"
+    ],
+    [
+      22,
+      "RR2 BOX 995"
+    ],
+    [
+      11,
+      "PO BOX 414"
+    ],
+    [
+      11,
+      "HOUGHTON BROOK RD"
+    ],
+    [
+      37,
+      "RR 2 BOX 270"
+    ],
+    [
+      37,
+      "RD #1 BOX 1936"
+    ],
+    [
+      33,
+      "PO BOX 472"
+    ],
+    [
+      33,
+      "PO BOX 392"
+    ],
+    [
+      33,
+      "RR1 BOX 810"
+    ],
+    [
+      33,
+      "700 CANAL ST"
+    ],
+    [
+      33,
+      "RR #1, BOX 693, BROOKLINE"
+    ],
+    [
+      33,
+      " "
+    ],
+    [
+      35,
+      "PO BOX 217"
+    ],
+    [
+      35,
+      "PO BOX 296"
+    ],
+    [
+      1,
+      "RT1 BOX 390"
+    ],
+    [
+      2,
+      "E. PUTNEY BROOK RD."
+    ],
+    [
+      5,
+      " "
+    ],
+    [
+      6,
+      "PO BOX A"
+    ],
+    [
+      3,
+      " "
+    ],
+    [
+      3,
+      " "
+    ],
+    [
+      4,
+      " "
+    ],
+    [
+      4,
+      "RR 3 BOX 256"
+    ],
+    [
+      53,
+      "PO BOX 217"
+    ],
+    [
+      61,
+      "PO BOX 217"
+    ],
+    [
+      64,
+      "BOX 151, FOWLER ROAD"
+    ],
+    [
+      3,
+      "RD #1, BOX 2525"
+    ],
+    [
+      3,
+      "P.O. BOX 248"
+    ],
+    [
+      38,
+      "COUNTRY CLUB RD"
+    ],
+    [
+      38,
+      "RR 1"
+    ],
+    [
+      38,
+      "RR 1 BOX 1205"
+    ],
+    [
+      38,
+      "P.O. BOX 2"
+    ],
+    [
+      44,
+      "RR2 BOX 600"
+    ],
+    [
+      44,
+      "RR1 BOX 30"
+    ],
+    [
+      44,
+      "ROUTE 1 BOX 892"
+    ],
+    [
+      52,
+      "RR1 BOX 30"
+    ],
+    [
+      52,
+      "RR1 BOX 30"
+    ],
+    [
+      62,
+      "FISH & WILDLIFE"
+    ],
+    [
+      62,
+      "1907 ILLINOIS STREET"
+    ],
+    [
+      63,
+      "BOX 231"
+    ],
+    [
+      63,
+      "RR2 BOX 3315"
+    ],
+    [
+      63,
+      " "
+    ],
+    [
+      71,
+      " "
+    ],
+    [
+      71,
+      " "
+    ],
+    [
+      71,
+      " "
+    ],
+    [
+      71,
+      "RR2 BOX 3340"
+    ],
+    [
+      72,
+      "RR 2 BOX 287"
+    ],
+    [
+      72,
+      " "
+    ],
+    [
+      96,
+      " "
+    ],
+    [
+      96,
+      " "
+    ],
+    [
+      97,
+      " "
+    ],
+    [
+      97,
+      " "
+    ],
+    [
+      146,
+      " "
+    ],
+    [
+      146,
+      " "
+    ],
+    [
+      147,
+      " "
+    ],
+    [
+      147,
+      " "
+    ],
+    [
+      147,
+      " "
+    ],
+    [
+      147,
+      " "
+    ],
+    [
+      149,
+      " "
+    ],
+    [
+      149,
+      " "
+    ],
+    [
+      99,
+      " "
+    ],
+    [
+      99,
+      " "
+    ],
+    [
+      101,
+      " "
+    ],
+    [
+      101,
+      " "
+    ],
+    [
+      101,
+      " "
+    ],
+    [
+      101,
+      " "
+    ],
+    [
+      102,
+      " "
+    ],
+    [
+      102,
+      " "
+    ],
+    [
+      65,
+      " "
+    ],
+    [
+      65,
+      " "
+    ],
+    [
+      65,
+      " "
+    ],
+    [
+      2,
+      "231 NORTH MAIN STREET"
+    ],
+    [
+      3,
+      "231 NORTH MAIN STREET"
+    ],
+    [
+      4,
+      "231 NORTH MAIN STREET"
+    ],
+    [
+      9,
+      " "
+    ],
+    [
+      38,
+      "231 NORTH MAIN STREET"
+    ],
+    [
+      39,
+      "231 NORTH MAIN STREET"
+    ],
+    [
+      40,
+      "231 NORTH MAIN STREET"
+    ],
+    [
+      41,
+      "231 NORTH MAIN STREET"
+    ],
+    [
+      30,
+      "BOX 147"
+    ],
+    [
+      78,
+      "RR 1 BOX 173"
+    ],
+    [
+      70,
+      "231 NORTH MAIN STREET"
+    ],
+    [
+      1,
+      " "
+    ],
+    [
+      1,
+      " "
+    ],
+    [
+      1,
+      " "
+    ],
+    [
+      10,
+      " "
+    ],
+    [
+      10,
+      "30 SCHOOL STREET"
+    ],
+    [
+      13,
+      "41 BOMBRDIER ROAD"
+    ],
+    [
+      13,
+      " "
+    ],
+    [
+      13,
+      "41 BOMBARDIER RD"
+    ],
+    [
+      16,
+      "43 BOMBARDIER RD"
+    ],
+    [
+      16,
+      " "
+    ],
+    [
+      17,
+      "216 LEDDY PARK RD."
+    ],
+    [
+      17,
+      " "
+    ],
+    [
+      27,
+      "WINOOSKI VALLEY PARK DISTRICT ETHAN ALLE"
+    ],
+    [
+      27,
+      " "
+    ],
+    [
+      28,
+      "PORTERS POINT RD."
+    ],
+    [
+      28,
+      "PO BOX 55"
+    ],
+    [
+      28,
+      "PO BOX 55"
+    ],
+    [
+      28,
+      "216 LEDDY PARK RD."
+    ],
+    [
+      29,
+      " "
+    ],
+    [
+      29,
+      " "
+    ],
+    [
+      54,
+      " "
+    ],
+    [
+      54,
+      "332 ETHAN ALLEN PARKWAY"
+    ],
+    [
+      54,
+      "LAKER LANE"
+    ],
+    [
+      55,
+      " "
+    ],
+    [
+      55,
+      "PO BOX 55"
+    ],
+    [
+      62,
+      " "
+    ],
+    [
+      62,
+      " "
+    ],
+    [
+      62,
+      "PO BOX 241"
+    ],
+    [
+      63,
+      " "
+    ],
+    [
+      63,
+      "111 WEST STREET"
+    ],
+    [
+      63,
+      "WINOOSKI VALLEY PARK DISTRICT"
+    ],
+    [
+      66,
+      "PO BOX 55"
+    ],
+    [
+      66,
+      " "
+    ],
+    [
+      66,
+      "RT. 127"
+    ],
+    [
+      66,
+      " "
+    ],
+    [
+      18,
+      " "
+    ],
+    [
+      18,
+      " "
+    ],
+    [
+      18,
+      "PO BOX 55"
+    ],
+    [
+      42,
+      "PO BOX 55"
+    ],
+    [
+      42,
+      "25 WILISTON ST."
+    ],
+    [
+      56,
+      " "
+    ],
+    [
+      56,
+      "PO BOX 168"
+    ],
+    [
+      56,
+      " "
+    ],
+    [
+      1,
+      " "
+    ],
+    [
+      2,
+      "81 MAIN ST"
+    ],
+    [
+      3,
+      "81 MAIN ST"
+    ],
+    [
+      4,
+      "81 MAIN ST"
+    ],
+    [
+      5,
+      "25 NEW ENGLAND DR"
+    ],
+    [
+      6,
+      " "
+    ],
+    [
+      41,
+      "90 RTE 15"
+    ],
+    [
+      67,
+      "9 BLAIR PARK"
+    ],
+    [
+      72,
+      "113 OLD STAGE RD."
+    ],
+    [
+      81,
+      "1075 WILLISTON RD."
+    ],
+    [
+      82,
+      "722 WILLISTON RD"
+    ],
+    [
+      59,
+      "WINOOSKI VALLEY PARK DISTRICT"
+    ],
+    [
+      33,
+      " "
+    ],
+    [
+      33,
+      "WINOOSKI VALLEY PARK DISTRICT ETHAN ALLE"
+    ],
+    [
+      40,
+      "WINOOSKI VALLEY PARK DISTRICT ETHAN ALLE"
+    ],
+    [
+      40,
+      "27 W ALLEN ST"
+    ],
+    [
+      43,
+      "27 W ALLEN ST"
+    ],
+    [
+      43,
+      "27 W ALLEN ST"
+    ],
+    [
+      83,
+      "27 W ALLEN ST"
+    ],
+    [
+      83,
+      "27 W ALLEN ST"
+    ],
+    [
+      83,
+      "27 W ALLEN ST"
+    ],
+    [
+      56,
+      " "
+    ],
+    [
+      56,
+      "575 DORSET STREET"
+    ],
+    [
+      56,
+      "SO. BURLINGTON TOWN OFFICE, 575 DORSET S"
+    ],
+    [
+      153,
+      "UNIVERSITY OF VERMONT"
+    ],
+    [
+      155,
+      "216 LEDDY PARK RD."
+    ],
+    [
+      156,
+      "216 LEDDY PARK RD."
+    ],
+    [
+      111,
+      "216 LEDDY PARK RD"
+    ],
+    [
+      112,
+      "RT. 7"
+    ],
+    [
+      113,
+      "PO BOX 88"
+    ],
+    [
+      128,
+      " "
+    ],
+    [
+      129,
+      " "
+    ],
+    [
+      132,
+      "1379 HINESBROOK RD"
+    ],
+    [
+      133,
+      "PO BOX 119"
+    ],
+    [
+      135,
+      " "
+    ],
+    [
+      69,
+      " "
+    ],
+    [
+      70,
+      " "
+    ],
+    [
+      74,
+      " "
+    ],
+    [
+      75,
+      "43 EAST STREET"
+    ],
+    [
+      99,
+      "RD 1 BOX 3"
+    ],
+    [
+      100,
+      " "
+    ],
+    [
+      101,
+      "57 MOUNTAIN ST."
+    ],
+    [
+      102,
+      "AIRPORT DIRVE"
+    ],
+    [
+      4,
+      "PO BOX 249"
+    ],
+    [
+      2,
+      " "
+    ],
+    [
+      3,
+      "94 MAIN ST"
+    ],
+    [
+      9,
+      "151 EXCHANGE STRRET, PO BOX 27"
+    ],
+    [
+      23,
+      " "
+    ],
+    [
+      24,
+      "PO BOX 66"
+    ],
+    [
+      25,
+      "RD4 BOX 698"
+    ],
+    [
+      26,
+      " "
+    ],
+    [
+      28,
+      "RD 2 BOX 1980"
+    ],
+    [
+      29,
+      "PO BOX 10"
+    ],
+    [
+      154,
+      " "
+    ],
+    [
+      154,
+      "94 MAIN ST"
+    ],
+    [
+      157,
+      " "
+    ],
+    [
+      157,
+      " "
+    ],
+    [
+      158,
+      "BROWN NOVELTY CO."
+    ],
+    [
+      158,
+      "94 MAIN ST"
+    ],
+    [
+      127,
+      " "
+    ],
+    [
+      127,
+      " "
+    ],
+    [
+      134,
+      "231 NORTH MAIN STREET"
+    ],
+    [
+      134,
+      " "
+    ],
+    [
+      8,
+      " "
+    ],
+    [
+      8,
+      " "
+    ],
+    [
+      27,
+      " "
+    ],
+    [
+      27,
+      "668 MT INDEPENDENCE RD"
+    ],
+    [
+      6,
+      " "
+    ],
+    [
+      8,
+      " "
+    ],
+    [
+      10,
+      " "
+    ],
+    [
+      11,
+      " "
+    ],
+    [
+      12,
+      " "
+    ],
+    [
+      13,
+      " "
+    ],
+    [
+      15,
+      " "
+    ],
+    [
+      16,
+      " "
+    ],
+    [
+      17,
+      " "
+    ],
+    [
+      18,
+      " "
+    ],
+    [
+      19,
+      " "
+    ],
+    [
+      7,
+      "RR 3 BOX 3215"
+    ],
+    [
+      7,
+      "RR 4"
+    ],
+    [
+      9,
+      " "
+    ],
+    [
+      9,
+      "RR 2 BOX 2117"
+    ],
+    [
+      9,
+      " "
+    ],
+    [
+      9,
+      "231 NORTH MAIN STREET"
+    ],
+    [
+      34,
+      " "
+    ],
+    [
+      36,
+      "49 CENTER ST"
+    ],
+    [
+      37,
+      "49 CENTER ST"
+    ],
+    [
+      38,
+      "49 CENTER ST"
+    ],
+    [
+      29,
+      "49 CENTER ST"
+    ],
+    [
+      30,
+      " "
+    ],
+    [
+      31,
+      " "
+    ],
+    [
+      25,
+      " "
+    ],
+    [
+      4,
+      "3 N PARK PLACE"
+    ],
+    [
+      5,
+      " "
+    ],
+    [
+      8,
+      "RD1 BOX 3546"
+    ],
+    [
+      9,
+      " "
+    ],
+    [
+      35,
+      " "
+    ],
+    [
+      35,
+      "PO BOX 727"
+    ],
+    [
+      35,
+      " "
+    ],
+    [
+      35,
+      " "
+    ],
+    [
+      35,
+      " "
+    ],
+    [
+      28,
+      "RR 1 BOX 4253"
+    ],
+    [
+      28,
+      "PO BOX 344"
+    ],
+    [
+      28,
+      "PO BOX 10"
+    ],
+    [
+      32,
+      "PO BOX 2025MAIN ST"
+    ],
+    [
+      32,
+      "PLAINS RD PO BOX 328"
+    ],
+    [
+      32,
+      "PO BOX 10"
+    ],
+    [
+      32,
+      " "
+    ],
+    [
+      33,
+      " "
+    ],
+    [
+      33,
+      "RR 2 BOX 2448"
+    ],
+    [
+      33,
+      " "
+    ],
+    [
+      33,
+      " "
+    ],
+    [
+      33,
+      "PARK STREET"
+    ],
+    [
+      6,
+      " "
+    ],
+    [
+      6,
+      " "
+    ],
+    [
+      7,
+      " "
+    ],
+    [
+      7,
+      " "
+    ],
+    [
+      20,
+      " "
+    ],
+    [
+      20,
+      "349 SOUTH MOUNTAIN ROAD"
+    ],
+    [
+      13,
+      "PO BOX 87"
+    ],
+    [
+      13,
+      " "
+    ],
+    [
+      13,
+      " "
+    ],
+    [
+      13,
+      "POST ROAD"
+    ],
+    [
+      10,
+      "RT 30"
+    ],
+    [
+      11,
+      " "
+    ],
+    [
+      37,
+      "PO BOX 115"
+    ],
+    [
+      17,
+      "317 MAIN STREET"
+    ],
+    [
+      1,
+      "RR 3"
+    ],
+    [
+      3,
+      "BOX 12, RT. 4A"
+    ],
+    [
+      4,
+      "PO BOX 115"
+    ],
+    [
+      5,
+      "BOX 120 CLEMENT RD."
+    ],
+    [
+      6,
+      "RT 140"
+    ],
+    [
+      7,
+      " "
+    ],
+    [
+      8,
+      "WOODSTOCK"
+    ],
+    [
+      15,
+      " "
+    ],
+    [
+      22,
+      " "
+    ],
+    [
+      2,
+      "39 CENTER ST"
+    ],
+    [
+      2,
+      "CHURCH"
+    ],
+    [
+      9,
+      "39 CENTER ST"
+    ],
+    [
+      9,
+      "39 CENTER ST"
+    ],
+    [
+      9,
+      " "
+    ],
+    [
+      9,
+      "39 CENTER ST"
+    ],
+    [
+      9,
+      "39 CENTER ST"
+    ],
+    [
+      12,
+      "39 E CENTER ST"
+    ],
+    [
+      12,
+      "39 E CENTER ST"
+    ],
+    [
+      12,
+      "PIERPOINT AVE."
+    ],
+    [
+      13,
+      "39 E CENTER ST"
+    ],
+    [
+      13,
+      "LIBRARY AVE."
+    ],
+    [
+      13,
+      "39 E CENTER ST"
+    ],
+    [
+      13,
+      " "
+    ],
+    [
+      13,
+      "127 CONVENT AVE."
+    ],
+    [
+      13,
+      "39 E CENTER ST"
+    ],
+    [
+      28,
+      " "
+    ],
+    [
+      28,
+      "88 PARK ST"
+    ],
+    [
+      29,
+      " "
+    ],
+    [
+      29,
+      "39 E CENTER ST"
+    ],
+    [
+      31,
+      "STATE FAIRGROUNDS"
+    ],
+    [
+      31,
+      " "
+    ],
+    [
+      31,
+      "EAST RD. BOX 359A"
+    ],
+    [
+      31,
+      "RT 7B"
+    ],
+    [
+      31,
+      "RR 1 BOX 57"
+    ],
+    [
+      14,
+      "MIDDLE RD."
+    ],
+    [
+      14,
+      " "
+    ],
+    [
+      18,
+      " "
+    ],
+    [
+      18,
+      "PO BOX 30"
+    ],
+    [
+      20,
+      " "
+    ],
+    [
+      20,
+      "RT30 PO BOX 93"
+    ],
+    [
+      20,
+      "RR1 BOX 1087"
+    ],
+    [
+      20,
+      "BOX 68Y"
+    ],
+    [
+      16,
+      " "
+    ],
+    [
+      16,
+      " "
+    ],
+    [
+      2,
+      " "
+    ],
+    [
+      11,
+      " "
+    ],
+    [
+      40,
+      "RR  1 BOX 523"
+    ],
+    [
+      8,
+      "RR 1 BOX 536"
+    ],
+    [
+      9,
+      " "
+    ],
+    [
+      10,
+      "RR 1 BOX 556"
+    ],
+    [
+      13,
+      "PO BOX 1012"
+    ],
+    [
+      15,
+      "PO BOX 1126"
+    ],
+    [
+      16,
+      " "
+    ],
+    [
+      17,
+      "CHURCH ST"
+    ],
+    [
+      18,
+      "SCHOOL ST"
+    ],
+    [
+      19,
+      " "
+    ],
+    [
+      1,
+      " "
+    ],
+    [
+      4,
+      " "
+    ],
+    [
+      5,
+      "RR1 BOX 530"
+    ],
+    [
+      6,
+      "RR 2 BOX 1556"
+    ],
+    [
+      26,
+      "RR 1 BOX 45A"
+    ],
+    [
+      31,
+      " "
+    ],
+    [
+      33,
+      "BAILEY ST"
+    ],
+    [
+      35,
+      "MORSE HILL RD"
+    ],
+    [
+      24,
+      "PO BOX 947"
+    ],
+    [
+      2,
+      " "
+    ],
+    [
+      4,
+      " "
+    ],
+    [
+      31,
+      "PO BOX 909"
+    ],
+    [
+      32,
+      "BOX 463"
+    ],
+    [
+      33,
+      "P.O. BOX 289"
+    ],
+    [
+      40,
+      " "
+    ],
+    [
+      62,
+      "PO BOX 411"
+    ],
+    [
+      63,
+      "FOOT HILLS RD"
+    ],
+    [
+      68,
+      " "
+    ],
+    [
+      17,
+      " "
+    ],
+    [
+      5,
+      " "
+    ],
+    [
+      6,
+      "205 SOUTH ST"
+    ],
+    [
+      25,
+      "WILLOW RD."
+    ],
+    [
+      41,
+      " "
+    ],
+    [
+      52,
+      " "
+    ],
+    [
+      53,
+      " "
+    ],
+    [
+      42,
+      " "
+    ],
+    [
+      1,
+      " "
+    ],
+    [
+      1,
+      " "
+    ],
+    [
+      1,
+      " "
+    ],
+    [
+      3,
+      "RR2 BOX 1645"
+    ],
+    [
+      3,
+      "RR 1, BOX 870"
+    ],
+    [
+      3,
+      " "
+    ],
+    [
+      30,
+      "RTE 100"
+    ],
+    [
+      30,
+      " "
+    ],
+    [
+      30,
+      "111 WEST ST."
+    ],
+    [
+      30,
+      "RR 1 BOX 650"
+    ],
+    [
+      30,
+      " "
+    ],
+    [
+      39,
+      "RR1 BOX 90-7"
+    ],
+    [
+      39,
+      " "
+    ],
+    [
+      50,
+      "PARK COMMISSION"
+    ],
+    [
+      50,
+      "58 BARRE ST."
+    ],
+    [
+      50,
+      "22 CORSE ST"
+    ],
+    [
+      50,
+      "MAIN STREET"
+    ],
+    [
+      51,
+      "PARK AVENUE"
+    ],
+    [
+      51,
+      " "
+    ],
+    [
+      56,
+      "58 BARRE ST."
+    ],
+    [
+      56,
+      "COLLEGE ST"
+    ],
+    [
+      56,
+      "P.O. BOX 1055"
+    ],
+    [
+      56,
+      "5 HIGH SCHOOL DR."
+    ],
+    [
+      23,
+      " "
+    ],
+    [
+      23,
+      "58 BARRE ST."
+    ],
+    [
+      23,
+      "900 SHERMAN HOLLOW ROAD"
+    ],
+    [
+      23,
+      " "
+    ],
+    [
+      24,
+      "RD 2 BOX 265"
+    ],
+    [
+      24,
+      "3268 HINESBURG ROAD"
+    ],
+    [
+      24,
+      "RR2 BOX 160"
+    ],
+    [
+      7,
+      " "
+    ],
+    [
+      7,
+      " "
+    ],
+    [
+      15,
+      " "
+    ],
+    [
+      15,
+      "RR1 BOX 2740"
+    ],
+    [
+      15,
+      " "
+    ],
+    [
+      16,
+      " "
+    ],
+    [
+      16,
+      " "
+    ],
+    [
+      34,
+      " "
+    ],
+    [
+      34,
+      " "
+    ],
+    [
+      35,
+      " "
+    ],
+    [
+      35,
+      "RT 100"
+    ],
+    [
+      46,
+      " "
+    ],
+    [
+      46,
+      "RD BOX 397"
+    ],
+    [
+      46,
+      " "
+    ],
+    [
+      61,
+      "HOWARD MUNN"
+    ],
+    [
+      61,
+      " "
+    ],
+    [
+      61,
+      "DANA HILL RD"
+    ],
+    [
+      61,
+      " "
+    ],
+    [
+      61,
+      " "
+    ],
+    [
+      57,
+      "RR 1 BOX 166"
+    ],
+    [
+      57,
+      " "
+    ],
+    [
+      58,
+      " "
+    ],
+    [
+      58,
+      "PO BOX 577, NORTH FAYSTON"
+    ],
+    [
+      58,
+      " "
+    ],
+    [
+      59,
+      " "
+    ],
+    [
+      59,
+      "RD 42 BOX 5370"
+    ],
+    [
+      59,
+      " "
+    ],
+    [
+      24,
+      "CITY OFFICES"
+    ],
+    [
+      25,
+      "BARRE REC. DEPT., ALUMNI HALL"
+    ],
+    [
+      26,
+      "BARRE REC. DEPT., ALUMNI HALL"
+    ],
+    [
+      27,
+      "BARRE REC. DEPT., ALUMNI HALL"
+    ],
+    [
+      2,
+      "RD 5 BOX 650"
+    ],
+    [
+      4,
+      " "
+    ],
+    [
+      5,
+      " "
+    ],
+    [
+      3,
+      " "
+    ],
+    [
+      3,
+      "PO BOX 296"
+    ],
+    [
+      6,
+      " "
+    ],
+    [
+      6,
+      " "
+    ],
+    [
+      1,
+      " "
+    ],
+    [
+      2,
+      "143 CHURCH HILL RD."
+    ],
+    [
+      3,
+      " "
+    ],
+    [
+      14,
+      " "
+    ],
+    [
+      15,
+      " "
+    ],
+    [
+      17,
+      "160 PARTRIDGE RD"
+    ],
+    [
+      21,
+      " "
+    ],
+    [
+      32,
+      " "
+    ],
+    [
+      33,
+      " "
+    ],
+    [
+      34,
+      " "
+    ],
+    [
+      35,
+      " "
+    ],
+    [
+      36,
+      "RD 1 BULL RUN"
+    ],
+    [
+      37,
+      " "
+    ],
+    [
+      38,
+      " "
+    ],
+    [
+      39,
+      " "
+    ],
+    [
+      40,
+      " "
+    ],
+    [
+      41,
+      "111 WEST STREET"
+    ],
+    [
+      42,
+      " "
+    ],
+    [
+      43,
+      " "
+    ],
+    [
+      44,
+      " "
+    ],
+    [
+      45,
+      " "
+    ],
+    [
+      46,
+      " "
+    ],
+    [
+      47,
+      " "
+    ],
+    [
+      23,
+      " "
+    ],
+    [
+      24,
+      " "
+    ],
+    [
+      27,
+      " "
+    ],
+    [
+      28,
+      " "
+    ],
+    [
+      30,
+      " "
+    ],
+    [
+      16,
+      "PO BOX 55"
+    ],
+    [
+      16,
+      " "
+    ],
+    [
+      18,
+      " "
+    ],
+    [
+      18,
+      " "
+    ],
+    [
+      22,
+      " "
+    ],
+    [
+      22,
+      " "
+    ],
+    [
+      22,
+      " "
+    ],
+    [
+      31,
+      " "
+    ],
+    [
+      31,
+      " "
+    ],
+    [
+      25,
+      " "
+    ],
+    [
+      25,
+      " "
+    ],
+    [
+      26,
+      " "
+    ],
+    [
+      26,
+      " "
+    ],
+    [
+      29,
+      " "
+    ],
+    [
+      29,
+      " "
+    ],
+    [
+      2,
+      " "
+    ],
+    [
+      3,
+      "ST. JOHNSBURY"
+    ],
+    [
+      19,
+      "ST. JOHNSBURY"
+    ],
+    [
+      20,
+      "ST. JOHNSBURY"
+    ],
+    [
+      21,
+      " "
+    ],
+    [
+      22,
+      "ST. JOHNSBURY"
+    ],
+    [
+      23,
+      " "
+    ],
+    [
+      24,
+      " "
+    ],
+    [
+      25,
+      " "
+    ],
+    [
+      28,
+      " "
+    ],
+    [
+      29,
+      "ST. JOHNSBURY"
+    ],
+    [
+      30,
+      " "
+    ],
+    [
+      32,
+      " "
+    ],
+    [
+      33,
+      " "
+    ],
+    [
+      34,
+      " "
+    ],
+    [
+      35,
+      " "
+    ],
+    [
+      36,
+      " "
+    ],
+    [
+      37,
+      " "
+    ],
+    [
+      40,
+      " "
+    ],
+    [
+      41,
+      "ST. JOHNSBURY"
+    ],
+    [
+      54,
+      " "
+    ],
+    [
+      55,
+      " "
+    ],
+    [
+      59,
+      " "
+    ],
+    [
+      60,
+      " "
+    ],
+    [
+      48,
+      " "
+    ],
+    [
+      50,
+      " "
+    ],
+    [
+      26,
+      " "
+    ],
+    [
+      26,
+      " "
+    ],
+    [
+      31,
+      " "
+    ],
+    [
+      31,
+      " "
+    ],
+    [
+      61,
+      " "
+    ],
+    [
+      61,
+      " "
+    ],
+    [
+      49,
+      " "
+    ],
+    [
+      49,
+      " "
+    ],
+    [
+      40,
+      " "
+    ],
+    [
+      40,
+      " "
+    ],
+    [
+      42,
+      " "
+    ],
+    [
+      42,
+      " "
+    ],
+    [
+      42,
+      " "
+    ],
+    [
+      49,
+      " "
+    ],
+    [
+      49,
+      " "
+    ],
+    [
+      50,
+      " "
+    ],
+    [
+      50,
+      " "
+    ],
+    [
+      51,
+      " "
+    ],
+    [
+      51,
+      " "
+    ],
+    [
+      24,
+      " "
+    ],
+    [
+      24,
+      " "
+    ],
+    [
+      24,
+      " "
+    ],
+    [
+      76,
+      " "
+    ],
+    [
+      76,
+      " "
+    ],
+    [
+      82,
+      " "
+    ],
+    [
+      82,
+      " "
+    ],
+    [
+      82,
+      " "
+    ],
+    [
+      90,
+      "231 NORTH MAIN STREET"
+    ],
+    [
+      90,
+      "231 NORTH MAIN STREET"
+    ],
+    [
+      90,
+      "231 NORTH MAIN STREET"
+    ],
+    [
+      90,
+      "231 NORTH MAIN STREET"
+    ],
+    [
+      87,
+      "231 NORTH MAIN STREET"
+    ],
+    [
+      87,
+      "231 NORTH MAIN STREET"
+    ],
+    [
+      1,
+      "231 NORTH MAIN STREET"
+    ],
+    [
+      2,
+      " "
+    ],
+    [
+      3,
+      "231 NORTH MAIN STREET"
+    ],
+    [
+      4,
+      " "
+    ],
+    [
+      5,
+      "231 NORTH MAIN STREET"
+    ],
+    [
+      6,
+      "231 NORTH MAIN STREET"
+    ],
+    [
+      7,
+      " "
+    ],
+    [
+      8,
+      " "
+    ],
+    [
+      11,
+      "231 NORTH MAIN STREET"
+    ],
+    [
+      39,
+      " "
+    ],
+    [
+      41,
+      " "
+    ],
+    [
+      48,
+      " "
+    ],
+    [
+      52,
+      " "
+    ],
+    [
+      53,
+      " "
+    ],
+    [
+      12,
+      " "
+    ],
+    [
+      26,
+      " "
+    ],
+    [
+      63,
+      " "
+    ],
+    [
+      60,
+      " "
+    ],
+    [
+      61,
+      " "
+    ],
+    [
+      61,
+      " "
+    ],
+    [
+      62,
+      " "
+    ],
+    [
+      62,
+      " "
+    ],
+    [
+      66,
+      " "
+    ],
+    [
+      66,
+      " "
+    ],
+    [
+      67,
+      " "
+    ],
+    [
+      67,
+      " "
+    ],
+    [
+      69,
+      " "
+    ],
+    [
+      69,
+      " "
+    ],
+    [
+      69,
+      " "
+    ],
+    [
+      46,
+      " "
+    ],
+    [
+      50,
+      " "
+    ],
+    [
+      31,
+      "BOX 119"
+    ],
+    [
+      32,
+      "PO BOX 119"
+    ],
+    [
+      33,
+      "PO BOX 119"
+    ],
+    [
+      35,
+      "GREENBUSH RD."
+    ],
+    [
+      8,
+      "RD 1"
+    ],
+    [
+      11,
+      "RD 1"
+    ],
+    [
+      12,
+      " "
+    ]
+  ],
+  "sql skeleton": "select _ as _ ,_ as _ from _ where _",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "sga_phase_2_assessed_reaches": [
+      "sga_phase_2_assessed_reaches.SGAT_ID",
+      "sga_phase_2_assessed_reaches.ProjectName",
+      "sga_phase_2_assessed_reaches.URLPage1",
+      "sga_phase_2_assessed_reaches.URLPage2",
+      "sga_phase_2_assessed_reaches.ReportList",
+      "sga_phase_2_assessed_reaches.FinalA",
+      "sga_phase_2_assessed_reaches.FinalB",
+      "sga_phase_2_assessed_reaches.FinalC",
+      "sga_phase_2_assessed_reaches.CorridorPlanA",
+      "sga_phase_2_assessed_reaches.CorridorPlanB",
+      "sga_phase_2_assessed_reaches.CorridorPlanC",
+      "sga_phase_2_assessed_reaches.RID",
+      "sga_phase_2_assessed_reaches.SID",
+      "sga_phase_2_assessed_reaches.OBJECTID",
+      "sga_phase_2_assessed_reaches.RchID",
+      "sga_phase_2_assessed_reaches.SegID",
+      "sga_phase_2_assessed_reaches.ProjectID"
+    ],
+    "outdoor_recreation_sites_inventory": [
+      "outdoor_recreation_sites_inventory.X",
+      "outdoor_recreation_sites_inventory.Y",
+      "outdoor_recreation_sites_inventory.OBJECTID",
+      "outdoor_recreation_sites_inventory.MAP",
+      "outdoor_recreation_sites_inventory.MAP_NUMBER",
+      "outdoor_recreation_sites_inventory.SITE_NAME",
+      "outdoor_recreation_sites_inventory.PUBLIC_PRI",
+      "outdoor_recreation_sites_inventory.BOATING_MA",
+      "outdoor_recreation_sites_inventory.CAMPING",
+      "outdoor_recreation_sites_inventory.FIELD_SPOR",
+      "outdoor_recreation_sites_inventory.COURT_SPOR",
+      "outdoor_recreation_sites_inventory.GOLF",
+      "outdoor_recreation_sites_inventory.SWIMMING",
+      "outdoor_recreation_sites_inventory.TRAIL",
+      "outdoor_recreation_sites_inventory.PICNIC_PLA",
+      "outdoor_recreation_sites_inventory.SKIING",
+      "outdoor_recreation_sites_inventory.FIPS_CODE",
+      "outdoor_recreation_sites_inventory.DATE_",
+      "outdoor_recreation_sites_inventory.ALT_NAME",
+      "outdoor_recreation_sites_inventory.S_ADDRESS",
+      "outdoor_recreation_sites_inventory.S_TOWN",
+      "outdoor_recreation_sites_inventory.S_PHONE",
+      "outdoor_recreation_sites_inventory.CONTACT",
+      "outdoor_recreation_sites_inventory.ORGANIZ",
+      "outdoor_recreation_sites_inventory.CO_ADDRESS",
+      "outdoor_recreation_sites_inventory.CO_TOWN",
+      "outdoor_recreation_sites_inventory.CO_STATE",
+      "outdoor_recreation_sites_inventory.CO_ZIP",
+      "outdoor_recreation_sites_inventory.CO_PHONE",
+      "outdoor_recreation_sites_inventory.CO_FAX",
+      "outdoor_recreation_sites_inventory.OPERATOR",
+      "outdoor_recreation_sites_inventory.A_ARCHTARG",
+      "outdoor_recreation_sites_inventory.B_BASESOFT",
+      "outdoor_recreation_sites_inventory.C_BICYCL",
+      "outdoor_recreation_sites_inventory.D_BOATMTR",
+      "outdoor_recreation_sites_inventory.E_BOATNMTR",
+      "outdoor_recreation_sites_inventory.F_CAMP",
+      "outdoor_recreation_sites_inventory.G_FISH",
+      "outdoor_recreation_sites_inventory.H_FTSOCLAC",
+      "outdoor_recreation_sites_inventory.I_GOLF",
+      "outdoor_recreation_sites_inventory.J_HIKING",
+      "outdoor_recreation_sites_inventory.K_HISTIMP",
+      "outdoor_recreation_sites_inventory.L_HORSRID",
+      "outdoor_recreation_sites_inventory.M_HUNT",
+      "outdoor_recreation_sites_inventory.N_ICESKAT",
+      "outdoor_recreation_sites_inventory.O_INSKAT",
+      "outdoor_recreation_sites_inventory.P_MTRCYL",
+      "outdoor_recreation_sites_inventory.Q_MTBIKE",
+      "outdoor_recreation_sites_inventory.R_NATATTR",
+      "outdoor_recreation_sites_inventory.S_NATOBSER",
+      "outdoor_recreation_sites_inventory.T_ORGEVENT",
+      "outdoor_recreation_sites_inventory.U_PICNIC",
+      "outdoor_recreation_sites_inventory.V_SKIDOWN",
+      "outdoor_recreation_sites_inventory.W_SKICROSS",
+      "outdoor_recreation_sites_inventory.X_SKINSCUB",
+      "outdoor_recreation_sites_inventory.Y_SLIDE",
+      "outdoor_recreation_sites_inventory.Z_SNOWMOB",
+      "outdoor_recreation_sites_inventory.AA_SNOWSHO",
+      "outdoor_recreation_sites_inventory.AB_SWIMPOO",
+      "outdoor_recreation_sites_inventory.AC_SWIMLAK",
+      "outdoor_recreation_sites_inventory.AD_SWIMRIV",
+      "outdoor_recreation_sites_inventory.AE_TENNIS",
+      "outdoor_recreation_sites_inventory.AF_VOLLEY",
+      "outdoor_recreation_sites_inventory.AG_WALKJOG",
+      "outdoor_recreation_sites_inventory.AH_O1_YN",
+      "outdoor_recreation_sites_inventory.AH_OTHR1",
+      "outdoor_recreation_sites_inventory.AI_O2_YN",
+      "outdoor_recreation_sites_inventory.AI_OTHR2",
+      "outdoor_recreation_sites_inventory.ENTERPRISE",
+      "outdoor_recreation_sites_inventory.ENT_OTHR",
+      "outdoor_recreation_sites_inventory.ACREAGE",
+      "outdoor_recreation_sites_inventory.N_PARKSUM",
+      "outdoor_recreation_sites_inventory.N_PARKWIN",
+      "outdoor_recreation_sites_inventory.Q_WATACC",
+      "outdoor_recreation_sites_inventory.WATER_NM",
+      "outdoor_recreation_sites_inventory.Q_AMUSE",
+      "outdoor_recreation_sites_inventory.Q_NATRCENT",
+      "outdoor_recreation_sites_inventory.N_CARLAUND",
+      "outdoor_recreation_sites_inventory.N_PAVERAMP",
+      "outdoor_recreation_sites_inventory.N_GRAVRAMP",
+      "outdoor_recreation_sites_inventory.N_BOATSLIP",
+      "outdoor_recreation_sites_inventory.N_MOORING",
+      "outdoor_recreation_sites_inventory.N_DRYDOCK",
+      "outdoor_recreation_sites_inventory.Q_TRANSIEN",
+      "outdoor_recreation_sites_inventory.Q_PUMPING",
+      "outdoor_recreation_sites_inventory.Q_BOATRENT",
+      "outdoor_recreation_sites_inventory.N_TENTS",
+      "outdoor_recreation_sites_inventory.N_SHELTER",
+      "outdoor_recreation_sites_inventory.N_WINCABIN",
+      "outdoor_recreation_sites_inventory.N_VEHICLE",
+      "outdoor_recreation_sites_inventory.Q_SEWERAGE",
+      "outdoor_recreation_sites_inventory.N_ELECTRY",
+      "outdoor_recreation_sites_inventory.N_WATER",
+      "outdoor_recreation_sites_inventory.N_BOTH",
+      "outdoor_recreation_sites_inventory.Q_GROUP",
+      "outdoor_recreation_sites_inventory.Q_PRIM",
+      "outdoor_recreation_sites_inventory.Q_WINCAMP",
+      "outdoor_recreation_sites_inventory.TOTALFLDS",
+      "outdoor_recreation_sites_inventory.Q_BASEB",
+      "outdoor_recreation_sites_inventory.Q_SOFTB",
+      "outdoor_recreation_sites_inventory.Q_LITLEA",
+      "outdoor_recreation_sites_inventory.Q_SOCCR",
+      "outdoor_recreation_sites_inventory.Q_FOOTB",
+      "outdoor_recreation_sites_inventory.OTHFLD",
+      "outdoor_recreation_sites_inventory.TOTALCRTS",
+      "outdoor_recreation_sites_inventory.Q_TENNIS",
+      "outdoor_recreation_sites_inventory.Q_BASKET",
+      "outdoor_recreation_sites_inventory.Q_VOLLEY",
+      "outdoor_recreation_sites_inventory.OTHCRTS",
+      "outdoor_recreation_sites_inventory.Q_PICNIC",
+      "outdoor_recreation_sites_inventory.Q_PICSHEL",
+      "outdoor_recreation_sites_inventory.PLYGND",
+      "outdoor_recreation_sites_inventory.N_REGHOLES",
+      "outdoor_recreation_sites_inventory.N_PAR3HOLE",
+      "outdoor_recreation_sites_inventory.Q_DRIVING",
+      "outdoor_recreation_sites_inventory.Q_MINATURE",
+      "outdoor_recreation_sites_inventory.F_BEACH",
+      "outdoor_recreation_sites_inventory.N_OUTPOOLS",
+      "outdoor_recreation_sites_inventory.SKITYPE",
+      "outdoor_recreation_sites_inventory.N_DOWNHILL",
+      "outdoor_recreation_sites_inventory.N_LIFTS",
+      "outdoor_recreation_sites_inventory.Q_SNOWMAKE",
+      "outdoor_recreation_sites_inventory.N_XCSKI",
+      "outdoor_recreation_sites_inventory.M_TRLTOTAL",
+      "outdoor_recreation_sites_inventory.Q_HIKING",
+      "outdoor_recreation_sites_inventory.Q_BIKING",
+      "outdoor_recreation_sites_inventory.MOUNTBIK",
+      "outdoor_recreation_sites_inventory.Q_ATV",
+      "outdoor_recreation_sites_inventory.Q_SNOWMOBL",
+      "outdoor_recreation_sites_inventory.Q_XSKI",
+      "outdoor_recreation_sites_inventory.Q_HORSEBK",
+      "outdoor_recreation_sites_inventory.CNTYCODE",
+      "outdoor_recreation_sites_inventory.NAME"
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "sql": "SELECT dfirm_floodways.OBJECTID, dfirm_floodways.FLD_ZONE, landfills.NAME FROM dfirm_floodways JOIN landfills ON dfirm_floodways.FLD_AR_ID = landfills.OBJECTID WHERE dfirm_floodways.FLOODWAY = 'Yes' AND landfills.STATUS = 'Active'",
+  "problem_description": "### Query intent:\nThe SQL statement aims to retrieve specific data from two related tables, `dfirm_floodways` and `landfills`, based on certain conditions.\n\n### Detailed description:\n1. **Table `dfirm_floodways`**:\n   - **Columns involved**: `OBJECTID`, `FLD_ZONE`, and `FLOODWAY`.\n   - **Purpose**: This table likely contains information about floodways within a specific firm or area, including their unique identifier (`OBJECTID`), flood zone designation (`FLD_ZONE`), and whether they are identified as floodways (`FLOODWAY`).\n   - **Condition applied**: `FLOODWAY = 'Yes'`. This filters records to only those where the floodway status is confirmed.\n\n2. **Table `landfills`**:\n   - **Columns involved**: `NAME` and `STATUS`.\n   - **Purpose**: This table contains details about landfills, including their name (`NAME`) and operational status (`STATUS`).\n   - **Join condition**: `dfirm_floodways.FLD_AR_ID = landfills.OBJECTID`. This condition ensures that only records from `dfirm_floodways` where `FLD_AR_ID` matches an `OBJECTID` in `landfills` are included in the result set. This likely means linking floodway data with landfill data based on a common identifier.\n\n3. **Join operation**: `JOIN landfills ON dfirm_floodways.FLD_AR_ID = landfills.OBJECTID`. This operation combines rows from both tables based on matching values between `FLD_AR_ID` in `dfirm_floodways` and `OBJECTID` in `landfills`.\n\n4. **Where clause**: `WHERE dfirm_floodways.FLOODWAY = 'Yes' AND landfills.STATUS = 'Active'`. This clause further filters the combined data to include only those floodways associated with active landfills.\n\n### Business scenario:\nThis query could be part of an environmental management system or a disaster preparedness initiative within an organization that operates or manages both floodways and landfills. The goal might be to identify any active landfills located near or potentially affected by floodways.\n\n### User description:\nA user, possibly an environmental officer or a disaster response planner, might need this information to:\n- Assess potential risks to landfills during flood events.\n- Plan evacuation routes or emergency response measures for areas around these facilities.\n- Ensure compliance with environmental regulations regarding the protection of sensitive areas during natural disasters.\n- Prepare contingency plans",
+  "natural_language_query": "As an environmental officer or disaster response planner, I'm tasked with ensuring the safety and regulatory compliance of our operations, especially when it comes to managing floodways and landfills. Recently, there's been concern about the proximity of active landfills to flood-prone areas. To address this, I need to pull a comprehensive list of all landfills that are currently operational and are located near any identified floodways.\n\nTo achieve this, I would run a SQL query that involves joining two databases: one containing detailed information about floodways within our firm (`dfirm_floodways`), and another database holding specifics about landfills (`landfills`). The query should filter out any floodways that are not considered active, focusing instead on those that pose a risk due to their proximity to active landfills.\n\nHere's how the SQL query would look:\n\n```sql\nSELECT dfirm_floodways.OBJECTID, dfirm_floodways.FLD_ZONE, dfirm_floodways.FLOODWAY, landfills.NAME, landfills.STATUS\nFROM dfirm_floodways\nJOIN landfills ON dfirm_floodways.FLD_AR_ID = landfills.OBJECTID\nWHERE dfirm_floodways.FLOODWAY = 'Yes' AND landfills.STATUS = 'Active';\n```\n\nThis query is designed to provide a clear picture of which landfills are currently operational and potentially situated near floodways marked as active. By identifying these specific locations, we can develop targeted strategies to mitigate any risks and ensure the safety of our facilities and the surrounding environment during flood events.",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ from _ where _ = _ and _",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "dfirm_floodways": [
+      "dfirm_floodways.OBJECTID",
+      "dfirm_floodways.DFIRM_ID",
+      "dfirm_floodways.FLD_AR_ID",
+      "dfirm_floodways.FLD_ZONE",
+      "dfirm_floodways.FLOODWAY",
+      "dfirm_floodways.SFHA_TF",
+      "dfirm_floodways.AR_REVERT",
+      "dfirm_floodways.SOURCE_CIT",
+      "dfirm_floodways.HYDRO_ID",
+      "dfirm_floodways.CST_MDL_ID"
+    ],
+    "landfills": [
+      "landfills.X",
+      "landfills.Y",
+      "landfills.OBJECTID",
+      "landfills.PSINUM",
+      "landfills.SWFACID",
+      "landfills.SITENAME",
+      "landfills.LOCCONF",
+      "landfills.DATE_FIRST",
+      "landfills.DATE_LAST",
+      "landfills.ACRES",
+      "landfills.STATUS",
+      "landfills.WQMONITORING",
+      "landfills.GASCOLLECTION",
+      "landfills.TOWNNAME",
+      "landfills.LATITUDE",
+      "landfills.LONGITUDE"
+    ]
+  }
+}

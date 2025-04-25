@@ -1,0 +1,20 @@
+{
+  "sql": "SELECT \"shijiaotongweiguidaozhandianxinxichuxing3670.线路名称\", \"shijiaotongweiguidaozhandianxinxichuxing3670.车站名\" FROM \"shijiaotongweiguidaozhandianxinxichuxing3670\" - \"shijiaotongweiguidaoxianluxinxichuxing3671\" WHERE \"shijiaotongweiguidaozhandianxinxichuxing3670.线路编码\" = \"shijiaotongweiguidaoxianluxinxichuxing3671.线路编码\";",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是查询存在于表 `shijiaotongweiguidaozhandianxinxichuxing3670` 但不存在于表 `shijiaotongweiguidaoxianluxinxichuxing3671` 中的车站信息，具体包括线路名称和车站名，且仅在两表的线路编码相同时进行比较。\n\n### **详细描述**  \n1. **涉及的表**：\n   - `shijiaotongweiguidaozhandianxinxichuxing3670`：可能存储轨道交通站点信息，包含线路名称、车站名、线路编码等字段。\n   - `shijiaotongweiguidaoxianluxinxichuxing3671`：可能存储轨道交通线路信息，包含线路编码等字段。\n\n2. **涉及的列**：\n   - `shijiaotongweiguidaozhandianxinxichuxing3670.线路名称`：线路的名称。\n   - `shijiaotongweiguidaozhandianxinxichuxing3670.车站名`：车站的名称。\n   - `shijiaotongweiguidaozhandianxinxichuxing3670.线路编码`：线路的唯一编码。\n   - `shijiaotongweiguidaoxianluxinxichuxing3671.线路编码`：线路的唯一编码，用于与第一个表的线路编码匹配。\n\n3. **查询条件**：\n   - 使用 `EXCEPT`（或 `-`，某些数据库支持）操作符，找出在第一个表中存在但在第二个表中不存在的记录。\n   - 仅比较两表中 `线路编码` 相同的记录。\n\n### **业务场景**  \n该查询可能用于以下业务场景：\n1. **站点数据校验**：检查是否有某些站点在站点信息表中存在，但在线路信息表中没有对应的线路编码，可能用于数据一致性检查。\n2. **线路规划分析**：找出未被纳入某些线路规划的车站，可能用于优化线路或调整运营策略。\n3. **数据同步问题排查**：检测两个数据源（如站点表和线路表）之间的数据差异，确保数据同步的完整性。\n\n### **用户描述**  \n在该业务场景下，用户可能遇到以下实际问题或需求：\n1. **数据不一致**：用户发现某些车站在系统中显示，但在线路规划中找不到对应的线路，需要排查数据问题。\n2. **运营调整**：用户需要了解哪些车站未被纳入某条线路，以便决定是否调整线路或更新数据。\n3. **数据维护**：用户在数据迁移或同步后，需要验证两个表的数据是否一致，确保没有遗漏或错误。",
+  "natural_language_query": "市民反映，最近在使用地铁线路查询系统时发现一个奇怪的问题：有些地铁站明明在站点列表里能查到，但是在查看具体线路信息时却找不到这些站点的记录。比如10号线的\"牡丹园站\"在站点信息里显示是存在的，但是查看10号线完整线路时却没有这个站。这种情况不止一个站，感觉数据可能对不上。市民担心会不会是系统更新时漏掉了一些站点信息，或者线路调整后没有同步更新？希望能帮忙核实一下哪些站点存在这种\"在线路中查不到\"的情况，特别是线路编码相同的那些站点。来电反映地铁站点信息与线路信息不一致的问题。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ WHERE _ = _ ;",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweiguidaozhandianxinxichuxing3670": [
+      "shijiaotongweiguidaozhandianxinxichuxing3670.线路名称",
+      "shijiaotongweiguidaozhandianxinxichuxing3670.站点编码",
+      "shijiaotongweiguidaozhandianxinxichuxing3670.车站名"
+    ],
+    "shijiaotongweiguidaoxianluxinxichuxing3671": [
+      "shijiaotongweiguidaoxianluxinxichuxing3671.线路编码",
+      "shijiaotongweiguidaoxianluxinxichuxing3671.线路名称",
+      "shijiaotongweiguidaoxianluxinxichuxing3671.站点数"
+    ]
+  }
+}

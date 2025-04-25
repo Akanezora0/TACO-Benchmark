@@ -1,0 +1,24 @@
+{
+  "sql": "SELECT \"pingguquzhucegongyuanxinxi780\".\"序号\", \"pingguquzhucegongyuanxinxi780\".\"名称\", \"pingguquzhucegongyuanxinxi780\".\"区\" FROM \"pingguquzhucegongyuanxinxi780\" WHERE \"pingguquzhucegongyuanxinxi780\".\"区\" = '顺义区' AND \"shunyiqushunyiquxingjifandian2102\".\"顺义区星级饭店\" = '5星' ;",
+  "problem_description": "### **查询意图**：\n该 SQL 语句的目的是从表 `pingguquzhucegongyuanxinxi780` 中查询位于“顺义区”且关联表 `shunyiqushunyiquxingjifandian2102` 中“顺义区星级饭店”为“5星”的公园信息，包括序号、名称和区。\n\n### **详细描述**：\n1. **涉及的表**：\n   - `pingguquzhucegongyuanxinxi780`：存储公园注册信息，包含序号、名称、区等字段。\n   - `shunyiqushunyiquxingjifandian2102`：存储顺义区星级饭店信息，包含“顺义区星级饭店”字段（如“5星”）。\n\n2. **查询的列**：\n   - `pingguquzhucegongyuanxinxi780` 表中的 `序号`、`名称`、`区` 字段。\n\n3. **查询条件**：\n   - `pingguquzhucegongyuanxinxi780` 表中的 `区` 字段必须等于“顺义区”。\n   - `shunyiqushunyiquxingjifandian2102` 表中的 `顺义区星级饭店` 字段必须等于“5星”。\n\n4. **关联关系**：\n   - 虽然 SQL 语句中没有明确指定两表的关联方式（如 JOIN 或子查询），但逻辑上需要某种关联（如公园与附近饭店的匹配）。当前语句可能缺少关联条件，导致语义不完整。\n\n### **业务场景**：\n该查询可能用于以下业务场景：\n- **旅游规划**：查找顺义区内注册的公园，并且附近有五星级饭店，方便游客规划高品质的旅游路线。\n- **商业分析**：分析顺义区的高端旅游配套设施（如五星级饭店附近的公园分布情况）。\n- **政府或景区管理**：统计顺义区符合高端旅游需求的公园资源，以便优化区域旅游推广策略。\n\n### **用户描述**：\n用户可能是以下角色之一：\n1. **旅游平台运营人员**：需要为高端游客推荐“顺义区公园+五星级饭店”的组合旅游产品。\n2. **政府文旅部门**：评估顺义区的高端旅游资源配置是否均衡，例如五星级饭店周边是否有足够的公园设施。\n3. **游客**：计划去顺义区游玩，希望找到附近有五星级饭店的公园，确保住宿和休闲体验。\n\n### **潜在问题**：\n- 当前 SQL 语句缺少表关联逻辑（如通过地理位置 ID 或名称关联两表），可能导致查询无效或结果错误。\n- 如果目的是查询“公园附近有五星级饭店”，则需要补充两表的关联条件（如距离计算或共同区域字段）。",
+  "natural_language_query": "市民反映，最近想带家人去顺义区玩，听说那边有些不错的公园，但想找那种附近有五星级饭店的公园，这样玩累了可以直接住高档酒店。在网上查了半天也没找到明确信息，有的公园介绍里说有高档酒店，但不确定是不是五星级的。能不能帮忙查一下顺义区哪些注册公园周边有五星级饭店啊？最好是官方确认过的那种，这样安排行程比较放心。之前去其他区玩就遇到过公园附近酒店条件不符的情况，特别影响体验。",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ from _ where _ = _ and _ = _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "pingguquzhucegongyuanxinxi780": [
+      "pingguquzhucegongyuanxinxi780.序号",
+      "pingguquzhucegongyuanxinxi780.名称",
+      "pingguquzhucegongyuanxinxi780.区",
+      "pingguquzhucegongyuanxinxi780.街道",
+      "pingguquzhucegongyuanxinxi780.地址",
+      "pingguquzhucegongyuanxinxi780.咨询电话"
+    ],
+    "shunyiqushunyiquxingjifandian2102": [
+      "shunyiqushunyiquxingjifandian2102.顺义区星级饭店",
+      "shunyiqushunyiquxingjifandian2102.Unnamed: 1",
+      "shunyiqushunyiquxingjifandian2102.Unnamed: 2",
+      "shunyiqushunyiquxingjifandian2102.Unnamed: 3"
+    ]
+  }
+}

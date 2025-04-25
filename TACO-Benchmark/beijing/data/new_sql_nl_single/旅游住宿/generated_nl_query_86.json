@@ -1,0 +1,46 @@
+{
+  "sql": "SELECT HID, FATHERID FROM shiguihuaziranziyuanweiqingzhensi1515 WHERE DYNASTY = '清朝';",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从表 `shiguihuaziranziyuanweiqingzhensi1515` 中查询出所有朝代（DYNASTY）为“清朝”的记录，并返回这些记录的 HID 和 FATHERID 字段。\n\n- **详细描述**：\n  - **涉及的表**：`shiguihuaziranziyuanweiqingzhensi1515`。从表名来看，可能是一个与历史、地理或自然资源相关的表，具体内容需要结合数据库的上下文进一步确认。\n  - **涉及的列**：\n    - `HID`：可能是某个实体的唯一标识符，具体含义需要结合数据库设计文档或上下文确认。\n    - `FATHERID`：可能是与父级实体关联的标识符，用于表示层级关系。\n    - `DYNASTY`：表示朝代，这里用于筛选条件，只选择“清朝”的记录。\n  - **条件**：`DYNASTY = '清朝'`，即只选择朝代字段值为“清朝”的记录。\n\n- **业务场景**：\n  - 该查询可能用于历史研究或数据分析，例如：\n    - 研究清朝时期的自然资源分布或行政区划。\n    - 分析清朝时期的家族或组织层级关系（通过 HID 和 FATHERID 字段）。\n    - 统计清朝时期的某些特定数据（如行政区划数量、资源点数量等）。\n\n- **用户描述**：\n  - 用户可能是历史学家、数据分析师或研究人员，他们需要：\n    - 获取清朝时期的特定数据以支持研究或报告。\n    - 分析清朝时期的层级关系（如行政区划的父子关系）。\n    - 验证或补充关于清朝的历史记录或数据库内容。\n  - 用户可能遇到的实际问题或需求包括：\n    - 需要快速筛选出清朝相关的数据，避免手动查找。\n    - 需要了解清朝时期的层级结构（如行政区划的上下级关系）。\n    - 需要将清朝的数据与其他朝代的数据进行对比分析。",
+  "natural_language_query": "市民反映，最近在研究清朝时期的历史资料，想了解一下当时的一些地理或行政区域的划分情况。特别是想找那些明确标注是清朝时期的记录，看看这些区域之间有没有上下级的关系。比如某个地方是属于哪个更大的行政单位管辖的。自己在网上查了很久但资料很零散，不知道有没有系统记录这些信息的渠道。希望能帮忙查一下清朝时期的这些区域信息，最好能体现出它们之间的层级关系。来电咨询清朝历史区域划分问题。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ WHERE _ = _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "shiguihuaziranziyuanweiqingzhensi1515": [
+      "shiguihuaziranziyuanweiqingzhensi1515.HID",
+      "shiguihuaziranziyuanweiqingzhensi1515.FATHERID",
+      "shiguihuaziranziyuanweiqingzhensi1515.HNAME",
+      "shiguihuaziranziyuanweiqingzhensi1515.OTHERNAME",
+      "shiguihuaziranziyuanweiqingzhensi1515.CATEGORY",
+      "shiguihuaziranziyuanweiqingzhensi1515.SUBCATEGOR",
+      "shiguihuaziranziyuanweiqingzhensi1515.COUNTYNAME",
+      "shiguihuaziranziyuanweiqingzhensi1515.STREETNAME",
+      "shiguihuaziranziyuanweiqingzhensi1515.DYNASTY",
+      "shiguihuaziranziyuanweiqingzhensi1515.SUBDYNASTY",
+      "shiguihuaziranziyuanweiqingzhensi1515.ADDRESS",
+      "shiguihuaziranziyuanweiqingzhensi1515.RANK",
+      "shiguihuaziranziyuanweiqingzhensi1515.BATCH",
+      "shiguihuaziranziyuanweiqingzhensi1515.PUBTIME",
+      "shiguihuaziranziyuanweiqingzhensi1515.USERS",
+      "shiguihuaziranziyuanweiqingzhensi1515.PURPOSE",
+      "shiguihuaziranziyuanweiqingzhensi1515.OWNERSHIP",
+      "shiguihuaziranziyuanweiqingzhensi1515.STATEEVALU",
+      "shiguihuaziranziyuanweiqingzhensi1515.SINGLERELI",
+      "shiguihuaziranziyuanweiqingzhensi1515.PROTECTION",
+      "shiguihuaziranziyuanweiqingzhensi1515.ATTACHEDRE",
+      "shiguihuaziranziyuanweiqingzhensi1515.RELATEDPEO",
+      "shiguihuaziranziyuanweiqingzhensi1515.RELATEDEVE",
+      "shiguihuaziranziyuanweiqingzhensi1515.PUBNAME",
+      "shiguihuaziranziyuanweiqingzhensi1515.SOURCE",
+      "shiguihuaziranziyuanweiqingzhensi1515.EDITOR",
+      "shiguihuaziranziyuanweiqingzhensi1515.ISREDUNDAN",
+      "shiguihuaziranziyuanweiqingzhensi1515.THEME"
+    ],
+    "shunyiqushunyiquxingjifandian2102": [
+      "shunyiqushunyiquxingjifandian2102.顺义区星级饭店",
+      "shunyiqushunyiquxingjifandian2102.Unnamed: 1",
+      "shunyiqushunyiquxingjifandian2102.Unnamed: 2",
+      "shunyiqushunyiquxingjifandian2102.Unnamed: 3"
+    ]
+  }
+}

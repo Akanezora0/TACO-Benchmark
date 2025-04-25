@@ -1,0 +1,21 @@
+{
+  "sql": "SELECT \"shijiaotongweiguidaozhandianxinxichuxing3670.线路名称\", \"shijiaotongweiguidaozhandianxinxichuxing3670.车站名\", \"shijiaotongweichaoxianchaozaihuochexiezaicha\"ngdi3663.地址 FROM \"shijiaotongweiguidaozhandianxinxichuxing3670\" INNER JOIN \"shijiaotongweichaoxianchaozaihuochexiezaichangdi3663\" ON \"shijiaotongweiguidaozhandianxinxichuxing3670.站点编码\" = \"shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.行政区划代码\" WHERE \"shijiaotongweiguidaozhandianxinxichuxing3670.线路名称\" = '指定线路名称';",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是查询指定线路名称的轨道交通站点信息及其对应的超限超载货车卸货场地地址。\n\n- **详细描述**：\n  - **涉及的表**：\n    - `shijiaotongweiguidaozhandianxinxichuxing3670`：轨道交通站点信息出行表，包含线路名称、车站名、站点编码等信息。\n    - `shijiaotongweichaoxianchaozaihuochexiezaichangdi3663`：超限超载货车卸货场地表，包含地址、行政区划代码等信息。\n  - **涉及的列**：\n    - `shijiaotongweiguidaozhandianxinxichuxing3670.线路名称`：轨道交通线路的名称。\n    - `shijiaotongweiguidaozhandianxinxichuxing3670.车站名`：轨道交通站点的名称。\n    - `shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.地址`：超限超载货车卸货场地的地址。\n    - `shijiaotongweiguidaozhandianxinxichuxing3670.站点编码`：轨道交通站点的编码。\n    - `shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.行政区划代码`：行政区划代码，用于与站点编码关联。\n  - **条件**：\n    - 通过 `INNER JOIN` 将两个表关联，关联条件是 `shijiaotongweiguidaozhandianxinxichuxing3670.站点编码` = `shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.行政区划代码`。\n    - 通过 `WHERE` 子句筛选出指定线路名称的站点信息，即 `shijiaotongweiguidaozhandianxinxichuxing3670.线路名称` = '指定线路名称'。\n\n- **业务场景**：\n  - 该查询可以用于物流或交通管理部门，帮助他们在指定轨道交通线路附近找到合适的超限超载货车卸货场地。例如，当货车因超限超载无法通过某些路段时，可以快速找到附近的卸货场地进行货物转运。\n  - 也可以用于城市规划或交通规划，分析轨道交通站点与货车卸货场地的分布关系，优化物流和交通管理。\n\n- **用户描述**：\n  - 用户可能是物流公司的调度员或交通管理部门的工作人员，他们需要为超限超载的货车寻找合适的卸货场地。通过输入指定的轨道交通线路名称，他们可以快速获取该线路沿线站点附近的卸货场地地址，从而高效安排货物转运或临时存储。\n  - 用户还可能遇到的问题是，如何在繁忙的城市交通中找到合规的卸货场地，避免因违规停车或卸货而受到处罚。该查询可以帮助他们快速定位合规场地，提高工作效率并减少违规风险。",
+  "natural_language_query": "市民反映，我是负责物流运输的调度员，最近有几辆超载货车需要在北京地铁10号线沿线附近找合规的卸货场地。听说有些地铁站附近有专门的超限货车卸货点，但不知道具体在哪些位置。能不能帮忙查一下10号线各站点附近的卸货场地地址？我们主要是为了避免违规停车被罚款，需要尽快找到合规的卸货点。现在司机都很着急，因为货物比较特殊不能随便停放，来电咨询地铁10号线沿线卸货场地位置问题。",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ from _ where _ =_ ;",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweiguidaozhandianxinxichuxing3670": [
+      "shijiaotongweiguidaozhandianxinxichuxing3670.线路名称",
+      "shijiaotongweiguidaozhandianxinxichuxing3670.站点编码",
+      "shijiaotongweiguidaozhandianxinxichuxing3670.车站名"
+    ],
+    "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663": [
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.行政区划代码",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.站点名称",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.联系电话",
+      "shijiaotongweichaoxianchaozaihuochexiezaichangdi3663.地址"
+    ]
+  }
+}

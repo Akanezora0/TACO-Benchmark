@@ -1,0 +1,47 @@
+{
+  "sql": "SELECT xichengquxichengquxingjifandianminglu19.序号, xichengquxichengquxingjifandianminglu19.?星级酒店名称, xichengquxichengquxingjifandianminglu19.?联系电话 FROM xichengquxichengquxingjifandianminglu19 WHERE xichengquxichengquxingjifandianminglu19.?星级酒店名称 = '指定名称';",
+  "problem_description": "### 查询意图：\n该 SQL 语句的目的是从名为 `xichengquxichengquxingjifandianminglu19` 的表中查询指定名称的星级酒店的联系电话。\n\n### 详细描述：\n1. **表名**：`xichengquxichengquxingjifandianminglu19`  \n   - 从表名可以推测，该表可能存储的是“西城区星级酒店名录”或类似信息，且可能是第19个版本或第19次更新的数据。\n\n2. **查询的列**：\n   - `序号`：可能是表中每条记录的唯一标识或排序编号。\n   - `?星级酒店名称`：列名中的问号可能表示该列名在原始数据中包含特殊字符或编码问题，实际应为“星级酒店名称”或类似含义的列，存储酒店的名称。\n   - `?联系电话`：同样可能存在列名问题，实际应为“联系电话”或类似含义的列，存储酒店的联系电话。\n\n3. **条件**：\n   - `xichengquxichengquxingjifandianminglu19.?星级酒店名称 = '指定名称'`  \n     表示只查询“星级酒店名称”列的值等于“指定名称”的记录。这里的“指定名称”是一个占位符，实际查询时会替换为具体的酒店名称。\n\n### 业务场景：\n1. **场景描述**：  \n   - 该查询可能用于酒店管理系统、旅游信息平台或政府监管系统中，目的是快速获取某家特定星级酒店的联系方式。\n   - 例如，用户可能需要查找“西城区”的某家星级酒店（如“XX国际大酒店”）的电话，以便联系预订或咨询。\n\n2. **数据用途**：  \n   - 通过酒店名称精确查询联系方式，支持用户快速获取信息。\n   - 可能用于后台数据管理、前台信息展示或客户服务场景。\n\n### 用户描述：\n1. **用户需求**：  \n   - 用户可能是游客、酒店管理人员或政府工作人员，需要根据酒店名称查找其联系电话。\n   - 例如：\n     - 游客计划入住西城区的“XX国际大酒店”，需要打电话预订房间。\n     - 酒店管理人员需要核对名录中某家酒店的联系方式是否正确。\n     - 政府工作人员需要联系某家酒店以通知相关事宜。\n\n2. **实际问题**：  \n   - 如果表名或列名不规范（如包含问号或过长），可能导致查询难以理解或维护。\n   - 如果“指定名称”未完全匹配（如大小写或空格问题），可能导致查询失败。\n\n### 补充说明：\n- 表名和列名中的问号（`?`）可能是数据导入或设计时的遗留问题，建议规范化为清晰的名称（如`hotel_name`、`contact_phone`）。\n- 实际查询时，“指定名称”应替换为具体的酒店名称（如`'XX国际大酒店'`）。",
+  "natural_language_query": "市民反映，想找西城区一家叫\"XX国际大酒店\"的星级宾馆电话，之前在网上查了半天也没找到联系方式。我记得这家酒店挺有名的，应该是四星级还是五星级来着，在西城区应该能查到。现在急着订房间，但就是找不到他们的电话，能不能帮忙查一下？来电希望查询XX国际大酒店的联系电话问题。\n\n（注：这里\"XX国际大酒店\"作为示例酒店名称，实际使用时会被替换为具体查询的酒店名称）",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ from _ where _ = _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "xichengquxichengquxingjifandianminglu19": [
+      "xichengquxichengquxingjifandianminglu19.序号",
+      "xichengquxichengquxingjifandianminglu19.?星级酒店名称",
+      "xichengquxichengquxingjifandianminglu19.?星级",
+      "xichengquxichengquxingjifandianminglu19.?联系电话",
+      "xichengquxichengquxingjifandianminglu19.?酒店地址"
+    ],
+    "shiguihuaziranziyuanweiwangfu1520": [
+      "shiguihuaziranziyuanweiwangfu1520.HID",
+      "shiguihuaziranziyuanweiwangfu1520.FATHERID",
+      "shiguihuaziranziyuanweiwangfu1520.HNAME",
+      "shiguihuaziranziyuanweiwangfu1520.OTHERNAME",
+      "shiguihuaziranziyuanweiwangfu1520.CATEGORY",
+      "shiguihuaziranziyuanweiwangfu1520.SUBCATEGOR",
+      "shiguihuaziranziyuanweiwangfu1520.COUNTYNAME",
+      "shiguihuaziranziyuanweiwangfu1520.STREETNAME",
+      "shiguihuaziranziyuanweiwangfu1520.DYNASTY",
+      "shiguihuaziranziyuanweiwangfu1520.SUBDYNASTY",
+      "shiguihuaziranziyuanweiwangfu1520.ADDRESS",
+      "shiguihuaziranziyuanweiwangfu1520.RANK",
+      "shiguihuaziranziyuanweiwangfu1520.BATCH",
+      "shiguihuaziranziyuanweiwangfu1520.PUBTIME",
+      "shiguihuaziranziyuanweiwangfu1520.USERS",
+      "shiguihuaziranziyuanweiwangfu1520.PURPOSE",
+      "shiguihuaziranziyuanweiwangfu1520.OWNERSHIP",
+      "shiguihuaziranziyuanweiwangfu1520.STATEEVALU",
+      "shiguihuaziranziyuanweiwangfu1520.SINGLERELI",
+      "shiguihuaziranziyuanweiwangfu1520.PROTECTION",
+      "shiguihuaziranziyuanweiwangfu1520.ATTACHEDRE",
+      "shiguihuaziranziyuanweiwangfu1520.RELATEDPEO",
+      "shiguihuaziranziyuanweiwangfu1520.RELATEDEVE",
+      "shiguihuaziranziyuanweiwangfu1520.PUBNAME",
+      "shiguihuaziranziyuanweiwangfu1520.SOURCE",
+      "shiguihuaziranziyuanweiwangfu1520.EDITOR",
+      "shiguihuaziranziyuanweiwangfu1520.ISREDUNDAN",
+      "shiguihuaziranziyuanweiwangfu1520.THEME"
+    ]
+  }
+}

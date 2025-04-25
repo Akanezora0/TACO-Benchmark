@@ -1,0 +1,53 @@
+{
+  "sql": "SELECT xichengquxichengquditiezhanmingdan2482.ID, xichengquxichengquguojietianqiaomingdan2490.OBJCODE FROM xichengquxichengquditiezhanmingdan2482 INNER JOIN xichengquxichengquguojietianqiaomingdan2490 ON xichengquxichengquditiezhanmingdan2482.CODE = xichengquxichengquguojietianqiaomingdan2490.OBJCODE;",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是通过内连接（INNER JOIN）查询两个表之间的关联数据，具体是获取西城区地铁站名单表中与西城区国际天桥名单表中 OBJCODE 相匹配的记录。\n\n- **详细描述**：\n  - **涉及的表**：\n    - `xichengquxichengquditiezhanmingdan2482`（西城区地铁站名单表）\n    - `xichengquxichengquguojietianqiaomingdan2490`（西城区国际天桥名单表）\n  - **涉及的列**：\n    - `xichengquxichengquditiezhanmingdan2482.ID`：地铁站名单表中的唯一标识符。\n    - `xichengquxichengquditiezhanmingdan2482.CODE`：地铁站名单表中的代码字段，用于与国际天桥名单表中的 OBJCODE 进行匹配。\n    - `xichengquxichengquguojietianqiaomingdan2490.OBJCODE`：国际天桥名单表中的对象代码字段，与地铁站名单表中的 CODE 字段相关联。\n  - **条件**：通过 `INNER JOIN` 连接两个表，连接条件是 `xichengquxichengquditiezhanmingdan2482.CODE = xichengquxichengquguojietianqiaomingdan2490.OBJCODE`，即地铁站名单表中的 CODE 字段与国际天桥名单表中的 OBJCODE 字段相等。\n\n- **业务场景**：\n  - 该查询可能用于解决以下业务场景：\n    - **地铁站与天桥的关联管理**：查询哪些地铁站附近有国际天桥，便于进行交通设施的管理和规划。\n    - **设施匹配验证**：验证地铁站和国际天桥之间的关联关系是否正确，确保数据的一致性。\n    - **数据分析**：分析地铁站与国际天桥的分布情况，为城市交通规划提供数据支持。\n\n- **用户描述**：\n  - 在城市交通管理部门或城市规划部门中，用户可能需要了解地铁站与国际天桥之间的关联情况。例如：\n    - 用户可能需要知道某个地铁站附近是否有国际天桥，以便为乘客提供更详细的出行信息。\n    - 用户可能需要验证地铁站和国际天桥的关联数据是否正确，以确保后续的交通规划或设施管理工作的准确性。\n    - 用户可能需要分析地铁站与国际天桥的分布情况，以优化城市交通设施布局或制定新的建设计划。",
+  "natural_language_query": "市民反映，最近在西城区乘坐地铁时发现有些地铁站出口和国际天桥的连接不太方便。比如从4号线宣武门站B口出来，要到对面的国际天桥得绕行很远，感觉规划设计不太合理。想咨询一下西城区哪些地铁站是和国际天桥直接相连的？因为工作需要整理这方面的信息，但网上查不到完整资料。之前听说金融街站和阜成门站都有连接天桥，但实地查看发现有些对不上号，不知道是不是信息有误。希望能帮忙核实西城区范围内所有与国际天桥连通的地铁站点情况，方便我们做后续的交通设施调研工作。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ ;",
+  "database": "交通服务",
+  "tables": {
+    "xichengquxichengquditiezhanmingdan2482": [
+      "xichengquxichengquditiezhanmingdan2482.ID",
+      "xichengquxichengquditiezhanmingdan2482.X",
+      "xichengquxichengquditiezhanmingdan2482.Y",
+      "xichengquxichengquditiezhanmingdan2482.SJXZQHMC",
+      "xichengquxichengquditiezhanmingdan2482.QXJXZQHMC",
+      "xichengquxichengquditiezhanmingdan2482.SJXZQHDM",
+      "xichengquxichengquditiezhanmingdan2482.QXJXZQHDM",
+      "xichengquxichengquditiezhanmingdan2482.POISJLY",
+      "xichengquxichengquditiezhanmingdan2482.RHBZDZ",
+      "xichengquxichengquditiezhanmingdan2482.CODE",
+      "xichengquxichengquditiezhanmingdan2482.CODEMC",
+      "xichengquxichengquditiezhanmingdan2482.GXSJ",
+      "xichengquxichengquditiezhanmingdan2482.POIMC",
+      "xichengquxichengquditiezhanmingdan2482.POIDZ",
+      "xichengquxichengquditiezhanmingdan2482.别名",
+      "xichengquxichengquditiezhanmingdan2482.POIFLMC",
+      "xichengquxichengquditiezhanmingdan2482.TEL"
+    ],
+    "xichengquxichengquguojietianqiaomingdan2490": [
+      "xichengquxichengquguojietianqiaomingdan2490.OBJCODE",
+      "xichengquxichengquguojietianqiaomingdan2490.OBJNAME",
+      "xichengquxichengquguojietianqiaomingdan2490.DEPTCODE1",
+      "xichengquxichengquguojietianqiaomingdan2490.DEPTNAME1",
+      "xichengquxichengquguojietianqiaomingdan2490.DEPTCODE2",
+      "xichengquxichengquguojietianqiaomingdan2490.DEPTNAME2",
+      "xichengquxichengquguojietianqiaomingdan2490.DEPTCODE3",
+      "xichengquxichengquguojietianqiaomingdan2490.DEPTNAME3",
+      "xichengquxichengquguojietianqiaomingdan2490.BGCODE",
+      "xichengquxichengquguojietianqiaomingdan2490.OBJSTATE",
+      "xichengquxichengquguojietianqiaomingdan2490.ORDATE",
+      "xichengquxichengquguojietianqiaomingdan2490.CHDATE",
+      "xichengquxichengquguojietianqiaomingdan2490.DATASOURCE",
+      "xichengquxichengquguojietianqiaomingdan2490.OBJPOS",
+      "xichengquxichengquguojietianqiaomingdan2490.NOTE",
+      "xichengquxichengquguojietianqiaomingdan2490.ljdl",
+      "xichengquxichengquguojietianqiaomingdan2490.cd",
+      "xichengquxichengquguojietianqiaomingdan2490.kydw",
+      "xichengquxichengquguojietianqiaomingdan2490.kd",
+      "xichengquxichengquguojietianqiaomingdan2490.gd",
+      "xichengquxichengquguojietianqiaomingdan2490.mc",
+      "xichengquxichengquguojietianqiaomingdan2490.ghspxmh"
+    ]
+  }
+}

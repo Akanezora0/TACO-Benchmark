@@ -1,0 +1,20 @@
+{
+  "sql": "SELECT xichengquxichengquguojiajizhongdianwenwubaohudanwei60.名称, pingguqupingguqujingpinminsu2083.平谷区2022年精品民宿 FROM xichengquxichengquguojiajizhongdianwenwubaohudanwei60, pingguqupingguqujingpinminsu2083 WHERE xichengquxichengquguojiajizhongdianwenwubaohudanwei60.序号 = pingguqupingguqujingpinminsu2083.Unnamed: 1;",
+  "problem_description": "### **查询意图**：  \n该 SQL 语句的目的是从两个表中联合查询数据，获取西城区国家重点文物保护单位的名称与平谷区2022年精品民宿的对应关系。\n\n### **详细描述**：  \n1. **涉及的表**：  \n   - `xichengquxichengquguojiajizhongdianwenwubaohudanwei60`：西城区国家重点文物保护单位表，包含序号和名称等信息。  \n   - `pingguqupingguqujingpinminsu2083`：平谷区2022年精品民宿表，包含序号（`Unnamed: 1`）和民宿名称（`平谷区2022年精品民宿`）等信息。  \n\n2. **涉及的列**：  \n   - `xichengquxichengquguojiajizhongdianwenwubaohudanwei60.名称`：西城区文物保护单位的名称。  \n   - `pingguqupingguqujingpinminsu2083.平谷区2022年精品民宿`：平谷区2022年的精品民宿名称。  \n\n3. **查询条件**：  \n   - 通过 `WHERE` 子句，将两个表关联起来，关联条件是 `xichengquxichengquguojiajizhongdianwenwubaohudanwei60.序号 = pingguqupingguqujingpinminsu2083.Unnamed: 1`，即西城区文物保护单位的序号与平谷区精品民宿的序号相匹配。  \n\n### **业务场景**：  \n该查询可能用于文旅行业的数据分析或资源整合，例如：  \n- **文旅推广**：将西城区的文物保护单位与平谷区的精品民宿进行关联，可能用于设计文化旅游线路，吸引游客既参观西城区的文物古迹，又体验平谷区的特色民宿。  \n- **政策支持**：政府或文旅部门可能希望了解哪些文物保护单位与民宿资源可以联动发展，以便制定相应的扶持政策或旅游推广计划。  \n\n### **用户描述**：  \n1. **旅游规划者**：  \n   - 用户可能需要设计一条涵盖文化古迹和特色住宿的旅游路线，因此需要查询哪些文物保护单位与精品民宿可以组合推荐。  \n   - 例如，游客上午参观西城区的某个国家重点文物保护单位，晚上入住平谷区的精品民宿，形成完整的旅游体验。  \n\n2. **数据分析师**：  \n   - 用户可能需要分析不同区域的文旅资源关联性，以便优化资源配置或制定营销策略。  \n   - 例如，研究哪些文物保护单位附近的民宿更受欢迎，或者哪些组合更具市场吸引力。  \n\n3. **政府或文旅机构**：  \n   - 用户可能需要评估文旅资源的分布情况，以便制定区域合作政策或补贴措施。  \n   - 例如，推动西城区与平谷区的文旅联动，促进跨区域旅游发展。  \n\n### **总结**：  \n该 SQL 查询主要用于关联西城区的文物保护单位和平谷区的精品民宿数据，可能服务于旅游线路规划、文旅资源整合或政策制定等业务需求。",
+  "natural_language_query": "市民反映，最近在规划一条北京文化旅游线路时遇到困惑。我是旅行社的线路策划，想设计一条既能参观西城区那些有名的国家重点文物保护单位，又能让游客体验平谷区特色民宿的旅游产品。但是不知道哪些文物保护点和民宿可以搭配起来推荐给游客，比如上午看完文物景点，晚上就能住进附近的精品民宿这种。听说2022年平谷区评了一批精品民宿，但不知道具体哪些可以和西城区的文物点对应上。能不能帮忙查一下这方面的信息？主要是想了解西城区那些重点文物保护单位的名称，以及平谷区2022年评上的精品民宿之间有没有什么关联关系，这样我们好设计更合理的旅游线路。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "xichengquxichengquguojiajizhongdianwenwubaohudanwei60": [
+      "xichengquxichengquguojiajizhongdianwenwubaohudanwei60.序号",
+      "xichengquxichengquguojiajizhongdianwenwubaohudanwei60.名称",
+      "xichengquxichengquguojiajizhongdianwenwubaohudanwei60.地址"
+    ],
+    "pingguqupingguqujingpinminsu2083": [
+      "pingguqupingguqujingpinminsu2083.平谷区2022年精品民宿",
+      "pingguqupingguqujingpinminsu2083.Unnamed: 1",
+      "pingguqupingguqujingpinminsu2083.Unnamed: 2"
+    ]
+  }
+}

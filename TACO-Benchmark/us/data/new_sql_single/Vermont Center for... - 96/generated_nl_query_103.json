@@ -1,0 +1,49 @@
+{
+  "sql": "SELECT invasive_species.InvasiveName, invasive_species.ObservationDate FROM invasive_species WHERE invasive_species.ObservationID = 1;",
+  "problem_description": "### Query intent:\nThe SQL statement aims to retrieve specific information from the `invasive_species` table based on a particular `ObservationID`.\n\n### Detailed description:\n- **Table**: `invasive_species`\n  - This table contains data related to invasive species, likely including details about each species' name, observation dates, and possibly more information about each species.\n\n- **Column**:\n  - `InvasiveName`: This column represents the name of the invasive species.\n  - `ObservationDate`: This column holds the date when the observation of the invasive species was made.\n\n- **Condition**:\n  - `ObservationID = 1`: The query filters the records in the `invasive_species` table where the `ObservationID` is exactly 1. This means it's looking for details about the invasive species observed during the first observation session.\n\n### Business scenario:\nThis query could be part of an environmental monitoring system where researchers track the presence of invasive species over time. The system might need to analyze the initial observations of invasive species to understand their introduction patterns, potential sources, or immediate impacts.\n\n### User description:\nA biologist working on an invasive species management project needs to review the details of the first observation made of a particular invasive species. This includes knowing the exact species identified and the date it was first observed, which could help in understanding the spread pattern or the origin of the species.",
+  "natural_language_query": "As a biologist involved in managing invasive species, I'm currently analyzing our database for insights into the introduction patterns of these species. Specifically, I'm interested in reviewing the details of the very first observation recorded in our system. Could you please fetch the data for me? I'm looking for the exact name of the invasive species and the date it was first spotted. This information will be crucial for understanding how this species initially entered our ecosystem and its potential sources or pathways of introduction.",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ WHERE _ = _ ;",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "invasive_species": [
+      "invasive_species.X",
+      "invasive_species.Y",
+      "invasive_species.SiteName",
+      "invasive_species.ObservationID",
+      "invasive_species.InvasiveName",
+      "invasive_species.ObservationDate",
+      "invasive_species.Observer",
+      "invasive_species.SurveyType",
+      "invasive_species.Latitude",
+      "invasive_species.Longitude",
+      "invasive_species.Town",
+      "invasive_species.GrossArea",
+      "invasive_species.InfestedArea",
+      "invasive_species.PlantDescription",
+      "invasive_species.DistributionName",
+      "invasive_species.AssessmentDate",
+      "invasive_species.TreatmentDate",
+      "invasive_species.TreatmentEffectiveness",
+      "invasive_species.TreatmentType",
+      "invasive_species.TreatmentPerson",
+      "invasive_species.TreatmentAssessmentDate",
+      "invasive_species.Assessor",
+      "invasive_species.TreatmentAssessmentNotes",
+      "invasive_species.TreatmentHours",
+      "invasive_species.ChemicalName",
+      "invasive_species.ChemicalConsentration",
+      "invasive_species.ChemicalOunces",
+      "invasive_species.ApplicationMethod",
+      "invasive_species.CertifiedApplicator",
+      "invasive_species.EPARegistationNumber"
+    ],
+    "sand_and_gravel_deposits": [
+      "sand_and_gravel_deposits.OBJECTID",
+      "sand_and_gravel_deposits.AG_TYPE",
+      "sand_and_gravel_deposits.GlobalID",
+      "sand_and_gravel_deposits.SHAPEarea",
+      "sand_and_gravel_deposits.SHAPElen"
+    ]
+  }
+}

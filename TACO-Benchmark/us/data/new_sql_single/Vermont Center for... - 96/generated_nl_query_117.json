@@ -1,0 +1,964 @@
+{
+  "sql": "SELECT waste_water_facilities.FacilityName, landfills.SITENAME FROM waste_water_facilities LEFT JOIN landfills ON waste_water_facilities.FacilityID = landfills.SWFACID;",
+  "problem_description": "### Query intent:\nThe SQL statement aims to retrieve the names of facilities from the `waste_water_facilities` table and their corresponding sitenames from the `landfills` table.\n\n### Detailed description:\n1. **Tables Involved**:\n   - **`waste_water_facilities`**: This table contains information about waste water facilities. It has at least one column named `FacilityName`.\n   - **`landfills`**: This table contains information about landfills. It includes a column named `SITENAME`.\n\n2. **Columns Selected**:\n   - `FacilityName`: From the `waste_water_facilities` table.\n   - `SITENAME`: From the `landfills` table.\n\n3. **Join Operation**:\n   - The `LEFT JOIN` clause is used to combine rows from both tables based on the condition `waste_water_facilities.FacilityID = landfills.SWFACID`. This ensures that all records from the `waste_water_facilities` table are included in the result, even if there is no matching record in the `landfills` table. For records where there is a match, the resulting set will include the corresponding `SITENAME`.\n\n### Business Scenario:\nThis query could be used in an environmental management system or waste disposal tracking application. The scenario involves needing to cross-reference facility information with landfill data, possibly for compliance checks, audit purposes, or reporting requirements.\n\n### User Description:\nA user working in environmental compliance might need this information to verify that all waste water facilities are correctly associated with their respective landfills for proper waste disposal monitoring. This could help in identifying any discrepancies between the facilities listed for compliance and the actual landfill locations they are connected to.\n\n### Additional Considerations:\n- **Data Integrity**: Ensuring that the `FacilityID` in `waste_water_facilities` matches accurately with the `SWFACID` in `landfills` is crucial for the reliability of the results.\n- **Performance Impact**: In large databases, the performance of this query might depend on indexes on the join columns (`FacilityID` and `SWFACID`) to ensure efficient execution.\n- **Security and Access**: Depending on the context, access to such data might be restricted based on roles and permissions within the organization.",
+  "natural_language_query": "I'm tasked with fetching the names of facilities dealing with waste water and their corresponding landfill sites from our environmental database. To do this, I'm planning to run a SQL query that joins two tables: 'waste_water_facilities' and 'landfills'. \n\nFrom the 'waste_water_facilities' table, I want to select the column 'FacilityName'. And from the 'landfills' table, I aim to pull the 'SITENAME' column. Given that the facilities might not always have a direct match in the landfills, I'll use a 'LEFT JOIN' operation on the condition that the 'FacilityID' in 'waste_water_facilities' should match the 'SWFACID' in 'landfills'. This setup ensures that all facilities are accounted for, even if some don't have a corresponding landfill site.\n\nIn essence, this query will help us verify that every waste water facility we're monitoring is correctly linked to its designated landfill site, which is vital for compliance checks and ensuring proper waste disposal practices. It's also important to consider the integrity of our data, making sure that the identifiers used in the join operation are accurate, as well as the potential impact on database performance and security measures around who can access this information.",
+  "results": [
+    [
+      "Bennington",
+      null
+    ],
+    [
+      "Barre City",
+      null
+    ],
+    [
+      "Alburgh",
+      null
+    ],
+    [
+      "Barton",
+      null
+    ],
+    [
+      "Benson",
+      null
+    ],
+    [
+      "Brighton",
+      null
+    ],
+    [
+      "Danville",
+      null
+    ],
+    [
+      "Manchester",
+      null
+    ],
+    [
+      "Montpelier",
+      null
+    ],
+    [
+      "Morrisville",
+      null
+    ],
+    [
+      "Orleans",
+      null
+    ],
+    [
+      "Proctor",
+      null
+    ],
+    [
+      "Readsboro",
+      null
+    ],
+    [
+      "Richford",
+      null
+    ],
+    [
+      "St Johnsbury",
+      null
+    ],
+    [
+      "Saxtons River",
+      null
+    ],
+    [
+      "South Burlington - Airport Parkway",
+      null
+    ],
+    [
+      "South Burlington - Bartlett Bay",
+      null
+    ],
+    [
+      "Pawlet",
+      null
+    ],
+    [
+      "West Rutland",
+      null
+    ],
+    [
+      "Williamstown",
+      null
+    ],
+    [
+      "Winooski",
+      null
+    ],
+    [
+      "Woodstock",
+      null
+    ],
+    [
+      "Hartford - WRJ",
+      null
+    ],
+    [
+      "GLOBALFOUNDRIES",
+      null
+    ],
+    [
+      "St Albans Northwest Correctional",
+      null
+    ],
+    [
+      "Otter Valley Union High School",
+      null
+    ],
+    [
+      "Arlington School",
+      null
+    ],
+    [
+      "Ludlow",
+      null
+    ],
+    [
+      "Troy & Jay",
+      null
+    ],
+    [
+      "Bellows Falls",
+      null
+    ],
+    [
+      "Brattleboro ",
+      null
+    ],
+    [
+      "Burlington Main",
+      null
+    ],
+    [
+      "Burlington North",
+      null
+    ],
+    [
+      "Burlington River",
+      null
+    ],
+    [
+      "Essex Junction",
+      null
+    ],
+    [
+      "Middlebury",
+      null
+    ],
+    [
+      "Lyndon",
+      null
+    ],
+    [
+      "Northfield",
+      null
+    ],
+    [
+      "Rutland",
+      null
+    ],
+    [
+      "Springfield",
+      null
+    ],
+    [
+      "St Albans City",
+      null
+    ],
+    [
+      "Windsor Main",
+      null
+    ],
+    [
+      "Shelburne 1 (Crown Rd)",
+      null
+    ],
+    [
+      "Vergennes",
+      null
+    ],
+    [
+      "Bethel",
+      null
+    ],
+    [
+      "Bradford",
+      null
+    ],
+    [
+      "Brandon",
+      null
+    ],
+    [
+      "Bridgewater",
+      null
+    ],
+    [
+      "Canaan",
+      null
+    ],
+    [
+      "Castleton",
+      null
+    ],
+    [
+      "Cavendish",
+      null
+    ],
+    [
+      "Chelsea",
+      null
+    ],
+    [
+      "Chester",
+      null
+    ],
+    [
+      "Enosburg Falls",
+      null
+    ],
+    [
+      "Fairfax",
+      null
+    ],
+    [
+      "Fair Haven",
+      null
+    ],
+    [
+      "Hardwick",
+      null
+    ],
+    [
+      "Hinesburg",
+      null
+    ],
+    [
+      "Jeffersonville",
+      null
+    ],
+    [
+      "Johnson",
+      null
+    ],
+    [
+      "Lunenburg FD2",
+      null
+    ],
+    [
+      "Marshfield",
+      null
+    ],
+    [
+      "Milton",
+      null
+    ],
+    [
+      "Newport City",
+      null
+    ],
+    [
+      "North Troy",
+      null
+    ],
+    [
+      "Orwell",
+      null
+    ],
+    [
+      "Pittsford",
+      null
+    ],
+    [
+      "Plainfield",
+      null
+    ],
+    [
+      "Poultney",
+      null
+    ],
+    [
+      "Putney",
+      null
+    ],
+    [
+      "Randolph",
+      null
+    ],
+    [
+      "Shelburne 2 (Harbor Rd)",
+      null
+    ],
+    [
+      "Sheldon Springs",
+      null
+    ],
+    [
+      "Sherburne FD 1",
+      null
+    ],
+    [
+      "Stowe",
+      null
+    ],
+    [
+      "Swanton",
+      null
+    ],
+    [
+      "Wallingford FD 1",
+      null
+    ],
+    [
+      "Waterbury",
+      null
+    ],
+    [
+      "Whitingham",
+      null
+    ],
+    [
+      "Whitingham - Jacksonville",
+      null
+    ],
+    [
+      "Wilmington",
+      null
+    ],
+    [
+      "Windsor Weston Heights",
+      null
+    ],
+    [
+      "Hartford - Quechee",
+      null
+    ],
+    [
+      "Richmond",
+      null
+    ],
+    [
+      "Royalton",
+      null
+    ],
+    [
+      "Cold Brook FD 1 - Direct Discharge",
+      null
+    ],
+    [
+      "Chittenden Solid Waste District",
+      null
+    ],
+    [
+      "P B M Nutritionals Inc",
+      null
+    ],
+    [
+      "NorthStar Nuclear Decommissioning Company LLC",
+      null
+    ],
+    [
+      "Barre Septic Service",
+      null
+    ],
+    [
+      "A1 Sewer and Drain",
+      null
+    ],
+    [
+      "Woodstock - South",
+      null
+    ],
+    [
+      "Woodstock - Taftsville",
+      null
+    ],
+    [
+      "WestRock Converting Company",
+      null
+    ],
+    [
+      "FiberMark North America Inc",
+      null
+    ],
+    [
+      "Champlain Black Marble",
+      null
+    ],
+    [
+      "Alburgh Fire District 1",
+      null
+    ],
+    [
+      "Bourbeau Aggregate, LLC",
+      null
+    ],
+    [
+      "Deermont Corp - VT Plating",
+      null
+    ],
+    [
+      "Whitcomb Construction                                       ",
+      null
+    ],
+    [
+      "South Hero Fire District 4",
+      null
+    ],
+    [
+      "Barrows and Fisher Oil Co",
+      null
+    ],
+    [
+      "Blodgett, G S                                               ",
+      null
+    ],
+    [
+      "Brattleboro Water Treatment Plant",
+      null
+    ],
+    [
+      "Burlington Electric McNeil Generating Station",
+      null
+    ],
+    [
+      "Cabot",
+      null
+    ],
+    [
+      "Champlain Water District",
+      null
+    ],
+    [
+      "Ethan Allen",
+      null
+    ],
+    [
+      "Energizer - NCCW                                            ",
+      null
+    ],
+    [
+      "Grand Isle FD 4 WTP",
+      null
+    ],
+    [
+      "Imerys Talc - West Windsor Mill",
+      null
+    ],
+    [
+      "Global Companies LLC",
+      null
+    ],
+    [
+      "Montpelier Water Treatment Plant",
+      null
+    ],
+    [
+      "North Hero Water Treatment Plant",
+      null
+    ],
+    [
+      "Troy Minerals",
+      null
+    ],
+    [
+      "Soundview Vermont Holdings",
+      null
+    ],
+    [
+      "Isovolta Inc",
+      null
+    ],
+    [
+      "Rock of Ages",
+      null
+    ],
+    [
+      "Lyndonville Water Treatment Plant                           ",
+      null
+    ],
+    [
+      "Ryegate Associates",
+      null
+    ],
+    [
+      "Ryegate Fire District 2",
+      null
+    ],
+    [
+      "St Albans Water Treatment Plant",
+      null
+    ],
+    [
+      "Swanton Village Water Treatment Plant",
+      null
+    ],
+    [
+      "Tri Town Water District 1",
+      null
+    ],
+    [
+      "Unifirst",
+      null
+    ],
+    [
+      "TransCanada Hydro Northeast - Wilder",
+      null
+    ],
+    [
+      "TransCanada Hydro Northeast - Bellows Falls",
+      null
+    ],
+    [
+      "TransCanada Hydro Northeast - Harriman Reservoir            ",
+      null
+    ],
+    [
+      "TransCanada Hydro Northeast - Searsburg                     ",
+      null
+    ],
+    [
+      "TransCanada Hydro Northeast - Vernon",
+      null
+    ],
+    [
+      "Vergennes Panton Water District",
+      null
+    ],
+    [
+      "VT Fish & Wildlife - Bennington Fish Hatchery               ",
+      null
+    ],
+    [
+      "VT Fish & Wildlife - Salisbury Fish Hatchery",
+      null
+    ],
+    [
+      "Weidmann Electrical Technology",
+      null
+    ],
+    [
+      "Agri-Mark - Middlebury",
+      null
+    ],
+    [
+      "Casella Waste Mgmt Inc - multiple facilities",
+      null
+    ],
+    [
+      "Ben & Jerrys Waterbury",
+      null
+    ],
+    [
+      "Ben & Jerry's St Albans",
+      null
+    ],
+    [
+      "Edlund Company",
+      null
+    ],
+    [
+      "Energizer - Mini Alkaline",
+      null
+    ],
+    [
+      "General Electric - Columbian Ave",
+      null
+    ],
+    [
+      "General Electric - Windcrest Road",
+      null
+    ],
+    [
+      "Green Mountain Spinnery                                     ",
+      null
+    ],
+    [
+      "New England Waste Services - Coventry",
+      null
+    ],
+    [
+      "Moretown Landfill",
+      null
+    ],
+    [
+      "US Dept of Interior-White River NFH                         ",
+      null
+    ],
+    [
+      "US Dept of Interior-DEisenhower NFH",
+      null
+    ],
+    [
+      "Agri-Mark - Cabot Creamery",
+      null
+    ],
+    [
+      "Vishay Tansitor",
+      null
+    ],
+    [
+      "S D Ireland - Green Acres Quarry",
+      null
+    ],
+    [
+      "Smugglers Notch - SNOMAX",
+      null
+    ],
+    [
+      "Coltec Industries                                           ",
+      null
+    ],
+    [
+      "Carrara & Sons (Clarendon Quarry)",
+      null
+    ],
+    [
+      "Shoreham",
+      null
+    ],
+    [
+      "VT Quarries Corp",
+      null
+    ],
+    [
+      "Smugglers Notch - Shutdown Drainage",
+      null
+    ],
+    [
+      "Springfield Municipal Swimming Pool",
+      null
+    ],
+    [
+      "Worcester FD 1",
+      null
+    ],
+    [
+      "Magris Talc USA, Inc - Argonaut Mine",
+      null
+    ],
+    [
+      "OMYA Middlebury Quarry",
+      null
+    ],
+    [
+      "VT Fish & Wildlife - Roxbury Fish Hatchery",
+      null
+    ],
+    [
+      "Ryegate Town - South",
+      null
+    ],
+    [
+      "Earle P. Towne Water Treatment Plant",
+      null
+    ],
+    [
+      "Montpelier Swimming Pool",
+      null
+    ],
+    [
+      "OMYA Hogback Quarry",
+      null
+    ],
+    [
+      "H & H Properties                                            ",
+      null
+    ],
+    [
+      "Lamb Durward & Linda",
+      null
+    ],
+    [
+      "Mt Snow Ltd",
+      null
+    ],
+    [
+      "Fortieth Burlington LLC                                     ",
+      null
+    ],
+    [
+      "Pike Industries (Waterford Crushed Stone)                   ",
+      null
+    ],
+    [
+      "Ames True Temper Inc                                        ",
+      null
+    ],
+    [
+      "Montshire Museum of Science",
+      null
+    ],
+    [
+      "Global Partners, LP - P & H Truck Stop",
+      null
+    ],
+    [
+      "OMYA East and West - Verpol",
+      null
+    ],
+    [
+      "Lime Kiln Quarry West",
+      null
+    ],
+    [
+      "Working Dog Septic",
+      null
+    ],
+    [
+      "G.S. Precision Coating, Inc",
+      null
+    ],
+    [
+      "Pownal",
+      null
+    ],
+    [
+      "Cumberland Farms Station 4024                               ",
+      null
+    ],
+    [
+      "Pike Industries (Williamstown Quarry)",
+      null
+    ],
+    [
+      "VT Dept State Buildings - Bennington State Office Bldg      ",
+      null
+    ],
+    [
+      "Columbia Forest Products",
+      null
+    ],
+    [
+      "Cold Brook FD 1 - Golf Course",
+      null
+    ],
+    [
+      "Cold Brook FD 1 - Base Tract",
+      null
+    ],
+    [
+      "Pike Industries (Perini Quarry)",
+      null
+    ],
+    [
+      "Bennington Water Treatment Facility                         ",
+      null
+    ],
+    [
+      "Imerys Talc - Rainbow Mine",
+      null
+    ],
+    [
+      "Eagle River Mining",
+      null
+    ],
+    [
+      "Malone 75 Swanton Road Properties",
+      null
+    ],
+    [
+      "Cersosimo Lumber Company",
+      null
+    ],
+    [
+      "Pike Industries (New Haven)",
+      null
+    ],
+    [
+      "Cornwall",
+      null
+    ],
+    [
+      "Retreat Farm, LTD",
+      null
+    ],
+    [
+      "Ampersand Gilman Hydro LP",
+      null
+    ],
+    [
+      "All Out Waste Management                                    ",
+      null
+    ],
+    [
+      "Irving Oil Terminals Inc.",
+      null
+    ],
+    [
+      "Grand Isle Consolidated Water Dist",
+      null
+    ],
+    [
+      "Commonwealth Dairy                                          ",
+      null
+    ],
+    [
+      "Greer Family LLC",
+      null
+    ],
+    [
+      "Chaves Excavating",
+      null
+    ],
+    [
+      "Imerys Talc America",
+      null
+    ],
+    [
+      "VT Fish & Wildlife - Ed Weed Fish Culture Station",
+      null
+    ],
+    [
+      "Powhatan Ferrisburgh",
+      null
+    ],
+    [
+      "Champlain Oil Co-McGanns Mobil                              ",
+      null
+    ],
+    [
+      "Connor Homes",
+      null
+    ],
+    [
+      "Barnet Hydro                                                ",
+      null
+    ],
+    [
+      "Ottauquechee Hydro",
+      null
+    ],
+    [
+      "Sheldon Springs Hydro",
+      null
+    ],
+    [
+      "von Trapp Brewing",
+      null
+    ],
+    [
+      "Alchemist - Waterbury",
+      null
+    ],
+    [
+      "Lost Nation Brewery",
+      null
+    ],
+    [
+      "Alchemist - Stowe",
+      null
+    ],
+    [
+      "Stone Corral Brewery",
+      null
+    ],
+    [
+      "Drews LLC",
+      null
+    ],
+    [
+      "IBM",
+      null
+    ],
+    [
+      "Windsor Brewing Company                                     ",
+      null
+    ],
+    [
+      "Fiddlehead Brewing",
+      null
+    ],
+    [
+      "VT AOT -Middlebury Bridge",
+      null
+    ],
+    [
+      "Magris Talc USA, Inc - Hammondsville Mine",
+      null
+    ],
+    [
+      "Bryce Farms Inc",
+      null
+    ],
+    [
+      "Richville Farms",
+      null
+    ],
+    [
+      "Bayview Farm",
+      null
+    ],
+    [
+      "Gebbie Farm",
+      null
+    ],
+    [
+      "Rail View Dairy, LLC",
+      null
+    ],
+    [
+      "Sweet Farm",
+      null
+    ],
+    [
+      "H Bar 9",
+      null
+    ],
+    [
+      "Machia Farm",
+      null
+    ],
+    [
+      "Sizen Dairy Farm",
+      null
+    ],
+    [
+      "Lucas Dairy, LLC",
+      null
+    ],
+    [
+      "Leach Farms, Inc",
+      null
+    ],
+    [
+      "Boissonneault Family Farm",
+      null
+    ]
+  ],
+  "sql skeleton": "SELECT _ , _ FROM _ -_ ;",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "waste_water_facilities": [
+      "waste_water_facilities.X",
+      "waste_water_facilities.Y",
+      "waste_water_facilities.FacilityName",
+      "waste_water_facilities.FacilityID",
+      "waste_water_facilities.WWInventoryURL"
+    ],
+    "landfills": [
+      "landfills.X",
+      "landfills.Y",
+      "landfills.OBJECTID",
+      "landfills.PSINUM",
+      "landfills.SWFACID",
+      "landfills.SITENAME",
+      "landfills.LOCCONF",
+      "landfills.DATE_FIRST",
+      "landfills.DATE_LAST",
+      "landfills.ACRES",
+      "landfills.STATUS",
+      "landfills.WQMONITORING",
+      "landfills.GASCOLLECTION",
+      "landfills.TOWNNAME",
+      "landfills.LATITUDE",
+      "landfills.LONGITUDE"
+    ]
+  }
+}

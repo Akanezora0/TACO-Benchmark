@@ -1,0 +1,24 @@
+{
+  "sql": "SELECT \"景区名称\" as \"景名字\", \"等级\" as \"景区等级\", \"地址\" as \"景区地址\", \"咨询电话\" as \"咨询电话\", \"投诉电话\" as \"投诉电话\", \"邮编\" as \"邮编\" FROM \"xichengquxichengqudengjilvyoujingquminglu14\" WHERE \"等级\" = 'AAAA'",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从西城区等级旅游景区名录表中筛选出等级为 AAAA 的景区，并返回这些景区的名称、等级、地址、咨询电话、投诉电话和邮编信息。\n\n- **详细描述**：\n  - **涉及的表**：`\"xichengquxichengqudengjilvyoujingquminglu14\"`，该表可能存储了西城区的等级旅游景区名录信息。\n  - **涉及的列**：\n    - `\"景区名称\"`：景区的名称，查询结果中将其重命名为 `\"景名字\"`。\n    - `\"等级\"`：景区的等级，查询结果中将其重命名为 `\"景区等级\"`。\n    - `\"地址\"`：景区的地址，查询结果中将其重命名为 `\"景区地址\"`。\n    - `\"咨询电话\"`：景区的咨询电话，查询结果中保留原名。\n    - `\"投诉电话\"`：景区的投诉电话，查询结果中保留原名。\n    - `\"邮编\"`：景区的邮编，查询结果中保留原名。\n  - **条件**：`WHERE \"等级\" = 'AAAA'`，筛选出等级为 AAAA 的景区。\n\n- **业务场景**：\n  - 该查询可以用于旅游信息管理系统或旅游推荐平台，帮助用户快速找到西城区内等级为 AAAA 的景区。\n  - 旅游管理部门可以使用该查询来统计或展示高等级景区的信息，以便进行宣传或管理。\n  - 游客或旅行社可以通过该查询获取景区的详细联系方式（如咨询电话、投诉电话）和地址，方便规划行程或解决问题。\n\n- **用户描述**：\n  - 用户可能需要在西城区内寻找高等级的旅游景区（如 AAAA 级），以便选择优质的旅游目的地。\n  - 用户可能需要获取景区的联系方式（如咨询电话或投诉电话），以便提前咨询或反馈问题。\n  - 用户可能需要了解景区的具体地址和邮编，以便导航或邮寄相关材料。\n  - 旅游管理部门可能需要统计或展示高等级景区的信息，以便进行宣传或优化管理。",
+  "natural_language_query": "市民反映，最近想带家人去西城区玩，听说4A级景区比较靠谱，但不知道具体有哪些。想了解一下西城区内那些评上4A的旅游景点都有哪些？最好能提供景点的具体位置在哪里，万一找不到路可以打电话问问。对了，要是有投诉电话也一并告知，万一游玩时遇到服务问题可以及时反映。另外邮编也麻烦给一下，可能要寄明信片什么的。主要是想找正规的4A景区，游玩质量有保障些。",
+  "results": 0,
+  "sql skeleton": "select _ as _ from _ where _",
+  "database": "旅游住宿",
+  "tables": {
+    "xichengquxichengqudengjilvyoujingquminglu14": [
+      "xichengquxichengqudengjilvyoujingquminglu14.序号",
+      "xichengquxichengqudengjilvyoujingquminglu14.景区名称",
+      "xichengquxichengqudengjilvyoujingquminglu14.等级",
+      "xichengquxichengqudengjilvyoujingquminglu14.地址",
+      "xichengquxichengqudengjilvyoujingquminglu14.咨询电话",
+      "xichengquxichengqudengjilvyoujingquminglu14.投诉电话",
+      "xichengquxichengqudengjilvyoujingquminglu14.邮编"
+    ],
+    "pingguqupingguqujingpinminsu2083": [
+      "pingguqupingguqujingpinminsu2083.平谷区2022年精品民宿",
+      "pingguqupingguqujingpinminsu2083.Unnamed: 1",
+      "pingguqupingguqujingpinminsu2083.Unnamed: 2"
+    ]
+  }
+}

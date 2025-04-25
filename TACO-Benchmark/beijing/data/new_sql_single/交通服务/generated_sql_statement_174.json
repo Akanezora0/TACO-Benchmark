@@ -1,0 +1,24 @@
+{
+  "sql": "SELECT \n    \"shijiaotongweichengkeyindaojichuxinxi3710.序号\", \n    \"shijiaotongweichengkeyindaojichuxinxi3710.枢纽站信息\", \n    \"shijiaotongweichengkeyindaojichuxinxi3710.周边交通指南\", \n    \"shijiaotongweichengkeyindaojichuxinxi3710.公交线路信息\", \n    \"shijiaotongweichengkeyindaojichuxinxi3710.轨道线路信息\", \n    \"shijiaotongweichengkeyindaojichuxinxi3710.更新时间\", \n    \"shijiaotongweichengkeyindaojichuxinxi3710.共享时间 \", \n    \"shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.业户名称\", \n    \"shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.评定等级\", \n    \"shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.所属地区\", \n    \"shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.年份\", \n    \"shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.统一社会信用代码\" \nFROM \n    \"shijiaotongweichengkeyindaojichuxinxi3710\" \nLEFT JOIN \n    \"shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669\" \nON \n    \"shijiaotongweichengkeyindaojichuxinxi3710.序号\" = \"shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.统一社会信用代码\" \nWHERE \n    \"shijiaotongweichengkeyindaojichuxinxi",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ from _ left join _ on _ ._ = _ ._ where _ ._ = _ and _ ._ = _ and _ (_ ,_ ) = _",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweichengkeyindaojichuxinxi3710": [
+      "shijiaotongweichengkeyindaojichuxinxi3710.序号",
+      "shijiaotongweichengkeyindaojichuxinxi3710.枢纽站信息",
+      "shijiaotongweichengkeyindaojichuxinxi3710.周边交通指南",
+      "shijiaotongweichengkeyindaojichuxinxi3710.公交线路信息",
+      "shijiaotongweichengkeyindaojichuxinxi3710.轨道线路信息",
+      "shijiaotongweichengkeyindaojichuxinxi3710.更新时间",
+      "shijiaotongweichengkeyindaojichuxinxi3710.共享时间 "
+    ],
+    "shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669": [
+      "shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.业户名称",
+      "shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.评定等级",
+      "shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.所属地区",
+      "shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.年份",
+      "shijiaotongweilvyoukeyunqiyexinyongpingjiajieguoshuju3669.统一社会信用代码"
+    ]
+  }
+}

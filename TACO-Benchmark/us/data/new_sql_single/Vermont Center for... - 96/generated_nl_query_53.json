@@ -1,0 +1,44 @@
+{
+  "sql": "SELECT public_water_sources.SystemName, dfirm_floodways.FLOODWAY FROM public_water_sources JOIN dfirm_floodways ON public_water_sources.WSID = dfirm_floodways.OBJECTID WHERE dfirm_floodways.FLOODWAY IS NOT NULL;",
+  "problem_description": "### Query intent:\nThe SQL statement is designed to retrieve specific information from two related databases: `public_water_sources` and `dfirm_floodways`. Its primary goal is to extract the SystemName from the `public_water_sources` table and the FLOODWAY from the `dfirm_floodways` table.\n\n### Detailed description:\n1. **Tables involved**:\n   - **public_water_sources**: This table likely contains data about water sources within a geographic area. It includes at least one column `WSID` which is used as a foreign key to link records in this table with those in the `dfirm_floodways` table.\n   - **dfirm_floodways**: This table appears to contain floodway data. It includes an `OBJECTID` column, which is also likely a foreign key, used to link records in this table with those in `public_water_sources`. The `FLOODWAY` column is the main focus for extraction.\n\n2. **Columns involved**:\n   - **public_water_sources.SystemName**: This column holds the name of the water source systems.\n   - **dfirm_floodways.FLOODWAY**: This column identifies specific floodways.\n\n3. **Conditions**:\n   - **ON public_water_sources.WSID = dfirm_floodways.OBJECTID**: This condition ensures that only matching records between the two tables are considered. It links rows where the `WSID` in `public_water_sources` matches the `OBJECTID` in `dfirm_floodways`.\n   - **WHERE dfirm_floodways.FLOODWAY IS NOT NULL**: This condition filters out any rows from `dfirm_floodways` where the `FLOODWAY` value is null, ensuring that only floodways with defined names are included in the final result set.\n\n### Business scenario:\nThis query is particularly useful in environmental management and urban planning contexts. For example, it could be used to identify specific water sources that are associated with known floodways in an effort to assess flood risk, plan mitigation strategies, or monitor water quality in areas prone to flooding.\n\n### User description:\nA user working in environmental conservation or urban development might need this information to create detailed reports on flood risks associated with local water sources. They could use this data to inform decisions on infrastructure improvements, emergency planning, or environmental impact assessments. For instance, identifying critical water sources near high-risk floodways could help prioritize resources for flood prevention measures or water quality monitoring.",
+  "natural_language_query": "I'm looking into a project that involves integrating data from two databases, 'public_water_sources' and 'dfirm_floodways'. My aim is to gather specific details. Specifically, I need to fetch the 'SystemName' from the 'public_water_sources' database and the 'FLOODWAY' from the 'dfirm_floodways' database. The connection between these two sets of data is made through the 'WSID' field in 'public_water_sources', which should match the 'OBJECTID' in 'dfirm_floodways'. I'm particularly interested in cases where there's a defined 'FLOODWAY' to ensure we're focusing on actual floodways and not any undefined ones. Could you help me write the SQL query for this task?",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ ;",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "dfirm_floodways": [
+      "dfirm_floodways.OBJECTID",
+      "dfirm_floodways.DFIRM_ID",
+      "dfirm_floodways.FLD_AR_ID",
+      "dfirm_floodways.FLD_ZONE",
+      "dfirm_floodways.FLOODWAY",
+      "dfirm_floodways.SFHA_TF",
+      "dfirm_floodways.AR_REVERT",
+      "dfirm_floodways.SOURCE_CIT",
+      "dfirm_floodways.HYDRO_ID",
+      "dfirm_floodways.CST_MDL_ID"
+    ],
+    "public_water_sources": [
+      "public_water_sources.X",
+      "public_water_sources.Y",
+      "public_water_sources.TINWSF_IS_NUMBER",
+      "public_water_sources.WSID",
+      "public_water_sources.SystemName",
+      "public_water_sources.SystemType",
+      "public_water_sources.SystemStatus",
+      "public_water_sources.SystemPopulation",
+      "public_water_sources.FacilityName",
+      "public_water_sources.FacilityID",
+      "public_water_sources.FacilityStatus",
+      "public_water_sources.Availability",
+      "public_water_sources.WaterType",
+      "public_water_sources.ConstructedDate",
+      "public_water_sources.PermittedYield",
+      "public_water_sources.WellType",
+      "public_water_sources.Diameter_in",
+      "public_water_sources.WellDepth",
+      "public_water_sources.CasingDepth",
+      "public_water_sources.StaticWaterLevel"
+    ]
+  }
+}

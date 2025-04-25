@@ -1,0 +1,21 @@
+{
+  "sql": "SELECT \"pingguquzhucegongyuanxinxi780\".\"序号\",\"pingguquzhucegongyuanxinxi780\".名称,\"pingguquzhucegongyuanxinxi780\".\"区\",\"pingguquzhucegongyuanxinxi780\".\"街道\",\"pingguquzhucegongyuanxinxi780\".\"地址\",\"pingguquzhucegongyuanxinxi780\".\"咨询电话\",\"xichengqubeijingshiwenwubaohudanwei31\".\"序号\",\"xichengqubeijingshiwenwubaohudanwei31\".名称,\"xichengqubeijingshiwenwubaohudanwei31\".\"地址\" FROM \"pingguquzhucegongyuanxinxi780\" JOIN \"xichengqubeijingshiwenwubaohudanwei31\" ON \"pingguquzhucegongyuanxinxi780\".\"序号\"=\"xichengqubeijingshiwenwubaohudanwei31\".\"序号\" WHERE \"pingguquzhucegongyuanxinxi780\".名称 = '目标名称' AND \"pingguquzhucegongyuanxinxi780\".\"区\" = '目标区' and (CASE WHEN \"xichengqubeijingshiwenwubaohudanwei31\".\"地址\" IS NOT NULL THEN \"xichengqubeijingshiwenwubaohudanwei31\".\"地址\" ELSE '' END) = '目标地址' and \"xichengqubeijingshiwenwubaohudanwei31\".\"名称\" = '目标名称';",
+  "results": 0,
+  "sql skeleton": "SELECT _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ FROM _ JOIN _ ON _ ._ = _ ._ WHERE _ ._ = _ AND _ ._ = _ and _ (_ ._ , _ ) = _ and _ ._ = _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "pingguquzhucegongyuanxinxi780": [
+      "pingguquzhucegongyuanxinxi780.序号",
+      "pingguquzhucegongyuanxinxi780.名称",
+      "pingguquzhucegongyuanxinxi780.区",
+      "pingguquzhucegongyuanxinxi780.街道",
+      "pingguquzhucegongyuanxinxi780.地址",
+      "pingguquzhucegongyuanxinxi780.咨询电话"
+    ],
+    "xichengqubeijingshiwenwubaohudanwei31": [
+      "xichengqubeijingshiwenwubaohudanwei31.序号",
+      "xichengqubeijingshiwenwubaohudanwei31.名称",
+      "xichengqubeijingshiwenwubaohudanwei31.地址"
+    ]
+  }
+}

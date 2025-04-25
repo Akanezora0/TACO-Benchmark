@@ -1,0 +1,30 @@
+{
+  "sql": "SELECT wildlife_management_units.OBJECTID, wildlife_management_units.ABNAME, dfirm_floodways.FLOODWAY FROM wildlife_management_units INNER JOIN dfirm_floodways ON wildlife_management_units.OBJECTID = dfirm_floodways.OBJECTID WHERE wildlife_management_units.AGENCY = 'AgencyName' AND dfirm_floodways.FLOODWAY = 'FloodwayName'",
+  "problem_description": "### Query intent:\nThe SQL statement aims to retrieve specific data from two related tables, `wildlife_management_units` and `dfirm_floodways`, by performing an inner join based on a common identifier (`OBJECTID`) and filtering results based on certain criteria.\n\n### Detailed description:\n1. **Table `wildlife_management_units`**:\n   - **Columns**:\n     - `OBJECTID`: A unique identifier for each entry in this table.\n     - `ABNAME`: Abbreviated name of the wildlife management unit.\n     - `AGENCY`: The agency responsible for managing the wildlife management units.\n\n2. **Table `dfirm_floodways`**:\n   - **Columns**:\n     - `OBJECTID`: A unique identifier shared with `wildlife_management_units`.\n     - `FLOODWAY`: Name of the floodway.\n\n3. **Join operation**:\n   - An inner join is performed between `wildlife_management_units` and `dfirm_floodways` using the common `OBJECTID` column as the join condition.\n\n4. **Where clause**:\n   - Filters the joined result set based on:\n     - `wildlife_management_units.AGENCY` being equal to `'AgencyName'`, meaning only records associated with the specified agency are considered.\n     - `dfirm_floodways.FLOODWAY` being equal to `'FloodwayName'`, meaning only floodways with the specified name are included in the final result.\n\n### Business scenario:\nThis query could be used in a scenario where environmental or wildlife conservation managers need to assess the overlap between protected wildlife management units and floodways within a specific agency's jurisdiction. For instance, they might want to identify which floodways (e.g., `'FloodwayName'`) fall under the management of `'AgencyName'` to plan mitigation strategies or conservation efforts.\n\n### User description:\nA user, possibly an environmental scientist or a project manager, might need this information to understand the geographical distribution of their agency's responsibilities regarding flood management and wildlife protection. They might require this data to:\n- Plan targeted interventions or monitoring activities for specific floodways.\n- Ensure compliance with environmental regulations by identifying which areas require special attention due to both wildlife management and flood risk.\n- Facilitate communication and coordination among different departments (e.g., wildlife management and flood control) by highlighting shared responsibilities.",
+  "natural_language_query": "As an environmental scientist working for 'AgencyName', I'm tasked with assessing the impact of our operations on wildlife habitats, particularly in relation to flood management. I need to gather information about the wildlife management units that overlap with the floodways named 'FloodwayName' under our agency's jurisdiction. This will help us in planning targeted interventions and ensuring compliance with environmental regulations. Could you please assist me in running a SQL query to retrieve this information? Specifically, I'm looking for a list of all wildlife management units managed by 'AgencyName' that intersect with the floodway named 'FloodwayName'.",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ ,_ from _ where _ =_ and _ =_",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "wildlife_management_units": [
+      "wildlife_management_units.OBJECTID",
+      "wildlife_management_units.ABNAME",
+      "wildlife_management_units.AGENCY",
+      "wildlife_management_units.DEPT",
+      "wildlife_management_units.DIV",
+      "wildlife_management_units.BOUNDARY"
+    ],
+    "dfirm_floodways": [
+      "dfirm_floodways.OBJECTID",
+      "dfirm_floodways.DFIRM_ID",
+      "dfirm_floodways.FLD_AR_ID",
+      "dfirm_floodways.FLD_ZONE",
+      "dfirm_floodways.FLOODWAY",
+      "dfirm_floodways.SFHA_TF",
+      "dfirm_floodways.AR_REVERT",
+      "dfirm_floodways.SOURCE_CIT",
+      "dfirm_floodways.HYDRO_ID",
+      "dfirm_floodways.CST_MDL_ID"
+    ]
+  }
+}

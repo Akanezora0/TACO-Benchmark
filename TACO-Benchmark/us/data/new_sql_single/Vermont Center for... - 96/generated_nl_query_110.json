@@ -1,0 +1,35 @@
+{
+  "sql": "SELECT sand_and_gravel_deposits.OBJECTID, sand_and_gravel_deposits.AG_TYPE, sand_and_gravel_deposits.GlobalID, sand_and_gravel_deposits.SHAPEarea, landfills.LATITUDE FROM sand_and_gravel_deposits INNER JOIN landfills ON sand_and_gravel_deposits.OBJECTID = landfills.OBJECTID WHERE sand_and_gravel_deposits.AG_TYPE = 'type' AND sand_and_gravel_deposits.SHAPEarea > 1000 AND landfills.LATITUDE BETWEEN 37.5 AND 38.5",
+  "problem_description": "### Query intent:\nThe SQL statement is designed to retrieve specific details about sand and gravel deposits from the `sand_and_gravel_deposits` table, with additional data from the `landfills` table, focusing on those that match certain criteria.\n\n### Detailed description:\n- **Tables involved**: `sand_and_gravel_deposits` and `landfills`.\n  - `sand_and_gravel_deposits`: Contains information about sand and gravel deposits, including `OBJECTID`, `AG_TYPE`, `GlobalID`, and `SHAPEarea`.\n  - `landfills`: Contains information related to landfills, including `OBJECTID` and `LATITUDE`.\n\n- **Columns selected**:\n  - `OBJECTID`: Unique identifier for each deposit/landfill.\n  - `AG_TYPE`: Type of the sand and gravel deposit.\n  - `GlobalID`: Global unique identifier for the deposit.\n  - `SHAPEarea`: Area of the deposit (in some unit of measurement).\n  - `LATITUDE`: Latitude coordinate for the location of the landfill.\n\n- **Conditions applied**:\n  - `sand_and_gravel_deposits.AG_TYPE = 'type'`: Filters deposits by a specific type ('type').\n  - `sand_and_gravel_deposits.SHAPEarea > 1000`: Filters for deposits larger than 1000 square units.\n  - `landfills.LATITUDE BETWEEN 37.5 AND 38.5`: Joins deposits only if the latitude of the corresponding landfill falls within the range of 37.5 to 38.5.\n\n### Business scenario:\nThis query is useful in scenarios where environmental or resource management departments need to analyze large sand and gravel deposits near specific geographic areas, particularly within a defined latitude range. It helps in identifying suitable locations for further investigation, compliance checks, or resource extraction planning.\n\n### User description:\nA user might require this query when they are tasked with reviewing potential sites for sand and gravel extraction near a particular area of interest, say between latitudes 37.5 and 38.5. The need arises due to ongoing projects requiring specific types of materials and sizes, ensuring compliance with environmental regulations, or optimizing logistics based on geographical proximity.",
+  "natural_language_query": "User: \"I'm working on a project that involves assessing potential sites for sand and gravel extraction. I need to find out which sites fall within a specific geographic area, specifically between latitudes 37.5 and 38.5. Also, I'm interested in sites that meet a certain size criterion, let's say larger than 1000 square units, and I'm particularly interested in a specific type of site, let's call it 'type'. Could you help me write a query for this?\"\n\nAssistant: \"Certainly! To address your request, we'll be crafting a SQL query that will sift through our database to find sand and gravel deposits that align with your specified parameters. Here's how the query will look:\n\n```sql\nSELECT \n    sand_and_gravel_deposits.OBJECTID,\n    sand_and_gravel_deposits.AG_TYPE,\n    sand_and_gravel_deposits.GlobalID,\n    sand_and_gravel_deposits.SHAPEarea,\n    landfills.LATITUDE\nFROM \n    sand_and_gravel_deposits\nJOIN \n    landfills ON sand_and_gravel_deposits.landfill_id = landfills.OBJECTID\nWHERE \n    sand_and_gravel_deposits.AG_TYPE = 'type' AND\n    sand_and_gravel_deposits.SHAPEarea > 1000 AND\n    landfills.LATITUDE BETWEEN 37.5 AND 38.5;\n```\n\nThis query will fetch the necessary information about deposits that match your criteria, including their unique identifiers, types, global IDs, areas, and the latitude of the associated landfills. This should provide you with a comprehensive list of potential sites for further evaluation.\"",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ ,_ ,_ from _ where _ = _ and _ = _ and _ = _ and _ (_ ,_ ) = _",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "sand_and_gravel_deposits": [
+      "sand_and_gravel_deposits.OBJECTID",
+      "sand_and_gravel_deposits.AG_TYPE",
+      "sand_and_gravel_deposits.GlobalID",
+      "sand_and_gravel_deposits.SHAPEarea",
+      "sand_and_gravel_deposits.SHAPElen"
+    ],
+    "landfills": [
+      "landfills.X",
+      "landfills.Y",
+      "landfills.OBJECTID",
+      "landfills.PSINUM",
+      "landfills.SWFACID",
+      "landfills.SITENAME",
+      "landfills.LOCCONF",
+      "landfills.DATE_FIRST",
+      "landfills.DATE_LAST",
+      "landfills.ACRES",
+      "landfills.STATUS",
+      "landfills.WQMONITORING",
+      "landfills.GASCOLLECTION",
+      "landfills.TOWNNAME",
+      "landfills.LATITUDE",
+      "landfills.LONGITUDE"
+    ]
+  }
+}

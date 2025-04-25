@@ -1,0 +1,26 @@
+{
+  "sql": "SELECT \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号\", \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称\", \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址\" FROM \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076\" WHERE \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址\" = (SELECT \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.DWMC\" FROM \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\" WHERE \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC\" = '目标专柜名称')\n```",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从表 `shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076` 中查询特定地址的专柜信息，包括专用标识牌号、专柜名称和地址，其中地址是通过另一个表 `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374` 中的专柜名称查询得到的。\n\n- **详细描述**：\n  - **主查询表**：`shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076`，该表可能存储了与清真食品专柜相关的数据。\n    - **查询列**：\n      - `专用标识牌号`：可能是专柜的唯一标识号码。\n      - `专柜名称`：专柜的名称。\n      - `地址`：专柜的物理地址。\n  - **子查询表**：`shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374`，该表可能存储了餐饮服务许可证的相关信息。\n    - **子查询列**：\n      - `DWMC`：可能是单位名称或地址信息。\n      - `JYZMC`：可能是经营主体名称或专柜名称。\n    - **子查询条件**：`JYZMC = '目标专柜名称'`，即通过特定的专柜名称查询对应的单位名称或地址。\n  - **查询条件**：主查询的地址等于子查询中通过专柜名称查询到的单位名称或地址。\n\n- **业务场景**：\n  - 该查询可能用于监管或检查清真食品专柜的合规性。例如，监管部门可能需要根据某个专柜的名称（如“目标专柜名称”）查询其地址，并进一步获取该地址下的其他专柜信息（如专用标识牌号、专柜名称等）。\n  - 另一个可能的场景是数据核对，确保两个系统中的专柜信息（如名称和地址）是一致的。\n\n- **用户描述**：\n  - 用户可能是监管人员或数据分析师，他们需要核实某个专柜的地址是否与其他系统中的记录一致，或者需要获取某个地址下的所有专柜信息以便进行合规检查。\n  - 用户可能遇到的问题是，只知道专柜的名称（如“目标专柜名称”），但需要进一步了解该专柜的地址或其他相关信息。通过该查询，用户可以快速定位到目标专柜的地址，并获取该地址下的其他专柜数据。",
+  "natural_language_query": "市民反映，在检查\"老马家清真专柜\"时发现他们的经营地址可能和许可证信息对不上。我们这边只能查到专柜名字，但需要核实他们的实际经营位置和专用标识牌信息。这个专柜应该是在海淀区某个市场里的，但具体地址不明确。希望能帮忙查一下这个专柜的准确地址，还有同地址下其他清真专柜的情况，包括他们的专用标识牌号和具体名称。因为最近在开展清真食品规范检查，需要确认这些专柜是否都合规经营。",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ from _ where _ = (select _ from _ where _ = _ );",
+  "database": "餐饮美食",
+  "tables": {
+    "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076": [
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址"
+    ],
+    "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374": [
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYXM",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.FZRQ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.YXQZ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.DWMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.EXCHANGETIME"
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "sql": "select shijiaotongweizulinyehujibenxinxi3677.经营业户名称, shijiaotongweijiapeijigouxinxi3667.驾培机构名称, shijiaotongweijiapeijigouxinxi3667.训练地址, shijiaotongweijiapeijigouxinxi3667.统一社会信用代码, shijiaotongweijiapeijigouxinxi3667.法定代表人 from shijiaotongweizulinyehujibenxinxi3677 join shijiaotongweijiapeijigouxinxi3667 on shijiaotongweizulinyehujibenxinxi3677.经营业户名称 = shijiaotongweijiapeijigouxinxi3667.驾培机构名称 where shijiaotongweijiapeijigouxinxi3667.驾培机构名称 = '特定值'\n```",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是查询特定驾培机构的详细信息，包括其经营业户名称、训练地址、统一社会信用代码和法定代表人。\n\n- **详细描述**：\n  - **涉及的表**：\n    - `shijiaotongweizulinyehujibenxinxi3677`：可能是一个包含经营业户基本信息的表。\n    - `shijiaotongweijiapeijigouxinxi3667`：可能是一个包含驾培机构详细信息的表。\n  - **涉及的列**：\n    - `shijiaotongweizulinyehujibenxinxi3677.经营业户名称`：经营业户的名称。\n    - `shijiaotongweijiapeijigouxinxi3667.驾培机构名称`：驾培机构的名称。\n    - `shijiaotongweijiapeijigouxinxi3667.训练地址`：驾培机构的训练地址。\n    - `shijiaotongweijiapeijigouxinxi3667.统一社会信用代码`：驾培机构的统一社会信用代码。\n    - `shijiaotongweijiapeijigouxinxi3667.法定代表人`：驾培机构的法定代表人。\n  - **条件**：\n    - 通过 `join` 操作将两个表关联起来，关联条件是 `shijiaotongweizulinyehujibenxinxi3677.经营业户名称 = shijiaotongweijiapeijigouxinxi3667.驾培机构名称`。\n    - 使用 `where` 子句筛选出 `shijiaotongweijiapeijigouxinxi3667.驾培机构名称 = '特定值'` 的记录。\n\n- **业务场景**：\n  - 该查询可以用于交通管理部门或相关监管机构，用于获取特定驾培机构的详细信息，包括其经营业户、训练地址、统一社会信用代码和法定代表人。这些信息可以用于监管、审核或统计用途。\n\n- **用户描述**：\n  - 用户可能是交通管理部门的工作人员，需要核实某家驾培机构的合法性或获取其详细信息以便进行监管。\n  - 用户也可能是驾培机构的合作伙伴或学员，想要确认该机构的资质和基本信息。\n  - 用户可能遇到的问题包括：如何快速获取某家驾培机构的详细信息？如何确认某家驾培机构是否合法？如何联系某家驾培机构的法定代表人？",
+  "natural_language_query": "市民反映，最近在\"顺安驾校\"报名学车时发现他们的训练场地和营业执照上的地址对不上，而且教练车看起来都很破旧。想了解一下这家驾校的具体情况，包括他们正规的经营公司叫什么、实际训练场地在哪里、有没有合法的营业执照信息，还有他们的负责人是谁。因为担心遇到不正规的驾校，怕交了钱最后拿不到驾照，希望能帮忙核实一下\"顺安驾校\"的资质是否合法合规。",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ from _ join _ on _ ._ = _ ._ where _ ._ = _",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweizulinyehujibenxinxi3677": [
+      "shijiaotongweizulinyehujibenxinxi3677.经营业户名称"
+    ],
+    "shijiaotongweijiapeijigouxinxi3667": [
+      "shijiaotongweijiapeijigouxinxi3667.驾培机构名称",
+      "shijiaotongweijiapeijigouxinxi3667.训练地址",
+      "shijiaotongweijiapeijigouxinxi3667.统一社会信用代码",
+      "shijiaotongweijiapeijigouxinxi3667.法定代表人"
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "sql": "select count(*), sum(amount), avg(price), max(date), min(date) from transactions where status = 'completed' and category = 'electronics'",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ ,_ ,_ from _ where _ = _ and _ = _",
+  "database": "安全生活",
+  "tables": {}
+}

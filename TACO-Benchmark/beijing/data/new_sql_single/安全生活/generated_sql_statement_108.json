@@ -1,0 +1,7 @@
+{
+  "sql": "select count(*), sum(column2), avg(column3) from table1 where column1 = 'value'",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ , from _ where _ =_",
+  "database": "安全生活",
+  "tables": {}
+}

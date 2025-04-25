@@ -1,0 +1,7 @@
+{
+  "sql": "SELECT \n    T1.column_name1, \n    T1.column_name2, \n    T1.column_name3, \n    T2.column_name4, \n    T3.column_name5, \n    T4.column_name6, \n    T5.column_name7, \n    T6.column_name8 \nFROM \n    table1 AS T1 \nJOIN \n    table2 AS T2 ON T1.common_column = T2.common_column \nJOIN \n    table3 AS T3 ON T2.common_column = T3.common_column \nJOIN \n    table4 AS T4 ON T3.common_column = T4.common_column \nJOIN \n    table5 AS T5 ON T4.common_column = T5.common_column \nJOIN \n    table6 AS T6 ON T5.common_column = T6.common_column \nWHERE \n    T1.unique_column = 'value' \nAND \n    T2.unique_column = 'value' \nAND \n    T3.unique_column = 'value' \nAND \n    T4.unique_column = 'value' \nAND \n    T5.unique_column = 'value' \nAND \n    T6.unique_column = 'value'",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ from _ join _ on _ ._ = _ ._ where _ ._ = _ and _ ._",
+  "database": "安全生活",
+  "tables": {}
+}

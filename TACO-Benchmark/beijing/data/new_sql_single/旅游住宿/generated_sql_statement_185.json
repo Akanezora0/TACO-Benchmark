@@ -1,0 +1,20 @@
+{
+  "sql": "SELECT \n    shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.序号, \n    shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.名称, \n    shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.类别, \n    shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.公布时间, \n    shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.级别 \nFROM \n    shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640 \nWHERE \n    shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.级别 = '优秀' \nAND \n    shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.公布时间 > '2022-01-01'",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ ,_ ,_ from _ where _ = _ and _ = _",
+  "database": "旅游住宿",
+  "tables": {
+    "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640": [
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.序号",
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.名称",
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.类别",
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.公布时间",
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.级别"
+    ],
+    "tongzhouqutongzhouquxiangcunminsuxinxi2979": [
+      "tongzhouqutongzhouquxiangcunminsuxinxi2979.通州区乡村民宿情况表（规范化审核52家）",
+      "tongzhouqutongzhouquxiangcunminsuxinxi2979.Unnamed: 1",
+      "tongzhouqutongzhouquxiangcunminsuxinxi2979.Unnamed: 2"
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "sql": "SELECT xichengquxichengquditiezhanmingdan2482.X, xichengquxichengquditiezhanmingdan2482.Y, shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.评定等级 FROM xichengquxichengquditiezhanmingdan2482 INNER JOIN shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672 ON xichengquxichengquditiezhanmingdan2482.ID = shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.所属地区 WHERE shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.评定等级 = '优秀'",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是查询西城区地铁站名单中与交通委汽车租赁企业信用评价结果为“优秀”的企业相关联的地铁站的坐标（X 和 Y）及其评定等级。\n\n### **详细描述**  \n1. **涉及的表**：  \n   - `xichengquxichengquditiezhanmingdan2482`：西城区地铁站名单表，包含地铁站的基本信息，如 ID、X 坐标、Y 坐标等。  \n   - `shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672`：交通委汽车租赁企业信用评价结果数据表，包含企业信用评定等级及其所属地区等信息。  \n\n2. **涉及的列**：  \n   - `xichengquxichengquditiezhanmingdan2482.X` 和 `xichengquxichengquditiezhanmingdan2482.Y`：地铁站的坐标（可能是经纬度或其他坐标系）。  \n   - `shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.评定等级`：企业的信用评定等级（此处筛选“优秀”）。  \n   - `xichengquxichengquditiezhanmingdan2482.ID` 和 `shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.所属地区`：用于关联两张表的关键字段。  \n\n3. **查询条件**：  \n   - 仅筛选信用评定等级为“优秀”的企业。  \n   - 通过 `INNER JOIN` 确保只返回同时存在于两张表中的记录（即地铁站 ID 与企业所属地区匹配的记录）。  \n\n### **业务场景**  \n该查询可用于以下业务场景：  \n1. **城市规划或商业选址**：政府或企业希望在地铁站附近寻找信用良好的汽车租赁企业，以便优化交通资源配置或进行商业合作。  \n2. **信用评级可视化**：在地图上标注信用优秀的企业及其附近的地铁站，方便公众或监管部门查询。  \n3. **交通管理决策**：交通管理部门可能需要分析优秀汽车租赁企业的分布情况，以评估区域交通服务质量。  \n\n### **用户描述**  \n1. **政府或交通管理部门**：  \n   - 需求：希望了解西城区哪些地铁站附近有信用优秀的汽车租赁企业，以便优化监管或推广优秀企业。  \n   - 问题：如何快速筛选出信用优秀的企业及其地理位置？  \n\n2. **商业机构或投资者**：  \n   - 需求：计划在地铁站附近开设汽车租赁服务点，希望参考信用优秀企业的分布情况。  \n   - 问题：哪些地铁站附近的汽车租赁企业信用较好？  \n\n3. **普通用户**：  \n   - 需求：想在地铁站附近租车，优先选择信用评级高的企业。  \n   - 问题：如何查询附近信用优秀的汽车租赁企业？  \n\n该 SQL 查询通过关联地铁站位置和信用评级数据，为上述需求提供了数据支持。",
+  "natural_language_query": "市民反映，最近想在西城区地铁站附近租车，听说交通委对汽车租赁企业有信用评级，想找那些被评为\"优秀\"的企业。但是不知道具体哪些地铁站旁边有这样的好公司，能不能帮忙查一下这些优秀企业附近的地铁站位置？最好是能知道地铁站的具体坐标信息，这样方便规划路线。之前在其他区租车遇到过不靠谱的公司，这次想找信用好的，希望政府能提供这方面的信息。来电咨询西城区优秀汽车租赁企业附近地铁站位置问题。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ ;",
+  "database": "交通服务",
+  "tables": {
+    "xichengquxichengquditiezhanmingdan2482": [
+      "xichengquxichengquditiezhanmingdan2482.ID",
+      "xichengquxichengquditiezhanmingdan2482.X",
+      "xichengquxichengquditiezhanmingdan2482.Y",
+      "xichengquxichengquditiezhanmingdan2482.SJXZQHMC",
+      "xichengquxichengquditiezhanmingdan2482.QXJXZQHMC",
+      "xichengquxichengquditiezhanmingdan2482.SJXZQHDM",
+      "xichengquxichengquditiezhanmingdan2482.QXJXZQHDM",
+      "xichengquxichengquditiezhanmingdan2482.POISJLY",
+      "xichengquxichengquditiezhanmingdan2482.RHBZDZ",
+      "xichengquxichengquditiezhanmingdan2482.CODE",
+      "xichengquxichengquditiezhanmingdan2482.CODEMC",
+      "xichengquxichengquditiezhanmingdan2482.GXSJ",
+      "xichengquxichengquditiezhanmingdan2482.POIMC",
+      "xichengquxichengquditiezhanmingdan2482.POIDZ",
+      "xichengquxichengquditiezhanmingdan2482.别名",
+      "xichengquxichengquditiezhanmingdan2482.POIFLMC",
+      "xichengquxichengquditiezhanmingdan2482.TEL"
+    ],
+    "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672": [
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.企业名称",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.评定等级",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.所属地区",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.年份",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.统一社会信用代码"
+    ]
+  }
+}

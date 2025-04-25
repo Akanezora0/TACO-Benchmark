@@ -1,0 +1,7 @@
+{
+  "sql": "SELECT T1.col1, T1.col2, T1.col3, T2.col4, T2.col5, T3.col6, T3.col7, T3.col8, T3.col9, T3.col10 \nFROM table1 AS T1 \nLEFT JOIN table2 AS T2 ON T1.id = T2.table1_id \nLEFT JOIN table3 AS T3 ON T2.id = T3.table2_id \nWHERE T1.status = 'active' AND T3.category = 'A' AND T2.value = 10\n```",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ from _ left join _ on _ ._ = _ ._ left join _ on _ ._ = _ ._ where _ ._ and _ ._ = _ and _ ._ = _",
+  "database": "安全生活",
+  "tables": {}
+}

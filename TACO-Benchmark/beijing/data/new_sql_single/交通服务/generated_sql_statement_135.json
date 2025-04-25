@@ -1,0 +1,22 @@
+{
+  "sql": "SELECT \n    shijiaotongweichengkeyindaojichuxinxi3710.序号, \n    shijiaotongweichengkeyindaojichuxinxi3710.枢纽站信息, \n    shijiaotongweichengkeyindaojichuxinxi3710.周边交通指南, \n    shijiaotongweichengkeyindaojichuxinxi3710.公交线路信息, \n    shijiaotongweichengkeyindaojichuxinxi3710.轨道线路信息, \n    shijiaotongweichengkeyindaojichuxinxi3710.更新时间, \n    shijiaotongweichengkeyindaojichuxinxi3710.共享时间, \n    shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.服务机构名称 \nFROM \n    shijiaotongweichengkeyindaojichuxinxi3710 \nJOIN \n    shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678 \nON \n    shijiaotongweichengkeyindaojichuxinxi3710.序号 = shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.序号 \nWHERE \n    shijiaotongweichengkeyindaojichuxinxi3710.更新时间 = '指定日期' \nAND \n    shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.服务机构名称 = '特定名称';",
+  "results": 0,
+  "sql skeleton": "SELECT _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ FROM _ JOIN _ ON _ ._ = _ ._ WHERE _ ._ = _ and _ ._ = _ AND _ ._ = _ ;",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweichengkeyindaojichuxinxi3710": [
+      "shijiaotongweichengkeyindaojichuxinxi3710.序号",
+      "shijiaotongweichengkeyindaojichuxinxi3710.枢纽站信息",
+      "shijiaotongweichengkeyindaojichuxinxi3710.周边交通指南",
+      "shijiaotongweichengkeyindaojichuxinxi3710.公交线路信息",
+      "shijiaotongweichengkeyindaojichuxinxi3710.轨道线路信息",
+      "shijiaotongweichengkeyindaojichuxinxi3710.更新时间",
+      "shijiaotongweichengkeyindaojichuxinxi3710.共享时间 "
+    ],
+    "shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678": [
+      "shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.序号",
+      "shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.服务机构名称",
+      "shijiaotongweizhichaofeixianchanganjianchulijigouxinxi3678.地址"
+    ]
+  }
+}

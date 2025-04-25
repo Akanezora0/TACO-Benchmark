@@ -1,0 +1,20 @@
+{
+  "sql": "SELECT \"pingguqupingguqushandongzhuangzhendengjiminsu3496\".\"山东庄镇等级民宿\", \"shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640\".\"名称\", \"shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640\".\"级别\" FROM \"pingguqupingguqushandongzhuangzhendengjiminsu3496\" INNER JOIN \"shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640\" ON \"pingguqupingguqushandongzhuangzhendengjiminsu3496\".\"Unnamed: 1\" = \"shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640\".\"序号\" WHERE \"shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640\".\"级别\" = '高级' ;",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ from _ where _ =_ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "pingguqupingguqushandongzhuangzhendengjiminsu3496": [
+      "pingguqupingguqushandongzhuangzhendengjiminsu3496.山东庄镇等级民宿",
+      "pingguqupingguqushandongzhuangzhendengjiminsu3496.Unnamed: 1",
+      "pingguqupingguqushandongzhuangzhendengjiminsu3496.Unnamed: 2"
+    ],
+    "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640": [
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.序号",
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.名称",
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.类别",
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.公布时间",
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.级别"
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sql": "SELECT \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号\", \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称\", \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址\" FROM \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076\" INNER JOIN \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\" ON \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址\" = \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.DWMC\";",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从两个表中查询并关联显示清真食品专柜的相关信息，包括专用标识牌号、专柜名称和地址。\n\n- **详细描述**：\n  - **涉及的表**：\n    1. `shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076`（可能为“市民宗委规范化清真食品专柜数据3076”）\n    2. `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374`（可能为“市场监管局餐饮服务许可证情况信息3374”）\n  - **涉及的列**：\n    - 从第一个表中选择：`专用标识牌号`、`专柜名称`、`地址`\n    - 第二个表中的列：`DWMC`（可能为“单位名称”）\n  - **关联条件**：通过两个表中的地址信息进行关联，即第一个表的`地址`列与第二个表的`DWMC`列相等。\n\n- **业务场景**：\n  - 该查询可能用于监管或统计清真食品专柜的规范化情况，结合市场监管局的餐饮服务许可证信息，确保专柜的合法性和规范性。\n  - 可以用于检查清真食品专柜是否在市场监管局有相应的许可证，或者用于生成清真食品专柜的合规报告。\n\n- **用户描述**：\n  - 用户可能是政府监管部门的工作人员，需要核实清真食品专柜是否合法合规经营。\n  - 用户可能需要生成一份报告，列出所有已规范化的清真食品专柜及其对应的许可证信息，以便进行后续的监管或审计工作。\n  - 用户还可能希望通过地址信息关联两个表，确保专柜的地址与许可证上的单位名称一致，避免信息不匹配的情况。",
+  "natural_language_query": "市民反映，最近在超市看到一些挂着清真食品标识的专柜，但不确定这些专柜是不是正规的。想了解一下这些专柜有没有经过规范管理，特别是那些有专用标识牌的专柜，比如\"XX清真专柜\"这样的。能不能帮忙查一下这些专柜的具体信息？包括专柜叫什么名字、挂的什么标识牌号、在哪个位置。另外，这些专柜是不是都在市场监管局有备案啊？因为听说有些可能没有正规手续就在卖清真食品，担心买到不合规的。最好能看看专柜地址和营业执照上的信息能不能对得上，这样比较放心。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ ;",
+  "database": "餐饮美食",
+  "tables": {
+    "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076": [
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址"
+    ],
+    "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374": [
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYXM",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.FZRQ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.YXQZ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.DWMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.EXCHANGETIME"
+    ]
+  }
+}

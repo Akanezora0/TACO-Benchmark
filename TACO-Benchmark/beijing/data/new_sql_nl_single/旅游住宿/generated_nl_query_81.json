@@ -1,0 +1,20 @@
+{
+  "sql": "SELECT \"pingguqupingguqushandongzhuangzhendengjiminsu3496.山东庄镇等级民宿\", \"pingguqupingguqujingpinminsu2083.平谷区2022年精品民宿\" FROM \"pingguqupingguqushandongzhuangzhendengjiminsu3496\" - \"pingguqupingguqujingpinminsu2083\";",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从表 `pingguqupingguqushandongzhuangzhendengjiminsu3496` 中排除表 `pingguqupingguqujingpinminsu2083` 的记录，查询出在山东庄镇等级民宿中但不在平谷区2022年精品民宿中的记录。\n\n- **详细描述**：\n  - **涉及的表**：\n    - `pingguqupingguqushandongzhuangzhendengjiminsu3496`：该表可能包含山东庄镇等级民宿的相关信息。\n    - `pingguqupingguqujingpinminsu2083`：该表可能包含平谷区2022年精品民宿的相关信息。\n  - **涉及的列**：\n    - `pingguqupingguqushandongzhuangzhendengjiminsu3496.山东庄镇等级民宿`：该列可能包含山东庄镇等级民宿的具体名称或标识。\n    - `pingguqupingguqujingpinminsu2083.平谷区2022年精品民宿`：该列可能包含平谷区2022年精品民宿的具体名称或标识。\n  - **条件**：查询通过集合差操作（`-`）来筛选出在第一个表中但不在第二个表中的记录。\n\n- **业务场景**：\n  - 该查询可能用于民宿管理或旅游数据分析，帮助识别哪些山东庄镇的等级民宿未被列入平谷区2022年的精品民宿名单中。\n  - 这种分析可以用于评估民宿的覆盖范围、市场竞争情况，或者识别潜在的未被充分认可的优质民宿。\n\n- **用户描述**：\n  - 用户可能是民宿管理者、旅游规划师或数据分析师，他们需要了解山东庄镇的等级民宿中有哪些未被列入平谷区的精品民宿名单。\n  - 用户的需求可能是为了优化民宿推广策略、识别未被充分开发的市场机会，或者评估精品民宿评选的覆盖面和公平性。\n  - 用户可能遇到的实际问题包括：如何提升未被列入精品民宿名单的民宿的知名度，或者如何确保精品民宿评选的全面性和代表性。",
+  "natural_language_query": "市民反映，自己是山东庄镇一家民宿的经营者，去年被评为镇里的等级民宿，但是发现平谷区2022年公布的精品民宿名单里没有我们店。想咨询一下，像我们这样在镇里评上等级但没进入区精品名单的民宿还有多少家？是不是评选标准不一样啊？感觉挺不公平的，我们各项条件都达标了却没能入选，希望能帮忙查查具体有哪些民宿是这种情况。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "pingguqupingguqushandongzhuangzhendengjiminsu3496": [
+      "pingguqupingguqushandongzhuangzhendengjiminsu3496.山东庄镇等级民宿",
+      "pingguqupingguqushandongzhuangzhendengjiminsu3496.Unnamed: 1",
+      "pingguqupingguqushandongzhuangzhendengjiminsu3496.Unnamed: 2"
+    ],
+    "pingguqupingguqujingpinminsu2083": [
+      "pingguqupingguqujingpinminsu2083.平谷区2022年精品民宿",
+      "pingguqupingguqujingpinminsu2083.Unnamed: 1",
+      "pingguqupingguqujingpinminsu2083.Unnamed: 2"
+    ]
+  }
+}

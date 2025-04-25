@@ -1,0 +1,43 @@
+{
+  "sql": "SELECT shijiaotongweixianchangxunchaxinxi3675.序号, shijiaotongweixianchangxunchaxinxi3675.巡查位置 FROM shijiaotongweixianchangxunchaxinxi3675 WHERE shijiaotongweixianchangxunchaxinxi3675.巡查位置 = '具体位置';",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从表 `shijiaotongweixianchangxunchaxinxi3675` 中查询出所有“巡查位置”等于“具体位置”的记录，并返回这些记录的“序号”和“巡查位置”字段。\n\n- **详细描述**：\n  - **涉及的表**：`shijiaotongweixianchangxunchaxinxi3675`（可能是一个存储交通危险场所巡查信息的表）。\n  - **涉及的列**：\n    - `序号`：可能是每条巡查记录的唯一标识或编号。\n    - `巡查位置`：存储巡查的具体位置信息。\n  - **查询条件**：`shijiaotongweixianchangxunchaxinxi3675.巡查位置 = '具体位置'`，即只选择“巡查位置”字段值为“具体位置”的记录。\n\n- **业务场景**：\n  - 该查询可能用于交通管理部门或安全巡查人员快速定位某个具体位置的巡查记录。\n  - 例如，当需要查看某个特定地点（如“某路口”或“某路段”）的巡查历史或危险情况时，可以通过此查询快速获取相关信息。\n\n- **用户描述**：\n  - 用户可能是交通管理部门的工作人员或安全巡查人员，他们需要定期或不定期对交通危险场所进行巡查，并记录巡查情况。\n  - 用户在实际工作中可能需要快速查询某个具体位置的巡查记录，以便了解该地点的历史巡查情况或危险状态。\n  - 例如，用户可能输入“某路口”作为“具体位置”，查询该路口的所有巡查记录，从而评估是否需要采取进一步的措施（如维修、增设交通标志等）。",
+  "natural_language_query": "市民反映，最近在巡查交通隐患点时发现\"朝阳区建国路88号路口\"这个位置经常有电动车闯红灯现象，存在严重安全隐患。想了解一下之前对这个路口的巡查记录情况，看看之前有没有发现过类似问题，或者有没有采取过什么整改措施。因为这边经常有学生经过，特别担心会出事故，希望能帮忙查查这个具体位置的巡查历史记录，好让我们知道该怎么处理这个问题。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ ;",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweixianchangxunchaxinxi3675": [
+      "shijiaotongweixianchangxunchaxinxi3675.序号",
+      "shijiaotongweixianchangxunchaxinxi3675.工作内容",
+      "shijiaotongweixianchangxunchaxinxi3675.巡查时间",
+      "shijiaotongweixianchangxunchaxinxi3675.巡查人次",
+      "shijiaotongweixianchangxunchaxinxi3675.巡查单位",
+      "shijiaotongweixianchangxunchaxinxi3675.巡查位置",
+      "shijiaotongweixianchangxunchaxinxi3675.共享时间",
+      "shijiaotongweixianchangxunchaxinxi3675.更新时间"
+    ],
+    "xichengquxichengqugongjiaochezhanmingdan2478": [
+      "xichengquxichengqugongjiaochezhanmingdan2478.ID",
+      "xichengquxichengqugongjiaochezhanmingdan2478.X",
+      "xichengquxichengqugongjiaochezhanmingdan2478.Y",
+      "xichengquxichengqugongjiaochezhanmingdan2478.SJXZQHMC",
+      "xichengquxichengqugongjiaochezhanmingdan2478.QXJXZQHMC",
+      "xichengquxichengqugongjiaochezhanmingdan2478.SJXZQHDM",
+      "xichengquxichengqugongjiaochezhanmingdan2478.QXJXZQHDM",
+      "xichengquxichengqugongjiaochezhanmingdan2478.POISJLY",
+      "xichengquxichengqugongjiaochezhanmingdan2478.RHBZDZ",
+      "xichengquxichengqugongjiaochezhanmingdan2478.CODE",
+      "xichengquxichengqugongjiaochezhanmingdan2478.CODEMC",
+      "xichengquxichengqugongjiaochezhanmingdan2478.GXSJ",
+      "xichengquxichengqugongjiaochezhanmingdan2478.POIMC",
+      "xichengquxichengqugongjiaochezhanmingdan2478.POIDZ",
+      "xichengquxichengqugongjiaochezhanmingdan2478.别名",
+      "xichengquxichengqugongjiaochezhanmingdan2478.POIFLMC",
+      "xichengquxichengqugongjiaochezhanmingdan2478.TEL",
+      "xichengquxichengqugongjiaochezhanmingdan2478.MC",
+      "xichengquxichengqugongjiaochezhanmingdan2478.DZ",
+      "xichengquxichengqugongjiaochezhanmingdan2478.DZMS",
+      "xichengquxichengqugongjiaochezhanmingdan2478.XL"
+    ]
+  }
+}

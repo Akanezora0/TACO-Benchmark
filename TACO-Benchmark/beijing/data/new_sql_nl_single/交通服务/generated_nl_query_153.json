@@ -1,0 +1,20 @@
+{
+  "sql": "SELECT shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.企业名称, shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.评定等级 FROM shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672 WHERE shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.所属地区 = '北京西站地区电车信息2733';",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从表 `shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672` 中查询位于“北京西站地区电车信息2733”地区的汽车租赁企业的名称和它们的信用评价等级。\n\n- **详细描述**：\n  - **涉及的表**：`shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672`（可能是一个存储汽车租赁企业信用评价结果的数据表）。\n  - **涉及的列**：\n    - `企业名称`：表示汽车租赁企业的名称。\n    - `评定等级`：表示该企业的信用评价等级。\n    - `所属地区`：表示该企业所在的地区。\n  - **条件**：`所属地区 = '北京西站地区电车信息2733'`，即只查询位于“北京西站地区电车信息2733”地区的企业。\n\n- **业务场景**：\n  - 该查询可能用于政府或行业协会对特定地区（如北京西站地区）的汽车租赁企业进行信用评价结果的统计或展示。\n  - 也可以用于消费者在选择汽车租赁服务时，查看该地区企业的信用等级，以便做出更明智的选择。\n  - 还可能用于企业内部管理，了解竞争对手在特定地区的信用状况。\n\n- **用户描述**：\n  - **政府或监管机构**：可能需要了解特定地区（如北京西站地区）的汽车租赁企业的信用状况，以便进行监管或政策制定。\n  - **消费者**：在选择汽车租赁服务时，可能希望了解该地区企业的信用等级，以确保选择信誉良好的企业。\n  - **企业管理者**：可能需要了解竞争对手在特定地区的信用状况，以便制定市场策略或改进自身服务。",
+  "natural_language_query": "市民反映，最近在北京西站附近想租车，发现那边有很多电动车租赁公司，但是不知道哪家比较靠谱。听说有些公司信用不太好，经常有乱收费或者服务差的情况。想了解一下西站这边电车租赁公司的信用评级情况，看看哪些公司是正规可靠的。主要是担心租到不靠谱的公司到时候出问题，希望能提供这方面的信息帮助选择。来电咨询北京西站地区电车租赁公司信用评价问题。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ ;",
+  "database": "交通服务",
+  "tables": {
+    "zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733": [
+      "zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733.PK\u0003\u0004"
+    ],
+    "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672": [
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.企业名称",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.评定等级",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.所属地区",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.年份",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.统一社会信用代码"
+    ]
+  }
+}

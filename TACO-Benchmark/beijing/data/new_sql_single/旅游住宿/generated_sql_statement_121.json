@@ -1,0 +1,22 @@
+{
+  "sql": "SELECT \"huairouquhuairouqujingqumenpiaojiage1592.怀柔区政府定价景区门票价格\", \"xichengquxichengquxingjifandianminglu19.?星级酒店名称\" FROM \"huairouquhuairouqujingqumenpiaojiage1592\" INNER JOIN \"xichengquxichengquxingjifandianminglu19\" ON \"huairouquhuairouqujingqumenpiaojiage1592.怀柔区政府定价景区门票价格\" = \"xichengquxichengquxingjifandianminglu19.?星级酒店名称\" WHERE \"xichengquxichengquxingjifandianminglu19.?星级\" = '5' ;",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ WHERE _ = _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "huairouquhuairouqujingqumenpiaojiage1592": [
+      "huairouquhuairouqujingqumenpiaojiage1592.怀柔区政府定价景区门票价格",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 1",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 2",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 3",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 4"
+    ],
+    "xichengquxichengquxingjifandianminglu19": [
+      "xichengquxichengquxingjifandianminglu19.序号",
+      "xichengquxichengquxingjifandianminglu19.?星级酒店名称",
+      "xichengquxichengquxingjifandianminglu19.?星级",
+      "xichengquxichengquxingjifandianminglu19.?联系电话",
+      "xichengquxichengquxingjifandianminglu19.?酒店地址"
+    ]
+  }
+}

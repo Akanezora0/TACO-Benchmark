@@ -1,0 +1,25 @@
+{
+  "sql": "SELECT \"fengtaiqufengtaiqujingqujingdianteseyetai1387.景区景点（特色业态）明细\", \"changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.2021年度昌平A级景区数据开放表               \" FROM \"fengtaiqufengtaiqujingqujingdianteseyetai1387\" INNER JOIN \"changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842\" ON \"fengtaiqufengtaiqujingqujingdianteseyetai1387\".\"Unnamed: 1\" = \"changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842\".\"Unnamed: 1\" WHERE \"fengtaiqufengtaiqujingqujingdianteseyetai1387\".\"Unnamed: 1\" IS NOT NULL AND \"changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842\".\"Unnamed: 1\" IS NOT NULL;",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从两个表中查询并关联数据，具体是查询丰台区景区景点（特色业态）明细和昌平区2021年度A级景区数据开放表中的相关数据，并通过某个共同的列进行关联。\n\n- **详细描述**：\n  - **涉及的表**：\n    1. `fengtaiqufengtaiqujingqujingdianteseyetai1387`：丰台区景区景点（特色业态）明细表。\n    2. `changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842`：昌平区2021年度A级景区数据开放表。\n  - **涉及的列**：\n    1. `fengtaiqufengtaiqujingqujingdianteseyetai1387` 表中的 `\"fengtaiqufengtaiqujingqujingdianteseyetai1387.景区景点（特色业态）明细\"` 列。\n    2. `changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842` 表中的 `\"changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.2021年度昌平A级景区数据开放表\"` 列。\n    3. 两个表中用于关联的列 `\"Unnamed: 1\"`。\n  - **条件**：\n    1. 两个表中的 `\"Unnamed: 1\"` 列必须相等。\n    2. 两个表中的 `\"Unnamed: 1\"` 列的值不能为 NULL。\n\n- **业务场景**：\n  - 该查询可能用于跨区域（丰台区和昌平区）的景区数据对比或整合。例如，可能需要将丰台区的景区特色业态数据与昌平区的A级景区数据进行关联，以便分析两个区域的景区资源或进行数据共享。\n  - 这种查询可能用于政府旅游管理部门、数据分析师或旅游行业研究人员，帮助他们了解不同区域的景区分布、特色业态或评级情况。\n\n- **用户描述**：\n  - 用户可能是政府旅游部门的工作人员，他们需要整合不同区域的景区数据，以便制定区域旅游发展政策或进行资源调配。\n  - 用户也可能是旅游行业的研究人员，他们需要对比不同区域的景区特色和评级数据，以便撰写研究报告或提出旅游发展建议。\n  - 用户还可能遇到的问题是数据分散在不同的表中，且列名不明确（如 `\"Unnamed: 1\"`），需要通过某种共同的标识（如景区ID或名称）进行关联查询。",
+  "natural_language_query": "市民反映，最近在研究北京不同区的旅游资源对比时遇到困难。我是丰台区文旅局的工作人员，手头有我们区各个景点的特色业态资料，但需要和昌平区2021年评定的A级景区数据进行对照分析。具体来说，就是想看看两个区的景区信息能不能对应上，比如某些景点在两个区的资料中都有记录。但是目前两边提供的数据表格格式不太一样，不知道该怎么匹配。我记得两个表格里好像都有个序号列，可能可以用来对应，但不确定是不是准确。希望能帮忙查一下这两个区的景区数据中，那些在两边都有记录的景点信息，这样我们才能做进一步的分析工作。主要是为了制定跨区域的旅游合作方案做准备，麻烦尽快处理。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "fengtaiqufengtaiqujingqujingdianteseyetai1387": [
+      "fengtaiqufengtaiqujingqujingdianteseyetai1387.景区景点（特色业态）明细",
+      "fengtaiqufengtaiqujingqujingdianteseyetai1387.Unnamed: 1",
+      "fengtaiqufengtaiqujingqujingdianteseyetai1387.Unnamed: 2",
+      "fengtaiqufengtaiqujingqujingdianteseyetai1387.Unnamed: 3"
+    ],
+    "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842": [
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.2021年度昌平A级景区数据开放表               ",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 1",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 2",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 3",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 4",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 5",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 6"
+    ]
+  }
+}

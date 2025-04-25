@@ -1,0 +1,7 @@
+{
+  "sql": "select table1._ , table2._ , table3._ , table4._ , (table5._ + table6._ ) from table1 join table2 on table1._ = table2._ join table3 on table2._ = table3._ join table4 on table3._ = table4._ join table5 on table4._ = table5._ join table6 on table5._ = table6._ where table1._ = _ and table2._ = _ and table3._ = _ and (table5._ + table6._ ) in (_ ,_ ,_)",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ from _ join _ on _ ._ = _ ._ where _ ._ = _ and _ ._ = _ and _ (_ ,_ ) in (_ ,_ ,_ )",
+  "database": "安全生活",
+  "tables": {}
+}

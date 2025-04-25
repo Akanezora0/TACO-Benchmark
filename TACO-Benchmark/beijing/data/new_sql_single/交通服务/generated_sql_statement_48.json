@@ -1,0 +1,20 @@
+{
+  "sql": "SELECT zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733.PK_ FROM zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733 WHERE shigonganjujiaotongweifachulijigou1949.交通违法处理机构 = '某个机构名称' AND shigonganjujiaotongweifachulijigou1949.Unnamed: 1 = '某个日期'",
+  "results": 0,
+  "sql skeleton": "select _ from _ where _ and _",
+  "database": "交通服务",
+  "tables": {
+    "zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733": [
+      "zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733.PK\u0003\u0004"
+    ],
+    "shigonganjujiaotongweifachulijigou1949": [
+      "shigonganjujiaotongweifachulijigou1949.交通违法处理机构",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 1",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 2",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 3",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 4",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 5",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 6"
+    ]
+  }
+}

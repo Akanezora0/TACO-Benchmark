@@ -1,0 +1,26 @@
+{
+  "sql": "SELECT \n    \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270\".企业名称,\n    \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270\".经营许可证号,\n    \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270\".企业类型,\n    \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270\".所属区县,\n    \"shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210\".监管对象\nFROM\n    \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270\",\n    \"shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210\"\nWHERE\n    \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270\".企业名称 = \"shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210\".监管对象;",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ ,_ ,_ from _ where _ =_",
+  "database": "交通服务",
+  "tables": {
+    "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270": [
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.企业名称",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.经营许可证号",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.企业类型",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.所属区县",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.考核人",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.评定时间",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.评定得分",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.评定结果"
+    ],
+    "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210": [
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.监管对象",
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.实施机构",
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.检查行为编号",
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.检查时间",
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.检查人员",
+      "shijiaotongweigongjiaoshuangsuijichouchajieguogongshi210.检查结果"
+    ]
+  }
+}

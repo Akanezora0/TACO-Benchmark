@@ -1,0 +1,48 @@
+{
+  "sql": "SELECT river_main_stem_waterbodies_wbid.OBJECTID, river_main_stem_waterbodies_wbid.WBID, river_main_stem_waterbodies_wbid.WBNAME, invasive_species.ObservationDate FROM river_main_stem_waterbodies_wbid INNER JOIN invasive_species ON river_main_stem_waterbodies_wbid.OBJECTID = invasive_species.ObjectID WHERE invasive_species.InvasiveName = '指定名称' AND invasive_species.TreatmentType = '指定类型';",
+  "problem_description": "### Query intent:\nThe SQL statement aims to retrieve specific details related to invasive species observations from two tables: `river_main_stem_waterbodies_wbid` and `invasive_species`. The goal is to find all records where the invasive species has a specific name ('指定名称') and a certain treatment type ('指定类型').\n\n### Detailed description:\n- **Table `river_main_stem_waterbodies_wbid`**: This table contains information about main stem waterbodies in a river system. It includes at least two columns - `OBJECTID` (unique identifier for each waterbody), and `WBID`, `WBNAME` (identifying names for the waterbodies).\n\n- **Table `invasive_species`**: This table holds data on invasive species observed in various waterbodies. It includes `ObservationDate` (date when the observation was made), `ObjectID` (foreign key referencing `OBJECTID` in `river_main_stem_waterbodies_wbid`), `InvasiveName` (name of the invasive species), and `TreatmentType` (type of treatment applied or planned for the species).\n\n- **Conditions**:\n    - `INNER JOIN` ensures that only records where there is a match between `OBJECTID` in `river_main_stem_waterbodies_wbid` and `ObjectID` in `invasive_species` are considered.\n    - `WHERE invasive_species.InvasiveName = '指定名称' AND invasive_species.TreatmentType = '指定类型'` filters the results to include only those observations where the invasive species name matches '指定名称' and the treatment type matches '指定类型'.\n\n### Business scenario:\nThis query could be used by environmental scientists or conservationists to analyze the presence and management of specific invasive species in a river system. For example, it might help them understand the effectiveness of different treatments on controlling an invasive species over time or identify areas where certain treatments are most effective.\n\n### User description:\nUsers might need this information to:\n- Evaluate the impact of invasive species on local ecosystems and biodiversity.\n- Plan and assess the outcomes of conservation efforts or ecological restoration projects.\n- Monitor changes in invasive species populations and treatment effectiveness over time.\n- Inform policy decisions or guidelines for managing invasive species in river systems.",
+  "natural_language_query": "User Description:\n\"I'm working on a project focusing on invasive species management in our local river system. I've been tracking observations of these species and their treatments, and I need to specifically look into instances where a particular invasive species, let's call it '指定名称', has been treated using a specific method, which we'll refer to as '指定类型'. Could you help me run a query to find all records where these conditions are met? This will assist me in analyzing the effectiveness of our treatment strategies against this particular invasive species.\"\n\nSQL Query:\n```sql\nSELECT *\nFROM river_main_stem_waterbodies_wbid\nINNER JOIN invasive_species ON river_main_stem_waterbodies_wbid.OBJECTID = invasive_species.ObjectID\nWHERE invasive_species.InvasiveName = '指定名称'\nAND invasive_species.TreatmentType = '指定类型';\n```\n\nThis SQL statement aims to retrieve detailed records from the `river_main_stem_waterbodies_wbid` and `invasive_species` tables, focusing on observations of the invasive species named '指定名称' that have undergone a treatment of '指定类型'. This will provide insights into the specific instances where these treatments were applied, aiding in the evaluation of their effectiveness and guiding future management strategies.",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ ,_ ,_ from _ where _ = _ and _ = _ ;",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "river_main_stem_waterbodies_wbid": [
+      "river_main_stem_waterbodies_wbid.OBJECTID",
+      "river_main_stem_waterbodies_wbid.WBID",
+      "river_main_stem_waterbodies_wbid.WBNAME",
+      "river_main_stem_waterbodies_wbid.WBDESC"
+    ],
+    "invasive_species": [
+      "invasive_species.X",
+      "invasive_species.Y",
+      "invasive_species.SiteName",
+      "invasive_species.ObservationID",
+      "invasive_species.InvasiveName",
+      "invasive_species.ObservationDate",
+      "invasive_species.Observer",
+      "invasive_species.SurveyType",
+      "invasive_species.Latitude",
+      "invasive_species.Longitude",
+      "invasive_species.Town",
+      "invasive_species.GrossArea",
+      "invasive_species.InfestedArea",
+      "invasive_species.PlantDescription",
+      "invasive_species.DistributionName",
+      "invasive_species.AssessmentDate",
+      "invasive_species.TreatmentDate",
+      "invasive_species.TreatmentEffectiveness",
+      "invasive_species.TreatmentType",
+      "invasive_species.TreatmentPerson",
+      "invasive_species.TreatmentAssessmentDate",
+      "invasive_species.Assessor",
+      "invasive_species.TreatmentAssessmentNotes",
+      "invasive_species.TreatmentHours",
+      "invasive_species.ChemicalName",
+      "invasive_species.ChemicalConsentration",
+      "invasive_species.ChemicalOunces",
+      "invasive_species.ApplicationMethod",
+      "invasive_species.CertifiedApplicator",
+      "invasive_species.EPARegistationNumber"
+    ]
+  }
+}

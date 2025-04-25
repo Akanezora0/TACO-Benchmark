@@ -1,0 +1,46 @@
+{
+  "sql": "SELECT shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.名称, \n       shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.类别, \n       shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.公布时间, \n       shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.级别 \nFROM shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640 \nJOIN shiguihuaziranziyuanweiyinhangpiaohao1522 ON shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.级别 = shiguihuaziranziyuanweiyinhangpiaohao1522.RANK \nWHERE shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.级别 = '一' AND shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.类别 = '文物' AND (shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.名称, shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.公布时间) IN (SELECT MAX(shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.公布时间), shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.名称 FROM shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640 GROUP BY shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi36",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是查询顺义区非物质文化遗产名录中级别为“一”且类别为“文物”的项目信息，并筛选出每个项目中公布时间最新的记录。\n\n- **详细描述**：\n  - **涉及的表**：\n    1. `shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640`：顺义区非物质文化遗产名录项目信息表。\n    2. `shiguihuaziranziyuanweiyinhangpiaohao1522`：规划自然资源委员会银行票号表（或其他相关表）。\n  - **涉及的列**：\n    - `shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640` 表中的列：\n      - `名称`：非物质文化遗产项目的名称。\n      - `类别`：项目的类别（此处限定为“文物”）。\n      - `公布时间`：项目被公布的时间。\n      - `级别`：项目的级别（此处限定为“一”）。\n    - `shiguihuaziranziyuanweiyinhangpiaohao1522` 表中的列：\n      - `RANK`：可能与项目级别相关联的列。\n  - **查询条件**：\n    1. 项目级别为“一”。\n    2. 项目类别为“文物”。\n    3. 通过子查询筛选出每个项目中公布时间最新的记录（即每个名称对应的最大公布时间）。\n    4. 通过 `JOIN` 操作将两个表关联，关联条件是 `shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.级别 = shiguihuaziranziyuanweiyinhangpiaohao1522.RANK`。\n\n- **业务场景**：\n  - 该查询可能用于顺义区文化管理部门或相关研究机构，用于统计和分析该区域内级别为“一”且类别为“文物”的非物质文化遗产项目的最新公布情况。\n  - 通过筛选最新公布的项目，可以了解最新的文化遗产保护动态，或者用于生成报告、展示等用途。\n\n- **用户描述**：\n  - 用户可能是顺义区文化管理部门的工作人员或文化遗产研究者，他们需要了解该区域内最高级别（“一”）的文物类非物质文化遗产项目的最新公布情况。\n  - 用户的需求可能是为了更新文化遗产保护名录、准备相关报告，或者进行文化遗产的统计分析。通过查询最新公布的项目，用户可以确保获取到最新的数据，避免使用过时的信息。",
+  "natural_language_query": "市民反映，想了解顺义区那些特别重要的非物质文化遗产中关于\"文物\"类的最新情况。特别是那些被评为一等级的项目，想知道最近都公布了哪些。之前查到的信息感觉有点乱，有些项目好像更新过但不确定哪个是最新公布的。比如去年就看到过有个叫\"XX传统技艺\"的项目，但今年好像又出了新公告，搞不清楚现在到底哪些是最新确认的一级文物类遗产。希望能帮忙核实整理一下，要确保是最新公布的名单。来电咨询顺义区一级文物类非遗项目最新公布情况。",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ from _ join _ on _ ._ = _ ._ join _ on _ ._ = _ ._ where _ ._ = _ and _ ._ = _ and _ (_ ._ ,_ ) = _",
+  "database": "旅游住宿",
+  "tables": {
+    "shiguihuaziranziyuanweiyinhangpiaohao1522": [
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.HID",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.FATHERID",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.HNAME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.OTHERNAME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.CATEGORY",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.SUBCATEGOR",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.COUNTYNAME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.STREETNAME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.DYNASTY",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.SUBDYNASTY",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.ADDRESS",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.RANK",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.BATCH",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.PUBTIME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.USERS",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.PURPOSE",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.OWNERSHIP",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.STATEEVALU",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.SINGLERELI",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.PROTECTION",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.ATTACHEDRE",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.RELATEDPEO",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.RELATEDEVE",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.PUBNAME",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.SOURCE",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.EDITOR",
+      "shiguihuaziranziyuanweiyinhangpiaohao1522.ISREDUNDAN"
+    ],
+    "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640": [
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.序号",
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.名称",
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.类别",
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.公布时间",
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.级别"
+    ]
+  }
+}

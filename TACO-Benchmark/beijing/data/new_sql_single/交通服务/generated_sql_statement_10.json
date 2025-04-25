@@ -1,0 +1,21 @@
+{
+  "sql": "SELECT \n    \"shunyiqugongjiaoxianlujizhandianjibenxinxi2076\".\"线路运营信息\",\n    \"shunyiqugongjiaoxianlujizhandianjibenxinxi2076\".\"Unnamed: 1\",\n    \"shunyiqugongjiaoxianlujizhandianjibenxinxi2076\".\"Unnamed: 2\",\n    \"shunyiqugongjiaoxianlujizhandianjibenxinxi2076\".\"Unnamed: 3\",\n    \"shunyiqugongjiaoxianlujizhandianjibenxinxi2076\".\"Unnamed: 4\",\n    \"shunyiqugongjiaoxianlujizhandianjibenxinxi2076\".\"Unnamed: 5\",\n    \"shunyiqugongjiaoxianlujizhandianjibenxinxi2076\".\"Unnamed: 6\",\n    \"daxingqudaxingqugonggongzixingchededianweixinxi440\".\"序号\",\n    \"daxingqudaxingqugonggongzixingchededianweixinxi440\".\"公共自行车点位\"\nFROM \n    \"shunyiqugongjiaoxianlujizhandianjibenxinxi2076\",\n    \"daxingqudaxingqugonggongzixingchededianweixinxi440\"\nWHERE \n    \"shunyiqugongjiaoxianlujizhandianjibenxinxi2076\".\"序号\" = \"daxingqudaxingqugonggongzixingchededianweixinxi440\".\"序号\"",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ ,_ ,_ from _ where _",
+  "database": "交通服务",
+  "tables": {
+    "shunyiqugongjiaoxianlujizhandianjibenxinxi2076": [
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.线路运营信息",
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 1",
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 2",
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 3",
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 4",
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 5",
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 6"
+    ],
+    "daxingqudaxingqugonggongzixingchededianweixinxi440": [
+      "daxingqudaxingqugonggongzixingchededianweixinxi440.序号",
+      "daxingqudaxingqugonggongzixingchededianweixinxi440.公共自行车点位"
+    ]
+  }
+}

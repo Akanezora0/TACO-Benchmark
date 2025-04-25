@@ -1,0 +1,18 @@
+{
+  "sql": "SELECT \"shijiaotongweigongjiaozhandianxinxichuxingfuwu3665.线路名称\", \"shijiaotongweigongjiaozhandianxinxichuxingfuwu3665.站点名称\" FROM \"shijiaotongweigongluqixiangshuju233\" INNER JOIN \"shijiaotongweigongjiaozhandianxinxichuxingfuwu3665\" ON \"shijiaotongweigongluqixiangshuju233\".\"�\u0011ࡱ\u001a�\" = \"shijiaotongweigongjiaozhandianxinxichuxingfuwu3665.站点序号\";",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ ;",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweigongluqixiangshuju233": [
+      "shijiaotongweigongluqixiangshuju233.��\u0011ࡱ\u001a�",
+      "shijiaotongweigongluqixiangshuju233.\u0001\u0001"
+    ],
+    "shijiaotongweigongjiaozhandianxinxichuxingfuwu3665": [
+      "shijiaotongweigongjiaozhandianxinxichuxingfuwu3665.线路名称",
+      "shijiaotongweigongjiaozhandianxinxichuxingfuwu3665.站点名称",
+      "shijiaotongweigongjiaozhandianxinxichuxingfuwu3665.方向",
+      "shijiaotongweigongjiaozhandianxinxichuxingfuwu3665.站点序号"
+    ]
+  }
+}

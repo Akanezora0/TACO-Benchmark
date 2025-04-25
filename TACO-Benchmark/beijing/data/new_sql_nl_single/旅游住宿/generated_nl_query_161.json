@@ -1,0 +1,28 @@
+{
+  "sql": "SELECT \"shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.本市市管游览参观点门票价格\", \"changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.2021年度昌平A级景区数据开放表               \" FROM \"shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777\" - \"changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842\" WHERE \"shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.本市市管游览参观点门票价格\" = \"changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.2021年度昌平A级景区数据开放表               \" ;",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从两个表中查询出满足特定条件的记录，具体是查找在两个表中具有相同值的列。\n\n- **详细描述**：\n  - **涉及的表**：\n    1. `shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777`（可能是一个关于游览参观点门票价格信息的表）\n    2. `changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842`（可能是一个关于2021年度昌平A级景区数据开放信息的表）\n  - **涉及的列**：\n    1. `shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.本市市管游览参观点门票价格`（可能表示本市市管游览参观点的门票价格）\n    2. `changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.2021年度昌平A级景区数据开放表`（可能表示2021年度昌平A级景区的数据开放信息）\n  - **条件**：查询条件是这两个列的值必须相等。\n\n- **业务场景**：\n  - 该查询可能用于比较两个不同数据源中的游览参观点门票价格信息，以找出在两个数据源中具有相同门票价格的记录。\n  - 可能的业务场景包括数据验证、数据整合或价格对比分析。例如，政府部门可能需要验证不同数据源中的门票价格是否一致，或者需要整合多个数据源的信息以生成一个统一的价格报告。\n\n- **用户描述**：\n  - 用户可能是政府部门的数据分析人员或旅游行业的管理者，他们需要确保不同数据源中的门票价格信息一致，或者需要找出在两个数据源中具有相同价格的游览参观点。\n  - 用户可能遇到的实际问题包括数据不一致、数据重复或需要整合多个数据源的信息。例如，用户可能发现某些景点的门票价格在两个数据源中不一致，需要通过查询找出这些不一致的记录并进行修正。",
+  "natural_language_query": "市民反映，我在整理本市旅游景点价格数据时遇到个问题。我们这边有两个不同的景区价格信息表，一个是市里统一管理的景点价格，另一个是昌平区2021年公布的A级景区数据。现在想看看这两个表里哪些景点的门票价格是一样的，但是不知道具体该怎么查。我手头有这两个表的完整数据，就是不知道该怎么对比。能不能帮忙查一下这两个来源中价格相同的景点？主要是想核对下数据是否一致，最近在做价格监管工作，发现有些景区的报价可能有出入，需要核实清楚。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ WHERE _ = _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777": [
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.本市市管游览参观点门票价格",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 1",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 2",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 3",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 4",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 5",
+      "shifazhangaigeweishiguanyoulancanguandianxianxingmenpiaojiagejiyuanzhongyuanjiagexinxi1777.Unnamed: 6"
+    ],
+    "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842": [
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.2021年度昌平A级景区数据开放表               ",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 1",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 2",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 3",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 4",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 5",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 6"
+    ]
+  }
+}

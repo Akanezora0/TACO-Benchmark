@@ -1,0 +1,26 @@
+{
+  "sql": "SELECT \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYXM\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.FZRQ\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.YXQZ\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.DWMC\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.EXCHANGETIME\", \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号\", \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称\", \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址\" FROM \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\" WHERE \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址\" = '北京市';",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从两个表中联合查询餐饮服务许可证的相关信息，并筛选出地址为“北京市”的记录。  \n\n### **详细描述**  \n1. **涉及的表**：  \n   - `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374`（市场监管局的餐饮服务许可证情况信息表）  \n   - `shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076`（民族宗教委的规范化清真食品专柜归属数据表）  \n\n2. **查询的列**：  \n   - 从 `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374` 表中选取：  \n     - `JYZMC`（经营者名称）  \n     - `XKZBH`（许可证编号）  \n     - `JYCS`（经营场所）  \n     - `JYXM`（经营项目）  \n     - `FZRQ`（发证日期）  \n     - `YXQZ`（有效期至）  \n     - `XKZID`（许可证ID）  \n     - `DWMC`（单位名称）  \n     - `EXCHANGETIME`（交换时间）  \n   - 从 `shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076` 表中选取：  \n     - `专用标识牌号`（清真食品专柜的标识牌号）  \n     - `专柜名称`（清真食品专柜的名称）  \n     - `地址`（专柜的地址）  \n\n3. **查询条件**：  \n   - 仅返回 `shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址 = '北京市'` 的记录，即只查询位于北京市的清真食品专柜相关数据。  \n\n4. **关联方式**：  \n   - 该 SQL 语句没有显式指定 JOIN 条件，因此可能是隐式关联（如通过外键或默认匹配），或者存在语法错误（缺少 JOIN 子句）。  \n\n### **业务场景**  \n该查询可能用于以下业务场景：  \n- **市场监管与民族食品合规检查**：监管部门可能需要查询北京市内所有持有餐饮服务许可证的清真食品专柜信息，以确保其经营合规性。  \n- **清真食品溯源管理**：政府或行业协会可能需要统计北京市清真食品专柜的分布情况，并结合许可证信息进行规范化管理。  \n- **跨部门数据共享**：市场监管局和民族宗教委可能需要共享数据，以协调监管清真食品的合法经营。  \n\n### **用户描述**  \n在该业务场景下，用户可能遇到的实际问题或需求包括：  \n1. **合规性检查**：  \n   - 用户（如市场监管人员）需要确认北京市的清真食品专柜是否均持有有效的餐饮服务许可证，以避免无证经营。  \n2. **数据整合需求**：  \n   - 用户可能需要将清真食品专柜信息与餐饮许可证信息关联，以建立完整的监管数据库。  \n3. **统计分析**：  \n   - 用户可能需要统计北京市清真食品专柜的数量、分布及许可证状态，以便制定相关政策或检查计划。  \n4. **数据准确性**：  \n   - 如果两个表之间的关联不明确，用户可能需要修正 SQL 语句，确保查询结果准确反映实际业务情况。  \n\n### **改进建议**  \n如果该 SQL 的目的是关联查询，建议显式指定 JOIN 条件，例如：  \n```sql\nSELECT a.JYZMC, a.XKZBH, a.JYCS, a.JYXM, a.FZRQ, a.YXQZ, a.XKZID, a.DWMC, a.EXCHANGETIME, \n       b.专用标识牌号, b.专柜名称, b.地址\nFROM shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374 a\nJOIN shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076 b\nON a.关联字段 = b.关联字段\nWHERE b.地址 = '北京市';\n```\n（需根据实际业务补充关联字段，如许可证ID或专柜编号等。）",
+  "natural_language_query": "市民反映，最近想了解一下北京市那些挂着清真食品牌子的餐饮店是不是都有正规的餐饮服务许可证。我家附近有几家清真餐馆，但总感觉有些店不太正规，特别是看到有些店把清真标识牌随便挂着，也不知道是不是真的通过了检查。能不能帮忙查一下这些清真食品专柜有没有合法的经营许可证？主要是想确认一下他们是不是在市场监管局有登记，还有许可证的有效期到什么时候。另外发现有些店的地址写的是北京市，但实际可能开在郊区，这种情况是不是也算合规？希望相关部门能核实一下这些清真专柜的许可证信息，避免出现假冒清真或者无证经营的情况。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ WHERE _ = _ ;",
+  "database": "餐饮美食",
+  "tables": {
+    "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374": [
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYXM",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.FZRQ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.YXQZ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.DWMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.EXCHANGETIME"
+    ],
+    "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076": [
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址"
+    ]
+  }
+}

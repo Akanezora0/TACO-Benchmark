@@ -1,0 +1,15 @@
+{
+  "sql": "SELECT \"shijiaotongweizulinyehujibenxinxi3677\".\"经营业户名称\", \"huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829\".\"по\u0011Ю║╠\u001aА\" FROM \"shijiaotongweizulinyehujibenxinxi3677\" INNER JOIN \"huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829\" ON \"shijiaotongweizulinyehujibenxinxi3677\".\"经营业户名称\" = \"huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829\".\"\u0001\u0001\";",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ ;",
+  "database": "交通服务",
+  "tables": {
+    "huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829": [
+      "huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829.по\u0011Ю║╠\u001aА",
+      "huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829.\u0001\u0001"
+    ],
+    "shijiaotongweizulinyehujibenxinxi3677": [
+      "shijiaotongweizulinyehujibenxinxi3677.经营业户名称"
+    ]
+  }
+}

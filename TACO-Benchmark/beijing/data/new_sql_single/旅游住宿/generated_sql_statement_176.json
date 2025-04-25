@@ -1,0 +1,19 @@
+{
+  "sql": "select xichengqubeijingshiwenwubaohudanwei31.序号, xichengqubeijingshiwenwubaohudanwei31.名称, xichengqubeijingshiwenwubaohudanwei31.地址, fengtaiqufengtaiqujingqujingdianteseyetai1387.景区景点（特色业态）明细, fengtaiqufengtaiqujingqujingdianteseyetai1387.Unnamed: 1 from xichengqubeijingshiwenwubaohudanwei31 join fengtaiqufengtaiqujingqujingdianteseyetai1387 on xichengqubeijingshiwenwubaohudanwei31.序号 = fengtaiqufengtaiqujingqujingdianteseyetai1387.Unnamed: 1 where fengtaiqufengtaiqujingqujingdianteseyetai1387.Unnamed: 2 = '条件1' and fengtaiqufengtaiqujingqujingdianteseyetai1387.Unnamed: 3 = '条件2'\n```",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ from _ join _ on _ ._ = _ ._ where _ ._ = _ and _ ._ = _ and _ (_ ,_ ) in (_ ,_ ,_ )",
+  "database": "旅游住宿",
+  "tables": {
+    "xichengqubeijingshiwenwubaohudanwei31": [
+      "xichengqubeijingshiwenwubaohudanwei31.序号",
+      "xichengqubeijingshiwenwubaohudanwei31.名称",
+      "xichengqubeijingshiwenwubaohudanwei31.地址"
+    ],
+    "fengtaiqufengtaiqujingqujingdianteseyetai1387": [
+      "fengtaiqufengtaiqujingqujingdianteseyetai1387.景区景点（特色业态）明细",
+      "fengtaiqufengtaiqujingqujingdianteseyetai1387.Unnamed: 1",
+      "fengtaiqufengtaiqujingqujingdianteseyetai1387.Unnamed: 2",
+      "fengtaiqufengtaiqujingqujingdianteseyetai1387.Unnamed: 3"
+    ]
+  }
+}

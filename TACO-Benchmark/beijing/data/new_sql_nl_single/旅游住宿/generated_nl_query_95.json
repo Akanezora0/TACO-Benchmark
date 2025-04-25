@@ -1,0 +1,46 @@
+{
+  "sql": "SELECT HID, HNAME, \"旅行社名称\", \"许可经营业务\" FROM \"shiguihuaziranziyuanweiyinshiye1523\" INNER JOIN \"shiwenhuahelvyoujulvxingshexinxi3530\" ON \"shiguihuaziranziyuanweiyinshiye1523\".\"旅行社业务经营许可证编号\" = \"shiwenhuahelvyoujulvxingshexinxi3530\".\"旅行社业务经营许可证编号\" WHERE \"许可时间\" IS NOT NULL;",
+  "problem_description": "### **查询意图**：  \n该 SQL 语句的目的是查询具有有效许可时间（即“许可时间”不为空）的旅行社信息，包括其 ID、名称、旅行社名称以及许可经营业务。查询结果来源于两个表的关联数据。\n\n---\n\n### **详细描述**：  \n1. **涉及的表**：  \n   - `shiguihuaziranziyuanweiyinshiye1523`（可能为“规划和自然资源委员会”或类似机构管理的表）  \n   - `shiwenhuahelvyoujulvxingshexinxi3530`（可能为“文化和旅游局”或类似机构管理的旅行社信息表）  \n\n2. **关联条件**：  \n   - 通过 `旅行社业务经营许可证编号`（旅行社业务经营许可证编号）字段关联两个表，确保数据的一致性。  \n\n3. **查询的列**：  \n   - `HID`（可能为旅行社的唯一标识 ID）  \n   - `HNAME`（可能为旅行社的名称或其他关键信息）  \n   - `\"旅行社名称\"`（明确标注的旅行社名称）  \n   - `\"许可经营业务\"`（旅行社被许可经营的业务范围）  \n\n4. **筛选条件**：  \n   - `\"许可时间\" IS NOT NULL`，即只查询已经获得许可（许可时间不为空）的旅行社信息。  \n\n---\n\n### **业务场景**：  \n1. **旅行社合规性检查**：  \n   - 政府监管部门（如文化和旅游局）可能需要核查哪些旅行社已经获得合法经营许可，以便进行合规管理或公示。  \n\n2. **旅行社信息整合**：  \n   - 由于旅行社信息可能分散在不同的管理部门（如自然资源、文化旅游等），该查询可用于整合数据，提供完整的旅行社经营信息。  \n\n3. **业务许可监控**：  \n   - 确保只有获得许可的旅行社才能开展特定业务，避免无证经营或违规操作。  \n\n---\n\n### **用户描述**：  \n1. **监管机构的需求**：  \n   - 文化和旅游局的工作人员可能需要定期检查哪些旅行社已获得合法许可，以便更新公示名单或进行抽查。  \n   - 例如，他们可能需要生成一份“已许可旅行社清单”，用于公开查询或内部管理。  \n\n2. **旅行社管理需求**：  \n   - 旅行社协会或行业管理机构可能需要统计有效经营的旅行社数量及业务范围，以便分析市场情况或制定行业政策。  \n\n3. **公众或企业查询需求**：  \n   - 游客或合作企业可能希望查询哪些旅行社是合法经营的，以确保选择合规的服务提供商。  \n\n通过该 SQL 查询，可以快速获取合法经营的旅行社信息，支持监管、市场分析和公众查询等多种业务需求。",
+  "natural_language_query": "市民反映，想咨询一下正规旅行社的信息。最近想报团旅游，但听说有些旅行社没有经营许可，担心遇到黑旅行社。想问下哪里能查到有正规经营资质的旅行社名单？最好是那种已经拿到许可证的，不要那种许可时间空着的。想了解旅行社的全称、具体能经营哪些业务这些信息。之前在文旅局网站上看到过一些名单，但不知道是不是最新的，能不能帮忙查一下现在还有效的旅行社许可信息？主要是怕选到不靠谱的旅行社，到时候出问题就麻烦了。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "shiguihuaziranziyuanweiyinshiye1523": [
+      "shiguihuaziranziyuanweiyinshiye1523.HID",
+      "shiguihuaziranziyuanweiyinshiye1523.FATHERID",
+      "shiguihuaziranziyuanweiyinshiye1523.HNAME",
+      "shiguihuaziranziyuanweiyinshiye1523.OTHERNAME",
+      "shiguihuaziranziyuanweiyinshiye1523.CATEGORY",
+      "shiguihuaziranziyuanweiyinshiye1523.SUBCATEGOR",
+      "shiguihuaziranziyuanweiyinshiye1523.COUNTYNAME",
+      "shiguihuaziranziyuanweiyinshiye1523.STREETNAME",
+      "shiguihuaziranziyuanweiyinshiye1523.DYNASTY",
+      "shiguihuaziranziyuanweiyinshiye1523.SUBDYNASTY",
+      "shiguihuaziranziyuanweiyinshiye1523.ADDRESS",
+      "shiguihuaziranziyuanweiyinshiye1523.RANK",
+      "shiguihuaziranziyuanweiyinshiye1523.BATCH",
+      "shiguihuaziranziyuanweiyinshiye1523.PUBTIME",
+      "shiguihuaziranziyuanweiyinshiye1523.USERS",
+      "shiguihuaziranziyuanweiyinshiye1523.PURPOSE",
+      "shiguihuaziranziyuanweiyinshiye1523.OWNERSHIP",
+      "shiguihuaziranziyuanweiyinshiye1523.STATEEVALU",
+      "shiguihuaziranziyuanweiyinshiye1523.SINGLERELI",
+      "shiguihuaziranziyuanweiyinshiye1523.PROTECTION",
+      "shiguihuaziranziyuanweiyinshiye1523.ATTACHEDRE",
+      "shiguihuaziranziyuanweiyinshiye1523.RELATEDPEO",
+      "shiguihuaziranziyuanweiyinshiye1523.RELATEDEVE",
+      "shiguihuaziranziyuanweiyinshiye1523.PUBNAME",
+      "shiguihuaziranziyuanweiyinshiye1523.SOURCE",
+      "shiguihuaziranziyuanweiyinshiye1523.EDITOR",
+      "shiguihuaziranziyuanweiyinshiye1523.ISREDUNDAN",
+      "shiguihuaziranziyuanweiyinshiye1523.THEME"
+    ],
+    "shiwenhuahelvyoujulvxingshexinxi3530": [
+      "shiwenhuahelvyoujulvxingshexinxi3530.旅行社名称",
+      "shiwenhuahelvyoujulvxingshexinxi3530.旅行社业务经营许可证编号",
+      "shiwenhuahelvyoujulvxingshexinxi3530.许可经营业务",
+      "shiwenhuahelvyoujulvxingshexinxi3530.许可时间"
+    ]
+  }
+}

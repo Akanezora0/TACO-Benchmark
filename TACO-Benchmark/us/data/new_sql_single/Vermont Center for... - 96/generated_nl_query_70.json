@@ -1,0 +1,40 @@
+{
+  "sql": "SELECT DISTINCT \n    \"public_water_sources.SystemName\", \n    \"public_water_sources.SystemType\", \n    \"public_water_sources.SystemStatus\" \nFROM \n    \"public_water_sources\" \nWHERE \n    \"public_water_sources.SystemStatus\" = 'Operational'",
+  "problem_description": "### Query intent:\nThe SQL statement aims to retrieve distinct system names, types, and statuses from the `public_water_sources` table where the system status is specifically 'Operational'.\n\n### Detailed description:\n1. **Table**: `public_water_sources`\n   - This table contains records about various water sources, including their names (`SystemName`), types (`SystemType`), and statuses (`SystemStatus`).\n\n2. **Columns**:\n   - `SystemName`: Identifies each unique water source.\n   - `SystemType`: Describes the type of water source (e.g., river, lake, reservoir).\n   - `SystemStatus`: Indicates the operational status of the water source, with 'Operational' being a specific condition of interest.\n\n3. **Conditions**:\n   - The `WHERE` clause filters the results to only include rows where the `SystemStatus` equals 'Operational'. This means the query is focused on systems that are currently operational.\n\n### Business scenario:\nIn the context of water management and infrastructure monitoring, this SQL query can be used to identify which water sources are currently operational. This is crucial for several reasons:\n\n- **Resource Allocation**: Knowing which water sources are operational helps in efficiently allocating resources like maintenance personnel, equipment, and materials to these systems.\n  \n- **Emergency Preparedness**: If an operational system fails, it's important to quickly identify the affected source to plan for alternative water supply or immediate repairs.\n  \n- **Performance Monitoring**: Tracking operational statuses over time can provide insights into the reliability and performance of different water sources, aiding in strategic planning and decision-making.\n\n### User description:\nA water management official might need this information to ensure that all operational water sources are functioning properly and to prepare for potential disruptions. For instance, during peak demand periods, understanding which sources are operational helps in maintaining a stable water supply to communities. Additionally, the official might use this data to prioritize maintenance tasks or to initiate repairs at non-operational sources before they become critical.",
+  "natural_language_query": "A water management official is seeking information on the operational status of various water sources within their jurisdiction. Specifically, they are interested in retrieving detailed records of all systems that are currently classified as 'Operational'. These systems include rivers, lakes, and reservoirs, among others, and the official needs to know not just the fact that these systems are operational, but also their exact names and types. This data will be crucial for efficient resource allocation, emergency preparedness, and performance monitoring. To achieve this, the official plans to run a SQL query against the `public_water_sources` database, targeting only those records where the `SystemStatus` column explicitly states 'Operational'. This way, they can quickly identify which water sources are contributing to the current water supply and make informed decisions regarding maintenance, repair, and strategic planning.",
+  "results": 0,
+  "sql skeleton": "select distinct _ ,_ ,_ from _ where _",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "lakepond_wbids_and_wbid_segments": [
+      "lakepond_wbids_and_wbid_segments.OBJECTID",
+      "lakepond_wbids_and_wbid_segments.Source",
+      "lakepond_wbids_and_wbid_segments.WBID",
+      "lakepond_wbids_and_wbid_segments.LAKEID",
+      "lakepond_wbids_and_wbid_segments.EventType",
+      "lakepond_wbids_and_wbid_segments.GISAcres"
+    ],
+    "public_water_sources": [
+      "public_water_sources.X",
+      "public_water_sources.Y",
+      "public_water_sources.TINWSF_IS_NUMBER",
+      "public_water_sources.WSID",
+      "public_water_sources.SystemName",
+      "public_water_sources.SystemType",
+      "public_water_sources.SystemStatus",
+      "public_water_sources.SystemPopulation",
+      "public_water_sources.FacilityName",
+      "public_water_sources.FacilityID",
+      "public_water_sources.FacilityStatus",
+      "public_water_sources.Availability",
+      "public_water_sources.WaterType",
+      "public_water_sources.ConstructedDate",
+      "public_water_sources.PermittedYield",
+      "public_water_sources.WellType",
+      "public_water_sources.Diameter_in",
+      "public_water_sources.WellDepth",
+      "public_water_sources.CasingDepth",
+      "public_water_sources.StaticWaterLevel"
+    ]
+  }
+}

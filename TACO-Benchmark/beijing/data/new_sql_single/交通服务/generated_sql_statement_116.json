@@ -1,0 +1,22 @@
+{
+  "sql": "SELECT \"pingguqupingguqugongjiaozhandianmingxi269.区内公交线路站点明细\", \"zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733.PK\u0003\u0004\" FROM \"pingguqupingguqugongjiaozhandianmingxi269\" INNER JOIN \"zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733\" ON \"pingguqupingguqugongjiaozhandianmingxi269.区内公交线路站点明细\" = \"zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733.PK\u0003\u0004\" WHERE \"pingguqupingguqugongjiaozhandianmingxi269.区内公交线路站点明细\" = '具体值';",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ from _ where _ = _ ;",
+  "database": "交通服务",
+  "tables": {
+    "pingguqupingguqugongjiaozhandianmingxi269": [
+      "pingguqupingguqugongjiaozhandianmingxi269.区内公交线路站点明细",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 1",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 2",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 3",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 4",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 5",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 6",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 7",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 8"
+    ],
+    "zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733": [
+      "zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733.PK\u0003\u0004"
+    ]
+  }
+}

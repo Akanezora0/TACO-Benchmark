@@ -1,0 +1,9 @@
+{
+  "sql": "SELECT column1, column2 FROM table1 WHERE condition = value ;",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从 `table1` 表中筛选出满足特定条件（`condition = value`）的记录，并返回这些记录的 `column1` 和 `column2` 列的值。\n\n- **详细描述**：\n  - **涉及的表**：`table1` 是该查询操作的主要表。\n  - **涉及的列**：\n    - `column1` 和 `column2` 是查询结果中需要返回的列。\n    - `condition` 是用于筛选数据的条件列。\n  - **条件**：`condition = value` 表示只选择 `condition` 列的值等于 `value` 的记录。\n\n- **业务场景**：\n  - 该查询可以用于需要从数据库中提取特定数据的场景。例如：\n    - 在电商平台中，`table1` 可能是商品表，`column1` 和 `column2` 可能是商品名称和价格，`condition` 可能是商品类别，`value` 可能是“电子产品”。此时查询会返回所有电子产品的名称和价格。\n    - 在学生管理系统中，`table1` 可能是学生表，`column1` 和 `column2` 可能是学生姓名和成绩，`condition` 可能是班级，`value` 可能是“三年级一班”。此时查询会返回三年级一班所有学生的姓名和成绩。\n\n- **用户描述**：\n  - 在电商平台的例子中，用户可能需要查看所有电子产品的名称和价格，以便进行比较或筛选。\n  - 在学生管理系统的例子中，老师可能需要查看某个班级所有学生的姓名和成绩，以便进行成绩分析或通知家长。",
+  "natural_language_query": "市民反映，我在网上商城想买电子产品，但是发现商品列表太乱了，能不能帮我看看现在有哪些电子产品在卖？最好能显示商品名字和价格。我之前在\"电子产品\"分类下找，但是感觉显示不全，有些明明应该是电子产品的也没显示出来，希望能帮忙查清楚现在到底有哪些电子产品在售。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ WHERE _ = _ ;",
+  "database": "安全生活",
+  "tables": {}
+}

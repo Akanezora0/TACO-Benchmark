@@ -1,0 +1,22 @@
+{
+  "sql": "SELECT \n    shiwenhuahelvyoujuxingjifandianxinxi2036.��\u0011ࡱ\u001a�, \n    yanqingquyanqingqulvyoujingquxinxi3381.旅游景区 \nFROM \n    shiwenhuahelvyoujuxingjifandianxinxi2036 \n    INNER JOIN yanqingquyanqingqulvyoujingquxinxi3381 ON shiwenhuahelvyoujuxingjifandianxinxi2036.\u0001\u0001 = yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 1 \nWHERE \n    yanqingquyanqingqulvyoujingquxinxi3381.旅游景区 = '指定旅游景区名称';",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ WHERE _ = _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "shiwenhuahelvyoujuxingjifandianxinxi2036": [
+      "shiwenhuahelvyoujuxingjifandianxinxi2036.��\u0011ࡱ\u001a�",
+      "shiwenhuahelvyoujuxingjifandianxinxi2036.\u0001\u0001"
+    ],
+    "yanqingquyanqingqulvyoujingquxinxi3381": [
+      "yanqingquyanqingqulvyoujingquxinxi3381.旅游景区",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 1",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 2",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 3",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 4",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 5",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 6",
+      "yanqingquyanqingqulvyoujingquxinxi3381.Unnamed: 7"
+    ]
+  }
+}

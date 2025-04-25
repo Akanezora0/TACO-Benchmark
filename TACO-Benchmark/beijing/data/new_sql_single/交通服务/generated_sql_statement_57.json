@@ -1,0 +1,21 @@
+{
+  "sql": "SELECT \"shijiaotongweigongjiaoxianluxinxichuxingfuwu3666.线路代码\", \"shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 1\" FROM \"shijiaotongweigongjiaoxianluxinxichuxingfuwu3666\" INNER JOIN \"shunyiqugongjiaoxianlujizhandianjibenxinxi2076\" ON \"shijiaotongweigongjiaoxianluxinxichuxingfuwu3666.线路代码\" = \"shunyiqugongjiaoxianlujizhandianjibenxinxi2076.线路运营信息\";",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ ;",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweigongjiaoxianluxinxichuxingfuwu3666": [
+      "shijiaotongweigongjiaoxianluxinxichuxingfuwu3666.线路代码",
+      "shijiaotongweigongjiaoxianluxinxichuxingfuwu3666.路线名称"
+    ],
+    "shunyiqugongjiaoxianlujizhandianjibenxinxi2076": [
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.线路运营信息",
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 1",
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 2",
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 3",
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 4",
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 5",
+      "shunyiqugongjiaoxianlujizhandianjibenxinxi2076.Unnamed: 6"
+    ]
+  }
+}

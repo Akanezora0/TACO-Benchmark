@@ -1,0 +1,24 @@
+{
+  "sql": "SELECT \n    \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270\".\"企业名称\",\n    \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270\".\"经营许可证号\",\n    \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270\".\"企业类型\",\n    \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270\".\"所属区县\"\nFROM\n    \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270\"\nWHERE\n    \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270\".\"评定结果\" = '通过'\nAND\n    (\"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270\".\"考核人\" = '张三' OR \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270\".\"考核人\" = '李四')\nAND\n    \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270\".\"评定得分\" >= 90;",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从表中查询出2019年平谷区普通货运质量信誉考核结果中，评定结果为\"通过\"、考核人为\"张三\"或\"李四\"、且评定得分不低于90分的企业信息。\n\n- **详细描述**：\n  - **表**：`pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270`（平谷区2019年普通货运质量信誉考核结果表）\n  - **查询列**：\n    - 企业名称\n    - 经营许可证号\n    - 企业类型\n    - 所属区县\n  - **条件**：\n    1. `评定结果 = '通过'`：只选择考核通过的企业\n    2. `(考核人 = '张三' OR 考核人 = '李四')`：考核人必须是张三或李四\n    3. `评定得分 >= 90`：企业的评定得分必须达到90分或以上\n\n- **业务场景**：\n  1. **监管部门审核**：交通管理部门可能需要核查特定考核人员（张三或李四）负责的、高分通过考核的货运企业名单。\n  2. **企业资质评估**：评估平谷区2019年普通货运行业中表现优异的企业（得分≥90分且考核通过）。\n  3. **考核人员绩效**：统计特定考核人员（张三或李四）负责的高质量考核结果。\n  4. **区域行业分析**：分析平谷区货运企业的质量信誉情况，特别是高分通过的企业分布。\n\n- **用户描述**：\n  1. 作为交通管理部门的工作人员，可能需要：\n     - 验证张三和李四两位考核人员的工作成果，确认他们考核通过的高分企业名单\n     - 识别区域内表现优异的货运企业，以便后续给予政策支持或表彰\n  2. 作为企业负责人或行业分析师，可能需要：\n     - 了解2019年平谷区货运行业的高标准企业情况\n     - 查询特定考核人员评估的优质企业名单，用于商业合作参考\n  3. 作为考核人员（张三或李四）本人，可能需要：\n     - 查询自己负责的、高分通过考核的企业记录，用于工作汇报或绩效证明",
+  "natural_language_query": "市民反映，想了解2019年平谷区货运行业的一些情况。当时有两位叫张三和李四的工作人员负责企业考核，想查查他们经手的那些考核成绩特别好（好像要90分以上吧）并且最终通过了的运输公司。主要是想看看这些公司的名字、执照号码是什么类型的公司，是不是都在平谷区。因为最近要做行业评比，需要参考这些优秀企业的名单，但是找不到完整资料，希望帮忙核实一下具体有哪些企业符合这些条件。",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ ,_ from _ where _ = _ and (_ = _ or _ = _ ) and _ (_ )>=_ ;",
+  "database": "交通服务",
+  "tables": {
+    "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270": [
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.企业名称",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.经营许可证号",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.企业类型",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.所属区县",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.考核人",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.评定时间",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.评定得分",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.评定结果"
+    ],
+    "shijiaotongweigongluqixiangshuju233": [
+      "shijiaotongweigongluqixiangshuju233.��\u0011ࡱ\u001a�",
+      "shijiaotongweigongluqixiangshuju233.\u0001\u0001"
+    ]
+  }
+}

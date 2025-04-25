@@ -1,0 +1,49 @@
+{
+  "sql": "SELECT xichengquxichengqudengjilvyoujingquminglu14.景区名称, xichengquxichengqudengjilvyoujingquminglu14.等级 FROM xichengquxichengqudengjilvyoujingquminglu14 WHERE xichengquxichengqudengjilvyoujingquminglu14.等级 = 'AAAA';",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从名为 `xichengquxichengqudengjilvyoujingquminglu14` 的表中查询出所有等级为 'AAAA' 的景区名称及其等级信息。\n\n- **详细描述**：\n  - **涉及的表**：`xichengquxichengqudengjilvyoujingquminglu14`，该表可能是一个记录某地区（如“西城区”）旅游景点信息的表。\n  - **涉及的列**：\n    - `景区名称`：表示旅游景点的名称。\n    - `等级`：表示旅游景点的等级，如 AAAA、AAA 等。\n  - **条件**：`等级 = 'AAAA'`，即筛选出等级为 'AAAA' 的景区。\n\n- **业务场景**：\n  - 该查询可以用于旅游管理部门或旅游服务平台，快速获取某地区所有 AAAA 级景区的列表，便于进行景区管理、推荐或统计分析。\n  - 也可以用于游客或旅行规划者，帮助他们快速找到该地区的高等级景区（AAAA 级），作为旅游参考。\n\n- **用户描述**：\n  - 用户可能是旅游管理部门的工作人员，需要统计或管理该地区的 AAAA 级景区，以便进行景区评级审核、资源分配或宣传推广。\n  - 用户也可能是游客或旅行规划者，希望了解该地区的高质量景区（AAAA 级），以便制定旅行计划或选择游览目标。",
+  "natural_language_query": "市民来电咨询，最近想带家人去西城区旅游，听说那边有不少4A级景区，但网上信息太杂乱了。想问下西城区具体有哪些被评为4A级的旅游景点啊？就是那种带AAAA标志的景区。上次去其他城市旅游就遇到过，有些景区自称是4A级，结果去了发现根本不是，环境特别差。所以这次想提前确认清楚，免得又白跑一趟。能不能帮忙查一下西城区正规的4A景区名单？最好能告诉我具体是哪些景点，这样我好规划路线。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ WHERE _ = _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "xichengquxichengqudengjilvyoujingquminglu14": [
+      "xichengquxichengqudengjilvyoujingquminglu14.序号",
+      "xichengquxichengqudengjilvyoujingquminglu14.景区名称",
+      "xichengquxichengqudengjilvyoujingquminglu14.等级",
+      "xichengquxichengqudengjilvyoujingquminglu14.地址",
+      "xichengquxichengqudengjilvyoujingquminglu14.咨询电话",
+      "xichengquxichengqudengjilvyoujingquminglu14.投诉电话",
+      "xichengquxichengqudengjilvyoujingquminglu14.邮编"
+    ],
+    "shiguihuaziranziyuanweishiguan1516": [
+      "shiguihuaziranziyuanweishiguan1516.HID",
+      "shiguihuaziranziyuanweishiguan1516.FATHERID",
+      "shiguihuaziranziyuanweishiguan1516.HNAME",
+      "shiguihuaziranziyuanweishiguan1516.OTHERNAME",
+      "shiguihuaziranziyuanweishiguan1516.CATEGORY",
+      "shiguihuaziranziyuanweishiguan1516.SUBCATEGOR",
+      "shiguihuaziranziyuanweishiguan1516.COUNTYNAME",
+      "shiguihuaziranziyuanweishiguan1516.STREETNAME",
+      "shiguihuaziranziyuanweishiguan1516.DYNASTY",
+      "shiguihuaziranziyuanweishiguan1516.SUBDYNASTY",
+      "shiguihuaziranziyuanweishiguan1516.ADDRESS",
+      "shiguihuaziranziyuanweishiguan1516.RANK",
+      "shiguihuaziranziyuanweishiguan1516.BATCH",
+      "shiguihuaziranziyuanweishiguan1516.PUBTIME",
+      "shiguihuaziranziyuanweishiguan1516.USERS",
+      "shiguihuaziranziyuanweishiguan1516.PURPOSE",
+      "shiguihuaziranziyuanweishiguan1516.OWNERSHIP",
+      "shiguihuaziranziyuanweishiguan1516.STATEEVALU",
+      "shiguihuaziranziyuanweishiguan1516.SINGLERELI",
+      "shiguihuaziranziyuanweishiguan1516.PROTECTION",
+      "shiguihuaziranziyuanweishiguan1516.ATTACHEDRE",
+      "shiguihuaziranziyuanweishiguan1516.RELATEDPEO",
+      "shiguihuaziranziyuanweishiguan1516.RELATEDEVE",
+      "shiguihuaziranziyuanweishiguan1516.PUBNAME",
+      "shiguihuaziranziyuanweishiguan1516.SOURCE",
+      "shiguihuaziranziyuanweishiguan1516.EDITOR",
+      "shiguihuaziranziyuanweishiguan1516.ISREDUNDAN",
+      "shiguihuaziranziyuanweishiguan1516.THEME"
+    ]
+  }
+}

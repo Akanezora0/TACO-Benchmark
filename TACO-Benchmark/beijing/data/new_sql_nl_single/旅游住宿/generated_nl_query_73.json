@@ -1,0 +1,47 @@
+{
+  "sql": "SELECT shiguihuaziranziyuanweitongxunshe1518.HID, pingguquzhucegongyuanxinxi780.名称 FROM shiguihuaziranziyuanweitongxunshe1518 INNER JOIN pingguquzhucegongyuanxinxi780 ON shiguihuaziranziyuanweitongxunshe1518.HNAME = pingguquzhucegongyuanxinxi780.名称 WHERE shiguihuaziranziyuanweitongxunshe1518.DYNASTY = '清朝' AND shiguihuaziranziyuanweitongxunshe1518.SUBDYNASTY = '道光'",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是查询清朝道光年间的自然规划资源相关数据与公园注册信息的关联数据。\n\n- **详细描述**：\n  - **涉及的表**：\n    - `shiguihuaziranziyuanweitongxunshe1518`：该表可能存储了历史自然规划资源相关的数据，包含朝代、子朝代等信息。\n    - `pingguquzhucegongyuanxinxi780`：该表可能存储了公园注册信息，包含公园名称等字段。\n  - **涉及的列**：\n    - `shiguihuaziranziyuanweitongxunshe1518.HID`：自然规划资源表中的唯一标识符。\n    - `pingguquzhucegongyuanxinxi780.名称`：公园注册信息表中的公园名称。\n    - `shiguihuaziranziyuanweitongxunshe1518.HNAME`：自然规划资源表中的名称字段，用于与公园名称进行关联。\n    - `shiguihuaziranziyuanweitongxunshe1518.DYNASTY` 和 `shiguihuaziranziyuanweitongxunshe1518.SUBDYNASTY`：自然规划资源表中的朝代和子朝代字段，用于筛选特定时期的数据。\n  - **条件**：\n    - `shiguihuaziranziyuanweitongxunshe1518.DYNASTY = '清朝'`：筛选出清朝时期的数据。\n    - `shiguihuaziranziyuanweitongxunshe1518.SUBDYNASTY = '道光'`：进一步筛选出道光年间的数据。\n    - `shiguihuaziranziyuanweitongxunshe1518.HNAME = pingguquzhucegongyuanxinxi780.名称`：通过名称字段将两个表关联起来。\n\n- **业务场景**：\n  - 该查询可能用于历史研究或资源管理，目的是找出清朝道光年间与公园注册信息相关的自然规划资源数据。例如，可能需要了解道光年间哪些自然规划资源（如公园、保护区等）已经注册或有相关记录。\n  - 这种查询可以帮助研究人员或管理者了解特定历史时期的自然规划资源分布或管理情况。\n\n- **用户描述**：\n  - 用户可能是历史研究人员或自然资源管理者，他们需要了解清朝道光年间的自然规划资源与现有公园注册信息的关联情况。\n  - 用户可能遇到的实际问题包括：\n    - 需要验证道光年间的某些自然规划资源是否在现有公园注册信息中有记录。\n    - 需要统计道光年间的自然规划资源数量及其与现有公园的对应关系。\n    - 希望通过历史数据为现代自然资源管理提供参考或依据。",
+  "natural_language_query": "市民反映，在研究清朝道光年间的历史资料时，发现一些老地图上标注的园林和保护区，想了解这些地方现在是不是已经注册成正规公园了。比如道光年间记载的\"清漪园\"、\"静宜园\"这些地方，现在还有没有对应的公园记录？主要是想查一下那时候的自然景观规划跟现在的公园注册信息能不能对上号，因为最近在做相关课题研究，需要这些历史对照资料。来电咨询清朝道光年间自然景观与现代公园注册信息的匹配情况。",
+  "results": 0,
+  "sql skeleton": "SELECT _ _ FROM  WHERE _",
+  "database": "旅游住宿",
+  "tables": {
+    "shiguihuaziranziyuanweitongxunshe1518": [
+      "shiguihuaziranziyuanweitongxunshe1518.HID",
+      "shiguihuaziranziyuanweitongxunshe1518.FATHERID",
+      "shiguihuaziranziyuanweitongxunshe1518.HNAME",
+      "shiguihuaziranziyuanweitongxunshe1518.OTHERNAME",
+      "shiguihuaziranziyuanweitongxunshe1518.CATEGORY",
+      "shiguihuaziranziyuanweitongxunshe1518.SUBCATEGOR",
+      "shiguihuaziranziyuanweitongxunshe1518.COUNTYNAME",
+      "shiguihuaziranziyuanweitongxunshe1518.STREETNAME",
+      "shiguihuaziranziyuanweitongxunshe1518.DYNASTY",
+      "shiguihuaziranziyuanweitongxunshe1518.SUBDYNASTY",
+      "shiguihuaziranziyuanweitongxunshe1518.ADDRESS",
+      "shiguihuaziranziyuanweitongxunshe1518.RANK",
+      "shiguihuaziranziyuanweitongxunshe1518.BATCH",
+      "shiguihuaziranziyuanweitongxunshe1518.PUBTIME",
+      "shiguihuaziranziyuanweitongxunshe1518.USERS",
+      "shiguihuaziranziyuanweitongxunshe1518.PURPOSE",
+      "shiguihuaziranziyuanweitongxunshe1518.OWNERSHIP",
+      "shiguihuaziranziyuanweitongxunshe1518.STATEEVALU",
+      "shiguihuaziranziyuanweitongxunshe1518.SINGLERELI",
+      "shiguihuaziranziyuanweitongxunshe1518.PROTECTION",
+      "shiguihuaziranziyuanweitongxunshe1518.ATTACHEDRE",
+      "shiguihuaziranziyuanweitongxunshe1518.RELATEDPEO",
+      "shiguihuaziranziyuanweitongxunshe1518.RELATEDEVE",
+      "shiguihuaziranziyuanweitongxunshe1518.PUBNAME",
+      "shiguihuaziranziyuanweitongxunshe1518.SOURCE",
+      "shiguihuaziranziyuanweitongxunshe1518.EDITOR",
+      "shiguihuaziranziyuanweitongxunshe1518.ISREDUNDAN"
+    ],
+    "pingguquzhucegongyuanxinxi780": [
+      "pingguquzhucegongyuanxinxi780.序号",
+      "pingguquzhucegongyuanxinxi780.名称",
+      "pingguquzhucegongyuanxinxi780.区",
+      "pingguquzhucegongyuanxinxi780.街道",
+      "pingguquzhucegongyuanxinxi780.地址",
+      "pingguquzhucegongyuanxinxi780.咨询电话"
+    ]
+  }
+}

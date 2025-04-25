@@ -1,0 +1,21 @@
+{
+  "sql": "SELECT xichengquxichengquguojiajizhongdianwenwubaohudanwei60.名称, fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.旅行社分社及旅行社服务网点明细 FROM xichengquxichengquguojiajizhongdianwenwubaohudanwei60 INNER JOIN fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396 ON xichengquxichengquguojiajizhongdianwenwubaohudanwei60.序号 = fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.Unnamed: 1;",
+  "problem_description": "### **查询意图**：\n该 SQL 语句的目的是从两个表中联合查询数据，获取西城区国家重点文物保护单位的名称，以及丰台区旅行社分社及旅行社服务网点的明细信息。查询通过序号（或类似字段）关联两个表的数据。\n\n---\n\n### **详细描述**：\n1. **涉及的表**：\n   - `xichengquxichengquguojiajizhongdianwenwubaohudanwei60`（西城区国家重点文物保护单位表）\n   - `fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396`（丰台区旅行社分社及旅行社服务网点表）\n\n2. **涉及的列**：\n   - `xichengquxichengquguojiajizhongdianwenwubaohudanwei60.名称`：西城区国家重点文物保护单位的名称。\n   - `fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.旅行社分社及旅行社服务网点明细`：丰台区旅行社分社或服务网点的详细信息。\n   - 关联条件：`xichengquxichengquguojiajizhongdianwenwubaohudanwei60.序号 = fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.Unnamed: 1`（通过序号字段关联两个表）。\n\n3. **查询逻辑**：\n   - 使用 `INNER JOIN` 内连接，仅返回两个表中匹配的记录。\n   - 查询结果包含西城区文保单位的名称和丰台区旅行社网点的明细信息。\n\n---\n\n### **业务场景**：\n1. **可能的业务需求**：\n   - 查询西城区国家重点文物保护单位与丰台区旅行社网点之间的关联信息。\n   - 例如，某些旅行社可能提供针对特定文保单位的旅游服务，或者文保单位与旅行社之间存在合作关系（如票务、导览服务等）。\n\n2. **数据用途**：\n   - 旅游管理部门可能需要分析文保单位与旅行社之间的业务关联，以便优化旅游线路或监管合作情况。\n   - 旅行社可能希望了解哪些文保单位是热门景点，从而调整服务策略。\n\n---\n\n### **用户描述**：\n1. **用户角色**：\n   - 可能是旅游行业管理者、旅行社运营人员或文化保护部门的工作人员。\n\n2. **用户需求**：\n   - 用户希望了解西城区的国家重点文物保护单位与丰台区的旅行社网点之间是否存在某种业务联系。\n   - 例如：\n     - 哪些旅行社为特定文保单位提供旅游服务？\n     - 文保单位是否与某些旅行社有官方合作？\n     - 是否存在跨区（西城区与丰台区）的旅游服务整合需求？\n\n3. **实际问题**：\n   - 如果用户是旅游规划者，可能需要根据文保单位和旅行社的分布设计旅游线路。\n   - 如果用户是监管人员，可能需要检查旅行社是否合规地提供文保单位的相关服务。\n\n---\n\n### **补充说明**：\n- 表名和字段名较长且包含数字（如 `60`、`1396`），可能是从数据导出或爬取得到的原始表，缺乏规范化命名。\n- 关联字段 `Unnamed: 1` 表明数据可能来自未命名的列（如 CSV 导入时未设置列名），建议在实际业务中优化字段命名以提高可读性。",
+  "natural_language_query": "市民反映，最近想规划一条文化旅游线路，主要想了解西城区那些国家重点保护的文物景点，比如故宫周边那些挂牌保护的建筑，和丰台区这边的旅行社有没有什么合作。我家住在丰台，发现这边旅行社挺多的，但不知道哪些能提供西城文保景点的专业讲解或者特色服务。之前问过两家旅行社，一家说可以安排但没说具体是哪些景点，另一家直接说没有合作，感觉信息特别混乱。能不能帮忙查查这两边到底有没有关联？比如哪些旅行社是明确能带团参观西城文保单位的？最好能有个具体名单，这样我们游客心里也有底。对了，听说有些文保单位会指定合作旅行社，这个信息能一起查查吗？",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "xichengquxichengquguojiajizhongdianwenwubaohudanwei60": [
+      "xichengquxichengquguojiajizhongdianwenwubaohudanwei60.序号",
+      "xichengquxichengquguojiajizhongdianwenwubaohudanwei60.名称",
+      "xichengquxichengquguojiajizhongdianwenwubaohudanwei60.地址"
+    ],
+    "fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396": [
+      "fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.旅行社分社及旅行社服务网点明细",
+      "fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.Unnamed: 1",
+      "fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.Unnamed: 2",
+      "fengtaiqufengtaiqulvxingshefenshejilvxingshefuwuwangdian1396.Unnamed: 3"
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "sql": "select distinct table1.column1, table1.column2, table2.column3 \nfrom table1 \njoin table2 on table1.common_column = table2.common_column \nwhere table1.column1 = 'value'",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从两个关联表中检索满足特定条件的唯一数据组合。\n\n- **详细描述**：\n  - **涉及的表**：\n    - `table1`：主表之一，包含`column1`、`column2`和`common_column`。\n    - `table2`：关联表，包含`column3`和`common_column`。\n  - **涉及的列**：\n    - `table1.column1`：作为查询条件的一部分，需要匹配特定值。\n    - `table1.column2`：从`table1`中检索的列之一。\n    - `table2.column3`：从`table2`中检索的列。\n    - `common_column`：用于连接`table1`和`table2`的关联列。\n  - **条件**：\n    - `table1.column1 = 'value'`：筛选`table1`中`column1`等于`'value'`的记录。\n    - `join table2 on table1.common_column = table2.common_column`：通过`common_column`关联`table1`和`table2`。\n  - **其他**：\n    - `distinct`关键字确保返回的结果是唯一的，去除重复行。\n\n- **业务场景**：\n  - 该查询可以用于需要从两个关联表中获取特定信息的场景。例如：\n    - 在电商系统中，`table1`可能是用户表，`column1`是用户ID，`column2`是用户名；`table2`可能是订单表，`column3`是订单金额。查询可以用于获取特定用户的所有订单金额及其用户名。\n    - 在教育系统中，`table1`可能是学生表，`column1`是学生ID，`column2`是学生姓名；`table2`可能是课程表，`column3`是课程名称。查询可以用于获取特定学生选修的所有课程名称及其姓名。\n\n- **用户描述**：\n  - 在上述业务场景中，用户可能需要解决的问题或需求包括：\n    - 查找特定用户的所有订单金额，以便进行消费分析。\n    - 获取特定学生选修的所有课程名称，以便了解其学习情况。\n    - 确保返回的结果没有重复，以便准确统计或展示数据。",
+  "natural_language_query": "市民反映，我在你们系统里查某个人的信息时遇到问题。比如说我想找一个叫\"张三\"的用户，他ID是12345，想看看他名下所有的交易记录或者选修的课程。但是系统老是给我返回一些重复的信息，搞得我统计起来特别麻烦。能不能帮我查一下这个人的完整信息，包括他所有的交易金额或者选的课程名称，而且不要有重复的数据啊？我之前试过好几次都显示有问题，真的很影响工作效率。来电反映系统查询结果重复且不准确的问题。",
+  "results": 0,
+  "sql skeleton": "select distinct _ ,_ ,_ from _ where _",
+  "database": "安全生活",
+  "tables": {}
+}

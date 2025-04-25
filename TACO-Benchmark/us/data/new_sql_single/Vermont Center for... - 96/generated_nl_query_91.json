@@ -1,0 +1,39 @@
+{
+  "sql": "SELECT public_water_sources.\"FacilityName\", public_water_sources.\"SystemName\", public_water_sources.\"SystemType\", public_water_sources.\"SystemStatus\", public_water_sources.\"SystemPopulation\", public_water_sources.\"FacilityStatus\", public_water_sources.\"Availability\", public_water_sources.\"WaterType\", public_water_sources.\"ConstructedDate\" FROM public_water_sources JOIN waste_water_facilities ON public_water_sources.\"FacilityID\" = waste_water_facilities.\"FacilityID\" WHERE waste_water_facilities.\"FacilityStatus\" = 'Active' ORDER BY public_water_sources.\"SystemStatus\";",
+  "problem_description": "### Query intent:\nThe SQL statement aims to retrieve specific details about water sources from two related tables: `public_water_sources` and `waste_water_facilities`. The primary goal is to filter out only those facilities where the status as per the `waste_water_facilities` table is marked as 'Active'.\n\n### Detailed description:\n1. **Tables Involved**:\n   - `public_water_sources`: This table contains general information about water sources such as their facility name, system name, type, status, population served, facility status, availability, water type, and construction date.\n   - `waste_water_facilities`: This table seems to contain additional information about facilities, including their status.\n\n2. **Columns Selected**:\n   - `\"FacilityName\"`: The name of the facility.\n   - `\"SystemName\"`: The name of the system within the facility.\n   - `\"SystemType\"`: The type of the system.\n   - `\"SystemStatus\"`: The operational status of the system.\n   - `\"SystemPopulation\"`: The number of people served by the system.\n   - `\"FacilityStatus\"`: The overall status of the facility.\n   - `\"Availability\"`: Whether the facility is available for use.\n   - `\"WaterType\"`: The type of water (e.g., potable, industrial).\n   - `\"ConstructedDate\"`: The date when the system was constructed.\n\n3. **Conditions Used**:\n   - **JOIN**: The `JOIN` clause combines rows from `public_water_sources` and `waste_water_facilities` based on matching `FacilityID` values. This allows for a cross-referencing of statuses between the two tables.\n   - **WHERE clause**: Filters the results to only include rows where the `FacilityStatus` column in `waste_water_facilities` equals 'Active'. This ensures that only active facilities are considered.\n\n4. **ORDER BY Clause**:\n   - The `ORDER BY` clause sorts the output by the `\"SystemStatus\"` column in ascending order, providing a clear view of systems based on their operational status.\n\n### Business Scenario:\nThis query is typically used in scenarios where water management or environmental monitoring agencies need to keep track of the operational status of various water supply systems across different facilities. It helps in identifying which facilities are currently operational ('Active') and need maintenance or inspection, versus those that might be inactive or under maintenance.\n\n### User Description:\nA water management agency might require this information to efficiently plan maintenance schedules, allocate resources, and",
+  "natural_language_query": "A water management agency needs to run a SQL query to gather detailed information about water sources in their system. They are particularly interested in identifying facilities that are currently active. The agency wants to extract specific data from two interconnected tables: `public_water_sources` and `waste_water_facilities`.\n\nThe agency plans to collect the following information:\n\n- The name of each facility (`FacilityName`)\n- The name of the system within each facility (`SystemName`)\n- The type of system (`SystemType`)\n- The operational status of the system (`SystemStatus`)\n- The number of people served by the system (`SystemPopulation`)\n- The overall status of the facility (`FacilityStatus`)\n- Whether the facility is available for use (`Availability`)\n- The type of water provided (`WaterType`)\n- The date when the system was constructed (`ConstructedDate`)\n\nTo achieve this, the agency will join these two tables using a common identifier, likely the `FacilityID`, to cross-reference the statuses. Their main condition for filtering the results is that the `FacilityStatus` in the `waste_water_facilities` table must be marked as 'Active'. This ensures that only operational facilities are included in the final report.\n\nLastly, they want to sort the retrieved data by the operational status of the system (`SystemStatus`) in ascending order, so they can easily see which systems are functioning well and which might need attention. This structured query will help the agency in planning maintenance schedules, allocating resources, and ensuring efficient water supply operations across all facilities.",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ from _ join _ on _ ._ = _ ._ join _ on _ ._ = _ ._ where _ ._ = _ order by _ ._ ;",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "public_water_sources": [
+      "public_water_sources.X",
+      "public_water_sources.Y",
+      "public_water_sources.TINWSF_IS_NUMBER",
+      "public_water_sources.WSID",
+      "public_water_sources.SystemName",
+      "public_water_sources.SystemType",
+      "public_water_sources.SystemStatus",
+      "public_water_sources.SystemPopulation",
+      "public_water_sources.FacilityName",
+      "public_water_sources.FacilityID",
+      "public_water_sources.FacilityStatus",
+      "public_water_sources.Availability",
+      "public_water_sources.WaterType",
+      "public_water_sources.ConstructedDate",
+      "public_water_sources.PermittedYield",
+      "public_water_sources.WellType",
+      "public_water_sources.Diameter_in",
+      "public_water_sources.WellDepth",
+      "public_water_sources.CasingDepth",
+      "public_water_sources.StaticWaterLevel"
+    ],
+    "waste_water_facilities": [
+      "waste_water_facilities.X",
+      "waste_water_facilities.Y",
+      "waste_water_facilities.FacilityName",
+      "waste_water_facilities.FacilityID",
+      "waste_water_facilities.WWInventoryURL"
+    ]
+  }
+}

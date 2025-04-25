@@ -1,0 +1,24 @@
+{
+  "sql": "SELECT \"chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337\".\"酒仙桥街道社区地址及联系电话\", \"huairouquhuairouqujingqumenpiaojiage1592\".\"怀柔区政府定价景区门票价格\" FROM \"chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337\" INNER JOIN \"huairouquhuairouqujingqumenpiaojiage1592\" ON \"chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337\".\"编号\" = \"huairouquhuairouqujingqumenpiaojiage1592\".\"编号\";",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从两个表中联合查询出朝阳区酒仙桥街道的社区地址及联系电话与怀柔区政府定价景区门票价格的相关信息。\n\n- **详细描述**：\n  - **涉及的表**：\n    1. `chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337`：该表存储了朝阳区酒仙桥街道的社区地址及联系电话信息。\n    2. `huairouquhuairouqujingqumenpiaojiage1592`：该表存储了怀柔区政府定价景区门票价格信息。\n  - **涉及的列**：\n    1. `chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337` 表中的 `酒仙桥街道社区地址及联系电话` 列。\n    2. `huairouquhuairouqujingqumenpiaojiage1592` 表中的 `怀柔区政府定价景区门票价格` 列。\n  - **条件**：两个表通过 `编号` 列进行内连接（INNER JOIN），即只有当两个表中的 `编号` 列值相等时，才会将对应的行合并输出。\n\n- **业务场景**：\n  - 该查询可能用于一个旅游信息管理系统，其中需要将朝阳区酒仙桥街道的社区信息与怀柔区景区的门票价格信息关联起来。例如，可能需要为酒仙桥街道的居民或游客提供附近的景区门票价格信息，或者用于统计和分析不同社区与景区门票价格之间的关系。\n  - 另一个可能的业务场景是政府或旅游机构的数据整合，用于生成报告或提供综合性的旅游信息服务。\n\n- **用户描述**：\n  - 用户可能是旅游信息平台的管理员或政府旅游部门的工作人员，他们需要将不同区域的信息（如社区信息和景区门票价格）关联起来，以便为居民或游客提供更全面的服务。\n  - 用户可能遇到的实际问题包括：\n    - 如何快速获取某个社区附近的景区门票价格信息？\n    - 如何整合不同区域的数据以生成综合性的旅游指南或报告？\n    - 如何确保社区信息和景区信息的关联性，以便提供更精准的服务？",
+  "natural_language_query": "市民反映，最近在朝阳区酒仙桥街道这边住，想周末带家人去怀柔的景区玩，但是不知道附近社区能不能查到景区门票价格的信息。听说有些景区是政府定价的，想问问酒仙桥街道这边有没有相关的联系方式可以咨询，或者能不能帮忙查一下怀柔那边景区的正规门票价格？主要是怕被坑，想提前了解一下正规渠道的价格。之前在其他地方旅游就遇到过乱收费的情况，这次想提前做好准备。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337": [
+      "chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337.酒仙桥街道社区地址及联系电话",
+      "chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337.Unnamed: 1",
+      "chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337.Unnamed: 2",
+      "chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337.Unnamed: 3",
+      "chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337.Unnamed: 4"
+    ],
+    "huairouquhuairouqujingqumenpiaojiage1592": [
+      "huairouquhuairouqujingqumenpiaojiage1592.怀柔区政府定价景区门票价格",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 1",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 2",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 3",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 4"
+    ]
+  }
+}

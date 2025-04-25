@@ -1,0 +1,7 @@
+{
+  "sql": "select t1.column1, t1.column2, t1.column3, t2.column4, t2.column5, t2.column6, t2.column7, t2.column8 \nfrom table1 t1 \njoin table2 t2 \non t1.common_column = t2.common_column \nwhere t2.special_condition = 'value'\n```",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ from _ join _ on _ ._ = _ ._ where _ ._ = _",
+  "database": "安全生活",
+  "tables": {}
+}

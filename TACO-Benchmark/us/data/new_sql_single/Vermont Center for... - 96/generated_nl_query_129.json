@@ -1,0 +1,35 @@
+{
+  "sql": "SELECT waste_water_facilities.FacilityName, waste_water_facilities.FacilityID, waste_water_facilities.WWInventoryURL, landfills.SITENAME, landfills.STATUS, landfills.LATITUDE FROM waste_water_facilities INNER JOIN landfills ON waste_water_facilities.X = landfills.Longitude AND waste_water_facilities.Y = landfills.Latitude WHERE landfills.LATITUDE IS NOT NULL",
+  "problem_description": "### Query intent:\nThe SQL statement aims to retrieve specific information about facilities related to waste water treatment and landfills. It seeks to match and extract data from two different tables: `waste_water_facilities` and `landfills`. The query intends to find details about facilities, including their names, IDs, URLs, and location information from landfills.\n\n### Detailed description:\n1. **Tables involved**:\n   - **`waste_water_facilities`**: This table contains information about waste water treatment facilities. Columns of interest include `FacilityName`, `FacilityID`, and `WWInventoryURL`.\n   - **`landfills`**: This table contains information about landfills. Columns of interest include `SITENAME`, `STATUS`, `LATITUDE`, and `Longitude`.\n\n2. **Join condition**:\n   - The query performs an inner join on the `waste_water_facilities` and `landfills` tables based on matching coordinates (`X` and `Y` for `waste_water_facilities` which are assumed to represent longitude and latitude respectively) with (`Longitide` and `Latitude`) from the `landfills` table.\n\n3. **Filter condition**:\n   - The `WHERE` clause filters the results to only include rows where the `LATITUDE` column in the `landfills` table is not null. This ensures that only locations with valid geographical coordinates are included in the result set.\n\n### Business scenario:\nThis query could be used in environmental management, compliance monitoring, or geographic information systems (GIS) applications where detailed information about waste water facilities and their geographical locations relative to landfills is required. For example, regulatory bodies might need this data to ensure proper waste handling practices, or environmental consultants might use it to assess potential environmental impacts.\n\n### User description:\nA user might need this information to:\n- **Monitor compliance**: Check if waste water treatment facilities are correctly located relative to landfills to ensure proper waste disposal.\n- **Environmental impact assessment**: Assess the proximity of waste water treatment facilities to potential sensitive areas such as landfills to evaluate potential environmental risks.\n- **Planning and decision-making**: Inform decisions on new facility locations or upgrades by understanding current facility layouts and their relationship to existing infrastructure like landfills.",
+  "natural_language_query": "I am looking to gather detailed information about waste water treatment facilities and landfills. Specifically, I want to know the names, IDs, URLs, and exact locations of these facilities. To do this, I plan to combine data from two databases: one containing specifics on waste water treatment facilities and another on landfills. \n\nI aim to match the coordinates from the waste water treatment facilities database—assumed to be longitude and latitude—with those from the landfills database. The goal is to filter out any landfill entries without valid geographical coordinates. By doing so, I can ensure that the information I retrieve pertains to facilities that have been accurately mapped and are operational. This will help me in monitoring compliance, assessing environmental impacts, and making informed decisions regarding the layout and operation of these critical facilities.",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ ,_ ,_ ,_ from _ where _ = _",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "waste_water_facilities": [
+      "waste_water_facilities.X",
+      "waste_water_facilities.Y",
+      "waste_water_facilities.FacilityName",
+      "waste_water_facilities.FacilityID",
+      "waste_water_facilities.WWInventoryURL"
+    ],
+    "landfills": [
+      "landfills.X",
+      "landfills.Y",
+      "landfills.OBJECTID",
+      "landfills.PSINUM",
+      "landfills.SWFACID",
+      "landfills.SITENAME",
+      "landfills.LOCCONF",
+      "landfills.DATE_FIRST",
+      "landfills.DATE_LAST",
+      "landfills.ACRES",
+      "landfills.STATUS",
+      "landfills.WQMONITORING",
+      "landfills.GASCOLLECTION",
+      "landfills.TOWNNAME",
+      "landfills.LATITUDE",
+      "landfills.LONGITUDE"
+    ]
+  }
+}

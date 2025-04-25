@@ -1,0 +1,26 @@
+{
+  "sql": "SELECT xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.\"西城区路侧停车数据\" FROM xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392 WHERE xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.\"Unnamed: 1\" = '条件1' AND (xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.\"Unnamed: 2\" IN (SELECT shigonganjujiaotongweifachulijigou1949.\"交通违法处理机构\" FROM shigonganjujiaotongweifachulijigou1949 WHERE shigonganjujiaotongweifachulijigou1949.\"Unnamed: 1\" = '条件2' OR shigonganjujiaotongweifachulijigou1949.\"Unnamed: 3\" = '条件3' OR shigonganjujiaotongweifachulijigou1949.\"Unnamed: 4\" = '条件4'))\n```",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从西城区路侧停车数据表中筛选出满足特定条件的停车数据，这些条件与交通违法处理机构的信息相关联。\n\n- **详细描述**：\n  - **涉及的表**：\n    1. `xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392`（西城区路侧停车数据表）：包含西城区路侧停车数据，其中列 `西城区路侧停车数据` 是查询的目标列。\n    2. `shigonganjujiaotongweifachulijigou1949`（市公安局交通违法处理机构表）：包含交通违法处理机构的信息，其中列 `交通违法处理机构` 用于子查询的条件匹配。\n  - **涉及的列**：\n    - `xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.\"西城区路侧停车数据\"`：查询的目标列，表示西城区路侧停车数据。\n    - `xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.\"Unnamed: 1\"`：用于筛选条件，值为 `'条件1'`。\n    - `xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.\"Unnamed: 2\"`：用于子查询的条件匹配，其值需要在子查询的结果中。\n    - `shigonganjujiaotongweifachulijigou1949.\"交通违法处理机构\"`：子查询的目标列，用于匹配主查询中的 `Unnamed: 2`。\n    - `shigonganjujiaotongweifachulijigou1949.\"Unnamed: 1\"`、`\"Unnamed: 3\"`、`\"Unnamed: 4\"`：子查询中的条件列，分别匹配 `'条件2'`、`'条件3'`、`'条件4'`。\n  - **条件**：\n    - 主查询的条件是 `xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.\"Unnamed: 1\" = '条件1'`。\n    - 子查询的条件是 `shigonganjujiaotongweifachulijigou1949.\"Unnamed: 1\" = '条件2' OR shigonganjujiaotongweifachulijigou1949.\"Unnamed: 3\" = '条件3' OR shigonganjujiaotongweifachulijigou1949.\"Unnamed: 4\" = '条件4'`。\n    - 主查询的 `Unnamed: 2` 列的值需要在子查询的 `交通违法处理机构` 列的结果中。\n\n- **业务场景**：该查询可能用于以下业务场景：\n  - **交通违法与停车数据关联分析**：查询可能与交通违法处理机构相关的西城区路侧停车数据，用于分析违法停车行为或停车管理。\n  - **停车数据筛选**：根据交通违法处理机构的特定条件（如区域、类型等）筛选出相关的停车数据，用于进一步的数据处理或报表生成。\n\n- **用户描述**：在上述业务场景下，用户可能遇到的实际问题或需求包括：\n  - **违法停车分析**：用户可能需要了解哪些路侧停车数据与特定的交通违法处理机构相关，以便分析违法停车的热点区域或行为模式。\n  - **数据整合**：用户可能需要将停车数据与交通违法处理机构的数据进行整合，生成综合报表或可视化分析。\n  - **条件筛选**：用户可能需要根据多个条件（如区域、机构类型等）筛选出特定的停车数据，以便进行更精细化的管理或决策支持。",
+  "natural_language_query": "市民反映，最近在西城区路侧停车时遇到一些问题，想了解一下这些停车点的情况。听说有些停车点可能和交通违法处理有关联，比如在某某街道或者某些特定区域。我之前在某某路停车时收到过罚单，想看看是不是这些地方都有类似问题。能不能帮忙查一下西城区哪些路侧停车点可能涉及到交通违法处理？特别是那些符合某些特定条件的地方，比如靠近交警大队或者经常有执法活动的区域。来电主要是想了解西城区路侧停车和交通违法处理之间的关联情况。",
+  "results": 0,
+  "sql skeleton": "select _ from _ where _ = _ and _ (_ ,_ ) in (select _ (_ ,_ ,_ ) from _ where _ = _ and (_ or _ or _ ))",
+  "database": "交通服务",
+  "tables": {
+    "xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392": [
+      "xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.西城区路侧停车数据",
+      "xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.Unnamed: 1",
+      "xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.Unnamed: 2",
+      "xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.Unnamed: 3",
+      "xichengquxichengqulucedianzishoufeitingcheweixinxibiao2392.Unnamed: 4"
+    ],
+    "shigonganjujiaotongweifachulijigou1949": [
+      "shigonganjujiaotongweifachulijigou1949.交通违法处理机构",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 1",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 2",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 3",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 4",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 5",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 6"
+    ]
+  }
+}

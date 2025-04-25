@@ -1,0 +1,31 @@
+{
+  "sql": "SELECT shijiaotongweiguidaozhandianxinxichuxing3670.线路名称, shijiaotongweiguidaozhandianxinxichuxing3670.车站名 FROM shijiaotongweiguidaozhandianxinxichuxing3670 WHERE shijiaotongweiguidaozhandianxinxichuxing3670.车站名 = '北京西站';",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从表 `shijiaotongweiguidaozhandianxinxichuxing3670` 中查询车站名为“北京西站”的线路名称和车站名信息。\n\n- **详细描述**：\n  - **涉及的表**：`shijiaotongweiguidaozhandianxinxichuxing3670`，该表名可能表示“市郊轨道交通站点信息出行”或类似含义，推测是存储轨道交通线路和站点信息的表。\n  - **涉及的列**：\n    - `线路名称`：表示轨道交通线路的名称。\n    - `车站名`：表示轨道交通站点的名称。\n  - **查询条件**：`车站名 = '北京西站'`，即筛选出表中车站名为“北京西站”的所有记录。\n  - **输出结果**：查询结果将返回符合条件的记录的线路名称和车站名。\n\n- **业务场景**：\n  - 该查询可以用于轨道交通信息管理系统，帮助用户或管理员快速查找特定车站（如“北京西站”）所在的线路信息。\n  - 可能的业务场景包括：\n    - 乘客查询“北京西站”属于哪条轨道交通线路。\n    - 交通管理部门统计或分析“北京西站”涉及的线路信息。\n    - 出行规划工具中，根据站点名称获取相关线路信息以规划路线。\n\n- **用户描述**：\n  - 用户可能是乘客或交通管理人员，他们需要了解“北京西站”属于哪些轨道交通线路。例如：\n    - 乘客计划从“北京西站”出发，需要知道可以乘坐哪些线路的地铁或轨道交通。\n    - 交通管理人员可能需要核实“北京西站”是否属于某条线路，或进行线路调整前的数据确认。\n  - 用户的需求是快速、准确地获取“北京西站”的线路信息，以便进行后续的出行或管理工作。",
+  "natural_language_query": "市民反映，最近要去北京西站坐车，但是搞不清楚这个站到底能坐哪些地铁线路。手机上查的也不准，有的说4号线能到，有的说9号线也能到，还有人说新开的市郊铁路也经过这里。想请帮忙确认一下北京西站到底通哪些轨道交通线路，这样好提前规划换乘路线。来电咨询北京西站轨道交通线路信息。",
+  "results": [
+    [
+      "7号线",
+      "北京西站"
+    ],
+    [
+      "9号线",
+      "北京西站"
+    ],
+    [
+      "城市副中心线",
+      "北京西站"
+    ]
+  ],
+  "sql skeleton": "SELECT _ , _ FROM _ ;",
+  "database": "交通服务",
+  "tables": {
+    "zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733": [
+      "zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733.PK\u0003\u0004"
+    ],
+    "shijiaotongweiguidaozhandianxinxichuxing3670": [
+      "shijiaotongweiguidaozhandianxinxichuxing3670.线路名称",
+      "shijiaotongweiguidaozhandianxinxichuxing3670.站点编码",
+      "shijiaotongweiguidaozhandianxinxichuxing3670.车站名"
+    ]
+  }
+}

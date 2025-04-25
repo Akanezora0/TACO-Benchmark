@@ -1,0 +1,37 @@
+{
+  "sql": "SELECT \"shijiaotongweizulinyehujibenxinxi3677.经营业户名称\" FROM \"shijiaotongweizulinyehujibenxinxi3677\" WHERE \"xichengquxichengquguojietianqiaomingdan2490.OBJCODE\" = '指定OBJCODE'",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从表 `shijiaotongweizulinyehujibenxinxi3677` 中查询满足特定条件的经营业户名称，条件是关联到另一个表 `xichengquxichengquguojietianqiaomingdan2490` 中的某个特定 `OBJCODE` 值。\n\n### **详细描述**  \n1. **涉及的表**：  \n   - `shijiaotongweizulinyehujibenxinxi3677`（可能是一个存储“市交通委租赁业户基本信息”的表）。  \n   - `xichengquxichengquguojietianqiaomingdan2490`（可能是一个存储“西城区西城区国际天桥名单”的表）。  \n\n2. **涉及的列**：  \n   - `shijiaotongweizulinyehujibenxinxi3677.经营业户名称`：查询的目标列，表示租赁业户的名称。  \n   - `xichengquxichengquguojietianqiaomingdan2490.OBJCODE`：用于筛选的列，可能是某个唯一标识符或分类代码。  \n\n3. **查询条件**：  \n   - 仅返回 `xichengquxichengquguojietianqiaomingdan2490.OBJCODE` 等于 `'指定OBJCODE'` 的记录对应的经营业户名称。  \n   - 该条件可能隐含了两表之间的关联关系（如外键关联），但 SQL 中未明确显示 JOIN 语句，可能是语法不完整或依赖外部逻辑关联。  \n\n### **业务场景**  \n该查询可能用于以下业务场景：  \n- **城市交通管理**：查询在西城区国际天桥名单中登记的特定租赁业户（如共享单车、出租车公司等）的基本信息。  \n- **合规检查**：监管部门可能需要核实某些天桥周边经营的租赁业户是否符合资质或备案要求。  \n- **数据分析**：统计特定区域（如国际天桥附近）的交通租赁服务提供者情况。  \n\n### **用户描述**  \n用户（如交通管理部门或数据分析人员）可能遇到的实际问题或需求包括：  \n1. **监管需求**：需要快速获取某天桥（如 `OBJCODE='指定OBJCODE'` 对应的天桥）周边合法经营的租赁业户名单，以便进行抽查或执法。  \n2. **数据关联**：用户手头有一份天桥名单（`xichengquxichengquguojietianqiaomingdan2490`），需要关联查询这些天桥附近的租赁业户信息。  \n3. **效率问题**：如果直接手动匹配两个表的数据效率低下，通过 SQL 查询可以自动化这一过程。  \n\n### **备注**  \n- 该 SQL 语句可能不完整，缺少明确的表关联（如 JOIN 或子查询），实际执行可能需要补充关联逻辑。  \n- 表名和列名较长且类似编码格式，可能是从某个政务数据库或标准化系统中导出，业务背景可能与城市交通管理相关。",
+  "natural_language_query": "市民反映，西城区国际天桥附近有一些租赁自行车和电动车的摊点，想了解一下这些经营户是不是正规备案的。特别是天桥编号好像是\"指定OBJCODE\"的那个天桥周边，经常看到有人随意停放租赁车辆，搞得人行道都没法走了。之前投诉过乱停乱放问题，现在想确认下这些经营户到底有没有合法资质。能不能帮忙查查这个天桥附近都有哪些公司在运营？感觉有些公司可能根本没登记就在那做生意，特别影响市容。",
+  "results": 0,
+  "sql skeleton": "SELECT _ _ FROM ",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweizulinyehujibenxinxi3677": [
+      "shijiaotongweizulinyehujibenxinxi3677.经营业户名称"
+    ],
+    "xichengquxichengquguojietianqiaomingdan2490": [
+      "xichengquxichengquguojietianqiaomingdan2490.OBJCODE",
+      "xichengquxichengquguojietianqiaomingdan2490.OBJNAME",
+      "xichengquxichengquguojietianqiaomingdan2490.DEPTCODE1",
+      "xichengquxichengquguojietianqiaomingdan2490.DEPTNAME1",
+      "xichengquxichengquguojietianqiaomingdan2490.DEPTCODE2",
+      "xichengquxichengquguojietianqiaomingdan2490.DEPTNAME2",
+      "xichengquxichengquguojietianqiaomingdan2490.DEPTCODE3",
+      "xichengquxichengquguojietianqiaomingdan2490.DEPTNAME3",
+      "xichengquxichengquguojietianqiaomingdan2490.BGCODE",
+      "xichengquxichengquguojietianqiaomingdan2490.OBJSTATE",
+      "xichengquxichengquguojietianqiaomingdan2490.ORDATE",
+      "xichengquxichengquguojietianqiaomingdan2490.CHDATE",
+      "xichengquxichengquguojietianqiaomingdan2490.DATASOURCE",
+      "xichengquxichengquguojietianqiaomingdan2490.OBJPOS",
+      "xichengquxichengquguojietianqiaomingdan2490.NOTE",
+      "xichengquxichengquguojietianqiaomingdan2490.ljdl",
+      "xichengquxichengquguojietianqiaomingdan2490.cd",
+      "xichengquxichengquguojietianqiaomingdan2490.kydw",
+      "xichengquxichengquguojietianqiaomingdan2490.kd",
+      "xichengquxichengquguojietianqiaomingdan2490.gd",
+      "xichengquxichengquguojietianqiaomingdan2490.mc",
+      "xichengquxichengquguojietianqiaomingdan2490.ghspxmh"
+    ]
+  }
+}

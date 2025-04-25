@@ -1,0 +1,15 @@
+{
+  "sql": "SELECT \"shijiaotongweichuzuyehujibenxinxi3664.经营业户名称\", \"huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829.по\u0011Ю║╠\u001aА\", \"huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829.\u0001\u0001\" FROM \"shijiaotongweichuzuyehujibenxinxi3664\" INNER JOIN \"huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829\" ON \"shijiaotongweichuzuyehujibenxinxi3664.编号\" = \"huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829.编号\" WHERE \"shijiaotongweichuzuyehujibenxinxi3664.经营业户名称\" = '指定营业户名称' AND \"huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829.по\u0011Ю║╠\u001aА\" > 0 AND \"huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829.\u0001\u0001\" IS NOT NULL",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ ,_ from _ where _ =_",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweichuzuyehujibenxinxi3664": [
+      "shijiaotongweichuzuyehujibenxinxi3664.经营业户名称"
+    ],
+    "huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829": [
+      "huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829.по\u0011Ю║╠\u001aА",
+      "huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829.\u0001\u0001"
+    ]
+  }
+}

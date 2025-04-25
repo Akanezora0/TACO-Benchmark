@@ -1,0 +1,23 @@
+{
+  "sql": "SELECT \n    xichengquxichengqudengjilvyoujingquminglu14.序号,\n    xichengquxichengqudengjilvyoujingquminglu14.景区名称,\n    xichengquxichengqudengjilvyoujingquminglu14.等级,\n    xichengquxichengqudengjilvyoujingquminglu14.地址,\n    xichengquxichengqudengjilvyoujingquminglu14.咨询电话,\n    xichengquxichengqudengjilvyoujingquminglu14.投诉电话,\n    xichengquxichengqudengjilvyoujingquminglu14.邮编,\n    shiwenhuahelvyoujulvxingshexinxi3530.旅行社名称\nFROM \n    xichengquxichengqudengjilvyoujingquminglu14\nJOIN \n    shiwenhuahelvyoujulvxingshexinxi3530\nON \n    xichengquxichengqudengjilvyoujingquminglu14.序号 = shiwenhuahelvyoujulvxingshexinxi3530.旅行社业务经营许可证编号\nWHERE \n    xichengquxichengqudengjilvyoujingquminglu14.等级 = 'AAAA'",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ from _ join _ on _ ._ = _ ._ where _ ._ = _",
+  "database": "旅游住宿",
+  "tables": {
+    "xichengquxichengqudengjilvyoujingquminglu14": [
+      "xichengquxichengqudengjilvyoujingquminglu14.序号",
+      "xichengquxichengqudengjilvyoujingquminglu14.景区名称",
+      "xichengquxichengqudengjilvyoujingquminglu14.等级",
+      "xichengquxichengqudengjilvyoujingquminglu14.地址",
+      "xichengquxichengqudengjilvyoujingquminglu14.咨询电话",
+      "xichengquxichengqudengjilvyoujingquminglu14.投诉电话",
+      "xichengquxichengqudengjilvyoujingquminglu14.邮编"
+    ],
+    "shiwenhuahelvyoujulvxingshexinxi3530": [
+      "shiwenhuahelvyoujulvxingshexinxi3530.旅行社名称",
+      "shiwenhuahelvyoujulvxingshexinxi3530.旅行社业务经营许可证编号",
+      "shiwenhuahelvyoujulvxingshexinxi3530.许可经营业务",
+      "shiwenhuahelvyoujulvxingshexinxi3530.许可时间"
+    ]
+  }
+}

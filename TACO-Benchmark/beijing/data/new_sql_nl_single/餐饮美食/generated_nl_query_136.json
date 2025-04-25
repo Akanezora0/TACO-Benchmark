@@ -1,0 +1,26 @@
+{
+  "sql": "SELECT \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号\", \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称\", \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYXM\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.FZRQ\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.YXQZ\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.DWMC\", \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.EXCHANGETIME\" FROM \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076\" INNER JOIN \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\" ON \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址\" = \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.DWMC\";",
+  "problem_description": "- **查询意图**：  \n该 SQL 语句的目的是通过内连接（INNER JOIN）关联两个表，查询清真食品专柜信息及其对应的餐饮服务许可证信息，以便获取清真食品专柜的标识、名称、地址以及相关的许可证信息。\n\n- **详细描述**：  \n1. **涉及的表**：  \n   - `shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076`（清真食品专柜数据表）：存储清真食品专柜的相关信息。  \n   - `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374`（餐饮服务许可证信息表）：存储餐饮服务许可证的相关信息。  \n\n2. **涉及的列**：  \n   - 从`shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076`表中查询的列：  \n     - `专用标识牌号`：清真食品专柜的专用标识牌号。  \n     - `专柜名称`：清真食品专柜的名称。  \n     - `地址`：清真食品专柜的地址。  \n   - 从`shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374`表中查询的列：  \n     - `JYZMC`（经营者名称）：许可证的经营者名称。  \n     - `XKZBH`（许可证编号）：许可证的编号。  \n     - `JYCS`（经营场所）：许可证的经营场所。  \n     - `JYXM`（经营项目）：许可证的经营项目。  \n     - `FZRQ`（发证日期）：许可证的发证日期。  \n     - `YXQZ`（有效期至）：许可证的有效期截止日期。  \n     - `XKZID`（许可证ID）：许可证的唯一标识。  \n     - `DWMC`（单位名称）：许可证对应的单位名称。  \n     - `EXCHANGETIME`（交换时间）：数据交换的时间。  \n\n3. **连接条件**：  \n   - 通过`shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址`与`shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.DWMC`进行内连接，即通过清真食品专柜的地址与餐饮服务许可证的单位名称匹配，确保查询到的清真食品专柜具有合法的餐饮服务许可证。\n\n- **业务场景**：  \n该查询可用于以下业务场景：  \n1. **清真食品合规性检查**：确保清真食品专柜具有合法的餐饮服务许可证，符合相关法规要求。  \n2. **监管部门数据整合**：将清真食品专柜信息与许可证信息关联，便于监管部门统一管理和监督。  \n3. **商户资质验证**：商户或消费者可以通过查询验证清真食品专柜的合法性。  \n\n- **用户描述**：  \n在上述业务场景中，用户可能遇到的实际问题或需求包括：  \n1. **监管部门**：需要快速获取清真食品专柜及其许可证信息，以便进行合规性检查或执法行动。  \n2. **商户**：需要证明自己的清真食品专柜合法合规，以增强消费者信任或通过审核。  \n3. **消费者**：希望查询清真食品专柜的合法性，确保购买的产品符合清真标准。  \n4. **数据管理人员**：需要整合不同来源的数据（如专柜信息和许可证信息），以便生成报告或进行分析。",
+  "natural_language_query": "市民反映，最近在朝阳区一家挂着清真标识的牛羊肉专卖店买东西，但总觉得不太放心。想问问这家店到底有没有正规的餐饮服务许可？店门口挂着\"清真食品专柜\"的牌子，地址是朝阳区团结湖东里12号楼底商。我记得以前查过这种店应该要同时有清真标识和餐饮许可证才对，能不能帮忙查查这家店是不是两证齐全？主要是家里老人特别在意这个，怕买到不合规的清真食品。对了，如果查的话能不能把许可证的有效期也一起看看，别是过期的那种。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ ;",
+  "database": "餐饮美食",
+  "tables": {
+    "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076": [
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址"
+    ],
+    "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374": [
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYXM",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.FZRQ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.YXQZ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.DWMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.EXCHANGETIME"
+    ]
+  }
+}

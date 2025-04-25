@@ -1,0 +1,7 @@
+{
+  "sql": "select column1, column2, column3, column4 \nwhere table1.column1 = value1 \nand table1.column2 = value2",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ ,_ where _ = _ and _ = _",
+  "database": "安全生活",
+  "tables": {}
+}

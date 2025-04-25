@@ -1,0 +1,21 @@
+{
+  "sql": "select xichengquxichengquwenwubaohudanwei35.名称, xichengquxichengquwenwubaohudanwei35.地址, shunyiquxingjifandian1276.顺义区星级饭店 from xichengquxichengquwenwubaohudanwei35 join shunyiquxingjifandian1276 on xichengquxichengquwenwubaohudanwei35.序号 = shunyiquxingjifandian1276.顺义区星级饭店 where xichengquxichengquwenwubaohudanwei35.名称 = '目标名称' order by shunyiquxingjifandian1276.顺义区星级饭店 ;\n```",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从两个表中联合查询数据，获取西城区文物保护单位的名称、地址，以及与之关联的顺义区星级饭店信息，并按照顺义区星级饭店排序。  \n\n### **详细描述**  \n1. **涉及的表**：  \n   - `xichengquxichengquwenwubaohudanwei35`（西城区文物保护单位表）  \n   - `shunyiquxingjifandian1276`（顺义区星级饭店表）  \n\n2. **涉及的列**：  \n   - `xichengquxichengquwenwubaohudanwei35.名称`（文物保护单位的名称）  \n   - `xichengquxichengquwenwubaohudanwei35.地址`（文物保护单位的地址）  \n   - `shunyiquxingjifandian1276.顺义区星级饭店`（星级饭店的名称或编号）  \n\n3. **查询条件**：  \n   - 使用 `JOIN` 连接两个表，连接条件是 `xichengquxichengquwenwubaohudanwei35.序号 = shunyiquxingjifandian1276.顺义区星级饭店`（即文物保护单位的序号与星级饭店的某个字段匹配）。  \n   - 使用 `WHERE` 子句筛选 `xichengquxichengquwenwubaohudanwei35.名称 = '目标名称'`，即只查询名称为“目标名称”的文物保护单位。  \n   - 使用 `ORDER BY` 对结果按 `shunyiquxingjifandian1276.顺义区星级饭店` 排序。  \n\n### **业务场景**  \n该查询可能用于以下业务场景：  \n- **文化旅游管理**：查询某个特定的文物保护单位（如“目标名称”）及其关联的星级饭店信息，可能用于旅游推荐或文化保护单位的配套服务分析。  \n- **跨区域数据关联**：西城区的文物保护单位与顺义区的星级饭店可能存在某种合作关系（如旅游线路推荐、住宿优惠等），该查询可用于分析或展示这些关联关系。  \n\n### **用户描述**  \n用户可能遇到的实际问题或需求：  \n1. **旅游规划**：游客或旅行社希望查询某个著名文物保护单位（如“故宫”）附近的星级饭店，以便规划行程和住宿。  \n2. **数据分析**：政府或旅游管理部门需要分析文物保护单位与周边星级饭店的关联情况，以优化旅游资源配置或制定推广政策。  \n3. **商业合作**：饭店或文物保护单位的管理者希望了解彼此的合作关系，以便进行联合营销或服务优化。  \n\n该查询可以帮助用户快速获取特定文物保护单位及其关联的星级饭店信息，并按饭店名称排序，便于进一步分析或决策。",
+  "natural_language_query": "市民反映，我最近在规划一条文化旅游线路，想了解西城区某个著名文物保护点（比如故宫这样的地方）周边有没有顺义区的星级酒店可以住宿。听说这两个地方可能有合作，但我在网上查不到具体信息。能不能帮忙查一下这个文物保护点的具体地址，以及顺义区有哪些星级饭店和它有关联？最好能把饭店信息按等级排个序，这样我好安排住宿。对了，我特别想知道\"目标名称\"这个文物保护单位的情况，之前听朋友推荐过但不太清楚具体位置。来电咨询文化旅游配套服务信息。",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ from _ join _ on _ ._ = _ ._ join _ on _ ._ = _ ._ where _ ._ = _ order by _ ._ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "xichengquxichengquwenwubaohudanwei35": [
+      "xichengquxichengquwenwubaohudanwei35.序号",
+      "xichengquxichengquwenwubaohudanwei35.名称",
+      "xichengquxichengquwenwubaohudanwei35.地址"
+    ],
+    "shunyiquxingjifandian1276": [
+      "shunyiquxingjifandian1276.顺义区星级饭店",
+      "shunyiquxingjifandian1276.Unnamed: 1",
+      "shunyiquxingjifandian1276.Unnamed: 2",
+      "shunyiquxingjifandian1276.Unnamed: 3"
+    ]
+  }
+}

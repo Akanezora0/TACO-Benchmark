@@ -1,0 +1,41 @@
+{
+  "sql": "SELECT \"shigonganjujiaotongweifachulijigou1949.交通违法处理机构\", \"xichengquxichengquditieyoumingdan2496.SJXZQHMC\" FROM \"shigonganjujiaotongweifachulijigou1949\" - \"xichengquxichengquditieyoumingdan2496\" WHERE \"xichengquxichengquditieyoumingdan2496.SJXZQHMC\" = '特定值';",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从两个表中查询特定的数据，具体是查询\"shigonganjujiaotongweifachulijigou1949\"表中\"交通违法处理机构\"列和\"xichengquxichengquditieyoumingdan2496\"表中\"SJXZQHMC\"列的数据，条件是\"xichengquxichengquditieyoumingdan2496\"表中的\"SJXZQHMC\"列等于'特定值'。\n\n- **详细描述**：\n  - **涉及的表**：\n    - \"shigonganjujiaotongweifachulijigou1949\"：可能是一个记录交通违法处理机构信息的表。\n    - \"xichengquxichengquditieyoumingdan2496\"：可能是一个记录西城区地铁相关信息的表。\n  - **涉及的列**：\n    - \"shigonganjujiaotongweifachulijigou1949.交通违法处理机构\"：表示交通违法处理机构的名称或相关信息。\n    - \"xichengquxichengquditieyoumingdan2496.SJXZQHMC\"：可能是表示行政区划名称的列。\n  - **条件**：\n    - \"xichengquxichengquditieyoumingdan2496.SJXZQHMC\" = '特定值'：表示只查询行政区划名称为'特定值'的记录。\n\n- **业务场景**：\n  - 该查询可能用于交通管理部门或城市规划部门，用于分析特定行政区划内的交通违法处理机构与地铁信息之间的关系。\n  - 例如，可能需要了解在某个特定行政区划内，有哪些交通违法处理机构，以及这些机构与地铁站点的分布情况。\n\n- **用户描述**：\n  - 用户可能是交通管理部门的工作人员，他们需要了解特定行政区划内的交通违法处理机构的分布情况，以便优化资源配置或进行交通管理。\n  - 用户也可能是城市规划人员，他们需要分析交通违法处理机构与地铁站点的关系，以便在规划新的交通设施时考虑到这些因素。\n  - 用户可能遇到的实际问题包括：如何高效地管理交通违法处理机构，如何优化交通违法处理机构的布局以减少市民的出行成本，或者如何在地铁站点附近合理设置交通违法处理机构以提高服务效率。",
+  "natural_language_query": "市民反映，最近在西城区某特定区域办理交通违章处理时发现不太方便，想了解一下这个区域附近有没有交通违法处理点。听说这个区域有几个地铁站，不知道这些处理点是不是在地铁站附近分布？因为每次处理违章都要跑很远，特别耽误时间。希望能帮忙查一下这个特定区域范围内，都有哪些可以处理交通违法的地方，最好能知道它们和地铁站的分布关系，这样以后办事就能少走冤枉路了。来电咨询交通违法处理点分布问题。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ WHERE _ = _ ;",
+  "database": "交通服务",
+  "tables": {
+    "shigonganjujiaotongweifachulijigou1949": [
+      "shigonganjujiaotongweifachulijigou1949.交通违法处理机构",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 1",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 2",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 3",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 4",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 5",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 6"
+    ],
+    "xichengquxichengquditieyoumingdan2496": [
+      "xichengquxichengquditieyoumingdan2496.ID",
+      "xichengquxichengquditieyoumingdan2496.X",
+      "xichengquxichengquditieyoumingdan2496.Y",
+      "xichengquxichengquditieyoumingdan2496.SJXZQHMC",
+      "xichengquxichengquditieyoumingdan2496.QXJXZQHMC",
+      "xichengquxichengquditieyoumingdan2496.SJXZQHDM",
+      "xichengquxichengquditieyoumingdan2496.QXJXZQHDM",
+      "xichengquxichengquditieyoumingdan2496.POISJLY",
+      "xichengquxichengquditieyoumingdan2496.RHBZDZ",
+      "xichengquxichengquditieyoumingdan2496.CODE",
+      "xichengquxichengquditieyoumingdan2496.CODEMC",
+      "xichengquxichengquditieyoumingdan2496.GXSJ",
+      "xichengquxichengquditieyoumingdan2496.POIMC",
+      "xichengquxichengquditieyoumingdan2496.POIDZ",
+      "xichengquxichengquditieyoumingdan2496.别名",
+      "xichengquxichengquditieyoumingdan2496.POIFLMC",
+      "xichengquxichengquditieyoumingdan2496.TEL",
+      "xichengquxichengquditieyoumingdan2496.ID原",
+      "xichengquxichengquditieyoumingdan2496.备注",
+      "xichengquxichengquditieyoumingdan2496.上图"
+    ]
+  }
+}

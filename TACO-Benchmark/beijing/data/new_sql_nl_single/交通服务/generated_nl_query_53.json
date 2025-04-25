@@ -1,0 +1,23 @@
+{
+  "sql": "SELECT \"shijiaotongweiguidaozhandianxinxichuxing3670.线路名称\", \"shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1\" FROM \"shijiaotongweiguidaozhandianxinxichuxing3670\" - \"shijiaotongweishoufeigonglushoufeibiaozhun543\";",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从两个表中查询特定的列数据，并可能进行某种集合操作（这里使用了减号 `-`，但标准 SQL 中减号通常不用于集合操作，可能是语法错误或特定数据库的扩展功能）。\n\n- **详细描述**：\n  - 涉及的表：\n    1. `shijiaotongweiguidaozhandianxinxichuxing3670`（可能是一个轨道交通站点信息表）\n    2. `shijiaotongweishoufeigonglushoufeibiaozhun543`（可能是一个收费公路收费标准表）\n  - 涉及的列：\n    1. `shijiaotongweiguidaozhandianxinxichuxing3670.线路名称`（轨道交通线路名称）\n    2. `shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1`（收费公路收费标准的未命名列，可能是第二列）\n  - 操作：语句中使用了减号 `-`，但标准 SQL 中减号不用于集合操作。可能是想表达 `EXCEPT` 或 `MINUS`（在某些数据库中用于差集操作），或者是语法错误。\n\n- **业务场景**：\n  - 如果意图是差集操作（如 `EXCEPT`），可能是想找出在轨道交通线路中存在但收费公路标准中不存在的记录。\n  - 可能的业务场景包括：\n    1. 比较轨道交通线路和收费公路的覆盖范围，找出只存在于轨道交通中的线路。\n    2. 数据校验，确保两类交通方式的数据一致性。\n\n- **用户描述**：\n  - 用户可能需要解决以下问题：\n    1. 规划交通网络时，需要了解哪些区域只有轨道交通覆盖而没有收费公路覆盖。\n    2. 数据管理人员可能需要检查两类交通数据的一致性，确保没有遗漏或冲突。\n    3. 分析交通资源的分布情况，优化资源配置。\n  - 用户的需求可能是：\n    1. 获取轨道交通独有的线路信息。\n    2. 验证数据的完整性和准确性。",
+  "natural_language_query": "市民反映，我在做交通规划调研时遇到一个问题，就是想了解一下咱们城市里哪些地铁线路是收费公路没有覆盖到的。就是那种只有地铁能到，但是周边没有对应收费公路的区域。因为最近在做交通资源配置的分析报告，发现有些地方的数据好像对不上，比如地铁明明开通了某条线，但在公路收费系统里查不到相关信息。能不能帮忙查一下这种情况？主要是想确认哪些地铁线路是独立存在的，没有配套的收费公路。感觉这样可能会影响市民出行选择，也担心是不是数据录入有遗漏。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ ;",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweiguidaozhandianxinxichuxing3670": [
+      "shijiaotongweiguidaozhandianxinxichuxing3670.线路名称",
+      "shijiaotongweiguidaozhandianxinxichuxing3670.站点编码",
+      "shijiaotongweiguidaozhandianxinxichuxing3670.车站名"
+    ],
+    "shijiaotongweishoufeigonglushoufeibiaozhun543": [
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.北京市收费公路收费标准表",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 1",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 2",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 3",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 4",
+      "shijiaotongweishoufeigonglushoufeibiaozhun543.Unnamed: 5"
+    ]
+  }
+}

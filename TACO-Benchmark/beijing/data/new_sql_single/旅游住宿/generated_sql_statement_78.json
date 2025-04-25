@@ -1,0 +1,22 @@
+{
+  "sql": "SELECT \"pingguquzhucegongyuanxinxi780\".\"序号\", \"pingguquzhucegongyuanxinxi780\".\"名称\", \"pingguquzhucegongyuanxinxi780\".\"区\" FROM \"pingguquzhucegongyuanxinxi780\" WHERE \"pingguquzhucegongyuanxinxi780\".\"区\" = '顺义区' AND \"shunyiqushunyiquxingjifandian2102\".\"顺义区星级饭店\" = '5星' ;",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ from _ where _ = _ and _ = _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "pingguquzhucegongyuanxinxi780": [
+      "pingguquzhucegongyuanxinxi780.序号",
+      "pingguquzhucegongyuanxinxi780.名称",
+      "pingguquzhucegongyuanxinxi780.区",
+      "pingguquzhucegongyuanxinxi780.街道",
+      "pingguquzhucegongyuanxinxi780.地址",
+      "pingguquzhucegongyuanxinxi780.咨询电话"
+    ],
+    "shunyiqushunyiquxingjifandian2102": [
+      "shunyiqushunyiquxingjifandian2102.顺义区星级饭店",
+      "shunyiqushunyiquxingjifandian2102.Unnamed: 1",
+      "shunyiqushunyiquxingjifandian2102.Unnamed: 2",
+      "shunyiqushunyiquxingjifandian2102.Unnamed: 3"
+    ]
+  }
+}

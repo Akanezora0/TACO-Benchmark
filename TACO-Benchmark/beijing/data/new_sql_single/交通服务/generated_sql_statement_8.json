@@ -1,0 +1,24 @@
+{
+  "sql": "SELECT \"shijiaotongweixianchangxunchaxinxi3675.巡查时间\", \"shijiaotongweixianchangxunchaxinxi3675.巡查位置\" FROM \"shijiaotongweixianchangxunchaxinxi3675\" WHERE \"shijiaotongweijiapeijigouxinxi3667.驾培机构名称\" = '某机构名称';",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ ;",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweixianchangxunchaxinxi3675": [
+      "shijiaotongweixianchangxunchaxinxi3675.序号",
+      "shijiaotongweixianchangxunchaxinxi3675.工作内容",
+      "shijiaotongweixianchangxunchaxinxi3675.巡查时间",
+      "shijiaotongweixianchangxunchaxinxi3675.巡查人次",
+      "shijiaotongweixianchangxunchaxinxi3675.巡查单位",
+      "shijiaotongweixianchangxunchaxinxi3675.巡查位置",
+      "shijiaotongweixianchangxunchaxinxi3675.共享时间",
+      "shijiaotongweixianchangxunchaxinxi3675.更新时间"
+    ],
+    "shijiaotongweijiapeijigouxinxi3667": [
+      "shijiaotongweijiapeijigouxinxi3667.驾培机构名称",
+      "shijiaotongweijiapeijigouxinxi3667.训练地址",
+      "shijiaotongweijiapeijigouxinxi3667.统一社会信用代码",
+      "shijiaotongweijiapeijigouxinxi3667.法定代表人"
+    ]
+  }
+}

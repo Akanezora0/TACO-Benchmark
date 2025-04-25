@@ -1,0 +1,52 @@
+{
+  "sql": "SELECT salt_storage_record_table.address_full, dfirm_floodways.FLOODWAY FROM salt_storage_record_table INNER JOIN dfirm_floodways ON salt_storage_record_table.OBJECTID = dfirm_floodways.OBJECTID WHERE dfirm_floodways.FLOODWAY = 'YES';",
+  "problem_description": "### Query intent:\nThe SQL statement aims to retrieve specific details about locations where salt storage records exist and whether there is a floodway present at those locations.\n\n### Detailed description:\n- **Table**: `salt_storage_record_table` - This table contains records of salt storage locations. It likely includes an `address_full` column that specifies the full address of each storage location, and possibly other details related to the storage facility itself.\n- **Table**: `dfirm_floodways` - This table appears to contain information about floodways, which are areas prone to flooding. The `FLOODWAY` column indicates whether a floodway exists (`'YES'` or `'NO'`), and `OBJECTID` is a unique identifier for each entry in this table.\n- **Join**: The `INNER JOIN` operation is performed between `salt_storage_record_table` and `dfirm_floodways` on the condition that the `OBJECTID` in `salt_storage_record_table` matches the `OBJECTID` in `dfirm_floodways`. This ensures that only records from `salt_storage_record_table` that have corresponding entries in `dfirm_floodways` are included in the result set.\n- **Condition**: The `WHERE` clause filters the results to only include rows where the `FLOODWAY` column in `dfirm_floodways` has the value `'YES'`, indicating the presence of a floodway near the salt storage location.\n\n### Business scenario:\nThis query might be used by facilities management or environmental compliance officers to assess potential risks associated with salt storage sites located near flood-prone areas. By identifying these locations, they can take necessary precautions such as ensuring proper drainage, elevating storage structures, or implementing alternative storage solutions to mitigate flood risks.\n\n### User description:\nA user, perhaps an environmental safety officer, might need to perform this query to ensure that all salt storage sites within their jurisdiction are adequately prepared for flood events. They would use this information to conduct site inspections, develop emergency response plans, or update safety protocols specifically for areas identified as high-risk due to their proximity to floodways.",
+  "natural_language_query": "Environmental officer here. I'm tasked with ensuring our salt storage facilities are equipped to handle potential flood scenarios. To do this, I need to identify all locations where we store salt and check if any of these sites are situated close to areas prone to flooding. Specifically, I'm looking to retrieve the full addresses of these storage locations along with information on whether there's a floodway nearby. Can you help me construct a SQL query that will give me this data? I'm particularly interested in knowing the exact locations where a floodway does exist, so I can prioritize these areas for additional safety measures.",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ WHERE _ = _ ;",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "salt_storage_record_table": [
+      "salt_storage_record_table.OBJECTID",
+      "salt_storage_record_table.fulcrum_id",
+      "salt_storage_record_table.fulcrum_parent_id",
+      "salt_storage_record_table.fulcrum_record_id",
+      "salt_storage_record_table.version",
+      "salt_storage_record_table.geometry",
+      "salt_storage_record_table.created_at",
+      "salt_storage_record_table.updated_at",
+      "salt_storage_record_table.created_by",
+      "salt_storage_record_table.updated_by",
+      "salt_storage_record_table.address_sub_thoroughfare",
+      "salt_storage_record_table.address_thoroughfare",
+      "salt_storage_record_table.address_suite",
+      "salt_storage_record_table.address_locality",
+      "salt_storage_record_table.address_sub_admin_area",
+      "salt_storage_record_table.address_admin_area",
+      "salt_storage_record_table.address_postal_code",
+      "salt_storage_record_table.address_country",
+      "salt_storage_record_table.address_full",
+      "salt_storage_record_table.material_type",
+      "salt_storage_record_table.material_type_other",
+      "salt_storage_record_table.storage_length_years",
+      "salt_storage_record_table.storage_length_years_range",
+      "salt_storage_record_table.material_covered",
+      "salt_storage_record_table.coverage_method",
+      "salt_storage_record_table.material_on_pad",
+      "salt_storage_record_table.pad_type",
+      "salt_storage_record_table.pad_type_other"
+    ],
+    "dfirm_floodways": [
+      "dfirm_floodways.OBJECTID",
+      "dfirm_floodways.DFIRM_ID",
+      "dfirm_floodways.FLD_AR_ID",
+      "dfirm_floodways.FLD_ZONE",
+      "dfirm_floodways.FLOODWAY",
+      "dfirm_floodways.SFHA_TF",
+      "dfirm_floodways.AR_REVERT",
+      "dfirm_floodways.SOURCE_CIT",
+      "dfirm_floodways.HYDRO_ID",
+      "dfirm_floodways.CST_MDL_ID"
+    ]
+  }
+}

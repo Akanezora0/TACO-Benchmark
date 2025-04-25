@@ -1,0 +1,24 @@
+{
+  "sql": "SELECT \n    \"pingguqupingguqujingpinminsu2083\".\"平谷区2022年精品民宿\",\n    \"pingguqupingguqujingpinminsu2083\".\"Unnamed: 1\",\n    \"pingguqupingguqujingpinminsu2083\".\"Unnamed: 2\",\n    \"xichengquxichengqudengjilvyoujingquminglu14\".\"序号\",\n    \"xichengquxichengqudengjilvyoujingquminglu14\".\"景区名称\",\n    \"xichengquxichengqudengjilvyoujingquminglu14\".\"等级\",\n    \"xichengquxichengqudengjilvyoujingquminglu14\".\"地址\",\n    \"xichengquxichengqudengjilvyoujingquminglu14\".\"咨询电话\",\n    \"xichengquxichengqudengjilvyoujingquminglu14\".\"投诉电话\",\n    \"xichengquxichengqudengjilvyoujingquminglu14\".\"邮编\"\nFROM \n    \"pingguqupingguqujingpinminsu2083\"\nJOIN \n    \"xichengquxichengqudengjilvyoujingquminglu14\"\nON \n    \"pingguqupingguqujingpinminsu2083\".\"Unnamed: 1\" = \"xichengquxichengqudengjilvyoujingquminglu14\".\"序号\"\nWHERE \n    \"xichengquxichengqudengjilvyoujingquminglu14\".\"景区名称\" = '指定景区名称' \nORDER BY \n    \"xichengquxichengqudengjilvyoujingquminglu14\".\"等级\";",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从两个表中联合查询数据，获取平谷区的精品民宿信息与西城区的等级旅游景区名录信息，并根据指定条件筛选和排序结果。\n\n---\n\n### **详细描述**  \n1. **涉及的表**：  \n   - `pingguqupingguqujingpinminsu2083`（平谷区精品民宿表）  \n     - 列：  \n       - `平谷区2022年精品民宿`（可能为民宿名称或相关描述）  \n       - `Unnamed: 1`（未命名列1，可能与景区序号关联）  \n       - `Unnamed: 2`（未命名列2，用途未知）  \n   - `xichengquxichengqudengjilvyoujingquminglu14`（西城区等级旅游景区名录表）  \n     - 列：  \n       - `序号`（景区唯一标识，与平谷区表的 `Unnamed: 1` 关联）  \n       - `景区名称`（景区名称，用于条件筛选）  \n       - `等级`（景区等级，用于排序）  \n       - `地址`、`咨询电话`、`投诉电话`、`邮编`（景区详细信息）  \n\n2. **关联条件**：  \n   - 通过 `pingguqupingguqujingpinminsu2083.Unnamed: 1 = xichengquxichengqudengjilvyoujingquminglu14.序号` 关联两表，表示平谷区民宿与西城区景区存在某种对应关系（如合作、推荐或地理位置关联）。  \n\n3. **筛选条件**：  \n   - `xichengquxichengqudengjilvyoujingquminglu14.景区名称 = '指定景区名称'`：仅查询西城区景区名录中名称为“指定景区名称”的记录。  \n\n4. **排序**：  \n   - 按西城区景区的 `等级` 升序排序（可能从高到低或从低到高，取决于等级字段的取值规则）。  \n\n---\n\n### **业务场景**  \n1. **旅游推荐系统**：  \n   - 查询平谷区的精品民宿及其关联的西城区高等级景区信息，用于向游客推荐“民宿+景区”的组合旅游产品。  \n2. **区域合作分析**：  \n   - 分析平谷区民宿与西城区景区之间的合作关系（如联票、交通接驳等），筛选特定景区的关联民宿。  \n3. **数据校验**：  \n   - 验证两表中关联数据的完整性和一致性（例如检查民宿是否绑定到有效的景区）。  \n\n---\n\n### **用户描述**  \n1. **游客需求**：  \n   - 用户计划游览西城区的“指定景区名称”，并希望查询附近或合作的平谷区精品民宿，以便安排住宿。  \n2. **旅游平台运营**：  \n   - 运营人员需要生成“景区+民宿”推荐列表，按景区等级排序，优先展示高等级景区的合作民宿。  \n3. **政府或协会管理**：  \n   - 管理部门需要统计平谷区民宿与西城区景区的关联情况，确保跨区域旅游资源的有效整合。  \n\n**可能的问题**：  \n- 如果 `Unnamed: 1` 和 `序号` 的关联逻辑不明确，可能导致查询结果不准确（例如绑定错误的民宿和景区）。  \n- 缺少民宿的详细信息（如价格、评分），可能影响游客的决策。",
+  "natural_language_query": "市民反映，最近想去西城区的一个著名景点玩，好像是叫\"指定景区名称\"来着？听说那边和平谷区的一些精品民宿有合作，想查查有没有推荐的住宿。我在网上看到有人说平谷区的民宿环境特别好，但不知道具体哪些是和这个景区挂钩的，能不能帮忙找找看？最好能把那些和景区合作的民宿按景区等级排个序，这样我好挑个高级点的景区附近的民宿住。对了，我朋友说有些民宿可能根本没和景区真正合作，就是挂个名，能不能核实下这些信息准不准啊？来电咨询平谷区民宿和西城区景区的合作信息。",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ from _ join _ on _ ._ = _ ._ where _ ._ = _ order by _ ._ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "pingguqupingguqujingpinminsu2083": [
+      "pingguqupingguqujingpinminsu2083.平谷区2022年精品民宿",
+      "pingguqupingguqujingpinminsu2083.Unnamed: 1",
+      "pingguqupingguqujingpinminsu2083.Unnamed: 2"
+    ],
+    "xichengquxichengqudengjilvyoujingquminglu14": [
+      "xichengquxichengqudengjilvyoujingquminglu14.序号",
+      "xichengquxichengqudengjilvyoujingquminglu14.景区名称",
+      "xichengquxichengqudengjilvyoujingquminglu14.等级",
+      "xichengquxichengqudengjilvyoujingquminglu14.地址",
+      "xichengquxichengqudengjilvyoujingquminglu14.咨询电话",
+      "xichengquxichengqudengjilvyoujingquminglu14.投诉电话",
+      "xichengquxichengqudengjilvyoujingquminglu14.邮编"
+    ]
+  }
+}

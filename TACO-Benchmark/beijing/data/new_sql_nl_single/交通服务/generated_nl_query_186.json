@@ -1,0 +1,22 @@
+{
+  "sql": "SELECT shijiaotongweiguidaozhandianxinxichuxing3670.线路名称, shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.评定等级 FROM shijiaotongweiguidaozhandianxinxichuxing3670 INNER JOIN shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672 ON shijiaotongweiguidaozhandianxinxichuxing3670.站点编码 = shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.统一社会信用代码 WHERE shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.所属地区 = '北京' AND shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.年份 = 2022;",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是查询北京市2022年轨道交通站点信息与汽车租赁企业信用评价结果之间的关联数据，具体是获取符合条件的轨道交通线路名称及其对应的汽车租赁企业的信用评定等级。\n\n- **详细描述**：\n  - **涉及的表**：\n    1. `shijiaotongweiguidaozhandianxinxichuxing3670`（轨道交通站点信息出行表）：包含轨道交通站点的相关信息，如线路名称、站点编码等。\n    2. `shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672`（汽车租赁企业信用评价结果数据表）：包含汽车租赁企业的信用评价信息，如统一社会信用代码、评定等级、所属地区、年份等。\n  - **涉及的列**：\n    1. `shijiaotongweiguidaozhandianxinxichuxing3670.线路名称`：轨道交通线路的名称。\n    2. `shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.评定等级`：汽车租赁企业的信用评定等级。\n    3. `shijiaotongweiguidaozhandianxinxichuxing3670.站点编码`：轨道交通站点的编码。\n    4. `shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.统一社会信用代码`：汽车租赁企业的统一社会信用代码。\n    5. `shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.所属地区`：汽车租赁企业所属的地区。\n    6. `shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.年份`：信用评价结果的年份。\n  - **条件**：\n    1. `shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.所属地区 = '北京'`：筛选出所属地区为北京的汽车租赁企业。\n    2. `shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.年份 = 2022`：筛选出2022年的信用评价结果。\n    3. `shijiaotongweiguidaozhandianxinxichuxing3670.站点编码 = shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.统一社会信用代码`：通过站点编码与统一社会信用代码的关联，将轨道交通站点信息与汽车租赁企业信用评价结果关联起来。\n\n- **业务场景**：该查询可以用于分析北京市2022年轨道交通站点周边汽车租赁企业的信用状况。例如，交通管理部门或城市规划者可能希望了解哪些轨道交通线路附近的汽车租赁企业信用较好，从而为市民提供更可靠的出行建议或优化交通资源配置。\n\n- **用户描述**：在北京市，市民或游客可能需要在轨道交通站点附近租赁汽车出行。用户希望了解哪些线路附近的汽车租赁企业信用较好，以确保选择可靠的租赁服务。此外，交通管理部门可能需要监控和评估轨道交通站点周边企业的信用状况，以提升整体交通服务的质量和安全性。通过该查询，用户可以快速获取相关信息，辅助决策或规划。",
+  "natural_language_query": "市民反映，去年在北京坐地铁时发现有些地铁站附近的租车公司不太靠谱，想了解一下2022年北京地铁各条线路周边那些租车公司的信用情况怎么样。因为上个月在10号线换乘站附近租了辆车，结果车况特别差，还车时还乱扣押金，想知道这些租车公司是不是都有信用评级？能不能查到哪些地铁线路附近的租车公司比较正规、信用等级高一些？主要是担心以后出行再遇到这种坑人的租车公司，希望有关部门能提供这方面的信息，好让老百姓租车时有个参考。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ WHERE _ = _ ;",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweiguidaozhandianxinxichuxing3670": [
+      "shijiaotongweiguidaozhandianxinxichuxing3670.线路名称",
+      "shijiaotongweiguidaozhandianxinxichuxing3670.站点编码",
+      "shijiaotongweiguidaozhandianxinxichuxing3670.车站名"
+    ],
+    "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672": [
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.企业名称",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.评定等级",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.所属地区",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.年份",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.统一社会信用代码"
+    ]
+  }
+}

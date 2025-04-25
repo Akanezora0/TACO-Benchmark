@@ -1,0 +1,7 @@
+{
+  "sql": "select table1.column1, table1.column2 from table1 join table2 on table1.common_column = table2.common_column where table1.unique_id = 'value'",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ from _ join _ on _ ._ = _ ._ where _ ._ = _",
+  "database": "安全生活",
+  "tables": {}
+}

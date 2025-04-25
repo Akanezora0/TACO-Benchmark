@@ -1,0 +1,24 @@
+{
+  "sql": "SELECT shijiaotongweikebianqingbaobanshebeixinxi3519.名称, shijiaotongweiguidaoyanshixinxi3711.共享时间 FROM shijiaotongweikebianqingbaobanshebeixinxi3519 INNER JOIN shijiaotongweiguidaoyanshixinxi3711 ON shijiaotongweikebianqingbaobanshebeixinxi3519.唯一标识 = shijiaotongweiguidaoyanshixinxi3711.设备编码 WHERE shijiaotongweiguidaoyanshixinxi3711.延时线路 = '特定线路编号' AND shijiaotongweiguidaoyanshixinxi3711.共享时间 > '特定日期'",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是查询满足特定条件的设备名称及其对应的共享时间，具体条件是设备关联的延时线路为“特定线路编号”，且共享时间晚于“特定日期”。\n\n---\n\n### **详细描述**  \n1. **涉及的表**：  \n   - `shijiaotongweikebianqingbaobanshebeixinxi3519`（设备信息表）：存储设备的基本信息，如设备名称、唯一标识等。  \n   - `shijiaotongweiguidaoyanshixinxi3711`（轨道延时信息表）：存储设备的共享时间、延时线路等关联信息。  \n\n2. **涉及的列**：  \n   - `shijiaotongweikebianqingbaobanshebeixinxi3519.名称`：设备的名称。  \n   - `shijiaotongweiguidaoyanshixinxi3711.共享时间`：设备共享的时间。  \n   - `shijiaotongweikebianqingbaobanshebeixinxi3519.唯一标识`：设备的唯一标识，用于关联设备表和延时信息表。  \n   - `shijiaotongweiguidaoyanshixinxi3711.设备编码`：延时信息表中关联设备的编码，与设备表的“唯一标识”对应。  \n   - `shijiaotongweiguidaoyanshixinxi3711.延时线路`：设备所属的延时线路。  \n\n3. **查询条件**：  \n   - `shijiaotongweiguidaoyanshixinxi3711.延时线路 = '特定线路编号'`：筛选出属于特定线路的设备。  \n   - `shijiaotongweiguidaoyanshixinxi3711.共享时间 > '特定日期'`：筛选出共享时间晚于指定日期的记录。  \n\n4. **关联方式**：  \n   - 使用 `INNER JOIN` 连接两个表，关联条件是 `shijiaotongweikebianqingbaobanshebeixinxi3519.唯一标识 = shijiaotongweiguidaoyanshixinxi3711.设备编码`，确保只返回匹配的设备记录。  \n\n---\n\n### **业务场景**  \n该查询可能用于以下业务场景：  \n1. **设备管理与监控**：  \n   - 查询特定线路下，最近共享过的设备信息，用于设备状态监控或维护。  \n2. **数据分析与报表**：  \n   - 统计特定线路的设备使用情况，分析共享时间分布，优化资源调度。  \n3. **故障排查**：  \n   - 查找特定线路中近期活跃的设备，排查可能的故障或异常。  \n\n---\n\n### **用户描述**  \n1. **运维人员**：  \n   - 需要了解“特定线路编号”下哪些设备最近被共享过，以便进行维护或升级。  \n   - 例如：“我需要找出A线路最近一周内被共享的所有设备，检查它们是否正常运行。”  \n2. **数据分析师**：  \n   - 需要分析特定线路的设备使用频率，优化资源配置。  \n   - 例如：“我想统计B线路过去一个月内共享的设备数量，看看是否需要增加设备。”  \n3. **管理人员**：  \n   - 需要确保关键线路的设备可用性，避免因设备故障影响业务。  \n   - 例如：“C线路是核心线路，请列出最近3天所有共享过的设备，确保没有异常。”  \n\n该 SQL 查询帮助用户快速定位符合特定线路和时间条件的设备信息，支持运维、管理和决策需求。",
+  "natural_language_query": "市民反映，我们单位负责管理的轨道交通设备最近出现了一些问题，特别是那条编号为X-2051的延时线路。我想查一下这条线路上最近有哪些设备被共享使用过，就是从今年5月1号之后被调用过的设备。因为最近这条线路老是出现信号不稳定的情况，领导怀疑可能是某些共享设备出了问题。能不能帮忙看看这条线路上最近都有哪些设备在运行？最好能告诉我具体是什么设备以及它们被调用的时间，这样我们好安排检修。对了，这些设备名称要能对得上我们日常说的那些设备，不要用内部编码什么的，我们看不懂那些专业术语。",
+  "results": 0,
+  "sql skeleton": "select _ as _ from _ where _",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweikebianqingbaobanshebeixinxi3519": [
+      "shijiaotongweikebianqingbaobanshebeixinxi3519.唯一标识",
+      "shijiaotongweikebianqingbaobanshebeixinxi3519.名称",
+      "shijiaotongweikebianqingbaobanshebeixinxi3519.设备编码"
+    ],
+    "shijiaotongweiguidaoyanshixinxi3711": [
+      "shijiaotongweiguidaoyanshixinxi3711.序号",
+      "shijiaotongweiguidaoyanshixinxi3711.总车次",
+      "shijiaotongweiguidaoyanshixinxi3711.延时开始时间",
+      "shijiaotongweiguidaoyanshixinxi3711.延时结束时间",
+      "shijiaotongweiguidaoyanshixinxi3711.延时线路",
+      "shijiaotongweiguidaoyanshixinxi3711.共享时间",
+      "shijiaotongweiguidaoyanshixinxi3711.更新时间"
+    ]
+  }
+}

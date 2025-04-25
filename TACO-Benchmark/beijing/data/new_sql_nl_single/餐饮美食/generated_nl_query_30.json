@@ -1,0 +1,26 @@
+{
+  "sql": "SELECT \n    \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076\".\"专用标识牌号\",\n    \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076\".\"专柜名称\",\n    \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076\".\"地址\",\n    \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\".\"JYZMC\",\n    \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\".\"XKZBH\",\n    \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\".\"JYCS\",\n    \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\".\"JYXM\",\n    \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\".\"FZRQ\",\n    \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\".\"YXQZ\",\n    \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\".\"XKZID\",\n    \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\".\"DWMC\",\n    \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\".\"EXCHANGETIME\"\nFROM \n    \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076\"\nJOIN \n    \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\"\nON \n    \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076\".\"地址\" = \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\".\"DWMC\"\nWHERE \n    \"shishichangjiangu",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是查询 **清真食品专柜信息** 和 **餐饮服务许可证信息** 的关联数据，以获取特定清真食品专柜的许可证情况。  \n\n### **详细描述**  \n1. **涉及的表**：  \n   - `shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076`（清真食品专柜数据表）  \n     - 包含清真食品专柜的基本信息，如 **专用标识牌号、专柜名称、地址** 等。  \n   - `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374`（餐饮服务许可证信息表）  \n     - 包含餐饮服务许可证的详细信息，如 **经营者名称（JYZMC）、许可证编号（XKZBH）、经营场所（JYCS）、经营范围（JYXM）、发证日期（FZRQ）、有效期至（YXQZ）、许可证ID（XKZID）、单位名称（DWMC）、更新时间（EXCHANGETIME）** 等。  \n\n2. **关联条件**：  \n   - 通过 **`shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.\"地址\" = shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.\"DWMC\"`** 进行关联，即 **清真食品专柜的地址** 与 **餐饮服务许可证的单位名称** 匹配。  \n\n3. **查询列**：  \n   - 从 **清真食品专柜表** 查询：  \n     - `专用标识牌号`（专柜的唯一标识）  \n     - `专柜名称`（专柜的名称）  \n     - `地址`（专柜的物理位置）  \n   - 从 **餐饮服务许可证表** 查询：  \n     - `JYZMC`（经营者名称）  \n     - `XKZBH`（许可证编号）  \n     - `JYCS`（经营场所）  \n     - `JYXM`（经营范围）  \n     - `FZRQ`（发证日期）  \n     - `YXQZ`（有效期至）  \n     - `XKZID`（许可证ID）  \n     - `DWMC`（单位名称）  \n     - `EXCHANGETIME`（更新时间）  \n\n4. **WHERE 条件**（不完整，但推测可能涉及许可证状态或时间范围）：  \n   - 可能用于筛选 **有效的许可证** 或 **特定时间范围内的许可证**（如未过期的许可证）。  \n\n### **业务场景**  \n该查询可能用于 **市场监管或民族宗教事务管理**，具体场景包括：  \n1. **清真食品合规性检查**：  \n   - 确保清真食品专柜的经营者持有有效的餐饮服务许可证，符合食品安全法规。  \n2. **许可证到期预警**：  \n   - 查询专柜的许可证有效期，提前提醒续期或监管。  \n3. **跨部门数据共享**：  \n   - 民族宗教事务部门（管理清真食品专柜）与市场监管部门（管理许可证）的数据对接，确保信息一致。  \n4. **违规经营排查**：  \n   - 检查是否有专柜未办理许可证或使用过期许可证经营。  \n\n### **用户描述**  \n1. **市场监管人员**：  \n   - 需要检查某区域的清真食品专柜是否都持有合法许可证，避免无证经营。  \n   - 可能遇到问题：部分专柜地址变更，但许可证未更新，导致数据不一致。  \n2. **清真食品专柜管理者**：  \n   - 需要确认自己的专柜是否在监管系统中登记，并核实许可证信息是否正确。  \n   - 可能遇到问题：许可证即将到期，但未收到续期通知，导致经营中断。  \n3. **数据分析人员**：  \n   - 需要统计清真食品行业的合规率，分析许可证发放情况。  \n   - 可能遇到问题：数据表字段命名不规范（如使用拼音缩写），影响查询效率。  \n\n### **总结**  \n该 SQL 主要用于 **清真食品专柜与餐饮服务许可证的关联查询**，确保专柜经营合法合规，适用于 **市场监管、民族宗教事务管理、食品安全检查** 等场景。",
+  "natural_language_query": "市民反映，在朝阳区某超市的清真食品专柜购买牛羊肉时，发现柜台上没有看到餐饮服务许可证公示，担心这个专柜的食品卫生可能不合规。自己记得去年在其他超市买清真食品时，都能看到墙上挂着许可证，但这个专柜找了半天都没找到。想问问相关部门能不能查一下这个专柜有没有合法的经营许可证？地址是在朝阳区大屯路那边的物美超市地下一层，专柜名字好像叫\"西北清真牛羊肉\"。主要是家里老人特别在意这个，说没许可证的清真食品不敢买，希望能帮忙核实一下情况。",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ , _ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ from _ join _ on _ ._ = _ ._ where _ ._",
+  "database": "餐饮美食",
+  "tables": {
+    "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076": [
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址"
+    ],
+    "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374": [
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYXM",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.FZRQ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.YXQZ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.DWMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.EXCHANGETIME"
+    ]
+  }
+}

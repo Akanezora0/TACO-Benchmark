@@ -1,0 +1,26 @@
+{
+  "sql": "SELECT \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号\", \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称\", \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址\" FROM \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076\" - \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\" WHERE \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC\" = '具体值' OR \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH\" = '具体值';",
+  "problem_description": "- **查询意图**：  \n该 SQL 语句的目的是从表 `shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076` 中查询特定专柜的标识牌号、名称和地址信息，条件是这些专柜在表 `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374` 中没有匹配的餐饮服务许可证信息（通过差集运算实现），或者满足许可证名称（`JYZMC`）或许可证编号（`XKZBH`）为“具体值”的条件。\n\n- **详细描述**：  \n1. **涉及的表**：  \n   - 主表：`shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076`，包含专柜的标识牌号、名称和地址信息。  \n   - 参考表：`shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374`，包含餐饮服务许可证的相关信息（如企业名称 `JYZMC` 和许可证编号 `XKZBH`）。  \n\n2. **查询的列**：  \n   - 从主表中选择三列：`专用标识牌号`、`专柜名称`、`地址`。  \n\n3. **条件逻辑**：  \n   - 使用差集运算（`表A - 表B`）表示查询主表中存在但参考表中不存在的记录。  \n   - 附加条件：参考表中的 `JYZMC`（企业名称）或 `XKZBH`（许可证编号）等于“具体值”（可能是某个特定企业或许可证）。  \n\n4. **执行顺序**：  \n   - 先通过差集排除主表中与参考表完全匹配的记录，再筛选满足 `JYZMC` 或 `XKZBH` 为“具体值”的记录。  \n\n- **业务场景**：  \n1. **监管合规检查**：  \n   - 用于检查清真食品专柜是否具备有效的餐饮服务许可证，或是否属于特定企业（如连锁品牌）。  \n2. **数据清理与补全**：  \n   - 发现未登记许可证信息的专柜，督促其完善资质。  \n3. **特定企业追踪**：  \n   - 快速定位与某企业（“具体值”）相关的专柜，便于集中管理或审计。  \n\n- **用户描述**：  \n1. **监管部门**：  \n   - 需求：确保所有清真食品专柜合法经营，避免无证或过期许可证的情况。  \n   - 问题：如何高效筛选出未备案许可证或属于某重点监管企业的专柜？  \n2. **企业管理者**：  \n   - 需求：核实旗下专柜的许可证信息是否全部录入系统。  \n   - 问题：如何快速识别遗漏许可证数据的专柜？  \n3. **数据分析师**：  \n   - 需求：对比清真专柜数据与许可证数据库，生成合规率报告。  \n   - 问题：如何关联两个表并标记数据差异？  \n\n**注意**：表名和列名较长且为拼音缩写，实际应用中可能需要文档辅助理解字段含义。差集运算（`-`）的语法需确认具体数据库是否支持（如 PostgreSQL 支持，但 MySQL 需用 `LEFT JOIN ... WHERE IS NULL` 实现类似功能）。",
+  "natural_language_query": "市民反映，在商场里看到一些挂着清真食品标识的专柜，但是不确定这些摊位有没有合法的餐饮服务许可证。特别是有一家叫\"西域美食坊\"的连锁店，听说最近在检查他们的证件，想问问能不能查一下这些专柜的许可证情况？包括他们的位置和具体名称。另外还发现有些摊位虽然挂着清真牌子，但是在市场监管局的系统里好像查不到对应的许可证信息，这种情况是不是不合规啊？希望能帮忙核实下这些没有许可证的摊位具体都在哪些位置，还有那些属于\"西域美食坊\"的专柜的证件是不是齐全的。主要是担心食品安全问题，毕竟都挂着清真标志呢。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ WHERE _ = _ ;",
+  "database": "餐饮美食",
+  "tables": {
+    "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076": [
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址"
+    ],
+    "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374": [
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYXM",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.FZRQ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.YXQZ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.DWMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.EXCHANGETIME"
+    ]
+  }
+}

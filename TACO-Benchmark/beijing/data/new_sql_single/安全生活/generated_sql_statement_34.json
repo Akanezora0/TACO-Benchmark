@@ -1,0 +1,7 @@
+{
+  "sql": "SELECT column_name FROM table_name WHERE condition_column1 = value1 AND condition_column2 = value2 AND condition_column3 = value3",
+  "results": 0,
+  "sql skeleton": "select _ from _ where _ (_ ,_ ,_ ) = _",
+  "database": "安全生活",
+  "tables": {}
+}

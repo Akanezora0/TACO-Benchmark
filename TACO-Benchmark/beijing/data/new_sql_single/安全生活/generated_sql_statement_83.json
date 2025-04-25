@@ -1,0 +1,7 @@
+{
+  "sql": "select A._a, B._b, C._c, D._d, E._e, F._f, G._g, H._h, I._i from TableA AS A join TableB AS B on A._id = B._tableA_id join TableC AS C on B._id = C._tableB_id join TableD AS D on C._id = D._tableC_id join TableE AS E on D._id = E._tableD_id join TableF AS F on E._id = F._tableE_id join TableG AS G on F._id = G._tableF_id join TableH AS H on G._id = H._tableG_id join TableI AS I on H._id = I._tableH_id where I._i = 'value' order by A._a)",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ from _ join _ on _ ._ = _ ._ join _ on _ ._ = _ ._ where _ ._ = _ order by _ ._ ;",
+  "database": "安全生活",
+  "tables": {}
+}

@@ -1,0 +1,49 @@
+{
+  "sql": "SELECT \n    \"autism_prevalence_studies\".\"Author\",\n    \"autism_prevalence_studies\".\"Title\",\n    \"autism_prevalence_studies\".\"Year Published\",\n    \"autism_prevalence_studies\".\"Country\",\n    \"autism_prevalence_studies\".\"Area(s)\",\n    \"autism_prevalence_studies\".\"Study Years\",\n    \"autism_prevalence_studies\".\"Case Identification Method\",\n    \"autism_prevalence_studies\".\"Case Criterion\",\n    \"autism_prevalence_studies\".\"Sample Size\",\n    \"autism_prevalence_studies\".\"Number of Cases\",\n    \"autism_prevalence_studies\".\"ASD Prevalence Estimate per 1,000\",\n    \"autism_prevalence_studies\".\"Link to Publication\"\nFROM \n    \"autism_prevalence_studies\"\nJOIN \n    \"river_main_stem_waterbodies_wbid\" ON \n        \"autism_prevalence_studies\".\"Country\" = \"river_main_stem_waterbodies_wbid\".\"WBNAME\"\nWHERE \n    \"autism_prevalence_studies\".\"Year Published\" = '2022' AND \n    \"autism_prevalence_studies\".\"Area(s)\" = 'North America' AND \n    \"river_main_stem_waterbodies_wbid\".\"WBDESC\" = 'Main Stem River Water Bodies'",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ from _ join _ on _ ._ = _ ._ join _ on _ ._ = _ ._ where _ ._ = _ and _ ._ = _ and _ (_ ._ ,_ ) = _",
+  "databases": [
+    "Vermont Center for... - 96",
+    "U.S. Department of... - 1451"
+  ],
+  "tables": {
+    "river_main_stem_waterbodies_wbid": {
+      "river_main_stem_waterbodies_wbid": [
+        "river_main_stem_waterbodies_wbid.OBJECTID",
+        "river_main_stem_waterbodies_wbid.WBID",
+        "river_main_stem_waterbodies_wbid.WBNAME",
+        "river_main_stem_waterbodies_wbid.WBDESC"
+      ]
+    },
+    "autism_prevalence_studies": {
+      "autism_prevalence_studies": [
+        "autism_prevalence_studies.Author",
+        "autism_prevalence_studies.Title",
+        "autism_prevalence_studies.Year Published",
+        "autism_prevalence_studies.Country",
+        "autism_prevalence_studies.Area(s)",
+        "autism_prevalence_studies.Age Range",
+        "autism_prevalence_studies.Study Years",
+        "autism_prevalence_studies.Case Identification Method",
+        "autism_prevalence_studies.Case Criterion",
+        "autism_prevalence_studies.Sample Size",
+        "autism_prevalence_studies.Number of Cases",
+        "autism_prevalence_studies.ASD Prevalence Estimate per 1,000",
+        "autism_prevalence_studies.Confidence Interval (CI)",
+        "autism_prevalence_studies.Male:Female Sex Ratio",
+        "autism_prevalence_studies.Non-Hispanic White:Hispanic Prevalence Ratio",
+        "autism_prevalence_studies.White:Black Prevalence Ratio",
+        "autism_prevalence_studies.Diagnosis Age Range (months)",
+        "autism_prevalence_studies.Diagnosis Mean Age (months)",
+        "autism_prevalence_studies.Diagnosis Median Age (months)",
+        "autism_prevalence_studies.IQ Score <70 (%)",
+        "autism_prevalence_studies.Adaptive Score <70 (%)",
+        "autism_prevalence_studies.Non-Verbal or Minimally Verbal (%)",
+        "autism_prevalence_studies.Percentage of Individual Co-occurring Conditions",
+        "autism_prevalence_studies.Autism Types Included",
+        "autism_prevalence_studies.Link to Publication",
+        "autism_prevalence_studies.CDC Calculated Values"
+      ]
+    }
+  }
+}

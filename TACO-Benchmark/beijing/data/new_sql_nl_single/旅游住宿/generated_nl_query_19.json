@@ -1,0 +1,110 @@
+{
+  "sql": "SELECT HID, HNAME FROM shiguihuaziranziyuanweishiguan1516;",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从表 `shiguihuaziranziyuanweishiguan1516` 中查询并返回 `HID` 和 `HNAME` 两列的数据。\n\n- **详细描述**：\n  - **涉及的表**：`shiguihuaziranziyuanweishiguan1516`（表名可能为“市规划自然资源委实管1516”的拼音缩写，但具体含义需结合业务背景确认）。\n  - **涉及的列**：\n    - `HID`：可能是某种标识符（ID），具体含义可能是规划编号、资源编号或其他唯一标识。\n    - `HNAME`：可能是与 `HID` 对应的名称或描述字段，例如规划名称、资源名称等。\n  - **条件**：该查询没有设置任何筛选条件（WHERE 子句），因此会返回表中所有记录的 `HID` 和 `HNAME` 列数据。\n\n- **业务场景**：\n  - 该查询可能用于获取某个城市规划或自然资源管理相关的数据列表，例如：\n    - 展示所有规划项目的编号和名称。\n    - 提供自然资源管理中的资源标识和名称列表。\n  - 由于表名和字段名是拼音缩写，具体业务场景可能需要结合上下文进一步确认。例如，可能是用于城市规划管理系统的数据展示或报表生成。\n\n- **用户描述**：\n  - 用户可能是城市规划部门的工作人员或自然资源管理者，需要快速查看所有规划项目或资源的基本信息（编号和名称）。\n  - 用户可能遇到的实际问题或需求包括：\n    - 需要核对或选择某个规划项目的详细信息。\n    - 生成一份简单的规划项目清单用于汇报或存档。\n    - 在系统中为其他操作（如编辑、删除或关联数据）提供基础数据列表。",
+  "natural_language_query": "市民反映，最近在整理城市规划相关材料时遇到困难，想查询一下全市范围内的规划项目基本情况。主要是需要了解每个项目的编号和具体名称，因为手头的资料比较零散，有些项目的编号和名称对不上号。比如之前处理过顺义区的一个湿地保护项目，但现在系统里显示的信息和纸质档案不太一致，希望能帮忙核实一下所有规划项目的编号和名称信息，方便后续的整理工作。来电反映规划项目信息核对问题。",
+  "results": [
+    [
+      33836,
+      "东交民巷使馆建筑群奥地利使馆旧址"
+    ],
+    [
+      33773,
+      "东交民巷使馆建筑群国际俱乐部旧址"
+    ],
+    [
+      33853,
+      "荷兰使馆旧址"
+    ],
+    [
+      33830,
+      "美国使馆旧址"
+    ],
+    [
+      33854,
+      "原俄国使馆武官处"
+    ],
+    [
+      33654,
+      "原丹麦使馆"
+    ],
+    [
+      33634,
+      "东交民巷使馆建筑群意大利使馆旧址"
+    ],
+    [
+      33638,
+      "东交民巷使馆建筑群日本公使馆旧址"
+    ],
+    [
+      33788,
+      "东交民巷使馆建筑群法国使馆旧址"
+    ],
+    [
+      33859,
+      "意大利使馆旧址建筑群"
+    ],
+    [
+      33746,
+      "东交民巷使馆建筑群英国使馆旧址"
+    ],
+    [
+      33752,
+      "东交民巷使馆建筑群日本使馆旧址"
+    ],
+    [
+      33722,
+      "东交民巷使馆建筑群比利时使馆旧址"
+    ],
+    [
+      52431,
+      "俄罗斯大使馆"
+    ],
+    [
+      52072,
+      "原俄国使馆官员住宅"
+    ]
+  ],
+  "sql skeleton": "SELECT _ , _ FROM _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "shiguihuaziranziyuanweishiguan1516": [
+      "shiguihuaziranziyuanweishiguan1516.HID",
+      "shiguihuaziranziyuanweishiguan1516.FATHERID",
+      "shiguihuaziranziyuanweishiguan1516.HNAME",
+      "shiguihuaziranziyuanweishiguan1516.OTHERNAME",
+      "shiguihuaziranziyuanweishiguan1516.CATEGORY",
+      "shiguihuaziranziyuanweishiguan1516.SUBCATEGOR",
+      "shiguihuaziranziyuanweishiguan1516.COUNTYNAME",
+      "shiguihuaziranziyuanweishiguan1516.STREETNAME",
+      "shiguihuaziranziyuanweishiguan1516.DYNASTY",
+      "shiguihuaziranziyuanweishiguan1516.SUBDYNASTY",
+      "shiguihuaziranziyuanweishiguan1516.ADDRESS",
+      "shiguihuaziranziyuanweishiguan1516.RANK",
+      "shiguihuaziranziyuanweishiguan1516.BATCH",
+      "shiguihuaziranziyuanweishiguan1516.PUBTIME",
+      "shiguihuaziranziyuanweishiguan1516.USERS",
+      "shiguihuaziranziyuanweishiguan1516.PURPOSE",
+      "shiguihuaziranziyuanweishiguan1516.OWNERSHIP",
+      "shiguihuaziranziyuanweishiguan1516.STATEEVALU",
+      "shiguihuaziranziyuanweishiguan1516.SINGLERELI",
+      "shiguihuaziranziyuanweishiguan1516.PROTECTION",
+      "shiguihuaziranziyuanweishiguan1516.ATTACHEDRE",
+      "shiguihuaziranziyuanweishiguan1516.RELATEDPEO",
+      "shiguihuaziranziyuanweishiguan1516.RELATEDEVE",
+      "shiguihuaziranziyuanweishiguan1516.PUBNAME",
+      "shiguihuaziranziyuanweishiguan1516.SOURCE",
+      "shiguihuaziranziyuanweishiguan1516.EDITOR",
+      "shiguihuaziranziyuanweishiguan1516.ISREDUNDAN",
+      "shiguihuaziranziyuanweishiguan1516.THEME"
+    ],
+    "fengtaiqufengtaiquxingjijiudian1397": [
+      "fengtaiqufengtaiquxingjijiudian1397.星级酒店明细",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 1",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 2",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 3",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 4",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 5",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 6"
+    ]
+  }
+}

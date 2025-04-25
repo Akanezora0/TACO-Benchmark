@@ -1,0 +1,52 @@
+{
+  "sql": "SELECT wetland_ecologist_districts.OBJECTID, wetland_ecologist_districts.ABNAME, sga_phase_2_assessed_reaches.URLPage1 FROM wetland_ecologist_districts INNER JOIN sga_phase_2_assessed_reaches ON wetland_ecologist_districts.OBJECTID = sga_phase_2_assessed_reaches.OBJECTID WHERE sga_phase_2_assessed_reaches.ReportList = (SELECT ReportList FROM sga_phase_2_assessed_reaches WHERE RID = 'FinalB');",
+  "problem_description": "### Query intent:\nThe SQL statement is designed to retrieve specific data related to wetland ecology and phase 2 assessment phases. It aims to extract details about districts where certain reports have been finalized.\n\n### Detailed description:\n#### Tables Involved:\n- **wetland_ecologist_districts**: This table likely contains records for each district managed by ecologists, including unique identifiers (`OBJECTID`) and names (`ABNAME`).\n- **sga_phase_2_assessed_reaches**: This table includes information on reaches (segments) assessed during phase 2 of a study or project, with a column `URLPage1` providing a link to more detailed information about these reaches. It also has a `ReportList` field indicating which reports are associated with each reach.\n\n#### Columns Selected:\n- **wetland_ecologist_districts.OBJECTID**: This is the primary key in the `wetland_ecologist_districts` table, used to match records across both tables.\n- **wetland_ecologist_districts.ABNAME**: The name of the district, presumably an alias for better readability in the output.\n- **sga_phase_2_assessed_reaches.URLPage1**: The URL to the page detailing the assessment of a specific reach.\n\n#### Join Condition:\nThe query performs an inner join between `wetland_ecologist_districts` and `sga_phase_2_assessed_reaches` based on matching `OBJECTID` values, ensuring only those districts that have a corresponding record in the second table are included in the result set.\n\n#### Where Clause:\nThe `WHERE` clause filters the results to include only those rows from `sga_phase_2_assessed_reaches` where the `ReportList` matches the value obtained from another subquery. This subquery retrieves the `ReportList` value for rows where `RID` equals `'FinalB'`. This condition ensures that only districts associated with final reports are selected.\n\n### Business Scenario:\nThis SQL query could be used in a scenario where environmental management or conservation agencies need to identify and review the outcomes of final reports related to specific districts. For instance, it might be part of a process to ensure all necessary assessments are completed before moving forward with any ecological projects or interventions in those districts.\n\n### User Description:\nA user, possibly an environmental scientist or a project manager, might need this information to oversee compliance with reporting requirements for phase 2 assessments. They might want to verify that all final reports have been generated for districts under their jurisdiction, ensuring that all necessary",
+  "natural_language_query": "As an environmental scientist managing compliance with reporting requirements for phase 2 assessments across various districts, I often find myself needing to quickly access and review the outcomes of final reports. To streamline this process, I've crafted a SQL statement designed to efficiently fetch specific data related to wetland ecology and phase 2 assessment phases. This query allows me to pinpoint districts where certain reports have been successfully finalized, ensuring that our team can focus on areas that require immediate attention or further action based on the latest assessment findings.\n\nTo achieve this, the SQL statement employs an INNER JOIN operation between two tables: 'wetland_ecologist_districts' and 'sga_phase_2_assessed_reaches'. The 'wetland_ecologist_districts' table typically contains records for each district managed by ecologists, with a unique identifier ('OBJECTID') and district name ('ABNAME'). Meanwhile, 'sga_phase_2_assessed_reaches' holds information on reaches (segments) assessed during phase 2 of a study or project, including a URL to a detailed page about each reach ('URLPage1') and a 'ReportList' field that indicates associated reports.\n\nThe query selects the 'OBJECTID' from 'wetland_ecologist_districts', the 'ABNAME' for district identification, and the 'URLPage1' from 'sga_phase_2_assessed_reaches'. This selection is made possible through an INNER JOIN on the matching 'OBJECTID' values, ensuring that only districts with corresponding records in the second table are included in the output. \n\nA critical filter is applied through the 'WHERE' clause, which narrows down the results to only those rows from 'sga_phase_2_assessed_reaches' where the 'ReportList' matches the output of another subquery. This subquery retrieves the 'ReportList' value for rows where 'RID' equals 'FinalB'. This condition ensures that only districts associated with final reports are selected, providing a targeted view of completed assessments.\n\nIn essence, this SQL query serves as a powerful tool for environmental managers and scientists, enabling them to efficiently monitor and manage the status of phase 2 assessments across different districts, ensuring compliance with reporting standards and facilitating timely decision-making based on the latest ecological data.",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ from _ where _ = (select _ from _ where _ );",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "wetland_ecologist_districts": [
+      "wetland_ecologist_districts.OBJECTID",
+      "wetland_ecologist_districts.ABNAME",
+      "wetland_ecologist_districts.AGENCY",
+      "wetland_ecologist_districts.DEPT",
+      "wetland_ecologist_districts.DIV",
+      "wetland_ecologist_districts.FirstName",
+      "wetland_ecologist_districts.LastName",
+      "wetland_ecologist_districts.Email",
+      "wetland_ecologist_districts.Phone",
+      "wetland_ecologist_districts.Address",
+      "wetland_ecologist_districts.Office",
+      "wetland_ecologist_districts.Town",
+      "wetland_ecologist_districts.BOUNDARY",
+      "wetland_ecologist_districts.PROGMANAGER",
+      "wetland_ecologist_districts.PROGMANAGEREMAIL",
+      "wetland_ecologist_districts.PROGMANAGERPHONE",
+      "wetland_ecologist_districts.BACKUPCONTACT",
+      "wetland_ecologist_districts.BACKUPCONTACTEMAIL",
+      "wetland_ecologist_districts.BACKUPCONTACTPHONE",
+      "wetland_ecologist_districts.PROGRAMEMAIL",
+      "wetland_ecologist_districts.PROGRAMPHONE"
+    ],
+    "sga_phase_2_assessed_reaches": [
+      "sga_phase_2_assessed_reaches.SGAT_ID",
+      "sga_phase_2_assessed_reaches.ProjectName",
+      "sga_phase_2_assessed_reaches.URLPage1",
+      "sga_phase_2_assessed_reaches.URLPage2",
+      "sga_phase_2_assessed_reaches.ReportList",
+      "sga_phase_2_assessed_reaches.FinalA",
+      "sga_phase_2_assessed_reaches.FinalB",
+      "sga_phase_2_assessed_reaches.FinalC",
+      "sga_phase_2_assessed_reaches.CorridorPlanA",
+      "sga_phase_2_assessed_reaches.CorridorPlanB",
+      "sga_phase_2_assessed_reaches.CorridorPlanC",
+      "sga_phase_2_assessed_reaches.RID",
+      "sga_phase_2_assessed_reaches.SID",
+      "sga_phase_2_assessed_reaches.OBJECTID",
+      "sga_phase_2_assessed_reaches.RchID",
+      "sga_phase_2_assessed_reaches.SegID",
+      "sga_phase_2_assessed_reaches.ProjectID"
+    ]
+  }
+}

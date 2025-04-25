@@ -1,0 +1,20 @@
+{
+  "sql": "SELECT xichengqubeijingshiwenwubaohudanwei31.名称, xichengqubeijingshiwenwubaohudanwei31.地址, xichengquxichengquxingjifandianminglu19.?星级酒店名称, xichengquxichengquxingjifandianminglu19.?联系电话, xichengquxichengquxingjifandianminglu19.?酒店地址 \nFROM xichengqubeijingshiwenwubaohudanwei31 \nJOIN xichengquxichengquxingjifandianminglu19 ON xichengqubeijingshiwenwubaohudanwei31.序号 = xichengquxichengquxingjifandianminglu19.序号",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ ,_ where _ = _",
+  "database": "旅游住宿",
+  "tables": {
+    "xichengqubeijingshiwenwubaohudanwei31": [
+      "xichengqubeijingshiwenwubaohudanwei31.序号",
+      "xichengqubeijingshiwenwubaohudanwei31.名称",
+      "xichengqubeijingshiwenwubaohudanwei31.地址"
+    ],
+    "xichengquxichengquxingjifandianminglu19": [
+      "xichengquxichengquxingjifandianminglu19.序号",
+      "xichengquxichengquxingjifandianminglu19.?星级酒店名称",
+      "xichengquxichengquxingjifandianminglu19.?星级",
+      "xichengquxichengquxingjifandianminglu19.?联系电话",
+      "xichengquxichengquxingjifandianminglu19.?酒店地址"
+    ]
+  }
+}

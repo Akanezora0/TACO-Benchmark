@@ -1,0 +1,7 @@
+{
+  "sql": "select count(*), sum(sales), avg(price) from sales_data where date >= '2023-01-01' and date <= '2023-12-31'",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ from _ where _",
+  "database": "安全生活",
+  "tables": {}
+}

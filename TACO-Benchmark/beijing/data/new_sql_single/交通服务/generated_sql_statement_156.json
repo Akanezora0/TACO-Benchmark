@@ -1,0 +1,19 @@
+{
+  "sql": "SELECT haidianqugonggongjianzhutingchechang3416.序号, haidianqugonggongjianzhutingchechang3416.详细地址 FROM haidianqugonggongjianzhutingchechang3416 WHERE haidianqugonggongjianzhutingchechang3416.详细地址 = 'daxingqudaxingqugonggongzixingchededianweixinxi440.公共自行车点位';",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ WHERE _ = _ ;",
+  "database": "交通服务",
+  "tables": {
+    "haidianqugonggongjianzhutingchechang3416": [
+      "haidianqugonggongjianzhutingchechang3416.序号",
+      "haidianqugonggongjianzhutingchechang3416.停车场名称",
+      "haidianqugonggongjianzhutingchechang3416.停车场类型",
+      "haidianqugonggongjianzhutingchechang3416.详细地址",
+      "haidianqugonggongjianzhutingchechang3416.经营单位"
+    ],
+    "daxingqudaxingqugonggongzixingchededianweixinxi440": [
+      "daxingqudaxingqugonggongzixingchededianweixinxi440.序号",
+      "daxingqudaxingqugonggongzixingchededianweixinxi440.公共自行车点位"
+    ]
+  }
+}

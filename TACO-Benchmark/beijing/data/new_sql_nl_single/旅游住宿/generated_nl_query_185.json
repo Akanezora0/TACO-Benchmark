@@ -1,0 +1,22 @@
+{
+  "sql": "SELECT \n    shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.序号, \n    shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.名称, \n    shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.类别, \n    shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.公布时间, \n    shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.级别 \nFROM \n    shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640 \nWHERE \n    shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.级别 = '优秀' \nAND \n    shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.公布时间 > '2022-01-01'",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从 `shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640` 表中筛选出符合特定条件的非物质文化遗产项目信息，具体是查询级别为“优秀”且公布时间在 2022 年 1 月 1 日之后的项目。\n\n### **详细描述**  \n1. **表名分析**：  \n   - 表名 `shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640` 可能是一个存储北京市顺义区（Shunyi District）非物质文化遗产名录项目信息的表。  \n   - 表名较长且包含拼音，可能是系统自动生成的表名，也可能是临时表或数据导入表。  \n\n2. **查询列分析**：  \n   - `序号`：项目的编号或唯一标识。  \n   - `名称`：非物质文化遗产项目的名称。  \n   - `类别`：项目的分类（如传统技艺、民俗、音乐等）。  \n   - `公布时间`：项目被正式列入名录的时间。  \n   - `级别`：项目的评级（如“优秀”“一般”等）。  \n\n3. **查询条件分析**：  \n   - `级别 = '优秀'`：筛选出评级为“优秀”的项目。  \n   - `公布时间 > '2022-01-01'`：筛选出在 2022 年 1 月 1 日之后公布的项目。  \n\n### **业务场景**  \n1. **政府或文化管理部门**：  \n   - 用于统计近年来（2022 年后）顺义区新增的优秀非物质文化遗产项目，以便进行宣传、保护或资金支持。  \n   - 可能用于年度报告或政策制定，评估非遗保护工作的成效。  \n\n2. **研究人员或公众查询**：  \n   - 帮助学者或公众了解顺义区最新（2022 年后）且质量较高（“优秀”级别）的非遗项目，便于学术研究或文化推广。  \n\n3. **数据展示或网站建设**：  \n   - 在政府官网或文化展示平台上，展示最新的优秀非遗项目，提升公众对传统文化的认知。  \n\n### **用户描述**  \n1. **政府工作人员**：  \n   - 需求：需要统计 2022 年以来顺义区新增的优秀非遗项目，以便向上级汇报或制定保护政策。  \n   - 问题：手动筛选数据效率低，需要快速获取符合条件的项目列表。  \n\n2. **文化研究者或记者**：  \n   - 需求：想了解顺义区近年来有哪些高质量的非遗项目，用于撰写报道或研究论文。  \n   - 问题：数据分散，需要精准查询“优秀”且“2022 年后公布”的项目。  \n\n3. **公众或游客**：  \n   - 需求：想了解顺义区最新的优秀非遗项目，可能用于旅游或文化体验。  \n   - 问题：不知道哪些项目值得关注，需要权威数据支持。  \n\n### **总结**  \n该 SQL 语句的核心是查询 **顺义区 2022 年后公布的优秀非物质文化遗产项目**，适用于政府管理、学术研究、文化宣传等场景，帮助用户快速获取高质量的非遗项目信息。",
+  "natural_language_query": "市民反映，想了解一下顺义区最近几年新评上的那些特别好的非物质文化遗产项目。听说有些项目被评为\"优秀\"，而且好像是2022年以后才公布的，但具体是哪些项目不太清楚。之前去文化馆看到过一些介绍，但信息比较零散，希望能有个完整的清单。主要是想带孩子去体验一下这些优秀的传统文化，顺便也支持本地非遗的保护工作。不知道能不能帮忙查一下这两年新评的优秀非遗项目都有哪些？最好能知道项目名称和类别，这样方便安排参观学习。",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ ,_ ,_ from _ where _ = _ and _ = _",
+  "database": "旅游住宿",
+  "tables": {
+    "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640": [
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.序号",
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.名称",
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.类别",
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.公布时间",
+      "shunyiqushunyiququjifeiwuzhiwenhuayichanmingluxiangmuxinxi3640.级别"
+    ],
+    "tongzhouqutongzhouquxiangcunminsuxinxi2979": [
+      "tongzhouqutongzhouquxiangcunminsuxinxi2979.通州区乡村民宿情况表（规范化审核52家）",
+      "tongzhouqutongzhouquxiangcunminsuxinxi2979.Unnamed: 1",
+      "tongzhouqutongzhouquxiangcunminsuxinxi2979.Unnamed: 2"
+    ]
+  }
+}

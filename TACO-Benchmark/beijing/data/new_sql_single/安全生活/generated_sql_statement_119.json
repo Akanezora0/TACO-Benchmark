@@ -1,0 +1,7 @@
+{
+  "sql": "select table1._ ,table2._ ,table3._ ,table4._ ,table5._ ,table6._ ,table7._ ,table8._ ,table9._ ,table10._ ,table11._ ,table12._ ,table13._ \nfrom table1 \nleft join table2 on table1._ = table2._ \nleft join table3 on table1._ = table3._ \nleft join table4 on table1._ = table4._ \nleft join table5 on table1._ = table5._ \nleft join table6 on table1._ = table6._ \nleft join table7 on table1._ = table7._ \nleft join table8 on table1._ = table8._ \nleft join table9 on table1._ = table9._ \nleft join table10 on table1._ = table10._ \nleft join table11 on table1._ = table11._ \nleft join table12 on table1._ = table12._ \nleft join table13 on table1._ = table13._ \nwhere table1._ = 'value'",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ from _ left join _ on _ ._ =_ ._ where _ ._ = _",
+  "database": "安全生活",
+  "tables": {}
+}

@@ -1,0 +1,7 @@
+{
+  "sql": "SELECT t1.col1, t1.col2, t2.col3 \nFROM table1 AS t1 \nJOIN table2 AS t2 ON t1.id = t2.table1_id \nWHERE t1.some_condition = (SELECT t3.col4 FROM table3 AS t3 WHERE t3.some_other_condition)\n```",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ from _ where _ = (select _ from _ where _ = _ );",
+  "database": "安全生活",
+  "tables": {}
+}

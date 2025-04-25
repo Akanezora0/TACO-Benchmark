@@ -1,0 +1,26 @@
+{
+  "sql": "SELECT \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号\", \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称\", \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址\" FROM \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076\" - \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\" WHERE \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC\" = '具体名称';",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从表 `shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076` 中查询某些列的数据，同时排除与表 `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374` 中特定条件匹配的记录。  \n\n### **详细描述**  \n1. **涉及的表**：  \n   - **主表**：`shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076`（可能存储清真食品专柜或相关规范数据）。  \n   - **排除表**：`shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374`（可能存储市场监管相关的餐饮服务许可证信息）。  \n\n2. **查询的列**：  \n   - `shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号`（可能是清真食品专柜的标识编号）。  \n   - `shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称`（清真食品专柜的名称）。  \n   - `shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址`（专柜的物理地址）。  \n\n3. **条件**：  \n   - 使用 `-`（差集运算）排除 `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374` 表中 `JYZMC`（可能指“经营主体名称”）等于 `'具体名称'` 的记录。  \n\n### **业务场景**  \n该查询可能用于：  \n- **清真食品监管**：政府或宗教事务管理部门需要统计符合规范的清真食品专柜信息，但排除已经取得餐饮服务许可证的商户（可能避免重复管理或检查合规性）。  \n- **市场合规检查**：监管部门希望筛选出未在市场监管系统登记的专柜，以便进行后续的执法或规范管理。  \n\n### **用户描述**  \n- **用户身份**：可能是民族宗教事务局、市场监督管理局的工作人员或数据分析师。  \n- **需求背景**：  \n  - 需要确保清真食品专柜符合国家或地方规范，但某些商户可能已经通过市场监管局的许可，因此不需要重复检查。  \n  - 或者，某些专柜可能未取得许可证，需要重点监管。  \n- **实际问题**：  \n  - 如何快速找到未在市场监管系统登记的清真食品专柜？  \n  - 如何避免对已合规的商户进行重复检查？  \n  - 如何统计清真食品专柜的分布情况，以便优化监管资源？  \n\n该 SQL 通过差集运算帮助用户筛选出需要重点关注的专柜数据，提高监管效率。",
+  "natural_language_query": "市民反映，最近在检查清真食品专柜的时候发现有些商户明明已经办了餐饮服务许可证，但系统里还是显示需要重点监管，导致重复检查。我们想查一下那些没有在市场监管系统登记过的清真食品专柜信息，包括专柜的牌子号、名称和具体位置。特别是要排除掉那些已经取得许可证的商户，不然每次检查都白跑一趟。现在就想知道到底哪些专柜是真正需要去检查的，能不能帮忙核实一下？来电反映清真食品专柜监管信息重复的问题。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ WHERE _ = _ ;",
+  "database": "餐饮美食",
+  "tables": {
+    "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076": [
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址"
+    ],
+    "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374": [
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYXM",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.FZRQ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.YXQZ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.DWMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.EXCHANGETIME"
+    ]
+  }
+}

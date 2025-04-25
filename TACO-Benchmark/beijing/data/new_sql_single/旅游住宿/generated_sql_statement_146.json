@@ -1,0 +1,20 @@
+{
+  "sql": "SELECT xichengqubeijingshiwenwubaohudanwei31.序号, xichengqubeijingshiwenwubaohudanwei31.名称, xichengqubeijingshiwenwubaohudanwei31.地址, huairouquhuairouqujingqumenpiaojiage1592.怀柔区政府定价景区门票价格 FROM xichengqubeijingshiwenwubaohudanwei31 INNER JOIN huairouquhuairouqujingqumenpiaojiage1592 ON xichengqubeijingshiwenwubaohudanwei31.名称 = huairouquhuairouqujingqumenpiaojiage1592.景区名称 WHERE xichengqubeijingshiwenwubaohudanwei31.名称 = '指定名称'",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ ,_ from _ where _ =_",
+  "database": "旅游住宿",
+  "tables": {
+    "xichengqubeijingshiwenwubaohudanwei31": [
+      "xichengqubeijingshiwenwubaohudanwei31.序号",
+      "xichengqubeijingshiwenwubaohudanwei31.名称",
+      "xichengqubeijingshiwenwubaohudanwei31.地址"
+    ],
+    "huairouquhuairouqujingqumenpiaojiage1592": [
+      "huairouquhuairouqujingqumenpiaojiage1592.怀柔区政府定价景区门票价格",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 1",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 2",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 3",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 4"
+    ]
+  }
+}

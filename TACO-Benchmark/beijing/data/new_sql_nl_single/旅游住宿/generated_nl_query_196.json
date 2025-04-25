@@ -1,0 +1,45 @@
+{
+  "sql": "SELECT \"shunyiqushunyiquxingjifandian2102.顺义区星级饭店\", \"shiguihuaziranziyuanweitushuguan1519.HNAME\" FROM \"shunyiqushunyiquxingjifandian2102\" INNER JOIN \"shiguihuaziranziyuanweitushuguan1519\" ON \"shunyiqushunyiquxingjifandian2102.顺义区星级饭店\" = \"shiguihuaziranziyuanweitushuguan1519.HNAME\" WHERE \"shunyiqushunyiquxingjifandian2102.顺义区星级饭店\" IS NOT NULL AND \"shiguihuaziranziyuanweitushuguan1519.HNAME\" IS NOT NULL;",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从两个表中查询出同时满足特定条件的记录，具体是查询出在顺义区星级饭店表和市规划自然资源委图书馆表中名称相同的记录。\n\n- **详细描述**：\n  - **涉及的表**：\n    - `shunyiqushunyiquxingjifandian2102`（顺义区星级饭店表）：包含顺义区星级饭店的信息。\n    - `shiguihuaziranziyuanweitushuguan1519`（市规划自然资源委图书馆表）：包含市规划自然资源委图书馆的信息。\n  - **涉及的列**：\n    - `shunyiqushunyiquxingjifandian2102.顺义区星级饭店`：顺义区星级饭店的名称。\n    - `shiguihuaziranziyuanweitushuguan1519.HNAME`：市规划自然资源委图书馆的名称。\n  - **条件**：\n    - 通过 `INNER JOIN` 连接两个表，连接条件是 `shunyiqushunyiquxingjifandian2102.顺义区星级饭店` 和 `shiguihuaziranziyuanweitushuguan1519.HNAME` 的值相等。\n    - `WHERE` 子句进一步筛选出这两个列的值不为 `NULL` 的记录。\n\n- **业务场景**：\n  - 该查询可以用于找出既是顺义区星级饭店又是市规划自然资源委图书馆的地点。这种查询可能在以下场景中有用：\n    - **数据整合**：当需要整合不同来源的数据时，找出在两个数据集中都存在的记录。\n    - **地点验证**：验证某些地点是否同时具备星级饭店和图书馆的属性。\n    - **业务分析**：分析某些地点是否具有多重功能或属性，例如某些星级饭店可能也设有图书馆。\n\n- **用户描述**：\n  - 用户可能需要找出在顺义区既是星级饭店又设有图书馆的地点，以便进行进一步的分析或规划。例如：\n    - 一个旅游规划者可能想知道哪些星级饭店附近或内部设有图书馆，以便为游客提供更全面的服务信息。\n    - 一个数据分析师可能需要验证两个数据集中的地点是否一致，以确保数据的准确性和完整性。\n    - 一个商业决策者可能希望了解哪些地点具有多重功能，以便评估其商业价值或潜在的合作机会。",
+  "natural_language_query": "市民反映，想了解一下顺义区这边有没有那种既是星级酒店又自带图书馆的场所。最近在规划一个文化旅游项目，需要找一些配套设施比较完善的星级饭店，最好还能提供阅读空间。之前好像在新闻里看到过有饭店内设图书馆的，但不确定具体是哪几家。能不能帮忙查查顺义区范围内符合这种情况的地方？主要是想确认下这些场所的具体名称，好做进一步考察。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ WHERE _ = _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "shunyiqushunyiquxingjifandian2102": [
+      "shunyiqushunyiquxingjifandian2102.顺义区星级饭店",
+      "shunyiqushunyiquxingjifandian2102.Unnamed: 1",
+      "shunyiqushunyiquxingjifandian2102.Unnamed: 2",
+      "shunyiqushunyiquxingjifandian2102.Unnamed: 3"
+    ],
+    "shiguihuaziranziyuanweitushuguan1519": [
+      "shiguihuaziranziyuanweitushuguan1519.HID",
+      "shiguihuaziranziyuanweitushuguan1519.FATHERID",
+      "shiguihuaziranziyuanweitushuguan1519.HNAME",
+      "shiguihuaziranziyuanweitushuguan1519.OTHERNAME",
+      "shiguihuaziranziyuanweitushuguan1519.CATEGORY",
+      "shiguihuaziranziyuanweitushuguan1519.SUBCATEGOR",
+      "shiguihuaziranziyuanweitushuguan1519.COUNTYNAME",
+      "shiguihuaziranziyuanweitushuguan1519.STREETNAME",
+      "shiguihuaziranziyuanweitushuguan1519.DYNASTY",
+      "shiguihuaziranziyuanweitushuguan1519.SUBDYNASTY",
+      "shiguihuaziranziyuanweitushuguan1519.ADDRESS",
+      "shiguihuaziranziyuanweitushuguan1519.RANK",
+      "shiguihuaziranziyuanweitushuguan1519.BATCH",
+      "shiguihuaziranziyuanweitushuguan1519.PUBTIME",
+      "shiguihuaziranziyuanweitushuguan1519.USERS",
+      "shiguihuaziranziyuanweitushuguan1519.PURPOSE",
+      "shiguihuaziranziyuanweitushuguan1519.OWNERSHIP",
+      "shiguihuaziranziyuanweitushuguan1519.STATEEVALU",
+      "shiguihuaziranziyuanweitushuguan1519.SINGLERELI",
+      "shiguihuaziranziyuanweitushuguan1519.PROTECTION",
+      "shiguihuaziranziyuanweitushuguan1519.ATTACHEDRE",
+      "shiguihuaziranziyuanweitushuguan1519.RELATEDPEO",
+      "shiguihuaziranziyuanweitushuguan1519.RELATEDEVE",
+      "shiguihuaziranziyuanweitushuguan1519.PUBNAME",
+      "shiguihuaziranziyuanweitushuguan1519.SOURCE",
+      "shiguihuaziranziyuanweitushuguan1519.EDITOR",
+      "shiguihuaziranziyuanweitushuguan1519.ISREDUNDAN"
+    ]
+  }
+}

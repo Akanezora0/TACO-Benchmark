@@ -1,0 +1,51 @@
+{
+  "sql": "SELECT HID, HNAME, COUNTYNAME, STREETNAME, DYNASTY, SUBDYNASTY, ADDRESS, RANK, PUBTIME, PURPOSE, OWNERSHIP, STATEEVALU, SINGLERELI, PROTECTION, ATTACHEDRE, RELATEDPEO, RELATEDEVE, PUBNAME, SOURCE, EDITOR, ISREDUNDAN, THEME FROM shiguihuaziranziyuanweiwangfu1520 WHERE HID = '12345';",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从表 `shiguihuaziranziyuanweiwangfu1520` 中查询 `HID`（假设为某种唯一标识符，如“遗产ID”）等于 `'12345'` 的记录的详细信息，包括遗产名称、地理位置、朝代、保护状态等字段。\n\n---\n\n### **详细描述**  \n1. **涉及的表**：  \n   - `shiguihuaziranziyuanweiwangfu1520`（表名可能为“世界文化遗产资源微王府1520”，或类似的历史遗产数据库表）。\n\n2. **查询的列**：  \n   - **基础信息**：`HID`（唯一标识）、`HNAME`（遗产名称）、`COUNTYNAME`（县/区名）、`STREETNAME`（街道名）、`ADDRESS`（详细地址）。  \n   - **历史信息**：`DYNASTY`（朝代）、`SUBDYNASTY`（子朝代）。  \n   - **管理信息**：`RANK`（等级/重要性）、`PUBTIME`（发布时间）、`PURPOSE`（用途）、`OWNERSHIP`（所有权）。  \n   - **保护状态**：`STATEEVALU`（国家评估）、`SINGLERELI`（单体文物关联）、`PROTECTION`（保护级别）、`ATTACHEDRE`（附属资源）。  \n   - **关联信息**：`RELATEDPEO`（相关人物）、`RELATEDEVE`（相关事件）。  \n   - **来源信息**：`PUBNAME`（发布名称）、`SOURCE`（数据来源）、`EDITOR`（编辑者）。  \n   - **其他**：`ISREDUNDAN`（是否冗余）、`THEME`（主题分类）。  \n\n3. **查询条件**：  \n   - `HID = '12345'`：精确匹配唯一标识为 `12345` 的记录，可能是某处特定文化遗产的编号。\n\n---\n\n### **业务场景**  \n1. **文化遗产管理**：  \n   - 政府或研究机构需要查询某处文化遗产的完整信息，包括历史背景、保护状态、地理位置等，用于档案管理或学术研究。  \n2. **旅游或教育应用**：  \n   - 旅游平台或教育系统展示某处文化遗产的详细信息（如朝代、地址、保护级别），供游客或学生查阅。  \n3. **数据维护**：  \n   - 管理员通过唯一标识（`HID`）快速定位某条记录，验证或更新其信息（如修改保护状态 `PROTECTION`）。  \n\n---\n\n### **用户描述**  \n1. **实际需求**：  \n   - 用户可能是文化遗产保护工作者，需要获取编号 `12345` 的遗产的完整资料，以填写报告或制定保护计划。  \n   - 也可能是游客或历史爱好者，想了解某处古迹的详细信息（如“北京故宫某建筑”的朝代、相关历史事件）。  \n2. **可能的问题**：  \n   - 用户已知遗产编号（`HID`），但需要其他字段（如地址、保护状态）辅助实地考察或研究。  \n   - 数据维护时发现某条记录信息不全，需通过唯一标识查询并补充（如添加 `RELATEDPEO` 相关人物）。  \n\n---\n\n### **补充说明**  \n- 表名和字段名包含拼音缩写（如 `STATEEVALU` 可能为“国家评估”），推测为中文数据库设计，需结合业务文档确认具体含义。  \n- 若 `ISREDUNDAN` 为“是否冗余”，可能用于数据清洗或去重场景。",
+  "natural_language_query": "市民反映，我在研究一处文化遗产时遇到了问题。这个遗产的编号好像是12345，但我不确定具体叫什么名字，可能是古代某个王府之类的。想查询一下这个遗产的详细信息，比如它具体在哪个区哪个街道、是哪个朝代的、现在保护得怎么样、有没有什么历史人物或事件相关。我之前在文化局的资料里看到过这个编号，但网上查不到完整信息，希望能帮忙核实一下这个12345号遗产的完整资料，包括它的保护级别、用途这些。对了，如果有什么附属建筑或相关资源也请一并告知，谢谢！",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "shiguihuaziranziyuanweiwangfu1520": [
+      "shiguihuaziranziyuanweiwangfu1520.HID",
+      "shiguihuaziranziyuanweiwangfu1520.FATHERID",
+      "shiguihuaziranziyuanweiwangfu1520.HNAME",
+      "shiguihuaziranziyuanweiwangfu1520.OTHERNAME",
+      "shiguihuaziranziyuanweiwangfu1520.CATEGORY",
+      "shiguihuaziranziyuanweiwangfu1520.SUBCATEGOR",
+      "shiguihuaziranziyuanweiwangfu1520.COUNTYNAME",
+      "shiguihuaziranziyuanweiwangfu1520.STREETNAME",
+      "shiguihuaziranziyuanweiwangfu1520.DYNASTY",
+      "shiguihuaziranziyuanweiwangfu1520.SUBDYNASTY",
+      "shiguihuaziranziyuanweiwangfu1520.ADDRESS",
+      "shiguihuaziranziyuanweiwangfu1520.RANK",
+      "shiguihuaziranziyuanweiwangfu1520.BATCH",
+      "shiguihuaziranziyuanweiwangfu1520.PUBTIME",
+      "shiguihuaziranziyuanweiwangfu1520.USERS",
+      "shiguihuaziranziyuanweiwangfu1520.PURPOSE",
+      "shiguihuaziranziyuanweiwangfu1520.OWNERSHIP",
+      "shiguihuaziranziyuanweiwangfu1520.STATEEVALU",
+      "shiguihuaziranziyuanweiwangfu1520.SINGLERELI",
+      "shiguihuaziranziyuanweiwangfu1520.PROTECTION",
+      "shiguihuaziranziyuanweiwangfu1520.ATTACHEDRE",
+      "shiguihuaziranziyuanweiwangfu1520.RELATEDPEO",
+      "shiguihuaziranziyuanweiwangfu1520.RELATEDEVE",
+      "shiguihuaziranziyuanweiwangfu1520.PUBNAME",
+      "shiguihuaziranziyuanweiwangfu1520.SOURCE",
+      "shiguihuaziranziyuanweiwangfu1520.EDITOR",
+      "shiguihuaziranziyuanweiwangfu1520.ISREDUNDAN",
+      "shiguihuaziranziyuanweiwangfu1520.THEME"
+    ],
+    "miyunqubeijingshimiyunquwenhuahelvyoujudisanjiduxingzhengzhifajianchajieguo952": [
+      "miyunqubeijingshimiyunquwenhuahelvyoujudisanjiduxingzhengzhifajianchajieguo952.附件",
+      "miyunqubeijingshimiyunquwenhuahelvyoujudisanjiduxingzhengzhifajianchajieguo952./",
+      "miyunqubeijingshimiyunquwenhuahelvyoujudisanjiduxingzhengzhifajianchajieguo952./.1",
+      "miyunqubeijingshimiyunquwenhuahelvyoujudisanjiduxingzhengzhifajianchajieguo952./.2",
+      "miyunqubeijingshimiyunquwenhuahelvyoujudisanjiduxingzhengzhifajianchajieguo952./.3",
+      "miyunqubeijingshimiyunquwenhuahelvyoujudisanjiduxingzhengzhifajianchajieguo952./.4",
+      "miyunqubeijingshimiyunquwenhuahelvyoujudisanjiduxingzhengzhifajianchajieguo952./.5",
+      "miyunqubeijingshimiyunquwenhuahelvyoujudisanjiduxingzhengzhifajianchajieguo952./.6",
+      "miyunqubeijingshimiyunquwenhuahelvyoujudisanjiduxingzhengzhifajianchajieguo952./.7"
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "sql": "SELECT \"shijiaotongweizulinyehujibenxinxi3677.经营业户名称\", \"shigonganjujiaotongweifachulijigou1949.交通违法处理机构\", \"shigonganjujiaotongweifachulijigou1949.Unnamed: 1\", \"shigonganjujiaotongweifachulijigou1949.Unnamed: 2\" WHERE \"shigonganjujiaotongweifachulijigou1949.交通违法处理机构\" = '机构名称'",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ ,_ where _ = _",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweizulinyehujibenxinxi3677": [
+      "shijiaotongweizulinyehujibenxinxi3677.经营业户名称"
+    ],
+    "shigonganjujiaotongweifachulijigou1949": [
+      "shigonganjujiaotongweifachulijigou1949.交通违法处理机构",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 1",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 2",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 3",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 4",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 5",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 6"
+    ]
+  }
+}

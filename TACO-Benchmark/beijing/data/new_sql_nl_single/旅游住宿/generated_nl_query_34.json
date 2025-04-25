@@ -1,0 +1,30 @@
+{
+  "sql": "SELECT fengtaiqufengtaiquxingjijiudian1397.\"星级酒店明细\" FROM fengtaiqufengtaiquxingjijiudian1397 WHERE fengtaiqufengtaiquxingjijiudian1397.\"Unnamed: 1\" = '条件' AND fengtaiqufengtaiquxingjijiudian1397.\"Unnamed: 2\" = '条件' AND fengtaiqufengtaiquxingjijiudian1397.\"Unnamed: 3\" = '条件' AND fengtaiqufengtaiquxingjijiudian1397.\"Unnamed: 4\" = '条件' AND fengtaiqufengtaiquxingjijiudian1397.\"Unnamed: 5\" = '条件' AND fengtaiqufengtaiquxingjijiudian1397.\"Unnamed: 6\" = '条件'",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从表 `fengtaiqufengtaiquxingjijiudian1397` 中查询满足多个条件的“星级酒店明细”数据。\n\n- **详细描述**：\n  - **表**：`fengtaiqufengtaiquxingjijiudian1397`，该表可能存储了丰台区（Fengtai District）星级酒店的详细信息。\n  - **列**：\n    - `星级酒店明细`：这是查询的目标列，可能包含星级酒店的具体信息，如名称、地址、联系方式等。\n    - `Unnamed: 1` 到 `Unnamed: 6`：这些列的名称未明确指定，可能是数据导入或设计时的占位符。根据查询条件，这些列可能代表酒店的不同属性或分类标准，如“区域”、“星级”、“开业时间”、“房间类型”、“价格范围”或“评分”等。\n  - **条件**：查询使用了六个条件，分别对 `Unnamed: 1` 到 `Unnamed: 6` 列进行筛选，要求这些列的值都等于字符串“条件”。这里的“条件”可能是占位符，实际查询中会被替换为具体的筛选值。\n\n- **业务场景**：\n  - 该查询可能用于酒店管理系统或旅游信息平台，帮助用户或管理员根据多个条件筛选出符合条件的星级酒店。例如：\n    - 筛选特定区域（如丰台区）的星级酒店。\n    - 根据酒店的星级、价格、房间类型等条件进行筛选。\n    - 统计或分析满足特定条件的酒店数据。\n\n- **用户描述**：\n  - 用户可能是酒店管理人员、旅游平台运营者或普通游客，他们需要根据多个条件快速找到符合要求的星级酒店。例如：\n    - 酒店管理人员可能需要统计丰台区内满足特定条件的酒店数量，以便进行市场分析。\n    - 游客可能想查找丰台区内价格适中、评分较高的四星级酒店。\n  - 用户的需求是通过输入多个筛选条件（如区域、星级、价格等），获取精确的酒店列表，以便进一步决策或分析。",
+  "natural_language_query": "市民反映，想在丰台区找几家靠谱的星级酒店，但是网上信息太杂乱了。我这边需要同时满足好几个条件：首先得是在丰台区范围内的，然后要四星级以上的，最好是近几年新开业的，要有家庭房型的，价格最好控制在500-800元之间，评分还得在4.5分以上。我在好几个平台查了都找不到完全符合的，能不能帮忙查一下丰台区这边有没有同时满足这些条件的星级酒店啊？主要是想带老人孩子一起住，所以条件比较具体，麻烦帮忙仔细查查。",
+  "results": 0,
+  "sql skeleton": "select _ from _ where _ (_ ,_ ,_ ) = _",
+  "database": "旅游住宿",
+  "tables": {
+    "fengtaiqufengtaiquxingjijiudian1397": [
+      "fengtaiqufengtaiquxingjijiudian1397.星级酒店明细",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 1",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 2",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 3",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 4",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 5",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 6"
+    ],
+    "miyunqubeijingshimiyunquwenhuahelvyoujudisanjiduxingzhengzhifajianchajieguo952": [
+      "miyunqubeijingshimiyunquwenhuahelvyoujudisanjiduxingzhengzhifajianchajieguo952.附件",
+      "miyunqubeijingshimiyunquwenhuahelvyoujudisanjiduxingzhengzhifajianchajieguo952./",
+      "miyunqubeijingshimiyunquwenhuahelvyoujudisanjiduxingzhengzhifajianchajieguo952./.1",
+      "miyunqubeijingshimiyunquwenhuahelvyoujudisanjiduxingzhengzhifajianchajieguo952./.2",
+      "miyunqubeijingshimiyunquwenhuahelvyoujudisanjiduxingzhengzhifajianchajieguo952./.3",
+      "miyunqubeijingshimiyunquwenhuahelvyoujudisanjiduxingzhengzhifajianchajieguo952./.4",
+      "miyunqubeijingshimiyunquwenhuahelvyoujudisanjiduxingzhengzhifajianchajieguo952./.5",
+      "miyunqubeijingshimiyunquwenhuahelvyoujudisanjiduxingzhengzhifajianchajieguo952./.6",
+      "miyunqubeijingshimiyunquwenhuahelvyoujudisanjiduxingzhengzhifajianchajieguo952./.7"
+    ]
+  }
+}

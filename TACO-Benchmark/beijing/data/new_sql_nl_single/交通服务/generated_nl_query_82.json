@@ -1,0 +1,34 @@
+{
+  "sql": "SELECT xichengquxichengquditiezhanmingdan2482.X, xichengquxichengquditiezhanmingdan2482.Y, shijiaotongweiweixianpinyunshuqiye3674.企业名称 FROM xichengquxichengquditiezhanmingdan2482 INNER JOIN shijiaotongweiweixianpinyunshuqiye3674 ON xichengquxichengquditiezhanmingdan2482.ID = shijiaotongweiweixianpinyunshuqiye3674.所属地区 WHERE xichengquxichengquditiezhanmingdan2482.别名 = '目标别名';",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是查询西城区地铁站名单中别名为“目标别名”的地铁站的坐标（X、Y）以及该地铁站所属的危险品运输企业的名称。\n\n### **详细描述**  \n1. **涉及的表**：  \n   - `xichengquxichengquditiezhanmingdan2482`：西城区地铁站名单表，包含地铁站的基本信息，如ID、别名、坐标（X、Y）等。  \n   - `shijiaotongweiweixianpinyunshuqiye3674`：市交通委危险品运输企业表，包含企业名称、所属地区等信息。  \n\n2. **涉及的列**：  \n   - `xichengquxichengquditiezhanmingdan2482.X`：地铁站的X坐标（可能是经度或平面坐标）。  \n   - `xichengquxichengquditiezhanmingdan2482.Y`：地铁站的Y坐标（可能是纬度或平面坐标）。  \n   - `shijiaotongweiweixianpinyunshuqiye3674.企业名称`：危险品运输企业的名称。  \n   - `xichengquxichengquditiezhanmingdan2482.别名`：地铁站的别名，用于筛选特定地铁站。  \n   - `xichengquxichengquditiezhanmingdan2482.ID` 和 `shijiaotongweiweixianpinyunshuqiye3674.所属地区`：用于关联两张表，表示地铁站ID与企业所属地区相匹配。  \n\n3. **查询条件**：  \n   - `xichengquxichengquditiezhanmingdan2482.别名 = '目标别名'`：仅查询别名为“目标别名”的地铁站。  \n   - `INNER JOIN`：表示只返回两个表中匹配的记录，即地铁站ID与企业所属地区一致的数据。  \n\n### **业务场景**  \n该查询可能用于以下业务场景：  \n1. **危险品运输监管**：政府或交通管理部门需要了解某个地铁站（如“目标别名”站）附近有哪些危险品运输企业，以便进行安全监管或应急管理。  \n2. **城市规划分析**：分析地铁站周边企业的分布情况，评估潜在的安全风险或规划物流运输路线。  \n3. **应急响应**：在发生安全事故时，快速定位受影响地铁站附近的危险品运输企业，以便采取应急措施。  \n\n### **用户描述**  \n在该业务场景下，用户可能是：  \n- **交通管理部门工作人员**：需要监控地铁站周边的危险品运输企业，确保运输安全，防止事故发生。  \n- **城市规划师**：研究地铁站与周边企业的关联性，优化城市功能区布局。  \n- **应急管理人员**：在突发事件（如火灾、泄漏）中，快速获取地铁站附近的高风险企业信息，以便及时疏散或处置。  \n\n用户的需求可能是：  \n- “我需要知道‘目标别名’地铁站附近有哪些危险品运输企业，以便加强监管。”  \n- “在制定地铁站安全预案时，需要关联附近的危险品企业信息。”  \n- “发生紧急情况时，如何快速找到受影响地铁站周边的危险品企业？”",
+  "natural_language_query": "市民反映，最近在西城区某个地铁站（别名叫\"目标别名\"）附近经常看到运输危险品的货车进出，担心存在安全隐患。想了解一下这个地铁站的具体位置坐标，以及周边有哪些运输危险品的企业。因为家里有老人小孩经常在这个站坐地铁，看到这些运输车辆总觉得不太安全，希望能核实一下这些企业是否合规运营。特别是想知道这些企业的具体名称，好向相关部门反映情况。来电主要想咨询这个地铁站的位置和周边危险品运输企业信息，希望有关部门能加强监管。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ ;",
+  "database": "交通服务",
+  "tables": {
+    "xichengquxichengquditiezhanmingdan2482": [
+      "xichengquxichengquditiezhanmingdan2482.ID",
+      "xichengquxichengquditiezhanmingdan2482.X",
+      "xichengquxichengquditiezhanmingdan2482.Y",
+      "xichengquxichengquditiezhanmingdan2482.SJXZQHMC",
+      "xichengquxichengquditiezhanmingdan2482.QXJXZQHMC",
+      "xichengquxichengquditiezhanmingdan2482.SJXZQHDM",
+      "xichengquxichengquditiezhanmingdan2482.QXJXZQHDM",
+      "xichengquxichengquditiezhanmingdan2482.POISJLY",
+      "xichengquxichengquditiezhanmingdan2482.RHBZDZ",
+      "xichengquxichengquditiezhanmingdan2482.CODE",
+      "xichengquxichengquditiezhanmingdan2482.CODEMC",
+      "xichengquxichengquditiezhanmingdan2482.GXSJ",
+      "xichengquxichengquditiezhanmingdan2482.POIMC",
+      "xichengquxichengquditiezhanmingdan2482.POIDZ",
+      "xichengquxichengquditiezhanmingdan2482.别名",
+      "xichengquxichengquditiezhanmingdan2482.POIFLMC",
+      "xichengquxichengquditiezhanmingdan2482.TEL"
+    ],
+    "shijiaotongweiweixianpinyunshuqiye3674": [
+      "shijiaotongweiweixianpinyunshuqiye3674.企业名称",
+      "shijiaotongweiweixianpinyunshuqiye3674.所属地区",
+      "shijiaotongweiweixianpinyunshuqiye3674.经营许可证号"
+    ]
+  }
+}

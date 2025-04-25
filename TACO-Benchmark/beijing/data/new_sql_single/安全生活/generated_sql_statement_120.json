@@ -1,0 +1,7 @@
+{
+  "sql": "select table1.column1, table1.column2 from table1 where table1.common_column = (select distinct table2.column3 from table2 where table2.unique_column = 'value')",
+  "results": 0,
+  "sql skeleton": "select _ ,_ from _ where _ = (select distinct _ from _ where _ = _ )",
+  "database": "安全生活",
+  "tables": {}
+}

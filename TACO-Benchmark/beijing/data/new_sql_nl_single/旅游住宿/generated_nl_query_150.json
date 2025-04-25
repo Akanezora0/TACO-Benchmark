@@ -1,0 +1,23 @@
+{
+  "sql": "SELECT \"shunyiquxingjifandian1276\".\"顺义区星级饭店\", \"xichengquxichengquxingjifandianminglu19.?星级酒店名称\", \"xichengquxichengquxingjifandianminglu19.?联系电话\" FROM \"shunyiquxingjifandian1276\" INNER JOIN \"xichengquxichengquxingjifandianminglu19\" ON \"shunyiquxingjifandian1276\".\"顺义区星级饭店\" = \"xichengquxichengquxingjifandianminglu19.?星级酒店名称\" WHERE \"xichengquxichengquxingjifandianminglu19.?星级\" IN ('1', '2', '3', '4', '5') ORDER BY \"xichengquxichengquxingjifandianminglu19.?星级\" DESC;",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是查询顺义区和西城区的星级饭店信息，并按照星级降序排列。\n\n- **详细描述**：\n  - **涉及的表**：\n    - `shunyiquxingjifandian1276`：顺义区星级饭店表。\n    - `xichengquxichengquxingjifandianminglu19`：西城区星级饭店名录表。\n  - **涉及的列**：\n    - `shunyiquxingjifandian1276.\"顺义区星级饭店\"`：顺义区星级饭店的名称。\n    - `xichengquxichengquxingjifandianminglu19.?星级酒店名称`：西城区星级饭店的名称。\n    - `xichengquxichengquxingjifandianminglu19.?联系电话`：西城区星级饭店的联系电话。\n    - `xichengquxichengquxingjifandianminglu19.?星级`：西城区星级饭店的星级。\n  - **条件**：\n    - 通过 `INNER JOIN` 连接两个表，条件是顺义区星级饭店的名称与西城区星级饭店的名称相同。\n    - `WHERE` 子句筛选出西城区星级饭店的星级为1至5星的记录。\n    - `ORDER BY` 子句按照西城区星级饭店的星级降序排列结果。\n\n- **业务场景**：\n  - 该查询可以用于比较顺义区和西城区的星级饭店信息，找出在两个区域都有分店的星级饭店，并按照星级高低排序。\n  - 可能用于旅游行业、酒店管理或数据分析，帮助用户了解两个区域的星级饭店分布情况。\n\n- **用户描述**：\n  - 用户可能需要了解顺义区和西城区的星级饭店是否有重叠，或者哪些星级饭店在两个区域都有分店。\n  - 用户可能希望找到高星级的饭店，以便进行预订或合作。\n  - 用户可能需要联系这些饭店，因此查询结果中包含了联系电话信息。",
+  "natural_language_query": "市民反映，最近想组织一个高端商务活动，需要找一些星级酒店。听说顺义区和西城区都有不少高档酒店，想了解一下这两个区有没有哪些星级酒店是连锁的？最好是四星级或五星级的，因为要接待重要客户。另外能不能提供这些酒店的联系方式？我之前在网上查过，但是信息太分散了，有的说是五星级，有的又说是四星级，搞得我很混乱。希望能帮忙整理一下这两个区都有分店的星级酒店名单，最好能按星级从高到低排列，这样方便我优先联系高星级的酒店。对了，要确认一下这些酒店确实是正规评定的1-5星级酒店，不要那种自封星级的。",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ from _ where _ in (_ ,_ ,_ ,_ ,_ ,_ ) order by _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "shunyiquxingjifandian1276": [
+      "shunyiquxingjifandian1276.顺义区星级饭店",
+      "shunyiquxingjifandian1276.Unnamed: 1",
+      "shunyiquxingjifandian1276.Unnamed: 2",
+      "shunyiquxingjifandian1276.Unnamed: 3"
+    ],
+    "xichengquxichengquxingjifandianminglu19": [
+      "xichengquxichengquxingjifandianminglu19.序号",
+      "xichengquxichengquxingjifandianminglu19.?星级酒店名称",
+      "xichengquxichengquxingjifandianminglu19.?星级",
+      "xichengquxichengquxingjifandianminglu19.?联系电话",
+      "xichengquxichengquxingjifandianminglu19.?酒店地址"
+    ]
+  }
+}

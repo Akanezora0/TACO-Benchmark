@@ -1,0 +1,27 @@
+{
+  "sql": "SELECT \"shijiaotongweijiapeijigouxinxi3667.驾培机构名称\", \"shijiaotongweijiapeijigouxinxi3667.训练地址\" FROM \"shijiaotongweijiapeijigouxinxi3667\" WHERE \"shijiaotongweijiapeijigouxinxi3667.统一社会信用代码\" = '123456';",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从驾培机构信息表中查询特定统一社会信用代码对应的驾培机构名称和训练地址。\n\n- **详细描述**：\n  - **表**：`shijiaotongweijiapeijigouxinxi3667`，该表可能存储了驾培机构的相关信息。\n  - **列**：\n    - `shijiaotongweijiapeijigouxinxi3667.驾培机构名称`：表示驾培机构的名称。\n    - `shijiaotongweijiapeijigouxinxi3667.训练地址`：表示驾培机构的训练场地地址。\n    - `shijiaotongweijiapeijigouxinxi3667.统一社会信用代码`：用于唯一标识驾培机构的代码。\n  - **条件**：`\"shijiaotongweijiapeijigouxinxi3667.统一社会信用代码\" = '123456'`，表示查询统一社会信用代码为 `123456` 的驾培机构。\n\n- **业务场景**：\n  - 该查询可以用于交通管理部门或学员快速查找特定驾培机构的名称和训练地址。例如，当学员或监管机构需要核实某个驾培机构的合法性或具体位置时，可以通过统一社会信用代码快速获取相关信息。\n  - 该查询也可以用于内部管理系统，帮助管理员快速检索和核对驾培机构的详细信息。\n\n- **用户描述**：\n  - **学员需求**：学员在选择驾培机构时，可能希望确认该机构的合法性或了解其训练地址的具体位置，以便决定是否报名。\n  - **监管需求**：交通管理部门可能需要核实某个驾培机构的注册信息是否与实际情况一致，确保其符合监管要求。\n  - **内部管理需求**：驾培机构的管理系统可能需要通过统一社会信用代码快速调取机构信息，用于内部审核或数据更新。",
+  "natural_language_query": "市民反映，最近想报名学车，看到一家驾校宣传单上写的统一社会信用代码是123456，但是上网查不到这个驾校的具体信息，担心是黑驾校。想问问这个代码对应的驾校全称叫什么？他们的训练场地具体在什么位置？因为住在大兴区，想确认下距离是否合适。来电希望帮忙核实这个信用代码对应的正规驾校信息，主要想了解驾校名称和训练场地地址。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ WHERE _ = _ ;",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweijiapeijigouxinxi3667": [
+      "shijiaotongweijiapeijigouxinxi3667.驾培机构名称",
+      "shijiaotongweijiapeijigouxinxi3667.训练地址",
+      "shijiaotongweijiapeijigouxinxi3667.统一社会信用代码",
+      "shijiaotongweijiapeijigouxinxi3667.法定代表人"
+    ],
+    "pingguqupingguqugongjiaozhandianmingxi269": [
+      "pingguqupingguqugongjiaozhandianmingxi269.区内公交线路站点明细",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 1",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 2",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 3",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 4",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 5",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 6",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 7",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 8"
+    ]
+  }
+}

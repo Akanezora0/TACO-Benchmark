@@ -1,0 +1,38 @@
+{
+  "sql": "SELECT landfills.\"OBJECTID\", landfills.\"PSINUM\", landfills.\"SWFACID\", landfills.\"SITENAME\", landfills.\"LOCCONF\", landfills.\"DATE_FIRST\", landfills.\"DATE_LAST\", landfills.\"ACRES\", landfills.\"STATUS\", landfills.\"WQMONITORING\", landfills.\"GASCOLLECTION\", landfills.\"TOWNNAME\", landfills.\"LATITUDE\", landfills.\"LONGITUDE\", vermont_biophysical_regions.\"NAME\", vermont_biophysical_regions.\"SUBSEC_ID\", vermont_biophysical_regions.\"BPR_NUMID\", vermont_biophysical_regions.\"SHAPESTArea\", vermont_biophysical_regions.\"SHAPESTLength\"\nFROM \"landfills\"\nJOIN \"vermont_biophysical_regions\" ON landfills.\"LATITUDE\" = vermont_biophysical_regions.\"SHAPESTCentroidY\" AND landfills.\"LONGITUDE\" = vermont_biophysical_regions.\"SHAPESTCentroidX\"\nWHERE landfills.\"STATUS\" = 'Active' AND landfills.\"WQMONITORING\" = 'Yes' AND (landfills.\"DATE_LAST\" - landfills.\"DATE_FIRST\") > 10 AND vermont_biophysical_regions.\"NAME\" = 'Forest' AND landfills.\"SUBSEC_ID\" = vermont_biophysical_regions.\"SUBSEC_ID\"",
+  "problem_description": "### Query intent:\nThe SQL statement aims to extract detailed information about active landfills in Vermont that have been monitoring water quality and where the last monitoring date is more than 10 years after the first monitoring date. Additionally, it seeks to associate this information with the biophysical region classification of these landfills, specifically focusing on those classified as 'Forest'.\n\n### Detailed description:\n- **Tables Involved**:\n  - `landfills`: This table contains data about landfills, including their geographic coordinates (`LATITUDE`, `LONGITUDE`), status (`STATUS`), dates of first (`DATE_FIRST`) and last (`DATE_LAST`) monitoring, acres of landfill area (`ACRES`), whether they perform water quality monitoring (`WQMONITORING`), gas collection status (`GASCOLLECTION`), town name (`TOWNNAME`), and latitude/longitude for spatial referencing.\n  - `vermont_biophysical_regions`: This table provides information about biophysical regions in Vermont, including region name (`NAME`), sub-region ID (`SUBSEC_ID`), unique biophysical region number (`BPR_NUMID`), centroid coordinates (`SHAPESTCentroidY`, `SHAPESTCentroidX`), area (`SHAPESTArea`), and length (`SHAPESTLength`).\n\n- **Columns Selected**:\n  - From `landfills`: `\"OBJECTID\"`, `\"PSINUM\"`, `\"SWFACID\"`, `\"SITENAME\"`, `\"LOCCONF\"`, `\"DATE_FIRST\"`, `\"DATE_LAST\"`, `\"ACRES\"`, `\"STATUS\"`, `\"WQMONITORING\"`, `\"GASCOLLECTION\"`, `\"TOWNNAME\"`, `\"LATITUDE\"`, `\"LONGITUDE\"`.\n  - From `vermont_biophysical_regions`: `\"NAME\"`, `\"SUBSEC_ID\"`, `\"BPR_NUMID\"`, `\"SHAPESTArea\"`, `\"SHAPESTLength\"`.\n\n- **Conditions**:\n  - The query filters landfills based on:\n    - Active status (`landfills.\"STATUS\" = 'Active'`).\n    - Water quality monitoring (`landfills.\"WQMONITORING\" = 'Yes'`).\n    - The duration of monitoring being more than 10 years (`(landfills.\"DATE_LAST\" - landfills.\"DATE_FIRST\") > 10`).\n    - The landfills are located within a forested biophysical region (`vermont_biophysical_regions.\"NAME\" = 'Forest'`).",
+  "natural_language_query": "I'm looking for details on active landfills in Vermont that have been continuously monitoring water quality, with the last monitoring date being more than 10 years after the initial monitoring, and specifically interested in those that fall under the 'Forest' biophysical region classification. I'd like to know the landfill's identification numbers, names, locations, acreage, operational status, and any gas collection activities, all situated within the forested areas of Vermont.",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ from _ join _ on _ ._ = _ ._ join _ on _ ._ = _ ._ where _ ._ = _ and _ ._ = _ and _ (_ ._ ,_ ) = _",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "landfills": [
+      "landfills.X",
+      "landfills.Y",
+      "landfills.OBJECTID",
+      "landfills.PSINUM",
+      "landfills.SWFACID",
+      "landfills.SITENAME",
+      "landfills.LOCCONF",
+      "landfills.DATE_FIRST",
+      "landfills.DATE_LAST",
+      "landfills.ACRES",
+      "landfills.STATUS",
+      "landfills.WQMONITORING",
+      "landfills.GASCOLLECTION",
+      "landfills.TOWNNAME",
+      "landfills.LATITUDE",
+      "landfills.LONGITUDE"
+    ],
+    "vermont_biophysical_regions": [
+      "vermont_biophysical_regions.OBJECTID",
+      "vermont_biophysical_regions.ACRES",
+      "vermont_biophysical_regions.NAME",
+      "vermont_biophysical_regions.SUBSEC_ID",
+      "vermont_biophysical_regions.BPR_NUM",
+      "vermont_biophysical_regions.BPR_NUMID",
+      "vermont_biophysical_regions.SHAPESTArea",
+      "vermont_biophysical_regions.SHAPESTLength"
+    ]
+  }
+}

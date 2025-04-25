@@ -1,0 +1,22 @@
+{
+  "sql": "SELECT \n    \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270\".\"企业名称\",\n    \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270\".\"经营许可证号\",\n    \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270\".\"企业类型\",\n    \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270\".\"所属区县\"\nFROM\n    \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270\"\nWHERE\n    \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270\".\"评定结果\" = '通过'\nAND\n    (\"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270\".\"考核人\" = '张三' OR \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270\".\"考核人\" = '李四')\nAND\n    \"pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270\".\"评定得分\" >= 90;",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ ,_ from _ where _ = _ and (_ = _ or _ = _ ) and _ (_ )>=_ ;",
+  "database": "交通服务",
+  "tables": {
+    "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270": [
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.企业名称",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.经营许可证号",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.企业类型",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.所属区县",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.考核人",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.评定时间",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.评定得分",
+      "pingguqupingguqu2019nianputonghuoyunzhiliangxinyukaohejieguo270.评定结果"
+    ],
+    "shijiaotongweigongluqixiangshuju233": [
+      "shijiaotongweigongluqixiangshuju233.��\u0011ࡱ\u001a�",
+      "shijiaotongweigongluqixiangshuju233.\u0001\u0001"
+    ]
+  }
+}

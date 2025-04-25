@@ -1,0 +1,39 @@
+{
+  "sql": "SELECT wetland_ecologist_districts.ABNAME, river_main_stem_waterbodies_wbid.WBID FROM wetland_ecologist_districts INNER JOIN river_main_stem_waterbodies_wbid ON wetland_ecologist_districts.OBJECTID = river_main_stem_waterbodies_wbid.OBJECTID;",
+  "problem_description": "### Query intent:\nThe SQL statement aims to retrieve the `ABNAME` (abbreviation name) from the table `wetland_ecologist_districts` and the `WBID` (Water Body Identifier) from the table `river_main_stem_waterbodies_wbid`. The data is retrieved by joining these two tables based on a common identifier, `OBJECTID`.\n\n### Detailed description:\n1. **Table `wetland_ecologist_districts`**:\n   - **Columns involved**: `ABNAME` (which likely represents an abbreviation for a district related to wetland ecology).\n   - **Role**: This table contains information about districts related to wetland ecology.\n\n2. **Table `river_main_stem_waterbodies_wbid`**:\n   - **Columns involved**: `WBID` (a unique identifier for water bodies).\n   - **Role**: This table contains information about water bodies, specifically those along the main stem of rivers.\n\n3. **Join condition**:\n   - The join is performed based on the `OBJECTID` column, which is presumably a unique identifier shared between both tables. This suggests that each row in `wetland_ecologist_districts` corresponds to a specific entry in `river_main_stem_waterbodies_wbid`.\n\n### Business scenario:\nThis query might be used in environmental management or ecological research where there's a need to correlate specific ecological districts with water body identifiers. For instance, in a project aiming to assess the impact of wetland ecology on water quality or biodiversity, one might need to know which specific water bodies (`WBID`) fall within certain ecological districts (`ABNAME`).\n\n### User description:\nA user working in environmental conservation might need this information to identify and prioritize areas for conservation efforts. For example, they might want to understand which wetland districts are associated with critical riverine habitats, or to conduct detailed studies on the ecological health of particular water bodies within designated districts. This could inform policy decisions, conservation planning, or research initiatives aimed at preserving biodiversity and managing natural resources effectively.",
+  "natural_language_query": "As an environmental scientist focusing on wetland conservation, I'm working on a project that requires a detailed analysis of the ecological districts and their corresponding water bodies. To facilitate this study, I need to access the abbreviation names of these districts, represented by the `ABNAME` field in the `wetland_ecologist_districts` table, and the unique identifiers for water bodies, denoted by the `WBID` field in the `river_main_stem_waterbodies_wbid` table. \n\nTo achieve this, I am looking for a SQL query that would allow me to join these two datasets using a common identifier, `OBJECTID`, which links each district to its associated water body. This will enable me to understand the specific water bodies located within each ecological district, providing crucial insights for our conservation efforts and research initiatives. Specifically, we aim to analyze how wetland ecologies influence water quality and biodiversity, and identifying these associations will be pivotal in guiding our conservation strategies and interventions.",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ ;",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "wetland_ecologist_districts": [
+      "wetland_ecologist_districts.OBJECTID",
+      "wetland_ecologist_districts.ABNAME",
+      "wetland_ecologist_districts.AGENCY",
+      "wetland_ecologist_districts.DEPT",
+      "wetland_ecologist_districts.DIV",
+      "wetland_ecologist_districts.FirstName",
+      "wetland_ecologist_districts.LastName",
+      "wetland_ecologist_districts.Email",
+      "wetland_ecologist_districts.Phone",
+      "wetland_ecologist_districts.Address",
+      "wetland_ecologist_districts.Office",
+      "wetland_ecologist_districts.Town",
+      "wetland_ecologist_districts.BOUNDARY",
+      "wetland_ecologist_districts.PROGMANAGER",
+      "wetland_ecologist_districts.PROGMANAGEREMAIL",
+      "wetland_ecologist_districts.PROGMANAGERPHONE",
+      "wetland_ecologist_districts.BACKUPCONTACT",
+      "wetland_ecologist_districts.BACKUPCONTACTEMAIL",
+      "wetland_ecologist_districts.BACKUPCONTACTPHONE",
+      "wetland_ecologist_districts.PROGRAMEMAIL",
+      "wetland_ecologist_districts.PROGRAMPHONE"
+    ],
+    "river_main_stem_waterbodies_wbid": [
+      "river_main_stem_waterbodies_wbid.OBJECTID",
+      "river_main_stem_waterbodies_wbid.WBID",
+      "river_main_stem_waterbodies_wbid.WBNAME",
+      "river_main_stem_waterbodies_wbid.WBDESC"
+    ]
+  }
+}

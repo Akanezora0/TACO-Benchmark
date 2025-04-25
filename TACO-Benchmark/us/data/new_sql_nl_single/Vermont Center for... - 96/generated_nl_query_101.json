@@ -1,0 +1,35 @@
+{
+  "sql": "SELECT DISTINCT waste_water_facilities.FacilityID as ID, \n                 waste_water_facilities.X as X_WasteWater, \n                 waste_water_facilities.Y as Y_WasteWater, \n                 CASE WHEN landfills.FacilityID = waste_water_facilities.FacilityID THEN landfills.X ELSE NULL END as X_Landfill, \n                 CASE WHEN landfills.FacilityID = waste_water_facilities.FacilityID THEN landfills.Y ELSE NULL END as Y_Landfill  \nFROM waste_water_facilities \nLEFT JOIN landfills ON waste_water_facilities.FacilityID = landfills.FacilityID",
+  "problem_description": "### Query intent:\nThe SQL statement is designed to retrieve specific data from two tables (`waste_water_facilities` and `landfills`) by matching their common `FacilityID` column. It aims to provide a set of records containing details about facilities, their geographical coordinates (X and Y), and corresponding coordinates from the `landfills` table if available.\n\n### Detailed description:\n1. **Tables**:\n   - **`waste_water_facilities`**: This table contains information about facilities related to waste water management. The fields include `FacilityID`, `X`, and `Y`.\n   - **`landfills`**: This table contains information about landfills. It also includes a `FacilityID` field, which potentially matches with the `FacilityID` in `waste_water_facilities`.\n\n2. **Columns**:\n   - **`FacilityID`**: A unique identifier for each facility.\n   - **`X` and `Y`**: Geographical coordinates for each facility in `waste_water_facilities`.\n   - **`X_Landfill` and `Y_Landfill`**: These are derived columns that will contain the X and Y coordinates from the `landfills` table if there is a match on `FacilityID`. If no match exists, these columns will contain `NULL`.\n\n3. **Conditions**:\n   - The `LEFT JOIN` clause ensures that all records from the `waste_water_facilities` table are included in the result, even if there is no matching record in the `landfills` table.\n   - The `CASE` statements are used to populate the `X_Landfill` and `Y_Landfill` columns based on whether there is a match between the `FacilityID` in both tables.\n\n### Business scenario:\nThis query might be used in environmental management systems where the location of waste water treatment facilities and landfills are managed together. For instance, when analyzing the proximity of waste water facilities to potential landfill sites, or when planning new facilities, it's important to know not only the location of the existing facilities but also any nearby landfills they might interact with.\n\n### User description:\nA user working in an environmental compliance department might need this information to ensure that new waste water treatment facilities are appropriately located relative to existing landfills. They might want to check if there are any overlaps or potential conflicts in terms of environmental impact or logistical considerations. By running this query, they can quickly identify which facilities have corresponding landfill locations and which do",
+  "natural_language_query": "In the context of environmental management, I'm looking to gather information about waste water facilities and their geographical locations, as well as any associated landfill sites if they exist. Specifically, I need a list of facilities along with their exact coordinates (X and Y) and, if possible, the coordinates of the nearest landfill site for each facility. This would help us in assessing potential impacts and planning future developments without compromising environmental standards. Can you provide a SQL query that accomplishes this task? Ideally, it should fetch all necessary data from two tables: one detailing waste water facilities and another listing landfills. The query should match the facilities based on a shared identifier and provide the coordinates for each facility along with the coordinates of the closest landfill, if applicable.",
+  "results": 0,
+  "sql skeleton": "SELECT DISTINCT _ ._ as _ ,_ ._ as _ ,_ ._ as _ ,_ ._ = _ as _ FROM _ where _ ._ = _",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "waste_water_facilities": [
+      "waste_water_facilities.X",
+      "waste_water_facilities.Y",
+      "waste_water_facilities.FacilityName",
+      "waste_water_facilities.FacilityID",
+      "waste_water_facilities.WWInventoryURL"
+    ],
+    "landfills": [
+      "landfills.X",
+      "landfills.Y",
+      "landfills.OBJECTID",
+      "landfills.PSINUM",
+      "landfills.SWFACID",
+      "landfills.SITENAME",
+      "landfills.LOCCONF",
+      "landfills.DATE_FIRST",
+      "landfills.DATE_LAST",
+      "landfills.ACRES",
+      "landfills.STATUS",
+      "landfills.WQMONITORING",
+      "landfills.GASCOLLECTION",
+      "landfills.TOWNNAME",
+      "landfills.LATITUDE",
+      "landfills.LONGITUDE"
+    ]
+  }
+}

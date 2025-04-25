@@ -1,0 +1,47 @@
+{
+  "sql": "SELECT \"chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337\".\"酒仙桥街道社区地址及联系电话\", \"shiguihuaziranziyuanweiyinshiye1523.ADDRESS\" FROM \"chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337\" INNER JOIN \"shiguihuaziranziyuanweiyinshiye1523\" ON \"chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337\".\"酒仙桥街道社区地址及联系电话\" = \"shiguihuaziranziyuanweiyinshiye1523.ADDRESS\" WHERE \"shiguihuaziranziyuanweiyinshiye1523\".\"STATEEVALU\" = '优秀' ;",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是查询酒仙桥街道社区地址及联系电话与自然资源规划部门（或类似机构）的优秀（'优秀'评级）单位的地址相匹配的记录。  \n\n### **详细描述**  \n1. **涉及的表**：  \n   - `chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337`（朝阳区酒仙桥街道辖区宾馆酒店信息表）  \n     - 包含列：`酒仙桥街道社区地址及联系电话`（可能是酒店或社区的地址及联系方式）。  \n   - `shiguihuaziranziyuanweiyinshiye1523`（可能是“市规划自然资源委饮食业”或类似机构的数据表）  \n     - 包含列：`ADDRESS`（地址信息）、`STATEEVALU`（状态评估，如“优秀”）。  \n\n2. **查询逻辑**：  \n   - 使用 **INNER JOIN** 连接两个表，连接条件是 `酒仙桥街道社区地址及联系电话 = ADDRESS`，即匹配相同的地址。  \n   - 筛选条件：`STATEEVALU = '优秀'`，即只返回评估为“优秀”的记录。  \n\n3. **返回数据**：  \n   - 查询结果包含两列：  \n     - `酒仙桥街道社区地址及联系电话`（来自酒店/社区信息表）  \n     - `ADDRESS`（来自规划部门的地址信息）  \n\n### **业务场景**  \n该查询可能用于以下业务场景：  \n1. **政府监管**：朝阳区酒仙桥街道办可能需要了解辖区内哪些宾馆或酒店的地址在自然资源或规划部门的评估中属于“优秀”级别，以便进行表彰或政策支持。  \n2. **商业分析**：酒店经营者可能希望了解自己的地址是否在政府评估的优秀名单中，以提升品牌形象或申请优惠政策。  \n3. **数据核对**：政府部门可能需要核对两个系统的地址数据是否一致，并筛选出符合特定标准（如“优秀”）的记录。  \n\n### **用户描述**  \n1. **街道办工作人员**：  \n   - 需求：查找辖区内哪些酒店或社区在规划部门的评估中表现优秀，以便进行表彰或重点管理。  \n   - 问题：手动比对两个系统的数据效率低，需要自动化查询匹配。  \n\n2. **酒店管理者**：  \n   - 需求：确认自己的酒店是否在政府评优名单中，以便申请补贴或用于宣传。  \n   - 问题：不知道如何从政府公开数据中筛选出相关信息。  \n\n3. **数据分析师**：  \n   - 需求：验证两个数据源的地址是否一致，并筛选出符合业务要求的记录。  \n   - 问题：数据表名和列名较长且复杂，需要编写准确的 SQL 进行关联查询。  \n\n### **总结**  \n该 SQL 查询主要用于**地址匹配和筛选优秀单位**，适用于政府监管、商业分析或数据核对等场景，帮助用户快速获取符合特定条件的关联数据。",
+  "natural_language_query": "市民反映，我是酒仙桥街道这边开宾馆的，听说最近区里有个什么优秀单位评选，我们店地址在酒仙桥中路12号，想问问我们这儿是不是被评为优秀了？之前好像看到过规划部门发过名单，但找不着具体文件了。另外我们街道其他哪些酒店或者社区也评上优秀了？能不能帮忙查一下这些优秀单位的地址和联系方式啊？主要是想学习借鉴一下，顺便看看我们街道整体情况怎么样。对了，要是能查到的话麻烦告诉我一下评选标准是啥，感觉这个事办得有点突然，之前都没接到通知...",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ WHERE _ = _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337": [
+      "chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337.酒仙桥街道社区地址及联系电话",
+      "chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337.Unnamed: 1",
+      "chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337.Unnamed: 2",
+      "chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337.Unnamed: 3",
+      "chaoyangqujiuxianqiaojiedaoxiaqubinguanjiudianxinxi3337.Unnamed: 4"
+    ],
+    "shiguihuaziranziyuanweiyinshiye1523": [
+      "shiguihuaziranziyuanweiyinshiye1523.HID",
+      "shiguihuaziranziyuanweiyinshiye1523.FATHERID",
+      "shiguihuaziranziyuanweiyinshiye1523.HNAME",
+      "shiguihuaziranziyuanweiyinshiye1523.OTHERNAME",
+      "shiguihuaziranziyuanweiyinshiye1523.CATEGORY",
+      "shiguihuaziranziyuanweiyinshiye1523.SUBCATEGOR",
+      "shiguihuaziranziyuanweiyinshiye1523.COUNTYNAME",
+      "shiguihuaziranziyuanweiyinshiye1523.STREETNAME",
+      "shiguihuaziranziyuanweiyinshiye1523.DYNASTY",
+      "shiguihuaziranziyuanweiyinshiye1523.SUBDYNASTY",
+      "shiguihuaziranziyuanweiyinshiye1523.ADDRESS",
+      "shiguihuaziranziyuanweiyinshiye1523.RANK",
+      "shiguihuaziranziyuanweiyinshiye1523.BATCH",
+      "shiguihuaziranziyuanweiyinshiye1523.PUBTIME",
+      "shiguihuaziranziyuanweiyinshiye1523.USERS",
+      "shiguihuaziranziyuanweiyinshiye1523.PURPOSE",
+      "shiguihuaziranziyuanweiyinshiye1523.OWNERSHIP",
+      "shiguihuaziranziyuanweiyinshiye1523.STATEEVALU",
+      "shiguihuaziranziyuanweiyinshiye1523.SINGLERELI",
+      "shiguihuaziranziyuanweiyinshiye1523.PROTECTION",
+      "shiguihuaziranziyuanweiyinshiye1523.ATTACHEDRE",
+      "shiguihuaziranziyuanweiyinshiye1523.RELATEDPEO",
+      "shiguihuaziranziyuanweiyinshiye1523.RELATEDEVE",
+      "shiguihuaziranziyuanweiyinshiye1523.PUBNAME",
+      "shiguihuaziranziyuanweiyinshiye1523.SOURCE",
+      "shiguihuaziranziyuanweiyinshiye1523.EDITOR",
+      "shiguihuaziranziyuanweiyinshiye1523.ISREDUNDAN",
+      "shiguihuaziranziyuanweiyinshiye1523.THEME"
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "sql": "SELECT \"huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829\".\"по\u0011Ю║╠\u001aА\", \"huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829\".\"\u0001\u0001\" FROM \"huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829\" WHERE \"zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733\".\"PK\u0003\u0004\" = '某个特定值';",
+  "problem_description": "# SQL 查询分析\n\n## 查询意图\n这个SQL语句的目的是从一个名为\"huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829\"的表中查询特定记录的两个字段，条件是另一个表中某个字段等于特定值。\n\n## 详细描述\n\n1. **涉及的表**：\n   - 主表：\"huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829\"（中文可能为\"怀柔区交通局行政许可双公示2021年汇总829\"）\n   - 条件表：\"zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733\"（中文可能为\"重点站区管委会北京西站地区电信信息2733\"）\n\n2. **查询的列**：\n   - 从主表中选择两个列，但列名显示为乱码（\"по\u0011Ю║╠\u001aА\"和\"\u0001\u0001\"），可能是由于编码问题或列名本身不规范\n\n3. **查询条件**：\n   - 条件是另一个表(\"zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733\")中的\"PK\u0003\u0004\"字段等于某个特定值\n   - 这个条件字段名也显示为乱码，可能是主键或标识字段\n\n## 业务场景\n\n1. 这个查询可能用于交通管理系统中关联查询行政许可信息与电信信息\n2. 可能的业务场景包括：\n   - 查询特定电信设施相关的交通行政许可信息\n   - 统计北京西站地区电信设施与交通行政许可的关联情况\n   - 2021年怀柔区交通行政许可数据的汇总分析\n\n## 用户描述\n\n1. 用户可能是交通管理部门或电信管理部门的工作人员\n2. 用户可能遇到的实际需求：\n   - 需要了解特定电信设施（如北京西站地区的）是否已获得相关交通行政许可\n   - 需要核对2021年怀柔区交通行政许可数据的完整性和准确性\n   - 可能在进行跨部门数据核对或联合执法检查\n\n3. 用户可能面临的问题：\n   - 数据来自不同系统，字段命名不规范导致查询困难\n   - 需要关联查询不同部门的数据但缺乏统一的标识符\n   - 历史数据（2021年）的完整性和可追溯性问题\n\n注：由于表名和列名显示为乱码或包含非标准字符，部分分析基于对可能中文名称的推测。在实际应用中，建议规范数据库对象的命名以提高可维护性。",
+  "natural_language_query": "市民反映，我在处理北京西站那边电信设施相关的工作时，需要查一下2021年怀柔区交通局那边的许可信息。具体就是想知道西站这边有个电信设施是不是有交通部门的批文，但是系统里查的时候老是显示一些看不懂的乱码，根本不知道哪个对哪个。我们这边系统显示是重点站区管委会管的电信信息，应该和交通局那边有对应关系才对。能不能帮忙查一下这个电信设施对应的交通许可批文是什么情况？主要是2021年的数据，现在急着要这个信息做联合检查用。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ WHERE _ = _ ;",
+  "database": "交通服务",
+  "tables": {
+    "huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829": [
+      "huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829.по\u0011Ю║╠\u001aА",
+      "huairouqujiaotongjuxingzhengxukeshuanggongshi2021nianhuizong829.\u0001\u0001"
+    ],
+    "zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733": [
+      "zhongdianzhanquguanweihuibeijingxizhandiqudiantixinxi2733.PK\u0003\u0004"
+    ]
+  }
+}

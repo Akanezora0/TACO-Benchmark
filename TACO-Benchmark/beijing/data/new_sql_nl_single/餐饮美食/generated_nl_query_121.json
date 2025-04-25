@@ -1,0 +1,26 @@
+{
+  "sql": "SELECT \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号\", \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称\", \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址\" FROM \"shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076\" - \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374\" WHERE \"shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC\" = '具体名称';",
+  "problem_description": "- **查询意图**：  \n  该 SQL 语句的目的是从表 `shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076` 中查询某些专柜的信息，同时排除那些在表 `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374` 中具有特定名称（`JYZMC = '具体名称'`）的记录。\n\n- **详细描述**：  \n  - **涉及的表**：\n    1. `shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076`：该表可能存储了与清真食品专柜相关的数据，包括专柜的标识牌号、名称和地址等信息。\n    2. `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374`：该表可能存储了餐饮服务许可证的相关信息，包括经营者的名称（`JYZMC` 列）等。\n  - **查询的列**：\n    - `shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号`：专柜的唯一标识牌号。\n    - `shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称`：专柜的名称。\n    - `shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址`：专柜的地址。\n  - **条件**：\n    - 查询结果排除了在 `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374` 表中 `JYZMC` 列值为 `'具体名称'` 的记录。这里的排除操作通过 `-` 运算符实现（注：标准 SQL 中通常使用 `NOT IN` 或 `LEFT JOIN ... WHERE ... IS NULL` 实现类似功能，此处语法可能是特定数据库的扩展）。\n\n- **业务场景**：  \n  该查询可能用于以下业务场景：\n  1. **清真食品专柜合规性检查**：监管部门可能需要检查哪些清真食品专柜的信息未在餐饮服务许可证数据库中登记为特定名称（`'具体名称'`），以确保专柜的合规性。\n  2. **数据对比与清理**：通过对比两个表的数据，清理或标记那些在许可证数据库中未登记的专柜信息，确保数据的准确性和一致性。\n  3. **专柜分布分析**：分析清真食品专柜的分布情况，同时排除某些特定经营者的记录，以便更聚焦于其他经营者的专柜。\n\n- **用户描述**：  \n  用户可能是政府监管部门或企业管理层，他们需要：\n  1. 确保清真食品专柜的设立符合相关法规，避免未登记或不合规的专柜存在。\n  2. 发现并处理那些未在许可证数据库中登记的专柜，可能需要进一步调查或整改。\n  3. 获取专柜的基础信息（如名称、地址）用于报告或规划，同时排除某些特定经营者的数据以简化分析。",
+  "natural_language_query": "市民反映，最近在检查清真食品专柜时发现有些专柜可能没有合规的许可证信息。特别是想查一下那些不在\"具体名称\"经营者名下的专柜情况，包括专柜的标识牌号、名称和具体地址。之前听说有些专柜挂着清真标识但实际上没有正规手续，希望能帮忙核实一下这些专柜的具体信息，看看是否存在违规经营的情况。主要是想排查一下除了\"具体名称\"之外的其他专柜，来电咨询清真食品专柜合规性问题。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ WHERE _ = _ ;",
+  "database": "餐饮美食",
+  "tables": {
+    "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076": [
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址"
+    ],
+    "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374": [
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYXM",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.FZRQ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.YXQZ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.DWMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.EXCHANGETIME"
+    ]
+  }
+}

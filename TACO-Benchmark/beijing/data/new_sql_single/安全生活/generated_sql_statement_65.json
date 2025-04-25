@@ -1,0 +1,7 @@
+{
+  "sql": "select table1.column1, table1.column2, table2.column3 \nfrom table1 \nwhere table1.id in (select table3.id from table3 where table3.value = 'target_value')",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ from _ where _ in (select _ from _ where _ )",
+  "database": "安全生活",
+  "tables": {}
+}

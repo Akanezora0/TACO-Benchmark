@@ -1,0 +1,50 @@
+{
+  "sql": "SELECT invasive_species.X, invasive_species.Y FROM invasive_species JOIN lakepond_wbids_and_wbid_segments ON invasive_species.OBJECTID = lakepond_wbids_and_wbid_segments.OBJECTID WHERE invasive_species.ObservationID = '12345'",
+  "problem_description": "### Query intent:\nThe SQL statement aims to retrieve specific data from two tables (`invasive_species` and `lakepond_wbids_and_wbid_segments`) based on a given condition.\n\n### Detailed description:\n- **Tables involved**: The query involves two tables - `invasive_species` and `lakepond_wbids_and_wbid_segments`. It performs an INNER JOIN operation between these two tables.\n- **Columns selected**: The query selects columns `X` and `Y` from the `invasive_species` table. These columns likely contain specific attributes related to invasive species.\n- **Join condition**: The join is performed based on a common column named `OBJECTID`, which is found in both tables. This suggests that there is some relationship or shared information between records in these two tables that is being leveraged for the join.\n- **Filtering condition**: The `WHERE` clause filters the result set based on a condition where the `ObservationID` column in the `invasive_species` table equals the string `'12345'`. This implies that only rows with this exact `ObservationID` value will be included in the final output.\n\n### Business scenario:\nThis SQL query might be part of an environmental monitoring system designed to track and analyze invasive species populations in various lakes or ponds. The system could use such queries to:\n\n- **Analyze population distribution**: By querying for specific species (`X` and `Y` could represent location coordinates), the system can provide insights into where invasive species are most prevalent or have been observed.\n- **Track species over time**: If the system has historical data, it could compare current observations (`ObservationID`) against past ones to monitor changes in species distribution or abundance.\n\n### User description:\nA conservation biologist or environmental scientist might need to quickly access detailed information about the locations (coordinates) of a particular invasive species that has been observed at a specific site (`ObservationID = '12345'`). This could help in planning targeted interventions or further research to understand and mitigate the impact of the invasive species in question.",
+  "natural_language_query": "A wildlife researcher is looking into the presence of invasive species in certain water bodies and has identified a specific ObservationID ('12345') that they believe corresponds to an unusual sighting. They need to gather detailed geographical information about these sightings to better understand the spread and potential threats posed by these invasive species. Specifically, they require the coordinates (represented by columns X and Y) of the locations where these invasive species were last observed. To achieve this, they would like to run a SQL query that combines data from two databases: one containing invasive species information and another detailing the geographical coordinates associated with these species sightings. The query should ensure that only records matching the specified ObservationID are retrieved, allowing for a focused analysis of the locations of interest.",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ from _ join _ on _ ._ = _ ._ where _ ._ = _",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "invasive_species": [
+      "invasive_species.X",
+      "invasive_species.Y",
+      "invasive_species.SiteName",
+      "invasive_species.ObservationID",
+      "invasive_species.InvasiveName",
+      "invasive_species.ObservationDate",
+      "invasive_species.Observer",
+      "invasive_species.SurveyType",
+      "invasive_species.Latitude",
+      "invasive_species.Longitude",
+      "invasive_species.Town",
+      "invasive_species.GrossArea",
+      "invasive_species.InfestedArea",
+      "invasive_species.PlantDescription",
+      "invasive_species.DistributionName",
+      "invasive_species.AssessmentDate",
+      "invasive_species.TreatmentDate",
+      "invasive_species.TreatmentEffectiveness",
+      "invasive_species.TreatmentType",
+      "invasive_species.TreatmentPerson",
+      "invasive_species.TreatmentAssessmentDate",
+      "invasive_species.Assessor",
+      "invasive_species.TreatmentAssessmentNotes",
+      "invasive_species.TreatmentHours",
+      "invasive_species.ChemicalName",
+      "invasive_species.ChemicalConsentration",
+      "invasive_species.ChemicalOunces",
+      "invasive_species.ApplicationMethod",
+      "invasive_species.CertifiedApplicator",
+      "invasive_species.EPARegistationNumber"
+    ],
+    "lakepond_wbids_and_wbid_segments": [
+      "lakepond_wbids_and_wbid_segments.OBJECTID",
+      "lakepond_wbids_and_wbid_segments.Source",
+      "lakepond_wbids_and_wbid_segments.WBID",
+      "lakepond_wbids_and_wbid_segments.LAKEID",
+      "lakepond_wbids_and_wbid_segments.EventType",
+      "lakepond_wbids_and_wbid_segments.GISAcres"
+    ]
+  }
+}

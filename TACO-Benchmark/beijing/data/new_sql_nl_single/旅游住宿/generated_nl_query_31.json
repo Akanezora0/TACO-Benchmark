@@ -1,0 +1,49 @@
+{
+  "sql": "SELECT shiguihuaziranziyuanweiqingzhensi1515.HID, shiguihuaziranziyuanweiqingzhensi1515.HNAME, shiguihuaziranziyuanweiqingzhensi1515.DYNASTY, fengtaiqufengtaiquxingjijiudian1397.星级酒店明细 FROM shiguihuaziranziyuanweiqingzhensi1515 INNER JOIN fengtaiqufengtaiquxingjijiudian1397 ON shiguihuaziranziyuanweiqingzhensi1515.HID = fengtaiqufengtaiquxingjijiudian1397.Unnamed: 1 WHERE fengtaiqufengtaiquxingjijiudian1397.Unnamed: 2 = '特定值' AND shiguihuaziranziyuanweiqingzhensi1515.DYNASTY = '特定王朝'",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是从两个表中联合查询特定条件下的数据，获取符合要求的记录，包括历史建筑信息（如名称、朝代）和与之关联的星级酒店明细信息。  \n\n---\n\n### **详细描述**  \n1. **涉及的表**：  \n   - `shiguihuaziranziyuanweiqingzhensi1515`：可能是一个存储历史建筑或文化遗址信息的表，包含建筑ID、名称、朝代等字段。  \n   - `fengtaiqufengtaiquxingjijiudian1397`：可能是一个存储星级酒店信息的表，包含酒店明细和关联字段。  \n\n2. **涉及的列**：  \n   - `shiguihuaziranziyuanweiqingzhensi1515` 表的列：  \n     - `HID`：历史建筑的唯一标识符（ID）。  \n     - `HNAME`：历史建筑的名称。  \n     - `DYNASTY`：历史建筑所属的朝代。  \n   - `fengtaiqufengtaiquxingjijiudian1397` 表的列：  \n     - `Unnamed: 1`：可能是与历史建筑关联的字段（如酒店所在建筑的ID）。  \n     - `Unnamed: 2`：可能是酒店的某个属性（如地区、类型或状态）。  \n     - `星级酒店明细`：酒店的详细信息（如名称、地址、星级等）。  \n\n3. **查询条件**：  \n   - `fengtaiqufengtaiquxingjijiudian1397.Unnamed: 2 = '特定值'`：筛选符合特定条件的酒店（如“五星级”或“景区内”）。  \n   - `shiguihuaziranziyuanweiqingzhensi1515.DYNASTY = '特定王朝'`：筛选属于特定朝代的历史建筑（如“明朝”或“清朝”）。  \n\n4. **关联方式**：  \n   - 通过 `INNER JOIN` 连接两个表，关联条件是 `shiguihuaziranziyuanweiqingzhensi1515.HID = fengtaiqufengtaiquxingjijiudian1397.Unnamed: 1`，即历史建筑的ID与酒店的关联字段匹配。  \n\n---\n\n### **业务场景**  \n该查询可能用于以下业务场景：  \n1. **文化旅游管理**：查找特定朝代的历史建筑及其周边的星级酒店信息，便于规划旅游路线或推荐住宿。  \n2. **文物保护与开发**：分析哪些历史建筑附近有高星级酒店，评估商业开发潜力或游客接待能力。  \n3. **数据分析**：统计某一朝代的古建筑与周边酒店的关系，为政府或企业提供决策支持。  \n\n---\n\n### **用户描述**  \n用户可能是文化旅游部门的管理人员、旅行社的行程规划师或历史建筑保护机构的研究员，他们面临的实际问题或需求可能包括：  \n1. **旅游产品设计**：需要知道“明朝的古建筑附近有哪些五星级酒店”，以便设计高端文化旅游套餐。  \n2. **资源整合**：希望了解“清朝的皇家园林周边是否有足够的住宿设施”，以评估游客接待能力。  \n3. **学术研究**：研究特定朝代的历史建筑与现代化酒店的共存情况，分析文化遗产与商业开发的平衡。  \n\n该 SQL 查询帮助他们快速获取关联数据，支持业务决策或学术分析。",
+  "natural_language_query": "市民反映，最近想规划一条文化旅游路线，特别想看看明朝时期的历史建筑，但不知道这些古建筑附近有没有配套的高档酒店。比如像那些五星级的酒店，住得舒服点的那种。我查了一些资料说丰台区那边好像有些老建筑挺有名的，但具体叫什么名字、在哪个位置，周边住宿条件怎么样都不太清楚。能不能帮忙查一下明朝的那些古建筑，还有它们旁边有没有高级酒店啊？最好是能连酒店的具体信息一起提供，这样我们安排行程也方便些。对了，清朝的建筑要是有好的酒店也可以顺便看看，但主要还是想先了解明朝的情况。",
+  "results": 0,
+  "sql skeleton": "select _ ,_ ,_ ,_ from _ where _ =_ and _ =_",
+  "database": "旅游住宿",
+  "tables": {
+    "shiguihuaziranziyuanweiqingzhensi1515": [
+      "shiguihuaziranziyuanweiqingzhensi1515.HID",
+      "shiguihuaziranziyuanweiqingzhensi1515.FATHERID",
+      "shiguihuaziranziyuanweiqingzhensi1515.HNAME",
+      "shiguihuaziranziyuanweiqingzhensi1515.OTHERNAME",
+      "shiguihuaziranziyuanweiqingzhensi1515.CATEGORY",
+      "shiguihuaziranziyuanweiqingzhensi1515.SUBCATEGOR",
+      "shiguihuaziranziyuanweiqingzhensi1515.COUNTYNAME",
+      "shiguihuaziranziyuanweiqingzhensi1515.STREETNAME",
+      "shiguihuaziranziyuanweiqingzhensi1515.DYNASTY",
+      "shiguihuaziranziyuanweiqingzhensi1515.SUBDYNASTY",
+      "shiguihuaziranziyuanweiqingzhensi1515.ADDRESS",
+      "shiguihuaziranziyuanweiqingzhensi1515.RANK",
+      "shiguihuaziranziyuanweiqingzhensi1515.BATCH",
+      "shiguihuaziranziyuanweiqingzhensi1515.PUBTIME",
+      "shiguihuaziranziyuanweiqingzhensi1515.USERS",
+      "shiguihuaziranziyuanweiqingzhensi1515.PURPOSE",
+      "shiguihuaziranziyuanweiqingzhensi1515.OWNERSHIP",
+      "shiguihuaziranziyuanweiqingzhensi1515.STATEEVALU",
+      "shiguihuaziranziyuanweiqingzhensi1515.SINGLERELI",
+      "shiguihuaziranziyuanweiqingzhensi1515.PROTECTION",
+      "shiguihuaziranziyuanweiqingzhensi1515.ATTACHEDRE",
+      "shiguihuaziranziyuanweiqingzhensi1515.RELATEDPEO",
+      "shiguihuaziranziyuanweiqingzhensi1515.RELATEDEVE",
+      "shiguihuaziranziyuanweiqingzhensi1515.PUBNAME",
+      "shiguihuaziranziyuanweiqingzhensi1515.SOURCE",
+      "shiguihuaziranziyuanweiqingzhensi1515.EDITOR",
+      "shiguihuaziranziyuanweiqingzhensi1515.ISREDUNDAN",
+      "shiguihuaziranziyuanweiqingzhensi1515.THEME"
+    ],
+    "fengtaiqufengtaiquxingjijiudian1397": [
+      "fengtaiqufengtaiquxingjijiudian1397.星级酒店明细",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 1",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 2",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 3",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 4",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 5",
+      "fengtaiqufengtaiquxingjijiudian1397.Unnamed: 6"
+    ]
+  }
+}

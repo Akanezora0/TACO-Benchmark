@@ -1,0 +1,19 @@
+{
+  "sql": "select \n    shijiaotongweigongjiaoxianluxinxichuxingfuwu3666.线路代码,\n    shijiaotongweigongjiaoxianluxinxichuxingfuwu3666.路线名称,\n    shijiaotongweiweixianpinyunshuqiye3674.企业名称,\n    shijiaotongweiweixianpinyunshuqiye3674.所属地区,\n    shijiaotongweiweixianpinyunshuqiye3674.经营许可证号\nfrom \n    shijiaotongweigongjiaoxianluxinxichuxingfuwu3666\njoin \n    shijiaotongweiweixianpinyunshuqiye3674\non \n    shijiaotongweigongjiaoxianluxinxichuxingfuwu3666.线路代码 = shijiaotongweiweixianpinyunshuqiye3674.线路代码\nwhere \n    shijiaotongweigongjiaoxianluxinxichuxingfuwu3666.线路代码 = '特定线路代码' and \n    shijiaotongweiweixianpinyunshuqiye3674.所属地区 = '特定所属地区'\n```",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是查询特定公交线路的详细信息，包括线路名称、运营该线路的危险品运输企业的名称、所属地区以及经营许可证号。  \n\n### **详细描述**  \n1. **涉及的表**：  \n   - `shijiaotongweigongjiaoxianluxinxichuxingfuwu3666`（公交线路信息出行服务表）：存储公交线路的基本信息，如线路代码、路线名称等。  \n   - `shijiaotongweiweixianpinyunshuqiye3674`（危险品运输企业表）：存储运输企业的信息，如企业名称、所属地区、经营许可证号等。  \n\n2. **涉及的列**：  \n   - 公交线路信息出行服务表：  \n     - `线路代码`：公交线路的唯一标识。  \n     - `路线名称`：公交线路的名称。  \n   - 危险品运输企业表：  \n     - `企业名称`：运营该线路的企业名称。  \n     - `所属地区`：企业所在的地区。  \n     - `经营许可证号`：企业的经营许可证编号。  \n\n3. **查询条件**：  \n   - `shijiaotongweigongjiaoxianluxinxichuxingfuwu3666.线路代码 = '特定线路代码'`：筛选特定公交线路。  \n   - `shijiaotongweiweixianpinyunshuqiye3674.所属地区 = '特定所属地区'`：筛选特定地区的运输企业。  \n\n4. **关联方式**：  \n   - 通过 `线路代码` 关联两个表，确保查询的是同一线路的企业信息。  \n\n### **业务场景**  \n该查询可用于以下业务场景：  \n1. **公交线路管理**：交通管理部门需要查询某条公交线路的运营企业信息，以进行监管或协调。  \n2. **危险品运输合规检查**：检查某条线路的危险品运输企业是否具备合法资质（如经营许可证号）。  \n3. **地区性公交运营分析**：分析特定地区的公交线路运营情况，如哪些企业在运营、是否合规等。  \n\n### **用户描述**  \n1. **交通管理部门**：  \n   - 需求：需要核实某条公交线路的运营企业是否具备危险品运输资质，并检查其所属地区是否符合规定。  \n   - 问题：某线路的运输企业可能存在无证经营或跨地区违规运营的情况，需要快速查询相关信息以便处理。  \n\n2. **公交运营企业**：  \n   - 需求：查询本企业运营的某条线路是否在特定地区合法备案。  \n   - 问题：企业可能因地区政策调整需要重新审核线路资质，需确认当前信息是否有效。  \n\n3. **公众或媒体**：  \n   - 需求：了解某条公交线路的运营企业信息，以验证其安全性和合规性。  \n   - 问题：乘客或媒体可能对某线路的安全运营存疑，希望查询相关企业信息以增强透明度。  \n\n综上，该 SQL 查询主要用于公交线路与运输企业的关联查询，适用于监管、合规检查及信息公示等场景。",
+  "natural_language_query": "市民反映，经常乘坐的358路公交车（从东直门到天通苑方向）最近总能看到一些运输危险品的车辆混在公交队伍里，感觉特别不安全。想问问这条线路到底是哪家公司在运营？他们有没有正规的运输资质啊？听说有些运输公司会跨区域违规运营，能不能查查这家公司是不是在朝阳区注册的？主要是担心这些危险品运输车辆跟公交车混跑会不会出事，希望能核实一下运营企业的资质情况。",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ from _ join _ on _ ._ = _ ._ join _ on _ ._ = _ ._ where _ ._ = _ and _ ._ = _ and _ (_ ._ ,_ ) = _",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweigongjiaoxianluxinxichuxingfuwu3666": [
+      "shijiaotongweigongjiaoxianluxinxichuxingfuwu3666.线路代码",
+      "shijiaotongweigongjiaoxianluxinxichuxingfuwu3666.路线名称"
+    ],
+    "shijiaotongweiweixianpinyunshuqiye3674": [
+      "shijiaotongweiweixianpinyunshuqiye3674.企业名称",
+      "shijiaotongweiweixianpinyunshuqiye3674.所属地区",
+      "shijiaotongweiweixianpinyunshuqiye3674.经营许可证号"
+    ]
+  }
+}

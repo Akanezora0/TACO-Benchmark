@@ -1,0 +1,47 @@
+{
+  "sql": "SELECT sand_and_gravel_deposits.OBJECTID, salt_storage_record_table.OBJECTID FROM sand_and_gravel_deposits INNER JOIN salt_storage_record_table ON sand_and_gravel_deposits.GlobalID = salt_storage_record_table.fulcrum_id WHERE salt_storage_record_table.material_type = 'Salt';",
+  "problem_description": "### Query intent:\nThe SQL statement aims to find a specific relationship between two datasets: `sand_and_gravel_deposits` and `salt_storage_record_table`. It seeks to identify records where the `OBJECTID` from the `sand_and_gravel_deposits` table matches with the `OBJECTID` from the `salt_storage_record_table` table, under the condition that the `material_type` in the `salt_storage_record_table` is exactly 'Salt'.\n\n### Detailed description:\n1. **Table `sand_and_gravel_deposits`**:\n   - **Column `OBJECTID`**: This column likely contains unique identifiers for each record in the `sand_and_gravel_deposits` dataset.\n   \n2. **Table `salt_storage_record_table`**:\n   - **Column `OBJECTID`**: This column is expected to contain unique identifiers for each record in the `salt_storage_record_table`.\n   - **Column `fulcrum_id`**: This column might contain identifiers related to the `GlobalID` from another table (possibly the `sand_and_gravel_deposits` table), indicating a link between the two datasets.\n   - **Column `material_type`**: This column specifies the type of material stored in the records of the `salt_storage_record_table`. The condition `salt_storage_record_table.material_type = 'Salt'` filters for records where the material is salt.\n\n3. **Join Operation** (`INNER JOIN`):\n   - The join operation combines rows from both tables based on matching values between `GlobalID` in `sand_and_gravel_deposits` and `fulcrum_id` in `salt_storage_record_table`.\n\n4. **Where Clause**:\n   - `salt_storage_record_table.material_type = 'Salt'` ensures that only records with a material type of 'Salt' are included in the final result set.\n\n### Business scenario:\nThis query is typically used in scenarios where there is a need to correlate data across different datasets, especially when one dataset contains information about storage locations and the other contains detailed records of stored materials. For instance, it could be part of a larger system monitoring inventory levels, compliance checks, or operational logistics within industries like mining, agriculture, or chemical storage facilities.\n\n### User description:\nA user might need this information to ensure that salt storage activities are properly accounted for, perhaps to monitor inventory, verify compliance with regulations regarding storage types, or to optimize distribution logistics based on available salt stock at specific locations. The query helps in identifying which sand and gravel",
+  "natural_language_query": "User: I'm working on a project that involves tracking the storage of materials across different sites. Specifically, I need to cross-reference the location data from our sand and gravel deposits with the records of what's actually being stored at those sites. My goal is to pinpoint where salt is being stored. Can you help me write a SQL query for this?\n\nAssistant: Sure, let's break down your request into a SQL query. We're looking to match records from two tables: `sand_and_gravel_deposits` and `salt_storage_record_table`. Here's how we can do it:\n\n1. **Identify the Tables**: First, we have `sand_and_gravel_deposits` which likely contains details about all deposits, including unique identifiers (`OBJECTID`). Then, we have `salt_storage_record_table`, which should include information about what's stored, such as unique identifiers (`OBJECTID`) and possibly a link back to the deposit (`fulcrum_id`).\n\n2. **Match Identifiers**: We want to match these identifiers between the two tables. Assuming `fulcrum_id` in `salt_storage_record_table` is linked to `GlobalID` or `OBJECTID` in `sand_and_gravel_deposits`, we'll use an `INNER JOIN` to combine these records where they match.\n\n3. **Filter by Material Type**: Since your interest is specifically in salt, we add a `WHERE` clause to filter out only those records where `salt_storage_record_table.material_type` equals 'Salt'. This ensures we're focusing only on salt storage locations.\n\nHere's how you might write the SQL query:\n\n```sql\nSELECT *\nFROM sand_and_gravel_deposits s\nINNER JOIN salt_storage_record_table ssr ON s.GlobalID = ssr.fulcrum_id\nWHERE ssr.material_type = 'Salt';\n```\n\nThis query will return all the records from `sand_and_gravel_deposits` that have a matching `GlobalID` in `salt_storage_record_table` for which the stored material is identified as 'Salt'. This should give you a clear picture of where salt is being stored among your sand and gravel deposits.",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ WHERE _ = _ ;",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "sand_and_gravel_deposits": [
+      "sand_and_gravel_deposits.OBJECTID",
+      "sand_and_gravel_deposits.AG_TYPE",
+      "sand_and_gravel_deposits.GlobalID",
+      "sand_and_gravel_deposits.SHAPEarea",
+      "sand_and_gravel_deposits.SHAPElen"
+    ],
+    "salt_storage_record_table": [
+      "salt_storage_record_table.OBJECTID",
+      "salt_storage_record_table.fulcrum_id",
+      "salt_storage_record_table.fulcrum_parent_id",
+      "salt_storage_record_table.fulcrum_record_id",
+      "salt_storage_record_table.version",
+      "salt_storage_record_table.geometry",
+      "salt_storage_record_table.created_at",
+      "salt_storage_record_table.updated_at",
+      "salt_storage_record_table.created_by",
+      "salt_storage_record_table.updated_by",
+      "salt_storage_record_table.address_sub_thoroughfare",
+      "salt_storage_record_table.address_thoroughfare",
+      "salt_storage_record_table.address_suite",
+      "salt_storage_record_table.address_locality",
+      "salt_storage_record_table.address_sub_admin_area",
+      "salt_storage_record_table.address_admin_area",
+      "salt_storage_record_table.address_postal_code",
+      "salt_storage_record_table.address_country",
+      "salt_storage_record_table.address_full",
+      "salt_storage_record_table.material_type",
+      "salt_storage_record_table.material_type_other",
+      "salt_storage_record_table.storage_length_years",
+      "salt_storage_record_table.storage_length_years_range",
+      "salt_storage_record_table.material_covered",
+      "salt_storage_record_table.coverage_method",
+      "salt_storage_record_table.material_on_pad",
+      "salt_storage_record_table.pad_type",
+      "salt_storage_record_table.pad_type_other"
+    ]
+  }
+}

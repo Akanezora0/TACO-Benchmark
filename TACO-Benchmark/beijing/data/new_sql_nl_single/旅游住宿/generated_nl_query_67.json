@@ -1,0 +1,24 @@
+{
+  "sql": "SELECT \"tongzhouqutongzhouquxiangcunminsuxinxi2979.通州区乡村民宿情况表（规范化审核52家）\", \"changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.2021年度昌平A级景区数据开放表               \" FROM \"tongzhouqutongzhouquxiangcunminsuxinxi2979\" JOIN \"changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842\" ON \"tongzhouqutongzhouquxiangcunminsuxinxi2979.Unnamed: 1\" = \"changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 1\";",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从两个表中联合查询数据，通过特定的列进行关联，以获取通州区乡村民宿情况和昌平区2021年度A级景区数据的相关信息。\n\n- **详细描述**：\n  - **涉及的表**：\n    1. `tongzhouqutongzhouquxiangcunminsuxinxi2979.通州区乡村民宿情况表（规范化审核52家）`：该表可能记录了通州区乡村民宿的基本信息，如民宿名称、地址、审核状态等。\n    2. `changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.2021年度昌平A级景区数据开放表`：该表可能记录了昌平区2021年度A级景区的相关数据，如景区名称、开放时间、游客数量等。\n  - **涉及的列**：\n    - `tongzhouqutongzhouquxiangcunminsuxinxi2979.Unnamed: 1`：该列可能是通州区乡村民宿情况表中的某个关键字段，如民宿ID或名称。\n    - `changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 1`：该列可能是昌平区A级景区数据表中的某个关键字段，如景区ID或名称。\n  - **关联条件**：两个表通过`Unnamed: 1`列进行关联，可能是通过民宿和景区的某种共同标识符（如地区代码或名称）进行匹配。\n\n- **业务场景**：\n  - 该查询可能用于分析通州区乡村民宿与昌平区A级景区之间的关联性。例如，可能用于研究民宿与景区之间的地理位置关系、游客流量关联等。\n  - 另一个可能的业务场景是进行跨区域的旅游数据分析，以便为旅游规划或政策制定提供依据。\n\n- **用户描述**：\n  - 用户可能是旅游规划部门或数据分析师，他们需要了解通州区乡村民宿与昌平区A级景区之间的关系，以便优化旅游线路或制定相关政策。\n  - 用户可能遇到的实际问题包括：如何评估民宿与景区之间的协同效应？如何通过数据分析提升区域旅游经济的整体效益？该查询可以帮助用户获取相关数据，从而进行进一步的分析和决策。",
+  "natural_language_query": "市民反映，最近在规划北京周边乡村旅游线路时遇到困惑。想了解一下通州区那边的乡村民宿和昌平区那些A级景区之间有没有什么关联性？因为发现很多游客既会去昌平那边的景区玩，又会在通州住民宿，但不知道具体数据怎么样。去年2021年昌平那些景区开放情况如何？能不能帮忙查查这两边的数据有没有什么联系？主要是想看看能不能优化一下旅游线路推荐，让游客玩得更方便。感觉现在信息太分散了，规划起来特别费劲。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "tongzhouqutongzhouquxiangcunminsuxinxi2979": [
+      "tongzhouqutongzhouquxiangcunminsuxinxi2979.通州区乡村民宿情况表（规范化审核52家）",
+      "tongzhouqutongzhouquxiangcunminsuxinxi2979.Unnamed: 1",
+      "tongzhouqutongzhouquxiangcunminsuxinxi2979.Unnamed: 2"
+    ],
+    "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842": [
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.2021年度昌平A级景区数据开放表               ",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 1",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 2",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 3",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 4",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 5",
+      "changpingqu2021nianduchangpingxingjifandianshujukaifangbiao842.Unnamed: 6"
+    ]
+  }
+}

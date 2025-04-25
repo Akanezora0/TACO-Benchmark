@@ -1,0 +1,24 @@
+{
+  "sql": "SELECT xichengquxichengqulvxingsheminglu20.经营场所, huairouquhuairouqujingqumenpiaojiage1592.怀柔区政府定价景区门票价格 FROM xichengquxichengqulvxingsheminglu20 INNER JOIN huairouquhuairouqujingqumenpiaojiage1592 ON xichengquxichengqulvxingsheminglu20.许可证号 = huairouquhuairouqujingqumenpiaojiage1592.许可证号 WHERE xichengquxichengqulvxingsheminglu20.许可证号 = '特定许可证号';",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ WHERE _ = _ ;",
+  "database": "旅游住宿",
+  "tables": {
+    "xichengquxichengqulvxingsheminglu20": [
+      "xichengquxichengqulvxingsheminglu20.序号",
+      "xichengquxichengqulvxingsheminglu20.许可证号",
+      "xichengquxichengqulvxingsheminglu20.旅行社名称",
+      "xichengquxichengqulvxingsheminglu20.经营业务",
+      "xichengquxichengqulvxingsheminglu20.发证日期",
+      "xichengquxichengqulvxingsheminglu20.经营场所",
+      "xichengquxichengqulvxingsheminglu20.有效期"
+    ],
+    "huairouquhuairouqujingqumenpiaojiage1592": [
+      "huairouquhuairouqujingqumenpiaojiage1592.怀柔区政府定价景区门票价格",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 1",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 2",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 3",
+      "huairouquhuairouqujingqumenpiaojiage1592.Unnamed: 4"
+    ]
+  }
+}

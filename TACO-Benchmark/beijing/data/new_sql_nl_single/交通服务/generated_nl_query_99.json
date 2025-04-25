@@ -1,0 +1,30 @@
+{
+  "sql": "SELECT pingguqupingguqugongjiaozhandianmingxi269.\"区内公交线路站点明细\" FROM shigonganjujiaotongweifachulijigou1949 WHERE shigonganjujiaotongweifachulijigou1949.\"交通违法处理机构\" = (SELECT pingguqupingguqugongjiaozhandianmingxi269.\"区内公交线路站点明细\" FROM pingguqupingguqugongjiaozhandianmingxi269 WHERE pingguqupingguqugongjiaozhandianmingxi269.\"区内公交线路站点明细\" = '特定值')\n```",
+  "problem_description": "### 查询意图：\n该 SQL 语句的目的是从 `shigonganjujiaotongweifachulijigou1949` 表中查询出与 `pingguqupingguqugongjiaozhandianmingxi269` 表中特定站点名称相关联的交通违法处理机构信息。\n\n### 详细描述：\n1. **涉及的表**：\n   - `pingguqupingguqugongjiaozhandianmingxi269`：该表可能存储了平谷区内的公交线路站点明细信息。\n   - `shigonganjujiaotongweifachulijigou1949`：该表可能存储了施工安局交通违法处理机构的信息。\n\n2. **涉及的列**：\n   - `pingguqupingguqugongjiaozhandianmingxi269.\"区内公交线路站点明细\"`：该列存储了公交站点的名称或明细信息。\n   - `shigonganjujiaotongweifachulijigou1949.\"交通违法处理机构\"`：该列存储了交通违法处理机构的名称或相关信息。\n\n3. **查询条件**：\n   - 子查询部分：从 `pingguqupingguqugongjiaozhandianmingxi269` 表中查询 `\"区内公交线路站点明细\"` 列等于 `'特定值'` 的记录。\n   - 主查询部分：从 `shigonganjujiaotongweifachulijigou1949` 表中查询 `\"交通违法处理机构\"` 列等于子查询结果的记录。\n\n### 业务场景：\n该查询可能用于以下业务场景：\n1. **交通违法处理机构定位**：用户可能希望通过某个公交站点名称快速找到附近的交通违法处理机构。\n2. **数据关联查询**：系统可能需要将公交站点信息与交通违法处理机构信息关联起来，以便提供更便捷的服务。\n\n### 用户描述：\n1. **用户需求**：用户在某个公交站点（如“特定值”）附近发生了交通违法，需要知道最近的交通违法处理机构在哪里。\n2. **实际问题**：用户可能不知道交通违法处理机构的具体位置，但知道附近的公交站点名称。通过输入公交站点名称，系统可以返回对应的处理机构信息，方便用户前往处理交通违法事宜。\n3. **使用场景**：例如，用户在平谷区的“平谷公交站”附近违法停车，通过查询系统输入“平谷公交站”，系统返回最近的交通违法处理机构名称和地址。",
+  "natural_language_query": "市民反映，在平谷区某个公交站附近停车时被贴了罚单，但不知道应该去哪里处理这个交通违法。具体是在\"平谷公交站\"这个站点附近发生的事情，想咨询一下这附近有没有可以处理交通违章的地方。因为对这个区域不熟悉，希望能告知离这个公交站最近的交通违法处理点在哪里，最好能提供具体名称和地址，方便过去办理。来电咨询交通违法处理点位置问题。",
+  "results": 0,
+  "sql skeleton": "select _ from _ where _ = (select _ from _ where _ = _ )",
+  "database": "交通服务",
+  "tables": {
+    "shigonganjujiaotongweifachulijigou1949": [
+      "shigonganjujiaotongweifachulijigou1949.交通违法处理机构",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 1",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 2",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 3",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 4",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 5",
+      "shigonganjujiaotongweifachulijigou1949.Unnamed: 6"
+    ],
+    "pingguqupingguqugongjiaozhandianmingxi269": [
+      "pingguqupingguqugongjiaozhandianmingxi269.区内公交线路站点明细",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 1",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 2",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 3",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 4",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 5",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 6",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 7",
+      "pingguqupingguqugongjiaozhandianmingxi269.Unnamed: 8"
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "sql": "SELECT column1, column2 FROM table1 - table2 WHERE condition = value ;",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从 `table1` 和 `table2` 的差集（即 `table1` 中存在而 `table2` 中不存在的记录）中选择满足特定条件的 `column1` 和 `column2` 数据。\n\n- **详细描述**：\n  - **表**：涉及两个表，`table1` 和 `table2`。`table1 - table2` 表示从 `table1` 中排除掉与 `table2` 中相同的记录（差集操作）。\n  - **列**：查询结果包含 `column1` 和 `column2`，这两列来自 `table1` 和 `table2` 的差集。\n  - **条件**：`WHERE condition = value` 是一个筛选条件，用于进一步过滤差集中的记录，只返回满足该条件的记录。\n\n- **业务场景**：\n  - 假设 `table1` 是所有客户的列表，`table2` 是已经购买过产品的客户列表。`table1 - table2` 可以表示尚未购买产品的潜在客户。通过 `WHERE condition = value` 可以进一步筛选这些潜在客户，例如筛选出特定地区的潜在客户。\n  - 另一个例子是 `table1` 是员工列表，`table2` 是已经完成某项培训的员工列表。`table1 - table2` 表示尚未完成培训的员工，`WHERE condition = value` 可以筛选出某个部门的未完成培训的员工。\n\n- **用户描述**：\n  - 在潜在客户的业务场景中，用户（如销售团队）可能需要找出尚未购买产品的潜在客户，并针对这些客户制定营销策略。通过 `WHERE condition = value`，用户可以进一步缩小范围，例如只关注某个地区的潜在客户，从而更高效地分配资源。\n  - 在员工培训的业务场景中，用户（如人力资源部门）可能需要找出尚未完成培训的员工，并督促他们尽快完成培训。通过 `WHERE condition = value`，用户可以针对特定部门或职位的员工进行跟踪和管理。",
+  "natural_language_query": "市民反映，我们公司最近在做客户营销活动，但是发现系统里有些客户明明在客户名单里，却从来没买过我们的产品。特别是朝阳区这边的客户，我们想重点跟进一下。能不能帮忙查查这些没买过产品的朝阳区客户都是哪些？最好能提供他们的联系方式和基本信息，我们好安排销售去拜访。感觉系统里这个数据有点乱，之前也出现过该买的客户没被统计到的情况，希望这次能查准确点。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ -_ WHERE _ = _ ;",
+  "database": "安全生活",
+  "tables": {}
+}

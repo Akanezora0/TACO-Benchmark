@@ -1,0 +1,21 @@
+{
+  "sql": "SELECT xichengquxichengqudengjilvyoujingquminglu14.序号, xichengquxichengqudengjilvyoujingquminglu14.景区名称, xichengquxichengqudengjilvyoujingquminglu14.等级, xichengquxichengqudengjilvyoujingquminglu14.地址, xichengquxichengqudengjilvyoujingquminglu14.咨询电话, xichengquxichengqudengjilvyoujingquminglu14.投诉电话, xichengquxichengqudengjilvyoujingquminglu14.邮编 FROM xichengquxichengqudengjilvyoujingquminglu14 WHERE xichengquxichengqudengjilvyoujingquminglu14.等级 LIKE 'AAAA%' OR xichengquxichengqudengjilvyoujingquminglu14.景区名称 LIKE '%AAAA%' OR xichengquxichengqudengjilvyoujingquminglu14.等级 LIKE 'AAA%' OR xichengquxichengqudengjilvyoujingquminglu14.景区名称 LIKE '%AAA%' OR shiwenhuahelvyoujuxingjifandianxinxi2036.��\u0011ࡱ\u001a� LIKE 'AAAA%' OR shiwenhuahelvyoujuxingjifandianxinxi2036.��\u0011ࡱ\u001a� LIKE '%AAAA%' OR shiwenhuahelvyoujuxingjifandianxinxi2036.��\u0011ࡱ\u001a� LIKE 'AAA%' OR shiwenhuahelvyoujuxingjifandianxinxi2036.��\u0011ࡱ\u001a� LIKE '%AAA%'",
+  "results": 0,
+  "sql skeleton": "select _ from _ where _ or _ '%_ %",
+  "database": "旅游住宿",
+  "tables": {
+    "xichengquxichengqudengjilvyoujingquminglu14": [
+      "xichengquxichengqudengjilvyoujingquminglu14.序号",
+      "xichengquxichengqudengjilvyoujingquminglu14.景区名称",
+      "xichengquxichengqudengjilvyoujingquminglu14.等级",
+      "xichengquxichengqudengjilvyoujingquminglu14.地址",
+      "xichengquxichengqudengjilvyoujingquminglu14.咨询电话",
+      "xichengquxichengqudengjilvyoujingquminglu14.投诉电话",
+      "xichengquxichengqudengjilvyoujingquminglu14.邮编"
+    ],
+    "shiwenhuahelvyoujuxingjifandianxinxi2036": [
+      "shiwenhuahelvyoujuxingjifandianxinxi2036.��\u0011ࡱ\u001a�",
+      "shiwenhuahelvyoujuxingjifandianxinxi2036.\u0001\u0001"
+    ]
+  }
+}

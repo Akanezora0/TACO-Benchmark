@@ -1,0 +1,51 @@
+{
+  "sql": "SELECT landfills.\"SITENAME\", wetland_ecologist_districts.\"FirstName\", wetland_ecologist_districts.\"LastName\" FROM landfills JOIN wetland_ecologist_districts ON landfills.\"TOWNNAME\" = wetland_ecologist_districts.\"Town\" WHERE landfills.\"STATUS\" = 'Active';",
+  "problem_description": "### Query intent:\nThe SQL statement aims to retrieve specific pieces of information from two related tables, `landfills` and `wetland_ecologist_districts`, under certain conditions.\n\n### Detailed description:\n- **Tables Involved:**\n  - **`landfills`** table: This table likely contains data about landfills, including details such as their names (`\"SITENAME\"`), statuses (`\"STATUS\"`), and possibly other location details like town names (`\"TOWNNAME\"`).\n  - **`wetland_ecologist_districts`** table: This table might contain data related to wetland ecologists and their districts, including first names (`\"FirstName\"`), last names (`\"LastName\"`), and possibly a field indicating the town they are associated with (`\"Town\"`).\n\n- **Columns Selected:**\n  - `\"SITENAME\"` from the `landfills` table: The name of the landfill.\n  - `\"FirstName\"` and `\"LastName\"` from the `wetland_ecologist_districts` table: The full name of the wetland ecologist.\n\n- **Join Operation:**\n  The `JOIN` operation is performed between `landfills` and `wetland_ecologist_districts` based on the condition that the `\"TOWNNAME\"` column in `landfills` matches the `\"Town\"` column in `wetland_ecologist_districts`. This suggests that the query is interested in linking the landfill locations with the ecologists who are associated with those towns.\n\n- **Where Clause:**\n  The `WHERE` clause filters the results so that only records where the `\"STATUS\"` of the landfill is set to `'Active'` are included. This indicates that the query is specifically looking for active landfills and their associated ecologists.\n\n### Business Scenario:\nThis query could be used in environmental management or regulatory compliance contexts. For instance, an environmental agency might need to verify which active landfills have an assigned wetland ecologist responsible for monitoring or managing the ecological impact of these facilities within specific towns.\n\n### User Description:\nA user might encounter this need when trying to ensure that all active landfills in their jurisdiction are being adequately monitored by qualified personnel. By running this query, they can identify any gaps in coverage (i.e., active landfills without an assigned ecologist) or confirm that all active landfills are being properly managed. This information is crucial for planning inspections, training sessions, or resource allocation to address any identified issues.",
+  "natural_language_query": "I'm working on a project where I need to gather information about active landfills and the ecologists responsible for monitoring them in our area. Specifically, I'm looking to connect the landfill names with the full names of the ecologists associated with the towns where these landfills are located. \n\nTo achieve this, I plan to use SQL to join the 'landfills' and 'wetland_ecologist_districts' tables. The 'landfills' table includes details like the landfill's name, status, and the town it's situated in. Meanwhile, the 'wetland_ecologist_districts' table contains information about the ecologists, including their first and last names, and the town they're linked to.\n\nMy goal is to filter out only the records where the landfill status is marked as 'Active'. This way, I can ensure that I'm focusing on the landfills that are currently operational. After running the query, I'll have a list of active landfills along with the names of the ecologists tasked with overseeing them in each respective town. This will help us in our efforts to maintain proper environmental standards and compliance across all active sites.",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ WHERE _ = _ ;",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "landfills": [
+      "landfills.X",
+      "landfills.Y",
+      "landfills.OBJECTID",
+      "landfills.PSINUM",
+      "landfills.SWFACID",
+      "landfills.SITENAME",
+      "landfills.LOCCONF",
+      "landfills.DATE_FIRST",
+      "landfills.DATE_LAST",
+      "landfills.ACRES",
+      "landfills.STATUS",
+      "landfills.WQMONITORING",
+      "landfills.GASCOLLECTION",
+      "landfills.TOWNNAME",
+      "landfills.LATITUDE",
+      "landfills.LONGITUDE"
+    ],
+    "wetland_ecologist_districts": [
+      "wetland_ecologist_districts.OBJECTID",
+      "wetland_ecologist_districts.ABNAME",
+      "wetland_ecologist_districts.AGENCY",
+      "wetland_ecologist_districts.DEPT",
+      "wetland_ecologist_districts.DIV",
+      "wetland_ecologist_districts.FirstName",
+      "wetland_ecologist_districts.LastName",
+      "wetland_ecologist_districts.Email",
+      "wetland_ecologist_districts.Phone",
+      "wetland_ecologist_districts.Address",
+      "wetland_ecologist_districts.Office",
+      "wetland_ecologist_districts.Town",
+      "wetland_ecologist_districts.BOUNDARY",
+      "wetland_ecologist_districts.PROGMANAGER",
+      "wetland_ecologist_districts.PROGMANAGEREMAIL",
+      "wetland_ecologist_districts.PROGMANAGERPHONE",
+      "wetland_ecologist_districts.BACKUPCONTACT",
+      "wetland_ecologist_districts.BACKUPCONTACTEMAIL",
+      "wetland_ecologist_districts.BACKUPCONTACTPHONE",
+      "wetland_ecologist_districts.PROGRAMEMAIL",
+      "wetland_ecologist_districts.PROGRAMPHONE"
+    ]
+  }
+}

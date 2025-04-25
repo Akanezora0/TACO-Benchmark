@@ -1,0 +1,40 @@
+{
+  "sql": "SELECT sand_and_gravel_deposits.OBJECTID, wetland_ecologist_districts.OBJECTID FROM sand_and_gravel_deposits INNER JOIN wetland_ecologist_districts ON sand_and_gravel_deposits.OBJECTID = wetland_ecologist_districts.OBJECTID WHERE sand_and_gravel_deposits.AG_TYPE = 'type_value';",
+  "problem_description": "### Query intent:\nThe SQL statement aims to retrieve specific information by joining two tables based on a common identifier (`OBJECTID`) and filtering the results based on a specific attribute (`AG_TYPE`).\n\n### Detailed description:\n1. **Tables Involved:**\n   - `sand_and_gravel_deposits`: This table contains data related to sand and gravel deposits. It includes at least one column `OBJECTID` which is likely used as a unique identifier for each deposit.\n   - `wetland_ecologist_districts`: This table likely contains data related to districts managed by wetland ecologists. It also includes an `OBJECTID` field, presumably serving as a unique identifier for each district.\n\n2. **Columns Selected:**\n   - The query selects two columns from both tables: `OBJECTID` from `sand_and_gravel_deposits` and `OBJECTID` from `wetland_ecologist_districts`. These columns are typically identifiers used to match records across the two tables during the join operation.\n\n3. **Join Operation:**\n   - An `INNER JOIN` clause is used to combine rows from both tables where there is a matching value in the `OBJECTID` column. This means only those records where the `OBJECTID` in `sand_and_gravel_deposits` matches the `OBJECTID` in `wetland_ecologist_districts` will be included in the result set.\n\n4. **Filtering Condition:**\n   - A `WHERE` clause filters the joined records further based on the condition `sand_and_gravel_deposits.AG_TYPE = 'type_value'`. This implies that only records where the `AG_TYPE` (likely a type of deposit) equals `'type_value'` will be included in the final output.\n\n### Business Scenario:\nThis query is useful in environmental management or urban planning contexts where the interaction between sand and gravel deposits and wetland ecologist districts needs to be analyzed. For example:\n\n- **Environmental Impact Assessment:** Identifying how sand and gravel extraction activities (represented by `sand_and_gravel_deposits`) might affect wetland ecosystems (represented by `wetland_ecologist_districts`) under specific conditions (specified by `AG_TYPE`).\n- **Regulatory Compliance:** Ensuring that activities in certain types of deposits (`AG_TYPE`) do not overlap with protected or sensitive wetland areas.\n\n### User Description:\nA user might need this information when they are tasked with evaluating the potential environmental impact of extracting sand and gravel near wetlands. They",
+  "natural_language_query": "A user looking into the environmental impact of sand and gravel extraction near wetland areas might want to run a query like this:\n\n\"Retrieve all instances where sand and gravel deposits, specifically those classified under a certain type, intersect with districts managed by wetland ecologists. I'm particularly interested in verifying if any extraction activities are occurring within or near protected wetland zones.\"\n\nIn SQL terms, the user's query could look something like:\n\n```sql\nSELECT s.OBJECTID AS SandAndGravelDepositID, w.OBJECTID AS WetlandDistrictID\nFROM sand_and_gravel_deposits s\nINNER JOIN wetland_ecologist_districts w\nON s.OBJECTID = w.OBJECTID\nWHERE s.AG_TYPE = 'specificType';\n```\n\nThis query would help identify specific sand and gravel deposits that fall under a defined type and their corresponding wetland districts, aiding in the assessment of environmental impacts and compliance with regulations.",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ WHERE _ = _ ;",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "sand_and_gravel_deposits": [
+      "sand_and_gravel_deposits.OBJECTID",
+      "sand_and_gravel_deposits.AG_TYPE",
+      "sand_and_gravel_deposits.GlobalID",
+      "sand_and_gravel_deposits.SHAPEarea",
+      "sand_and_gravel_deposits.SHAPElen"
+    ],
+    "wetland_ecologist_districts": [
+      "wetland_ecologist_districts.OBJECTID",
+      "wetland_ecologist_districts.ABNAME",
+      "wetland_ecologist_districts.AGENCY",
+      "wetland_ecologist_districts.DEPT",
+      "wetland_ecologist_districts.DIV",
+      "wetland_ecologist_districts.FirstName",
+      "wetland_ecologist_districts.LastName",
+      "wetland_ecologist_districts.Email",
+      "wetland_ecologist_districts.Phone",
+      "wetland_ecologist_districts.Address",
+      "wetland_ecologist_districts.Office",
+      "wetland_ecologist_districts.Town",
+      "wetland_ecologist_districts.BOUNDARY",
+      "wetland_ecologist_districts.PROGMANAGER",
+      "wetland_ecologist_districts.PROGMANAGEREMAIL",
+      "wetland_ecologist_districts.PROGMANAGERPHONE",
+      "wetland_ecologist_districts.BACKUPCONTACT",
+      "wetland_ecologist_districts.BACKUPCONTACTEMAIL",
+      "wetland_ecologist_districts.BACKUPCONTACTPHONE",
+      "wetland_ecologist_districts.PROGRAMEMAIL",
+      "wetland_ecologist_districts.PROGRAMPHONE"
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "sql": "SELECT \n\"shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.年份\",\n\"shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.总量\",\n\"shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.观测站名称\",\n\"shijiaotongweigongluqixiangshuju233.��\u0011ࡱ\u001a�\",\n\"shijiaotongweigongluqixiangshuju233.\u0001\u0001\"\nFROM \n\"shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668\"\nJOIN \n\"shijiaotongweigongluqixiangshuju233\"\nON \n\"shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.观测站名称\" = \"shijiaotongweigongluqixiangshuju233.��\u0011ࡱ\u001a�\"\nWHERE \n\"shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.年份\" = '2022' AND \"shijiaotongweigongluqixiangshuju233.\u0001\u0001\" = '1'",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ ,_ ._ from _ join _ on _ ._ = _ ._ where _ = _ and _ = _",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668": [
+      "shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.年份",
+      "shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.总量",
+      "shijiaotongweijiaoquputonggonglunianjiaotongliuliang3668.观测站名称"
+    ],
+    "shijiaotongweigongluqixiangshuju233": [
+      "shijiaotongweigongluqixiangshuju233.��\u0011ࡱ\u001a�",
+      "shijiaotongweigongluqixiangshuju233.\u0001\u0001"
+    ]
+  }
+}

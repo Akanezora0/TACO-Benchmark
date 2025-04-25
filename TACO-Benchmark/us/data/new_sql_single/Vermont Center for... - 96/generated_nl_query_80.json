@@ -1,0 +1,36 @@
+{
+  "sql": "SELECT waste_water_facilities.X, waste_water_facilities.Y, waste_water_facilities.FacilityName, waste_water_facilities.FacilityID, waste_water_facilities.WWInventoryURL, sga_phase_2_assessed_reaches.FinalA, sga_phase_2_assessed_reaches.FinalB FROM waste_water_facilities INNER JOIN sga_phase_2_assessed_reaches ON waste_water_facilities.FacilityID = sga_phase_2_assessed_reaches.SID WHERE sga_phase_2_assessed_reaches.FinalA >= 5 AND sga_phase_2_assessed_reaches.FinalB <= 10;",
+  "problem_description": "### Query intent:\nThe SQL statement aims to extract specific data from two related tables, `waste_water_facilities` and `sga_phase_2_assessed_reaches`, under certain conditions.\n\n### Detailed description:\n1. **Tables Involved:**\n   - **`waste_water_facilities`** contains information about waste water facilities, including `X`, `Y` (coordinates), `FacilityName`, `FacilityID`, and `WWInventoryURL`.\n   - **`sga_phase_2_assessed_reaches`** contains data related to assessed reaches in phase 2 of some process or project, including `SID` (which might stand for 'specific identifier' or similar), `FinalA`, and `FinalB`.\n\n2. **Columns Selected:**\n   - `waste_water_facilities.X` and `Y`: Coordinates of the waste water facilities.\n   - `waste_water_facilities.FacilityName`: Name of the facility.\n   - `waste_water_facilities.FacilityID`: Unique identifier for each facility.\n   - `waste_water_facilities.WWInventoryURL`: URL linking to inventory details of the facility.\n   - `sga_phase_2_assessed_reaches.FinalA` and `FinalB`: These seem to represent scores or measurements associated with the assessed reaches in phase 2.\n\n3. **Conditions Used:**\n   - The `INNER JOIN` clause is used to combine rows from both tables based on matching `FacilityID` (from `waste_water_facilities`) and `SID` (from `sga_phase_2_assessed_reaches`).\n   - The `WHERE` clause filters the results by selecting only those rows where `FinalA` is greater than or equal to 5 and `FinalB` is less than or equal to 10.\n\n### Business Scenario:\nThis query is typically used in environmental management or industrial oversight contexts where the performance of waste water treatment facilities against certain criteria is being evaluated. For instance, it could be part of a system monitoring compliance with environmental standards or assessing the effectiveness of a treatment process across multiple facilities.\n\n### User Description:\nA user might need this information to:\n- Identify which facilities (`FacilityName` and `FacilityID`) have reached a satisfactory level (`FinalA >= 5` and `FinalB <= 10`) in their phase 2 assessment, indicating they are performing within expected parameters or meeting certain environmental standards.\n- Verify the locations (`X`, `",
+  "natural_language_query": "I'm trying to find out which waste water treatment facilities in our database are performing well according to certain criteria set for phase 2 assessments. Specifically, I'm interested in facilities that scored at least 5 out of 10 for FinalA and no more than 10 for FinalB in their evaluations. Could you help me pull up the names, unique identifiers, coordinates, and links to their inventory details for these facilities?",
+  "results": 0,
+  "sql skeleton": "SELECT _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ ._ , _ FROM _ WHERE _ ._ = _ AND _ ._ = _ and _ (_ ._ ,_ ) >= _ and _ (_ ._ ,_ ) <= _ ;",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "waste_water_facilities": [
+      "waste_water_facilities.X",
+      "waste_water_facilities.Y",
+      "waste_water_facilities.FacilityName",
+      "waste_water_facilities.FacilityID",
+      "waste_water_facilities.WWInventoryURL"
+    ],
+    "sga_phase_2_assessed_reaches": [
+      "sga_phase_2_assessed_reaches.SGAT_ID",
+      "sga_phase_2_assessed_reaches.ProjectName",
+      "sga_phase_2_assessed_reaches.URLPage1",
+      "sga_phase_2_assessed_reaches.URLPage2",
+      "sga_phase_2_assessed_reaches.ReportList",
+      "sga_phase_2_assessed_reaches.FinalA",
+      "sga_phase_2_assessed_reaches.FinalB",
+      "sga_phase_2_assessed_reaches.FinalC",
+      "sga_phase_2_assessed_reaches.CorridorPlanA",
+      "sga_phase_2_assessed_reaches.CorridorPlanB",
+      "sga_phase_2_assessed_reaches.CorridorPlanC",
+      "sga_phase_2_assessed_reaches.RID",
+      "sga_phase_2_assessed_reaches.SID",
+      "sga_phase_2_assessed_reaches.OBJECTID",
+      "sga_phase_2_assessed_reaches.RchID",
+      "sga_phase_2_assessed_reaches.SegID",
+      "sga_phase_2_assessed_reaches.ProjectID"
+    ]
+  }
+}

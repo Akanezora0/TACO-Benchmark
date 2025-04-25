@@ -1,0 +1,38 @@
+{
+  "sql": "SELECT xichengquxichengqutingchechangmingdan2492.\"别名\", haidianqugonggongjianzhutingchechang3416.停车场名称 FROM xichengquxichengqutingchechangmingdan2492 LEFT JOIN haidianqugonggongjianzhutingchechang3416 ON xichengquxichengqutingchechangmingdan2492.\"别名\" = haidianqugonggongjianzhutingchechang3416.序号 WHERE haidianqugonggongjianzhutingchechang3416.经营单位 IN (SELECT haidianqugonggongjianzhutingchechang3416.经营单位 FROM haidianqugonggongjianzhutingchechang3416 WHERE haidianqugonggongjianzhutingchechang3416.详细地址 IS NOT NULL)\n```",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ from _ left join _ on _ ._ = _ ._ where _ in (select _ from _ where _ )",
+  "database": "交通服务",
+  "tables": {
+    "xichengquxichengqutingchechangmingdan2492": [
+      "xichengquxichengqutingchechangmingdan2492.ID",
+      "xichengquxichengqutingchechangmingdan2492.X",
+      "xichengquxichengqutingchechangmingdan2492.Y",
+      "xichengquxichengqutingchechangmingdan2492.SJXZQHMC",
+      "xichengquxichengqutingchechangmingdan2492.QXJXZQHMC",
+      "xichengquxichengqutingchechangmingdan2492.SJXZQHDM",
+      "xichengquxichengqutingchechangmingdan2492.QXJXZQHDM",
+      "xichengquxichengqutingchechangmingdan2492.POISJLY",
+      "xichengquxichengqutingchechangmingdan2492.RHBZDZ",
+      "xichengquxichengqutingchechangmingdan2492.CODE",
+      "xichengquxichengqutingchechangmingdan2492.CODEMC",
+      "xichengquxichengqutingchechangmingdan2492.GXSJ",
+      "xichengquxichengqutingchechangmingdan2492.POIMC",
+      "xichengquxichengqutingchechangmingdan2492.POIDZ",
+      "xichengquxichengqutingchechangmingdan2492.别名",
+      "xichengquxichengqutingchechangmingdan2492.POIFLMC",
+      "xichengquxichengqutingchechangmingdan2492.TEL",
+      "xichengquxichengqutingchechangmingdan2492.ID原",
+      "xichengquxichengqutingchechangmingdan2492.MC",
+      "xichengquxichengqutingchechangmingdan2492.DZ",
+      "xichengquxichengqutingchechangmingdan2492.DZMS"
+    ],
+    "haidianqugonggongjianzhutingchechang3416": [
+      "haidianqugonggongjianzhutingchechang3416.序号",
+      "haidianqugonggongjianzhutingchechang3416.停车场名称",
+      "haidianqugonggongjianzhutingchechang3416.停车场类型",
+      "haidianqugonggongjianzhutingchechang3416.详细地址",
+      "haidianqugonggongjianzhutingchechang3416.经营单位"
+    ]
+  }
+}

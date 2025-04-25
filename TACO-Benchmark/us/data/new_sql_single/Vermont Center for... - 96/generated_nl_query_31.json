@@ -1,0 +1,49 @@
+{
+  "sql": "SELECT sand_and_gravel_deposits.OBJECTID, sand_and_gravel_deposits.AG_TYPE, invasive_species.SiteName, invasive_species.ObservationDate \nFROM sand_and_gravel_deposits \nJOIN invasive_species ON sand_and_gravel_deposits.GlobalID = invasive_species.GlobalID",
+  "problem_description": "### Query intent:\nThe SQL statement aims to retrieve specific data from two related tables, `sand_and_gravel_deposits` and `invasive_species`, to analyze connections between sand and gravel deposits and invasive species.\n\n### Detailed description:\n- **Table `sand_and_gravel_deposits`**:\n  - `OBJECTID`: A unique identifier for each sand and gravel deposit record.\n  - `AG_TYPE`: The type of sand and gravel deposit.\n  \n- **Table `invasive_species`**:\n  - `SiteName`: The name of the site where the invasive species were observed.\n  - `ObservationDate`: The date when the invasive species were observed.\n\n- **Join condition**: `sand_and_gravel_deposits.GlobalID = invasive_species.GlobalID`. This condition ensures that only records from the same global identifier are matched between the two tables, likely indicating a shared reference for identifying specific locations or deposits.\n\n### Business scenario:\nThis SQL query is designed to facilitate environmental monitoring and research, particularly in the context of understanding the impact of sand and gravel deposits on local ecosystems and the presence of invasive species. It could be used by environmental scientists, conservationists, or government agencies to assess the distribution of invasive species around sand and gravel extraction sites, which might indicate potential areas of ecological concern.\n\n### User description:\nUsers seeking to understand how sand and gravel extraction activities affect local biodiversity might use this query. For example, an environmental consultant might need to evaluate the risk of invasive species spreading near new or existing extraction sites, or a policy maker might want to analyze trends in invasive species presence around such areas to inform regulations or conservation strategies.",
+  "natural_language_query": "I'm trying to explore the relationship between sand and gravel extraction sites and the presence of invasive species. Specifically, I'm interested in understanding if there's any correlation between these two factors, especially at sites where sand and gravel have been extracted. \n\nI'm looking to pull data from two tables: one detailing sand and gravel deposits and another listing invasive species observations. Ideally, I'd like to see if there's any information linking the location of sand and gravel deposits to where invasive species have been spotted. This could potentially help us understand if certain types of sand and gravel deposits might attract or facilitate the growth of invasive species.\n\nTo do this, I believe we should join these two tables based on a common identifier, let's say 'GlobalID', assuming it's used to uniquely identify each site in both databases. By doing so, we can then analyze if there's any overlap in the locations mentioned across these tables, which might suggest a connection between sand and gravel deposits and invasive species.\n\nThis kind of analysis could be crucial for environmental management, helping us to better understand and possibly mitigate the impacts of mining activities on local ecosystems.",
+  "results": 0,
+  "sql skeleton": "SELECT _ _ FROM _ WHERE _",
+  "database": "Vermont Center for... - 96",
+  "tables": {
+    "sand_and_gravel_deposits": [
+      "sand_and_gravel_deposits.OBJECTID",
+      "sand_and_gravel_deposits.AG_TYPE",
+      "sand_and_gravel_deposits.GlobalID",
+      "sand_and_gravel_deposits.SHAPEarea",
+      "sand_and_gravel_deposits.SHAPElen"
+    ],
+    "invasive_species": [
+      "invasive_species.X",
+      "invasive_species.Y",
+      "invasive_species.SiteName",
+      "invasive_species.ObservationID",
+      "invasive_species.InvasiveName",
+      "invasive_species.ObservationDate",
+      "invasive_species.Observer",
+      "invasive_species.SurveyType",
+      "invasive_species.Latitude",
+      "invasive_species.Longitude",
+      "invasive_species.Town",
+      "invasive_species.GrossArea",
+      "invasive_species.InfestedArea",
+      "invasive_species.PlantDescription",
+      "invasive_species.DistributionName",
+      "invasive_species.AssessmentDate",
+      "invasive_species.TreatmentDate",
+      "invasive_species.TreatmentEffectiveness",
+      "invasive_species.TreatmentType",
+      "invasive_species.TreatmentPerson",
+      "invasive_species.TreatmentAssessmentDate",
+      "invasive_species.Assessor",
+      "invasive_species.TreatmentAssessmentNotes",
+      "invasive_species.TreatmentHours",
+      "invasive_species.ChemicalName",
+      "invasive_species.ChemicalConsentration",
+      "invasive_species.ChemicalOunces",
+      "invasive_species.ApplicationMethod",
+      "invasive_species.CertifiedApplicator",
+      "invasive_species.EPARegistationNumber"
+    ]
+  }
+}

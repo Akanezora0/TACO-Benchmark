@@ -1,0 +1,22 @@
+{
+  "sql": "SELECT shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.企业名称, shijiaotongweiguidaoxianluxinxichuxing3671.线路名称 FROM shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672 JOIN shijiaotongweiguidaoxianluxinxichuxing3671 ON shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.统一社会信用代码 = shijiaotongweiguidaoxianluxinxichuxing3671.线路编码 WHERE shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.评定等级 = '优秀'",
+  "problem_description": "### **查询意图**  \n该 SQL 语句的目的是查询“信用评价结果为‘优秀’的汽车租赁企业”及其对应的“轨道交通线路名称”，通过关联两个表的数据，筛选出符合条件的记录。\n\n---\n\n### **详细描述**  \n1. **涉及的表**：  \n   - `shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672`（可能为“市交通委汽车租赁企业信用评价结果数据”表）  \n     - 包含字段：`企业名称`、`统一社会信用代码`、`评定等级`等。  \n   - `shijiaotongweiguidaoxianluxinxichuxing3671`（可能为“市交通委轨道交通线路信息出行”表）  \n     - 包含字段：`线路名称`、`线路编码`等。  \n\n2. **关联条件**：  \n   - 通过 `统一社会信用代码`（汽车租赁企业表）与 `线路编码`（轨道交通线路表）关联，建立两表之间的关系。  \n\n3. **筛选条件**：  \n   - 仅选择 `评定等级 = '优秀'` 的汽车租赁企业。  \n\n4. **输出列**：  \n   - 汽车租赁企业的 `企业名称`。  \n   - 关联的轨道交通线路的 `线路名称`。  \n\n---\n\n### **业务场景**  \n该查询可能用于以下业务场景：  \n1. **政府监管**：交通管理部门需要了解哪些汽车租赁企业在信用评价中表现优秀，并关联其服务的轨道交通线路，以便优化资源配置或进行表彰。  \n2. **企业合作**：轨道交通运营方可能需要筛选信用良好的汽车租赁企业，以建立“地铁+租车”联运服务合作。  \n3. **公众服务**：为乘客提供“信用优秀的租车企业+附近地铁线路”推荐信息，提升出行便利性。  \n\n---\n\n### **用户描述**  \n在上述业务场景中，用户可能遇到的实际问题或需求包括：  \n1. **政府监管需求**：  \n   - “我们需要找出信用评级优秀的汽车租赁企业，并了解它们主要服务哪些地铁线路，以便制定扶持政策或加强监管。”  \n2. **企业合作需求**：  \n   - “我们地铁公司想与信用良好的租车企业合作，在站点附近提供租车服务，如何快速找到符合条件的候选企业及其覆盖线路？”  \n3. **乘客查询需求**：  \n   - “我想在地铁站附近租车，但担心遇到不靠谱的公司，能否推荐信用优秀的企业及其服务线路？”  \n\n通过该查询，可以直观地获取“优秀企业-关联线路”的对应关系，辅助决策或服务优化。",
+  "natural_language_query": "\"你好，我想咨询一下关于租车公司的问题。最近想在地铁站附近租车，但听朋友说有些租车公司不太靠谱，经常有纠纷。能不能帮我查查那些信用比较好的租车公司啊？最好是评级优秀的那种。另外我还想知道这些靠谱的公司都在哪些地铁线路附近有服务点，这样我出行也方便些。之前在其他城市遇到过租车公司乱收费的情况，所以这次想提前做做功课。对了，如果能知道这些公司和地铁线路的具体对应关系就更好了，这样我可以根据常坐的线路来选择合适的租车公司。谢谢啊！\"",
+  "results": 0,
+  "sql skeleton": "select _ ._ ,_ ._ from _ join _ on _ ._ = _ ._ where _ ._ = _",
+  "database": "交通服务",
+  "tables": {
+    "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672": [
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.企业名称",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.评定等级",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.所属地区",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.年份",
+      "shijiaotongweiqichezulinqiyexinyongpingjiajieguoshuju3672.统一社会信用代码"
+    ],
+    "shijiaotongweiguidaoxianluxinxichuxing3671": [
+      "shijiaotongweiguidaoxianluxinxichuxing3671.线路编码",
+      "shijiaotongweiguidaoxianluxinxichuxing3671.线路名称",
+      "shijiaotongweiguidaoxianluxinxichuxing3671.站点数"
+    ]
+  }
+}

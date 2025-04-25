@@ -1,0 +1,26 @@
+{
+  "sql": "SELECT shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC, shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH FROM shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374 WHERE shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS = '商品已验收';",
+  "problem_description": "- **查询意图**：该 SQL 语句的目的是从表 `shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374` 中查询出所有 `JYCS`（经营状态）为“商品已验收”的记录，并返回这些记录的 `JYZMC`（经营者名称）和 `XKZBH`（许可证编号）字段。\n\n- **详细描述**：\n  - **涉及的表**：`shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374`（表名较长，可能是一个存储市场监督管理相关餐饮服务许可证信息的表）。\n  - **涉及的列**：\n    - `JYZMC`（经营者名称）：表示餐饮服务经营者的名称。\n    - `XKZBH`（许可证编号）：表示餐饮服务许可证的编号。\n    - `JYCS`（经营状态）：表示经营者的当前状态，这里条件是“商品已验收”。\n  - **查询条件**：`JYCS = '商品已验收'`，即筛选出经营状态为“商品已验收”的记录。\n\n- **业务场景**：\n  - 该查询可能用于市场监督管理部门对餐饮服务经营者的许可证信息进行管理。通过筛选“商品已验收”状态的经营者，可以快速获取已完成商品验收的餐饮服务经营者的名称和许可证编号。\n  - 可能的业务场景包括：\n    - 监管部门需要统计已完成商品验收的餐饮服务经营者名单。\n    - 对已验收的经营者进行后续的合规检查或审计。\n    - 生成报告或通知，针对特定状态的经营者进行进一步操作。\n\n- **用户描述**：\n  - 用户可能是市场监督管理部门的工作人员，需要了解哪些餐饮服务经营者已经完成了商品验收流程。\n  - 用户的需求可能是：\n    - 确保所有经营者的商品验收状态符合规定。\n    - 对已验收的经营者进行后续的监管或服务。\n    - 生成统计报表，向上级汇报已完成验收的经营者数量及其基本信息。\n  - 用户可能遇到的实际问题包括：\n    - 需要快速筛选出符合条件的经营者，避免手动查找。\n    - 确保数据的准确性和及时性，以便进行有效的监管。",
+  "natural_language_query": "市民反映，我是市场监督管理局的工作人员，最近在跟进餐饮服务经营者的商品验收情况。想了解一下目前有哪些餐饮店已经完成了商品验收流程，需要这些店铺的老板名字和他们的许可证号码。我们这边要做个统计，看看验收工作进展如何，好安排下一步的检查计划。之前都是手动查特别麻烦，希望能帮忙整理一份完整的清单。主要是那些显示\"商品已验收\"的店铺，麻烦尽快提供一下这些信息。",
+  "results": 0,
+  "sql skeleton": "SELECT _ , _ FROM _ -_ ;",
+  "database": "餐饮美食",
+  "tables": {
+    "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374": [
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYZMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZBH",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYCS",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.JYXM",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.FZRQ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.YXQZ",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.XKZID",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.DWMC",
+      "shishichangjianguanjucanyinfuwuxukezhengqingkuangxinxi3374.EXCHANGETIME"
+    ],
+    "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076": [
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专用标识牌号",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.专柜名称",
+      "shiminzuzongjiaoweiguifanhuaqingzhenshipinzhuanguishuju3076.地址"
+    ]
+  }
+}
