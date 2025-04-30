@@ -126,7 +126,7 @@ pip install sqlparse sqlglot networkx tqdm torch openai transformers
 
 ## Data Examples
 
-### 1. US Dataset (us)
+### 1. US Dataset
 
 #### Single Database Query Example
 ```sql
@@ -156,7 +156,7 @@ ON v."OBJECTID" = d."SITE_ID";
 **Query Intent**:
 This query aims to analyze the spatial relationships between recreation sites and landfills managed by different government departments, obtaining their latitude and longitude coordinates and department affiliation information.
 
-### 2. Beijing Dataset (beijing)
+### 2. Beijing Dataset
 
 #### Single Database Query Example
 ```sql
@@ -195,7 +195,7 @@ WHERE a."检查结果" = '不合格';
 **Query Intent**:
 该查询旨在获取食品安全检查不合格的清真食品专柜信息，包括检查时间、问题详情和位置信息，用于分析不合格专柜的分布情况。
 
-### 3. Smart City Dataset (smartcity)
+### 3. Smart City Dataset
 
 #### Single Database Query Example
 ```sql
