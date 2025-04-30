@@ -52,7 +52,7 @@ The data preprocessing module is responsible for data cleaning, transformation, 
 - **Data Transformation**: Converting data to standard format
 - **Data Validation**: Ensuring data quality and consistency
 
-#### 2. SQL Generation Module (sql_generation.py)
+#### 2. SQL Generation Module (sql_generation/)
 
 The SQL generation module is responsible for generating SQL query skeletons and structures. Main functions include:
 
@@ -77,7 +77,7 @@ generator = SQLGenerator(config)
 generator.run()
 ```
 
-#### 3. Natural Language Generation Module (nl_generation.py)
+#### 3. Natural Language Generation Module (nl_generation/)
 
 The natural language generation module is responsible for converting SQL queries to natural language queries. Main functions include:
 
