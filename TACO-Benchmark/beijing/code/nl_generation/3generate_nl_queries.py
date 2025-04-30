@@ -1,3 +1,5 @@
+# fill the api key and model name
+
 import json
 import os
 import re
@@ -18,31 +20,28 @@ def generate_text(user_input):
         )
         assistant_reply = response.choices[0].message.content
         return assistant_reply.strip()
-    # except openai.error.OpenAIError as e:
-    #     print(f"API 调用出错：{e}")
-    #     return ""
+
     except Exception as e:
-        print(f"API 调用出错：{e}")
+        print(f"API call failed: {e}")
         return ""
 
-# 主函数
-def main():
-    # 手动指定要处理的 SQL 语句的起始和结束序号（从 0 开始计数）
-    # 这里移除起始和结束序号，处理所有文件
-    # start_idx = 0   # 起始序号，包含
-    # end_idx = 0   # 结束序号，包含
 
-    # 获取脚本所在目录
+def main():
+    # Manually specify the start and end index of SQL statements to process (counting from 0)
+    # Remove start and end index here to process all files
+    # start_idx = 0   # Start index, inclusive
+    # end_idx = 0     # End index, inclusive
+
     script_dir = os.path.dirname(os.path.abspath(__file__))
 
-    # 定义输入和输出路径
+    # Define input and output paths
     sql_statements_dir = os.path.join(script_dir, '..', '..', 'data')
     output_dir = os.path.join(script_dir, '..', '..', 'data')
     # prompts_dir = os.path.join(output_dir, 'prompts')
     os.makedirs(output_dir, exist_ok=True)
     # os.makedirs(prompts_dir, exist_ok=True)
 
-    # 示例列表（可根据需要调整或加载外部示例）
+    # Example list (adjustable or load external examples)
     examples = [
         {
             'problem_description': '查询顺义区杨镇汉石桥事地村的隐患名称，包括可能存在的卫生、安全等问题。',
@@ -58,28 +57,28 @@ def main():
         },
     ]
 
-    # 遍历单一数据库的 SQL JSON 文件
+    # Traverse SQL JSON files for single database
     single_sql_dir = os.path.join(sql_statements_dir, 'new_sql_single')
     for database_name in os.listdir(single_sql_dir):
         db_sql_dir = os.path.join(single_sql_dir, database_name)
         if not os.path.isdir(db_sql_dir):
             continue
-        for file_name in tqdm(os.listdir(db_sql_dir), desc=f"处理单一数据库 '{database_name}' 的 SQL 文件"):
+        for file_name in tqdm(os.listdir(db_sql_dir), desc=f"processing single database '{database_name}' SQL files"):
             if not file_name.endswith(".json"):
                 continue
             file_idx = int(re.findall(r'\d+', file_name)[0]) if re.findall(r'\d+', file_name) else "unknown"
             output_file = os.path.join(output_dir, 'new_sql_nl_single', database_name, f'generated_nl_query_{file_idx}.json')
             os.makedirs(os.path.dirname(output_file), exist_ok=True)
 
-            # 检查输出文件是否已经存在
+
             if os.path.exists(output_file):
-                print(f"已存在：{output_file}，跳过")
-                continue  # 跳过当前文件，继续下一个
+                print(f"{output_file} already exists, skip")
+                continue
 
             sql_file_path = os.path.join(db_sql_dir, file_name)
-            print(f"处理 SQL 文件：{sql_file_path}")
+            print(f"Processing SQL file: {sql_file_path}")
 
-            # 加载 SQL 语句
+
             with open(sql_file_path, 'r', encoding='utf-8') as f:
                 try:
                     sql_data = json.load(f)
@@ -90,16 +89,16 @@ def main():
                     tables = sql_data['tables']
                     
                 except json.JSONDecodeError as e:
-                    print(f"无法解析 JSON 文件 {sql_file_path}：{e}")
+                    print(f"Failed to parse JSON file {sql_file_path}: {e}")
                     continue
                 except KeyError:
-                    print(f"JSON 文件 {sql_file_path} 缺少字段，跳过")
+                    print(f"JSON file {sql_file_path} is missing fields, skip")
                     continue
 
-            # 定义保存提示的列表
+            # Define list to save prompts
             prompts = []
 
-            # 阶段 1：生成问题描述
+            # Step1: generate problem description
             problem_description_prompt = f"""
 请阅读以下 SQL 语句，逐步分析并用详细的语言描述该 SQL 语句的查询意图，包括涉及的表、列、条件，以及可能的业务场景。
 
@@ -112,7 +111,7 @@ SQL 语句：
 - **业务场景**：查询到的表、列、条件等可以用来解决什么业务场景。
 - **用户描述**：上面的业务场景下用户可能遇到的实际问题或需求。
 """
-            # 保存提示
+            # Save prompt
             prompts.append({
                 'idx': file_idx,
                 'sql_query': sql_query,
@@ -123,11 +122,11 @@ SQL 语句：
             problem_description = generate_text(problem_description_prompt)
 
             if not problem_description:
-                print(f"未能生成问题描述，跳过文件：{sql_file_path}")
+                print(f"failed to generate problem description for {sql_file_path}")
                 continue
 
-            # 阶段 2：生成自然语言查询
-            # 构建示例文本
+            # Step2: generate natural language query
+            # Build example text
             example_text = ""
             if examples:
                 for example in examples:
@@ -135,7 +134,6 @@ SQL 语句：
                     example_text += f"- 问题描述：\n{example['problem_description']}\n"
                     example_text += f"- 自然语言查询：\n{example['natural_language_query']}\n\n"
 
-# - 尽量以“市民反映”开头的方式来转述。
             natural_language_query_prompt = f"""
 根据以下问题描述，模拟真实用户的提问，生成一段自然语言查询。要求如下：
 - 语言风格要符合真实场景中的用户提问，可能包含意图不明、信息冗余等特点。
@@ -153,7 +151,7 @@ SQL 语句：
 
 请根据上述问题描述，生成对应的自然语言查询。
 """
-            # 保存提示
+            # Save prompt
             prompts.append({
                 'idx': file_idx,
                 'problem_description': problem_description,
@@ -164,12 +162,12 @@ SQL 语句：
             natural_language_query = generate_text(natural_language_query_prompt)
 
             if not natural_language_query:
-                print(f"未能生成自然语言查询，跳过文件：{sql_file_path}")
+                print(f"failed to generate natural language query for {sql_file_path}")
                 continue
 
-#             # 阶段 3：生成表格名
-#             table_name_prompt = f"""
-# 请分析以下 SQL 语句，提取其中涉及的所有表名，并将它们以逗号分隔列出：
+            # Step3: generate table name
+            table_name_prompt = f"""
+请分析以下 SQL 语句，提取其中涉及的所有表名，并将它们以逗号分隔列出：
 
 # SQL 语句：
 # {sql_query}
@@ -179,14 +177,13 @@ SQL 语句：
 # - 只需要返回表名的list，不要包含其他信息
 # - 表名内部可能有其他符号，请正确识别表名
 # """
-            # # 生成表格名
+            # # generate table name
             # table_name = generate_text(table_name_prompt)
 
             # if not table_name:
-            #     print(f"未能生成表名，跳过文件：{sql_file_path}")
+            #     print(f"failed to generate table name for {sql_file_path}")
             #     continue
 
-            # 保存结果到单独的文件
             result = {
                 'sql': sql_query,
                 'problem_description': problem_description,
@@ -199,17 +196,17 @@ SQL 语句：
             with open(output_file, 'w', encoding='utf-8') as f:
                 json.dump(result, f, ensure_ascii=False, indent=2)
 
-            # 保存提示到单独的文件
+
             prompts_dir = os.path.join(output_dir, 'new_sql_nl_single', database_name, 'prompts')
             os.makedirs(prompts_dir, exist_ok=True)
             prompts_file = os.path.join(prompts_dir, f'prompts_single_{file_idx}.json')
             if os.path.exists(prompts_file):
-                print(f"已存在：{prompts_file}，跳过")
+                print(f"{prompts_file} already exists, skip")
             else:
                 with open(prompts_file, 'w', encoding='utf-8') as f:
                     json.dump(prompts, f, ensure_ascii=False, indent=2)
 
-            print(f"已生成并保存自然语言查询：{output_file}")
+            print(f"generated and saved natural language query: {output_file}")
 
 if __name__ == '__main__':
     main()

@@ -6,7 +6,7 @@ import pandas as pd
 
 def get_cfg_rules(node, rules=None):
     """
-    递归遍历AST，生成CFG规则序列
+    recursively traverse AST, generate CFG rule sequence
     """
     if rules is None:
         rules = []
@@ -16,7 +16,7 @@ def get_cfg_rules(node, rules=None):
 
     rule = node.key
     children = []
-    # 处理 node 的所有子节点
+    # process all children of node
     for arg_value in node.args.values():
         if isinstance(arg_value, sqlglot.Expression):
             children.append(arg_value.key)
@@ -42,7 +42,7 @@ def get_cfg_rules(node, rules=None):
 
 def ast_to_dict(node):
     """
-    将AST节点转换为可序列化的字典形式
+    convert AST node to serializable dictionary
     """
     if not node:
         return None
@@ -62,7 +62,7 @@ def ast_to_dict(node):
 def process_sql_file(input_file, output_file):
     with open(input_file, 'r', encoding='utf-8') as infile:
         data_list = json.load(infile)
-        print(f"处理文件 {input_file}，共有 {len(data_list)} 条记录。")
+        print(f"processing file {input_file}, containing {len(data_list)} records")
 
     processed_data = []
     for idx, data in enumerate(data_list):
@@ -70,46 +70,45 @@ def process_sql_file(input_file, output_file):
         if not sql_text:
             continue
         try:
-            # 解析SQL，生成AST
+            # parse SQL, generate AST
             ast = parse_one(sql_text)
-            # 生成CFG规则序列
+            # generate CFG rule sequence
             cfg_rules = get_cfg_rules(ast)
-            # 将AST转换为字典形式
+            # convert AST to dictionary
             ast_dict = ast_to_dict(ast)
-            # 更新数据项
+            # update data item
             data['ast'] = ast_dict
             data['cfg_rules'] = cfg_rules
             processed_data.append(data)
         except Exception as e:
-            print(f"第 {idx} 条记录解析SQL时出错：{e}")
+            print(f"error parsing SQL for the {idx}-th record: {e}")
             continue
 
-    # 将结果写入输出文件
     with open(output_file, 'w', encoding='utf-8') as outfile:
         json.dump(processed_data, outfile, ensure_ascii=False, indent=2)
-    print(f"AST和CFG规则序列生成完成，结果保存在 {output_file}")
+    print(f"AST and CFG rule sequence generation completed, results saved in {output_file}")
 
 def generate_cfg_for_databases(databases_dir, input_skeleton_file, output_dir):
-    # 遍历 parsed_data/ 下的所有数据库文件夹
+    # traverse all database folders in parsed_data/
     for db_folder in os.listdir(databases_dir):
         db_folder_path = os.path.join(databases_dir, db_folder)
-        if os.path.isdir(db_folder_path):  # 如果是文件夹，每个文件夹代表一个数据库
-            # 对应的 SQL skeleton 文件统一读取
-            input_file = input_skeleton_file  # 统一的 SQL skeletons 文件
-            output_file = os.path.join(output_dir, f"{db_folder}_ast_cfg.json")  # 输出文件路径
+        if os.path.isdir(db_folder_path):  # if it is a folder, each folder represents a database
+            # read the unified SQL skeleton file
+            input_file = input_skeleton_file  # the unified SQL skeletons file
+            output_file = os.path.join(output_dir, f"{db_folder}_ast_cfg.json")  # the output file path
 
-            # 生成 CFG 文件
+            # generate CFG file
             process_sql_file(input_file, output_file)
-            print(f"{db_folder} 的 CFG 文件已生成并保存到 {output_file}")
+            print(f"{db_folder} CFG file generated and saved in {output_file}")
 
 if __name__ == '__main__':
-    # 定义路径
-    parsed_data_dir = os.path.join('..', '..', 'data', 'parsed_data')  # 使用已处理数据的 parsed_data 目录
-    input_skeleton_file = os.path.join('..', '..', 'data', 'new_sql_skeletons.json')  # 统一的 SQL skeleton 文件
-    output_dir = os.path.join('..', '..', 'data', 'new_asf_cfg')  # 生成的 CFG 文件保存目录
 
-    # 创建保存 CFG 文件的目录（如果不存在）
+    parsed_data_dir = os.path.join('..', '..', 'data', 'parsed_data')  # the parsed_data directory
+    input_skeleton_file = os.path.join('..', '..', 'data', 'new_sql_skeletons.json')  # the unified SQL skeleton file
+    output_dir = os.path.join('..', '..', 'data', 'new_ast_cfg')  # the directory to save the generated CFG files
+
+    # create the directory to save the generated CFG files (if it does not exist)
     os.makedirs(output_dir, exist_ok=True)
 
-    # 处理所有数据库
+    # process all databases
     generate_cfg_for_databases(parsed_data_dir, input_skeleton_file, output_dir)

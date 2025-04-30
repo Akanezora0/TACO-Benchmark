@@ -5,7 +5,7 @@ from tqdm import tqdm
 
 def load_data(data_file):
     """
-    读取 JSON 数据文件
+    read JSON data file
     """
     with open(data_file, 'r', encoding='utf-8') as f:
         data_list = json.load(f)
@@ -13,7 +13,7 @@ def load_data(data_file):
 
 def get_cfg_rules_list(data_list):
     """
-    提取数据中的 CFG 规则列表
+    extract CFG rule list from data
     """
     cfg_rules_list = []
     for data in data_list:
@@ -22,107 +22,106 @@ def get_cfg_rules_list(data_list):
             cfg_rules_list.append(cfg_rules)
     return cfg_rules_list
 
-from tqdm import tqdm  # 导入 tqdm 库
 
 def generate_new_sql_structures(cfg_rules_list, num_samples):
     """
-    基于 CFG 规则生成新的 SQL 结构
+    generate new SQL structures based on CFG rules
     """
-    # 收集所有唯一的 CFG 规则序列
+    # collect all unique CFG rule sequences
     unique_rule_sequences = set(tuple(seq) for seq in cfg_rules_list)
     all_rule_sequences = list(unique_rule_sequences)
 
-    # 初始化生成的结构列表
+    # initialize the generated structure list
     generated_structures = []
 
-    # 首先，添加旧数据库中的所有 CFG 规则序列，确保它们包含在生成的结构中
+    # first, add all CFG rule sequences from old databases, ensure they are included in the generated structures
     generated_structures.extend(all_rule_sequences)
 
-    # 使用 tqdm 包装循环，显示进度条
+    # use tqdm to wrap the loop, show the progress bar
     with tqdm(total=num_samples, desc="Generating SQL structures") as pbar:
-        # 更新进度条，因为已经添加了初始的 CFG 规则序列
+        # update the progress bar, because the initial CFG rule sequences have been added
         pbar.update(len(generated_structures))
 
-        # 应用有效的转换来生成新的 CFG 规则序列
+        # apply valid transformations to generate new CFG rule sequences
         while len(generated_structures) < num_samples:
-            # 随机选择一个 CFG 规则序列
+            # randomly select a CFG rule sequence
             seq = list(random.choice(all_rule_sequences))
 
-            # 应用有效的转换（如交换两个非终结符）
+            # apply valid transformations (e.g., swap two non-terminal symbols)
             transformed_seq = apply_valid_transformation(seq)
 
-            # 确保新序列是唯一的
+            # ensure the new sequence is unique
             seq_tuple = tuple(transformed_seq)
             if seq_tuple not in unique_rule_sequences:
                 generated_structures.append(transformed_seq)
                 unique_rule_sequences.add(seq_tuple)
-                pbar.update(1)  # 更新进度条
+                pbar.update(1)
 
-    # 如果仍然不足，则按照比例重复已有的 skeleton
+    # if still insufficient, repeat the existing skeletons in proportion
     if len(generated_structures) < num_samples:
         additional_structures = list(generated_structures)
         while len(generated_structures) < num_samples:
             generated_structures.extend(additional_structures)
-            pbar.update(len(additional_structures))  # 更新进度条
-        # 截断到指定数量
+            pbar.update(len(additional_structures)) 
+        # truncate to the specified number
         generated_structures = generated_structures[:num_samples]
 
     return generated_structures
 
 def apply_valid_transformation(seq):
     """
-    应用有效的转换，如交换两个非终结符
+    apply valid transformations, e.g., swap two non-terminal symbols
     """
-    # 复制序列以避免修改原序列
+    # copy the sequence to avoid modifying the original sequence
     new_seq = seq.copy()
-    # 定义可以交换的规则索引（避免交换产生无效结构）
+    # define the indices of rules that can be swapped (avoid swapping to generate invalid structures)
     indices = [i for i in range(len(new_seq)) if '->' in new_seq[i]]
     if len(indices) >= 2:
         i1, i2 = random.sample(indices, 2)
-        # 交换两个规则
+        # swap two rules
         new_seq[i1], new_seq[i2] = new_seq[i2], new_seq[i1]
     return new_seq
 
 def generate_sql_structure_for_databases(parsed_data_dir, cfg_files_dir, output_dir, num_samples=1000):
     """
-    为每个数据库生成 SQL 结构并保存到文件
+    generate SQL structures for each database and save to file
     """
-    # 遍历 parsed_data/ 下的所有数据库文件夹
+    # traverse all database folders in parsed_data/
     for db_folder in os.listdir(parsed_data_dir):
         print(f"processing {db_folder}")
         db_folder_path = os.path.join(parsed_data_dir, db_folder)
         
-        if os.path.isdir(db_folder_path):  # 如果是文件夹，每个文件夹代表一个数据库
-            # 对应的 CFG 文件
+        if os.path.isdir(db_folder_path):  # if it is a folder, each folder represents a database
+            # the corresponding CFG file
             cfg_file = os.path.join(cfg_files_dir, f"{db_folder}_ast_cfg.json")
             
-            # 加载该数据库的 CFG 规则
+            # load the CFG rules for this database
             cfg_data = load_data(cfg_file)
             
-            # 提取 CFG 规则序列列表
+            # extract the list of CFG rule sequences
             cfg_rules_list = get_cfg_rules_list(cfg_data)
             
-            # 生成新的 SQL 结构
+            # generate new SQL structures
             generated_structures = generate_new_sql_structures(cfg_rules_list, num_samples)
 
-            # 输出文件路径
+
             output_file = os.path.join(output_dir, f"{db_folder}_structure.json")
 
-            # 将生成的 SQL 结构保存到文件
+
             with open(output_file, 'w', encoding='utf-8') as f:
                 json.dump(generated_structures, f, ensure_ascii=False, indent=2)
             
-            print(f"{db_folder} 的 SQL 结构已生成并保存到 {output_file}")
+            print(f"{db_folder} SQL structures generated and saved to {output_file}")
 
 if __name__ == '__main__':
-    # 定义路径
-    parsed_data_dir = os.path.join('..', '..', 'data', 'parsed_data')  # 使用已处理数据的 parsed_data 目录
-    cfg_files_dir = os.path.join('..', '..', 'data', 'new_asf_cfg')  # 之前生成的 CFG 文件目录
-    output_dir = os.path.join('..', '..', 'data', 'new_sql_structure')  # 生成的 SQL 结构文件保存目录
 
-    # 创建保存 SQL 结构文件的目录（如果不存在）
+    parsed_data_dir = os.path.join('..', '..', 'data', 'parsed_data')  # the parsed_data directory
+    cfg_files_dir = os.path.join('..', '..', 'data', 'new_asf_cfg')  # the directory of the generated CFG files
+    output_dir = os.path.join('..', '..', 'data', 'new_sql_structure')  # the directory to save the generated SQL structures
+
+    # create the directory to save the generated SQL structures (if it does not exist)
     os.makedirs(output_dir, exist_ok=True)
 
-    # 为每个数据库生成 SQL 结构，num_samples 表示每个数据库生成的 SQL 结构数量
-    num_samples = 100  # 可以根据需要调整这个值
+    # generate SQL structures for each database, num_samples represents the number of SQL structures to generate for each database
+    num_samples = 100  # the number of SQL structures to generate for each database
     generate_sql_structure_for_databases(parsed_data_dir, cfg_files_dir, output_dir, num_samples)
