@@ -9,37 +9,101 @@ Note: Some code dependencies involve data privacy and may not be fully executabl
 ### File Structure
 ```
 TACO-Benchmark/
-├── us/                    # US Dataset
-│   ├── code/             # Code Directory
-│   │   ├── data_prep/    # Data Preprocessing Code
+├── TACO-SQL/                # TACO-SQL Framework
+│   ├── TACO-SQL.py         # Main framework implementation
+│   ├── config.yaml         # Configuration file
+│   ├── outputs/            # Generated SQL outputs
+│   └── logs/               # Execution logs
+├── us/                     # US Dataset
+│   ├── code/              # Code Directory
+│   │   ├── data_prep/     # Data Preprocessing Code
 │   │   ├── nl_generation/ # Natural Language Query Generation Code
 │   │   └── sql_generation/# SQL Generation Code
-│   └── data/             # Data Directory
-│       ├── new_asf_cfg/   # AST and CFG Rules Data
-│       ├── new_graph/     # Graph Structure Data
-│       ├── new_schema/    # Database Schema
-│       ├── new_sql_cross/ # Cross-database SQL Queries
-│       ├── new_sql_nl_single/ # Single-database Natural Language Queries
-│       ├── new_sql_single/ # Single-database SQL Queries
-│       ├── database/      # Database Files
-│       ├── new_sql_structure/ # SQL Structure Data
-│       └── new_sql_skeleton/ # SQL Skeleton Data
-├── beijing/              # Beijing Dataset
-│   ├── code/             # Code Directory
-│   │   ├── data_prep/    # Data Preprocessing Code
+│   └── data/              # Data Directory
+├── beijing/               # Beijing Dataset
+│   ├── code/              # Code Directory
+│   │   ├── data_prep/     # Data Preprocessing Code
 │   │   ├── nl_generation/ # Natural Language Query Generation Code
 │   │   └── sql_generation/# SQL Generation Code
-│   └── data/             # Data Directory
-│       ├── new_asf_cfg/   # AST and CFG Rules Data
-│       ├── new_graph/     # Graph Structure Data
-│       ├── new_schema/    # Database Schema
-│       ├── new_sql_cross/ # Cross-database SQL Queries
-│       ├── new_sql_nl_single/ # Single-database Natural Language Queries
-│       ├── new_sql_single/ # Single-database SQL Queries
-│       ├── database/      # Database Files
-│       ├── new_sql_structure/ # SQL Structure Data
-│       └── new_sql_skeleton/ # SQL Skeleton Data
-└── smartcity/            # Smart City Dataset
+│   └── data/              # Data Directory
+└── smartcity/             # Smart City Dataset
+```
+
+## TACO-SQL Framework
+
+TACO-SQL is a comprehensive framework for Text-to-SQL generation with multiple stages and approaches. It provides a unified interface for different SQL generation methods and includes various optimization techniques.
+
+### Key Features
+
+1. **Multiple Generation Methods**:
+   - Base LLM Methods (GPT-4, DeepSeek, etc.)
+   - LLM-Based Methods (DIN-SQL, MAC-SQL)
+   - SFT-Based Methods (CodeS-33B, Qwen2.5-Coder)
+   - Hybrid Methods (CHESS, Zero-NL2SQL)
+
+2. **Pipeline Stages**:
+   - Question Rewrite: Clarify and normalize user queries
+   - Table Linking: Identify relevant database tables
+   - Query Planning: Generate execution plans
+   - SQL Generation: Convert plans to SQL using various methods
+
+3. **Optimization Features**:
+   - SQL Validation and Error Correction
+   - JOIN Order Optimization
+   - Query Structure Optimization
+   - Multi-model Ensemble
+
+### Usage
+
+1. **Basic Usage**:
+```python
+from TACO_SQL import TACO_SQL_Pipeline, PipelineConfig, SQLGeneratorConfig, SQLGenerationType
+
+# Create configuration
+config = PipelineConfig(
+    query_model_path="./retrieval/query_model",
+    table_model_path="./retrieval/table_model",
+    merged_table_csv="merged_table.csv",
+    schema_json="schema.json",
+    top_k_tables=5,
+    sql_generator_config=SQLGeneratorConfig(
+        generation_type=SQLGenerationType.HYBRID,
+        model_name="deepseek-chat",
+        api_key="your_api_key",
+        base_url="https://api.deepseek.com"
+    )
+)
+
+# Initialize pipeline
+pipeline = TACO_SQL_Pipeline(config)
+
+# Generate SQL
+query = "Find all employees hired after 2020 with their department names"
+sql = pipeline.run(query)
+print(sql)
+```
+
+2. **Command Line Usage**:
+```bash
+python TACO-SQL.py --config config.yaml --query "your query here" --model GPT-o1
+```
+
+3. **Configuration File**:
+```yaml
+query_model_path: "./retrieval/query_model"
+table_model_path: "./retrieval/table_model"
+merged_table_csv: "merged_table.csv"
+schema_json: "schema.json"
+top_k_tables: 5
+api_key: "your_api_key"
+base_url: "https://api.deepseek.com"
+model_path: ""
+device: "cuda:0"
+temperature: 0.1
+top_p: 0.9
+data_path: "path/to/data"
+tables_json: "path/to/tables.json"
+dataset: "beijing"
 ```
 
 ### Code Module Description
@@ -61,22 +125,6 @@ The SQL generation module is responsible for generating SQL query skeletons and 
 - **SQL Skeleton Generation**: Generating SQL skeleton query structures based on rules
 - **SQL Skeleton Filling and Validation**: Filling SQL skeletons and generating and validating complete SQL queries
 
-Usage example:
-```python
-from sql_generation import SQLGenerator
-
-config = {
-    'parsed_data_dir': 'TACO-Benchmark/us/data/new_sql_single',
-    'new_structure_dir': 'TACO-Benchmark/us/data/new_sql_structure',
-    'new_skeleton_dir': 'TACO-Benchmark/us/data/new_sql_skeleton',
-    'new_logs_file': 'TACO-Benchmark/us/data/new_sql_structure/logs.txt',
-    'old_data_file': 'TACO-Benchmark/us/data/new_sql_single/original_data.json'
-}
-
-generator = SQLGenerator(config)
-generator.run()
-```
-
 #### 3. Natural Language Generation Module (nl_generation/)
 
 The natural language generation module is responsible for converting SQL queries to natural language queries. Main functions include:
@@ -86,25 +134,6 @@ The natural language generation module is responsible for converting SQL queries
 - **SQL Framework Parsing**: Parsing SQL query frameworks
 - **Natural Language Query Generation**: Generating corresponding natural language queries
 
-Usage example:
-```python
-from nl_generation import SQLNLGenerator
-
-config = {
-    'model_name': "your_model_name",
-    'base_url': "your_api_base_url",
-    'api_key': "your_api_key",
-    'schema_dir': 'TACO-Benchmark/us/data/new_schema',
-    'sql_single_dir': 'TACO-Benchmark/us/data/new_sql_single',
-    'sql_cross_dir': 'TACO-Benchmark/us/data/new_sql_cross',
-    'output_single_dir': 'TACO-Benchmark/us/data/new_sql_nl_single',
-    'output_cross_dir': 'TACO-Benchmark/us/data/new_sql_nl_cross'
-}
-
-generator = SQLNLGenerator(config)
-generator.run()
-```
-
 ## Running Requirements
 
 ### Environment Requirements
@@ -112,7 +141,7 @@ generator.run()
 
 ### Dependencies
 ```bash
-pip install sqlparse sqlglot networkx tqdm torch openai transformers
+pip install sqlparse sqlglot networkx tqdm torch openai transformers sentence-transformers nltk pandas pyyaml
 ```
 
 ## Data Preparation
