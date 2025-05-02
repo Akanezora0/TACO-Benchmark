@@ -1,0 +1,14 @@
+api_key: <YOUR KEY>
+base_url: https://api.deepseek.com
+data_path: us/data
+dataset: us
+device: cuda:0
+merged_table_csv: merged_table.csv
+model_path: ''
+query_model_path: ./retrieval/query_model
+schema_json: 1000_final.json
+table_model_path: ./retrieval/table_model
+tables_json: us/data/tables.json
+temperature: 0.1
+top_k_tables: 5
+top_p: 0.9
