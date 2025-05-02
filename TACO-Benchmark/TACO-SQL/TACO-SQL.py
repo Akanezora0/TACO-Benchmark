@@ -1919,7 +1919,58 @@ class TACO_SQL_Pipeline:
             print(f"Failed to cleanup pipeline: {e}")
 
 
-# ═══════════════════════════ CLI Demo ═══════════════════════════════════
+class QuestionClassifier:
+    """Question classifier for categorizing queries into simple, non-nested, and nested types"""
+    
+    def __init__(self, api_key: str, model_name: str, base_url: str | None = None):
+        """Initialize the classifier"""
+        self.client = OpenAI(api_key=api_key, base_url=base_url)
+        self.model = model_name
+        
+    def _build_prompt(self, question: str) -> str:
+        """Build classification prompt"""
+        return f"Please analyze the following question and categorize it into one of these three types: 1. EASY - Simple query requiring only basic SELECT and WHERE 2. NON-NESTED - Non-nested query requiring JOINs and GROUP BY 3. NESTED - Nested query requiring subqueries or CTEs\n\nQuestion: {question}\n\nClassification Criteria:\n- EASY: Single table query with simple filtering conditions\n- NON-NESTED: Multiple table JOINs, aggregate functions, grouping, etc.\n- NESTED: Contains subqueries, CTEs, window functions, etc.\n\nPlease return only the classification result (EASY/NON-NESTED/NESTED)."
+
+    def classify(self, question: str) -> str:
+        """Classify the question"""
+        try:
+            # Build prompt
+            prompt = self._build_prompt(question)
+            
+            # Call LLM for classification
+            rsp = self.client.chat.completions.create(
+                model=self.model,
+                messages=[
+                    {"role": "system", "content": "You are a professional SQL problem classifier."},
+                    {"role": "user", "content": prompt}
+                ],
+                temperature=0.0 
+            )
+            
+            # 获取分类结果
+            category = rsp.choices[0].message.content.strip().upper()
+            
+            # 验证分类结果
+            if category not in ["EASY", "NON-NESTED", "NESTED"]:
+                logger.warning(f"Invalid category {category}, defaulting to NON-NESTED")
+                return "NON-NESTED"
+                
+            logger.info(f"Question classified as: {category}")
+            return category
+            
+        except Exception as e:
+            logger.warning(f"Question classification failed: {e}")
+            return "NON-NESTED"  # 默认返回非嵌套类型
+
+class DatasetType(enum.Enum):
+    """TACO-Benchmark dataset types."""
+    US = "us"                 # US Dataset
+    BEIJING = "beijing"       # Beijing Dataset
+    SMARTCITY = "smartcity"   # Smart City Dataset
+
+
+
+# ═══════════════════════════ main ═══════════════════════════════════
 if __name__ == "__main__":
     # 解析命令行参数
     parser = argparse.ArgumentParser(description="TACO-SQL Framework")
@@ -2031,51 +2082,3 @@ if __name__ == "__main__":
         print(f"\nError processing query: {str(e)}")
         logger.error("Pipeline execution failed", exc_info=True)
 
-class QuestionClassifier:
-    """Question classifier for categorizing queries into simple, non-nested, and nested types"""
-    
-    def __init__(self, api_key: str, model_name: str, base_url: str | None = None):
-        """Initialize the classifier"""
-        self.client = OpenAI(api_key=api_key, base_url=base_url)
-        self.model = model_name
-        
-    def _build_prompt(self, question: str) -> str:
-        """Build classification prompt"""
-        return f"Please analyze the following question and categorize it into one of these three types: 1. EASY - Simple query requiring only basic SELECT and WHERE 2. NON-NESTED - Non-nested query requiring JOINs and GROUP BY 3. NESTED - Nested query requiring subqueries or CTEs\n\nQuestion: {question}\n\nClassification Criteria:\n- EASY: Single table query with simple filtering conditions\n- NON-NESTED: Multiple table JOINs, aggregate functions, grouping, etc.\n- NESTED: Contains subqueries, CTEs, window functions, etc.\n\nPlease return only the classification result (EASY/NON-NESTED/NESTED)."
-
-    def classify(self, question: str) -> str:
-        """Classify the question"""
-        try:
-            # Build prompt
-            prompt = self._build_prompt(question)
-            
-            # Call LLM for classification
-            rsp = self.client.chat.completions.create(
-                model=self.model,
-                messages=[
-                    {"role": "system", "content": "You are a professional SQL problem classifier."},
-                    {"role": "user", "content": prompt}
-                ],
-                temperature=0.0 
-            )
-            
-            # 获取分类结果
-            category = rsp.choices[0].message.content.strip().upper()
-            
-            # 验证分类结果
-            if category not in ["EASY", "NON-NESTED", "NESTED"]:
-                logger.warning(f"Invalid category {category}, defaulting to NON-NESTED")
-                return "NON-NESTED"
-                
-            logger.info(f"Question classified as: {category}")
-            return category
-            
-        except Exception as e:
-            logger.warning(f"Question classification failed: {e}")
-            return "NON-NESTED"  # 默认返回非嵌套类型
-
-class DatasetType(enum.Enum):
-    """TACO-Benchmark dataset types."""
-    US = "us"                 # US Dataset
-    BEIJING = "beijing"       # Beijing Dataset
-    SMARTCITY = "smartcity"   # Smart City Dataset
