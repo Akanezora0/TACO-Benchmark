@@ -1,6 +1,6 @@
 # TACO-Benchmark
 
-TACO-Benchmark is a Text-to-SQL benchmark in open-domain scenarios. The project includes three main datasets: us, beijing, and smartcity. The us and beijing datasets are synthesized by our data pipeline from open data portals and are freely available for download. The smartcity dataset is internal data and not fully open to the public, but you can contact us for access.
+TACO-Benchmark is a Text-to-SQL benchmark in open-domain scenarios. The project includes three main datasets: us, beijing, and smartcity. The us and beijing datasets are synthesized by our data pipeline from open data portals and are freely available for [download](https://drive.google.com/file/d/1TcQOZoU2SkQQA5COQIux2cTIuMY1uzCi/view). The smartcity dataset is internal data and not fully open to the public, but you can contact us for access.
 
 Note: Some code dependencies involve data privacy and may not be fully executable.
 
