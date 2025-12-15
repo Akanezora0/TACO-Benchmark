@@ -1,0 +1,36 @@
+import pandas as pd
+
+# 创建 DataFrame
+data_updated = {
+    'Model': [
+        'GPT-4', 'GPT-4o', 'GPT-o1', 'Llama3-70b', 'Qwen2-72b', 'Deepseek-v2.5',
+        'MAC-SQL', 'DIN-SQL+GPT-4', 'codes-7b', 'qwen2.5 coder-7b',
+        'granite-34b', 'deepseek coder6.7b', 'CHESS', 'DAIL-SQL+GPT-4',
+        'Zero-NL2SQL', 'CHASE', 'OUR'
+    ],
+    '12345 Accuracy (%)': [
+        None, None, None, 7.9, 9.2, 12.8, None, None, 16.9, None, None, None, None, None, None, None, None
+    ],
+    'Beijing Accuracy (%)': [
+        32.6, 38.1, None, 21.9, 26.8, 32.4, 26.7, 29.0, 42.2, None, None, None,
+        25.2, 39.0, None, None, 54.4
+    ],
+    'Chicago Accuracy (%)': [
+        34.8, 37.6, None, 28.1, 24.7, 34.3, 31.2, 28.5, 45.7, None, 47.8, None,
+        32.7, 41.9, None, None, 55.8
+    ]
+}
+
+df_updated = pd.DataFrame(data_updated)
+
+# 将 None 替换为 '-'
+df_updated = df_updated.fillna('-')
+
+# 导出为 LaTeX 格式
+latex_table = df_updated.to_latex(index=False, column_format='lccc', caption='Accuracy of Different Models on NL2SQL Task', label='tab:accuracy')
+
+# 保存为 LaTeX 文件
+with open('accuracy_table.tex', 'w') as f:
+    f.write(latex_table)
+
+print("LaTeX table saved as 'accuracy_table.tex'")

@@ -1,0 +1,42 @@
+# Internal development files
+_internal/
+
+# Log files
+*.log
+**/*.log
+
+# Shell scripts (internal utilities)
+*.sh
+**/*.sh
+
+# Temporary analysis documents
+**/temp_*.md
+**/*分析*.md
+**/*汇总*.md
+**/*报告*.md
+**/*总结*.md
+**/*方案*.md
+**/*日志*.md
+
+# Results (optional - can include sample results)
+results/raw/
+results/processed/
+results/visualizations/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
