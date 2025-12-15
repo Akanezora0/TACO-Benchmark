@@ -1,0 +1,79 @@
+# Internal development files
+experiments/_internal/
+benchmark/data/
+benchmark/scripts/
+benchmark/tools/
+
+
+# Log files
+*.log
+**/*.log
+
+# Shell scripts (internal utilities)
+*.sh
+**/*.sh
+
+# Temporary analysis documents
+**/temp_*.md
+**/*分析*.md
+**/*汇总*.md
+**/*报告*.md
+**/*总结*.md
+**/*方案*.md
+**/*日志*.md
+**/*说明*.md
+**/*指南*.md
+**/*结果*.md
+**/*设计*.md
+**/*中文*.md
+
+**/*结果*.py
+
+# Results (optional - can include sample results)
+experiments/results/raw/
+experiments/results/processed/
+experiments/results/visualizations/
+
+# Large result files (>100MB)
+experiments/baselines/base_llm/results/*.json
+experiments/baselines/**/results/*.json
+
+# Large data files (>100MB)
+benchmark/generation/cross_database/joinable_table_pairs.json
+compare/
+benchmark/data/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Model files (if large)
+models/*.bin
+models/*.safetensors
+*.ckpt
+*.pth
+
+# Data files (if large - adjust as needed)
+*.db
+*.sqlite
+*.sqlite3
+
+# Environment
+.env
+.venv
+venv/
+env/
+
