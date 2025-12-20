@@ -101,9 +101,9 @@ python experiments/evaluation/exec_eval.py \
 
 ## Documentation
 
-- **[TACO-SQL Core Settings and Prompt Strategies](TACO-SQL实验核心设置与Prompt策略.md)**: Detailed prompt strategies and experimental settings
+- **[TACO-SQL Core Settings and Prompt Strategies](TACO-SQL_CORE_SETTINGS_AND_PROMPT_STRATEGIES.md)**: Detailed prompt strategies and experimental settings
 - **[Experiment Fairness](EXPERIMENT_FAIRNESS.md)**: Fair comparison principles and practices
-- **[Experiment Scripts Plan](EXPERIMENT_SCRIPTS_PLAN.md)**: Development plan and module organization
+- **[Reviewer Guide](REVIEWER_GUIDE.md)**: Quick guide for reviewers
 - **[Baseline Experiments](baselines/README.md)**: Baseline experiment documentation
 - **[TACO-SQL Experiments](taco_sql_exp/README.md)**: TACO-SQL ablation experiment documentation
 - **[Evaluation Framework](evaluation/README.md)**: Evaluation tools and metrics documentation
