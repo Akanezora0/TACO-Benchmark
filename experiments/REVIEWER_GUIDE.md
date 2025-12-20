@@ -64,7 +64,7 @@ experiments/
 ### Prompt Strategies
 - `baselines/base_llm/prompt_strategy.py` - Baseline prompt
 - `taco_sql_exp/prompts/` - All TACO-SQL prompt strategies
-- `TACO-SQL实验核心设置与Prompt策略.md` - Detailed prompt documentation
+- `TACO-SQL_CORE_SETTINGS_AND_PROMPT_STRATEGIES.md` - Detailed prompt documentation
 
 ### Experimental Settings
 - `taco_sql_exp/config.py` - Experiment configuration

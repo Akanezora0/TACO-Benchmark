@@ -138,7 +138,7 @@ python experiments/taco_sql_exp/qr_tl_qp/run_qr_tl_qp.py \
   - TACO-SQL Prompt (QR+TL, QR+TL+QP settings)
 - **Parameters**: temperature=0.1, max_tokens=2000
 
-For detailed prompt strategies, see: `TACO-SQL实验核心设置与Prompt策略.md`
+For detailed prompt strategies, see: `TACO-SQL_CORE_SETTINGS_AND_PROMPT_STRATEGIES.md`
 
 ## Configuration
 
@@ -187,6 +187,6 @@ Experimental results are saved in JSON format, each result contains:
 
 ## Related Documentation
 
-- [TACO-SQL Core Settings and Prompt Strategies](../TACO-SQL实验核心设置与Prompt策略.md)
+- [TACO-SQL Core Settings and Prompt Strategies](../TACO-SQL_CORE_SETTINGS_AND_PROMPT_STRATEGIES.md)
 - [Experiment Framework README](../README.md)
 
