@@ -1,7 +1,7 @@
 # TACO: A Benchmark for Open-Domain Text-to-SQL
 
 > **Paper link fix:** The URL `https://github.com/Akanezora0/TACO-Benchmark/experiments` in the submitted paper may return **404**.  
-> Please use: **https://github.com/Akanezora0/TACO-Benchmark/tree/main/experiments** to learn more details about our experiments configuration including rompting prompt strategies, dataset access and schema availability.
+> Please refer to https://github.com/Akanezora0/TACO-Benchmark/tree/main/experiments for additional details on our experimental setup, including prompting strategies, dataset access and schema availability.
 
 **TACO (Text-to-SQL with Ambiguous and Cross-Database Queries)** is a comprehensive benchmark designed to evaluate Text-to-SQL systems in real-world open-domain scenarios. Unlike traditional closed-domain benchmarks (e.g., Spider, BIRD) that focus on single predefined databases, TACO addresses the fundamental challenges encountered when users interact with large-scale, heterogeneous data lakes.
 
