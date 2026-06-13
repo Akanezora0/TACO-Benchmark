@@ -1,6 +1,6 @@
 <div align="center">
 
-# TACO-Benchmark: A benchmark for open-domain Text-to-SQL with ambiguous and cross-database queries**
+# TACO-Benchmark: A benchmark for open-domain Text-to-SQL with ambiguous and cross-database queries
 
 <br/>
 
