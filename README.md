@@ -1,39 +1,54 @@
 <div align="center">
 
-# TACO-Benchmark: A benchmark for open-domain Text-to-SQL with ambiguous and cross-database queries**
+# TACO-Benchmark
+
+**A benchmark for open-domain Text-to-SQL with ambiguous and cross-database queries**
 
 <br/>
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 [![Dataset](https://img.shields.io/badge/Dataset-Google%20Drive-4285F4?logo=google-drive&logoColor=white)](https://drive.google.com/file/d/1Ynbv5eyEnM59mlEzqXZZsNh8sdHWH-nb/view?usp=drive_link)
+[![GitHub Stars](https://img.shields.io/github/stars/Akanezora0/TACO-Benchmark?style=flat-square&logo=github)](https://github.com/Akanezora0/TACO-Benchmark/stargazers)
 
 <br/>
 
-**[Why TACO?](#why-taco)** · **[Dataset](#dataset)** · **[Examples](#representative-examples)** · **[Quick Start](#quick-start)** · **[Docs](docs/README.md)**
+**[News](#-news)** · **[Why TACO?](#-why-taco)** · **[Dataset](#-dataset)** · **[Examples](#-representative-examples)** · **[Quick Start](#-quick-start)** · **[Docs](docs/README.md)**
+
+<br/>
+
+⭐️ If you find TACO helpful, a **star** on GitHub would mean a lot to us — thanks for your support!
 
 </div>
 
+## 📢 News
+
+| Date | Update |
+|:--|:--|
+| **2026** | 🎉 TACO has been **accepted to VLDB 2026**! Paper and camera-ready details coming soon. |
+
+---
+
 **TACO** (Text-to-SQL with **A**mbiguous and **C**ross-database **O**pen-domain queries) is a benchmark for **real-world data-lake Text-to-SQL**. Unlike Spider or BIRD — where the target database is known and schemas are clean — TACO asks models to cope with **vague user questions**, **unspecified databases**, and **queries spanning multiple heterogeneous databases**.
 
-## Why TACO?
+## ✨ Why TACO?
 
 Existing benchmarks largely assume a single, well-defined schema. In practice, users query **open data lakes** with messy intent and weak cross-source relationships. TACO fills this gap with three stress tests:
 
 | Challenge | What makes it hard |
 |:--|:--|
-| **Ambiguous NL** | Redundant context, implicit constraints, and vague terms that do not map 1:1 to SQL |
-| **Open-domain retrieval** | The target database is not given — systems must find relevant tables across domains |
-| **Cross-database SQL** | A single question may require JOIN or UNION across 2–4 databases with weak keys |
+| 💬 **Ambiguous NL** | Redundant context, implicit constraints, and vague terms that do not map 1:1 to SQL |
+| 🔍 **Open-domain retrieval** | The target database is not given — systems must find relevant tables across domains |
+| 🔗 **Cross-database SQL** | A single question may require JOIN or UNION across 2–4 databases with weak keys |
 
 **What you get**
 
-- **~14,500** high-quality Text-to-SQL instances with **executable gold SQL** and validated results
-- **46 databases** across finance, healthcare, transportation, housing, government, and more
-- **Two regional subsets** — TACO-Beijing (24 DBs) and TACO-US (22 DBs)
-- **Standard evaluation splits** and a baseline / ablation suite (execution accuracy as the primary metric)
+- 📦 **~14,500** high-quality Text-to-SQL instances with **executable gold SQL** and validated results
+- 🗄️ **46 databases** across finance, healthcare, transportation, housing, government, and more
+- 🌏 **Two regional subsets** — TACO-Beijing (24 DBs) and TACO-US (22 DBs)
+- 📏 **Standard evaluation splits** and a baseline / ablation suite (execution accuracy as the primary metric)
 
-## Dataset
+## 📊 Dataset
 
 Download: [Google Drive — `taco-benchmark.tar.gz`](https://drive.google.com/file/d/1Ynbv5eyEnM59mlEzqXZZsNh8sdHWH-nb/view?usp=drive_link) (not included in git).
 
@@ -56,7 +71,7 @@ Download: [Google Drive — `taco-benchmark.tar.gz`](https://drive.google.com/fi
 
 Format details and directory layout: **[docs/DATASET.md](docs/DATASET.md)**
 
-## Representative examples
+## 💡 Representative examples
 
 ### 1 · Ambiguous natural language
 
@@ -95,7 +110,7 @@ ORDER BY "ToiletCount" DESC
 
 More examples (open-domain retrieval, UNION, 3–4 DB queries): **[docs/EXAMPLES.md](docs/EXAMPLES.md)**
 
-## Quick Start
+## 🚀 Quick Start
 
 ```bash
 git clone https://github.com/Akanezora0/TACO-Benchmark.git && cd TACO-Benchmark
@@ -106,11 +121,11 @@ taco eval run --model gpt-4o --dataset beijing   # baseline evaluation
 
 Setup, API configuration, and troubleshooting: **[docs/INSTALL.md](docs/INSTALL.md)** · Minimal repro script: **[examples/quick_eval.sh](examples/quick_eval.sh)**
 
-## Evaluation
+## 📈 Evaluation
 
 We provide baseline experiments (GPT-4o, DIN-SQL, CodeS, …), TACO-SQL ablations, and execution-accuracy (EX) evaluation. See **[docs/EXPERIMENTS.md](docs/EXPERIMENTS.md)** and **[experiments/README.md](experiments/README.md)**.
 
-## Documentation
+## 📚 Documentation
 
 | Doc | Contents |
 |:--|:--|
@@ -121,7 +136,7 @@ We provide baseline experiments (GPT-4o, DIN-SQL, CodeS, …), TACO-SQL ablation
 | [docs/GENERATION.md](docs/GENERATION.md) | Data regeneration pipeline (optional) |
 | [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | Repository layout |
 
-## Citation
+## 📝 Citation
 
 ```bibtex
 @misc{taco_benchmark,
@@ -135,3 +150,11 @@ We provide baseline experiments (GPT-4o, DIN-SQL, CodeS, …), TACO-SQL ablation
 ## License
 
 [MIT License](LICENSE)
+
+---
+
+<div align="center">
+
+⭐️ **Enjoying TACO?** Give us a [star](https://github.com/Akanezora0/TACO-Benchmark/stargazers) if you'd like to support the project!
+
+</div>
