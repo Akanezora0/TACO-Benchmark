@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-US数据集单数据库SQL生成脚本
+Single-database SQL generation script for the US dataset.
 
-基于beijing数据集的生成流程，适配US数据集（英文）
+Based on the beijing dataset generation pipeline, adapted for the US dataset (English).
 """
 
 import sys
 import os
 from pathlib import Path
 
-# 添加当前目录到路径
+# Add current directory to path
 script_dir = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, script_dir)
 
@@ -19,29 +19,29 @@ import argparse
 import json
 from tqdm import tqdm
 
-# 动态导入模块（因为模块名以数字开头）
+# Dynamic import (module name starts with a digit)
 spec = importlib.util.spec_from_file_location(
     "fill_module", 
-    os.path.join(script_dir, "2fill_sql_placeholders_improved.py")
+    os.path.join(script_dir, "fill_sql_placeholders.py")
 )
 fill_module = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(fill_module)
 
-# 修改prompt为英文版本
+# Override prompt with English version
 def construct_english_prompt(sql_skeleton, selected_tables, selected_columns, 
                               metadata, schema, sql_analysis, cross_database=False):
     """
-    构建英文版本的Prompt（用于US数据集）
+    Build English prompt (for US dataset).
     """
     def quote_identifier(identifier):
-        """使用双引号包裹标识符"""
+        """Wrap identifier in double quotes"""
         escaped = str(identifier).replace('"', '""')
         return f'"{escaped}"'
     
-    # 格式化表名
+    # Format table names
     tables = ', '.join([quote_identifier(table) for table in selected_tables])
     
-    # 格式化列名
+    # Format column names
     columns = []
     for table in selected_tables:
         if table in selected_columns:
@@ -58,12 +58,12 @@ def construct_english_prompt(sql_skeleton, selected_tables, selected_columns,
                 columns.append(quoted_col)
     columns_str = ', '.join(columns)
     
-    # 格式化表详细信息
+    # Format table details
     table_info_text = "\nTable Details:\n"
     for table_name in selected_tables:
         table_info_text += f"\nTable: {table_name}\n"
         
-        # 从metadata获取表描述
+        # Get table description from metadata
         if metadata and table_name in metadata.get('table_info', {}):
             table_meta = metadata['table_info'][table_name]
             if table_meta.get('description') and table_meta['description'] != 'No description available.':
@@ -71,7 +71,7 @@ def construct_english_prompt(sql_skeleton, selected_tables, selected_columns,
             if table_meta.get('comment'):
                 table_info_text += f"Comment: {table_meta['comment']}\n"
         
-        # 从schema获取列信息
+        # Get column info from schema
         table_info_text += "Columns:\n"
         for table in schema['tables']:
             if table['table_name'] == table_name:
@@ -82,7 +82,7 @@ def construct_english_prompt(sql_skeleton, selected_tables, selected_columns,
                     table_info_text += f"  - {full_column_name} (Type: {data_type})\n"
                 break
     
-    # 格式化外键关系
+    # Format foreign key relations
     fk_text = ""
     if metadata and 'foreign_key_relations' in metadata:
         fk_relations = metadata['foreign_key_relations']
@@ -96,7 +96,7 @@ def construct_english_prompt(sql_skeleton, selected_tables, selected_columns,
                 fk_text += f"- {fk['source']} references {fk['target']}\n"
                 fk_text += f"  (Table {fk['source_table']} can JOIN with table {fk['target_table']} via {fk['source'].split('.')[1]} and {fk['target'].split('.')[1]})\n"
     
-    # SQL骨架分析提示
+    # SQL skeleton analysis hints
     analysis_hints = ""
     if sql_analysis['has_join']:
         analysis_hints += "\nHint: This SQL skeleton contains JOIN operations.\n"
@@ -168,12 +168,12 @@ Please output only the generated complete SQL statement:
     
     return prompt.strip()
 
-# 替换原模块的prompt构建函数
+# Replace original module's prompt builder
 fill_module.construct_enhanced_prompt = construct_english_prompt
 
-# 同样需要替换compact prompt
+# Also replace compact prompt
 def construct_english_compact_prompt(sql_framework, extracted_info, schema):
-    """使用从图文件中提取的精简信息构建英文prompt"""
+    """Build English prompt from compact info extracted from graph file"""
     def quote_identifier(identifier):
         escaped = str(identifier).replace('"', '""')
         return f'"{escaped}"'
@@ -262,11 +262,11 @@ Please output only the generated complete SQL statement:
 
 fill_module.construct_compact_prompt = construct_english_compact_prompt
 
-# 修改system message为英文
+# Override system message to English
 original_generate_text = fill_module.generate_text
 
 def generate_text_english(prompt):
-    """调用大模型生成SQL（英文版本）"""
+    """Call LLM to generate SQL (English version)"""
     try:
         client = fill_module.get_client()
         response = client.chat.completions.create(
@@ -313,7 +313,7 @@ def main():
     
     args = parser.parse_args()
     
-    # 转换为绝对路径
+    # Convert to absolute paths
     script_dir = os.path.dirname(os.path.abspath(__file__))
     project_root = os.path.dirname(os.path.dirname(os.path.dirname(script_dir)))
     
@@ -322,15 +322,15 @@ def main():
     graph_dir = os.path.abspath(os.path.join(script_dir, args.graph_dir))
     output_dir = os.path.abspath(os.path.join(script_dir, args.output_dir))
     
-    # 构建文件路径
+    # Build file paths
     skeleton_file = os.path.join(skeleton_dir, f"{args.database_name}_sql_skeleton.json")
-    # US数据集的schema文件可能在database目录下，格式可能是 {database_name}/{database_name}.json 或 {database_name}/{database_name}.db
+    # US dataset schema file may be under database dir as {database_name}/{database_name}.json or {database_name}/{database_name}.db
     schema_file = os.path.join(database_dir, args.database_name, f"{args.database_name}.json")
     if not os.path.exists(schema_file):
-        # 尝试其他可能的路径
+        # Try alternative paths
         schema_file = os.path.join(database_dir, args.database_name, "schema.json")
     
-    # 检查文件是否存在
+    # Check if files exist
     if not os.path.exists(skeleton_file):
         print(f"Error: SQL skeleton file does not exist: {skeleton_file}")
         return
@@ -340,11 +340,11 @@ def main():
         print(f"Tried: {schema_file}")
         return
     
-    # 加载配置
+    # Load config
     config_file = args.config if args.config else os.path.join(script_dir, 'config.yaml')
     fill_module.API_CONFIG = fill_module.load_config(config_file)
     
-    # 确定max_workers（提前计算，用于显示）
+    # Determine max_workers (compute early for display)
     max_workers = args.max_workers
     if max_workers is None:
         max_workers = fill_module.API_CONFIG.get('max_workers', 20) if fill_module.API_CONFIG else 20
@@ -362,7 +362,7 @@ def main():
         print(f"Target count: {args.target_count}")
     print()
     
-    # 如果指定了target_count，先检查当前已有多少
+    # If target_count specified, check current count first
     if args.target_count:
         single_output_path = os.path.join(output_dir, 'single', args.database_name)
         if os.path.exists(single_output_path):
@@ -374,15 +374,15 @@ def main():
                 return
             print(f"Current: {existing_count}, Target: {args.target_count}, Need to generate: {needed}")
     
-    # 处理数据库
-    # 确定max_workers
+    # Process database
+    # Determine max_workers
     max_workers = args.max_workers
     if max_workers is None:
-        # 从config中获取，如果没有则使用默认值20（降低并发数，避免资源问题）
+        # Get from config, default 20 (lower concurrency to avoid resource issues)
         max_workers = fill_module.API_CONFIG.get('max_workers', 20) if fill_module.API_CONFIG else 20
-        # 对于大数据库，降低并发数
+        # Lower concurrency for large databases
         if args.database_name and ('New York' in args.database_name or 'Austin' in args.database_name):
-            max_workers = min(max_workers, 50)  # 大数据库限制并发数
+            max_workers = min(max_workers, 50)  # Limit concurrency for large databases
     
     success_count, fail_count = fill_module.process_single_database(
         args.database_name,

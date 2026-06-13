@@ -1,9 +1,9 @@
 """
-重新生成简单SQL的NL查询（使用更简单的prompt）
-- 从每个数据库中选择50条简单的SQL
-- 使用gpt-3.5-turbo生成（节省费用）
-- 使用简化的prompt降低难度
-- 覆盖原来的NL查询文件
+Regenerate NL queries for simple SQL (using a simpler prompt)
+- Select 50 simple SQL statements from each database
+- Generate using gpt-3.5-turbo (cost savings)
+- Use a simplified prompt to reduce difficulty
+- Overwrite the original NL query files
 """
 
 import json
@@ -18,7 +18,7 @@ from typing import Dict, List, Any, Optional
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import threading
 
-# 加载配置
+# Load configuration
 def load_config():
     config_path = os.path.join(os.path.dirname(__file__), '..', 'sql_filling', 'config.yaml')
     if os.path.exists(config_path):
@@ -35,14 +35,14 @@ else:
     api_key = ""
     api_url = ""
 
-# 使用gpt-3.5-turbo生成NL查询（节省费用）
+# Use gpt-3.5-turbo to generate NL queries (cost savings)
 model_name = "gpt-3.5-turbo"
 
-# 线程本地存储客户端
+# Thread-local client storage
 thread_local = threading.local()
 
 def get_client():
-    """获取线程本地的OpenAI客户端"""
+    """Get thread-local OpenAI client"""
     if not hasattr(thread_local, 'client'):
         thread_local.client = OpenAI(
             api_key=api_key,
@@ -51,7 +51,7 @@ def get_client():
     return thread_local.client
 
 def generate_text(user_input, temperature=0.5, max_retries=3):
-    """调用LLM生成文本"""
+    """Call LLM to generate text"""
     client = get_client()
     for attempt in range(max_retries):
         try:
@@ -66,37 +66,37 @@ def generate_text(user_input, temperature=0.5, max_retries=3):
             return response.choices[0].message.content.strip()
         except Exception as e:
             if attempt < max_retries - 1:
-                print(f"API调用失败，重试中... ({attempt + 1}/{max_retries}): {e}")
+                print(f"API call failed, retrying... ({attempt + 1}/{max_retries}): {e}")
                 continue
             else:
-                print(f"API调用失败: {e}")
+                print(f"API call failed: {e}")
                 return ""
 
 def is_simple_sql(sql: str, metadata: Dict) -> bool:
-    """判断SQL是否简单（没有JOIN、没有子查询）"""
+    """Check whether SQL is simple (no JOIN, no subquery)"""
     sql_upper = sql.upper()
     
-    # 检查是否有JOIN
+    # Check for JOIN
     has_join = 'JOIN' in sql_upper or metadata.get('has_join', False)
     
-    # 检查是否有子查询（多个SELECT，排除UNION的情况）
-    # 简单判断：如果SELECT出现多次，且不是UNION，可能是子查询
+    # Check for subqueries (multiple SELECT, excluding UNION cases)
+    # Simple heuristic: if SELECT appears multiple times and it's not UNION, it may be a subquery
     select_count = sql_upper.count('SELECT')
-    # 更精确：检查是否有括号内的SELECT
+    # More precise: check for SELECT inside parentheses
     has_subquery = False
     if select_count > 1:
-        # 检查是否有嵌套的SELECT（在括号内）
+        # Check for nested SELECT (inside parentheses)
         import re
-        # 查找括号内的SELECT
+        # Find SELECT inside parentheses
         paren_pattern = r'\([^)]*SELECT[^)]*\)'
         if re.search(paren_pattern, sql_upper):
             has_subquery = True
     
-    # 简单SQL：没有JOIN、没有子查询
+    # Simple SQL: no JOIN, no subquery
     return not has_join and not has_subquery
 
 def select_simple_sqls(sql_dir: str, limit: int = 50) -> List[Dict]:
-    """选择简单的SQL"""
+    """Select simple SQL statements"""
     sql_files = sorted([f for f in os.listdir(sql_dir) if f.startswith('generated_sql_') and f.endswith('.json') and '_error' not in f],
                        key=lambda x: int(x.split('_')[-1].split('.')[0]) if x.split('_')[-1].split('.')[0].isdigit() else 0)
     
@@ -123,19 +123,19 @@ def select_simple_sqls(sql_dir: str, limit: int = 50) -> List[Dict]:
             if len(simple_sqls) >= limit:
                 break
         except Exception as e:
-            print(f"读取SQL文件失败 {sql_file}: {e}")
+            print(f"Failed to read SQL file {sql_file}: {e}")
             continue
     
     return simple_sqls
 
 def generate_simple_nl_query(sql: str, sql_data: Dict, schema_info: Dict) -> str:
-    """生成简单的NL查询（使用简化的prompt）"""
+    """Generate a simple NL query (using a simplified prompt)"""
     
-    # 提取表名和列名（用于理解查询意图）
+    # Extract table and column names (for understanding query intent)
     tables = sql_data.get('tables', {})
     table_names = list(tables.keys())
     
-    # 从SQL中提取列名
+    # Extract column names from SQL
     columns = []
     for table_name, table_cols in tables.items():
         for col in table_cols:
@@ -143,7 +143,7 @@ def generate_simple_nl_query(sql: str, sql_data: Dict, schema_info: Dict) -> str
                 col_name = col.split('.')[-1]
                 columns.append(col_name)
     
-    # 简化的prompt：直接、清晰、不模糊
+    # Simplified prompt: direct, clear, unambiguous
     prompt = f"""根据以下SQL查询，生成一个简单、直接的自然语言查询。
 
 SQL查询：
@@ -164,30 +164,30 @@ SQL查询：
     
     nl_query = generate_text(prompt, temperature=0.3)
     
-    # 清理生成的查询
+    # Clean up generated query
     if nl_query:
-        # 移除可能的引号
+        # Remove possible quotes
         nl_query = nl_query.strip().strip('"').strip("'")
-        # 移除可能的"NL查询："前缀
+        # Remove possible "NL query:" prefix (Chinese: "NL查询：" or "自然语言查询：")
         if nl_query.startswith('NL查询：') or nl_query.startswith('自然语言查询：'):
             nl_query = nl_query.split('：', 1)[-1].strip()
     
     return nl_query
 
 def process_single_sql(sql_info: Dict, sql_dir: str, schema_file: str, output_dir: str, database: str) -> Dict:
-    """处理单个SQL，生成NL查询"""
+    """Process a single SQL statement and generate an NL query"""
     try:
         sql_data = sql_info['data']
         sql = sql_info['sql']
         file_idx = sql_info['idx']
         
-        # 提取Schema信息（精简）
+        # Extract schema info (compact)
         schema_info = {
             'tables': sql_data.get('tables', {}),
             'involved_tables': list(sql_data.get('tables', {}).keys())
         }
         
-        # 生成简单的NL查询
+        # Generate simple NL query
         nl_query = generate_simple_nl_query(sql, sql_data, schema_info)
         
         if not nl_query:
@@ -197,7 +197,7 @@ def process_single_sql(sql_info: Dict, sql_dir: str, schema_file: str, output_di
                 'error': 'Failed to generate NL query'
             }
         
-        # 构建输出数据
+        # Build output data
         output_data = {
             'sql': sql,
             'sql_skeleton': sql_data.get('sql_skeleton', ''),
@@ -209,7 +209,7 @@ def process_single_sql(sql_info: Dict, sql_dir: str, schema_file: str, output_di
             'regenerated': True
         }
         
-        # 保存到文件（覆盖原来的文件）
+        # Save to file (overwrite original file)
         output_file = os.path.join(output_dir, f'generated_nl_query_{file_idx}.json')
         with open(output_file, 'w', encoding='utf-8') as f:
             json.dump(output_data, f, ensure_ascii=False, indent=2)
@@ -228,42 +228,42 @@ def process_single_sql(sql_info: Dict, sql_dir: str, schema_file: str, output_di
         }
 
 def main():
-    parser = argparse.ArgumentParser(description='重新生成简单SQL的NL查询')
-    parser.add_argument('--sql_dir', type=str, required=True, help='SQL文件目录')
-    parser.add_argument('--schema_dir', type=str, required=True, help='Schema文件目录')
-    parser.add_argument('--output_dir', type=str, required=True, help='输出目录')
-    parser.add_argument('--database', type=str, required=True, help='数据库名称')
-    parser.add_argument('--limit', type=int, default=50, help='要生成的NL查询数量（默认50）')
-    parser.add_argument('--max_workers', type=int, default=5, help='并发线程数（默认5）')
+    parser = argparse.ArgumentParser(description='Regenerate NL queries for simple SQL')
+    parser.add_argument('--sql_dir', type=str, required=True, help='SQL file directory')
+    parser.add_argument('--schema_dir', type=str, required=True, help='Schema file directory')
+    parser.add_argument('--output_dir', type=str, required=True, help='Output directory')
+    parser.add_argument('--database', type=str, required=True, help='Database name')
+    parser.add_argument('--limit', type=int, default=50, help='Number of NL queries to generate (default: 50)')
+    parser.add_argument('--max_workers', type=int, default=5, help='Number of concurrent worker threads (default: 5)')
     
     args = parser.parse_args()
     
-    print(f"开始为数据库 '{args.database}' 重新生成简单SQL的NL查询")
-    print(f"使用模型: {model_name}")
-    print(f"目标数量: {args.limit}")
-    print(f"并发线程数: {args.max_workers}")
+    print(f"Starting NL query regeneration for simple SQL in database '{args.database}'")
+    print(f"Model: {model_name}")
+    print(f"Target count: {args.limit}")
+    print(f"Concurrent workers: {args.max_workers}")
     print("="*80)
     
-    # 选择简单的SQL
-    print(f"正在选择简单的SQL...")
+    # Select simple SQL statements
+    print(f"Selecting simple SQL statements...")
     simple_sqls = select_simple_sqls(args.sql_dir, args.limit)
     
     if len(simple_sqls) < args.limit:
-        print(f"警告：只找到 {len(simple_sqls)} 条简单SQL，少于目标数量 {args.limit}")
+        print(f"Warning: found only {len(simple_sqls)} simple SQL statements, fewer than target {args.limit}")
     
-    print(f"找到 {len(simple_sqls)} 条简单SQL")
+    print(f"Found {len(simple_sqls)} simple SQL statements")
     print("="*80)
     
-    # 获取Schema文件路径
+    # Get schema file path
     schema_file = os.path.join(args.schema_dir, args.database, f'{args.database}.json')
     
     if not os.path.exists(schema_file):
-        print(f"警告：Schema文件不存在: {schema_file}")
+        print(f"Warning: schema file does not exist: {schema_file}")
     
-    # 确保输出目录存在
+    # Ensure output directory exists
     os.makedirs(args.output_dir, exist_ok=True)
     
-    # 并发处理
+    # Process concurrently
     results = []
     with ThreadPoolExecutor(max_workers=args.max_workers) as executor:
         futures = {
@@ -271,28 +271,27 @@ def main():
             for sql_info in simple_sqls
         }
         
-        with tqdm(total=len(simple_sqls), desc=f"生成NL查询 ({model_name})") as pbar:
+        with tqdm(total=len(simple_sqls), desc=f"Generating NL queries ({model_name})") as pbar:
             for future in as_completed(futures):
                 result = future.result()
                 results.append(result)
                 pbar.update(1)
                 
                 if result['success']:
-                    pbar.set_postfix({'成功': sum(1 for r in results if r['success'])})
+                    pbar.set_postfix({'success': sum(1 for r in results if r['success'])})
                 else:
-                    pbar.set_postfix({'失败': sum(1 for r in results if not r['success'])})
+                    pbar.set_postfix({'failed': sum(1 for r in results if not r['success'])})
     
-    # 统计结果
+    # Summarize results
     success_count = sum(1 for r in results if r['success'])
     fail_count = len(results) - success_count
     
     print("="*80)
-    print(f"生成完成:")
-    print(f"  成功: {success_count}/{len(results)}")
-    print(f"  失败: {fail_count}/{len(results)}")
-    print(f"  输出目录: {args.output_dir}")
+    print(f"Generation complete:")
+    print(f"  Success: {success_count}/{len(results)}")
+    print(f"  Failed: {fail_count}/{len(results)}")
+    print(f"  Output directory: {args.output_dir}")
     print("="*80)
 
 if __name__ == '__main__':
     main()
-

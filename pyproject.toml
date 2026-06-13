@@ -1,0 +1,75 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "taco-benchmark"
+version = "0.1.0"
+description = "TACO: A benchmark for open-domain Text-to-SQL with ambiguous and cross-database queries"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [
+  { name = "TACO-Benchmark Contributors" },
+]
+keywords = [
+  "text-to-sql",
+  "nl2sql",
+  "benchmark",
+  "cross-database",
+  "llm",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+  "tqdm>=4.66.0",
+  "openai>=1.30.0",
+  "PyYAML>=6.0.1",
+  "sqlparse>=0.5.0",
+  "networkx>=3.1",
+  "pandas>=2.0.0",
+  "numpy>=1.24.0",
+  "typer>=0.12.0",
+  "gdown>=5.0.0",
+]
+
+[project.optional-dependencies]
+eval = [
+  "scipy>=1.11.0",
+  "matplotlib>=3.8.0",
+]
+sft = [
+  "torch>=2.0.0",
+  "transformers>=4.40.0",
+]
+full = [
+  "scipy>=1.11.0",
+  "matplotlib>=3.8.0",
+  "torch>=2.0.0",
+  "transformers>=4.40.0",
+  "sqlglot>=20.0.0",
+  "pypinyin>=0.50.0",
+  "chardet>=5.0.0",
+]
+
+[project.scripts]
+taco = "taco.cli.app:main"
+
+[project.urls]
+Homepage = "https://github.com/Akanezora0/TACO-Benchmark"
+Repository = "https://github.com/Akanezora0/TACO-Benchmark"
+Documentation = "https://github.com/Akanezora0/TACO-Benchmark#readme"
+"Bug Tracker" = "https://github.com/Akanezora0/TACO-Benchmark/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["taco*"]

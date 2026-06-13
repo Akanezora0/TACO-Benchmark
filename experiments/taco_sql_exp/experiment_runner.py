@@ -1,7 +1,7 @@
 """
-TACO-SQL实验运行器
+TACO-SQL experiment runner
 
-根据实验设置运行不同的实验配置
+Runs different experiment configurations based on experiment settings
 """
 
 from typing import Dict, List, Optional, Any
@@ -19,18 +19,18 @@ from .utils import format_schema_simple, format_schema_filtered
 
 
 class ExperimentRunner:
-    """实验运行器"""
+    """Experiment runner"""
     
     def __init__(self, config: ExperimentConfig):
         """
-        初始化实验运行器
+        Initialize experiment runner
         
         Args:
-            config: 实验配置
+            config: Experiment configuration
         """
         self.config = config
         
-        # 初始化Prompt构建器
+        # Initialize prompt builders
         self.qr_prompt_builder = None
         self.qp_prompt_builder = None
         self.sql_prompt_builder = None
@@ -61,16 +61,16 @@ class ExperimentRunner:
         ground_truth_sql: Optional[str] = None
     ) -> Dict[str, Any]:
         """
-        运行单个查询的实验
+        Run experiment for a single query
         
         Args:
-            query: 原始查询
-            schema: Schema字典
-            database: 数据库名称
-            ground_truth_sql: 标准答案SQL（可选）
+            query: Original query
+            schema: Schema dictionary
+            database: Database name
+            ground_truth_sql: Ground truth SQL (optional)
             
         Returns:
-            实验结果字典
+            Experiment result dictionary
         """
         result = {
             'original_query': query,
@@ -95,7 +95,7 @@ class ExperimentRunner:
                 relevant_tables = self._retrieve_tables(result['rewritten_query'])
                 result['relevant_tables'] = relevant_tables
                 
-                # 格式化过滤后的Schema
+                # Format filtered schema
                 schema_text, schema_info = format_schema_filtered(
                     schema,
                     relevant_tables
@@ -103,7 +103,7 @@ class ExperimentRunner:
             else:
                 result['relevant_tables'] = []
                 
-                # 格式化完整Schema
+                # Format full schema
                 schema_text, schema_info = format_schema_simple(schema)
             
             result['schema_info'] = schema_info
@@ -117,7 +117,7 @@ class ExperimentRunner:
                 )
                 result['execution_plan'] = execution_plan
             else:
-                # 默认单步计划
+                # Default single-step plan
                 result['execution_plan'] = [{
                     'subquery': result['rewritten_query'],
                     'tables': result['relevant_tables'],
@@ -127,7 +127,7 @@ class ExperimentRunner:
             
             # Step 4: SQL Generation
             if result['execution_plan']:
-                # 使用第一个子查询生成SQL（简化实现）
+                # Use the first subquery to generate SQL (simplified implementation)
                 plan_item = result['execution_plan'][0]
                 generated_sql = self._generate_sql(
                     query=result['rewritten_query'],
@@ -144,39 +144,39 @@ class ExperimentRunner:
     
     def _rewrite_query(self, query: str) -> str:
         """
-        转写查询（占位实现）
+        Rewrite query (placeholder implementation)
         
         Args:
-            query: 原始查询
+            query: Original query
             
         Returns:
-            转写后的查询
+            Rewritten query
         """
-        # TODO: 实现实际的LLM调用
+        # TODO: Implement actual LLM call
         # messages = self.qr_prompt_builder.build_messages(query)
         # response = llm_client.chat.completions.create(...)
         # return response.choices[0].message.content
         
-        # 占位实现：返回原始查询
+        # Placeholder: return original query
         return query
     
     def _retrieve_tables(self, query: str) -> List[str]:
         """
-        检索相关表（占位实现）
+        Retrieve relevant tables (placeholder implementation)
         
         Args:
-            query: 查询文本
+            query: Query text
             
         Returns:
-            相关表列表
+            List of relevant tables
         """
-        # TODO: 实现实际的Table Linking
+        # TODO: Implement actual Table Linking
         # from taco_sql.table_linking.retrieval.table_retrieval import TableRetriever
         # retriever = TableRetriever(...)
         # tables = retriever.retrieve_top_k_tables([query], k=self.config.component_config.tl_top_k)
         # return tables[0]
         
-        # 占位实现：返回空列表
+        # Placeholder: return empty list
         return []
     
     def _plan_query(
@@ -186,24 +186,24 @@ class ExperimentRunner:
         schema: Dict
     ) -> List[Dict]:
         """
-        规划查询（占位实现）
+        Plan query (placeholder implementation)
         
         Args:
-            query: 查询文本
-            relevant_tables: 相关表列表
-            schema: Schema字典
+            query: Query text
+            relevant_tables: List of relevant tables
+            schema: Schema dictionary
             
         Returns:
-            执行计划列表
+            Execution plan list
         """
-        # TODO: 实现实际的Query Planning
+        # TODO: Implement actual Query Planning
         # prompt = self.qp_prompt_builder.build_prompt(query, relevant_tables, schema)
         # response = llm_client.chat.completions.create(...)
         # plan_json = response.choices[0].message.content
         # plan = self.qp_prompt_builder.parse_plan(plan_json)
         # return plan
         
-        # 占位实现：返回默认计划
+        # Placeholder: return default plan
         return [{
             'subquery': query,
             'tables': relevant_tables,
@@ -219,18 +219,18 @@ class ExperimentRunner:
         is_filtered: bool = False
     ) -> str:
         """
-        生成SQL（占位实现）
+        Generate SQL (placeholder implementation)
         
         Args:
-            query: 查询文本
-            schema_text: Schema文本
-            database: 数据库名称
-            is_filtered: Schema是否已过滤
+            query: Query text
+            schema_text: Schema text
+            database: Database name
+            is_filtered: Whether schema has been filtered
             
         Returns:
-            生成的SQL
+            Generated SQL
         """
-        # TODO: 实现实际的SQL生成
+        # TODO: Implement actual SQL generation
         # prompt = self.sql_prompt_builder.build_prompt(
         #     query, schema_text, database, is_filtered=is_filtered
         # )
@@ -239,8 +239,8 @@ class ExperimentRunner:
         # sql = self.sql_prompt_builder.clean_sql(sql)
         # return sql
         
-        # 占位实现：返回占位SQL
-        return "SELECT * FROM \"表名\";"
+        # Placeholder: return placeholder SQL
+        return "SELECT * FROM \"table_name\";"
     
     def run_batch(
         self,
@@ -248,14 +248,14 @@ class ExperimentRunner:
         output_path: Optional[str] = None
     ) -> List[Dict]:
         """
-        批量运行实验
+        Run experiments in batch
         
         Args:
-            test_data: 测试数据列表
-            output_path: 输出路径（可选）
+            test_data: Test data list
+            output_path: Output path (optional)
             
         Returns:
-            实验结果列表
+            Experiment result list
         """
         results = []
         
@@ -272,14 +272,14 @@ class ExperimentRunner:
                 ground_truth_sql=ground_truth_sql
             )
             
-            # 添加元数据
+            # Add metadata
             result['item_id'] = item.get('id', '')
             result['database'] = database
             result['ground_truth_sql'] = ground_truth_sql
             
             results.append(result)
         
-        # 保存结果
+        # Save results
         if output_path:
             os.makedirs(os.path.dirname(output_path), exist_ok=True)
             with open(output_path, 'w', encoding='utf-8') as f:
@@ -297,20 +297,20 @@ def run_experiment(
     **kwargs
 ) -> List[Dict]:
     """
-    运行实验的主函数
+    Main function to run an experiment
     
     Args:
-        setting: 实验设置（"origin", "qr", "qr_tl", "qr_tl_qp"）
-        model_name: 模型名称
-        dataset_name: 数据集名称
-        test_data_path: 测试数据路径
-        output_path: 输出路径
-        **kwargs: 其他配置参数
+        setting: Experiment setting ("origin", "qr", "qr_tl", "qr_tl_qp")
+        model_name: Model name
+        dataset_name: Dataset name
+        test_data_path: Test data path
+        output_path: Output path
+        **kwargs: Other configuration parameters
         
     Returns:
-        实验结果列表
+        Experiment result list
     """
-    # 创建配置
+    # Create configuration
     config = create_experiment_config(
         setting=setting,
         model_name=model_name,
@@ -318,15 +318,15 @@ def run_experiment(
         **kwargs
     )
     
-    # 创建运行器
+    # Create runner
     runner = ExperimentRunner(config)
     
-    # 加载测试数据
+    # Load test data
     if test_data_path and os.path.exists(test_data_path):
         with open(test_data_path, 'r', encoding='utf-8') as f:
             test_data = json.load(f)
     else:
-        # 使用默认路径
+        # Use default path
         default_path = f"benchmark/data/final/{dataset_name}/test.json"
         if os.path.exists(default_path):
             with open(default_path, 'r', encoding='utf-8') as f:
@@ -334,31 +334,30 @@ def run_experiment(
         else:
             raise FileNotFoundError(f"Test data not found: {test_data_path or default_path}")
     
-    # 运行实验
+    # Run experiment
     results = runner.run_batch(test_data, output_path)
     
     return results
 
 
-# 示例使用
+# Example usage
 if __name__ == "__main__":
-    # 示例：运行Origin设置实验
-    print("运行Origin设置实验...")
+    # Example: run Origin setting experiment
+    print("Running Origin setting experiment...")
     origin_results = run_experiment(
         setting="origin",
         model_name="gpt-4o",
         dataset_name="taco_beijing",
         output_path="results/origin_gpt4o.json"
     )
-    print(f"完成，共处理 {len(origin_results)} 个查询")
+    print(f"Done, processed {len(origin_results)} queries")
     
-    # 示例：运行完整TACO-SQL实验
-    print("\n运行完整TACO-SQL实验...")
+    # Example: run full TACO-SQL experiment
+    print("\nRunning full TACO-SQL experiment...")
     full_results = run_experiment(
         setting="qr_tl_qp",
         model_name="gpt-4o",
         dataset_name="taco_beijing",
         output_path="results/qr_tl_qp_gpt4o.json"
     )
-    print(f"完成，共处理 {len(full_results)} 个查询")
-
+    print(f"Done, processed {len(full_results)} queries")

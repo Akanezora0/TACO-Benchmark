@@ -4,28 +4,41 @@ benchmark/data/
 benchmark/scripts/
 benchmark/tools/
 
+# Secrets and local configuration (use *.example templates)
+.env
+benchmark/generation/sql_filling/config.yaml
+configs/llm_config.yaml
+configs/taco_sql_config.yaml
+configs/api_keys.json
 
 # Log files
 *.log
 **/*.log
+benchmark/generation/logs/
 
-# Shell scripts (internal utilities)
-*.sh
-**/*.sh
+# Setup scripts at repo root are tracked; ignore ad-hoc shell scripts elsewhere
+benchmark/**/*.sh
+experiments/**/*.sh
 
-# Temporary analysis documents
+# Temporary / internal development documents (Chinese working notes)
 **/temp_*.md
 **/*分析*.md
 **/*汇总*.md
 **/*报告*.md
 **/*总结*.md
 **/*方案*.md
+**/*计划*.md
+**/*命令*.md
+**/*完成*.md
+**/*目标*.md
 **/*日志*.md
 **/*说明*.md
 **/*指南*.md
 **/*结果*.md
 **/*设计*.md
 **/*中文*.md
+**/快速开始.md
+**/archive/docs/
 
 **/*结果*.py
 
@@ -41,7 +54,14 @@ experiments/baselines/**/results/*.json
 # Large data files (>100MB)
 benchmark/generation/cross_database/joinable_table_pairs.json
 compare/
-benchmark/data/
+
+# Regeneratable cross-database generation artifacts (not in git; build locally)
+benchmark/generation/cross_database/cross_db_graphs_join/
+benchmark/generation/cross_database/skeletons/
+benchmark/generation/cross_database/cross_db_skeletons_join.json
+
+# Deprecated in-repo archive (moved to legacy/)
+benchmark/generation/cross_database/archive/
 
 # Python cache
 __pycache__/
@@ -49,6 +69,9 @@ __pycache__/
 *.pyo
 *.pyd
 .Python
+*.egg-info/
+dist/
+build/
 
 # IDE
 .vscode/
@@ -72,8 +95,12 @@ models/*.safetensors
 *.sqlite3
 
 # Environment
-.env
 .venv
 venv/
 env/
 
+# Internal i18n / one-off helper scripts (do not commit)
+benchmark/generation/**/_*.py
+
+# Dataset download cache
+.cache/

@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-跨数据库SQL骨架填充脚本
+Cross-database SQL skeleton filling script.
 
-基于单数据库的SQL填充脚本，扩展支持跨数据库场景：
-1. 加载多个数据库的schema和图文件
-2. 在prompt中明确告知大模型这是跨数据库查询
-3. 让大模型生成带数据库前缀的SQL（如：数据库名.表名）
+Extends the single-database SQL filling script to support cross-database scenarios:
+1. Load schemas and graph files from multiple databases
+2. Explicitly inform the LLM in the prompt that this is a cross-database query
+3. Have the LLM generate SQL with database prefixes (e.g., database_name.table_name)
 """
 
 import json
@@ -23,16 +23,16 @@ import yaml
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import time
 
-# 导入单数据库的函数
+# Import single-database functions
 import sys
 import importlib.util
 sql_filling_dir = os.path.join(os.path.dirname(__file__), '..', 'sql_filling')
 sys.path.insert(0, sql_filling_dir)
 
-# 动态导入
+# Dynamic import
 spec = importlib.util.spec_from_file_location(
     "fill_sql_placeholders_improved",
-    os.path.join(sql_filling_dir, "2fill_sql_placeholders_improved.py")
+    os.path.join(sql_filling_dir, "fill_sql_placeholders.py")
 )
 fill_module = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(fill_module)
@@ -42,52 +42,52 @@ get_client = fill_module.get_client
 load_schema = fill_module.load_schema
 analyze_sql_skeleton = fill_module.analyze_sql_skeleton
 construct_enhanced_prompt = fill_module.construct_enhanced_prompt
-# execute_sql 可能不存在，跨数据库SQL不需要直接执行验证
+# execute_sql may not exist; cross-database SQL does not require direct execution validation
 load_graph_metadata = getattr(fill_module, 'load_graph_metadata', None)
 
 def convert_to_single_database_sql(cross_db_sql, table_database_mapping):
-    """将跨数据库SQL转换为单数据库SQL（移除数据库前缀）"""
+    """Convert cross-database SQL to single-database SQL (remove database prefixes)."""
     single_db_sql = cross_db_sql
-    # 替换 "数据库名"."表名" 为 "表名"
+    # Replace "database_name"."table_name" with "table_name"
     for table, db in table_database_mapping.items():
-        # 处理带引号的情况
+        # Handle quoted identifiers
         pattern1 = rf'"{re.escape(db)}"\."{re.escape(table)}"'
         replacement1 = f'"{table}"'
         single_db_sql = re.sub(pattern1, replacement1, single_db_sql)
-        
-        # 处理不带引号的情况
+
+        # Handle unquoted identifiers
         pattern2 = rf'{re.escape(db)}\.{re.escape(table)}'
         replacement2 = table
         single_db_sql = re.sub(pattern2, replacement2, single_db_sql)
-    
-    # 替换 "数据库名"."表名"."列名" 为 "表名"."列名"
+
+    # Replace "database_name"."table_name"."column_name" with "table_name"."column_name"
     for table, db in table_database_mapping.items():
         pattern = rf'"{re.escape(db)}"\."{re.escape(table)}"\."([^"]+)"'
         replacement = rf'"{table}"."\1"'
         single_db_sql = re.sub(pattern, replacement, single_db_sql)
-    
+
     return single_db_sql
 
 def execute_sql_on_database(sql, db_path):
-    """在单个数据库上执行SQL"""
+    """Execute SQL on a single database."""
     try:
         conn = sqlite3.connect(db_path)
         cursor = conn.cursor()
         cursor.execute(sql)
         results = cursor.fetchall()
         conn.close()
-        # 空结果也算成功（与单数据库保持一致）
+        # Empty results still count as success (consistent with single-database behavior)
         if results:
             return results, True
         else:
-            return [], True  # 空结果也算成功
+            return [], True  # Empty results still count as success
     except sqlite3.Error as e:
         return None, False
     except Exception as e:
         return None, False
 
 def get_tables_in_database(db_path, alias=None):
-    """获取数据库中的所有表名"""
+    """Get all table names in a database."""
     try:
         conn = sqlite3.connect(db_path)
         cursor = conn.cursor()
@@ -99,15 +99,15 @@ def get_tables_in_database(db_path, alias=None):
         return set()
 
 def validate_tables_in_sql(sql, databases, database_dir, table_database_mapping, db_aliases):
-    """验证SQL中使用的表是否在对应数据库中存在"""
-    # 提取SQL中使用的表名
+    """Verify that tables used in SQL exist in the corresponding databases."""
+    # Extract table names used in SQL
     table_pattern = r'"(?:db\d+|[\u4e00-\u9fa5]+)"\."([^"]+)"'
     tables_in_sql = set(re.findall(table_pattern, sql))
-    
-    # 检查每个表是否在对应数据库中
+
+    # Check whether each table exists in its database
     missing_tables = []
     for table_name in tables_in_sql:
-        # 找到表对应的数据库
+        # Find the database for the table
         db_name = table_database_mapping.get(table_name)
         if db_name:
             db_path = os.path.join(database_dir, db_name, f"{db_name}.db")
@@ -115,68 +115,68 @@ def validate_tables_in_sql(sql, databases, database_dir, table_database_mapping,
                 tables_in_db = get_tables_in_database(db_path)
                 if table_name not in tables_in_db:
                     missing_tables.append((table_name, db_name))
-    
+
     return missing_tables
 
 def execute_cross_database_sql_with_attach(cross_db_sql, databases, database_dir, table_database_mapping):
     """
-    使用SQLite的ATTACH DATABASE功能执行跨数据库SQL
-    添加表名验证，确保表在对应数据库中存在
+    Execute cross-database SQL using SQLite ATTACH DATABASE.
+    Includes table validation to ensure tables exist in the corresponding databases.
     """
     if len(databases) < 2:
-        # 如果只有一个数据库，直接执行
+        # Execute directly when only one database is involved
         db_path = os.path.join(database_dir, databases[0], f"{databases[0]}.db")
         if os.path.exists(db_path):
             return execute_sql_on_database(cross_db_sql, db_path)
         return None, False
-    
-    # 创建临时数据库作为主数据库
+
+    # Create a temporary database as the main database
     import tempfile
     temp_db = tempfile.NamedTemporaryFile(suffix='.db', delete=False)
     temp_db.close()
     temp_db_path = temp_db.name
-    
+
     try:
         conn = sqlite3.connect(temp_db_path)
         cursor = conn.cursor()
-        
-        # ATTACH所有涉及的数据库
+
+        # ATTACH all involved databases
         db_aliases = {}
-        db_tables_cache = {}  # 缓存每个数据库的表名
+        db_tables_cache = {}  # Cache table names per database
         for i, db_name in enumerate(databases):
             db_path = os.path.join(database_dir, db_name, f"{db_name}.db")
             if os.path.exists(db_path):
-                # 使用数据库名作为别名（但需要处理特殊字符）
+                # Use database name as alias (special characters must be handled)
                 alias = f"db{i}"
                 db_aliases[db_name] = alias
                 cursor.execute(f'ATTACH DATABASE "{db_path}" AS {alias}')
-                # 缓存表名
+                # Cache table names
                 db_tables_cache[alias] = get_tables_in_database(db_path)
-        
-        # 转换SQL：将"数据库名"."表名"转换为"别名"."表名"
+
+        # Convert SQL: replace "database_name"."table_name" with "alias"."table_name"
         converted_sql = cross_db_sql
         for db_name, alias in db_aliases.items():
-            # 先处理 "数据库名"."表名"."列名" 格式（避免被后面的替换影响）
+            # Handle "database_name"."table_name"."column_name" first (avoid interference from later replacements)
             pattern2 = rf'"{re.escape(db_name)}"\."([^"]+)"\."([^"]+)"'
             replacement2 = rf'"{alias}"."\1"."\2"'
             converted_sql = re.sub(pattern2, replacement2, converted_sql)
-            
-            # 再处理 "数据库名"."表名" 格式
+
+            # Then handle "database_name"."table_name"
             pattern = rf'"{re.escape(db_name)}"\."([^"]+)"'
             replacement = rf'"{alias}"."\1"'
             converted_sql = re.sub(pattern, replacement, converted_sql)
-            
-            # 处理 "数据库名.表名" 格式（不带引号的点分隔）
+
+            # Handle "database_name.table_name" (dot-separated, unquoted)
             pattern3 = rf'"{re.escape(db_name)}\.([^"]+)"'
             replacement3 = rf'"{alias}"."\1"'
             converted_sql = re.sub(pattern3, replacement3, converted_sql)
-            
-            # 处理 "数据库名.表名"."列名" 格式
+
+            # Handle "database_name.table_name"."column_name"
             pattern4 = rf'"{re.escape(db_name)}\.([^"]+)"\."([^"]+)"'
             replacement4 = rf'"{alias}"."\1"."\2"'
             converted_sql = re.sub(pattern4, replacement4, converted_sql)
-        
-        # 验证表是否存在（在转换后验证）
+
+        # Validate table existence after conversion
         table_pattern = rf'"(db\d+)"\."([^"]+)"'
         tables_in_sql = re.findall(table_pattern, converted_sql)
         missing_tables = []
@@ -184,61 +184,61 @@ def execute_cross_database_sql_with_attach(cross_db_sql, databases, database_dir
             if alias in db_tables_cache:
                 if table_name not in db_tables_cache[alias]:
                     missing_tables.append(f"{alias}.{table_name}")
-        
+
         if missing_tables:
-            # 表不存在，返回失败
+            # Return failure when tables do not exist
             conn.close()
             os.unlink(temp_db_path)
             return None, False
-        
-        # 执行SQL
+
+        # Execute SQL
         cursor.execute(converted_sql)
         results = cursor.fetchall()
         conn.close()
-        
-        # 清理临时文件
+
+        # Clean up temporary file
         os.unlink(temp_db_path)
-        
+
         return results, True
-        
+
     except Exception as e:
-        # 清理临时文件
+        # Clean up temporary file
         if os.path.exists(temp_db_path):
             os.unlink(temp_db_path)
         return None, False
 
 def load_multiple_schemas(database_names, database_dir):
-    """加载多个数据库的schema信息"""
+    """Load schema information from multiple databases."""
     schemas = {}
     for db_name in database_names:
         schema_file = os.path.join(database_dir, db_name, f"{db_name}.json")
         if os.path.exists(schema_file):
             schemas[db_name] = load_schema(schema_file)
         else:
-            print(f"警告: 找不到schema文件 {schema_file}")
+            print(f"Warning: schema file not found {schema_file}")
     return schemas
 
 def load_cross_database_graph(graph_file):
-    """加载跨数据库图文件"""
+    """Load a cross-database graph file."""
     with open(graph_file, 'r', encoding='utf-8') as f:
         graph_data = json.load(f)
     return graph_data
 
 def extract_tables_from_cross_database_graph(graph_data, table_database_mapping):
-    """从跨数据库图中提取相关表"""
+    """Extract relevant tables from a cross-database graph."""
     tables = set()
     for node in graph_data.get('nodes', []):
         node_type = node.get('node_type')
         if node_type == 'table':
             table_name = node.get('table_name', '')
             if table_name in table_database_mapping:
-                # 格式：数据库名.表名
+                # Format: database_name.table_name
                 db_name = table_database_mapping[table_name]
                 tables.add(f"{db_name}.{table_name}")
     return list(tables)
 
 def extract_columns_from_cross_database_graph(graph_data, table_database_mapping):
-    """从跨数据库图中提取相关列"""
+    """Extract relevant columns from a cross-database graph."""
     columns_by_table = defaultdict(list)
     for node in graph_data.get('nodes', []):
         node_type = node.get('node_type')
@@ -252,24 +252,24 @@ def extract_columns_from_cross_database_graph(graph_data, table_database_mapping
     return dict(columns_by_table)
 
 def validate_tables_exist_in_databases(selected_tables, schemas, database_dir):
-    """验证表是否在对应数据库中存在，只返回存在的表"""
+    """Verify tables exist in the corresponding databases; return only existing tables."""
     valid_tables = []
     for table_full_name in selected_tables:
-        # 解析表名：格式为"数据库名.表名"
+        # Parse table name in the format "database_name.table_name"
         parts = table_full_name.split('.', 1)
         if len(parts) == 2:
             db_name, table_name = parts
-            # 检查表是否在schema中
+            # Check whether the table is in the schema
             if db_name in schemas:
                 schema = schemas[db_name]
-                # 检查表是否在schema的tables列表中
+                # Check whether the table is in the schema tables list
                 table_exists = False
                 for table_info in schema.get('tables', []):
                     if table_info.get('table_name') == table_name:
                         table_exists = True
                         break
-                
-                # 如果schema中有，再验证数据库中是否真的存在
+
+                # If present in schema, verify it actually exists in the database
                 if table_exists:
                     db_path = os.path.join(database_dir, db_name, f"{db_name}.db")
                     if os.path.exists(db_path):
@@ -280,34 +280,34 @@ def validate_tables_exist_in_databases(selected_tables, schemas, database_dir):
 
 def get_all_tables_from_databases(schemas, database_dir, max_tables_per_db=50):
     """
-    获取所有数据库中真实存在的表（限制数量以避免prompt过长）
-    关键改进：直接从数据库文件查询真实表名，而不是从schema读取
+    Get tables that actually exist across all databases (limit count to avoid overly long prompts).
+    Key improvement: query real table names directly from database files instead of reading from schema.
     """
     all_tables = {}
     for db_name, schema in schemas.items():
         db_path = os.path.join(database_dir, db_name, f"{db_name}.db")
         if os.path.exists(db_path):
-            # 直接从数据库文件查询真实表名（这是关键！）
+            # Query real table names directly from the database file (this is critical)
             tables_in_db = get_tables_in_database(db_path)
-            
+
             all_tables[db_name] = []
             count = 0
-            
-            # 只使用数据库中真实存在的表
+
+            # Use only tables that actually exist in the database
             for table_name in tables_in_db:
                 if count >= max_tables_per_db:
                     break
-                
-                # 从schema中查找对应的表信息（用于获取描述和列信息）
+
+                # Look up corresponding table info in schema (for descriptions and column info)
                 table_info_from_schema = None
                 for table_info in schema.get('tables', []):
                     if table_info.get('table_name') == table_name:
                         table_info_from_schema = table_info
                         break
-                
-                # 如果schema中没有，尝试查找相似的表名（可能表名有后缀数字）
+
+                # If not in schema, try matching similar table names (table names may have numeric suffixes)
                 if table_info_from_schema is None:
-                    # 尝试去掉后缀数字匹配
+                    # Try matching by stripping numeric suffix
                     base_name = table_name.rsplit('-', 1)[0] if '-' in table_name else table_name
                     for table_info in schema.get('tables', []):
                         schema_table_name = table_info.get('table_name', '')
@@ -315,8 +315,8 @@ def get_all_tables_from_databases(schemas, database_dir, max_tables_per_db=50):
                         if base_name == schema_base_name:
                             table_info_from_schema = table_info
                             break
-                
-                # 获取列信息（从数据库直接查询，确保准确性）
+
+                # Get column info (query directly from database for accuracy)
                 columns_in_db = []
                 try:
                     conn = sqlite3.connect(db_path)
@@ -325,71 +325,71 @@ def get_all_tables_from_databases(schemas, database_dir, max_tables_per_db=50):
                     columns_in_db = [row[1] for row in cursor.fetchall()]
                     conn.close()
                 except:
-                    # 如果查询失败，使用schema中的列信息
+                    # Fall back to column info from schema if query fails
                     if table_info_from_schema:
                         columns_in_db = [col.get('column_name', '') for col in table_info_from_schema.get('columns', [])]
-                
+
                 all_tables[db_name].append({
-                    'name': table_name,  # 使用数据库中真实存在的表名
+                    'name': table_name,  # Use the table name that actually exists in the database
                     'description': table_info_from_schema.get('table_description', '') if table_info_from_schema else '',
                     'comment': table_info_from_schema.get('table_comment', '') if table_info_from_schema else '',
-                    'columns': columns_in_db[:15]  # 只显示前15个列，确保准确性
+                    'columns': columns_in_db[:15]  # Show only the first 15 columns for accuracy
                 })
                 count += 1
     return all_tables
 
 def extract_compact_graph_info(graph_data, table_database_mapping, schemas, max_tables=20, max_columns_per_table=10):
     """
-    从图文件中提取压缩的关键信息，用于构建prompt
-    
-    只提取：
-    1. 占位符相关的表和列（最相关的）
-    2. 外键关系（用于判断是否可以JOIN）
-    3. 表的简要信息（限制数量和列数）
-    
+    Extract compact key information from graph files for prompt construction.
+
+    Extract only:
+    1. Tables and columns related to placeholders (most relevant)
+    2. Foreign key relationships (used to determine whether JOIN is possible)
+    3. Brief table information (limited count and column count)
+
     Args:
-        graph_data: 完整的图数据
-        table_database_mapping: 表到数据库的映射
-        schemas: 数据库schema
-        max_tables: 最多提取的表数量
-        max_columns_per_table: 每个表最多显示的列数
-    
+        graph_data: Full graph data
+        table_database_mapping: Mapping from table to database
+        schemas: Database schemas
+        max_tables: Maximum number of tables to extract
+        max_columns_per_table: Maximum number of columns to show per table
+
     Returns:
         dict: {
-            'suggested_tables': [...],  # 建议的表列表
-            'foreign_keys': [...],      # 外键关系列表
-            'table_info': {...}         # 表的简要信息
+            'suggested_tables': [...],  # Suggested table list
+            'foreign_keys': [...],      # Foreign key relationship list
+            'table_info': {...}         # Brief table information
         }
     """
-    # 1. 提取占位符相关的表（从table_database_mapping中提取）
+    # 1. Extract placeholder-related tables (from table_database_mapping)
     suggested_tables = []
     for table_name, db_name in table_database_mapping.items():
         table_full_name = f"{db_name}.{table_name}"
         suggested_tables.append(table_full_name)
-    
-    # 限制表数量
+
+    # Limit table count
     suggested_tables = suggested_tables[:max_tables]
-    
-    # 2. 提取外键关系（只提取涉及建议表的外键）
+
+    # 2. Extract foreign key relationships (only those involving suggested tables)
     foreign_keys = []
     suggested_table_set = set(suggested_tables)
-    
+
     for edge in graph_data.get('edges', []):
         if edge.get('edge_type') == 'foreign_key':
             source = edge.get('source', '')
             target = edge.get('target', '')
-            
-            # 检查是否涉及建议的表
+
+            # Check whether suggested tables are involved
             source_table = '.'.join(source.split('.')[:2]) if '.' in source else None
             target_table = '.'.join(target.split('.')[:2]) if '.' in target else None
-            
+
             if source_table in suggested_table_set or target_table in suggested_table_set:
                 foreign_keys.append({
                     'source': source,
                     'target': target
                 })
-    
-    # 3. 提取表的简要信息（只提取建议的表，限制列数）
+
+    # 3. Extract brief table information (only suggested tables, limited columns)
     table_info = {}
     for table_full_name in suggested_tables:
         parts = table_full_name.split('.', 1)
@@ -399,7 +399,7 @@ def extract_compact_graph_info(graph_data, table_database_mapping, schemas, max_
                 schema = schemas[db_name]
                 for table_info_item in schema.get('tables', []):
                     if table_info_item.get('table_name') == table_name:
-                        # 只提取前N个列
+                        # Extract only the first N columns
                         columns = table_info_item.get('columns', [])[:max_columns_per_table]
                         table_info[table_full_name] = {
                             'description': table_info_item.get('table_description', ''),
@@ -414,212 +414,212 @@ def extract_compact_graph_info(graph_data, table_database_mapping, schemas, max_
                             'total_columns': len(table_info_item.get('columns', []))
                         }
                         break
-    
+
     return {
         'suggested_tables': suggested_tables,
         'foreign_keys': foreign_keys,
         'table_info': table_info
     }
 
-def construct_cross_database_prompt_join(sql_skeleton, schemas, table_database_mapping, 
+def construct_cross_database_prompt_join(sql_skeleton, schemas, table_database_mapping,
                                    graph_data, sql_analysis, database_dir, recommended_join_columns=None):
-    """构建跨数据库SQL填充的prompt - JOIN版本：强调JOIN、聚合函数和复杂查询结构"""
-    
-    # 使用压缩的图信息提取方法（只提取关键信息）
+    """Build cross-database SQL filling prompt - JOIN version: emphasizes JOIN, aggregate functions, and complex query structure."""
+
+    # Use compact graph info extraction (key information only)
     compact_info = extract_compact_graph_info(
-        graph_data, 
-        table_database_mapping, 
+        graph_data,
+        table_database_mapping,
         schemas,
-        max_tables=20,  # 最多20个建议的表
-        max_columns_per_table=10  # 每个表最多10个列
+        max_tables=20,  # At most 20 suggested tables
+        max_columns_per_table=10  # At most 10 columns per table
     )
-    
+
     suggested_tables = compact_info['suggested_tables']
     foreign_keys = compact_info['foreign_keys']
     table_info = compact_info['table_info']
-    
-    # 验证建议的表是否在对应数据库中存在
+
+    # Verify suggested tables exist in the corresponding databases
     valid_suggested_tables = validate_tables_exist_in_databases(suggested_tables, schemas, database_dir)
-    
-    # 获取所有数据库中真实存在的表（给大模型更多选择，但限制数量）
+
+    # Get tables that actually exist across all databases (give the LLM more choices, but limit count)
     all_available_tables = get_all_tables_from_databases(schemas, database_dir, max_tables_per_db=20)
-    
-    # 构建建议表的详细信息（只显示建议的表，压缩信息）
+
+    # Build detailed info for suggested tables (show only suggested tables, compact format)
     suggested_tables_info = ""
     if valid_suggested_tables:
-        suggested_tables_info = "\n建议使用的表（从SQL骨架分析得出，仅供参考，你可以选择其他更合适的表）：\n"
-        for table_full_name in valid_suggested_tables[:15]:  # 最多显示15个
+        suggested_tables_info = "\nSuggested tables (from SQL skeleton analysis, for reference only; you may choose other more suitable tables):\n"
+        for table_full_name in valid_suggested_tables[:15]:  # Show at most 15
             if table_full_name in table_info:
                 info = table_info[table_full_name]
                 suggested_tables_info += f"\n  - {table_full_name}\n"
                 if info.get('description'):
-                    suggested_tables_info += f"    描述: {info['description'][:100]}...\n"  # 限制描述长度
+                    suggested_tables_info += f"    Description: {info['description'][:100]}...\n"  # Limit description length
                 if info.get('comment'):
-                    suggested_tables_info += f"    注释: {info['comment'][:100]}...\n"
-                suggested_tables_info += f"    列（前{len(info['columns'])}个，共{info['total_columns']}个）:\n"
+                    suggested_tables_info += f"    Comment: {info['comment'][:100]}...\n"
+                suggested_tables_info += f"    Columns (first {len(info['columns'])}, total {info['total_columns']}):\n"
                 for col in info['columns']:
                     suggested_tables_info += f"      - {col['name']} ({col['type']})\n"
-    
-    # 构建所有可用表的简要信息（只显示表名和关键信息，大幅压缩）
-    # 重要：这里显示的表名都是从数据库文件直接查询的真实表名，确保准确性
+
+    # Build brief info for all available tables (table names and key info only, heavily compressed)
+    # Important: table names shown here are queried directly from database files to ensure accuracy
     all_tables_info = ""
     for db_name, tables_list in all_available_tables.items():
-        all_tables_info += f"\n数据库：{db_name}（共{len(tables_list)}个表，显示前15个，**这些表名都是从数据库直接查询的真实表名，确保存在**）\n"
-        for table in tables_list[:15]:  # 每个数据库最多显示15个表
+        all_tables_info += f"\nDatabase: {db_name} ({len(tables_list)} tables total, showing first 15; **these table names are real names queried directly from the database, guaranteed to exist**)\n"
+        for table in tables_list[:15]:  # Show at most 15 tables per database
             table_name = table['name']
-            # 显示表名和列数（让大模型知道表的结构）
+            # Show table name and column count (so the LLM knows table structure)
             column_count = len(table.get('columns', []))
-            all_tables_info += f"  - {db_name}.{table_name}（{column_count}个列）\n"
-            # 显示前5个列名（帮助大模型选择正确的列）
+            all_tables_info += f"  - {db_name}.{table_name} ({column_count} columns)\n"
+            # Show first 5 column names (help the LLM choose correct columns)
             if table.get('columns'):
-                all_tables_info += f"    列（前5个）: {', '.join(table['columns'][:5])}\n"
-    
-    # 构建外键关系信息（只显示涉及建议表的外键）
+                all_tables_info += f"    Columns (first 5): {', '.join(table['columns'][:5])}\n"
+
+    # Build foreign key relationship info (only foreign keys involving suggested tables)
     fk_text = ""
     fk_count = 0
-    for fk in foreign_keys[:20]:  # 最多显示20个外键关系
+    for fk in foreign_keys[:20]:  # Show at most 20 foreign key relationships
         source = fk.get('source', '')
         target = fk.get('target', '')
         if source and target:
             fk_text += f"  - {source} -> {target}\n"
             fk_count += 1
-    
-    # 检查是否有外键关系（用于JOIN）
+
+    # Check whether foreign key relationships exist (for JOIN)
     has_foreign_keys = fk_count > 0
-    
-    # 格式化推荐的JOIN列对
+
+    # Format recommended JOIN column pairs
     recommended_join_text = ""
     if recommended_join_columns:
         join_lines = [f"  - {k} = {v}" for k, v in recommended_join_columns.items()]
-        recommended_join_text = "**推荐的JOIN列对（基于表对分析，强烈建议使用）**：\n" + "\n".join(join_lines)
-    
-    # SQL骨架分析提示（JOIN版本：强调JOIN、聚合函数等）
+        recommended_join_text = "**Recommended JOIN column pairs (from table-pair analysis, strongly recommended)**:\n" + "\n".join(join_lines)
+
+    # SQL skeleton analysis hints (JOIN version: emphasizes JOIN, aggregate functions, etc.)
     analysis_hints = ""
-    analysis_hints += "\n**重要：此版本专门生成JOIN方式的跨数据库SQL，强调复杂查询结构！**\n"
-    
+    analysis_hints += "\n**Important: This version generates cross-database SQL using JOIN, emphasizing complex query structure!**\n"
+
     if sql_analysis['has_join']:
-        analysis_hints += "\n✅ **此SQL骨架包含JOIN操作，请使用JOIN方式生成SQL：**\n"
-        analysis_hints += "  - **必须使用JOIN**，不要改为UNION\n"
-        analysis_hints += "  - 优先使用外键关系进行JOIN（如果有外键关系）\n"
-        analysis_hints += "  - 如果没有外键关系，使用语义相关的列进行JOIN（如：名称、ID等）\n"
-        analysis_hints += "  - JOIN示例：\n"
-        analysis_hints += "    SELECT \"数据库1\".\"表1\".\"列1\", \"数据库2\".\"表2\".\"列2\"\n"
-        analysis_hints += "    FROM \"数据库1\".\"表1\"\n"
-        analysis_hints += "    JOIN \"数据库2\".\"表2\" ON \"数据库1\".\"表1\".\"关联列\" = \"数据库2\".\"表2\".\"关联列\"\n"
-        analysis_hints += "    WHERE \"数据库1\".\"表1\".\"列1\" IS NOT NULL\n"
-    
+        analysis_hints += "\n✅ **This SQL skeleton contains JOIN operations; generate SQL using JOIN:**\n"
+        analysis_hints += "  - **Must use JOIN**; do not convert to UNION\n"
+        analysis_hints += "  - Prefer JOIN via foreign key relationships (if available)\n"
+        analysis_hints += "  - If no foreign keys, use semantically related columns for JOIN (e.g., name, ID)\n"
+        analysis_hints += "  - JOIN example:\n"
+        analysis_hints += "    SELECT \"db1\".\"table1\".\"col1\", \"db2\".\"table2\".\"col2\"\n"
+        analysis_hints += "    FROM \"db1\".\"table1\"\n"
+        analysis_hints += "    JOIN \"db2\".\"table2\" ON \"db1\".\"table1\".\"join_col\" = \"db2\".\"table2\".\"join_col\"\n"
+        analysis_hints += "    WHERE \"db1\".\"table1\".\"col1\" IS NOT NULL\n"
+
     if sql_analysis['has_aggregate']:
-        analysis_hints += "\n✅ **此SQL骨架包含聚合函数，请保留并使用聚合函数：**\n"
-        analysis_hints += "  - **必须使用聚合函数**（COUNT, SUM, AVG, MAX, MIN等）\n"
-        analysis_hints += "  - 配合使用GROUP BY进行分组\n"
-        analysis_hints += "  - 示例：SELECT \"数据库1\".\"表1\".\"分组列\", COUNT(*) AS count FROM ... GROUP BY \"数据库1\".\"表1\".\"分组列\"\n"
+        analysis_hints += "\n✅ **This SQL skeleton contains aggregate functions; keep and use them:**\n"
+        analysis_hints += "  - **Must use aggregate functions** (COUNT, SUM, AVG, MAX, MIN, etc.)\n"
+        analysis_hints += "  - Use GROUP BY for grouping\n"
+        analysis_hints += "  - Example: SELECT \"db1\".\"table1\".\"group_col\", COUNT(*) AS count FROM ... GROUP BY \"db1\".\"table1\".\"group_col\"\n"
     else:
-        analysis_hints += "\n💡 **建议添加聚合函数增加查询复杂度：**\n"
-        analysis_hints += "  - 可以使用COUNT, SUM, AVG等聚合函数\n"
-        analysis_hints += "  - 配合GROUP BY进行分组统计\n"
-        analysis_hints += "  - 使用ORDER BY对结果排序\n"
-    
+        analysis_hints += "\n💡 **Consider adding aggregate functions to increase query complexity:**\n"
+        analysis_hints += "  - You may use COUNT, SUM, AVG, and other aggregate functions\n"
+        analysis_hints += "  - Use GROUP BY for grouped statistics\n"
+        analysis_hints += "  - Use ORDER BY to sort results\n"
+
     if sql_analysis['has_subquery']:
-        analysis_hints += "\n✅ **此SQL骨架包含子查询，可以保留子查询结构：**\n"
-        analysis_hints += "  - 子查询在跨数据库场景下可以执行（使用ATTACH DATABASE）\n"
-        analysis_hints += "  - 确保子查询中的表名和列名正确\n"
+        analysis_hints += "\n✅ **This SQL skeleton contains subqueries; you may keep the subquery structure:**\n"
+        analysis_hints += "  - Subqueries can execute in cross-database scenarios (using ATTACH DATABASE)\n"
+        analysis_hints += "  - Ensure table and column names in subqueries are correct\n"
     else:
-        analysis_hints += "\n💡 **可以考虑使用子查询增加复杂度：**\n"
-        analysis_hints += "  - 使用IN子查询：WHERE 列 IN (SELECT 列 FROM \"数据库2\".\"表2\" WHERE ...)\n"
-        analysis_hints += "  - 使用EXISTS子查询：WHERE EXISTS (SELECT 1 FROM \"数据库2\".\"表2\" WHERE ...)\n"
-    
-    # 通用建议（JOIN版本）
-    analysis_hints += "\n**通用建议（JOIN版本）：**\n"
-    analysis_hints += "  - **必须使用JOIN**，不要使用UNION\n"
-    analysis_hints += "  - 优先使用外键关系进行JOIN（查看上面的外键关系列表）\n"
-    analysis_hints += "  - 如果没有外键关系，使用语义相关的列（如：名称、ID、代码等）进行JOIN\n"
-    analysis_hints += "  - **鼓励使用聚合函数**（COUNT, SUM, AVG等）和GROUP BY\n"
-    analysis_hints += "  - **鼓励使用ORDER BY**对结果排序\n"
-    analysis_hints += "  - 可以使用HAVING子句过滤分组结果\n"
-    analysis_hints += "  - 选择有数据的表，确保查询能返回结果\n"
-    
-    # 构建完整prompt
+        analysis_hints += "\n💡 **Consider using subqueries to increase complexity:**\n"
+        analysis_hints += "  - Use IN subquery: WHERE col IN (SELECT col FROM \"db2\".\"table2\" WHERE ...)\n"
+        analysis_hints += "  - Use EXISTS subquery: WHERE EXISTS (SELECT 1 FROM \"db2\".\"table2\" WHERE ...)\n"
+
+    # General suggestions (JOIN version)
+    analysis_hints += "\n**General suggestions (JOIN version):**\n"
+    analysis_hints += "  - **Must use JOIN**; do not use UNION\n"
+    analysis_hints += "  - Prefer JOIN via foreign key relationships (see foreign key list above)\n"
+    analysis_hints += "  - If no foreign keys, use semantically related columns (e.g., name, ID, code) for JOIN\n"
+    analysis_hints += "  - **Encourage aggregate functions** (COUNT, SUM, AVG, etc.) and GROUP BY\n"
+    analysis_hints += "  - **Encourage ORDER BY** to sort results\n"
+    analysis_hints += "  - You may use HAVING to filter grouped results\n"
+    analysis_hints += "  - Choose tables with data to ensure the query returns results\n"
+
+    # Build complete prompt
     databases_str = ', '.join(schemas.keys())
-    
-    prompt = f"""请根据以下 SQL 框架和数据库信息，生成完整且可在 SQLite 上正确执行的跨数据库 SQL 语句。
 
-**重要：这是一个跨数据库查询，涉及以下数据库：{databases_str}**
+    prompt = f"""Based on the following SQL framework and database information, generate a complete cross-database SQL statement that can execute correctly on SQLite.
 
-**核心原则：此版本专门生成JOIN方式的跨数据库SQL，强调复杂查询结构和多样性！**
+**Important: This is a cross-database query involving the following databases: {databases_str}**
 
-**重要提示：此版本必须使用JOIN方式，并鼓励使用聚合函数、GROUP BY、ORDER BY等复杂结构：**
-1. **必须使用JOIN方式**：
-   - **禁止使用UNION**，必须使用JOIN连接不同数据库的表
-   - 优先使用外键关系进行JOIN（查看下面的外键关系列表）
-   - 如果没有外键关系，使用语义相关的列进行JOIN（如：名称、ID、代码等）
-   - JOIN示例：FROM "数据库1"."表1" JOIN "数据库2"."表2" ON "数据库1"."表1"."关联列" = "数据库2"."表2"."关联列"
+**Core principle: This version generates cross-database SQL using JOIN, emphasizing complex query structure and diversity!**
 
-2. **鼓励使用聚合函数和GROUP BY**：
-   - 使用COUNT, SUM, AVG, MAX, MIN等聚合函数
-   - 配合GROUP BY进行分组统计
-   - 示例：SELECT "数据库1"."表1"."分组列", COUNT(*) AS count FROM ... GROUP BY "数据库1"."表1"."分组列"
-   - 可以使用HAVING子句过滤分组结果
+**Important: This version must use JOIN and encourages aggregate functions, GROUP BY, ORDER BY, and other complex structures:**
+1. **Must use JOIN**:
+   - **UNION is prohibited**; must use JOIN to connect tables from different databases
+   - Prefer JOIN via foreign key relationships (see foreign key list below)
+   - If no foreign keys, use semantically related columns for JOIN (e.g., name, ID, code)
+   - JOIN example: FROM "db1"."table1" JOIN "db2"."table2" ON "db1"."table1"."join_col" = "db2"."table2"."join_col"
 
-3. **鼓励使用ORDER BY排序**：
-   - 使用ORDER BY对结果排序（ASC或DESC）
-   - 可以按多个列排序
-   - 示例：ORDER BY "数据库1"."表1"."列1" DESC, "数据库2"."表2"."列2" ASC
+2. **Encourage aggregate functions and GROUP BY**:
+   - Use COUNT, SUM, AVG, MAX, MIN, and other aggregate functions
+   - Use GROUP BY for grouped statistics
+   - Example: SELECT "db1"."table1"."group_col", COUNT(*) AS count FROM ... GROUP BY "db1"."table1"."group_col"
+   - You may use HAVING to filter grouped results
 
-4. **可以使用子查询**：
-   - 使用IN子查询：WHERE 列 IN (SELECT 列 FROM "数据库2"."表2" WHERE ...)
-   - 使用EXISTS子查询：WHERE EXISTS (SELECT 1 FROM "数据库2"."表2" WHERE ...)
-   - 确保子查询中的表名和列名正确
+3. **Encourage ORDER BY sorting**:
+   - Use ORDER BY to sort results (ASC or DESC)
+   - You may sort by multiple columns
+   - Example: ORDER BY "db1"."table1"."col1" DESC, "db2"."table2"."col2" ASC
 
-5. **表的选择**：
-   - 优先选择有外键关系的表（查看下面的外键关系列表）
-   - 如果没有外键关系，选择语义相关的表（如：企业信息表和信用信息表）
-   - 确保选择的表在对应数据库中真实存在
+4. **Subqueries are allowed**:
+   - Use IN subquery: WHERE col IN (SELECT col FROM "db2"."table2" WHERE ...)
+   - Use EXISTS subquery: WHERE EXISTS (SELECT 1 FROM "db2"."table2" WHERE ...)
+   - Ensure table and column names in subqueries are correct
 
-**严格要求：**
-- **仅输出最终生成的完整 SQL 语句，不要重复提示内容。**
-- **生成的 SQL 要保证语法正确，可以直接在 SQLite 上运行得到结果。**
-- **不要添加任何额外的解释、注释或输出格式（代码块，空格等）。**
-- **⚠️ 关键：必须使用下面"所有可用表"中列出的真实表名和列名，这些表名和列名都是从数据库直接查询的，确保存在！**
-- **⚠️ 绝对不要使用schema中可能存在但数据库中不存在的表名或列名！**
-- **所有表名必须使用格式："数据库名"."表名"，例如："企业服务"."市市场监管局-市场主体注册情况-1820"**
-- **所有列名必须使用格式："数据库名"."表名"."列名"，例如："企业服务"."市市场监管局-市场主体注册情况-1820"."市场主体名称"**
-- **所有表名和列名都必须用双引号包裹（包括中文和特殊字符）。**
-- **⚠️ 表名必须完全匹配"所有可用表"中列出的表名（包括后缀数字），不能省略或修改！**
+5. **Table selection**:
+   - Prefer tables with foreign key relationships (see foreign key list below)
+   - If no foreign keys, choose semantically related tables (e.g., enterprise info and credit info tables)
+   - Ensure selected tables actually exist in the corresponding databases
 
-**SQL 框架（仅供参考，你可以大幅简化或完全改变结构，优先保证可执行性）：**
+**Strict requirements:**
+- **Output only the final complete SQL statement; do not repeat the prompt content.**
+- **Generated SQL must be syntactically correct and runnable on SQLite to produce results.**
+- **Do not add any extra explanation, comments, or output formatting (code blocks, etc.).**
+- **⚠️ Critical: Must use real table and column names listed in "All available tables" below; these are queried directly from databases and guaranteed to exist!**
+- **⚠️ Never use table or column names that exist in schema but not in the actual database!**
+- **All table names must use format: "database_name"."table_name", e.g.: "企业服务"."市市场监管局-市场主体注册情况-1820"**
+- **All column names must use format: "database_name"."table_name"."column_name", e.g.: "企业服务"."市市场监管局-市场主体注册情况-1820"."市场主体名称"**
+- **All table and column names must be wrapped in double quotes (including Chinese and special characters).**
+- **⚠️ Table names must exactly match those listed in "All available tables" (including numeric suffixes); do not omit or modify!**
+
+**SQL framework (for reference only; you may simplify or change structure, prioritizing executability):**
 {sql_skeleton}
 
 {suggested_tables_info}
 
-所有可用表（你可以从中选择最合适的表）：
+All available tables (choose the most suitable ones):
 {all_tables_info}
 
-外键关系（**优先使用这些关系进行JOIN**）：
-{fk_text if fk_text else "⚠️ 无外键关系 - 跨数据库查询可能没有外键关系。请使用语义相关的列（如：名称、ID、代码等）进行JOIN。"}
+Foreign key relationships (**prefer these for JOIN**):
+{fk_text if fk_text else "⚠️ No foreign key relationships - cross-database queries may lack foreign keys. Use semantically related columns (e.g., name, ID, code) for JOIN."}
 
 {recommended_join_text}
 
 {analysis_hints}
 
-请生成完整的跨数据库SQL语句（可以根据实际情况优化和调整SQL骨架）："""
+Generate the complete cross-database SQL statement (you may optimize and adjust the SQL skeleton as needed):"""
 
-    # 返回所有可用表（用于后续验证）
+    # Return all available tables (for subsequent validation)
     all_tables_list = []
     for db_name, tables_list in all_available_tables.items():
         for table in tables_list:
             all_tables_list.append(f"{db_name}.{table['name']}")
-    
+
     return prompt, all_tables_list, {}
 
-def process_cross_database_skeleton(skeleton_data, schemas, graph_dir, output_dir, 
+def process_cross_database_skeleton(skeleton_data, schemas, graph_dir, output_dir,
                                     database_dir, max_retries=3):
-    """处理单个跨数据库SQL骨架，填充生成完整SQL"""
-    
+    """Process a single cross-database SQL skeleton and fill it to generate complete SQL."""
+
     sql_skeleton = skeleton_data['sql_skeleton']
     table_database_mapping = skeleton_data['table_database_mapping']
     databases = skeleton_data.get('databases', [])
-    
-    # 确定输出文件名
+
+    # Determine output filename
     original_file = skeleton_data.get('original_file', 'unknown')
     match = re.search(r'(\d+)', original_file)
     if match:
@@ -629,132 +629,132 @@ def process_cross_database_skeleton(skeleton_data, schemas, graph_dir, output_di
         import hashlib
         hash_id = hashlib.md5(sql_skeleton.encode()).hexdigest()[:8]
         output_file = os.path.join(output_dir, f"cross_db_generated_sql_{hash_id}.json")
-    
-    # 检查是否已存在（修改后重新生成，所以不跳过）
+
+    # Check whether output already exists (regenerate after modifications, so do not skip)
     # if os.path.exists(output_file):
-    #     return idx if match else hash_id, True, "已存在"
-    
-    # 加载图文件
+    #     return idx if match else hash_id, True, "already exists"
+
+    # Load graph file
     graph_file = os.path.join(graph_dir, f"cross_db_graph_{idx if match else hash_id}.json")
     if not os.path.exists(graph_file):
-        return idx if match else hash_id, False, "图文件不存在"
-    
+        return idx if match else hash_id, False, "Graph file not found"
+
     graph_data = load_cross_database_graph(graph_file)
-    
-    # 分析SQL骨架
+
+    # Analyze SQL skeleton
     sql_analysis = analyze_sql_skeleton(sql_skeleton)
-    
-    # 获取推荐的JOIN列对（如果有）
+
+    # Get recommended JOIN column pairs (if available)
     recommended_join_columns = skeleton_data.get('recommended_join_columns', None)
-    
-    # 构建prompt（JOIN版本）
+
+    # Build prompt (JOIN version)
     prompt, selected_tables, selected_columns = construct_cross_database_prompt_join(
         sql_skeleton, schemas, table_database_mapping, graph_data, sql_analysis, database_dir,
         recommended_join_columns=recommended_join_columns
     )
-    
-    # 不再跳过，即使没有建议的表，也提供所有可用表给大模型选择
+
+    # Do not skip; even without suggested tables, provide all available tables for the LLM to choose from
     if prompt is None:
-        # 如果构建失败，使用备用方案：提供所有可用表
+        # If construction fails, use fallback: provide all available tables
         all_available_tables = get_all_tables_from_databases(schemas, database_dir)
         if not any(all_available_tables.values()):
-            return None, False, "数据库中没有可用的表"
-        # 重新构建prompt，使用所有可用表（JOIN版本）
+            return None, False, "No available tables in database"
+        # Rebuild prompt using all available tables (JOIN version)
         recommended_join_columns = skeleton_data.get('recommended_join_columns', None)
         prompt, _, _ = construct_cross_database_prompt_join(
             sql_skeleton, schemas, table_database_mapping, graph_data, sql_analysis, database_dir,
             recommended_join_columns=recommended_join_columns
         )
-    
-    # 调用大模型生成SQL
+
+    # Call LLM to generate SQL
     client = get_client()
     API_CONFIG = load_config()
-    
-    # 确保base_url格式正确
+
+    # Ensure base_url format is correct
     api_url = API_CONFIG.get("api_url", "").rstrip('/')
-    model = API_CONFIG.get("model", "gpt-4o-mini")  # 使用gpt-4o-mini，与用户配置一致
-    
-    # 初始化变量，用于保存错误信息
+    model = API_CONFIG.get("model", "gpt-4o-mini")  # Use gpt-4o-mini, consistent with user config
+
+    # Initialize variables for storing error information
     generated_sql = None
     results = None
     execution_error = None
     last_error = None
     final_attempt = 0
-    
+
     for attempt in range(max_retries):
         final_attempt = attempt + 1
         try:
             response = client.chat.completions.create(
                 model=model,
                 messages=[
-                    {"role": "system", "content": "你是一个SQL专家，擅长生成跨数据库SQL查询。"},
+                    {"role": "system", "content": "You are a SQL expert skilled at generating cross-database SQL queries."},
                     {"role": "user", "content": prompt}
                 ],
                 temperature=API_CONFIG.get("temperature", 0.1),
                 max_tokens=API_CONFIG.get("max_tokens", 8000)
             )
-            
+
             generated_sql = response.choices[0].message.content.strip()
-            
-            # 清理SQL（移除代码块标记等）
+
+            # Clean SQL (remove code block markers, etc.)
             generated_sql = re.sub(r'^```sql\s*', '', generated_sql, flags=re.IGNORECASE)
             generated_sql = re.sub(r'^```\s*', '', generated_sql)
             generated_sql = re.sub(r'```\s*$', '', generated_sql)
             generated_sql = generated_sql.strip()
-            
-            # 验证SQL语法
+
+            # Validate SQL syntax
             try:
                 sqlparse.parse(generated_sql)
             except Exception as parse_error:
-                last_error = f"SQL语法错误: {str(parse_error)}"
+                last_error = f"SQL syntax error: {str(parse_error)}"
                 if attempt < max_retries - 1:
                     continue
-                # 最后一次尝试失败，保存文件并返回
+                # Last attempt failed; save file and return
                 break
-            
-            # 执行SQL并获取结果
-            # 使用ATTACH DATABASE功能执行跨数据库SQL
+
+            # Execute SQL and get results
+            # Use ATTACH DATABASE to execute cross-database SQL
             results = None
             execution_error = None
-            
+
             try:
-                # 方法1：使用ATTACH DATABASE执行真正的跨数据库查询
+                # Method 1: use ATTACH DATABASE to execute true cross-database queries
                 results, success = execute_cross_database_sql_with_attach(
                     generated_sql, databases, database_dir, table_database_mapping
                 )
-                
+
                 if not success:
-                    # 方法2：如果ATTACH失败，尝试转换为单数据库格式执行（降级方案）
+                    # Method 2: if ATTACH fails, try converting to single-database format (fallback)
                     single_db_sql = convert_to_single_database_sql(generated_sql, table_database_mapping)
-                    
-                    # 尝试在涉及的数据库上执行（优先第一个数据库）
+
+                    # Try executing on involved databases (prefer the first database)
                     for db_name in databases:
                         db_path = os.path.join(database_dir, db_name, f"{db_name}.db")
                         if os.path.exists(db_path):
                             results, success = execute_sql_on_database(single_db_sql, db_path)
                             if success:
-                                break  # 成功执行，退出循环
-                    
-                    # 如果所有方法都失败，记录错误
+                                break  # Successful execution; exit loop
+
+                    # If all methods fail, record the error
                     if not success:
-                        execution_error = "无法在任意数据库上执行SQL（ATTACH和单数据库格式都失败）"
+                        execution_error = "Cannot execute SQL on any database (both ATTACH and single-database format failed)"
                         results = None
                 else:
-                    # ATTACH成功，results可能是空列表（空结果也算成功）
+                    # ATTACH succeeded; results may be an empty list (empty results still count as success)
                     if results is None:
                         results = []
             except Exception as e:
-                execution_error = f"执行异常: {str(e)}"
-            
-            # 如果到这里，说明API调用和SQL生成都成功了，保存结果
+                execution_error = f"Execution exception: {str(e)}"
+
+            # At this point, API call and SQL generation succeeded; save results
             saved_results = []
             if results is not None:
-                # 只保存前10条结果（与单数据库保持一致）
+                # Save only the first 10 results (consistent with single-database behavior)
                 saved_results = results[:10] if len(results) > 10 else results
-                # 转换为列表格式（确保可以JSON序列化）
+                # Convert to list format (ensure JSON serializable)
                 saved_results = [list(row) for row in saved_results]
-            
-            # 保存结果（无论是否有执行错误，都保存）
+
+            # Save results (save regardless of execution errors)
             result = {
                 'sql': generated_sql,
                 'results': saved_results,
@@ -775,37 +775,37 @@ def process_cross_database_skeleton(skeleton_data, schemas, graph_dir, output_di
                     'attempt': final_attempt
                 }
             }
-            
-            # 如果有执行错误，记录到metadata中
+
+            # Record execution errors in metadata if present
             if execution_error:
                 result['metadata']['execution_error'] = execution_error
-            
-            # 保存文件（无论成功还是失败都保存）
+
+            # Save file (save whether successful or failed)
             with open(output_file, 'w', encoding='utf-8') as f:
                 json.dump(result, f, ensure_ascii=False, indent=2)
-            
-            # 判断是否成功（有结果且没有执行错误）
+
+            # Determine success (has results and no execution error)
             if results is not None and len(saved_results) > 0 and not execution_error:
-                return idx if match else hash_id, True, "成功"
+                return idx if match else hash_id, True, "Success"
             else:
-                return idx if match else hash_id, False, execution_error or "执行无结果"
-                
+                return idx if match else hash_id, False, execution_error or "Execution returned no results"
+
         except Exception as api_error:
-            # 记录API错误
+            # Record API error
             error_str = str(api_error)
-            last_error = f"API调用失败: {error_str[:200]}"
-            
-            # 检查是否是配额错误
+            last_error = f"API call failed: {error_str[:200]}"
+
+            # Check for quota errors
             if "quota" in error_str.lower() or "429" in error_str or "insufficient_quota" in error_str:
-                last_error = f"API配额已用完: {error_str[:200]}"
-                # 配额错误不重试，直接保存并返回
+                last_error = f"API quota exhausted: {error_str[:200]}"
+                # Do not retry quota errors; save and return immediately
                 break
-            # 其他API错误，重试
+            # Retry other API errors
             if attempt < max_retries - 1:
                 time.sleep(1)
                 continue
-    
-    # 如果所有尝试都失败，保存错误信息到文件
+
+    # If all attempts fail, save error information to file
     result = {
         'sql': generated_sql or "",
         'results': None,
@@ -820,7 +820,7 @@ def process_cross_database_skeleton(skeleton_data, schemas, graph_dir, output_di
             'has_aggregate': sql_analysis['has_aggregate'],
             'is_cross_database': True,
             'num_databases': len(databases),
-            'error': last_error or "达到最大重试次数",
+            'error': last_error or "Reached maximum retry count",
             'execution_error': execution_error
         },
         'generation_info': {
@@ -828,61 +828,61 @@ def process_cross_database_skeleton(skeleton_data, schemas, graph_dir, output_di
             'attempt': final_attempt
         }
     }
-    
-    # 保存失败的文件（方便分析问题）
+
+    # Save failed file (for easier debugging)
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(result, f, ensure_ascii=False, indent=2)
-    
-    return idx if match else hash_id, False, last_error or "达到最大重试次数"
+
+    return idx if match else hash_id, False, last_error or "Reached maximum retry count"
 
 def main():
-    parser = argparse.ArgumentParser(description='填充跨数据库SQL骨架')
+    parser = argparse.ArgumentParser(description='Fill cross-database SQL skeletons')
     parser.add_argument('--skeleton_file', type=str, required=True,
-                       help='跨数据库SQL骨架文件')
+                       help='Cross-database SQL skeleton file')
     parser.add_argument('--graph_dir', type=str,
                        default='benchmark/data/beijing/output/cross_db_graph',
-                       help='图文件目录')
+                       help='Graph file directory')
     parser.add_argument('--database_dir', type=str,
                        default='benchmark/data/beijing/database_chinese',
-                       help='数据库目录')
+                       help='Database directory')
     parser.add_argument('--output_dir', type=str,
                        default='benchmark/data/beijing/output/cross_db_single_join',
-                       help='输出目录')
+                       help='Output directory')
     parser.add_argument('--max_retries', type=int, default=3,
-                       help='最大重试次数')
+                       help='Maximum number of retries')
     parser.add_argument('--max_workers', type=int, default=5,
-                       help='并发线程数')
-    
+                       help='Number of concurrent worker threads')
+
     args = parser.parse_args()
-    
-    # 加载跨数据库SQL骨架
-    print(f"加载跨数据库SQL骨架: {args.skeleton_file}")
+
+    # Load cross-database SQL skeletons
+    print(f"Loading cross-database SQL skeletons: {args.skeleton_file}")
     with open(args.skeleton_file, 'r', encoding='utf-8') as f:
         skeletons = json.load(f)
-    
-    print(f"共 {len(skeletons)} 个SQL骨架")
-    
-    # 获取所有涉及的数据库
+
+    print(f"Total SQL skeletons: {len(skeletons)}")
+
+    # Collect all involved databases
     all_databases = set()
     for skeleton in skeletons:
         all_databases.update(skeleton.get('databases', []))
-    
-    print(f"涉及的数据库: {sorted(all_databases)}")
-    
-    # 加载所有数据库的schema
-    print("\n加载数据库schema...")
+
+    print(f"Involved databases: {sorted(all_databases)}")
+
+    # Load schemas from all databases
+    print("\nLoading database schemas...")
     schemas = load_multiple_schemas(all_databases, args.database_dir)
-    print(f"成功加载 {len(schemas)} 个数据库的schema")
-    
-    # 创建输出目录
+    print(f"Successfully loaded schemas from {len(schemas)} databases")
+
+    # Create output directory
     os.makedirs(args.output_dir, exist_ok=True)
-    
-    # 处理每个SQL骨架
-    print(f"\n填充SQL骨架...")
+
+    # Process each SQL skeleton
+    print(f"\nFilling SQL skeletons...")
     success_count = 0
     failed_count = 0
-    
-    # 使用线程池并发处理
+
+    # Process concurrently with a thread pool
     with ThreadPoolExecutor(max_workers=args.max_workers) as executor:
         futures = []
         for skeleton in skeletons:
@@ -892,22 +892,21 @@ def main():
                 args.database_dir, args.max_retries
             )
             futures.append(future)
-        
-        # 收集结果
-        for future in tqdm(as_completed(futures), total=len(futures), desc="填充进度"):
+
+        # Collect results
+        for future in tqdm(as_completed(futures), total=len(futures), desc="Filling progress"):
             idx, success, message = future.result()
             if success:
                 success_count += 1
             else:
                 failed_count += 1
-                if failed_count <= 10:  # 只显示前10个错误
-                    print(f"\n失败 (idx={idx}): {message}")
-    
-    print(f"\n完成！")
-    print(f"成功: {success_count}/{len(skeletons)}")
-    print(f"失败: {failed_count}/{len(skeletons)}")
-    print(f"输出目录: {args.output_dir}")
+                if failed_count <= 10:  # Show only the first 10 errors
+                    print(f"\nFailed (idx={idx}): {message}")
+
+    print(f"\nDone!")
+    print(f"Success: {success_count}/{len(skeletons)}")
+    print(f"Failed: {failed_count}/{len(skeletons)}")
+    print(f"Output directory: {args.output_dir}")
 
 if __name__ == '__main__':
     main()
-

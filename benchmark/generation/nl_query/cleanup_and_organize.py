@@ -1,8 +1,8 @@
 """
-清理和整理NL查询文件，确保每个数据库正好200条
-- 保留索引0-199的文件
-- 删除索引>=200的文件
-- 确保50条重新生成的简单查询在0-199范围内
+Clean up and organize NL query files so each database has exactly 200 entries
+- Keep files with indices 0-199
+- Delete files with indices >= 200
+- Ensure 50 regenerated simple queries fall within indices 0-199
 """
 
 import json
@@ -11,9 +11,9 @@ import shutil
 import argparse
 
 def cleanup_database(nl_dir: str, database: str, dry_run: bool = False):
-    """清理数据库的NL查询文件"""
+    """Clean up NL query files for a database"""
     if not os.path.exists(nl_dir):
-        print(f"目录不存在: {nl_dir}")
+        print(f"Directory does not exist: {nl_dir}")
         return
     
     all_files = sorted([f for f in os.listdir(nl_dir) if f.startswith('generated_nl_query_') and f.endswith('.json')],
@@ -31,7 +31,7 @@ def cleanup_database(nl_dir: str, database: str, dry_run: bool = False):
         idx = int(idx_str)
         filepath = os.path.join(nl_dir, filename)
         
-        # 检查是否重新生成
+        # Check whether this file was regenerated
         is_regenerated = False
         try:
             with open(filepath, 'r', encoding='utf-8') as f:
@@ -48,20 +48,20 @@ def cleanup_database(nl_dir: str, database: str, dry_run: bool = False):
             files_to_remove.append((idx, filename))
     
     print(f"{database}:")
-    print(f"  总文件数: {len(all_files)}")
-    print(f"  保留文件数（索引0-199）: {len(files_to_keep)}")
-    print(f"  删除文件数（索引>=200）: {len(files_to_remove)}")
-    print(f"  重新生成的简单查询: {regenerated_count}")
+    print(f"  Total files: {len(all_files)}")
+    print(f"  Files to keep (indices 0-199): {len(files_to_keep)}")
+    print(f"  Files to delete (indices >= 200): {len(files_to_remove)}")
+    print(f"  Regenerated simple queries: {regenerated_count}")
     
     if files_to_remove:
-        print(f"\n  将删除的文件（前10个）:")
+        print(f"\n  Files to be deleted (first 10):")
         for idx, filename in files_to_remove[:10]:
-            print(f"    索引 {idx}: {filename}")
+            print(f"    Index {idx}: {filename}")
         if len(files_to_remove) > 10:
-            print(f"    ... 还有 {len(files_to_remove) - 10} 个文件")
+            print(f"    ... and {len(files_to_remove) - 10} more files")
     
     if not dry_run:
-        # 删除索引>=200的文件
+        # Delete files with indices >= 200
         removed_count = 0
         for idx, filename in files_to_remove:
             filepath = os.path.join(nl_dir, filename)
@@ -69,31 +69,31 @@ def cleanup_database(nl_dir: str, database: str, dry_run: bool = False):
                 os.remove(filepath)
                 removed_count += 1
             except Exception as e:
-                print(f"  删除失败 {filename}: {e}")
+                print(f"  Failed to delete {filename}: {e}")
         
-        print(f"\n  已删除 {removed_count} 个文件")
+        print(f"\n  Deleted {removed_count} files")
     
     print()
     return len(files_to_keep), regenerated_count
 
 def main():
-    parser = argparse.ArgumentParser(description='清理和整理NL查询文件')
+    parser = argparse.ArgumentParser(description='Clean up and organize NL query files')
     parser.add_argument('--nl_query_base_dir', type=str, 
                        default='benchmark/data/beijing/output/nl_query',
-                       help='NL查询文件基础目录')
+                       help='Base directory for NL query files')
     parser.add_argument('--databases', type=str, nargs='+',
                        default=['企业服务', '社会保障', '医疗健康'],
-                       help='要处理的数据库列表')
+                       help='List of databases to process')
     parser.add_argument('--dry-run', action='store_true',
-                       help='只显示将要执行的操作，不实际删除文件')
+                       help='Show planned actions only without deleting files')
     
     args = parser.parse_args()
     
     print("="*80)
     if args.dry_run:
-        print("清理和整理NL查询文件（预览模式）")
+        print("Clean up and organize NL query files (preview mode)")
     else:
-        print("清理和整理NL查询文件")
+        print("Clean up and organize NL query files")
     print("="*80)
     print()
     
@@ -107,16 +107,14 @@ def main():
         total_regenerated += regenerated
     
     print("="*80)
-    print("总结:")
-    print(f"  保留的文件总数: {total_kept}")
-    print(f"  重新生成的简单查询总数: {total_regenerated}")
+    print("Summary:")
+    print(f"  Total files kept: {total_kept}")
+    print(f"  Total regenerated simple queries: {total_regenerated}")
     print("="*80)
     
     if args.dry_run:
-        print("\n这是预览模式，没有实际删除文件。")
-        print("运行时不加 --dry-run 参数来实际执行清理。")
+        print("\nThis is preview mode; no files were deleted.")
+        print("Run without --dry-run to perform the cleanup.")
 
 if __name__ == '__main__':
     main()
-
-

@@ -1,7 +1,7 @@
 """
-Query Planning Prompt策略实现
+Query Planning Prompt strategy implementation
 
-根据文档中的设计，实现查询规划的Prompt构建逻辑
+Implements query planning prompt construction logic based on the design document
 """
 
 from typing import List, Dict, Optional
@@ -9,15 +9,15 @@ import json
 
 
 class QueryPlanningPrompt:
-    """Query Planning的Prompt构建器"""
+    """Query Planning prompt builder"""
     
     def __init__(self, temperature: float = 0.3, max_tokens: int = 1024):
         """
-        初始化Prompt构建器
+        Initialize prompt builder
         
         Args:
-            temperature: 温度参数（默认0.3，保证规划稳定性）
-            max_tokens: 最大输出token数（默认1024）
+            temperature: Temperature parameter (default 0.3 for planning stability)
+            max_tokens: Maximum output tokens (default 1024)
         """
         self.temperature = temperature
         self.max_tokens = max_tokens
@@ -29,39 +29,39 @@ class QueryPlanningPrompt:
         schema_info: Optional[Dict] = None
     ) -> str:
         """
-        构建查询规划Prompt
+        Build query planning prompt
         
         Args:
-            query: 转写后的查询
-            relevant_tables: 相关表列表（来自Table Linking）
-            schema_info: Schema信息（可选）
+            query: Rewritten query
+            relevant_tables: List of relevant tables (from Table Linking)
+            schema_info: Schema information (optional)
             
         Returns:
-            格式化的Prompt字符串
+            Formatted prompt string
         """
-        prompt = f"""请将以下查询拆解为多个简单的子查询，并确定执行顺序。
+        prompt = f"""Break down the following query into multiple simple subqueries and determine the execution order.
 
-原始查询：{query}
+Original query: {query}
 
-相关表：{', '.join(relevant_tables)}
+Relevant tables: {', '.join(relevant_tables)}
 
 """
         
         if schema_info:
-            prompt += f"Schema信息：{json.dumps(schema_info, ensure_ascii=False, indent=2)}\n\n"
+            prompt += f"Schema information: {json.dumps(schema_info, ensure_ascii=False, indent=2)}\n\n"
         
-        prompt += """请以JSON格式输出执行计划，格式如下：
+        prompt += """Output the execution plan in JSON format as follows:
 [
     {
-        "subquery": "子查询描述",
-        "tables": ["表1", "表2"],
+        "subquery": "subquery description",
+        "tables": ["table1", "table2"],
         "order": 1,
         "dependencies": []
     },
     ...
 ]
 
-执行计划："""
+Execution plan:"""
         
         return prompt
     
@@ -72,15 +72,15 @@ class QueryPlanningPrompt:
         schema_info: Optional[Dict] = None
     ) -> List[Dict[str, str]]:
         """
-        构建OpenAI格式的消息列表
+        Build OpenAI-format message list
         
         Args:
-            query: 转写后的查询
-            relevant_tables: 相关表列表
-            schema_info: Schema信息
+            query: Rewritten query
+            relevant_tables: List of relevant tables
+            schema_info: Schema information
             
         Returns:
-            消息列表
+            Message list
         """
         prompt = self.build_prompt(query, relevant_tables, schema_info)
         
@@ -99,43 +99,43 @@ class QueryPlanningPrompt:
     
     def parse_plan(self, plan_json: str) -> List[Dict]:
         """
-        解析执行计划JSON
+        Parse execution plan JSON
         
         Args:
-            plan_json: JSON格式的执行计划字符串
+            plan_json: JSON-formatted execution plan string
             
         Returns:
-            解析后的执行计划列表
+            Parsed execution plan list
         """
         try:
             plan = json.loads(plan_json)
-            # 验证计划格式
+            # Validate plan format
             if not isinstance(plan, list):
                 return self._default_plan()
             
-            # 确保每个计划项都有必要字段
+            # Ensure each plan item has required fields
             for item in plan:
                 if not all(key in item for key in ['subquery', 'tables', 'order']):
                     return self._default_plan()
             
             return plan
         except json.JSONDecodeError:
-            # 如果解析失败，返回默认计划
+            # If parsing fails, return default plan
             return self._default_plan()
     
     def _default_plan(self, query: str = "", tables: List[str] = None) -> List[Dict]:
         """
-        生成默认计划（单步执行）
+        Generate default plan (single-step execution)
         
         Args:
-            query: 查询文本
-            tables: 表列表
+            query: Query text
+            tables: Table list
             
         Returns:
-            默认执行计划
+            Default execution plan
         """
         return [{
-            "subquery": query or "原始查询",
+            "subquery": query or "Original query",
             "tables": tables or [],
             "order": 1,
             "dependencies": []
@@ -143,10 +143,10 @@ class QueryPlanningPrompt:
     
     def get_config(self) -> Dict:
         """
-        获取模型调用配置
+        Get model call configuration
         
         Returns:
-            配置字典
+            Configuration dictionary
         """
         return {
             "temperature": self.temperature,
@@ -159,39 +159,39 @@ def create_planning_prompt_builder(
     max_tokens: int = 1024
 ) -> QueryPlanningPrompt:
     """
-    创建Query Planning Prompt构建器
+    Create Query Planning prompt builder
     
     Args:
-        temperature: 温度参数
-        max_tokens: 最大输出token数
+        temperature: Temperature parameter
+        max_tokens: Maximum output tokens
         
     Returns:
-        QueryPlanningPrompt实例
+        QueryPlanningPrompt instance
     """
     return QueryPlanningPrompt(temperature=temperature, max_tokens=max_tokens)
 
 
-# 示例使用
+# Example usage
 if __name__ == "__main__":
-    # 创建Prompt构建器
+    # Create prompt builder
     prompt_builder = create_planning_prompt_builder()
     
-    # 示例数据
+    # Example data
     example_query = "查询北京地区企业注册数据：注册数量、注册资本，按年份统计"
     example_tables = ["企业注册表", "企业信息表"]
     
-    # 构建Prompt
+    # Build prompt
     prompt = prompt_builder.build_prompt(example_query, example_tables)
-    print("Query Planning Prompt：")
+    print("Query Planning Prompt:")
     print(prompt)
     
-    # 构建OpenAI格式消息
+    # Build OpenAI-format messages
     messages = prompt_builder.build_messages(example_query, example_tables)
-    print("\nOpenAI格式消息：")
+    print("\nOpenAI-format messages:")
     for msg in messages:
         print(f"{msg['role']}: {msg['content'][:200]}...")
     
-    # 解析示例计划
+    # Parse example plan
     example_plan_json = """[
         {
             "subquery": "查询企业注册基本信息",
@@ -208,6 +208,5 @@ if __name__ == "__main__":
     ]"""
     
     plan = prompt_builder.parse_plan(example_plan_json)
-    print("\n解析后的执行计划：")
+    print("\nParsed execution plan:")
     print(json.dumps(plan, ensure_ascii=False, indent=2))
-

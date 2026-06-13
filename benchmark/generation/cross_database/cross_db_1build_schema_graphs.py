@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-跨数据库SQL-Schema Linking Graph构建脚本
+Cross-database SQL-Schema Linking Graph construction script.
 
-基于单数据库的图生成脚本，扩展支持跨数据库场景：
-1. 加载多个数据库的schema
-2. 为跨数据库SQL骨架生成图
-3. 考虑跨数据库的表和列关系
+Extends the single-database graph generation script to support cross-database scenarios:
+1. Load schemas from multiple databases
+2. Generate graphs for cross-database SQL skeletons
+3. Consider cross-database table and column relationships
 """
 
 import json
@@ -17,16 +17,16 @@ from tqdm import tqdm
 from collections import defaultdict
 import argparse
 
-# 导入单数据库的图生成函数
+# Import single-database graph generation functions
 import sys
 sql_filling_dir = os.path.join(os.path.dirname(__file__), '..', 'sql_filling')
 sys.path.insert(0, sql_filling_dir)
 
-# 动态导入
+# Dynamic import
 import importlib.util
 spec = importlib.util.spec_from_file_location(
     "build_schema_graphs_improved",
-    os.path.join(sql_filling_dir, "1build_schema_graphs_improved.py")
+    os.path.join(sql_filling_dir, "build_schema_graphs.py")
 )
 build_graphs_module = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(build_graphs_module)
@@ -36,125 +36,125 @@ parse_sql_framework = build_graphs_module.parse_sql_framework
 get_possible_schema_nodes = build_graphs_module.get_possible_schema_nodes
 
 def load_multiple_schemas(database_names, database_dir):
-    """加载多个数据库的schema信息"""
+    """Load schema information from multiple databases."""
     schemas = {}
     for db_name in database_names:
         schema_file = os.path.join(database_dir, db_name, f"{db_name}.json")
         if os.path.exists(schema_file):
             schemas[db_name] = load_schema(schema_file)
         else:
-            print(f"警告: 找不到schema文件 {schema_file}")
+            print(f"Warning: schema file not found {schema_file}")
     return schemas
 
 def build_cross_database_graph(sql_skeleton, schemas, table_database_mapping):
     """
-    为跨数据库SQL骨架构建图
-    关键：同时加载所有涉及的数据库的schema，构建统一的图
-    
+    Build a graph for a cross-database SQL skeleton.
+    Key point: load schemas from all involved databases and construct a unified graph.
+
     Args:
-        sql_skeleton: SQL骨架字符串
-        schemas: 多个数据库的schema字典 {db_name: schema}
-        table_database_mapping: 表到数据库的映射 {table_name: db_name}
-    
+        sql_skeleton: SQL skeleton string
+        schemas: Dictionary of schemas from multiple databases {db_name: schema}
+        table_database_mapping: Mapping from table to database {table_name: db_name}
+
     Returns:
-        NetworkX图对象和元数据
+        NetworkX graph object and metadata
     """
     G = nx.DiGraph()
-    
-    # 1. 添加所有涉及的数据库的表和列节点（统一构建）
-    # 这是关键：不是分别建图，而是将所有数据库的表和列都添加到同一个图中
+
+    # 1. Add table and column nodes from all involved databases (unified construction)
+    # Key: build one graph for all databases rather than separate graphs per database
     for db_name, schema in schemas.items():
         if schema is None:
             continue
-            
+
         for table_info in schema.get('tables', []):
             table_name = table_info.get('table_name', '')
-            # 节点ID格式：数据库名.表名（确保跨数据库唯一性）
+            # Node ID format: database_name.table_name (ensures cross-database uniqueness)
             table_node_id = f"{db_name}.{table_name}"
-            
-            # 添加表节点
-            G.add_node(table_node_id, 
+
+            # Add table node
+            G.add_node(table_node_id,
                       node_type='table',
                       table_name=table_name,
                       database=db_name,
                       table_comment=table_info.get('table_comment', ''),
                       table_description=table_info.get('table_description', ''))
-            
-            # 添加列节点
+
+            # Add column nodes
             for col_info in table_info.get('columns', []):
                 col_name = col_info.get('column_name', '')
-                # 节点ID格式：数据库名.表名.列名
+                # Node ID format: database_name.table_name.column_name
                 col_node_id = f"{db_name}.{table_name}.{col_name}"
-                
+
                 G.add_node(col_node_id,
                           node_type='column',
                           column_name=col_name,
                           table_name=table_name,
                           database=db_name,
                           data_type=col_info.get('data_type', 'TEXT'))
-                
-                # 添加表到列的边
+
+                # Add table-to-column edge
                 G.add_edge(table_node_id, col_node_id, edge_type='contains')
-    
-    # 2. 添加外键关系（跨数据库的外键关系）
+
+    # 2. Add foreign key relationships (including cross-database foreign keys)
     for db_name, schema in schemas.items():
         for table_info in schema.get('tables', []):
             table_name = table_info.get('table_name', '')
             table_node_id = f"{db_name}.{table_name}"
-            
-            # 处理外键关系
+
+            # Process foreign key relationships
             for fk in table_info.get('foreign_keys', []):
                 ref_table = fk.get('referenced_table', '')
                 ref_col = fk.get('referenced_column', '')
                 fk_col = fk.get('column_name', '')
-                
-                # 查找引用表所在的数据库
-                ref_db = table_database_mapping.get(ref_table, db_name)  # 默认同数据库
-                
+
+                # Find the database containing the referenced table
+                ref_db = table_database_mapping.get(ref_table, db_name)  # Default to same database
+
                 if ref_table and ref_col:
                     source_col_id = f"{db_name}.{table_name}.{fk_col}"
                     target_col_id = f"{ref_db}.{ref_table}.{ref_col}"
-                    
-                    # 如果目标列节点存在，添加外键边
+
+                    # Add foreign key edge if the target column node exists
                     if G.has_node(target_col_id):
                         G.add_edge(source_col_id, target_col_id, edge_type='foreign_key')
-    
-    # 3. 解析SQL骨架，识别占位符
+
+    # 3. Parse SQL skeleton and identify placeholders
     placeholders = parse_sql_framework(sql_skeleton)
-    
-    # 4. 为每个占位符添加可能的连接
+
+    # 4. Add possible connections for each placeholder
     placeholder_nodes = {}
     for i, placeholder in enumerate(placeholders):
         placeholder_id = f"placeholder_{i}"
         placeholder_nodes[placeholder_id] = placeholder
-        
-        # 根据占位符类型，获取可能的schema节点
-        # 注意：这里需要考虑跨数据库的情况
+
+        # Get possible schema nodes based on placeholder type
+        # Note: cross-database cases must be considered here
         possible_nodes = get_possible_schema_nodes(G, placeholder['clause'])
-        
-        # 过滤：只考虑table_database_mapping中涉及的表
+
+        # Filter: only consider tables in table_database_mapping
         relevant_tables = set(table_database_mapping.keys())
         filtered_nodes = []
         for node_id in possible_nodes:
-            # 提取表名（从节点ID中）
+            # Extract table name from node ID
             if '.' in node_id:
                 parts = node_id.split('.')
                 if len(parts) >= 2:
-                    table_name = parts[1]  # 格式：db.table 或 db.table.col
+                    table_name = parts[1]  # Format: db.table or db.table.col
                     if table_name in relevant_tables:
                         filtered_nodes.append(node_id)
-        
-        # 添加占位符节点
+
+        # Add placeholder node
         G.add_node(placeholder_id,
                   node_type='placeholder',
                   placeholder_type=placeholder['clause'],
                   position=placeholder['position'])
-        
-        # 连接到可能的schema节点
+
+        # Connect to possible schema nodes
         for node_id in filtered_nodes:
             G.add_edge(placeholder_id, node_id, edge_type='possible_match')
-    
-    # 5. 构建元数据
+
+    # 5. Build metadata
     metadata = {
         'databases': list(schemas.keys()),
         'table_database_mapping': table_database_mapping,
@@ -162,22 +162,22 @@ def build_cross_database_graph(sql_skeleton, schemas, table_database_mapping):
         'num_tables': len(set(table_database_mapping.keys())),
         'num_databases': len(schemas)
     }
-    
+
     return G, metadata
 
 def process_cross_database_skeleton(skeleton_data, schemas, output_dir):
-    """处理单个跨数据库SQL骨架，生成图文件"""
+    """Process a single cross-database SQL skeleton and generate a graph file."""
     sql_skeleton = skeleton_data['sql_skeleton']
     table_database_mapping = skeleton_data['table_database_mapping']
-    
-    # 构建图
+
+    # Build graph
     G, metadata = build_cross_database_graph(
-        sql_skeleton, 
-        schemas, 
+        sql_skeleton,
+        schemas,
         table_database_mapping
     )
-    
-    # 保存图（使用NetworkX的JSON格式）
+
+    # Save graph (using NetworkX JSON format)
     graph_data = {
         'nodes': [
             {
@@ -196,82 +196,81 @@ def process_cross_database_skeleton(skeleton_data, schemas, output_dir):
         ],
         'metadata': metadata
     }
-    
-    # 确定输出文件名（包含组合信息）
+
+    # Determine output filename (includes combination info)
     original_file = skeleton_data.get('original_file', 'unknown')
     databases = skeleton_data.get('databases', [])
     combo_name = '_'.join(sorted(databases)) if databases else 'unknown'
-    
-    # 从 original_file 中提取索引（如 generated_sql_1.json -> 1 或 join_skeleton_0 -> 0）
+
+    # Extract index from original_file (e.g. generated_sql_1.json -> 1 or join_skeleton_0 -> 0)
     match = re.search(r'(\d+)', original_file)
     if match:
         idx = match.group(1)
         output_file = os.path.join(output_dir, f"cross_db_graph_{idx}.json")
     else:
-        # 如果没有找到索引，使用hash
+        # Use hash if no index is found
         import hashlib
         hash_id = hashlib.md5(sql_skeleton.encode()).hexdigest()[:8]
         output_file = os.path.join(output_dir, f"cross_db_graph_{hash_id}.json")
-    
-    # 保存
+
+    # Save
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(graph_data, f, ensure_ascii=False, indent=2)
-    
+
     return output_file
 
 def main():
-    parser = argparse.ArgumentParser(description='为跨数据库SQL骨架生成图')
+    parser = argparse.ArgumentParser(description='Generate graphs for cross-database SQL skeletons')
     parser.add_argument('--skeleton_file', type=str, required=True,
-                       help='跨数据库SQL骨架文件')
+                       help='Cross-database SQL skeleton file')
     parser.add_argument('--database_dir', type=str,
                        default='benchmark/data/beijing/database_chinese',
-                       help='数据库目录')
+                       help='Database directory')
     parser.add_argument('--output_dir', type=str,
                        default='benchmark/data/beijing/output/cross_db_graph',
-                       help='图文件输出目录')
-    
+                       help='Output directory for graph files')
+
     args = parser.parse_args()
-    
-    # 加载跨数据库SQL骨架
-    print(f"加载跨数据库SQL骨架: {args.skeleton_file}")
+
+    # Load cross-database SQL skeletons
+    print(f"Loading cross-database SQL skeletons: {args.skeleton_file}")
     with open(args.skeleton_file, 'r', encoding='utf-8') as f:
         skeletons = json.load(f)
-    
-    print(f"共 {len(skeletons)} 个SQL骨架")
-    
-    # 获取所有涉及的数据库
+
+    print(f"Total SQL skeletons: {len(skeletons)}")
+
+    # Collect all involved databases
     all_databases = set()
     for skeleton in skeletons:
         all_databases.update(skeleton.get('databases', []))
-    
-    print(f"涉及的数据库: {sorted(all_databases)}")
-    
-    # 加载所有数据库的schema
-    print("\n加载数据库schema...")
+
+    print(f"Involved databases: {sorted(all_databases)}")
+
+    # Load schemas from all databases
+    print("\nLoading database schemas...")
     schemas = load_multiple_schemas(all_databases, args.database_dir)
-    print(f"成功加载 {len(schemas)} 个数据库的schema")
-    
-    # 创建输出目录
+    print(f"Successfully loaded schemas from {len(schemas)} databases")
+
+    # Create output directory
     os.makedirs(args.output_dir, exist_ok=True)
-    
-    # 处理每个SQL骨架
-    print(f"\n生成图文件...")
+
+    # Process each SQL skeleton
+    print(f"\nGenerating graph files...")
     success_count = 0
-    for skeleton in tqdm(skeletons, desc="生成图"):
+    for skeleton in tqdm(skeletons, desc="Generating graphs"):
         try:
             output_file = process_cross_database_skeleton(
-                skeleton, 
-                schemas, 
+                skeleton,
+                schemas,
                 args.output_dir
             )
             success_count += 1
         except Exception as e:
-            print(f"\n处理骨架失败: {e}")
+            print(f"\nFailed to process skeleton: {e}")
             continue
-    
-    print(f"\n完成！成功生成 {success_count}/{len(skeletons)} 个图文件")
-    print(f"输出目录: {args.output_dir}")
+
+    print(f"\nDone! Successfully generated {success_count}/{len(skeletons)} graph files")
+    print(f"Output directory: {args.output_dir}")
 
 if __name__ == '__main__':
     main()
-

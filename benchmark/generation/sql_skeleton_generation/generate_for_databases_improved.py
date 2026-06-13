@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-为beijing数据集的每个数据库生成CFG结构和SQL骨架（改进版）
+Generate CFG structures and SQL skeletons for each database in the beijing dataset (improved version)
 
-关键改进：
-1. 结合旧数据库CFG规则和新数据库专家例子，为每个数据库生成不同的结果
-2. 增加随机性和多样性（旋转、剪枝、合并等转换策略）
-3. 改进SQL骨架生成逻辑，支持JOIN、子查询、聚合等复杂结构
+Key improvements:
+1. Combine old database CFG rules and new database expert examples to generate different results per database
+2. Increase randomness and diversity (rotation, pruning, merging, and other transformation strategies)
+3. Improved SQL skeleton generation supporting JOIN, subqueries, aggregates, and other complex structures
 """
 
 import os
@@ -18,14 +18,14 @@ import re
 from tqdm import tqdm
 from collections import defaultdict
 
-# Node类定义
+# Node class definition
 class Node:
     def __init__(self, symbol):
         self.symbol = symbol
         self.children = []
 
 def get_cfg_rules(node, rules=None):
-    """递归遍历AST，生成CFG规则序列"""
+    """Recursively traverse AST and generate CFG rule sequence"""
     if rules is None:
         rules = []
     if not node:
@@ -58,7 +58,7 @@ def get_cfg_rules(node, rules=None):
     return rules
 
 def ast_to_dict(node):
-    """将AST节点转换为字典"""
+    """Convert AST node to dictionary"""
     if not node:
         return None
     node_dict = {
@@ -75,12 +75,12 @@ def ast_to_dict(node):
     return node_dict
 
 def generate_cfg_for_database(expert_file, old_cfg_file, output_file, db_name):
-    """为单个数据库生成AST/CFG文件（结合旧数据库CFG规则）"""
-    # 加载专家例子
+    """Generate AST/CFG file for a single database (combining old database CFG rules)"""
+    # Load expert examples
     with open(expert_file, 'r', encoding='utf-8') as f:
         expert_data = json.load(f)
     
-    # 加载旧数据库CFG规则（用于扩充）
+    # Load old database CFG rules (for augmentation)
     old_cfg_rules_list = []
     if old_cfg_file and os.path.exists(old_cfg_file):
         with open(old_cfg_file, 'r', encoding='utf-8') as f:
@@ -90,7 +90,7 @@ def generate_cfg_for_database(expert_file, old_cfg_file, output_file, db_name):
             if cfg_rules:
                 old_cfg_rules_list.append(cfg_rules)
     
-    # 为每个数据库设置不同的随机种子（基于数据库名称）
+    # Set different random seed per database (based on database name)
     random.seed(hash(db_name) % (2**32))
     
     processed_data = []
@@ -108,13 +108,13 @@ def generate_cfg_for_database(expert_file, old_cfg_file, output_file, db_name):
         except Exception as e:
             continue
     
-    # 如果旧数据库CFG规则存在，可以添加一些扩充的CFG规则
+    # If old database CFG rules exist, add some augmented CFG rules
     if old_cfg_rules_list:
-        # 随机选择一些旧数据库的CFG规则作为补充
+        # Randomly select some old database CFG rules as supplements
         num_old_to_add = min(10, len(old_cfg_rules_list))
         selected_old_rules = random.sample(old_cfg_rules_list, num_old_to_add)
         for old_cfg_rules in selected_old_rules:
-            # 创建补充数据项
+            # Create supplement data item
             supplement_data = {
                 'query': '',
                 'sql': '',
@@ -130,49 +130,49 @@ def generate_cfg_for_database(expert_file, old_cfg_file, output_file, db_name):
     return len(processed_data)
 
 def apply_advanced_transformation(seq, old_cfg_rules_list=None):
-    """应用高级转换策略（旋转、剪枝、合并等）"""
+    """Apply advanced transformation strategies (rotation, pruning, merging, etc.)"""
     new_seq = seq.copy()
     
-    # 策略1: 交换规则顺序（30%概率）
+    # Strategy 1: swap rule order (30% probability)
     if random.random() < 0.3:
         indices = [i for i in range(len(new_seq)) if '->' in new_seq[i]]
         if len(indices) >= 2:
             i1, i2 = random.sample(indices, 2)
             new_seq[i1], new_seq[i2] = new_seq[i2], new_seq[i1]
     
-    # 策略2: 插入旧数据库的CFG规则片段（20%概率）
+    # Strategy 2: insert old database CFG rule fragments (20% probability)
     elif random.random() < 0.5 and old_cfg_rules_list:
         if random.random() < 0.2:
             old_rule_seq = random.choice(old_cfg_rules_list)
-            # 随机插入一些旧规则
+            # Randomly insert some old rules
             insert_pos = random.randint(0, len(new_seq))
             insert_rules = random.sample(old_rule_seq, min(3, len(old_rule_seq)))
             new_seq = new_seq[:insert_pos] + insert_rules + new_seq[insert_pos:]
     
-    # 策略3: 复制并修改规则（30%概率）
+    # Strategy 3: duplicate and modify rules (30% probability)
     elif random.random() < 0.8:
         indices = [i for i in range(len(new_seq)) if '->' in new_seq[i]]
         if indices:
             idx = random.choice(indices)
             rule = new_seq[idx]
-            # 复制规则并可能修改
+            # Duplicate rule and possibly modify
             new_seq.insert(idx + 1, rule)
     
-    # 策略4: 删除规则（10%概率，但确保至少保留基本结构）
+    # Strategy 4: delete rules (10% probability, but keep basic structure)
     elif random.random() < 0.9 and len(new_seq) > 5:
         indices = [i for i in range(len(new_seq)) if '->' in new_seq[i]]
         if len(indices) > 3:
-            idx_to_remove = random.choice(indices[1:-1])  # 不删除第一个和最后一个
+            idx_to_remove = random.choice(indices[1:-1])  # Do not delete first and last
             new_seq.pop(idx_to_remove)
     
     return new_seq
 
 def generate_structures_for_database(cfg_file, old_cfg_file, output_file, db_name, num_samples=100):
-    """为单个数据库生成SQL结构（结合旧数据库CFG规则）"""
+    """Generate SQL structures for a single database (combining old database CFG rules)"""
     with open(cfg_file, 'r', encoding='utf-8') as f:
         cfg_data = json.load(f)
     
-    # 加载旧数据库CFG规则
+    # Load old database CFG rules
     old_cfg_rules_list = []
     if old_cfg_file and os.path.exists(old_cfg_file):
         with open(old_cfg_file, 'r', encoding='utf-8') as f:
@@ -191,18 +191,18 @@ def generate_structures_for_database(cfg_file, old_cfg_file, output_file, db_nam
     if not cfg_rules_list:
         return []
     
-    # 为每个数据库设置不同的随机种子
+    # Set different random seed per database
     random.seed(hash(db_name) % (2**32))
     
-    # 收集所有唯一的CFG规则序列
+    # Collect all unique CFG rule sequences
     unique_rule_sequences = set(tuple(seq) for seq in cfg_rules_list)
     all_rule_sequences = list(unique_rule_sequences)
     
-    # 初始化生成的结构列表
+    # Initialize generated structure list
     generated_structures = []
     generated_structures.extend(all_rule_sequences)
     
-    # 生成新结构（使用高级转换策略）
+    # Generate new structures (using advanced transformation strategies)
     max_attempts = num_samples * 30
     attempts = 0
     
@@ -216,7 +216,7 @@ def generate_structures_for_database(cfg_file, old_cfg_file, output_file, db_nam
             generated_structures.append(transformed_seq)
             unique_rule_sequences.add(seq_tuple)
     
-    # 如果仍然不足，按比例重复
+    # If still insufficient, repeat proportionally
     if len(generated_structures) < num_samples:
         additional = list(generated_structures)
         while len(generated_structures) < num_samples:
@@ -229,7 +229,7 @@ def generate_structures_for_database(cfg_file, old_cfg_file, output_file, db_nam
     return generated_structures
 
 def build_parse_tree_from_cfg_rules(cfg_rules):
-    """从CFG规则构建解析树"""
+    """Build parse tree from CFG rules"""
     index = 0
 
     def build_node():
@@ -265,7 +265,7 @@ def build_parse_tree_from_cfg_rules(cfg_rules):
     return build_node()
 
 def generate_sql_skeleton(node):
-    """从解析树生成SQL骨架（改进版，支持更多结构，参考原始代码）"""
+    """Generate SQL skeleton from parse tree (improved version, supports more structures, based on original code)"""
     if not node:
         return ''
 
@@ -300,7 +300,7 @@ def generate_sql_skeleton(node):
             elif child_symbol == 'limit':
                 limit_clause = ' LIMIT ' + child_sql
             else:
-                # 如果出现嵌套的 SELECT，添加括号
+                # If nested SELECT appears, add parentheses
                 if 'SELECT' in child_sql.upper():
                     child_sql = f'({child_sql})'
                 select_clause += ' ' + child_sql
@@ -354,32 +354,32 @@ def generate_sql_skeleton(node):
         return '_'
 
     else:
-        # 递归处理其他符号
+        # Recursively process other symbols
         result = ' '.join(generate_sql_skeleton(child) for child in node.children)
         return result.strip()
 
 def cfg_rules_to_sql_skeleton(cfg_rules):
-    """将CFG规则序列转换回SQL骨架"""
+    """Convert CFG rule sequence back to SQL skeleton"""
     parse_tree = build_parse_tree_from_cfg_rules(cfg_rules)
     if parse_tree:
         return generate_sql_skeleton(parse_tree)
     return ''
 
 def is_valid_sql_skeleton(sql_skeleton):
-    """检查SQL骨架是否有效（改进版，修复语法错误）"""
+    """Check if SQL skeleton is valid (improved version, fixes syntax errors)"""
     if not sql_skeleton or not sql_skeleton.upper().startswith('SELECT'):
         return False
     
-    # 检查基本语法错误
-    # 1. FROM后面必须有表名（不能是空）
+    # Check basic syntax errors
+    # 1. FROM must be followed by table name (cannot be empty)
     if 'FROM' in sql_skeleton.upper():
         from_pos = sql_skeleton.upper().find('FROM')
         after_from = sql_skeleton[from_pos+4:].strip()
-        # FROM后面如果是WHERE、HAVING、GROUP BY、ORDER BY、LIMIT或空，则无效
+        # Invalid if after FROM is WHERE, HAVING, GROUP BY, ORDER BY, LIMIT, or empty
         if not after_from or any(after_from.upper().startswith(kw) for kw in ['WHERE', 'HAVING', 'GROUP', 'ORDER', 'LIMIT', ';']):
             return False
     
-    # 2. WHERE前面必须有FROM和表名，且WHERE后面必须有条件
+    # 2. WHERE must have FROM and table name before it, and condition after it
     if 'WHERE' in sql_skeleton.upper():
         where_pos = sql_skeleton.upper().find('WHERE')
         before_where = sql_skeleton[:where_pos].strip()
@@ -389,19 +389,19 @@ def is_valid_sql_skeleton(sql_skeleton):
         after_from = before_where[from_pos+4:].strip()
         if not after_from or after_from == '':
             return False
-        # WHERE后面必须有内容
+        # WHERE must have content after it
         after_where = sql_skeleton[where_pos+5:].strip()
         if not after_where or after_where in [';', '']:
             return False
     
-    # 3. HAVING前面必须有GROUP BY
+    # 3. HAVING must have GROUP BY before it
     if 'HAVING' in sql_skeleton.upper():
         having_pos = sql_skeleton.upper().find('HAVING')
         before_having = sql_skeleton[:having_pos].upper()
         if 'GROUP BY' not in before_having:
             return False
     
-    # 4. 检查子查询是否在括号内
+    # 4. Check if subquery is inside parentheses
     select_positions = [m.start() for m in re.finditer(r'\bSELECT\b', sql_skeleton, re.IGNORECASE)]
     if len(select_positions) <= 1:
         return True
@@ -413,7 +413,7 @@ def is_valid_sql_skeleton(sql_skeleton):
     return True
 
 def sql_query_to_sql_skeleton(sql_query):
-    """将SQL查询转换为SQL骨架"""
+    """Convert SQL query to SQL skeleton"""
     sql_skeleton = re.sub(r"'[^']*'", '_', sql_query)
     sql_skeleton = re.sub(r'"[^"]*"', '_', sql_skeleton)
     sql_skeleton = re.sub(r'\b\d+\b', '_', sql_skeleton)
@@ -430,12 +430,12 @@ def sql_query_to_sql_skeleton(sql_query):
     return sql_skeleton
 
 def classify_skeleton_difficulty(skeleton):
-    """分类SQL骨架难度
+    """Classify SQL skeleton difficulty
     
     Returns:
-        'simple': 单表，无JOIN，无子查询，无GROUP BY
-        'medium': 有JOIN（最多1个）或GROUP BY，但无子查询、无UNION、无HAVING
-        'complex': 有子查询、UNION、HAVING，或多表JOIN（2个以上）
+        'simple': single table, no JOIN, no subquery, no GROUP BY
+        'medium': has JOIN (at most 1) or GROUP BY, but no subquery, UNION, or HAVING
+        'complex': has subquery, UNION, HAVING, or multi-table JOIN (2 or more)
     """
     skeleton_upper = skeleton.upper()
     
@@ -446,38 +446,38 @@ def classify_skeleton_difficulty(skeleton):
     has_union = 'UNION' in skeleton_upper
     join_count = skeleton_upper.count('JOIN')
     
-    # 简单：单表，无JOIN，无子查询，无GROUP BY
+    # Simple: single table, no JOIN, no subquery, no GROUP BY
     if not has_join and not has_subquery and not has_group_by:
         return 'simple'
     
-    # 复杂：有子查询、UNION、HAVING，或多表JOIN（2个以上）
+    # Complex: has subquery, UNION, HAVING, or multi-table JOIN (2 or more)
     if has_subquery or has_union or has_having or join_count >= 2:
         return 'complex'
     
-    # 中等：其他情况（有JOIN但最多1个，或有GROUP BY，但无子查询/UNION/HAVING）
+    # Medium: other cases (JOIN at most 1, or GROUP BY, but no subquery/UNION/HAVING)
     return 'medium'
 
 def generate_skeletons_for_database(structure_file, output_file, old_data_file=None, new_logs_file=None, total_skeletons=200, db_name=None, simple_ratio=0.5, medium_ratio=0.35, complex_ratio=0.15):
-    """为单个数据库生成SQL骨架（参考原始代码逻辑）"""
+    """Generate SQL skeletons for a single database (based on original code logic)"""
     with open(structure_file, 'r', encoding='utf-8') as f:
         structures = json.load(f)
     
-    # 为每个数据库设置不同的随机种子
+    # Set different random seed per database
     if db_name:
         random.seed(hash(db_name) % (2**32))
     
-    # 从CFG规则生成SQL骨架
+    # Generate SQL skeletons from CFG rules
     generated_skeletons = []
     for cfg_rules in structures:
         sql_skeleton = cfg_rules_to_sql_skeleton(cfg_rules)
-        # 确保 SQL skeleton 以 SELECT 开头且有效
+        # Ensure SQL skeleton starts with SELECT and is valid
         if sql_skeleton and sql_skeleton.lower().startswith('select') and is_valid_sql_skeleton(sql_skeleton):
             generated_skeletons.append(sql_skeleton)
     
-    # 移除重复的 skeleton
+    # Remove duplicate skeletons
     generated_skeletons = list(set(generated_skeletons))
     
-    # 加载旧数据库的数据（参考原始代码）
+    # Load old database data (based on original code)
     old_sql_skeletons = []
     if old_data_file and os.path.exists(old_data_file):
         with open(old_data_file, 'r', encoding='utf-8') as f:
@@ -486,7 +486,7 @@ def generate_skeletons_for_database(structure_file, output_file, old_data_file=N
         old_sql_skeletons = [sql_query_to_sql_skeleton(sql_query) for sql_query in old_sql_queries]
         old_sql_skeletons = [s for s in old_sql_skeletons if s.lower().startswith('select')]
     
-    # 加载新日志文件（参考原始代码）
+    # Load new log file (based on original code)
     log_sql_skeletons = []
     if new_logs_file and os.path.exists(new_logs_file):
         with open(new_logs_file, 'r', encoding='utf-8') as f:
@@ -494,73 +494,73 @@ def generate_skeletons_for_database(structure_file, output_file, old_data_file=N
         log_sql_skeletons = [sql_query_to_sql_skeleton(log_entry.get('sql', '')) for log_entry in new_logs if log_entry.get('sql', '')]
         log_sql_skeletons = [s for s in log_sql_skeletons if s.lower().startswith('select')]
     
-    # 确保旧数据库的 skeleton 包含在最终结果中，并且以 SELECT 开头
+    # Ensure old database skeletons are in final result and start with SELECT
     combined_sql_skeletons = generated_skeletons + [s for s in old_sql_skeletons if s.lower().startswith('select')]
     combined_sql_skeletons = list(set(combined_sql_skeletons))
     
-    # 过滤掉无效的 skeleton
+    # Filter out invalid skeletons
     combined_sql_skeletons = [s for s in combined_sql_skeletons if is_valid_sql_skeleton(s) and s.lower().startswith('select')]
     
-    # 计算需要从日志中包含的 skeleton 数量（参考原始代码）
+    # Calculate skeleton count to include from logs (based on original code)
     num_combined = len(combined_sql_skeletons)
     num_logs_to_include = total_skeletons - num_combined
     if num_logs_to_include > 0 and log_sql_skeletons:
-        # 随机选择日志 skeleton
+        # Randomly select log skeletons
         log_sql_skeletons = [s for s in log_sql_skeletons if s.lower().startswith('select')]
         log_sql_skeletons = list(set(log_sql_skeletons))
         if len(log_sql_skeletons) > 0:
             if num_logs_to_include > len(log_sql_skeletons):
-                # 如果需要的数量大于可用的日志 skeleton 数量，使用重复选择
+                # If needed count exceeds available log skeletons, use repeated selection
                 selected_log_skeletons = random.choices(log_sql_skeletons, k=num_logs_to_include)
             else:
                 selected_log_skeletons = random.sample(log_sql_skeletons, k=num_logs_to_include)
             combined_sql_skeletons.extend(selected_log_skeletons)
     
-    # 如果总数仍不足，先补充到足够数量
+    # If total still insufficient, supplement to enough count first
     while len(combined_sql_skeletons) < total_skeletons:
         combined_sql_skeletons.extend(combined_sql_skeletons)
-    combined_sql_skeletons = combined_sql_skeletons[:total_skeletons * 2]  # 多生成一些，以便后续筛选
+    combined_sql_skeletons = combined_sql_skeletons[:total_skeletons * 2]  # Generate extra for subsequent filtering
     
-    # 按难度分类所有骨架
+    # Classify all skeletons by difficulty
     skeletons_by_difficulty = {'simple': [], 'medium': [], 'complex': []}
     for skeleton in combined_sql_skeletons:
         difficulty = classify_skeleton_difficulty(skeleton)
         skeletons_by_difficulty[difficulty].append(skeleton)
     
-    # 计算目标数量
+    # Calculate target counts
     target_counts = {
         'simple': int(total_skeletons * simple_ratio),
         'medium': int(total_skeletons * medium_ratio),
         'complex': int(total_skeletons * complex_ratio)
     }
     
-    # 确保总数正确（处理舍入误差）
+    # Ensure total is correct (handle rounding error)
     actual_total = sum(target_counts.values())
     if actual_total < total_skeletons:
         target_counts['simple'] += (total_skeletons - actual_total)
     
-    # 按目标比例选择骨架
+    # Select skeletons by target ratio
     final_skeletons = []
     for difficulty in ['simple', 'medium', 'complex']:
         available = skeletons_by_difficulty[difficulty]
         target = target_counts[difficulty]
         
         if len(available) >= target:
-            # 随机选择目标数量
+            # Randomly select target count
             selected = random.sample(available, target)
         elif len(available) > 0:
-            # 如果不足，全部使用并重复
+            # If insufficient, use all and repeat
             selected = available.copy()
             while len(selected) < target and len(available) > 0:
                 selected.extend(available)
             selected = selected[:target]
         else:
-            # 如果没有可用的，跳过（后续会从其他难度补充）
+            # If none available, skip (supplement from other difficulties later)
             selected = []
         
         final_skeletons.extend(selected)
     
-    # 如果总数不足，从所有可用的骨架中补充
+    # If total insufficient, supplement from all available skeletons
     if len(final_skeletons) < total_skeletons:
         all_available = [s for s in combined_sql_skeletons if s not in final_skeletons]
         if len(all_available) > 0:
@@ -569,26 +569,26 @@ def generate_skeletons_for_database(structure_file, output_file, old_data_file=N
                 final_skeletons.extend(random.sample(all_available, needed))
             else:
                 final_skeletons.extend(all_available)
-                # 如果还不够，重复使用
+                # If still insufficient, repeat usage
                 while len(final_skeletons) < total_skeletons:
                     final_skeletons.extend(random.choices(all_available, k=min(needed, len(all_available))))
                 final_skeletons = final_skeletons[:total_skeletons]
     
-    # 打乱顺序，保持随机性
+    # Shuffle order to maintain randomness
     random.shuffle(final_skeletons)
     
-    # 确保总数正确
+    # Ensure total count is correct
     final_skeletons = final_skeletons[:total_skeletons]
     
-    # 保存结果
+    # Save results
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(final_skeletons, f, ensure_ascii=False, indent=2)
     
     return len(final_skeletons)
 
 def process_all_databases(database_dir, expert_file, old_cfg_file, output_base_dir, old_data_file=None, new_logs_file=None, num_samples=100, total_skeletons=200, simple_ratio=0.5, medium_ratio=0.35, complex_ratio=0.15):
-    """处理所有数据库"""
-    # 创建输出目录
+    """Process all databases"""
+    # Create output directories
     cfg_dir = os.path.join(output_base_dir, 'ast_cfg')
     structure_dir = os.path.join(output_base_dir, 'sql_structure')
     skeleton_dir = os.path.join(output_base_dir, 'sql_skeleton')
@@ -597,109 +597,106 @@ def process_all_databases(database_dir, expert_file, old_cfg_file, output_base_d
     os.makedirs(structure_dir, exist_ok=True)
     os.makedirs(skeleton_dir, exist_ok=True)
     
-    # 获取所有数据库名称
+    # Get all database names
     databases = []
     for item in os.listdir(database_dir):
         db_path = os.path.join(database_dir, item)
         if os.path.isdir(db_path):
             databases.append(item)
     
-    print(f"找到 {len(databases)} 个数据库")
-    print(f"开始处理...\n")
+    print(f"Found {len(databases)} databases")
+    print(f"Starting processing...\n")
     
-    for db_name in tqdm(databases, desc="处理数据库"):
-        print(f"\n处理数据库: {db_name}")
+    for db_name in tqdm(databases, desc="Processing databases"):
+        print(f"\nProcessing database: {db_name}")
         
-        # 步骤1: 生成CFG
+        # Step 1: generate CFG
         cfg_file = os.path.join(cfg_dir, f"{db_name}_ast_cfg.json")
         try:
             count = generate_cfg_for_database(expert_file, old_cfg_file, cfg_file, db_name)
-            print(f"  ✓ 步骤1: 生成CFG，成功解析 {count} 条")
+            print(f"  ✓ Step 1: CFG generated, successfully parsed {count} entries")
         except Exception as e:
-            print(f"  ✗ 步骤1失败: {e}")
+            print(f"  ✗ Step 1 failed: {e}")
             continue
         
-        # 步骤2: 生成SQL结构
+        # Step 2: generate SQL structures
         structure_file = os.path.join(structure_dir, f"{db_name}_structure.json")
         try:
             structures = generate_structures_for_database(cfg_file, old_cfg_file, structure_file, db_name, num_samples)
-            print(f"  ✓ 步骤2: 生成SQL结构，共 {len(structures)} 个")
+            print(f"  ✓ Step 2: SQL structures generated, {len(structures)} total")
         except Exception as e:
-            print(f"  ✗ 步骤2失败: {e}")
+            print(f"  ✗ Step 2 failed: {e}")
             continue
         
-        # 步骤3: 生成SQL骨架
+        # Step 3: generate SQL skeletons
         skeleton_file = os.path.join(skeleton_dir, f"{db_name}_sql_skeleton.json")
         try:
             count = generate_skeletons_for_database(structure_file, skeleton_file, old_data_file, new_logs_file, total_skeletons, db_name, simple_ratio, medium_ratio, complex_ratio)
-            print(f"  ✓ 步骤3: 生成SQL骨架，共 {count} 个")
+            print(f"  ✓ Step 3: SQL skeletons generated, {count} total")
         except Exception as e:
-            print(f"  ✗ 步骤3失败: {e}")
+            print(f"  ✗ Step 3 failed: {e}")
             continue
 
 if __name__ == '__main__':
     import argparse
     
-    parser = argparse.ArgumentParser(description='为beijing数据集的每个数据库生成CFG结构和SQL骨架（改进版）')
-    # 设置默认路径（相对于脚本目录）
+    parser = argparse.ArgumentParser(description='Generate CFG structures and SQL skeletons for each database in the beijing dataset (improved version)')
+    # Set default paths (relative to script directory)
     script_dir = os.path.dirname(os.path.abspath(__file__))
     project_root = os.path.dirname(os.path.dirname(os.path.dirname(script_dir)))
     
-    parser.add_argument('--database_dir', type=str, default=None, help='数据库目录路径（默认：../../data/beijing/database）')
-    parser.add_argument('--expert_file', type=str, default=None, help='专家例子文件路径（默认：../../data/target/expert_skeletons_beijing.json）')
-    parser.add_argument('--old_cfg_file', type=str, default=None, help='旧数据库CFG文件路径（默认：../../old/saturn/TACO-Benchmark-all/beijing/data/old_ast_cfg.json）')
-    parser.add_argument('--output_dir', type=str, default=None, help='输出目录路径（默认：../../data/beijing/output）')
-    parser.add_argument('--old_data_file', type=str, default=None, help='旧数据文件（默认：../../old/saturn/TACO-Benchmark-all/beijing/data/xcity_sql_skeletons.json）')
-    parser.add_argument('--new_logs_file', type=str, default=None, help='新日志文件（默认：../../data/target/expert_skeletons_beijing.json）')
-    parser.add_argument('--num_samples', type=int, default=100, help='每个数据库生成的结构数量（默认100）')
-    parser.add_argument('--total_skeletons', type=int, default=200, help='每个数据库生成的骨架总数（默认200）')
-    parser.add_argument('--simple_ratio', type=float, default=0.5, help='简单查询比例（默认0.5，即50%%）')
-    parser.add_argument('--medium_ratio', type=float, default=0.35, help='中等查询比例（默认0.35，即35%%）')
-    parser.add_argument('--complex_ratio', type=float, default=0.15, help='复杂查询比例（默认0.15，即15%%）')
+    parser.add_argument('--database_dir', type=str, default=None, help='Database directory path (default: ../../data/beijing/database)')
+    parser.add_argument('--expert_file', type=str, default=None, help='Expert examples file path (default: ../../data/target/expert_skeletons_beijing.json)')
+    parser.add_argument('--old_cfg_file', type=str, default=None, help='Legacy CFG JSON (optional; skipped if missing)')
+    parser.add_argument('--output_dir', type=str, default=None, help='Output directory path (default: benchmark/data/beijing/output)')
+    parser.add_argument('--old_data_file', type=str, default=None, help='Legacy skeleton data JSON (optional; skipped if missing)')
+    parser.add_argument('--new_logs_file', type=str, default=None, help='New log file (default: ../../data/target/expert_skeletons_beijing.json)')
+    parser.add_argument('--num_samples', type=int, default=100, help='Number of structures to generate per database (default: 100)')
+    parser.add_argument('--total_skeletons', type=int, default=200, help='Total skeletons to generate per database (default: 200)')
+    parser.add_argument('--simple_ratio', type=float, default=0.5, help='Simple query ratio (default: 0.5, i.e. 50%%)')
+    parser.add_argument('--medium_ratio', type=float, default=0.35, help='Medium query ratio (default: 0.35, i.e. 35%%)')
+    parser.add_argument('--complex_ratio', type=float, default=0.15, help='Complex query ratio (default: 0.15, i.e. 15%%)')
     
     args = parser.parse_args()
     
-    # 设置默认路径
+    # Set default paths
     if args.database_dir is None:
         args.database_dir = os.path.join(project_root, 'benchmark', 'data', 'beijing', 'database')
     if args.expert_file is None:
         args.expert_file = os.path.join(project_root, 'benchmark', 'data', 'target', 'expert_skeletons_beijing.json')
-    if args.old_cfg_file is None:
-        args.old_cfg_file = os.path.join(project_root, 'old', 'saturn', 'TACO-Benchmark-all', 'beijing', 'data', 'old_ast_cfg.json')
     if args.output_dir is None:
         args.output_dir = os.path.join(project_root, 'benchmark', 'data', 'beijing', 'output')
-    if args.old_data_file is None:
-        args.old_data_file = os.path.join(project_root, 'old', 'saturn', 'TACO-Benchmark-all', 'beijing', 'data', 'xcity_sql_skeletons.json')
     if args.new_logs_file is None:
         args.new_logs_file = os.path.join(project_root, 'benchmark', 'data', 'target', 'expert_skeletons_beijing.json')
     
-    # 转换为绝对路径
+    # Convert to absolute paths
     args.database_dir = os.path.abspath(args.database_dir)
     args.expert_file = os.path.abspath(args.expert_file)
-    args.old_cfg_file = os.path.abspath(args.old_cfg_file)
     args.output_dir = os.path.abspath(args.output_dir)
+    if args.old_cfg_file:
+        args.old_cfg_file = os.path.abspath(args.old_cfg_file)
     if args.old_data_file:
         args.old_data_file = os.path.abspath(args.old_data_file)
     if args.new_logs_file:
         args.new_logs_file = os.path.abspath(args.new_logs_file)
     
     if not os.path.exists(args.database_dir):
-        print(f"错误: 数据库目录不存在: {args.database_dir}")
+        print(f"Error: Database directory does not exist: {args.database_dir}")
         sys.exit(1)
     
     if not os.path.exists(args.expert_file):
-        print(f"错误: 专家例子文件不存在: {args.expert_file}")
+        print(f"Error: Expert examples file does not exist: {args.expert_file}")
         sys.exit(1)
     
-    # old_cfg_file是可选的，如果不存在则跳过
+    # old_cfg_file is optional; skip if not present
     if args.old_cfg_file and not os.path.exists(args.old_cfg_file):
-        print(f"警告: 旧数据库CFG文件不存在: {args.old_cfg_file}，将跳过使用旧CFG数据")
+        print(f"Warning: Old database CFG file does not exist: {args.old_cfg_file}, will skip old CFG data")
         args.old_cfg_file = None
     
-    # 验证比例总和
+    # Validate ratio sum
     ratio_sum = args.simple_ratio + args.medium_ratio + args.complex_ratio
     if abs(ratio_sum - 1.0) > 0.01:
-        print(f"警告: 难度比例总和为 {ratio_sum:.2f}，将自动归一化")
+        print(f"Warning: Difficulty ratio sum is {ratio_sum:.2f}, will auto-normalize")
         total = args.simple_ratio + args.medium_ratio + args.complex_ratio
         args.simple_ratio /= total
         args.medium_ratio /= total
@@ -720,6 +717,6 @@ if __name__ == '__main__':
     )
     
     print(f"\n{'='*60}")
-    print("✓ 所有数据库处理完成！")
+    print("✓ All databases processed!")
     print(f"{'='*60}")
 

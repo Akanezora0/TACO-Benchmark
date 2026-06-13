@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-检查US数据集的SQL和NL查询生成情况
+Check SQL and NL query generation status for the US dataset
 """
 
 import os
@@ -14,7 +14,7 @@ SINGLE_DIR = OUTPUT_DIR / "single"
 NL_DIR = OUTPUT_DIR / "nl_query"
 
 def count_sqls(db_name):
-    """统计SQL数量（只统计有results的）"""
+    """Count SQLs (only those with results)"""
     sql_path = SINGLE_DIR / db_name
     if not sql_path.exists():
         return 0
@@ -24,7 +24,7 @@ def count_sqls(db_name):
         try:
             with open(sql_file, 'r', encoding='utf-8') as f:
                 data = json.load(f)
-                # 只统计有results的SQL
+                # Only count SQLs with results
                 if 'results' in data and data['results'] is not None:
                     count += 1
         except:
@@ -33,7 +33,7 @@ def count_sqls(db_name):
     return count
 
 def count_nl_queries(db_name):
-    """统计NL查询数量"""
+    """Count NL queries"""
     nl_path = NL_DIR / db_name
     if not nl_path.exists():
         return 0
@@ -43,7 +43,7 @@ def count_nl_queries(db_name):
         try:
             with open(nl_file, 'r', encoding='utf-8') as f:
                 data = json.load(f)
-                # 检查是否有natural_language_query字段
+                # Check for natural_language_query field
                 if 'natural_language_query' in data and data['natural_language_query']:
                     count += 1
         except:
@@ -52,26 +52,26 @@ def count_nl_queries(db_name):
     return count
 
 def main():
-    print("US数据集SQL和NL查询生成情况统计")
+    print("US Dataset SQL and NL Query Generation Status")
     print("=" * 100)
     
-    # 获取所有数据库
+    # Get all databases
     databases = []
     if SINGLE_DIR.exists():
         databases = sorted([d.name for d in SINGLE_DIR.iterdir() if d.is_dir()])
     
     if not databases:
-        print("未找到任何数据库")
+        print("No databases found")
         return
     
-    print(f"\n{'数据库名称':<50} {'SQL数量':<10} {'NL查询数量':<12} {'状态':<20}")
+    print(f"\n{'Database Name':<50} {'SQL Count':<10} {'NL Count':<12} {'Status':<20}")
     print("-" * 100)
     
     total_sql = 0
     total_nl = 0
     completed_sql = 0
     completed_nl = 0
-    target_count = 220  # 目标数量
+    target_count = 220  # Target count
     
     for db_name in databases:
         sql_count = count_sqls(db_name)
@@ -80,36 +80,36 @@ def main():
         total_sql += sql_count
         total_nl += nl_count
         
-        # 判断状态
+        # Determine status
         if sql_count >= target_count and nl_count >= target_count:
-            status = "✅ 完整 (SQL+NL)"
+            status = "✅ Complete (SQL+NL)"
             completed_sql += 1
             completed_nl += 1
         elif sql_count >= target_count:
-            status = f"⏳ 仅SQL完成 (缺{target_count - nl_count}个NL)"
+            status = f"⏳ SQL only (missing {target_count - nl_count} NL)"
             completed_sql += 1
         elif nl_count >= target_count:
-            status = f"⚠️  仅NL完成 (缺{target_count - sql_count}个SQL)"
+            status = f"⚠️  NL only (missing {target_count - sql_count} SQL)"
             completed_nl += 1
         else:
-            status = f"❌ 未完成 (SQL缺{target_count - sql_count}, NL缺{target_count - nl_count})"
+            status = f"❌ Incomplete (SQL missing {target_count - sql_count}, NL missing {target_count - nl_count})"
         
         display_name = db_name[:47] + "..." if len(db_name) > 50 else db_name
         print(f"{display_name:<50} {sql_count:<10} {nl_count:<12} {status:<20}")
     
     print("-" * 100)
-    print(f"{'总计':<50} {total_sql:<10} {total_nl:<12} {completed_sql}/{len(databases)} SQL完成, {completed_nl}/{len(databases)} NL完成")
+    print(f"{'Total':<50} {total_sql:<10} {total_nl:<12} {completed_sql}/{len(databases)} SQL done, {completed_nl}/{len(databases)} NL done")
     print("=" * 100)
     
-    # 统计摘要
-    print("\n统计摘要:")
-    print(f"  - 总数据库数: {len(databases)}")
-    print(f"  - SQL总数: {total_sql} (目标: {len(databases) * target_count})")
-    print(f"  - NL查询总数: {total_nl} (目标: {len(databases) * target_count})")
-    print(f"  - SQL完成度: {completed_sql}/{len(databases)} ({completed_sql/len(databases)*100:.1f}%)")
-    print(f"  - NL完成度: {completed_nl}/{len(databases)} ({completed_nl/len(databases)*100:.1f}%)")
+    # Summary statistics
+    print("\nSummary:")
+    print(f"  - Total databases: {len(databases)}")
+    print(f"  - Total SQLs: {total_sql} (target: {len(databases) * target_count})")
+    print(f"  - Total NL queries: {total_nl} (target: {len(databases) * target_count})")
+    print(f"  - SQL completion: {completed_sql}/{len(databases)} ({completed_sql/len(databases)*100:.1f}%)")
+    print(f"  - NL completion: {completed_nl}/{len(databases)} ({completed_nl/len(databases)*100:.1f}%)")
     
-    # 找出需要生成NL查询的数据库
+    # Find databases that need NL query generation
     need_nl = []
     for db_name in databases:
         sql_count = count_sqls(db_name)
@@ -118,10 +118,9 @@ def main():
             need_nl.append((db_name, sql_count, nl_count, target_count - nl_count))
     
     if need_nl:
-        print(f"\n需要生成NL查询的数据库 ({len(need_nl)} 个):")
+        print(f"\nDatabases needing NL query generation ({len(need_nl)}):")
         for db_name, sql_count, nl_count, need in need_nl:
-            print(f"  - {db_name}: SQL {sql_count}, NL {nl_count}, 还需 {need} 个NL查询")
+            print(f"  - {db_name}: SQL {sql_count}, NL {nl_count}, need {need} more NL queries")
 
 if __name__ == '__main__':
     main()
-

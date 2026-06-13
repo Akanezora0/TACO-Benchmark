@@ -1,7 +1,7 @@
 """
-TACO-SQL消融实验模块
+TACO-SQL ablation experiment module
 
-包含实验配置、Prompt策略和运行器
+Contains experiment configuration, prompt strategies, and runner
 """
 
 from .config import (
@@ -26,4 +26,3 @@ __all__ = [
     'ExperimentRunner',
     'run_experiment',
 ]
-

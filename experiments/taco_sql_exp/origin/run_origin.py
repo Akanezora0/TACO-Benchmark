@@ -1,43 +1,43 @@
 """
-Origin实验设置实现
+Origin experiment setting implementation
 
-原始设置：原始查询 + 完整Schema
-不使用任何TACO-SQL组件
+Original setting: original query + full schema
+Does not use any TACO-SQL components
 """
 
 import sys
 import os
 from pathlib import Path
 
-# 添加父目录到路径
+# Add parent directory to path
 sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
 
 from experiments.taco_sql_exp.experiment_runner import run_experiment
 
 
 def main():
-    """运行Origin实验"""
+    """Run Origin experiment"""
     import argparse
     
-    parser = argparse.ArgumentParser(description="运行Origin实验设置")
-    parser.add_argument("--model", type=str, default="gpt-4o", help="模型名称")
-    parser.add_argument("--dataset", type=str, default="taco_beijing", help="数据集名称")
-    parser.add_argument("--test_data", type=str, help="测试数据路径")
-    parser.add_argument("--output", type=str, help="输出路径")
+    parser = argparse.ArgumentParser(description="Run Origin experiment setting")
+    parser.add_argument("--model", type=str, default="gpt-4o", help="Model name")
+    parser.add_argument("--dataset", type=str, default="taco_beijing", help="Dataset name")
+    parser.add_argument("--test_data", type=str, help="Test data path")
+    parser.add_argument("--output", type=str, help="Output path")
     
     args = parser.parse_args()
     
-    # 设置默认输出路径
+    # Set default output path
     if not args.output:
         args.output = f"experiments/results/origin_{args.model}_{args.dataset}.json"
     
-    print(f"运行Origin实验设置")
-    print(f"  模型: {args.model}")
-    print(f"  数据集: {args.dataset}")
-    print(f"  输出: {args.output}")
+    print(f"Running Origin experiment setting")
+    print(f"  Model: {args.model}")
+    print(f"  Dataset: {args.dataset}")
+    print(f"  Output: {args.output}")
     print()
     
-    # 运行实验
+    # Run experiment
     results = run_experiment(
         setting="origin",
         model_name=args.model,
@@ -46,11 +46,10 @@ def main():
         output_path=args.output
     )
     
-    print(f"\n实验完成！")
-    print(f"  处理查询数: {len(results)}")
-    print(f"  结果已保存至: {args.output}")
+    print(f"\nExperiment complete!")
+    print(f"  Queries processed: {len(results)}")
+    print(f"  Results saved to: {args.output}")
 
 
 if __name__ == "__main__":
     main()
-

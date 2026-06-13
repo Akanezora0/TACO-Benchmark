@@ -1,40 +1,40 @@
-# TACO-SQL配置文件示例
+# TACO-SQL configuration file example
 
-# 问题转写配置
+# Question rewriting configuration
 question_rewriting:
-  model_type: "api"  # "api" 或 "local"
-  model_name: "gpt-4o"  # 或 "deepseek-chat" 等
+  model_type: "api"  # "api" or "local"
+  model_name: "gpt-4o"  # or "deepseek-chat", etc.
   api_key: "your_api_key_here"
-  base_url: "https://api.openai.com/v1"  # 或 DeepSeek API地址
+  base_url: "https://api.openai.com/v1"  # or DeepSeek API URL
   prompt_template_path: "taco_sql/question_rewriting/prompts/rewriting_prompt.txt"
   temperature: 0.7
   max_tokens: 512
 
-# 表格检索配置
+# Table linking configuration
 table_linking:
-  # 模型路径
+  # Model paths
   query_model_path: "taco_sql/table_linking/models/query_model"
   table_model_path: "taco_sql/table_linking/models/table_model"
   
-  # 数据文件路径
+  # Data file paths
   merged_table_path: "taco_sql/table_linking/data/merged_table.csv"
   test_final_path: "taco_sql/table_linking/data/1000_final.json"
   keys_train_path: "taco_sql/table_linking/data/keys_train.json"
   keys_dev_path: "taco_sql/table_linking/data/keys_dev.json"
   
-  # 检索参数
-  top_k: 5  # 返回top-k个相关表
+  # Retrieval parameters
+  top_k: 5  # Return top-k relevant tables
   use_stopwords: true
   stopwords_path: "taco_sql/table_linking/data/cn_table_col_stopwords.txt"
   
-  # 训练配置（如果需要重新训练）
+  # Training configuration (if retraining is needed)
   training:
     epochs: 3
     batch_size: 16
     warmup_steps: 100
     learning_rate: 2e-5
 
-# 查询规划配置
+# Query planning configuration
 query_planning:
   model_type: "api"
   model_name: "gpt-4o"
@@ -43,12 +43,12 @@ query_planning:
   temperature: 0.3
   max_tokens: 1024
 
-# SQL生成配置
+# SQL generation configuration
 sql_generation:
-  # 模型类型: "base_llm", "llm_based", "sft_based", "hybrid"
+  # Model type: "base_llm", "llm_based", "sft_based", "hybrid"
   model_type: "sft_based"
   
-  # Base LLM配置
+  # Base LLM configuration
   base_llm:
     model_name: "gpt-4o"
     api_key: "your_api_key_here"
@@ -56,40 +56,39 @@ sql_generation:
     temperature: 0.1
     max_tokens: 512
   
-  # SFT模型配置
+  # SFT model configuration
   sft_model:
     model_path: "models/codes-33b"
     device: "cuda:0"
     max_tokens: 512
     num_beams: 4
   
-  # Schema过滤配置
+  # Schema filtering configuration
   schema_filter:
     enabled: true
     model_path: "models/sic_ckpts/sic_spider"
     max_tables: 7
     max_columns: 20
 
-# Pipeline配置
+# Pipeline configuration
 pipeline:
-  # 启用的组件
+  # Enabled components
   enable_components:
     - "qr"  # Question Rewriting
     - "tl"  # Table Linking
     - "qp"  # Query Planning
     - "sg"  # SQL Generation
   
-  # 执行模式
-  execution_mode: "sequential"  # "sequential" 或 "parallel"
+  # Execution mode
+  execution_mode: "sequential"  # "sequential" or "parallel"
   
-  # 错误处理
+  # Error handling
   error_handling:
     max_retries: 3
     fallback_to_baseline: true
 
-# 日志配置
+# Logging configuration
 logging:
   level: "INFO"  # "DEBUG", "INFO", "WARNING", "ERROR"
   log_file: "logs/taco_sql.log"
   console_output: true
-

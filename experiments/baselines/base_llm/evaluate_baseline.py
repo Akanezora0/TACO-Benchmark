@@ -1,7 +1,7 @@
 """
-Baseline实验框架：简单的Text-to-SQL评测
-不使用TACO-SQL框架，不使用复杂的规则匹配
-只提供足够的上下文信息，让模型直接进行Text-to-SQL转换
+Baseline experiment framework: simple Text-to-SQL evaluation
+Does not use the TACO-SQL framework or complex rule matching
+Provides sufficient context for the model to perform direct Text-to-SQL conversion
 """
 
 import json
@@ -15,9 +15,9 @@ import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import threading
 
-# 加载配置
+# Load configuration
 def load_config():
-    # 从项目根目录查找config.yaml
+    # Look up config.yaml from project root
     current_dir = os.path.dirname(os.path.abspath(__file__))
     project_root = os.path.join(current_dir, '..', '..', '..')
     config_path = os.path.join(project_root, 'benchmark', 'generation', 'sql_filling', 'config.yaml')
@@ -29,7 +29,7 @@ def load_config():
 
 config = load_config()
 
-# 模型配置
+# Model configuration
 MODEL_CONFIGS = {
     'gpt-4': {
         'api_key': config['llm']['api_key'] if config else '',
@@ -45,7 +45,7 @@ MODEL_CONFIGS = {
         'model': 'gpt-4o',
         'temperature': 0.1,
         'max_tokens': 2000,
-        'context_window': 128000  # GPT-4o的上下文窗口很大
+        'context_window': 128000  # GPT-4o has a large context window
     },
     'gpt-4o-mini': {
         'api_key': config['llm']['api_key'] if config else '',
@@ -53,7 +53,7 @@ MODEL_CONFIGS = {
         'model': 'gpt-4o-mini',
         'temperature': 0.1,
         'max_tokens': 2000,
-        'context_window': 128000  # GPT-4o-mini的上下文窗口也很大
+        'context_window': 128000  # GPT-4o-mini also has a large context window
     },
     'gpt-o1': {
         'api_key': config['llm']['api_key'] if config else '',
@@ -73,15 +73,15 @@ MODEL_CONFIGS = {
     }
 }
 
-# 线程本地存储客户端
+# Thread-local client storage
 thread_local = threading.local()
 
 def get_client(model_name: str) -> OpenAI:
-    """获取指定模型的客户端（线程安全）"""
+    """Get client for the specified model (thread-safe)"""
     if model_name not in MODEL_CONFIGS:
-        raise ValueError(f"不支持的模型: {model_name}")
+        raise ValueError(f"Unsupported model: {model_name}")
     
-    # 为每个线程和模型组合创建独立的客户端
+    # Create an independent client for each thread and model combination
     key = f"{model_name}_{threading.current_thread().ident}"
     if not hasattr(thread_local, 'clients'):
         thread_local.clients = {}
@@ -96,29 +96,29 @@ def get_client(model_name: str) -> OpenAI:
     return thread_local.clients[key]
 
 def load_schema(schema_file: str) -> Dict:
-    """加载Schema信息"""
+    """Load schema information"""
     with open(schema_file, 'r', encoding='utf-8') as f:
         schema = json.load(f)
     return schema
 
 def format_schema_simple(schema: Dict, max_tables: int = None, max_columns_per_table: int = None) -> Tuple[str, Dict]:
     """
-    简单格式化Schema：包含尽可能多的表信息
-    不使用复杂的规则匹配，只根据模型的上下文窗口大小包含足够多的表
+    Simple schema formatting: include as many tables as possible
+    No complex rule matching; include enough tables based on model context window size
     
-    默认包含所有表，因为GPT-4o有128K tokens，可以容纳完整的Schema
+    By default includes all tables, since GPT-4o has 128K tokens and can fit the full schema
     """
     all_tables = schema.get('tables', [])
     
-    # 如果未指定max_tables，则包含所有表
-    # 对于GPT-4o (128K tokens)，可以包含所有表（约10%的上下文窗口）
+    # If max_tables is not specified, include all tables
+    # For GPT-4o (128K tokens), all tables can be included (~10% of context window)
     if max_tables is None:
         selected_tables = all_tables
     else:
         selected_tables = all_tables[:max_tables]
     
-    # 格式化Schema文本
-    text = "数据库Schema信息：\n\n"
+    # Format schema text
+    text = "Database Schema Information:\n\n"
     
     total_tables = len(selected_tables)
     total_columns = 0
@@ -127,20 +127,20 @@ def format_schema_simple(schema: Dict, max_tables: int = None, max_columns_per_t
         table_name = table.get('table_name', '')
         columns = table.get('columns', [])
         
-        # 如果未指定max_columns_per_table，则包含所有列
+        # If max_columns_per_table is not specified, include all columns
         if max_columns_per_table is not None:
             columns = columns[:max_columns_per_table]
         total_columns += len(columns)
         
-        text += f"表：{table_name}\n"
-        text += "  列：\n"
+        text += f"Table: {table_name}\n"
+        text += "  Columns:\n"
         for col in columns:
             col_name = col.get('column_name', '')
             col_type = col.get('data_type', 'TEXT')
             text += f"    - {col_name} ({col_type})\n"
         text += "\n"
     
-    # 记录配置信息
+    # Record configuration info
     config_info = {
         'total_tables_in_schema': len(all_tables),
         'included_tables_count': total_tables,
@@ -148,7 +148,7 @@ def format_schema_simple(schema: Dict, max_tables: int = None, max_columns_per_t
         'max_tables': max_tables,
         'max_columns_per_table': max_columns_per_table,
         'schema_text_length': len(text),
-        'estimated_tokens': len(text) // 4  # 粗略估算
+        'estimated_tokens': len(text) // 4  # Rough estimate
     }
     
     return text, config_info
@@ -161,28 +161,28 @@ def generate_sql_baseline(
     database: str,
     config_info: Dict
 ) -> Tuple[str, Dict]:
-    """使用Baseline方法生成SQL（简单直接的prompt）"""
+    """Generate SQL using baseline method (simple direct prompt)"""
     model_config = MODEL_CONFIGS[model_name]
     
-    # 简单的prompt，不添加复杂规则
-    prompt = f"""你是一个SQL专家。根据自然语言查询和数据库Schema，生成对应的SQL查询语句。
+    # Simple prompt without complex rules
+    prompt = f"""You are a SQL expert. Generate SQL queries based on natural language queries and database schema.
 
 {schema_text}
 
-自然语言查询：{query}
+Natural language query: {query}
 
-要求：
-1. 生成完整、可执行的SQL语句
-2. 所有表名和列名必须用双引号包裹（包括中文和特殊字符）
-3. 确保SQL语法正确，可以在SQLite上执行
-4. 只输出SQL语句，不要添加任何解释或注释
+Requirements:
+1. Generate complete, executable SQL statements
+2. All table and column names must be wrapped in double quotes (including Chinese and special characters)
+3. Ensure SQL syntax is correct and can be executed on SQLite
+4. Output only SQL statements, no explanations or comments
 
-数据库：{database}
+Database: {database}
 
-SQL查询："""
+SQL query:"""
     
-    # 估算prompt token数
-    prompt_tokens = len(prompt) // 4  # 粗略估算
+    # Estimate prompt token count
+    prompt_tokens = len(prompt) // 4  # Rough estimate
     
     try:
         response = client.chat.completions.create(
@@ -196,13 +196,13 @@ SQL查询："""
         )
         sql = response.choices[0].message.content.strip()
         
-        # 清理SQL
+        # Clean SQL
         if sql.startswith('```'):
             lines = sql.split('\n')
             sql = '\n'.join(lines[1:-1]) if len(lines) > 2 else sql
         sql = sql.strip().rstrip(';') + ';'
         
-        # 记录生成信息
+        # Record generation info
         generation_info = {
             'prompt_tokens_estimated': prompt_tokens,
             'response_tokens_estimated': len(sql) // 4,
@@ -214,11 +214,11 @@ SQL查询："""
         
         return sql, generation_info
     except Exception as e:
-        print(f"生成SQL失败: {e}")
+        print(f"Failed to generate SQL: {e}")
         return "", {'error': str(e), **config_info}
 
 def execute_sql(db_path: str, sql: str) -> Tuple[bool, Optional[List], Optional[str]]:
-    """执行SQL并返回结果"""
+    """Execute SQL and return results"""
     try:
         conn = sqlite3.connect(db_path)
         conn.row_factory = sqlite3.Row
@@ -235,14 +235,14 @@ def execute_sql(db_path: str, sql: str) -> Tuple[bool, Optional[List], Optional[
         return False, None, str(e)
 
 def normalize_sql(sql: str) -> str:
-    """标准化SQL（用于比较）"""
+    """Normalize SQL (for comparison)"""
     sql = ' '.join(sql.split())
     sql = sql.upper()
     sql = sql.replace('"', '')
     return sql
 
 def compare_results(result1: List, result2: List) -> bool:
-    """比较两个查询结果是否相同"""
+    """Compare whether two query results are identical"""
     if len(result1) != len(result2):
         return False
     
@@ -264,8 +264,8 @@ def evaluate_single_query(
     max_tables: int = 100,
     max_columns_per_table: int = 30
 ) -> Dict:
-    """评测单个query"""
-    # 加载NL查询
+    """Evaluate a single query"""
+    # Load NL query
     with open(nl_query_file, 'r', encoding='utf-8') as f:
         nl_data = json.load(f)
     
@@ -278,13 +278,13 @@ def evaluate_single_query(
             'error': 'Missing natural_language_query'
         }
     
-    # 加载Schema
+    # Load schema
     schema = load_schema(schema_file)
     
-    # 格式化Schema（简单直接，包含尽可能多的表）
+    # Format schema (simple and direct, include as many tables as possible)
     schema_text, config_info = format_schema_simple(schema, max_tables, max_columns_per_table)
     
-    # 生成SQL
+    # Generate SQL
     client = get_client(model_name)
     generated_sql, generation_info = generate_sql_baseline(
         client, model_name, query, schema_text, database, config_info
@@ -297,13 +297,13 @@ def evaluate_single_query(
             'generation_info': generation_info
         }
     
-    # 执行生成的SQL
+    # Execute generated SQL
     exec_success, exec_results, exec_error = execute_sql(db_path, generated_sql)
     
-    # 执行ground truth SQL
+    # Execute ground truth SQL
     gt_exec_success, gt_results, gt_error = execute_sql(db_path, ground_truth_sql)
     
-    # 评估
+    # Evaluate
     result = {
         'query': query,
         'ground_truth_sql': ground_truth_sql,
@@ -318,11 +318,11 @@ def evaluate_single_query(
         'generation_info': generation_info
     }
     
-    # SQL精确匹配
+    # Exact SQL match
     if normalize_sql(generated_sql) == normalize_sql(ground_truth_sql):
         result['sql_exact_match'] = True
     
-    # 结果匹配
+    # Result match
     if exec_success and gt_exec_success:
         if len(exec_results) == 0 and len(gt_results) == 0:
             result['results_match'] = True
@@ -347,21 +347,21 @@ def evaluate_database(
     limit: Optional[int] = None,
     max_workers: int = 5
 ) -> Dict:
-    """评测一个数据库的所有query（并发版本）"""
+    """Evaluate all queries for a database (concurrent version)"""
     results = []
     
-    # 获取NL查询文件列表
+    # Get NL query file list
     nl_files = [f for f in os.listdir(nl_query_dir) if f.startswith('generated_nl_query_') and f.endswith('.json')]
     nl_files.sort(key=lambda x: int(x.split('_')[-1].split('.')[0]) if x.split('_')[-1].split('.')[0].isdigit() else 0)
     
     if limit:
         nl_files = nl_files[:limit]
     
-    # 获取SQL文件列表和索引映射
+    # Get SQL file list and index mapping
     sql_file_list = sorted([f for f in os.listdir(sql_dir) if f.startswith('generated_sql_') and f.endswith('.json') and '_error' not in f],
                           key=lambda x: int(x.split('_')[-1].split('.')[0]) if x.split('_')[-1].split('.')[0].isdigit() else 0)
     
-    # 创建SQL索引到文件名的映射
+    # Create mapping from SQL index to filename
     sql_index_map = {}
     for sql_file in sql_file_list:
         file_idx_str = sql_file.split('_')[-1].split('.')[0]
@@ -371,7 +371,7 @@ def evaluate_database(
     sql_indices = sorted(sql_index_map.keys())
     sql_count = len(sql_indices)
     
-    # 准备任务列表
+    # Prepare task list
     tasks = []
     for nl_file in nl_files:
         nl_file_path = os.path.join(nl_query_dir, nl_file)
@@ -382,13 +382,13 @@ def evaluate_database(
         
         file_idx = int(file_idx_str)
         
-        # 计算对应的SQL文件索引
-        # 如果NL查询索引小于SQL数量，直接使用对应的SQL索引
-        # 否则计算对应的base_idx（通过取模）
+        # Compute corresponding SQL file index
+        # If NL query index is less than SQL count, use the corresponding SQL index directly
+        # Otherwise compute the corresponding base_idx (via modulo)
         if file_idx < sql_count:
             sql_idx = sql_indices[file_idx] if file_idx < len(sql_indices) else None
         else:
-            # 计算是第几个变体，找到对应的base_idx
+            # Compute which variant this is and find the corresponding base_idx
             base_idx = file_idx % sql_count
             sql_idx = sql_indices[base_idx] if base_idx < len(sql_indices) else None
         
@@ -400,7 +400,7 @@ def evaluate_database(
         if not os.path.exists(sql_file):
             continue
         
-        # 加载ground truth SQL
+        # Load ground truth SQL
         with open(sql_file, 'r', encoding='utf-8') as f:
             sql_data = json.load(f)
         
@@ -412,7 +412,7 @@ def evaluate_database(
         
         tasks.append((nl_file_path, nl_file, ground_truth_sql, ground_truth_results))
     
-    # 并发评测
+    # Concurrent evaluation
     with ThreadPoolExecutor(max_workers=max_workers) as executor:
         futures = {
             executor.submit(
@@ -429,27 +429,27 @@ def evaluate_database(
             for nl_file_path, nl_file, ground_truth_sql, ground_truth_results in tasks
         }
         
-        for future in tqdm(as_completed(futures), total=len(futures), desc=f"Baseline评测 {model_name}"):
+        for future in tqdm(as_completed(futures), total=len(futures), desc=f"Baseline eval {model_name}"):
             nl_file_path, nl_file = futures[future]
             try:
                 result = future.result()
                 result['file'] = nl_file
                 results.append(result)
             except Exception as e:
-                print(f"评测失败 {nl_file_path}: {e}")
+                print(f"Evaluation failed {nl_file_path}: {e}")
                 results.append({
                     'file': nl_file,
                     'success': False,
                     'error': str(e)
                 })
     
-    # 统计
+    # Statistics
     total = len(results)
     exec_success = sum(1 for r in results if r.get('exec_success', False))
     results_match = sum(1 for r in results if r.get('results_match', False))
     sql_exact_match = sum(1 for r in results if r.get('sql_exact_match', False))
     
-    # 统计配置信息
+    # Configuration statistics
     if results:
         avg_schema_tokens = sum(r.get('generation_info', {}).get('estimated_tokens', 0) for r in results) / total
         truncated_count = sum(1 for r in results if r.get('generation_info', {}).get('truncated', False))
@@ -486,27 +486,27 @@ def evaluate_database(
 def main():
     import argparse
     
-    parser = argparse.ArgumentParser(description='Baseline评测：简单的Text-to-SQL')
-    parser.add_argument('--nl_query_dir', type=str, required=True, help='NL查询文件目录')
-    parser.add_argument('--sql_dir', type=str, required=True, help='SQL文件目录')
-    parser.add_argument('--db_path', type=str, required=True, help='数据库文件路径')
-    parser.add_argument('--schema_file', type=str, required=True, help='Schema文件路径')
-    parser.add_argument('--model', type=str, required=True, choices=['gpt-4', 'gpt-4o', 'gpt-4o-mini', 'gpt-o1', 'deepseek-r1'], help='模型名称')
-    parser.add_argument('--output_file', type=str, required=True, help='输出结果文件')
-    parser.add_argument('--max_tables', type=int, default=None, help='最大表数量（None表示包含所有表，默认包含所有表）')
-    parser.add_argument('--max_columns_per_table', type=int, default=None, help='每个表最大列数（None表示包含所有列，默认包含所有列）')
-    parser.add_argument('--limit', type=int, default=None, help='限制评测数量（用于测试）')
-    parser.add_argument('--max_workers', type=int, default=5, help='并发线程数（默认5）')
+    parser = argparse.ArgumentParser(description='Baseline evaluation: simple Text-to-SQL')
+    parser.add_argument('--nl_query_dir', type=str, required=True, help='NL query file directory')
+    parser.add_argument('--sql_dir', type=str, required=True, help='SQL file directory')
+    parser.add_argument('--db_path', type=str, required=True, help='Database file path')
+    parser.add_argument('--schema_file', type=str, required=True, help='Schema file path')
+    parser.add_argument('--model', type=str, required=True, choices=['gpt-4', 'gpt-4o', 'gpt-4o-mini', 'gpt-o1', 'deepseek-r1'], help='Model name')
+    parser.add_argument('--output_file', type=str, required=True, help='Output results file')
+    parser.add_argument('--max_tables', type=int, default=None, help='Maximum number of tables (None means include all tables; default is all tables)')
+    parser.add_argument('--max_columns_per_table', type=int, default=None, help='Maximum columns per table (None means include all columns; default is all columns)')
+    parser.add_argument('--limit', type=int, default=None, help='Limit number of evaluations (for testing)')
+    parser.add_argument('--max_workers', type=int, default=5, help='Number of concurrent threads (default 5)')
     
     args = parser.parse_args()
     
-    print(f"Baseline评测配置:")
-    print(f"  模型: {args.model}")
-    print(f"  上下文窗口: {MODEL_CONFIGS[args.model]['context_window']} tokens")
-    print(f"  最大表数: {args.max_tables}")
-    print(f"  每表最大列数: {args.max_columns_per_table}")
+    print(f"Baseline evaluation configuration:")
+    print(f"  Model: {args.model}")
+    print(f"  Context window: {MODEL_CONFIGS[args.model]['context_window']} tokens")
+    print(f"  Max tables: {args.max_tables}")
+    print(f"  Max columns per table: {args.max_columns_per_table}")
     
-    # 评测
+    # Evaluate
     eval_result = evaluate_database(
         args.nl_query_dir,
         args.db_path,
@@ -519,21 +519,20 @@ def main():
         args.max_workers
     )
     
-    # 保存结果
+    # Save results
     os.makedirs(os.path.dirname(args.output_file), exist_ok=True)
     with open(args.output_file, 'w', encoding='utf-8') as f:
         json.dump(eval_result, f, ensure_ascii=False, indent=2)
     
-    # 打印统计
-    print(f"\nBaseline评测结果 ({args.model}):")
-    print(f"  总数: {eval_result['total']}")
-    print(f"  执行成功: {eval_result['exec_success']} ({eval_result['exec_success_rate']*100:.2f}%)")
-    print(f"  结果匹配: {eval_result['results_match']} ({eval_result['results_match_rate']*100:.2f}%)")
-    print(f"  SQL精确匹配: {eval_result['sql_exact_match']} ({eval_result['sql_exact_match_rate']*100:.2f}%)")
-    print(f"  平均Schema tokens: {eval_result['config_stats']['avg_schema_tokens']:.0f}")
-    print(f"  截断数量: {eval_result['config_stats']['truncated_count']}")
-    print(f"\n结果已保存到: {args.output_file}")
+    # Print statistics
+    print(f"\nBaseline evaluation results ({args.model}):")
+    print(f"  Total: {eval_result['total']}")
+    print(f"  Execution success: {eval_result['exec_success']} ({eval_result['exec_success_rate']*100:.2f}%)")
+    print(f"  Result match: {eval_result['results_match']} ({eval_result['results_match_rate']*100:.2f}%)")
+    print(f"  Exact SQL match: {eval_result['sql_exact_match']} ({eval_result['sql_exact_match_rate']*100:.2f}%)")
+    print(f"  Average schema tokens: {eval_result['config_stats']['avg_schema_tokens']:.0f}")
+    print(f"  Truncated count: {eval_result['config_stats']['truncated_count']}")
+    print(f"\nResults saved to: {args.output_file}")
 
 if __name__ == '__main__':
     main()
-

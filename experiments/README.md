@@ -1,140 +1,69 @@
 # TACO Experiments Framework
 
-This directory contains the complete experimental framework for evaluating Text-to-SQL models on the TACO benchmark, including baseline experiments and TACO-SQL ablation studies.
+Baseline evaluations and TACO-SQL ablation studies on the TACO benchmark.
 
-## Directory Structure
+> **Run experiments:** [docs/EXPERIMENTS.md](../docs/EXPERIMENTS.md) (CLI reference) · **Reproduce:** [examples/quick_eval.sh](../examples/quick_eval.sh)
 
-```
+## Directory structure
+
+```text
 experiments/
 ├── baselines/              # Baseline model experiments
-│   ├── base_llm/          # Base LLM models (GPT-4o, GPT-o1, DeepSeek-R1, etc.)
-│   ├── llm_based/         # LLM-based methods (DIN-SQL, MAC-SQL)
-│   ├── sft_based/         # SFT-based models (CodeS, Qwen2.5-Coder, etc.)
-│   └── hybrid/            # Hybrid methods (CHESS, Zero-NL2SQL, DIAL-SQL)
-├── taco_sql_exp/          # TACO-SQL ablation experiments
-│   ├── origin/            # Origin setting (baseline)
-│   ├── qr/                # + Question Rewriting
-│   ├── qr_tl/             # + QR + Table Linking
-│   └── qr_tl_qp/          # Full TACO-SQL (+ QR + TL + Query Planning)
-├── evaluation/            # Evaluation tools and metrics
-└── results/               # Experimental results
+│   ├── base_llm/          # GPT-4o, DeepSeek-R1, …
+│   ├── llm_based/         # DIN-SQL, MAC-SQL
+│   ├── sft_based/         # CodeS, Qwen2.5-Coder, …
+│   └── hybrid/            # CHESS, Zero-NL2SQL, DIAL-SQL
+├── taco_sql_exp/          # TACO-SQL ablations (origin → qr → qr_tl → qr_tl_qp)
+├── evaluation/            # exec_eval, metrics, plots
+├── results/               # Output JSON (gitignored large files)
+└── docs/                  # Reviewer / paper notes
 ```
 
-## Experimental Settings
+## Script entry points
 
-### Baseline Experiments
-
-**Setting**: Origin (original query + full schema)
-
-**Models Evaluated**:
-- **Base LLMs**: GPT-4o, GPT-4o-mini, GPT-o1, DeepSeek-R1, Llama3-70b, Qwen2-72b
-- **LLM-Based**: DIN-SQL, MAC-SQL
-- **SFT-Based**: CodeS-33B, Qwen2.5-Coder-32B, Deepseek-coder-6.7b
-- **Hybrid**: CHESS, Zero-NL2SQL, DIAL-SQL
-
-**Prompt Strategy**: Standardized baseline prompt (see `baselines/base_llm/prompt_strategy.py`)
-
-### TACO-SQL Ablation Experiments
-
-Four experimental settings with progressive component addition:
-
-1. **Origin**: Original query + Full schema
-2. **QR**: + Question Rewriting
-3. **QR+TL**: + Question Rewriting + Table Linking
-4. **QR+TL+QP**: Full TACO-SQL (+ Question Rewriting + Table Linking + Query Planning)
-
-**Models**: All baseline models evaluated under each setting
-
-**Prompt Strategies**: See `taco_sql_exp/prompts/` for detailed prompt implementations
-
-## Key Features
-
-### Fair Comparison
-- **Standardized Prompts**: Same prompt template for all models in the same setting
-- **Consistent Evaluation**: Execution Accuracy (EX) as primary metric
-- **Same Test Set**: All models evaluated on identical test queries
-- **Documented Adaptations**: Model-specific adaptations clearly documented
-
-### Comprehensive Evaluation
-- **Execution Accuracy**: Primary metric (execution result matching)
-- **Error Analysis**: Detailed error categorization and analysis
-- **Statistical Rigor**: Confidence intervals and significance testing
-- **Performance Metrics**: Latency, token usage, etc.
-
-## Quick Start
-
-### Run Baseline Experiment
+### Baselines
 
 ```bash
-# Single model
 python experiments/baselines/base_llm/run_experiment.py \
     --model gpt-4o \
-    --test_data benchmark/data/final/test.json \
-    --output results/baseline_gpt4o.json
-
-# Batch evaluation
-python experiments/baselines/base_llm/batch_evaluate.py \
-    --models gpt-4o gpt-o1 deepseek-r1 \
-    --test_data benchmark/data/final/test.json
+    --test_data benchmark/data/final/taco_beijing/test.json \
+    --output experiments/results/baseline_gpt_4o_taco_beijing.json
 ```
 
-### Run TACO-SQL Ablation
+See [baselines/README.md](baselines/README.md) and [baselines/base_llm/README.md](baselines/base_llm/README.md).
+
+### TACO-SQL ablation
 
 ```bash
-# Full TACO-SQL experiment
 python experiments/taco_sql_exp/run_ablation.py \
     --setting qr_tl_qp \
     --model gpt-4o \
-    --dataset taco_beijing \
-    --output results/qr_tl_qp_gpt4o.json
+    --test_data benchmark/data/final/taco_beijing/test.json
 ```
 
-### Evaluate Results
+See [taco_sql_exp/README.md](taco_sql_exp/README.md).
+
+### Evaluation
 
 ```bash
-# Execution accuracy evaluation
 python experiments/evaluation/exec_eval.py \
-    --pred results/predictions.json \
-    --gold benchmark/data/final/test.json \
-    --output results/evaluation_report.json
+    --pred experiments/results/baseline_gpt_4o_taco_beijing.json \
+    --gold benchmark/data/final/taco_beijing/test.json
 ```
 
-## Documentation
+See [evaluation/README.md](evaluation/README.md).
 
-- **[TACO-SQL Core Settings and Prompt Strategies](TACO-SQL_CORE_SETTINGS_AND_PROMPT_STRATEGIES.md)**: Detailed prompt strategies and experimental settings
-- **[Experiment Fairness](EXPERIMENT_FAIRNESS.md)**: Fair comparison principles and practices
-- **[Reviewer Guide](REVIEWER_GUIDE.md)**: Quick guide for reviewers
-- **[Baseline Experiments](baselines/README.md)**: Baseline experiment documentation
-- **[TACO-SQL Experiments](taco_sql_exp/README.md)**: TACO-SQL ablation experiment documentation
-- **[Evaluation Framework](evaluation/README.md)**: Evaluation tools and metrics documentation
+## Metrics
 
-## Evaluation Metrics
+**Primary:** Execution Accuracy (EX) — share of queries where predicted SQL execution result matches gold.
 
-### Primary Metric: Execution Accuracy (EX)
+```text
+EX = (correct executions) / (total queries)
+```
 
-**Definition**: Proportion of queries where predicted SQL execution result exactly matches ground truth execution result.
+Additional: error breakdown, latency, token usage — see `evaluation/`.
 
-**Formula**: `EX = (Correct executions) / (Total queries)`
-
-### Additional Metrics
-
-- **Error Breakdown**: Syntax errors, execution errors, wrong results
-- **Performance Metrics**: Latency, token usage
-- **Statistical Analysis**: Confidence intervals, significance testing
-
-## Model Configurations
-
-All models use standardized configurations for fair comparison:
-
-- **Temperature**: 0.1 (for reproducibility)
-- **Max Tokens**: 2000
-- **Evaluation**: Execution-based (not string matching)
-
-Model-specific configurations are documented in respective module READMEs.
-
-## Results Structure
-
-Results are saved in JSON format with the following structure:
+## Results JSON shape
 
 ```json
 {
@@ -143,15 +72,24 @@ Results are saved in JSON format with the following structure:
     "dataset": "taco_beijing",
     "total_queries": 1000,
     "execution_accuracy": 0.35,
-    "confidence_interval": [0.32, 0.38],
-    "per_query_results": [...],
-    "error_breakdown": {...}
+    "per_query_results": [],
+    "error_breakdown": {}
 }
 ```
 
-## Notes
+## Module documentation
 
-- All code and documentation are in English for international reviewers
-- Prompt strategies are clearly documented and accessible
-- Experimental settings are standardized for fair comparison
-- Evaluation procedures are consistent across all models
+| Module | README |
+|:--|:--|
+| Baselines | [baselines/README.md](baselines/README.md) |
+| TACO-SQL | [taco_sql_exp/README.md](taco_sql_exp/README.md) |
+| Evaluation | [evaluation/README.md](evaluation/README.md) |
+| Reviewer notes | [docs/README.md](docs/README.md) |
+
+## Fair comparison (summary)
+
+- Same test split for all models
+- Standardized prompts per setting (`baselines/base_llm/prompt_strategy.py`, `taco_sql_exp/prompts/`)
+- Execution-based metric, not string match
+
+Details: [docs/EXPERIMENT_FAIRNESS.md](docs/EXPERIMENT_FAIRNESS.md)

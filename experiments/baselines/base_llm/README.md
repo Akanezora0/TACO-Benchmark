@@ -1,110 +1,76 @@
-# Baseline LLM Experiment Framework
+# Base LLM Baseline Experiments
 
-## Directory Overview
+Direct Text-to-SQL evaluation with base LLMs (GPT-4o, DeepSeek-R1, etc.) using a standardized prompt and full-schema context.
 
-The `experiments/baselines/base_llm/` directory contains code and results for baseline experiments, separated from the benchmark generation pipeline.
+## Files
 
-## File Organization
+| File | Purpose |
+|:--|:--|
+| `evaluate_baseline.py` | Main evaluation script (concurrent API calls) |
+| `run_experiment.py` | Single experiment runner |
+| `batch_evaluate.py` | Batch evaluation across models |
+| `model_wrapper.py` | LLM client abstraction |
+| `prompt_strategy.py` | Standardized baseline prompt template |
+| `experiment_config.py` | Model configurations |
 
-### Code Files
-- `evaluate_baseline.py`: Baseline evaluation script (supports concurrency)
+## Design principles
 
-### Result Files
-- `results/`: Evaluation result JSON files
-- `*.log`: Evaluation log files (evaluation-related logs are stored here)
-
-### Notes
-- **NL query generation logs** should be placed in `benchmark/generation/nl_query/` directory
-- **Evaluation-related logs** are placed in `experiments/baselines/base_llm/` directory
-
-## Design Principles
-
-1. **Simple and Direct**: No complex rule matching or keyword extraction
-2. **Sufficient Context**: Include as many tables as possible based on model's context window
-3. **Direct Text-to-SQL**: Let the model directly perform Text-to-SQL conversion without additional processing
-4. **Concurrent Acceleration**: Use ThreadPoolExecutor to accelerate API calls
+1. **Simple and direct** — no complex table-ranking heuristics
+2. **Sufficient context** — include as many tables as the model context allows
+3. **Direct Text-to-SQL** — single-shot SQL generation from NL + schema
+4. **Concurrent API calls** — `ThreadPoolExecutor` for throughput
 
 ## Usage
 
-### 1. Generate NL Queries (Run First)
+### Evaluate on the official test split
 
 ```bash
-cd /home/u2023103807/TACO
-
-# Generate NL queries for a single database (logs in benchmark/generation/nl_query/)
-python3 benchmark/generation/nl_query/4generate_nl_queries_improved.py \
-  --sql_dir benchmark/data/beijing/output/single \
-  --schema_dir benchmark/data/beijing/database_chinese \
-  --output_dir benchmark/data/beijing/output/nl_query \
-  --database 社会保障 \
-  --max_workers 5
-
-# Or use batch script
-bash benchmark/generation/nl_query/generate_nl_for_databases.sh
+python experiments/baselines/base_llm/evaluate_baseline.py \
+  --model gpt-4o \
+  --dataset taco_beijing
 ```
 
-### 2. Baseline Evaluation
+### Per-database evaluation (custom paths)
 
 ```bash
-cd /home/u2023103807/TACO
-
-# Single database evaluation
-python3 experiments/baselines/base_llm/evaluate_baseline.py \
-  --nl_query_dir benchmark/data/beijing/output/nl_query/社会保障 \
-  --sql_dir benchmark/data/beijing/output/single/社会保障 \
-  --db_path benchmark/data/beijing/database_chinese/社会保障/社会保障.db \
-  --schema_file benchmark/data/beijing/database_chinese/社会保障/社会保障.json \
+python experiments/baselines/base_llm/evaluate_baseline.py \
+  --nl_query_dir benchmark/data/beijing/output/nl_query/Housing \
+  --sql_dir benchmark/data/beijing/output/single/Housing \
+  --db_path benchmark/data/beijing/database_chinese/Housing/Housing.db \
+  --schema_file benchmark/data/beijing/database_chinese/Housing/Housing.json \
   --model gpt-4o \
-  --output_file experiments/baselines/base_llm/results/beijing_社会保障_gpt4o_baseline.json \
+  --output_file experiments/baselines/base_llm/results/beijing_Housing_gpt4o.json \
   --max_tables 100 \
   --max_columns_per_table 30 \
   --limit 100 \
   --max_workers 5
-
-# Or use batch script
-bash experiments/baselines/base_llm/run_baseline_eval.sh
 ```
 
-### Parameter Description
+## Key parameters
 
-- `--max_tables`: Maximum number of tables (adjust based on model context window)
-  - GPT-4o (128K tokens): Recommended 100-150 tables
-  - GPT-4 (8K tokens): Recommended 20-30 tables
-- `--max_columns_per_table`: Maximum columns per table (recommended 20-30)
-- `--limit`: Limit evaluation count (for testing)
-- `--max_workers`: Number of concurrent threads (default 5, adjust based on API rate limits)
+| Parameter | Description |
+|:--|:--|
+| `--max_tables` | Max tables in prompt (GPT-4o: ~100–150; GPT-4 8K: ~20–30) |
+| `--max_columns_per_table` | Columns per table (recommended 20–30) |
+| `--limit` | Cap number of examples (for smoke tests) |
+| `--max_workers` | API concurrency (default 5) |
 
-## Configuration
+## Model context windows
 
-### Model Context Windows
+| Model | Context |
+|:--|:--|
+| GPT-4 | 8K |
+| GPT-4o | 128K |
+| GPT-o1 | 200K |
+| DeepSeek-R1 | 64K |
 
-- GPT-4: 8K tokens
-- GPT-4o: 128K tokens
-- GPT-o1: 200K tokens
-- DeepSeek-R1: 64K tokens
+## Output
 
-### Schema Inclusion Strategy
+JSON results with execution success rate, result-matching rate, per-query details, and configuration metadata.
 
-- Simple and direct: Include first N tables (N adjusted based on context window)
-- No complex table selection or keyword matching
-- Let the model choose from sufficient context
+Results are written under `experiments/baselines/base_llm/results/` (gitignored for large files).
 
-## Output Format
+## Related
 
-Evaluation results include:
-- Basic statistics (total count, execution success rate, result matching rate, etc.)
-- Configuration information (table count, column count, token estimation, etc.)
-- Detailed results (evaluation results for each query)
-
-## Concurrency Mechanism
-
-- NL query generation: Use ThreadPoolExecutor, each thread has independent OpenAI client
-- Baseline evaluation: Use ThreadPoolExecutor, thread-safe client management
-- Default concurrency: 5 (adjustable via `--max_workers`)
-
-## Comparison with Paper Results
-
-Baseline results in the paper (without TACO-SQL framework):
-- GPT-4o (beijing): 12.06%
-
-Goal: By providing sufficient context, we expect to achieve results close to the baseline results in the paper.
+- All baselines: [../README.md](../README.md)
+- Evaluation metrics: [../../evaluation/README.md](../../evaluation/README.md)

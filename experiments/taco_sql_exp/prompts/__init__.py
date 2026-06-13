@@ -1,7 +1,7 @@
 """
-Prompt策略模块
+Prompt strategy module
 
-包含Question Rewriting、Query Planning和SQL Generation的Prompt构建器
+Contains prompt builders for Question Rewriting, Query Planning, and SQL Generation
 """
 
 from .question_rewriting_prompt import (
@@ -27,4 +27,3 @@ __all__ = [
     'SQLGenerationPrompt',
     'create_sql_prompt_builder',
 ]
-

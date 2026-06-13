@@ -1,7 +1,7 @@
 """
-Schema格式化工具
+Schema formatting utilities
 
-根据实验设置格式化Schema（完整Schema或过滤后的Schema）
+Format schema based on experiment setting (full schema or filtered schema)
 """
 
 from typing import Dict, List, Tuple, Optional
@@ -13,26 +13,26 @@ def format_schema_simple(
     max_columns_per_table: Optional[int] = None
 ) -> Tuple[str, Dict]:
     """
-    格式化完整Schema（用于Origin和QR设置）
+    Format full schema (for Origin and QR settings)
     
     Args:
-        schema: Schema字典
-        max_tables: 最大表数（None表示包含所有表）
-        max_columns_per_table: 每表最大列数（None表示包含所有列）
+        schema: Schema dictionary
+        max_tables: Maximum number of tables (None means include all tables)
+        max_columns_per_table: Maximum columns per table (None means include all columns)
         
     Returns:
-        (格式化的Schema文本, 配置信息字典)
+        (Formatted schema text, configuration info dictionary)
     """
     all_tables = schema.get('tables', [])
     
-    # 如果未指定max_tables，则包含所有表
+    # If max_tables is not specified, include all tables
     if max_tables is None:
         selected_tables = all_tables
     else:
         selected_tables = all_tables[:max_tables]
     
-    # 格式化Schema文本
-    text = "数据库Schema信息：\n\n"
+    # Format schema text
+    text = "Database Schema Information:\n\n"
     
     total_tables = len(selected_tables)
     total_columns = 0
@@ -41,20 +41,20 @@ def format_schema_simple(
         table_name = table.get('table_name', '')
         columns = table.get('columns', [])
         
-        # 如果未指定max_columns_per_table，则包含所有列
+        # If max_columns_per_table is not specified, include all columns
         if max_columns_per_table is not None:
             columns = columns[:max_columns_per_table]
         total_columns += len(columns)
         
-        text += f"表：{table_name}\n"
-        text += "  列：\n"
+        text += f"Table: {table_name}\n"
+        text += "  Columns:\n"
         for col in columns:
             col_name = col.get('column_name', '')
             col_type = col.get('data_type', 'TEXT')
             text += f"    - {col_name} ({col_type})\n"
         text += "\n"
     
-    # 记录配置信息
+    # Record configuration info
     config_info = {
         'total_tables_in_schema': len(all_tables),
         'included_tables_count': total_tables,
@@ -62,7 +62,7 @@ def format_schema_simple(
         'max_tables': max_tables,
         'max_columns_per_table': max_columns_per_table,
         'schema_text_length': len(text),
-        'estimated_tokens': len(text) // 4  # 粗略估算
+        'estimated_tokens': len(text) // 4  # Rough estimate
     }
     
     return text, config_info
@@ -74,26 +74,26 @@ def format_schema_filtered(
     max_columns_per_table: Optional[int] = None
 ) -> Tuple[str, Dict]:
     """
-    格式化过滤后的Schema（用于QR+TL和QR+TL+QP设置）
+    Format filtered schema (for QR+TL and QR+TL+QP settings)
     
     Args:
-        schema: Schema字典
-        relevant_tables: 相关表列表（来自Table Linking）
-        max_columns_per_table: 每表最大列数
+        schema: Schema dictionary
+        relevant_tables: List of relevant tables (from Table Linking)
+        max_columns_per_table: Maximum columns per table
         
     Returns:
-        (格式化的Schema文本, 配置信息字典)
+        (Formatted schema text, configuration info dictionary)
     """
     all_tables = schema.get('tables', [])
     
-    # 筛选相关表
+    # Filter relevant tables
     selected_tables = [
         table for table in all_tables 
         if table.get('table_name', '') in relevant_tables
     ]
     
-    # 格式化Schema文本
-    text = "相关表Schema信息：\n\n"
+    # Format schema text
+    text = "Relevant Tables Schema Information:\n\n"
     
     total_columns = 0
     
@@ -105,15 +105,15 @@ def format_schema_filtered(
             columns = columns[:max_columns_per_table]
         total_columns += len(columns)
         
-        text += f"表：{table_name}\n"
-        text += "  列：\n"
+        text += f"Table: {table_name}\n"
+        text += "  Columns:\n"
         for col in columns:
             col_name = col.get('column_name', '')
             col_type = col.get('data_type', 'TEXT')
             text += f"    - {col_name} ({col_type})\n"
         text += "\n"
     
-    # 记录配置信息
+    # Record configuration info
     config_info = {
         'total_tables_in_schema': len(all_tables),
         'relevant_tables_count': len(relevant_tables),
@@ -132,14 +132,14 @@ def format_schema_for_planning(
     tables: List[str]
 ) -> Dict:
     """
-    为Query Planning格式化Schema信息
+    Format schema information for Query Planning
     
     Args:
-        schema: Schema字典
-        tables: 表列表
+        schema: Schema dictionary
+        tables: Table list
         
     Returns:
-        格式化的Schema字典（用于JSON输出）
+        Formatted schema dictionary (for JSON output)
     """
     all_tables = schema.get('tables', [])
     
@@ -162,9 +162,9 @@ def format_schema_for_planning(
     return planning_schema
 
 
-# 示例使用
+# Example usage
 if __name__ == "__main__":
-    # 示例Schema
+    # Example schema
     example_schema = {
         'tables': [
             {
@@ -185,20 +185,19 @@ if __name__ == "__main__":
         ]
     }
     
-    # 格式化完整Schema
+    # Format full schema
     full_schema_text, full_config = format_schema_simple(example_schema)
-    print("完整Schema：")
+    print("Full schema:")
     print(full_schema_text)
-    print(f"配置信息：{full_config}")
+    print(f"Configuration info: {full_config}")
     print("\n" + "="*80 + "\n")
     
-    # 格式化过滤后的Schema
+    # Format filtered schema
     relevant_tables = ['企业注册表']
     filtered_schema_text, filtered_config = format_schema_filtered(
         example_schema, 
         relevant_tables
     )
-    print("过滤后的Schema：")
+    print("Filtered schema:")
     print(filtered_schema_text)
-    print(f"配置信息：{filtered_config}")
-
+    print(f"Configuration info: {filtered_config}")

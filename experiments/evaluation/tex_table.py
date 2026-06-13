@@ -1,6 +1,6 @@
 import pandas as pd
 
-# 创建 DataFrame
+# Create DataFrame
 data_updated = {
     'Model': [
         'GPT-4', 'GPT-4o', 'GPT-o1', 'Llama3-70b', 'Qwen2-72b', 'Deepseek-v2.5',
@@ -23,13 +23,13 @@ data_updated = {
 
 df_updated = pd.DataFrame(data_updated)
 
-# 将 None 替换为 '-'
+# Replace None with '-'
 df_updated = df_updated.fillna('-')
 
-# 导出为 LaTeX 格式
+# Export to LaTeX format
 latex_table = df_updated.to_latex(index=False, column_format='lccc', caption='Accuracy of Different Models on NL2SQL Task', label='tab:accuracy')
 
-# 保存为 LaTeX 文件
+# Save as LaTeX file
 with open('accuracy_table.tex', 'w') as f:
     f.write(latex_table)
 

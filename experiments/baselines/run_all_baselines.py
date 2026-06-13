@@ -20,10 +20,10 @@ def run_base_llm_experiments(dataset: str, models: list, output_dir: str):
         print(f"\nRunning {model}...")
         cmd = [
             sys.executable,
-            "experiments/baselines/base_llm/evaluate_baseline.py",
+            "experiments/baselines/base_llm/run_experiment.py",
             "--model", model,
-            "--dataset", dataset,
-            "--output", f"{output_dir}/base_llm_{model}_{dataset}.json"
+            "--test_data", f"benchmark/data/final/{dataset}/test.json",
+            "--output", f"{output_dir}/base_llm_{model}_{dataset}.json",
         ]
         subprocess.run(cmd)
 

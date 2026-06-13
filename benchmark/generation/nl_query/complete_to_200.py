@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-补全NL查询到200条
+Complete NL queries up to 200 entries
 """
 
 import json
@@ -11,23 +11,23 @@ import argparse
 from tqdm import tqdm
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-# 导入主生成脚本的函数
+# Import functions from the main generation script
 script_dir = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, script_dir)
 import importlib.util
-spec = importlib.util.spec_from_file_location("generate_nl_queries_improved", os.path.join(script_dir, "4generate_nl_queries_improved.py"))
+spec = importlib.util.spec_from_file_location("generate_nl_queries", os.path.join(script_dir, "generate_nl_queries.py"))
 gen_module = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(gen_module)
 process_single_sql = gen_module.process_single_sql
 
 def main():
-    parser = argparse.ArgumentParser(description='补全NL查询到200条')
-    parser.add_argument('--sql_dir', type=str, required=True, help='SQL文件目录')
-    parser.add_argument('--schema_dir', type=str, required=True, help='Schema文件目录')
-    parser.add_argument('--output_dir', type=str, required=True, help='输出目录')
-    parser.add_argument('--database', type=str, required=True, help='数据库名称')
-    parser.add_argument('--target_count', type=int, default=200, help='目标数量')
-    parser.add_argument('--max_workers', type=int, default=5, help='并发线程数')
+    parser = argparse.ArgumentParser(description='Complete NL queries up to 200 entries')
+    parser.add_argument('--sql_dir', type=str, required=True, help='SQL file directory')
+    parser.add_argument('--schema_dir', type=str, required=True, help='Schema file directory')
+    parser.add_argument('--output_dir', type=str, required=True, help='Output directory')
+    parser.add_argument('--database', type=str, required=True, help='Database name')
+    parser.add_argument('--target_count', type=int, default=200, help='Target count')
+    parser.add_argument('--max_workers', type=int, default=5, help='Number of concurrent worker threads')
     
     args = parser.parse_args()
     
@@ -35,11 +35,11 @@ def main():
     schema_file = os.path.join(args.schema_dir, args.database, f"{args.database}.json")
     output_db_dir = os.path.join(args.output_dir, args.database)
     
-    # 获取所有SQL文件
+    # Get all SQL files
     sql_files = sorted([f for f in os.listdir(sql_db_dir) if f.startswith('generated_sql_') and f.endswith('.json') and '_error' not in f],
                        key=lambda x: int(re.findall(r'\d+', x)[0]) if re.findall(r'\d+', x) else 0)
     
-    # 获取所有NL查询文件
+    # Get all NL query files
     nl_files = [f for f in os.listdir(output_db_dir) if f.startswith('generated_nl_query_') and f.endswith('.json')]
     nl_indices = set()
     for f in nl_files:
@@ -47,37 +47,37 @@ def main():
         if match:
             nl_indices.add(int(match.group(1)))
     
-    # 找出缺失的索引
+    # Find missing indices
     target_indices = set(range(0, args.target_count))
     missing_indices = sorted(target_indices - nl_indices)
     
-    print(f"数据库: {args.database}")
-    print(f"SQL文件数: {len(sql_files)}")
-    print(f"当前NL查询数: {len(nl_indices)}")
-    print(f"缺失数量: {len(missing_indices)}")
+    print(f"Database: {args.database}")
+    print(f"SQL file count: {len(sql_files)}")
+    print(f"Current NL query count: {len(nl_indices)}")
+    print(f"Missing count: {len(missing_indices)}")
     
     if not missing_indices:
-        print("已满足目标数量，无需补全")
+        print("Target count already reached; no completion needed")
         return
     
-    # 准备任务：为缺失的索引生成NL查询
+    # Prepare tasks: generate NL queries for missing indices
     tasks = []
     sql_count = len(sql_files)
     
     for missing_idx in missing_indices:
-        # 确定使用哪个SQL文件和variant
-        # 根据索引计算：variant 0使用base_idx，variant 1使用sql_count*1+base_idx，variant 2使用sql_count*2+base_idx
+        # Determine which SQL file and variant to use
+        # By index: variant 0 uses base_idx, variant 1 uses sql_count*1+base_idx, variant 2 uses sql_count*2+base_idx
         if missing_idx < sql_count:
-            # 使用原始SQL（variant 0）
+            # Use original SQL (variant 0)
             base_idx = missing_idx
             variant = 0
             sql_file = sql_files[base_idx]
         else:
-            # 计算是第几个变体
+            # Compute which variant this is
             # new_idx = sql_count * variant + base_idx
-            # 所以：variant = (missing_idx - base_idx) // sql_count
-            # 但我们需要找到对应的base_idx
-            # 尝试不同的variant
+            # so: variant = (missing_idx - base_idx) // sql_count
+            # but we need to find the corresponding base_idx
+            # try different variants
             found = False
             for v in range(1, 4):  # variant 1, 2, 3
                 base_idx = missing_idx - sql_count * v
@@ -88,7 +88,7 @@ def main():
                     break
             
             if not found:
-                # 如果找不到对应的base_idx，使用第一个SQL的变体
+                # If no matching base_idx is found, use a variant of the first SQL
                 base_idx = 0
                 variant = (missing_idx // sql_count) + 1
                 sql_file = sql_files[0]
@@ -101,9 +101,9 @@ def main():
         
         tasks.append((sql_file_path, schema_file, output_file, variant))
     
-    print(f"准备生成 {len(tasks)} 个NL查询...")
+    print(f"Preparing to generate {len(tasks)} NL queries...")
     
-    # 并发处理
+    # Process concurrently
     if tasks:
         total_processed = 0
         total_success = 0
@@ -112,21 +112,20 @@ def main():
             futures = {executor.submit(process_single_sql, sql_path, schema_file, out_file, variant): (sql_path, out_file) 
                       for sql_path, _, out_file, variant in tasks}
             
-            for future in tqdm(as_completed(futures), total=len(futures), desc=f"补全 {args.database}"):
+            for future in tqdm(as_completed(futures), total=len(futures), desc=f"Completing {args.database}"):
                 sql_path, out_file = futures[future]
                 total_processed += 1
                 try:
                     if future.result():
                         total_success += 1
                 except Exception as e:
-                    print(f"处理失败 {sql_path}: {e}")
+                    print(f"Processing failed {sql_path}: {e}")
         
-        print(f"\n完成！处理: {total_processed}, 成功: {total_success}")
+        print(f"\nDone! Processed: {total_processed}, Success: {total_success}")
         
-        # 再次检查最终数量
+        # Check final count again
         nl_files_final = [f for f in os.listdir(output_db_dir) if f.startswith('generated_nl_query_') and f.endswith('.json')]
-        print(f"最终NL查询数量: {len(nl_files_final)}")
+        print(f"Final NL query count: {len(nl_files_final)}")
 
 if __name__ == '__main__':
     main()
-
