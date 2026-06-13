@@ -134,7 +134,7 @@ We provide baseline experiments (GPT-4o, DIN-SQL, CodeS, …), TACO-SQL ablation
 | [docs/GENERATION.md](docs/GENERATION.md) | Data regeneration pipeline (optional) |
 | [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | Repository layout |
 
-## 📝 Citation
+<!-- ## 📝 Citation
 
 ```bibtex
 @misc{taco_benchmark,
@@ -147,7 +147,7 @@ We provide baseline experiments (GPT-4o, DIN-SQL, CodeS, …), TACO-SQL ablation
 
 ## License
 
-[MIT License](LICENSE)
+[MIT License](LICENSE) -->
 
 ---
 
