@@ -1,8 +1,6 @@
 <div align="center">
 
-# TACO-Benchmark
-
-**A benchmark for open-domain Text-to-SQL with ambiguous and cross-database queries**
+# TACO-Benchmark: A benchmark for open-domain Text-to-SQL with ambiguous and cross-database queries**
 
 <br/>
 
@@ -12,75 +10,34 @@
 
 <br/>
 
-**[Overview](#overview)** · **[Dataset](#dataset)** · **[Quick Start](#quick-start)** · **[Examples](docs/EXAMPLES.md)** · **[Experiments](docs/EXPERIMENTS.md)**
+**[Why TACO?](#why-taco)** · **[Dataset](#dataset)** · **[Examples](#representative-examples)** · **[Quick Start](#quick-start)** · **[Docs](docs/README.md)**
 
 </div>
 
-## Overview
+**TACO** (Text-to-SQL with **A**mbiguous and **C**ross-database **O**pen-domain queries) is a benchmark for **real-world data-lake Text-to-SQL**. Unlike Spider or BIRD — where the target database is known and schemas are clean — TACO asks models to cope with **vague user questions**, **unspecified databases**, and **queries spanning multiple heterogeneous databases**.
 
-**TACO** (Text-to-SQL with **A**mbiguous and **C**ross-database **O**pen-domain queries) evaluates Text-to-SQL systems on real-world **data-lake** scenarios. Unlike closed-domain benchmarks (Spider, BIRD), TACO requires models to handle vague user intent, retrieve tables from heterogeneous lakes, and compose SQL across multiple databases.
+## Why TACO?
 
-```mermaid
-flowchart LR
-    subgraph Closed["Closed-domain benchmarks"]
-        U1[User question] --> M1[Model]
-        M1 --> DB1[(Single known DB)]
-    end
+Existing benchmarks largely assume a single, well-defined schema. In practice, users query **open data lakes** with messy intent and weak cross-source relationships. TACO fills this gap with three stress tests:
 
-    subgraph TACO["TACO (open-domain)"]
-        U2[Vague NL question] --> M2[Model]
-        M2 --> R[Retrieve relevant tables]
-        R --> L[(Multi-domain data lake)]
-        L --> X[Single- or cross-DB SQL]
-    end
-```
-
-### Highlights
-
-| | |
+| Challenge | What makes it hard |
 |:--|:--|
-| **Scale** | ~14,500 Text-to-SQL instances across 46 SQLite databases |
-| **Regions** | TACO-Beijing (24 DBs, Chinese civic data) · TACO-US (22 DBs, US open data) |
-| **Challenges** | Ambiguous NL · unspecified target DBs · 2–4 database JOIN/UNION |
-| **Gold standard** | Executable SQL with validated execution results |
-| **Tooling** | Unified `taco` CLI — data download, regeneration, baselines, ablations |
+| **Ambiguous NL** | Redundant context, implicit constraints, and vague terms that do not map 1:1 to SQL |
+| **Open-domain retrieval** | The target database is not given — systems must find relevant tables across domains |
+| **Cross-database SQL** | A single question may require JOIN or UNION across 2–4 databases with weak keys |
 
-### Three core challenges
+**What you get**
 
-```mermaid
-mindmap
-  root((TACO))
-    Ambiguous NL
-      Redundant context
-      Implicit constraints
-      Vague aggregations
-    Open-domain retrieval
-      Unspecified database
-      Multi-domain lakes
-      Schema linking
-    Cross-database SQL
-      2 to 4 DB JOIN
-      Weak key alignment
-      ATTACH DATABASE
-```
-
-| Challenge | What it tests | Example doc |
-|:--|:--|:--|
-| **Ambiguous NL** | Redundant context, implicit constraints, vague aggregation requests | [EXAMPLES.md §1](docs/EXAMPLES.md) |
-| **Unspecified databases** | Retrieve relevant tables from large heterogeneous lakes | [EXAMPLES.md §2](docs/EXAMPLES.md) |
-| **Cross-database SQL** | JOIN / UNION across 2–4 databases with weak relationships | [EXAMPLES.md §3](docs/EXAMPLES.md) |
-
----
+- **~14,500** high-quality Text-to-SQL instances with **executable gold SQL** and validated results
+- **46 databases** across finance, healthcare, transportation, housing, government, and more
+- **Two regional subsets** — TACO-Beijing (24 DBs) and TACO-US (22 DBs)
+- **Standard evaluation splits** and a baseline / ablation suite (execution accuracy as the primary metric)
 
 ## Dataset
 
-The dataset is distributed separately (not in git):
+Download: [Google Drive — `taco-benchmark.tar.gz`](https://drive.google.com/file/d/1Ynbv5eyEnM59mlEzqXZZsNh8sdHWH-nb/view?usp=drive_link) (not included in git).
 
-| Source | File |
-|:--|:--|
-| [Google Drive](https://drive.google.com/file/d/1Ynbv5eyEnM59mlEzqXZZsNh8sdHWH-nb/view?usp=drive_link) | `taco-benchmark.tar.gz` |
-
-### Subset statistics
+### Scale by subset
 
 | Subset | Databases | Single-DB SQL | Single-DB NL | Cross-DB SQL |
 |:--|--:|--:|--:|--:|
@@ -88,217 +45,83 @@ The dataset is distributed separately (not in git):
 | TACO-US | 22 | 3,990 | 3,990 | 429 |
 | **Total** | **46** | **8,018** | **9,577** | **895** |
 
-> **Notes**
-> - **~14,500** is the headline count of high-quality Text-to-SQL instances in the benchmark (NL queries with executable gold SQL, including cross-database cases).
-> - Single-DB SQL and NL counts can differ within a subset when the two generation stages progress at different rates (e.g., Beijing has more NL than SQL).
-> - After downloading, run `python legacy/tools/cross_database/statistics_all_datasets.py` for live counts on your local copy.
-
 ### Query-type distribution
 
-Design distribution across the full benchmark (single- + cross-database):
-
-| Query type | ~Count | Share |
+| Type | Share | ~Count |
 |:--|--:|--:|
-| Single-database | ~11,700 | 80.5% |
-| 2-database cross-DB | ~2,175 | 15.0% |
-| 3-database cross-DB | ~638 | 4.4% |
-| 4-database cross-DB | ~15 | 0.1% |
+| Single-database | 80.5% | ~11,700 |
+| 2-database cross-DB | 15.0% | ~2,175 |
+| 3-database cross-DB | 4.4% | ~638 |
+| 4-database cross-DB | 0.1% | ~15 |
 
-Cross-DB breakdown in the **released** SQL artifacts (895 total):
+Format details and directory layout: **[docs/DATASET.md](docs/DATASET.md)**
 
-| Cross-DB type | Beijing | US | Total |
-|:--|--:|--:|--:|
-| 2-database | ~375 | ~345 | ~720 |
-| 3-database | ~82 | ~78 | ~160 |
-| 4-database | ~9 | ~6 | ~15 |
+## Representative examples
 
-Details: **[docs/DATASET.md](docs/DATASET.md)**
+### 1 · Ambiguous natural language
 
----
+The user asks for summaries, comparisons, and deviation analysis — but the gold SQL is a focused filter on one year:
+
+> *"I need to verify the government fund budget revenue for the entire year of 2018. Please help me summarize the budget revenue and actual received amounts for all government fund budget projects in 2018… find projects with large deviations… This data is very important for annual settlement review…"*
+
+```sql
+SELECT "finance_bureau_budget_execution_report"."ProjectName",
+       "finance_bureau_budget_execution_report"."BudgetRevenue2018",
+       "finance_bureau_budget_execution_report"."Year"
+FROM "finance_bureau_budget_execution_report"
+WHERE "finance_bureau_budget_execution_report"."Year" = '2018'
+```
+
+**Takeaway:** models must extract the core intent from noisy, redundant NL — not over-generate SQL for every phrase the user mentions.
+
+### 2 · Cross-database JOIN
+
+A single question spans two databases with an implicit join key:
+
+> *"Query the construction project completion filing information from the Housing database, join with the public toilet information from the Life Services database, count the number of public toilets for each project name, and sort by the number of public toilets in descending order."*
+
+```sql
+SELECT "Housing"."construction_project_completion_filing"."ProjectName",
+       COUNT("LifeServices"."public_toilet_info"."SequenceNumber") AS "ToiletCount"
+FROM "Housing"."construction_project_completion_filing"
+JOIN "LifeServices"."public_toilet_info"
+  ON "Housing"."construction_project_completion_filing"."SequenceNumber"
+   = "LifeServices"."public_toilet_info"."SequenceNumber"
+GROUP BY "Housing"."construction_project_completion_filing"."ProjectName"
+ORDER BY "ToiletCount" DESC
+```
+
+**Takeaway:** systems must plan across databases, align schemas, and produce valid multi-DB SQL (e.g., `ATTACH DATABASE` in SQLite).
+
+More examples (open-domain retrieval, UNION, 3–4 DB queries): **[docs/EXAMPLES.md](docs/EXAMPLES.md)**
 
 ## Quick Start
 
-> Full guide: **[docs/INSTALL.md](docs/INSTALL.md)**
-
-```mermaid
-flowchart TD
-    A[Clone repo] --> B[python scripts/setup_env.py]
-    B --> C[taco data download]
-    C --> D[taco data verify]
-    D --> E[Edit configs/llm_config.yaml]
-    E --> F[taco eval run --model gpt-4o --dataset beijing]
-    F --> G[Execution accuracy report]
-```
-
-### 1. Install
-
 ```bash
-git clone https://github.com/Akanezora0/TACO-Benchmark.git
-cd TACO-Benchmark
-python scripts/setup_env.py    # or: bash setup_env.sh
-source .venv/bin/activate
+git clone https://github.com/Akanezora0/TACO-Benchmark.git && cd TACO-Benchmark
+python scripts/setup_env.py && source .venv/bin/activate
+taco data download && taco data verify
+taco eval run --model gpt-4o --dataset beijing   # baseline evaluation
 ```
 
-### 2. Download data
+Setup, API configuration, and troubleshooting: **[docs/INSTALL.md](docs/INSTALL.md)** · Minimal repro script: **[examples/quick_eval.sh](examples/quick_eval.sh)**
 
-```bash
-taco data download
-taco data verify
-```
+## Evaluation
 
-### 3. Configure LLM (for experiments / regeneration)
-
-```bash
-# Edit API settings (templates created by setup_env.py)
-vim configs/llm_config.yaml
-```
-
-### 4. Load an example
-
-```python
-import json
-from pathlib import Path
-
-files = list(Path("benchmark/data/beijing/output/single").glob("*/*.json"))
-example = json.loads(files[0].read_text(encoding="utf-8"))
-print(example["natural_language_query"])
-print(example["sql"])
-```
-
-### 5. Run a baseline experiment
-
-```bash
-taco eval run --model gpt-4o --dataset beijing
-# or minimal repro:
-bash examples/quick_eval.sh
-```
-
-See **[docs/EXPERIMENTS.md](docs/EXPERIMENTS.md)** for the CLI reference and **[experiments/README.md](experiments/README.md)** for the full framework.
-
----
-
-## Repository map
-
-```mermaid
-flowchart TB
-    CLI[taco/ CLI]
-    CLI --> DATA[data · download / verify]
-    CLI --> GEN[generate · regeneration pipeline]
-    CLI --> EVAL[eval · baselines]
-    CLI --> EXP[exp · TACO-SQL ablations]
-
-    GEN --> BG[benchmark/generation/]
-    BG --> PRE[preprocessing]
-    BG --> SKEL[sql_skeleton_generation]
-    BG --> FILL[sql_filling]
-    BG --> NL[nl_query]
-    BG --> XDB[cross_database / cross_database_us]
-
-    EVAL --> EX[experiments/]
-    EX --> BL[baselines]
-    EX --> ABL[taco_sql_exp]
-    EX --> MET[evaluation / EX metric]
-
-    DATA --> BD[(benchmark/data/)]
-```
-
-```text
-TACO-Benchmark/
-├── taco/                      # CLI (taco data · generate · eval · exp)
-├── benchmark/
-│   ├── data/                  # Dataset — download via taco data (gitignored)
-│   └── generation/            # Regeneration pipeline
-├── experiments/               # Baselines, ablations, execution accuracy
-├── legacy/                    # Archived scripts + maintenance tools
-├── docs/                      # User guides (see docs/README.md)
-├── examples/                  # quick_eval.sh
-├── configs/                   # *.example templates
-└── scripts/                   # setup_env, download_dataset
-```
-
-Architecture details: **[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)**
-
----
-
-## Data generation pipeline
-
-Benchmark data is produced in three stages:
-
-```mermaid
-flowchart LR
-    S1[1. SQL skeleton\nCFG + expert rules] --> S2[2. SQL filling\nLLM + schema graphs]
-    S2 --> S3[3. NL generation\nChain-of-Thought]
-    S3 --> OUT[benchmark/data/\nfinal splits]
-    S2 --> XDB[Cross-DB pipeline\n2–4 DB JOIN]
-    XDB --> OUT
-```
-
-1. **SQL skeleton generation** — CFG rules + expert examples
-2. **SQL content filling** — LLM fills placeholders using schema-linking graphs
-3. **NL query generation** — Chain-of-Thought NL from SQL
-
-Scripts live under `benchmark/generation/`. Regeneration requires an LLM API.
-
-Full guide: **[docs/GENERATION.md](docs/GENERATION.md)**
-
----
-
-## CLI
-
-```bash
-taco --help
-taco info
-
-# Dataset
-taco data download
-taco data verify
-
-# Data generation (requires LLM API)
-taco generate single-db --database Housing --target-count 200 --region beijing
-taco generate cross-db --region beijing
-taco generate status --region beijing
-
-# Baseline evaluation
-taco eval run --model gpt-4o --dataset beijing
-taco eval batch --models gpt-4o,gpt-4o-mini --dataset beijing
-taco eval report --pred experiments/results/baseline_gpt_4o_taco_beijing.json
-
-# TACO-SQL ablations & batch baselines
-taco exp baseline --model gpt-4o --dataset beijing
-taco exp ablation --setting qr_tl_qp --model gpt-4o --dataset beijing
-taco exp run-all --dataset beijing --base-llm
-
-# Legacy per-database evaluation (custom paths)
-taco eval legacy-db --database Housing --model gpt-4o --region beijing
-```
-
-`--dataset` accepts shorthand (`beijing` → `taco_beijing`). Test split default: `benchmark/data/final/{dataset}/test.json`.
-
----
+We provide baseline experiments (GPT-4o, DIN-SQL, CodeS, …), TACO-SQL ablations, and execution-accuracy (EX) evaluation. See **[docs/EXPERIMENTS.md](docs/EXPERIMENTS.md)** and **[experiments/README.md](experiments/README.md)**.
 
 ## Documentation
 
 | Doc | Contents |
 |:--|:--|
-| [docs/README.md](docs/README.md) | Documentation index and layering guide |
-| [docs/INSTALL.md](docs/INSTALL.md) | Environment setup, API config, troubleshooting |
-| [docs/DATASET.md](docs/DATASET.md) | Download, layout, JSON formats |
-| [docs/GENERATION.md](docs/GENERATION.md) | Data regeneration pipeline |
+| [docs/DATASET.md](docs/DATASET.md) | Download, formats, directory layout |
+| [docs/EXAMPLES.md](docs/EXAMPLES.md) | Full challenge examples with NL/SQL pairs |
 | [docs/EXPERIMENTS.md](docs/EXPERIMENTS.md) | Baselines, ablations, CLI reference |
-| [docs/EXAMPLES.md](docs/EXAMPLES.md) | Challenge examples with NL/SQL pairs |
-| [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | Repo layout and change boundaries |
-| [CONTRIBUTING.md](CONTRIBUTING.md) | Contribution guidelines |
-| [examples/README.md](examples/README.md) | Quick reproduction scripts |
-
-## Requirements
-
-- Python **3.10+**
-- See `requirements.txt` (core) · `requirements-eval.txt` · `requirements-sft.txt`
-- LLM API access for regeneration and API-based baselines
+| [docs/INSTALL.md](docs/INSTALL.md) | Environment setup |
+| [docs/GENERATION.md](docs/GENERATION.md) | Data regeneration pipeline (optional) |
+| [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | Repository layout |
 
 ## Citation
-
-If you use TACO-Benchmark in your research, please cite:
 
 ```bibtex
 @misc{taco_benchmark,
@@ -311,4 +134,4 @@ If you use TACO-Benchmark in your research, please cite:
 
 ## License
 
-This project is released under the [MIT License](LICENSE).
+[MIT License](LICENSE)
