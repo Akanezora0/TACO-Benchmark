@@ -12,19 +12,65 @@
 
 <br/>
 
-**[Dataset](#-dataset)** · **[Quick Start](#-quick-start)** · **[Examples](docs/EXAMPLES.md)** · **[Experiments](docs/EXPERIMENTS.md)**
+**[Overview](#overview)** · **[Dataset](#dataset)** · **[Quick Start](#quick-start)** · **[Examples](docs/EXAMPLES.md)** · **[Experiments](docs/EXPERIMENTS.md)**
 
 </div>
 
-**TACO** (Text-to-SQL with **A**mbiguous and **C**ross-database **O**pen-domain queries) evaluates Text-to-SQL systems on real-world data-lake scenarios. Unlike closed-domain benchmarks (Spider, BIRD), TACO requires handling vague user intent, unspecified target databases, and queries spanning multiple heterogeneous databases.
+## Overview
 
-## Highlights
+**TACO** (Text-to-SQL with **A**mbiguous and **C**ross-database **O**pen-domain queries) evaluates Text-to-SQL systems on real-world **data-lake** scenarios. Unlike closed-domain benchmarks (Spider, BIRD), TACO requires models to handle vague user intent, retrieve tables from heterogeneous lakes, and compose SQL across multiple databases.
 
-- **~14,500 examples** across finance, healthcare, transportation, housing, government, and more
-- **Three core challenges** — ambiguous NL, open-domain table retrieval, cross-database SQL
-- **Two regional subsets** — TACO-Beijing (24 DBs) and TACO-US (22 DBs)
-- **Executable gold SQL** with validated execution results
-- **Full experiment suite** — baselines, TACO-SQL ablations, execution-accuracy evaluation
+```mermaid
+flowchart LR
+    subgraph Closed["Closed-domain benchmarks"]
+        U1[User question] --> M1[Model]
+        M1 --> DB1[(Single known DB)]
+    end
+
+    subgraph TACO["TACO (open-domain)"]
+        U2[Vague NL question] --> M2[Model]
+        M2 --> R[Retrieve relevant tables]
+        R --> L[(Multi-domain data lake)]
+        L --> X[Single- or cross-DB SQL]
+    end
+```
+
+### Highlights
+
+| | |
+|:--|:--|
+| **Scale** | ~14,500 Text-to-SQL instances across 46 SQLite databases |
+| **Regions** | TACO-Beijing (24 DBs, Chinese civic data) · TACO-US (22 DBs, US open data) |
+| **Challenges** | Ambiguous NL · unspecified target DBs · 2–4 database JOIN/UNION |
+| **Gold standard** | Executable SQL with validated execution results |
+| **Tooling** | Unified `taco` CLI — data download, regeneration, baselines, ablations |
+
+### Three core challenges
+
+```mermaid
+mindmap
+  root((TACO))
+    Ambiguous NL
+      Redundant context
+      Implicit constraints
+      Vague aggregations
+    Open-domain retrieval
+      Unspecified database
+      Multi-domain lakes
+      Schema linking
+    Cross-database SQL
+      2 to 4 DB JOIN
+      Weak key alignment
+      ATTACH DATABASE
+```
+
+| Challenge | What it tests | Example doc |
+|:--|:--|:--|
+| **Ambiguous NL** | Redundant context, implicit constraints, vague aggregation requests | [EXAMPLES.md §1](docs/EXAMPLES.md) |
+| **Unspecified databases** | Retrieve relevant tables from large heterogeneous lakes | [EXAMPLES.md §2](docs/EXAMPLES.md) |
+| **Cross-database SQL** | JOIN / UNION across 2–4 databases with weak relationships | [EXAMPLES.md §3](docs/EXAMPLES.md) |
+
+---
 
 ## Dataset
 
@@ -34,25 +80,55 @@ The dataset is distributed separately (not in git):
 |:--|:--|
 | [Google Drive](https://drive.google.com/file/d/1Ynbv5eyEnM59mlEzqXZZsNh8sdHWH-nb/view?usp=drive_link) | `taco-benchmark.tar.gz` |
 
-### Statistics
+### Subset statistics
 
 | Subset | Databases | Single-DB SQL | Single-DB NL | Cross-DB SQL |
 |:--|--:|--:|--:|--:|
 | TACO-Beijing | 24 | 4,028 | 5,587 | 466 |
-| TACO-US | 22 | — | 3,990 | — |
+| TACO-US | 22 | 3,990 | 3,990 | 429 |
+| **Total** | **46** | **8,018** | **9,577** | **895** |
 
-| Query type | Share |
-|:--|--:|
-| Single-database | ~80.5% |
-| 2-database cross-DB | ~15.0% |
-| 3-database cross-DB | ~4.4% |
-| 4-database cross-DB | ~0.1% |
+> **Notes**
+> - **~14,500** is the headline count of high-quality Text-to-SQL instances in the benchmark (NL queries with executable gold SQL, including cross-database cases).
+> - Single-DB SQL and NL counts can differ within a subset when the two generation stages progress at different rates (e.g., Beijing has more NL than SQL).
+> - After downloading, run `python legacy/tools/cross_database/statistics_all_datasets.py` for live counts on your local copy.
+
+### Query-type distribution
+
+Design distribution across the full benchmark (single- + cross-database):
+
+| Query type | ~Count | Share |
+|:--|--:|--:|
+| Single-database | ~11,700 | 80.5% |
+| 2-database cross-DB | ~2,175 | 15.0% |
+| 3-database cross-DB | ~638 | 4.4% |
+| 4-database cross-DB | ~15 | 0.1% |
+
+Cross-DB breakdown in the **released** SQL artifacts (895 total):
+
+| Cross-DB type | Beijing | US | Total |
+|:--|--:|--:|--:|
+| 2-database | ~375 | ~345 | ~720 |
+| 3-database | ~82 | ~78 | ~160 |
+| 4-database | ~9 | ~6 | ~15 |
 
 Details: **[docs/DATASET.md](docs/DATASET.md)**
+
+---
 
 ## Quick Start
 
 > Full guide: **[docs/INSTALL.md](docs/INSTALL.md)**
+
+```mermaid
+flowchart TD
+    A[Clone repo] --> B[python scripts/setup_env.py]
+    B --> C[taco data download]
+    C --> D[taco data verify]
+    D --> E[Edit configs/llm_config.yaml]
+    E --> F[taco eval run --model gpt-4o --dataset beijing]
+    F --> G[Execution accuracy report]
+```
 
 ### 1. Install
 
@@ -99,35 +175,40 @@ bash examples/quick_eval.sh
 
 See **[docs/EXPERIMENTS.md](docs/EXPERIMENTS.md)** for the CLI reference and **[experiments/README.md](experiments/README.md)** for the full framework.
 
-## Three Core Challenges
+---
 
-| Challenge | What it tests |
-|:--|:--|
-| **Ambiguous NL** | Redundant context, implicit constraints, vague aggregation requests |
-| **Unspecified databases** | Retrieve relevant tables from large heterogeneous lakes |
-| **Cross-database SQL** | JOIN / UNION across 2–4 databases with weak relationships |
+## Repository map
 
-Representative NL/SQL pairs: **[docs/EXAMPLES.md](docs/EXAMPLES.md)**
+```mermaid
+flowchart TB
+    CLI[taco/ CLI]
+    CLI --> DATA[data · download / verify]
+    CLI --> GEN[generate · regeneration pipeline]
+    CLI --> EVAL[eval · baselines]
+    CLI --> EXP[exp · TACO-SQL ablations]
 
-## Project Layout
+    GEN --> BG[benchmark/generation/]
+    BG --> PRE[preprocessing]
+    BG --> SKEL[sql_skeleton_generation]
+    BG --> FILL[sql_filling]
+    BG --> NL[nl_query]
+    BG --> XDB[cross_database / cross_database_us]
+
+    EVAL --> EX[experiments/]
+    EX --> BL[baselines]
+    EX --> ABL[taco_sql_exp]
+    EX --> MET[evaluation / EX metric]
+
+    DATA --> BD[(benchmark/data/)]
+```
 
 ```text
 TACO-Benchmark/
-├── taco/                      # CLI (taco data · eval · exp)
+├── taco/                      # CLI (taco data · generate · eval · exp)
 ├── benchmark/
 │   ├── data/                  # Dataset — download via taco data (gitignored)
 │   └── generation/            # Regeneration pipeline
-│       ├── preprocessing/     # Raw data → SQLite (optional)
-│       ├── sql_skeleton_generation/
-│       ├── sql_filling/
-│       ├── nl_query/
-│       ├── cross_database/    # Beijing cross-DB (run_all.py)
-│       └── cross_database_us/
-├── experiments/
-│   ├── baselines/             # Base LLM, DIN-SQL, CodeS, …
-│   ├── taco_sql_exp/          # TACO-SQL ablations
-│   ├── evaluation/            # Execution accuracy
-│   └── docs/                  # Reviewer / paper notes
+├── experiments/               # Baselines, ablations, execution accuracy
 ├── legacy/                    # Archived scripts + maintenance tools
 ├── docs/                      # User guides (see docs/README.md)
 ├── examples/                  # quick_eval.sh
@@ -136,6 +217,31 @@ TACO-Benchmark/
 ```
 
 Architecture details: **[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)**
+
+---
+
+## Data generation pipeline
+
+Benchmark data is produced in three stages:
+
+```mermaid
+flowchart LR
+    S1[1. SQL skeleton\nCFG + expert rules] --> S2[2. SQL filling\nLLM + schema graphs]
+    S2 --> S3[3. NL generation\nChain-of-Thought]
+    S3 --> OUT[benchmark/data/\nfinal splits]
+    S2 --> XDB[Cross-DB pipeline\n2–4 DB JOIN]
+    XDB --> OUT
+```
+
+1. **SQL skeleton generation** — CFG rules + expert examples
+2. **SQL content filling** — LLM fills placeholders using schema-linking graphs
+3. **NL query generation** — Chain-of-Thought NL from SQL
+
+Scripts live under `benchmark/generation/`. Regeneration requires an LLM API.
+
+Full guide: **[docs/GENERATION.md](docs/GENERATION.md)**
+
+---
 
 ## CLI
 
@@ -168,25 +274,7 @@ taco eval legacy-db --database Housing --model gpt-4o --region beijing
 
 `--dataset` accepts shorthand (`beijing` → `taco_beijing`). Test split default: `benchmark/data/final/{dataset}/test.json`.
 
-## Data Generation Pipeline
-
-Benchmark data is produced in three stages:
-
-1. **SQL skeleton generation** — CFG rules + expert examples
-2. **SQL content filling** — LLM fills placeholders using schema-linking graphs
-3. **NL query generation** — Chain-of-Thought NL from SQL
-
-Scripts live under `benchmark/generation/`. Regeneration requires an LLM API.
-
-Full guide: **[docs/GENERATION.md](docs/GENERATION.md)**
-
-## Key Features
-
-- Real-world query complexity (ambiguity, redundancy, implicit constraints)
-- Open-domain table retrieval over multi-domain data lakes
-- Cross-database JOIN and UNION (2–4 databases)
-- Standardized baseline and ablation experiment framework
-- Execution-accuracy (EX) as the primary metric
+---
 
 ## Documentation
 

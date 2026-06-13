@@ -55,7 +55,10 @@ def download_archive(
         return dest
 
     url = f"https://drive.google.com/uc?id={GOOGLE_DRIVE_FILE_ID}"
-    gdown.download(url, str(dest), quiet=False, fuzzy=True)
+    try:
+        gdown.download(url, str(dest), quiet=False, fuzzy=True)
+    except TypeError:
+        gdown.download(url, str(dest), quiet=False)
     if not dest.is_file():
         raise RuntimeError(f"Download failed; archive not found at {dest}")
     return dest

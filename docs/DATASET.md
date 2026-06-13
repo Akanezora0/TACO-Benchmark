@@ -54,16 +54,33 @@ TACO contains **~14,500** Text-to-SQL examples across open-domain data lakes wit
 | Subset | Databases | Single-DB SQL | Single-DB NL | Cross-DB SQL |
 |:--|--:|--:|--:|--:|
 | **TACO-Beijing** | 24 | 4,028 | 5,587 | 466 |
-| **TACO-US** | 22 | — | 3,990 | — |
+| **TACO-US** | 22 | 3,990 | 3,990 | 429 |
+| **Total** | **46** | **8,018** | **9,577** | **895** |
+
+Single-DB SQL and NL counts may differ within a subset when the two generation stages progress at different rates. For live counts after download:
+
+```bash
+python legacy/tools/cross_database/statistics_all_datasets.py
+```
 
 ### Query-type distribution
 
-| Type | Share |
-|:--|--:|
-| Single-database | ~80.5% |
-| 2-database | ~15.0% |
-| 3-database | ~4.4% |
-| 4-database | ~0.1% |
+Design distribution across the full benchmark:
+
+| Type | ~Count | Share |
+|:--|--:|--:|
+| Single-database | ~11,700 | 80.5% |
+| 2-database cross-DB | ~2,175 | 15.0% |
+| 3-database cross-DB | ~638 | 4.4% |
+| 4-database cross-DB | ~15 | 0.1% |
+
+Cross-DB SQL in the released artifacts (895 total), split by database count:
+
+| Cross-DB type | Beijing | US | Total |
+|:--|--:|--:|--:|
+| 2-database | ~375 | ~345 | ~720 |
+| 3-database | ~82 | ~78 | ~160 |
+| 4-database | ~9 | ~6 | ~15 |
 
 ---
 
