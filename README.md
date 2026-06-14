@@ -5,9 +5,8 @@
 <br/>
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
-[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+[![Dataset](https://img.shields.io/badge/Dataset-Hugging%20Face-FFD21E?logo=huggingface&logoColor=black)](https://huggingface.co/datasets/Akanezora/TACO-Benchmark)
 [![Dataset](https://img.shields.io/badge/Dataset-Google%20Drive-4285F4?logo=google-drive&logoColor=white)](https://drive.google.com/file/d/1Ynbv5eyEnM59mlEzqXZZsNh8sdHWH-nb/view?usp=drive_link)
-[![GitHub Stars](https://img.shields.io/github/stars/Akanezora0/TACO-Benchmark?style=flat-square&logo=github)](https://github.com/Akanezora0/TACO-Benchmark/stargazers)
 
 <br/>
 
@@ -48,7 +47,23 @@ Existing benchmarks largely assume a single, well-defined schema. In practice, u
 
 ## 📊 Dataset
 
-Download: [Google Drive — `taco-benchmark.tar.gz`](https://drive.google.com/file/d/1Ynbv5eyEnM59mlEzqXZZsNh8sdHWH-nb/view?usp=drive_link) (not included in git).
+The dataset is not included in git. Download from either source:
+
+| Source | Link |
+|:--|:--|
+| **Hugging Face** (recommended) | [Akanezora/TACO-Benchmark](https://huggingface.co/datasets/Akanezora/TACO-Benchmark) |
+| **Google Drive** | [`taco-benchmark.tar.gz`](https://drive.google.com/file/d/1Ynbv5eyEnM59mlEzqXZZsNh8sdHWH-nb/view?usp=drive_link) |
+
+```python
+# Hugging Face
+from huggingface_hub import snapshot_download
+snapshot_download("Akanezora/TACO-Benchmark", repo_type="dataset", local_dir="./taco-benchmark")
+```
+
+```bash
+# Google Drive (via project CLI)
+taco data download && taco data verify
+```
 
 ### Scale by subset
 
@@ -113,7 +128,7 @@ More examples (open-domain retrieval, UNION, 3–4 DB queries): **[docs/EXAMPLES
 ```bash
 git clone https://github.com/Akanezora0/TACO-Benchmark.git && cd TACO-Benchmark
 python scripts/setup_env.py && source .venv/bin/activate
-taco data download && taco data verify
+# Download data from Hugging Face (see Dataset section) or: taco data download && taco data verify
 taco eval run --model gpt-4o --dataset beijing   # baseline evaluation
 ```
 
