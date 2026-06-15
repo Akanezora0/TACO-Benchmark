@@ -5,6 +5,7 @@
 <br/>
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
+[![arXiv](https://img.shields.io/badge/arXiv-2606.14201-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.14201)
 [![Dataset](https://img.shields.io/badge/Dataset-Hugging%20Face-FFD21E?logo=huggingface&logoColor=FFD21E)](https://huggingface.co/datasets/Akanezora/TACO-Benchmark)
 [![Dataset](https://img.shields.io/badge/Dataset-Google%20Drive-4285F4?logo=google-drive&logoColor=white)](https://drive.google.com/file/d/1bPSYa8173XcFb1jqGQR5luNzCTxYmy_L/view?usp=sharing)
 
