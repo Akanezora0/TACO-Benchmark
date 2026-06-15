@@ -10,7 +10,7 @@
 
 <br/>
 
-**[News](#-news)** · **[Why TACO?](#-why-taco)** · **[Dataset](#-dataset)** · **[Examples](#-representative-examples)** · **[Quick Start](#-quick-start)** · **[Docs](docs/README.md)**
+**[News](#-news)** · **[Paper](https://arxiv.org/abs/2606.14201)** · **[Why TACO?](#-why-taco)** · **[Dataset](#-dataset)** · **[Examples](#-representative-examples)** · **[Quick Start](#-quick-start)** · **[Docs](docs/README.md)**
 
 <br/>
 
@@ -22,11 +22,14 @@
 
 | Date | Update |
 |:--|:--|
-| **2026** | 🎉 TACO has been **accepted to VLDB 2026**! Paper and camera-ready details coming soon. |
+| **Jun 2026** | 📄 Paper released on [arXiv:2606.14201](https://arxiv.org/abs/2606.14201) |
+| **2026** | 🎉 TACO has been **accepted to VLDB 2026**! |
 
 ---
 
 **TACO** (Text-to-SQL with **A**mbiguous and **C**ross-database **O**pen-domain queries) is a benchmark for **real-world data-lake Text-to-SQL**. Unlike Spider or BIRD — where the target database is known and schemas are clean — TACO asks models to cope with **vague user questions**, **unspecified databases**, and **queries spanning multiple heterogeneous databases**.
+
+📄 **Paper:** [arXiv:2606.14201](https://arxiv.org/abs/2606.14201) · 💻 **Code:** [GitHub](https://github.com/Akanezora0/TACO-Benchmark)
 
 ## ✨ Why TACO?
 
@@ -149,20 +152,21 @@ We provide baseline experiments (GPT-4o, DIN-SQL, CodeS, …), TACO-SQL ablation
 | [docs/GENERATION.md](docs/GENERATION.md) | Data regeneration pipeline (optional) |
 | [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | Repository layout |
 
-<!-- ## 📝 Citation
+## 📝 Citation
 
 ```bibtex
-@misc{taco_benchmark,
-  title  = {TACO: A Benchmark for Open-Domain Text-to-SQL with Ambiguous and Cross-Database Queries},
-  author = {TACO-Benchmark Contributors},
-  year   = {2026},
-  url    = {https://github.com/Akanezora0/TACO-Benchmark}
+@article{deng2026taco,
+  title   = {TACO: A Benchmark for Open-Domain Text-to-SQL with Ambiguous and Cross-Database Queries},
+  author  = {Deng, Chao and Fan, Ju and Luo, Yuyu and Xue, Qinliang and Fan, Meihao and Zhang, Yuxin and Zhang, Min and Jia, Xiaofeng and Zhang, Jing and Du, Xiaoyong},
+  journal = {arXiv preprint arXiv:2606.14201},
+  year    = {2026},
+  url     = {https://arxiv.org/abs/2606.14201}
 }
 ```
 
 ## License
 
-[MIT License](LICENSE) -->
+[MIT License](LICENSE)
 
 ---
 
