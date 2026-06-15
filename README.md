@@ -6,7 +6,7 @@
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
 [![Dataset](https://img.shields.io/badge/Dataset-Hugging%20Face-FFD21E?logo=huggingface&logoColor=black)](https://huggingface.co/datasets/Akanezora/TACO-Benchmark)
-[![Dataset](https://img.shields.io/badge/Dataset-Google%20Drive-4285F4?logo=google-drive&logoColor=white)](https://drive.google.com/file/d/1Ynbv5eyEnM59mlEzqXZZsNh8sdHWH-nb/view?usp=drive_link)
+[![Dataset](https://img.shields.io/badge/Dataset-Google%20Drive-4285F4?logo=google-drive&logoColor=white)](https://drive.google.com/file/d/1bPSYa8173XcFb1jqGQR5luNzCTxYmy_L/view?usp=sharing)
 
 <br/>
 
@@ -52,7 +52,7 @@ The dataset is not included in git. Download from either source:
 | Source | Link |
 |:--|:--|
 | **Hugging Face** (recommended) | [Akanezora/TACO-Benchmark](https://huggingface.co/datasets/Akanezora/TACO-Benchmark) |
-| **Google Drive** | [`taco-benchmark.tar.gz`](https://drive.google.com/file/d/1Ynbv5eyEnM59mlEzqXZZsNh8sdHWH-nb/view?usp=drive_link) |
+| **Google Drive** | [`TACO-Benchmark.zip`](https://drive.google.com/file/d/1bPSYa8173XcFb1jqGQR5luNzCTxYmy_L/view?usp=sharing) |
 
 ```python
 # Hugging Face

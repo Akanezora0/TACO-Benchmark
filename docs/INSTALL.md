@@ -90,7 +90,7 @@ The benchmark data is **not** included in git. Download from Google Drive:
 
 | Link | File |
 |:--|:--|
-| [Google Drive](https://drive.google.com/file/d/1Ynbv5eyEnM59mlEzqXZZsNh8sdHWH-nb/view?usp=drive_link) | `taco-benchmark.tar.gz` |
+| [Google Drive](https://drive.google.com/file/d/1bPSYa8173XcFb1jqGQR5luNzCTxYmy_L/view?usp=sharing) | `TACO-Benchmark.zip` |
 
 ```bash
 taco data download

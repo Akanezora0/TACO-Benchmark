@@ -5,15 +5,16 @@ from __future__ import annotations
 import shutil
 import sys
 import tarfile
+import zipfile
 from pathlib import Path
 
 from .paths import BENCHMARK_DATA_DIR, PROJECT_ROOT
 
-GOOGLE_DRIVE_FILE_ID = "1Ynbv5eyEnM59mlEzqXZZsNh8sdHWH-nb"
+GOOGLE_DRIVE_FILE_ID = "1bPSYa8173XcFb1jqGQR5luNzCTxYmy_L"
 GOOGLE_DRIVE_VIEW_URL = (
-    "https://drive.google.com/file/d/1Ynbv5eyEnM59mlEzqXZZsNh8sdHWH-nb/view?usp=drive_link"
+    "https://drive.google.com/file/d/1bPSYa8173XcFb1jqGQR5luNzCTxYmy_L/view?usp=sharing"
 )
-ARCHIVE_NAME = "taco-benchmark.tar.gz"
+ARCHIVE_NAME = "TACO-Benchmark.zip"
 
 # Paths that must exist after a successful install (relative to benchmark/data).
 REQUIRED_MARKERS: tuple[str, ...] = (
@@ -66,6 +67,14 @@ def download_archive(
 
 def _archive_top_level_dirs(archive_path: Path) -> set[str]:
     tops: set[str] = set()
+    if archive_path.suffix.lower() == ".zip":
+        with zipfile.ZipFile(archive_path, "r") as zf:
+            for name in zf.namelist():
+                if not name or name == ".":
+                    continue
+                tops.add(name.split("/")[0])
+        return tops
+
     with tarfile.open(archive_path, "r:gz") as tar:
         for member in tar.getmembers():
             if not member.name or member.name == ".":
@@ -105,8 +114,12 @@ def extract_archive(
         shutil.rmtree(tmp_parent)
     tmp_parent.mkdir(parents=True, exist_ok=True)
 
-    with tarfile.open(archive_path, "r:gz") as tar:
-        tar.extractall(path=tmp_parent)
+    if archive_path.suffix.lower() == ".zip":
+        with zipfile.ZipFile(archive_path, "r") as zf:
+            zf.extractall(path=tmp_parent)
+    else:
+        with tarfile.open(archive_path, "r:gz") as tar:
+            tar.extractall(path=tmp_parent)
 
     tops = {p.name for p in tmp_parent.iterdir()}
     data_root.mkdir(parents=True, exist_ok=True)

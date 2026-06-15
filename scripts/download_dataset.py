@@ -35,7 +35,7 @@ def main(argv: list[str] | None = None) -> int:
         "--cache-dir",
         type=Path,
         default=None,
-        help="Directory for the downloaded .tar.gz cache",
+        help="Directory for the downloaded archive cache",
     )
     parser.add_argument(
         "--download-only",

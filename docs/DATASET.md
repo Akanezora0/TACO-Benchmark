@@ -4,7 +4,7 @@
 
 | Source | Link |
 |:--|:--|
-| **Google Drive** | [taco-benchmark.tar.gz](https://drive.google.com/file/d/1Ynbv5eyEnM59mlEzqXZZsNh8sdHWH-nb/view?usp=drive_link) |
+| **Google Drive** | [TACO-Benchmark.zip](https://drive.google.com/file/d/1bPSYa8173XcFb1jqGQR5luNzCTxYmy_L/view?usp=sharing) |
 
 ### Automated download
 
@@ -19,22 +19,22 @@ python scripts/download_dataset.py
 taco data verify
 ```
 
-The archive is cached under `.cache/taco-benchmark.tar.gz` and extracted to `benchmark/data/`.
+The archive is cached under `.cache/TACO-Benchmark.zip` and extracted to `benchmark/data/`.
 
 ### Manual download
 
-1. Download `taco-benchmark.tar.gz` from Google Drive.
+1. Download `TACO-Benchmark.zip` from Google Drive.
 2. Extract into `benchmark/data/`:
 
 ```bash
 mkdir -p benchmark/data
-tar -xzf taco-benchmark.tar.gz -C benchmark/data --strip-components=0
+unzip TACO-Benchmark.zip -d benchmark/data
 ```
 
 If the archive contains a top-level `benchmark/data/` folder, extract from the repository root instead:
 
 ```bash
-tar -xzf taco-benchmark.tar.gz -C .
+unzip TACO-Benchmark.zip -d .
 ```
 
 3. Run `taco data verify` to confirm the layout.
